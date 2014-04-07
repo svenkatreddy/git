@@ -1,0 +1,567 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Melihat Sejarah Commit | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../dasar_dasar_git/membatalkan_apapun.html" />
+        
+        
+        <link rel="prev" href="../dasar_dasar_git/merekam_perubahan_ke_dalam_repositori.html" />
+        
+
+        <meta property="og:title" content="Melihat Sejarah Commit | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.3" data-basepath=".." data-revision="1396895602592">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/dasar_dasar_git/melihat_sejarah_commit.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="memulai_git/README.html">
+                
+                <a href="../memulai_git/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Memulai Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="memulai_git/tentang_version_control.html">
+                            
+                            <a href="../memulai_git/tentang_version_control.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Tentang Version Control
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="memulai_git/sejarah_singkat_git.html">
+                            
+                            <a href="../memulai_git/sejarah_singkat_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Sejarah Singkat Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="memulai_git/dasar_git.html">
+                            
+                            <a href="../memulai_git/dasar_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Dasar Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="memulai_git/menginstall_git.html">
+                            
+                            <a href="../memulai_git/menginstall_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Menginstall Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="memulai_git/setup_git_untuk_pertama_kalinya.html">
+                            
+                            <a href="../memulai_git/setup_git_untuk_pertama_kalinya.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Setup Git Untuk Pertama Kalinya
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="memulai_git/memperoleh_pertolongan.html">
+                            
+                            <a href="../memulai_git/memperoleh_pertolongan.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Memperoleh Pertolongan
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="memulai_git/kesimpulan.html">
+                            
+                            <a href="../memulai_git/kesimpulan.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Kesimpulan
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="dasar_dasar_git/README.html">
+                
+                <a href="../dasar_dasar_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Dasar-dasar Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="dasar_dasar_git/mengambil_repositori_git.html">
+                            
+                            <a href="../dasar_dasar_git/mengambil_repositori_git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Mengambil Repositori Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="dasar_dasar_git/merekam_perubahan_ke_dalam_repositori.html">
+                            
+                            <a href="../dasar_dasar_git/merekam_perubahan_ke_dalam_repositori.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Merekam Perubahan ke dalam Repositori
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="dasar_dasar_git/melihat_sejarah_commit.html">
+                            
+                            <a href="../dasar_dasar_git/melihat_sejarah_commit.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Melihat Sejarah Commit
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="dasar_dasar_git/membatalkan_apapun.html">
+                            
+                            <a href="../dasar_dasar_git/membatalkan_apapun.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Membatalkan Apapun
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="dasar_dasar_git/bekerja_berjarak.html">
+                            
+                            <a href="../dasar_dasar_git/bekerja_berjarak.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Bekerja Berjarak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="dasar_dasar_git/menandai.html">
+                            
+                            <a href="../dasar_dasar_git/menandai.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Menandai
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="dasar_dasar_git/tips_dan_tricks.html">
+                            
+                            <a href="../dasar_dasar_git/tips_dan_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips dan Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="dasar_dasar_git/simpulan.html">
+                            
+                            <a href="../dasar_dasar_git/simpulan.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Simpulan
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="branching_pada_git/README.html">
+                
+                <a href="../branching_pada_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Branching Pada Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="branching_pada_git/apakah_branch_itu.html">
+                            
+                            <a href="../branching_pada_git/apakah_branch_itu.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Apakah Branch Itu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="branching_pada_git/basic_branching_and_merging.html">
+                            
+                            <a href="../branching_pada_git/basic_branching_and_merging.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Basic Branching and Merging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="branching_pada_git/manajemen_branch.html">
+                            
+                            <a href="../branching_pada_git/manajemen_branch.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Manajemen Branch
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="branching_pada_git/alur_kerja_branching.html">
+                            
+                            <a href="../branching_pada_git/alur_kerja_branching.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Alur Kerja Branching
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="branching_pada_git/remote_branches.html">
+                            
+                            <a href="../branching_pada_git/remote_branches.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Remote Branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="branching_pada_git/rebasing.html">
+                            
+                            <a href="../branching_pada_git/rebasing.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="branching_pada_git/kesimpulan.html">
+                            
+                            <a href="../branching_pada_git/kesimpulan.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Kesimpulan
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 48%;min-width: 44%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../memulai_git/README.html" title="Memulai Git" class="chapter done new-chapter" data-progress="1" style="left: 4%;"></a>
+    
+        <a href="../memulai_git/tentang_version_control.html" title="Tentang Version Control" class="chapter done " data-progress="1.1" style="left: 8%;"></a>
+    
+        <a href="../memulai_git/sejarah_singkat_git.html" title="Sejarah Singkat Git" class="chapter done " data-progress="1.2" style="left: 12%;"></a>
+    
+        <a href="../memulai_git/dasar_git.html" title="Dasar Git" class="chapter done " data-progress="1.3" style="left: 16%;"></a>
+    
+        <a href="../memulai_git/menginstall_git.html" title="Menginstall Git" class="chapter done " data-progress="1.4" style="left: 20%;"></a>
+    
+        <a href="../memulai_git/setup_git_untuk_pertama_kalinya.html" title="Setup Git Untuk Pertama Kalinya" class="chapter done " data-progress="1.5" style="left: 24%;"></a>
+    
+        <a href="../memulai_git/memperoleh_pertolongan.html" title="Memperoleh Pertolongan" class="chapter done " data-progress="1.6" style="left: 28%;"></a>
+    
+        <a href="../memulai_git/kesimpulan.html" title="Kesimpulan" class="chapter done " data-progress="1.7" style="left: 32%;"></a>
+    
+        <a href="../dasar_dasar_git/README.html" title="Dasar-dasar Git" class="chapter done new-chapter" data-progress="2" style="left: 36%;"></a>
+    
+        <a href="../dasar_dasar_git/mengambil_repositori_git.html" title="Mengambil Repositori Git" class="chapter done " data-progress="2.1" style="left: 40%;"></a>
+    
+        <a href="../dasar_dasar_git/merekam_perubahan_ke_dalam_repositori.html" title="Merekam Perubahan ke dalam Repositori" class="chapter done " data-progress="2.2" style="left: 44%;"></a>
+    
+        <a href="../dasar_dasar_git/melihat_sejarah_commit.html" title="Melihat Sejarah Commit" class="chapter done " data-progress="2.3" style="left: 48%;"></a>
+    
+        <a href="../dasar_dasar_git/membatalkan_apapun.html" title="Membatalkan Apapun" class="chapter  " data-progress="2.4" style="left: 52%;"></a>
+    
+        <a href="../dasar_dasar_git/bekerja_berjarak.html" title="Bekerja Berjarak" class="chapter  " data-progress="2.5" style="left: 56%;"></a>
+    
+        <a href="../dasar_dasar_git/menandai.html" title="Menandai" class="chapter  " data-progress="2.6" style="left: 60%;"></a>
+    
+        <a href="../dasar_dasar_git/tips_dan_tricks.html" title="Tips dan Tricks" class="chapter  " data-progress="2.7" style="left: 64%;"></a>
+    
+        <a href="../dasar_dasar_git/simpulan.html" title="Simpulan" class="chapter  " data-progress="2.8" style="left: 68%;"></a>
+    
+        <a href="../branching_pada_git/README.html" title="Branching Pada Git" class="chapter  new-chapter" data-progress="3" style="left: 72%;"></a>
+    
+        <a href="../branching_pada_git/apakah_branch_itu.html" title="Apakah Branch Itu" class="chapter  " data-progress="3.1" style="left: 76%;"></a>
+    
+        <a href="../branching_pada_git/basic_branching_and_merging.html" title="Basic Branching and Merging" class="chapter  " data-progress="3.2" style="left: 80%;"></a>
+    
+        <a href="../branching_pada_git/manajemen_branch.html" title="Manajemen Branch" class="chapter  " data-progress="3.3" style="left: 84%;"></a>
+    
+        <a href="../branching_pada_git/alur_kerja_branching.html" title="Alur Kerja Branching" class="chapter  " data-progress="3.4" style="left: 88%;"></a>
+    
+        <a href="../branching_pada_git/remote_branches.html" title="Remote Branches" class="chapter  " data-progress="3.5" style="left: 92%;"></a>
+    
+        <a href="../branching_pada_git/rebasing.html" title="Rebasing" class="chapter  " data-progress="3.6" style="left: 96%;"></a>
+    
+        <a href="../branching_pada_git/kesimpulan.html" title="Kesimpulan" class="chapter  " data-progress="3.7" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_196">
+                    
+                        <h1 id="melihat-sejarah-commit">Melihat Sejarah Commit</h1>
+<p>Setelah Anda membuat beberapa commit, atau jika Anda sudah menduplikasi sebuah repositori dengan sejumlah sejarah commit yang telah terjadi, Anda mungkin akan mau untuk melihat ke belakang untuk mengetahui apa yang sudah pernah terjadi. Alat paling dasar dan tepat untuk melakukan ini adalah perintah <code>git log</code>.</p>
+<p>Contoh berikut menggunakan sebuah proyek sangat sederhana yang disebut simplegit yang sering saya gunakan untuk keperluan demonstrasi. Untuk mengambil proyek ini, lakukan</p>
+<pre><code>git <span class="hljs-keyword">clone</span> git:<span class="hljs-comment">//github.com/schacon/simplegit-progit.git</span>
+</code></pre><p>Ketika Anda jalankan <code>git log</code> dalam proyek ini, Anda akan mendapat keluaran yang mirip seperti berikut:</p>
+<pre><code>$ git log
+<span class="hljs-operator"><span class="hljs-keyword">commit</span> ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+<span class="hljs-keyword">Date</span>:   Mon Mar <span class="hljs-number">17</span> <span class="hljs-number">21</span>:<span class="hljs-number">52</span>:<span class="hljs-number">11</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    changed the version <span class="hljs-keyword">number</span>
+
+<span class="hljs-keyword">commit</span> <span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+<span class="hljs-keyword">Date</span>:   Sat Mar <span class="hljs-number">15</span> <span class="hljs-number">16</span>:<span class="hljs-number">40</span>:<span class="hljs-number">33</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    removed unnecessary test code
+
+<span class="hljs-keyword">commit</span> a11bef06a3f659402fe7563abf99ad00de2209e6
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+<span class="hljs-keyword">Date</span>:   Sat Mar <span class="hljs-number">15</span> <span class="hljs-number">10</span>:<span class="hljs-number">31</span>:<span class="hljs-number">28</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    <span class="hljs-keyword">first</span> <span class="hljs-keyword">commit</span></span>
+</code></pre><p>Secara standar, dengan tanpa argumen, <code>git log</code> menampilkan daftar commit yang pernah dibuat di dalam repositori ini terurut secara kronologis terbalik. Yaitu, commit terbaru muncul paling atas. Seperti yang dapat Anda lihat, perintah ini menampilkan setiap commit dengan nlai checksum SHA-1, nama dan email dari pengubah, tanggal perubahan dilakukan, dan pesan commitnya.</p>
+<p>Sebagian besar variasi opsi dari perintah <code>git log</code> tersedia untuk menunjukkan kepada Anda secara tepat apa yang Anda cari. Di sini, kami akan menunjukkan kepada Anda beberapa dari opsi yang paling sering digunakan.</p>
+<p>Salah satu dari opsi yang paling berguna adalah <code>-p</code>, karena menampilkan diff dari setiap commit. Anda juga dapat menggunakan <code>-2</code>, yang membantu membatasi keluarannya hingga 2 entri terakhir:</p>
+<pre><code>$ git <span class="hljs-built_in">log</span> –p -<span class="hljs-number">2</span>
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Mon Mar <span class="hljs-number">17</span> <span class="hljs-number">21</span>:<span class="hljs-number">52</span>:<span class="hljs-number">11</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    changed <span class="hljs-operator">the</span> <span class="hljs-built_in">version</span> <span class="hljs-built_in">number</span>
+
+diff <span class="hljs-comment">--git a/Rakefile b/Rakefile</span>
+index a874b73.<span class="hljs-number">.8</span>f94139 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/Rakefile</span>
++++ b/Rakefile
+@@ -<span class="hljs-number">5</span>,<span class="hljs-number">7</span> +<span class="hljs-number">5</span>,<span class="hljs-number">7</span> @@ <span class="hljs-built_in">require</span> <span class="hljs-string">'rake/gempackagetask'</span>
+ spec = Gem::Specification.<span class="hljs-built_in">new</span> <span class="hljs-built_in">do</span> |s|
+-    s.<span class="hljs-built_in">version</span>   =   <span class="hljs-string">"0.1.0"</span>
++    s.<span class="hljs-built_in">version</span>   =   <span class="hljs-string">"0.1.1"</span>
+     s.author    =   <span class="hljs-string">"Scott Chacon"</span>
+
+commit <span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Sat Mar <span class="hljs-number">15</span> <span class="hljs-number">16</span>:<span class="hljs-number">40</span>:<span class="hljs-number">33</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    removed unnecessary test code
+
+diff <span class="hljs-comment">--git a/lib/simplegit.rb b/lib/simplegit.rb</span>
+index a0a60ae.<span class="hljs-number">.47</span>c6340 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/lib/simplegit.rb</span>
++++ b/lib/simplegit.rb
+@@ -<span class="hljs-number">18</span>,<span class="hljs-number">8</span> +<span class="hljs-number">18</span>,<span class="hljs-number">3</span> @@ class SimpleGit
+     <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
+ <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+-
+-<span class="hljs-keyword">if</span> $<span class="hljs-number">0</span> == __FILE__
+-  git = SimpleGit.<span class="hljs-built_in">new</span>
+-  puts git.show
+-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+\ No newline <span class="hljs-keyword">at</span> <span class="hljs-function"><span class="hljs-keyword">end</span> <span class="hljs-title">of</span> <span class="hljs-title">file</span></span>
+</code></pre><p>Opsi ini menampilkan informasi log yang sama, namun ditambah informasi diff dari setiap entri. Ini sangat membantu untuk proses tilik-ulang kode atau untuk secara cepat menelusuri apa yang telah terjadi dalam serangkaian commit yang telah ditambahkan oleh rekan kolaborasi.
+Anda juga dapat menggunakan serangkaian opsi simpulan menggunakan <code>git log</code>. Misalnya, jika Anda ingin melihat statistik dari setiap commit, Anda dapat menggunakan osi <code>--stat</code>: </p>
+<pre><code>$ git log --stat 
+commit ca82a6dff817ec66f44342007202690a93763949
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gee-mail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Mon Mar <span class="hljs-number">17</span> <span class="hljs-number">21</span>:<span class="hljs-number">52</span>:<span class="hljs-number">11</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    changed the version number
+
+ Rakefile |    <span class="hljs-number">2</span> +-
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+
+commit <span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gee-mail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Sat Mar <span class="hljs-number">15</span> <span class="hljs-number">16</span>:<span class="hljs-number">40</span>:<span class="hljs-number">33</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    removed unnecessary test code
+
+ lib/simplegit<span class="hljs-preprocessor">.rb</span> |    <span class="hljs-number">5</span> -----
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">0</span> insertions(+), <span class="hljs-number">5</span> deletions(-)
+
+commit a11bef06a3f659402fe7563abf99ad00de2209e6
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gee-mail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Sat Mar <span class="hljs-number">15</span> <span class="hljs-number">10</span>:<span class="hljs-number">31</span>:<span class="hljs-number">28</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    first commit
+
+ README           |    <span class="hljs-number">6</span> ++++++
+ Rakefile         |   <span class="hljs-number">23</span> +++++++++++++++++++++++
+ lib/simplegit<span class="hljs-preprocessor">.rb</span> |   <span class="hljs-number">25</span> +++++++++++++++++++++++++
+ <span class="hljs-number">3</span> files changed, <span class="hljs-number">54</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>Seperti Anda dapat lihat, opsi <code>--stat</code> menampilkan di bawah setiap entri commit sebuah daftar dari berkasi terubah, jumlah berkas yang diubah dan jumlah baris dalam berkas tersebut yang ditambah atau dihapus. Opsi ini juga menambahkan sebuah simpulan dari informasi tadi di bagian akhir.
+Opsi lain yang juga berguna adalah <code>--pretty</code>. Opsi ini mengubah keluaran log ke dalam bentuk selain dari bentuk standar. Beberapa pilihan bentuk yang telah dibuat sebelumnya dapat Anda gunakan. Pilihan bentuk <code>oneline</code> akan mencetak setiap commit dalam satu baris, yang berguna jika Anda melihat banyak sekali commit. Selain itu, ada pilihan bentuk <code>short</code>, <code>full</code>, dan <code>fuller</code> yang menampilkan keluaran dalam format yang kurang lebih sama tetapi dengan lebih sedikit atau lebih banyak informasi, seperti:</p>
+<pre><code>$ git <span class="hljs-built_in">log</span> <span class="hljs-comment">--pretty=oneline</span>
+ca82a6dff817ec66f44342007202690a93763949 changed <span class="hljs-operator">the</span> <span class="hljs-built_in">version</span> <span class="hljs-built_in">number</span>
+<span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7 removed unnecessary test code
+a11bef06a3f659402fe7563abf99ad00de2209e6 <span class="hljs-keyword">first</span> commit
+</code></pre><p>Yang lebih mearik adalah pilihan bentuk <code>format</code>, yang memungkinkan kita untuk menentukan format keluaran log yang kita inginkan. Ini secara khusus berguna jika Anda membuat keluaran untuk diolah oleh mesin - karena Anda menentukan format secara eksplisit, Anda tahu keluaran tidak akan berubah jika Git dimutakhirkan.</p>
+<pre><code>$ git <span class="hljs-keyword">log</span> --pretty=<span class="hljs-keyword">format</span>:<span class="hljs-string">"<span class="hljs-variable">%h</span> - <span class="hljs-variable">%an</span>, <span class="hljs-variable">%ar</span> : <span class="hljs-variable">%s</span>"</span>
+ca82a6d - Scott Chacon, <span class="hljs-number">11</span> months ago : changed the version number
+085bb3b - Scott Chacon, <span class="hljs-number">11</span> months ago : removed unnecessary test code
+a11bef<span class="hljs-number">0</span> - Scott Chacon, <span class="hljs-number">11</span> months ago : first commit
+</code></pre><p>Tabel 2-1 memperlihatkan beberapa opsi berguna yang dapat digunakan oleh format.</p>
+<pre><code>Opsi    Penjabaran dari keluaran
+<span class="hljs-tag">%<span class="hljs-title">H</span></span>    Hash dari commit
+<span class="hljs-tag">%<span class="hljs-title">h</span></span>    Hash dari commit dalam versi pendek
+<span class="hljs-tag">%<span class="hljs-title">T</span></span>    Hash dari pohon
+<span class="hljs-tag">%<span class="hljs-title">t</span></span>    Hash dari pohon dalam versi pendek
+<span class="hljs-tag">%<span class="hljs-title">P</span></span>    Hash dari parent
+<span class="hljs-tag">%<span class="hljs-title">p</span></span>    Hash dari parent dalam versi pendek
+<span class="hljs-tag">%<span class="hljs-title">an</span></span>    Nama pembuat
+<span class="hljs-tag">%<span class="hljs-title">ae</span></span>    Email pembuat
+<span class="hljs-tag">%<span class="hljs-title">ad</span></span>    Tanggal pembuat (format juga memperhitungkan opsi -date=)
+<span class="hljs-tag">%<span class="hljs-title">ar</span></span>    Tanggal pembuat, relatif
+<span class="hljs-tag">%<span class="hljs-title">cn</span></span>    Name pelaku commit
+<span class="hljs-tag">%<span class="hljs-title">ce</span></span>    Email pelaku commit
+<span class="hljs-tag">%<span class="hljs-title">cd</span></span>    Tanggal pelaku commit
+<span class="hljs-tag">%<span class="hljs-title">cr</span></span>    Tanggal pelaku commit, relatif
+<span class="hljs-tag">%<span class="hljs-title">s</span></span>    Judul
+</code></pre><p>Anda mungkin bertanya-tanya apa perbedaan dari <em>pembuat</em> dan <em>pelaku_commit</em>. Pembuat adalah orang yang sebetulnya menulis perubahan, sedangkan pelaku commit adalah orang yang terakhir mengaplikasikan perubahan tersebut. Jadi, jika Anda mengirimkan sebuah patch ke sebuah proyek dan salah satu dari anggota inti mengaplikasikan patch tersebut, Anda berdua akan dihitung - Anda sebagai pembuat dan anggota inti sebagai pelaku commit. Perbedaan ini ini akan kita bahas lebih lanjut di Bab 5.</p>
+<p>Opsi <code>oneline</code> dan <code>format</code> secara khusus berguna dengan opsi <code>log</code> lainnya yang disebut <code>--graph</code>. Opsi ini menambah informasi gambar ASCII yang menunjukkan sejarah pencabangan dan penggabungan, yang kita dapat lihat dari salinan repositori proyek Grit:</p>
+<pre><code>$ git <span class="hljs-built_in">log</span> <span class="hljs-comment">--pretty=format:"%h %s" --graph</span>
+* <span class="hljs-number">2</span>d3acf9 ignore errors <span class="hljs-built_in">from</span> SIGCHLD <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">trap</span></span>
+*  <span class="hljs-number">5e3</span>ee11 Merge branch <span class="hljs-string">'master'</span> <span class="hljs-operator">of</span> git://github.com/dustin/grit
+|\  
+| * <span class="hljs-number">420</span>eac9 Added <span class="hljs-operator">a</span> method <span class="hljs-keyword">for</span> getting <span class="hljs-operator">the</span> current branch.
+* | <span class="hljs-number">30e367</span>c timeout code <span class="hljs-operator">and</span> tests
+* | <span class="hljs-number">5</span>a09431 <span class="hljs-built_in">add</span> timeout protection <span class="hljs-built_in">to</span> grit
+* | e1193f8 support <span class="hljs-keyword">for</span> heads <span class="hljs-operator">with</span> slashes <span class="hljs-operator">in</span> them
+|/  
+* d6016bc <span class="hljs-built_in">require</span> <span class="hljs-built_in">time</span> <span class="hljs-keyword">for</span> xmlschema
+*  <span class="hljs-number">11</span>d191e Merge branch <span class="hljs-string">'defunkt'</span> <span class="hljs-keyword">into</span> <span class="hljs-built_in">local</span>
+</code></pre><p>Itulah beberapa opsi dalam memformat keluaran dari <code>git log</code> secara sederhana - masih ada banyak lagi. Tabel 2-2 menjabarkan opsi-opsi yang sejauh ini telah kita bahas dan beberapa opsi format umum lainnya yang mungkin berguna, sejalan dengan bagaimana opsi tersebut mengubah keluaran dari perintah <code>log</code>.</p>
+<pre><code>Opsi    Penjabaran
+-<span class="ruby">p    <span class="hljs-constant">Tampilkan</span> patch yang digunakan di setiap commit
+</span>-<span class="ruby">-stat    <span class="hljs-constant">Tampilkan</span> statistik dari berkas terubah di setiap commit
+</span>-<span class="ruby">-shortstat    <span class="hljs-constant">Tampilkan</span> opsi `--stat` dalam satu baris perubahan/penambahan/penghapusan 
+</span>-<span class="ruby">-name-only    <span class="hljs-constant">Tampilkan</span> daftar berkas yang terubah setelah setiap informasi commit
+</span>-<span class="ruby">-name-status    <span class="hljs-constant">Tampilkan</span> daftar berkas yang terubah dan informasi status tertambah/terubah/terhapus
+</span>-<span class="ruby">-abbrev-commit    <span class="hljs-constant">Tampilkan</span> beberapa karakter awal dari ceksum <span class="hljs-constant">SHA</span>-<span class="hljs-number">1</span>
+</span>-<span class="ruby">-relative-date    <span class="hljs-constant">Tampilkan</span> tanggal dalam bentuk relatif (misalnya, <span class="hljs-string">"2 weeks ago"</span>)
+</span>-<span class="ruby">-graph    <span class="hljs-constant">Tampilkan</span> gambar <span class="hljs-constant">ASCII</span> dari sejarah pencabangan dan penggabungan di samping keluaran log
+</span>-<span class="ruby">-pretty    <span class="hljs-constant">Tampilkan</span> commit dalam format alternatif. <span class="hljs-constant">Opsi</span> antara lain oneline, short, full, fuller dan format (dimana kita dapat merumuskan format yang kita inginkan).</span>
+</code></pre><h2 id="membatasi-keluaran-log">Membatasi Keluaran Log</h2>
+<p>Sebagai tambahan dari opsi format-keluaran, <code>git log</code> juga memiliki opsi pembatasan yang berguna - yaitu opsi yang membuat kita dapat menampilkan sebagian dari commit. Anda telah melihat salah satu opsi pembatasan ini sebelumnya - opsi <code>-2</code> yang menampilkan 2 commit terakhir. Bahkan jika Anda melakukan <code>-&lt;n&gt;</code>, dengan <code>n</code> adalah integer apapun untuk menampilkan sejumlah <code>n</code> commit terakhir. Dalam kenyataannya, Anda mungkin tidak akan menggunakan opsi ini terlalu sering, karena Git secara standar melakukan pipe dari semua output lewat sebuah pager sehingga Anda melihat hanya sebuah halaman dari keluaran log setiap saat.</p>
+<p>Namun demikian, opsi pembatasan waktu seperti <code>--since</code> dan <code>--until</code> akan lebih berguna. Sebagai contoh, perintah berikut akan menampilkan sejumlah commit yang dilakukan dalam 2 minggu terakhir:</p>
+<pre><code>$ git <span class="hljs-built_in">log</span> <span class="hljs-comment">--since=2.weeks</span>
+</code></pre><p>Perintah ini bekerja dengan format lainnya - Anda dapat mencantumkan tanggal tertentu (&quot;2008-01-15&quot;) atau tanggal relatif seperti &quot;2 years 1 day 3 minutes ago&quot;.</p>
+<p>Anda juga dapat menyaring daftar untuk commit yang cocok dengan beberapa kriteria pencarian. Opsi <code>--author</code> membuat Anda dapat menyaring pembuat tertentu, dan opsi <code>--grep</code> membuat Anda dapat mencari keyword di dalam pesan commit. (Mohon diingat bahwa jika Anda ingin mencantumkan kedua opsi author dan grep, Anda harus menambahkan <code>--all-match</code> atau perintah akan mencocokkan yang berisi keduanya saja).</p>
+<p>Opsi terakhir yang sangat berguna untuk menyaring <code>git log</code> adalah path. Jika anda mencantumkan direktori atau nama berkas, Anda dapat membatasi keluaran log ke commit yang merubah berkas-berkas tersebut. Ini selalu menjadi opsi terakhir dan biasanya didahului dengan dua tanda hubung (<code>--</code>) untuk memisahkan path dari opsi lainnya.</p>
+<p>Dalam tabel 2-3 kita daftarkan opsi pembatasan ini dan opsi umum lainnya untuk acuan Anda.</p>
+<pre><code>Opsi    Penjabaran
+-<span class="ruby">(n)    <span class="hljs-constant">Tampilkan</span> hanya sejumlah n commit terakhir
+</span>-<span class="ruby">-since, --after    <span class="hljs-constant">Batasi</span> commit hanya yang dibuat setelah tanggal yang dicantumkan
+</span>-<span class="ruby">-<span class="hljs-keyword">until</span>, --before    <span class="hljs-constant">Batasi</span> commit hanya yang dibuat sebelum tanggal yang dicantumkan
+</span>-<span class="ruby">-author    <span class="hljs-constant">Hanya</span> tampilkan commit yang entri pembuatnya cocok dengan string yang dicantumkan
+</span>-<span class="ruby">-committer    <span class="hljs-constant">Hanya</span> tampilkan commit yang entri pelaku commitnya cocok dengan string yang dicantumkan</span>
+</code></pre><p>Sebagai contoh, jika Anda ingin melihat commit mana saja yang mengubah berkas test di sejarah kode sumber yang di-commit oleh Junio Hamano dan bukan merupakan penggabungan selama bulan October 2008, Anda dapat menjalankan seperti berikut:</p>
+<pre><code>$ git <span class="hljs-keyword">log</span> --pretty=<span class="hljs-string">"<span class="hljs-variable">%h</span> - <span class="hljs-variable">%s</span>"</span> --author=gitster --since=<span class="hljs-string">"2008-10-01"</span> \
+   --before=<span class="hljs-string">"2008-11-01"</span> --<span class="hljs-keyword">no</span>-merges -- t/
+<span class="hljs-number">5610</span>e3b - Fix testcase failure <span class="hljs-keyword">when</span> extended attribute
+acd3b9e - Enhance hold_lock_file_for<span class="hljs-number">_</span>{update,append}()
+f563754 - demonstrate breakage of detached checkout wi
+d1a43f2 - <span class="hljs-keyword">reset</span> --hard/<span class="hljs-keyword">read</span>-tree --<span class="hljs-keyword">reset</span> -u: remove un
+<span class="hljs-number">51</span>a94af - Fix <span class="hljs-string">"checkout --track -b newbranch"</span> on detac
+b0ad11e - pull: allow <span class="hljs-string">"git pull origin <span class="hljs-variable">$something</span>:<span class="hljs-variable">$cur</span></span>
+</code></pre><p>Dari sekitar 20,000 commit dalam sejarah kode sumber Git, perintah ini menampilkan hanya 6 yang cocok dengan kriteria di atas.</p>
+<h2 id="menggunakan-gui-untuk-menggambarkan-sejarah">Menggunakan GUI untuk Menggambarkan Sejarah</h2>
+<p>Jika Anda ingin menggunakan alat yang lebih grafis untuk menggambarkan sejarah commit Anda, Anda dapat melihat program Tcl/Tk yang disebut gitk yang didistribusikan bersama dengan Git. Gitk sebelunya hanyalah alat visual dari <code>git log</code>, dan dia menerima hampir semua opsi pembatasan yang dapat dilakukan oleh <code>git log</code>. Jika Anda mengetikkan gitk di baris perintah dalam direktori proyek Anda, Anda akan melihat seperti Gambar 2-2.</p>
+<p><img src="http://git-scm.com/figures/18333fig0202-tn.png" alt=""></p>
+<p>Gambar 2-2. Penggambaran sejarah oleh Gitk.</p>
+<p>Anda dapat melihat sejarah commit di setengah bagian atas jendela dengan gambar pohon yang menarik. Tampilan diff di bagian bawah jendela memperlihatkan kepada Anda perubahan yang dilakukan di commit manapun yang Anda klik.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../dasar_dasar_git/merekam_perubahan_ke_dalam_repositori.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../dasar_dasar_git/membatalkan_apapun.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

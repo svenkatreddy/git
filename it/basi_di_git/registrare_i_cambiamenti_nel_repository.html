@@ -1,0 +1,1093 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Registrare i Cambiamenti nel Repository | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../basi_di_git/vedere_la_storia_dei_commit.html" />
+        
+        
+        <link rel="prev" href="../basi_di_git/repository_git.html" />
+        
+
+        <meta property="og:title" content="Registrare i Cambiamenti nel Repository | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.2" data-basepath=".." data-revision="1396895615553">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/basi_di_git/registrare_i_cambiamenti_nel_repository.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="per_iniziare/README.html">
+                
+                <a href="../per_iniziare/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Per Iniziare
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="per_iniziare/il_controllo_di_versione.html">
+                            
+                            <a href="../per_iniziare/il_controllo_di_versione.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Il Controllo di Versione
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="per_iniziare/una_breve_storia_di_git.html">
+                            
+                            <a href="../per_iniziare/una_breve_storia_di_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Una Breve Storia di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="per_iniziare/basi_di_git.html">
+                            
+                            <a href="../per_iniziare/basi_di_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Basi di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="per_iniziare/installare_git.html">
+                            
+                            <a href="../per_iniziare/installare_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Installare Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="per_iniziare/prima_configurazione_di_git.html">
+                            
+                            <a href="../per_iniziare/prima_configurazione_di_git.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Prima Configurazione di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="per_iniziare/ottieni_aiuto.html">
+                            
+                            <a href="../per_iniziare/ottieni_aiuto.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Ottieni aiuto
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="per_iniziare/sommario.html">
+                            
+                            <a href="../per_iniziare/sommario.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Sommario
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="basi_di_git/README.html">
+                
+                <a href="../basi_di_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Basi di Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="basi_di_git/repository_git.html">
+                            
+                            <a href="../basi_di_git/repository_git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Repository Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="basi_di_git/registrare_i_cambiamenti_nel_repository.html">
+                            
+                            <a href="../basi_di_git/registrare_i_cambiamenti_nel_repository.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Registrare i Cambiamenti nel Repository
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="basi_di_git/vedere_la_storia_dei_commit.html">
+                            
+                            <a href="../basi_di_git/vedere_la_storia_dei_commit.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Vedere la Storia dei Commit
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="basi_di_git/annullare_le_cose.html">
+                            
+                            <a href="../basi_di_git/annullare_le_cose.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Annullare le Cose
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="basi_di_git/lavorare_con_sorgenti_remote.html">
+                            
+                            <a href="../basi_di_git/lavorare_con_sorgenti_remote.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Lavorare con Sorgenti Remote
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="basi_di_git/suggerimenti_e_trucchi.html">
+                            
+                            <a href="../basi_di_git/suggerimenti_e_trucchi.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Suggerimenti e Trucchi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="basi_di_git/riassunto.html">
+                            
+                            <a href="../basi_di_git/riassunto.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Riassunto
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="diramazioni_in_git/README.html">
+                
+                <a href="../diramazioni_in_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Diramazioni in Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="diramazioni_in_git/cose_un_ramo.html">
+                            
+                            <a href="../diramazioni_in_git/cose_un_ramo.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Cos&#39;è un Ramo
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="diramazioni_in_git/basi_di_diramazione_e_fusione.html">
+                            
+                            <a href="../diramazioni_in_git/basi_di_diramazione_e_fusione.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Basi di Diramazione e Fusione
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="diramazioni_in_git/amministrazione_dei_rami.html">
+                            
+                            <a href="../diramazioni_in_git/amministrazione_dei_rami.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Amministrazione dei Rami
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="diramazioni_in_git/flusso_di_lavoro_con_le_ramificazioni.html">
+                            
+                            <a href="../diramazioni_in_git/flusso_di_lavoro_con_le_ramificazioni.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Flusso di Lavoro con le Ramificazioni
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="diramazioni_in_git/rami_remoti.html">
+                            
+                            <a href="../diramazioni_in_git/rami_remoti.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Rami Remoti
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="diramazioni_in_git/rifondazione.html">
+                            
+                            <a href="../diramazioni_in_git/rifondazione.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rifondazione
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="diramazioni_in_git/riassunto.html">
+                            
+                            <a href="../diramazioni_in_git/riassunto.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Riassunto
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_sul_server/README.html">
+                
+                <a href="../git_sul_server/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git sul Server
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_sul_server/i_protocolli.html">
+                            
+                            <a href="../git_sul_server/i_protocolli.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> I Protocolli
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_sul_server/ottenere_git_su_di_un_server.html">
+                            
+                            <a href="../git_sul_server/ottenere_git_su_di_un_server.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Ottenere Git su di un Server
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_sul_server/generare_la_propria_chiave_pubblica_ssh.html">
+                            
+                            <a href="../git_sul_server/generare_la_propria_chiave_pubblica_ssh.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Generare la Propria Chiave Pubblica SSH
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_sul_server/configurare_il_server.html">
+                            
+                            <a href="../git_sul_server/configurare_il_server.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Configurare il Server
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_sul_server/accesso_pubblico.html">
+                            
+                            <a href="../git_sul_server/accesso_pubblico.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Accesso Pubblico
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_sul_server/gitweb.html">
+                            
+                            <a href="../git_sul_server/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_sul_server/gitosis.html">
+                            
+                            <a href="../git_sul_server/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_sul_server/gitolite.html">
+                            
+                            <a href="../git_sul_server/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_sul_server/demone_git.html">
+                            
+                            <a href="../git_sul_server/demone_git.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Demone Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_sul_server/hosting_git.html">
+                            
+                            <a href="../git_sul_server/hosting_git.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Hosting Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_sul_server/riassunto.html">
+                            
+                            <a href="../git_sul_server/riassunto.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Riassunto
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="git_distribuito/README.html">
+                
+                <a href="../git_distribuito/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Git distribuito
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="git_distribuito/workflows_distribuiti.html">
+                            
+                            <a href="../git_distribuito/workflows_distribuiti.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Workflows distribuiti
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="git_distribuito/contribuire_a_un_progetto.html">
+                            
+                            <a href="../git_distribuito/contribuire_a_un_progetto.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Contribuire a un Progetto
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="git_distribuito/mantenere_un_progetto.html">
+                            
+                            <a href="../git_distribuito/mantenere_un_progetto.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Mantenere un Progetto
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="git_distribuito/sommario.html">
+                            
+                            <a href="../git_distribuito/sommario.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Sommario
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_tools/README.html">
+                
+                <a href="../git_tools/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git Tools
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_tools/selezione_della_revisione.html">
+                            
+                            <a href="../git_tools/selezione_della_revisione.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Selezione della revisione
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_tools/moduli.html">
+                            
+                            <a href="../git_tools/moduli.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Moduli
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_tools/subtree_merging.html">
+                            
+                            <a href="../git_tools/subtree_merging.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Subtree Merging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_tools/sommario.html">
+                            
+                            <a href="../git_tools/sommario.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Sommario
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="customizing_git/README.html">
+                
+                <a href="../customizing_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Customizing Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="customizing_git/configurazione_di_git.html">
+                            
+                            <a href="../customizing_git/configurazione_di_git.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Configurazione di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="customizing_git/attributi_di_git.html">
+                            
+                            <a href="../customizing_git/attributi_di_git.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Attributi di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="customizing_git/git_hooks.html">
+                            
+                            <a href="../customizing_git/git_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git Hooks
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_e_altri_sistemi/README.html">
+                
+                <a href="../git_e_altri_sistemi/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git e altri sistemi
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_e_altri_sistemi/git_e_subversion.html">
+                            
+                            <a href="../git_e_altri_sistemi/git_e_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git e Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_e_altri_sistemi/migrare_a_git.html">
+                            
+                            <a href="../git_e_altri_sistemi/migrare_a_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Migrare a Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_e_altri_sistemi/sommario.html">
+                            
+                            <a href="../git_e_altri_sistemi/sommario.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Sommario
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="i_comandi_interni_di_git/README.html">
+                
+                <a href="../i_comandi_interni_di_git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> I comandi interni di Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="i_comandi_interni_di_git/impianto_e_sanitari_plumbing_e_porcelain.html">
+                            
+                            <a href="../i_comandi_interni_di_git/impianto_e_sanitari_plumbing_e_porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Impianto e sanitari (*Plumbing* e *Porcelain*)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="i_comandi_interni_di_git/gli_oggetti_di_git.html">
+                            
+                            <a href="../i_comandi_interni_di_git/gli_oggetti_di_git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Gli oggetti di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="i_comandi_interni_di_git/i_riferimenti_di_git.html">
+                            
+                            <a href="../i_comandi_interni_di_git/i_riferimenti_di_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> I riferimenti di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="i_comandi_interni_di_git/pacchetti_di_file.html">
+                            
+                            <a href="../i_comandi_interni_di_git/pacchetti_di_file.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Pacchetti di file
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="i_comandi_interni_di_git/le_specifiche_di_riferimento_refspec.html">
+                            
+                            <a href="../i_comandi_interni_di_git/le_specifiche_di_riferimento_refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Le specifiche di riferimento (*refspec*)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="i_comandi_interni_di_git/protocolli_di_trasferimento.html">
+                            
+                            <a href="../i_comandi_interni_di_git/protocolli_di_trasferimento.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Protocolli di trasferimento
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="i_comandi_interni_di_git/manutenzione_e_recupero_dei_dati.html">
+                            
+                            <a href="../i_comandi_interni_di_git/manutenzione_e_recupero_dei_dati.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Manutenzione e recupero dei dati
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="i_comandi_interni_di_git/sommario.html">
+                            
+                            <a href="../i_comandi_interni_di_git/sommario.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Sommario
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 17.46031746031746%;min-width: 15.873015873015873%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../per_iniziare/README.html" title="Per Iniziare" class="chapter done new-chapter" data-progress="1" style="left: 1.5873015873015872%;"></a>
+    
+        <a href="../per_iniziare/il_controllo_di_versione.html" title="Il Controllo di Versione" class="chapter done " data-progress="1.1" style="left: 3.1746031746031744%;"></a>
+    
+        <a href="../per_iniziare/una_breve_storia_di_git.html" title="Una Breve Storia di Git" class="chapter done " data-progress="1.2" style="left: 4.761904761904762%;"></a>
+    
+        <a href="../per_iniziare/basi_di_git.html" title="Basi di Git" class="chapter done " data-progress="1.3" style="left: 6.349206349206349%;"></a>
+    
+        <a href="../per_iniziare/installare_git.html" title="Installare Git" class="chapter done " data-progress="1.4" style="left: 7.936507936507937%;"></a>
+    
+        <a href="../per_iniziare/prima_configurazione_di_git.html" title="Prima Configurazione di Git" class="chapter done " data-progress="1.5" style="left: 9.523809523809524%;"></a>
+    
+        <a href="../per_iniziare/ottieni_aiuto.html" title="Ottieni aiuto" class="chapter done " data-progress="1.6" style="left: 11.11111111111111%;"></a>
+    
+        <a href="../per_iniziare/sommario.html" title="Sommario" class="chapter done " data-progress="1.7" style="left: 12.698412698412698%;"></a>
+    
+        <a href="../basi_di_git/README.html" title="Basi di Git" class="chapter done new-chapter" data-progress="2" style="left: 14.285714285714286%;"></a>
+    
+        <a href="../basi_di_git/repository_git.html" title="Repository Git" class="chapter done " data-progress="2.1" style="left: 15.873015873015873%;"></a>
+    
+        <a href="../basi_di_git/registrare_i_cambiamenti_nel_repository.html" title="Registrare i Cambiamenti nel Repository" class="chapter done " data-progress="2.2" style="left: 17.46031746031746%;"></a>
+    
+        <a href="../basi_di_git/vedere_la_storia_dei_commit.html" title="Vedere la Storia dei Commit" class="chapter  " data-progress="2.3" style="left: 19.047619047619047%;"></a>
+    
+        <a href="../basi_di_git/annullare_le_cose.html" title="Annullare le Cose" class="chapter  " data-progress="2.4" style="left: 20.634920634920636%;"></a>
+    
+        <a href="../basi_di_git/lavorare_con_sorgenti_remote.html" title="Lavorare con Sorgenti Remote" class="chapter  " data-progress="2.5" style="left: 22.22222222222222%;"></a>
+    
+        <a href="../basi_di_git/suggerimenti_e_trucchi.html" title="Suggerimenti e Trucchi" class="chapter  " data-progress="2.6" style="left: 23.80952380952381%;"></a>
+    
+        <a href="../basi_di_git/riassunto.html" title="Riassunto" class="chapter  " data-progress="2.7" style="left: 25.396825396825395%;"></a>
+    
+        <a href="../diramazioni_in_git/README.html" title="Diramazioni in Git" class="chapter  new-chapter" data-progress="3" style="left: 26.984126984126984%;"></a>
+    
+        <a href="../diramazioni_in_git/cose_un_ramo.html" title="Cos&#39;è un Ramo" class="chapter  " data-progress="3.1" style="left: 28.571428571428573%;"></a>
+    
+        <a href="../diramazioni_in_git/basi_di_diramazione_e_fusione.html" title="Basi di Diramazione e Fusione" class="chapter  " data-progress="3.2" style="left: 30.158730158730158%;"></a>
+    
+        <a href="../diramazioni_in_git/amministrazione_dei_rami.html" title="Amministrazione dei Rami" class="chapter  " data-progress="3.3" style="left: 31.746031746031747%;"></a>
+    
+        <a href="../diramazioni_in_git/flusso_di_lavoro_con_le_ramificazioni.html" title="Flusso di Lavoro con le Ramificazioni" class="chapter  " data-progress="3.4" style="left: 33.333333333333336%;"></a>
+    
+        <a href="../diramazioni_in_git/rami_remoti.html" title="Rami Remoti" class="chapter  " data-progress="3.5" style="left: 34.92063492063492%;"></a>
+    
+        <a href="../diramazioni_in_git/rifondazione.html" title="Rifondazione" class="chapter  " data-progress="3.6" style="left: 36.507936507936506%;"></a>
+    
+        <a href="../diramazioni_in_git/riassunto.html" title="Riassunto" class="chapter  " data-progress="3.7" style="left: 38.095238095238095%;"></a>
+    
+        <a href="../git_sul_server/README.html" title="Git sul Server" class="chapter  new-chapter" data-progress="4" style="left: 39.682539682539684%;"></a>
+    
+        <a href="../git_sul_server/i_protocolli.html" title="I Protocolli" class="chapter  " data-progress="4.1" style="left: 41.26984126984127%;"></a>
+    
+        <a href="../git_sul_server/hosting_git.html" title="Hosting Git" class="chapter  " data-progress="4.10" style="left: 42.857142857142854%;"></a>
+    
+        <a href="../git_sul_server/riassunto.html" title="Riassunto" class="chapter  " data-progress="4.11" style="left: 44.44444444444444%;"></a>
+    
+        <a href="../git_sul_server/ottenere_git_su_di_un_server.html" title="Ottenere Git su di un Server" class="chapter  " data-progress="4.2" style="left: 46.03174603174603%;"></a>
+    
+        <a href="../git_sul_server/generare_la_propria_chiave_pubblica_ssh.html" title="Generare la Propria Chiave Pubblica SSH" class="chapter  " data-progress="4.3" style="left: 47.61904761904762%;"></a>
+    
+        <a href="../git_sul_server/configurare_il_server.html" title="Configurare il Server" class="chapter  " data-progress="4.4" style="left: 49.20634920634921%;"></a>
+    
+        <a href="../git_sul_server/accesso_pubblico.html" title="Accesso Pubblico" class="chapter  " data-progress="4.5" style="left: 50.79365079365079%;"></a>
+    
+        <a href="../git_sul_server/gitweb.html" title="GitWeb" class="chapter  " data-progress="4.6" style="left: 52.38095238095238%;"></a>
+    
+        <a href="../git_sul_server/gitosis.html" title="Gitosis" class="chapter  " data-progress="4.7" style="left: 53.96825396825397%;"></a>
+    
+        <a href="../git_sul_server/gitolite.html" title="Gitolite" class="chapter  " data-progress="4.8" style="left: 55.55555555555556%;"></a>
+    
+        <a href="../git_sul_server/demone_git.html" title="Demone Git" class="chapter  " data-progress="4.9" style="left: 57.142857142857146%;"></a>
+    
+        <a href="../git_distribuito/README.html" title="Git distribuito" class="chapter  new-chapter" data-progress="5" style="left: 58.73015873015873%;"></a>
+    
+        <a href="../git_distribuito/workflows_distribuiti.html" title="Workflows distribuiti" class="chapter  " data-progress="5.1" style="left: 60.317460317460316%;"></a>
+    
+        <a href="../git_distribuito/contribuire_a_un_progetto.html" title="Contribuire a un Progetto" class="chapter  " data-progress="5.2" style="left: 61.904761904761905%;"></a>
+    
+        <a href="../git_distribuito/mantenere_un_progetto.html" title="Mantenere un Progetto" class="chapter  " data-progress="5.3" style="left: 63.492063492063494%;"></a>
+    
+        <a href="../git_distribuito/sommario.html" title="Sommario" class="chapter  " data-progress="5.4" style="left: 65.07936507936508%;"></a>
+    
+        <a href="../git_tools/README.html" title="Git Tools" class="chapter  new-chapter" data-progress="6" style="left: 66.66666666666667%;"></a>
+    
+        <a href="../git_tools/selezione_della_revisione.html" title="Selezione della revisione" class="chapter  " data-progress="6.1" style="left: 68.25396825396825%;"></a>
+    
+        <a href="../git_tools/moduli.html" title="Moduli" class="chapter  " data-progress="6.2" style="left: 69.84126984126983%;"></a>
+    
+        <a href="../git_tools/subtree_merging.html" title="Subtree Merging" class="chapter  " data-progress="6.3" style="left: 71.42857142857143%;"></a>
+    
+        <a href="../git_tools/sommario.html" title="Sommario" class="chapter  " data-progress="6.4" style="left: 73.01587301587301%;"></a>
+    
+        <a href="../customizing_git/README.html" title="Customizing Git" class="chapter  new-chapter" data-progress="7" style="left: 74.60317460317461%;"></a>
+    
+        <a href="../customizing_git/configurazione_di_git.html" title="Configurazione di Git" class="chapter  " data-progress="7.1" style="left: 76.19047619047619%;"></a>
+    
+        <a href="../customizing_git/attributi_di_git.html" title="Attributi di Git" class="chapter  " data-progress="7.2" style="left: 77.77777777777777%;"></a>
+    
+        <a href="../customizing_git/git_hooks.html" title="Git Hooks" class="chapter  " data-progress="7.3" style="left: 79.36507936507937%;"></a>
+    
+        <a href="../git_e_altri_sistemi/README.html" title="Git e altri sistemi" class="chapter  new-chapter" data-progress="8" style="left: 80.95238095238095%;"></a>
+    
+        <a href="../git_e_altri_sistemi/git_e_subversion.html" title="Git e Subversion" class="chapter  " data-progress="8.1" style="left: 82.53968253968254%;"></a>
+    
+        <a href="../git_e_altri_sistemi/migrare_a_git.html" title="Migrare a Git" class="chapter  " data-progress="8.2" style="left: 84.12698412698413%;"></a>
+    
+        <a href="../git_e_altri_sistemi/sommario.html" title="Sommario" class="chapter  " data-progress="8.3" style="left: 85.71428571428571%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/README.html" title="I comandi interni di Git" class="chapter  new-chapter" data-progress="9" style="left: 87.3015873015873%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/impianto_e_sanitari_plumbing_e_porcelain.html" title="Impianto e sanitari (*Plumbing* e *Porcelain*)" class="chapter  " data-progress="9.1" style="left: 88.88888888888889%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/gli_oggetti_di_git.html" title="Gli oggetti di Git" class="chapter  " data-progress="9.2" style="left: 90.47619047619048%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/i_riferimenti_di_git.html" title="I riferimenti di Git" class="chapter  " data-progress="9.3" style="left: 92.06349206349206%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/pacchetti_di_file.html" title="Pacchetti di file" class="chapter  " data-progress="9.4" style="left: 93.65079365079364%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/le_specifiche_di_riferimento_refspec.html" title="Le specifiche di riferimento (*refspec*)" class="chapter  " data-progress="9.5" style="left: 95.23809523809524%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/protocolli_di_trasferimento.html" title="Protocolli di trasferimento" class="chapter  " data-progress="9.6" style="left: 96.82539682539682%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/manutenzione_e_recupero_dei_dati.html" title="Manutenzione e recupero dei dati" class="chapter  " data-progress="9.7" style="left: 98.41269841269842%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/sommario.html" title="Sommario" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_336">
+                    
+                        <h1 id="registrare-i-cambiamenti-nel-repository">Registrare i Cambiamenti nel Repository</h1>
+<p>In buona fede hai copiato un repository Git e hai la copia di lavoro dei file di questo progetto. Ora puoi apportare alcune modifiche ed inviare gli snapshots di questi cambiamenti nel tuo repository ogni volta che il progetto raggiunge uno stato che vuoi registrare.</p>
+<p>Ricorda che ogni file nella tua directory di lavoro è in una dei due stati seguenti: <em>tracciato</em> o <em>non tracciato</em>. I file <em>tracciati</em> sono i file presenti nell&#39;ultimo snapshot; possono essere <em>non modificati</em>, <em>modificati</em> o <em>staged</em> (parcheggiati, ndt). I file <em>non tracciati</em> sono tutti gli altri - qualsiasi file nella tua directory di lavoro che non è presente nel tuo ultimo snapshot o nella tua area di stage. Quando cloni per la prima volta un repository, tutti i tuoi file sono tracciati e non modificati perché li hai appena prelevati e non hai modificato ancora niente.</p>
+<p>Quando modifichi i file, Git li vede come cambiati, perché li hai modificati rispetto all&#39;ultimo commit. Parcheggi questi file e poi esegui il commit di tutti i cambiamenti presenti nell&#39;area di stage, ed il ciclo si ripete. Questo ciclo di vita è illustrato nella Figura 2-1.</p>
+<p><img src="http://git-scm.com/figures/18333fig0201-tn.png" alt=""></p>
+<p>Figura 2-1. Il ciclo di vita dello stato dei tuoi file.</p>
+<h2 id="controlla-lo-stato-dei-tuoi-file">Controlla lo Stato dei Tuoi File</h2>
+<p>Lo strumento principale che userai per determinare quali file sono in un certo stato è il comando git status. Se lanci questo comando direttamente dopo aver fatto una clonazione, dovresti vedere qualcosa di simile a:</p>
+<pre><code>$ git status
+<span class="hljs-comment"># On branch master</span>
+nothing <span class="hljs-built_in">to</span> commit (working <span class="hljs-built_in">directory</span> clean)
+</code></pre><p>Questo significa che hai una directory di lavoro pulita — in altre parole, non c&#39;è traccia di file modificati. Git inoltre non vede altri file non tracciati, altrimenti sarebbero elencati qui. Infine, il comando ci dice in quale ramo si è. Per ora, è sempre il master, che è il predefinito; non preoccuparti di questo per ora. Il prossimo capitolo tratterà delle ramificazioni e dei riferimenti nei dettagli.</p>
+<p>Ora diciamo che hai aggiunto un nuovo file al tuo progetto, un semplice file README. Se il file non esisteva prima, e lanci <code>git status</code>, vedrai il tuo file non tracciato come segue:</p>
+<pre><code>$ vim README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Untracked files:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    README</span>
+nothing added to commit but untracked files present (use <span class="hljs-string">"git add"</span> to track)
+</code></pre><p>Puoi vedere che il tuo nuovo file README non è tracciato, perché è sotto al titolo &quot;Untracked files&quot; nell&#39;output degli stati. Untracked fondamentalmente significa che Git vede un file che non avevi nel precedente snapshot (commit); Git non inizierà ad includerlo negli snapshot dei tuoi commit fino a quando tu non glielo dirai esplicitamente. Si comporta così per evitare che tu accidentalmente includa file binari generati o qualsiasi altro tipo di file che non vuoi sia incluso. Se vuoi includere il file README, continua con il tracciamento dei file.</p>
+<h2 id="tracciare-nuovi-file">Tracciare Nuovi File</h2>
+<p>Per iniziare a tracciare un nuovo file, usa il comando <code>git add</code>. Per tracciare il file <code>README</code>, lancia questo comando:</p>
+<pre><code><span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Se lanci nuovamente il comando di stato, puoi vedere il tuo file <code>README</code> tracciato e parcheggiato:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Ti dice che è in stage (parcheggiato, ndt) perché è sotto al titolo &quot;Changes to be committed&quot;. Se fai ora il commit, la versione del file al momento in cui hai lanciato <code>git add</code> sarà quella che troverai nella storia dello snapshot.  Potresti ricordare che quando hai eseguito <code>git init</code> precedentemente, poi hai dovuto lanciare <code>git add (file)</code> — che era necessario per l&#39;inizio del tracciamento dei file nella tua directory. Il comando git add prende il nome del percorso di ogni file o directory; se è una directory, il comando aggiunge tutti i file in quella directory ricorsivamente.</p>
+<h2 id="parcheggiare-file-modificati">Parcheggiare File Modificati</h2>
+<p>Ora modifichiamo un file che è già stato tracciato. Se modifichi un file precedentemente tracciato chiamato <code>benchmarks.rb</code> e poi avvii nuovamente il comando <code>status</code>, otterrai qualcosa di simile a:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Il file benchmarks.rb appare sotto la sezione chiamata &quot;Changes not staged for commit&quot; — che significa che un file che è tracciato è stato modificato nella directory di lavoro ma non ancora messo in stage. Per parcheggiarlo, avvia il comando <code>git add</code> (è un comando multifunzione — è usato per iniziare a tracciare nuovi file, per parcheggiare i file e per fare altre cose come eseguire la fusione dei file che entrano in conflitto dopo che sono stati risolti). Avvia dunque <code>git add</code> per parcheggiare ora il file benchmarks.rb, e avvia nuovamente <code>git status</code>:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Entrambi i file sono parcheggiati ed entreranno nel prossimo commit. A questo punto, supponendo che tu ti sia ricordato di una piccola modifica da fare a benchmarks.rb prima di fare il commit. Apri nuovamente il file ed esegui la modifica, e ora sei pronto per il commit. Come sempre, lanci <code>git status</code> ancora una volta:</p>
+<pre><code>$ vim benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Che succede? Ora benchmarks.rb è elencato sia in stage che non. Come è possibile? É saltato fuori che Git ha parcheggiato il file esattamente come se tu avessi avviato il comando git add. Se esegui ora il commit, la versione di benchmarks.rb che verrà inviata nel commit sarà quella di quando tu hai lanciato il comando git add, non la versione del file che appare nella tua directory di lavoro quando lanci git commit. Se modifichi un file dopo che hai lanciato <code>git add</code>, devi nuovamente avviare <code>git add</code> per parcheggiare l&#39;ultima versione del file:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><h2 id="ignorare-file">Ignorare File</h2>
+<p>Spesso, si ha una classe di file che non si vuole automaticamente aggiungere o far vedere come file non tracciati a Git. Ci sono generalmente alcuni file generati automaticamente come i file di log o i file prodotti dalla creazione di un sistema. In questi casi, puoi creare un file chiamato .gitignore con una lista di pattern corrispondente ad essi. Questo è un esempio di file .gitignore:</p>
+<pre><code><span class="hljs-variable">$ </span>cat .gitignore
+*.[oa]
+*~
+</code></pre><p>La prima linea dice a Git di ignorare qualsiasi file che finisce con .o o .a — file di oggetti o archivi che possono essere il prodotto di una compilazione del tuo codice. La seconda linea dice a Git di ignorare tutti i file che finiscono con la tilde (<code>~</code>), che è usata da alcuni editor di testo come Emacs per marcare i file temporanei. Puoi anche includere directory di log, tmp o pid; documentazioni generate automaticamente; e così via. Imposta un file .gitignore prima di di procedere è generalmente una buona idea, così si evita il rischio di eseguire accidentalmente dei commit dei file che non vuoi nel tuo repository Git.</p>
+<p>Le regole per i pattern che puoi mettere nel file .gitignore sono le seguenti:</p>
+<ul>
+<li>Linee vuote o linee che iniziano con # sono ignorate.</li>
+<li>I glob pattern standard (formati usati per indicare classi di caratteri nelle shell, ndt) funzionano.</li>
+<li>Puoi terminare i pattern con un diviso (<code>/</code>) per specificare una directory.</li>
+<li>Puoi negare un pattern aggiungendo all&#39;inizio il punto di esclamazione (<code>!</code>).</li>
+</ul>
+<p>I glob pattern sono come espressioni regolari semplificate usate dalla shell. Un asterisco (<code>*</code>) corrisponde a zero o più caratteri; <code>[abc]</code> corrispondente ad ogni carattere all&#39;interno delle parentesi (in questo caso a, b, o c); il punto di domanda (<code>?</code>) corrispondente ad un singolo carattere; ed i caratteri all&#39;interno delle parentesi quadre separati dal segno meno (<code>[0-9]</code>) corrispondono ad ogni carattere all&#39;interno del range impostato (in questo caso da 0 a 9).</p>
+<p>Questo è un altro esempio di file .gitignore:</p>
+<pre><code><span class="hljs-preprocessor"># un commento - questo è ignorato</span>
+<span class="hljs-preprocessor"># no file .a</span>
+*.a
+<span class="hljs-preprocessor"># ma traccia lib.a, mentre vengono ignorati tutti i file .a come sopra</span>
+!lib.a
+<span class="hljs-preprocessor"># ignora solamente il file TODO in root, non del tipo subdir/TODO</span>
+/TODO
+<span class="hljs-preprocessor"># ignora tutti i file nella directory build/</span>
+build/
+<span class="hljs-preprocessor"># ignora doc/note.txt, ma non doc/server/arch.txt</span>
+doc<span class="hljs-comment">/*.txt
+# ignora tutti i file .txt nella directory doc/
+doc/**/</span>*.txt
+</code></pre><p>Un pattern <code>**/</code> è disponibile in Git dalla version 1.8.2.</p>
+<h2 id="visualizzare-le-tue-modifiche-parcheggiate-e-non">Visualizzare le Tue Modifiche Parcheggiate e Non</h2>
+<p>Se il comando <code>git status</code> è troppo vago per te — vorrai conoscere esattamente cosa hai modificato, non solamente i file che hai cambiato — puoi usare il comando <code>git diff</code>. Scopriremo in maggior dettaglio <code>git diff</code> più avanti; ma probabilmente lo userai più spesso per rispondere a queste due domande: Cosa hai modificato, ma non ancora parcheggiato? E cosa hai parcheggiato e che sta per mettere nel commit? Certamente, <code>git status</code> risponde a queste domande in generale, <code>git diff</code> ti mostra le linee esatte aggiunte e rimosse — la patch, per così dire.</p>
+<p>Nuovamente ti chiedo di modificare e parcheggiare il file README e poi modificare il file benchmarks.rb senza parcheggiarlo. Se lanci il comando <code>status</code>, vedrai nuovamente questo:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Per vedere cosa hai modificato, ma non ancora parcheggiato, digita <code>git diff</code> senza altri argomenti:</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..da65585 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+           @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+         <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+         run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+           <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+           <span class="hljs-built_in">log</span>.size
+</code></pre><p>Questo comando compara cosa c&#39;è nella tua directory di lavoro con quello che è nella tua area di stage. Il risultato ti dice i cambiamenti che hai fatto che non sono ancora stati parcheggiati.</p>
+<p>Se vuoi vedere cosa hai parcheggiato e cosa sarà inviato con il tuo prossimo commit, puoi usare <code>git diff --cached</code>. (Nella versione 1.6.1 e successive di Git, puoi usare anche <code>git diff --staged</code>, che dovrebbe essere più facile da ricordare). Questo comando compara i tuoi cambiamenti nell&#39;area di stage ed il tuo ultimo commit:</p>
+<pre><code>$ git diff --cached
+diff --git a/README b/README
+new file mode 100644
+index 0000000..03902a1
+<span class="hljs-header">--- /dev/null</span>
+<span class="hljs-header">+++ b/README2</span>
+<span class="hljs-chunk">@@ -0,0 +1,5 @@</span>
+<span class="hljs-addition">+grit</span>
+<span class="hljs-addition">+ by Tom Preston-Werner, Chris Wanstrath</span>
+<span class="hljs-addition">+ http://github.com/mojombo/grit</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+Grit is a Ruby library for extracting information from a Git repository</span>
+</code></pre><p>É importante notare che <code>git diff</code> di per se non visualizza tutti i cambiamenti fatti dal tuo ultimo commit — solo i cambiamenti che ancora non sono parcheggiati. Questo può confondere, perché se hai messo in stage tutte le tue modifiche, <code>git diff</code> non darà nessun output.</p>
+<p>Per un altro esempio, se parcheggi il file benchmarks.rb e lo modifichi, puoi usare <code>git diff</code> per vedere i cambiamenti nel file che sono in stage e i cambiamenti che non sono parcheggiati:</p>
+<pre><code>$ git add benchmarks.rb
+$ echo <span class="hljs-string">'# test line'</span> &gt;&gt; benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Ora puoi usare <code>git diff</code> per vedere cosa non è ancora parcheggiato</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index e445e28.<span class="hljs-number">.86</span>b2f7c <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">127</span>,<span class="hljs-number">3</span> +<span class="hljs-number">127</span>,<span class="hljs-number">4</span> @@ <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+ main()
+
+ <span class="hljs-comment">##pp Grit::GitRuby.cache_client.stats</span>
++<span class="hljs-comment"># test line</span>
+</code></pre><p>e <code>git diff --cached</code> per vedere cosa hai parcheggiato precedentemente:</p>
+<pre><code>$ git diff <span class="hljs-comment">--cached</span>
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..e445e28 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+          @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+        run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+          <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+          <span class="hljs-built_in">log</span>.size
+</code></pre><h2 id="eseguire-il-commit-delle-tue-modifiche">Eseguire il Commit delle Tue Modifiche</h2>
+<p>Ora la tua area di stage è impostata come volevi, puoi eseguire il commit delle tue modifiche. Ricorda che qualsiasi cosa che non è parcheggiata — qualsiasi file che hai creato o modificato e a cui non hai fatto <code>git add</code> — non andrà nel commit. Rimarranno come file modificati sul tuo disco.
+In questo caso, l&#39;ultima volta che hai lanciato <code>git status</code>, hai visto che tutto era parcheggiato, così sei pronto ad inviare le tue modifiche con un commit. Il modo più semplice per eseguire il commit è digitare <code>git commit</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git commit
+</code></pre><p>Facendo questo lanci l&#39;editor che avevi scelto. (Questo è impostato nella tua shell dalla variabile di ambiente <code>$EDITOR</code> — generalmente vim o emacs, ovviamente puoi configurarlo con qualsiasi altro editor usando il comando <code>git config --global core.editor</code> come visto nel Capitolo 1).</p>
+<p>L&#39;editor visualizzerà il seguente testo (questo è un esempio della schermata di Vim):</p>
+<pre><code><span class="hljs-preprocessor"># Please enter the commit message for your changes. Lines starting</span>
+<span class="hljs-preprocessor"># with '#' will be ignored, and an empty message aborts the commit.</span>
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       new file:   README</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb</span>
+~
+~
+~
+<span class="hljs-string">".git/COMMIT_EDITMSG"</span> <span class="hljs-number">10</span>L, <span class="hljs-number">283</span>C
+</code></pre><p>Puoi vedere che il messaggio predefinito del commit contiene l&#39;ultimo output del comando <code>git status</code>, commentato, e la prima riga in alto è vuota. Puoi rimuovere questi commenti ed inserire il tuo messaggio, o puoi lasciarli così per aiutarti a ricordare cosa hai inviato. (Per avere una nota di ricordo più esplicita puoi passare l&#39;opzione <code>-v</code> a <code>git commit</code>. Così facendo inserirai i cambiamenti effettuati nell&#39;editor in modo che tu possa vedere esattamente cosa hai fatto). Quando esci dall&#39;editor, Git crea il tuo commit con un messaggio (con i commenti ed i cambiamenti eliminati).</p>
+<p>In alternativa, puoi inserire il messaggio del tuo commit in linea con il comando <code>commit</code> specificando dopo di esso l&#39;opzione -m, come segue:</p>
+<pre><code>$ git commit -m "Story 182: Fix benchmarks for speed"
+[<span class="hljs-link_reference">master</span>]:<span class="hljs-link_url"> created 463dc4f: "Fix benchmarks for speed"</span><span class="hljs-link_url">
+ 2 files changed, 3 insertions(+), 0 deletions(-)</span><span class="hljs-link_url">
+ create mode 100644 README</span>
+</code></pre><p>Ora hai creato il tuo primo commit! Puoi vedere che il commit ha riportato alcune informazioni sull&#39;operazione: a quale ramo hai affidato il commit (<code>master</code>), quale checksum SHA-1 ha il commit (<code>463dc4f</code>), quanti file sono stati modificati e le statistiche sulle linee aggiunte e rimosse nel commit.</p>
+<p>Ricorda che il commit registra lo snapshot che hai impostato nella tua area di stage. Qualsiasi cosa che non hai parcheggiato rimarrà come modificata; puoi fare un altro commit per aggiungere questi alla storia del progetto. Ogni volta che fai un commit stai registrando una istantanea del tuo progetto, che puoi ripristinare o comparare successivamente.</p>
+<h2 id="saltare-l-area-di-stage">Saltare l&#39;Area di Stage</h2>
+<p>Anche se può essere estremamente utile per amministrare i commit esattamente come li vuoi, l&#39;area di stage è molto più complessa di quanto tu possa averne bisogno nel lavoro normale. Se vuoi saltare l&#39;area di parcheggio, Git fornisce una semplice scorciatoia. Passando l&#39;opzione <code>-a</code> al comando <code>git commit</code> Git automaticamente parcheggia tutti i file che sono già stati tracciati facendo il commit, permettendoti di saltare la parte <code>git add</code>:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+$ git commit -a -m <span class="hljs-string">'added new benchmarks'</span>
+[master <span class="hljs-number">83e38</span>c7] added <span class="hljs-keyword">new</span> benchmarks
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">5</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>Nota come non hai bisogno, in questo caso, di lanciare <code>git add</code> sul file benchmarks.rb prima del commit.</p>
+<h2 id="rimuovere-file">Rimuovere File</h2>
+<p>Per rimuovere un file con Git, hai bisogno di rimuoverlo dai file tracciati (più precisamente,  rimuoverlo dall&#39;area di stage) e poi di fare il commit. Il comando <code>git rm</code> fa questo ed inoltre rimuove il file dalla tua directory di lavoro così non lo vedrai come un file non tracciato la prossima volta.</p>
+<p>Se semplicemente rimuovi il file dalla directory di lavoro, sarà visto sotto l&#39;area &quot;Changes not staged for commit&quot; (cioè, <em>non parcheggiato</em>) dell&#39;output <code>git status</code>:</p>
+<pre><code>$ rm grit.gemspec
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add/rm &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Poi, se lanci <code>git rm</code>, parcheggia il file rimosso:</p>
+<pre><code>$ git rm grit.gemspec
+rm <span class="hljs-string">'grit.gemspec'</span>
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>La prossima volta che fai il commit, il file se ne andrà e non sarà più tracciato. Se modifichi il file e già aggiunto all&#39;indice, devi forzarne la rimozione con l&#39;opzione <code>-f</code>. Questa è una caratteristica di sicurezza per prevenire la rimozione accidentale dei dati che non sono ancora stati registrati in uno snapshot e che non possono essere recuperati da Git.</p>
+<p>Un&#39;altra cosa utile che potresti voler fare è mantenere il file nel tuo albero di lavoro ma rimuoverlo dall&#39;area di stage. In altre parole, vuoi mantenere il file sul tuo disco ma non vuoi che Git ne mantenga ancora traccia. Questo è particolarmente utile se ti dimentichi di aggiungere qualcosa al tuo file <code>.gitignore</code> ed accidentalmente lo aggiungi, come un lungo file di log od un gruppo di file <code>.a</code> compilati. Per fare questo, usa l&#39;opzione <code>--cached</code>:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">rm</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">cached</span> <span class="hljs-comment">readme</span><span class="hljs-string">.</span><span class="hljs-comment">txt</span>
+</code></pre><p>Puoi passare file, directory o glob pattern di file al comando <code>git rm</code>. Questo significa che puoi fare cose come</p>
+<pre><code>$ git rm <span class="hljs-keyword">log</span>/\*.<span class="hljs-keyword">log</span>
+</code></pre><p>Nota la barra inversa (<code>\</code>) di fronte a <code>*</code>. Questo è necessario perché Git ha una sua espansione dei nomi di file in aggiunta all&#39;espansione dei filename della tua shell. Questo comando rimuove tutti i file che hanno l&#39;estensione <code>.log</code> nella directory <code>log/</code>. O puoi fare qualcosa di simile a:</p>
+<pre><code><span class="hljs-variable">$ </span>git rm \*~
+</code></pre><p>Questo comando rimuove tutti i file che finiscono con <code>~</code>.</p>
+<h2 id="muovere-file">Muovere File</h2>
+<p>A differenza di altri sistemi VCS, Git non traccia esplicitamente i movimenti di file. Se rinomini un file in Git, nessun metadato è immagazzinato in Git che ti dirà che hai rinominato il file. Tuttavia, Git è abbastanza intelligente da capirlo dopo che è avvenuto — ci occuperemo di rilevare il movimento dei file più tardi.</p>
+<p>Perciò crea un po&#39; di confusione il fatto che Git  abbia un comando <code>mv</code>. Se vuoi rinominare un file in Git, puoi lanciare qualcosa come</p>
+<pre><code><span class="hljs-variable">$ </span>git mv file_from file_to
+</code></pre><p>e questo funziona bene. Infatti, se lanci qualcosa come questo e guardi lo stato, vedrai che Git considera il file rinominato:</p>
+<pre><code>$ git mv README.txt README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Your branch is ahead of 'origin/master' by 1 commit.</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       renamed:    README.txt -&gt; README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Ovviamente, questo è equivalente a lanciare qualcosa come:</p>
+<pre><code><span class="hljs-variable">$ </span>mv <span class="hljs-constant">README</span>.txt <span class="hljs-constant">README</span>
+<span class="hljs-variable">$ </span>git rm <span class="hljs-constant">README</span>.txt
+<span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Git capisce implicitamente che è stato rinominato, così non è un problema rinominare un file in questo modo o con il comando <code>mv</code>. L&#39;unica reale differenza è che <code>mv</code> è un solo comando invece di tre — è un comando di convenienza.  Più importante è che tu puoi usare qualsiasi strumento per rinominare un file, ed aggiungere/togliere più tardi, prima di un commit.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../basi_di_git/repository_git.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../basi_di_git/vedere_la_storia_dei_commit.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

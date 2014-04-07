@@ -1,0 +1,949 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>브랜치와 Merge의 기초 | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_/_.html" />
+        
+        
+        <link rel="prev" href="../git_/_.html" />
+        
+
+        <meta property="og:title" content="브랜치와 Merge의 기초 | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="3.2" data-basepath=".." data-revision="1396895613066">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_/_merge_.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="index.html">
+                
+                <a href="../index.html">
+                    <i class="fa fa-check"></i> <b>1)</b> 시작하기
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="_.html">
+                            
+                            <a href="../_.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> 버전 관리란?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="__git_.html">
+                            
+                            <a href="../__git_.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> 짧게 보는 Git의 역사
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="git_.html">
+                            
+                            <a href="../git_.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git 기초
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="git_.html">
+                            
+                            <a href="../git_.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Git 설치
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="git__.html">
+                            
+                            <a href="../git__.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Git 최초 설정
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="_.html">
+                            
+                            <a href="../_.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> 도움말 보기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> 요약
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git의 기초
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="git_/git__.html">
+                            
+                            <a href="../git_/git__.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Git 저장소 만들기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git_/__.html">
+                            
+                            <a href="../git_/__.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> 수정하고 저장소에 저장하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git_/__.html">
+                            
+                            <a href="../git_/__.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> 커밋 히스토리 조회하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> 되돌리기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git_/_.html">
+                            
+                            <a href="../git_/_.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> 리모트 저장소
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> 태그
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="git_/_.html">
+                            
+                            <a href="../git_/_.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> 팁과 트릭
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> 요약
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git 브랜치
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="git_/_.html">
+                            
+                            <a href="../git_/_.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> 브랜치란 무엇인가?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="git_/_merge_.html">
+                            
+                            <a href="../git_/_merge_.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> 브랜치와 Merge의 기초
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="git_/_.html">
+                            
+                            <a href="../git_/_.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> 브랜치 관리
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="git_/_workflow.html">
+                            
+                            <a href="../git_/_workflow.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> 브랜치 Workflow
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="git_/_.html">
+                            
+                            <a href="../git_/_.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> 리모트 브랜치
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="git_/rebase.html">
+                            
+                            <a href="../git_/rebase.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebase하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> 요약
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git 서버
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> 프로토콜
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_/_git_.html">
+                            
+                            <a href="../git_/_git_.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> 서버에 Git 설치하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_/ssh__.html">
+                            
+                            <a href="../git_/ssh__.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> SSH 공개키 만들기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_/_.html">
+                            
+                            <a href="../git_/_.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> 서버에 설정하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> 공개하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_/gitweb.html">
+                            
+                            <a href="../git_/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_/gitosis.html">
+                            
+                            <a href="../git_/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_/gitolite.html">
+                            
+                            <a href="../git_/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git 데몬
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_/hosted_git.html">
+                            
+                            <a href="../git_/hosted_git.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Hosted Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> 요약
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="__git/README.html">
+                
+                <a href="../__git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> 분산 환경에서의 Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="__git/__workflow.html">
+                            
+                            <a href="../__git/__workflow.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> 분산 환경에서의 Workflow
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="__git/_.html">
+                            
+                            <a href="../__git/_.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> 프로젝트에 기여하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="__git/_.html">
+                            
+                            <a href="../__git/_.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> 프로젝트 운영하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="__git/.html">
+                            
+                            <a href="../__git/.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> 요약
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git 도구
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_/_.html">
+                            
+                            <a href="../git_/_.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> 리비전 조회하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_/_.html">
+                            
+                            <a href="../git_/_.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> 대화형 명령어
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_/stashing.html">
+                            
+                            <a href="../git_/stashing.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Stashing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_/_.html">
+                            
+                            <a href="../git_/_.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> 히스토리 단장하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_/git__.html">
+                            
+                            <a href="../git_/git__.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Git으로 버그 찾기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> 서브모듈
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_/subtree_merge.html">
+                            
+                            <a href="../git_/subtree_merge.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Subtree Merge
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> 요약
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="git/README.html">
+                
+                <a href="../git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Git맞춤
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="git/git_.html">
+                            
+                            <a href="../git/git_.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Git 설정하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="git/git_attribute.html">
+                            
+                            <a href="../git/git_attribute.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git Attribute
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="git/git_.html">
+                            
+                            <a href="../git/git_.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git 훅
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="git/_.html">
+                            
+                            <a href="../git/_.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> 정책 구현하기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> 요약
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git으로 이전하기
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_/git_subversion.html">
+                            
+                            <a href="../git_/git_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git과 Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Git으로 옮기기
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> 요약
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Git의 내부
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git_/plumbing__porcelain_.html">
+                            
+                            <a href="../git_/plumbing__porcelain_.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Plumbing 명령과 Porcelain 명령
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Git 개체
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Git 레퍼런스
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git_/packfile.html">
+                            
+                            <a href="../git_/packfile.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Packfile
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git_/refspec.html">
+                            
+                            <a href="../git_/refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git_/__.html">
+                            
+                            <a href="../git_/__.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> 데이터 전송 프로토콜
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git_/___.html">
+                            
+                            <a href="../git_/___.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> 운영 및 데이터 복구
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> 요약
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 16.666666666666668%;min-width: 13.88888888888889%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../__git_.html" title="짧게 보는 Git의 역사" class="chapter done " data-progress="1.2" style="left: 2.7777777777777777%;"></a>
+    
+        <a href="../git_.html" title="Git 설치" class="chapter done " data-progress="1.4" style="left: 5.555555555555555%;"></a>
+    
+        <a href="../git__.html" title="Git 최초 설정" class="chapter done " data-progress="1.5" style="left: 8.333333333333334%;"></a>
+    
+        <a href="../_.html" title="도움말 보기" class="chapter done " data-progress="1.6" style="left: 11.11111111111111%;"></a>
+    
+        <a href="../.html" title="요약" class="chapter done " data-progress="1.7" style="left: 13.88888888888889%;"></a>
+    
+        <a href="../git_/_merge_.html" title="브랜치와 Merge의 기초" class="chapter done " data-progress="3.2" style="left: 16.666666666666668%;"></a>
+    
+        <a href="../git_/_workflow.html" title="브랜치 Workflow" class="chapter  " data-progress="3.4" style="left: 19.444444444444443%;"></a>
+    
+        <a href="../git_/rebase.html" title="Rebase하기" class="chapter  " data-progress="3.6" style="left: 22.22222222222222%;"></a>
+    
+        <a href="../git_/hosted_git.html" title="Hosted Git" class="chapter  " data-progress="4.10" style="left: 25%;"></a>
+    
+        <a href="../git_/_git_.html" title="서버에 Git 설치하기" class="chapter  " data-progress="4.2" style="left: 27.77777777777778%;"></a>
+    
+        <a href="../git_/ssh__.html" title="SSH 공개키 만들기" class="chapter  " data-progress="4.3" style="left: 30.555555555555557%;"></a>
+    
+        <a href="../git_/gitweb.html" title="GitWeb" class="chapter  " data-progress="4.6" style="left: 33.333333333333336%;"></a>
+    
+        <a href="../git_/gitosis.html" title="Gitosis" class="chapter  " data-progress="4.7" style="left: 36.111111111111114%;"></a>
+    
+        <a href="../git_/gitolite.html" title="Gitolite" class="chapter  " data-progress="4.8" style="left: 38.888888888888886%;"></a>
+    
+        <a href="../__git/README.html" title="분산 환경에서의 Git" class="chapter  new-chapter" data-progress="5" style="left: 41.666666666666664%;"></a>
+    
+        <a href="../__git/__workflow.html" title="분산 환경에서의 Workflow" class="chapter  " data-progress="5.1" style="left: 44.44444444444444%;"></a>
+    
+        <a href="../__git/_.html" title="프로젝트 운영하기" class="chapter  " data-progress="5.3" style="left: 47.22222222222222%;"></a>
+    
+        <a href="../__git/.html" title="요약" class="chapter  " data-progress="5.4" style="left: 50%;"></a>
+    
+        <a href="../git_/stashing.html" title="Stashing" class="chapter  " data-progress="6.3" style="left: 52.77777777777778%;"></a>
+    
+        <a href="../git_/_.html" title="히스토리 단장하기" class="chapter  " data-progress="6.4" style="left: 55.55555555555556%;"></a>
+    
+        <a href="../git_/git__.html" title="Git으로 버그 찾기" class="chapter  " data-progress="6.5" style="left: 58.333333333333336%;"></a>
+    
+        <a href="../git_/subtree_merge.html" title="Subtree Merge" class="chapter  " data-progress="6.7" style="left: 61.111111111111114%;"></a>
+    
+        <a href="../git/README.html" title="Git맞춤" class="chapter  new-chapter" data-progress="7" style="left: 63.888888888888886%;"></a>
+    
+        <a href="../git/git_attribute.html" title="Git Attribute" class="chapter  " data-progress="7.2" style="left: 66.66666666666667%;"></a>
+    
+        <a href="../git/git_.html" title="Git 훅" class="chapter  " data-progress="7.3" style="left: 69.44444444444444%;"></a>
+    
+        <a href="../git/_.html" title="정책 구현하기" class="chapter  " data-progress="7.4" style="left: 72.22222222222223%;"></a>
+    
+        <a href="../git/.html" title="요약" class="chapter  " data-progress="7.5" style="left: 75%;"></a>
+    
+        <a href="../git_/git_subversion.html" title="Git과 Subversion" class="chapter  " data-progress="8.1" style="left: 77.77777777777777%;"></a>
+    
+        <a href="../git_/README.html" title="Git의 내부" class="chapter  new-chapter" data-progress="9" style="left: 80.55555555555556%;"></a>
+    
+        <a href="../git_/plumbing__porcelain_.html" title="Plumbing 명령과 Porcelain 명령" class="chapter  " data-progress="9.1" style="left: 83.33333333333333%;"></a>
+    
+        <a href="../git_/git_.html" title="Git 레퍼런스" class="chapter  " data-progress="9.3" style="left: 86.11111111111111%;"></a>
+    
+        <a href="../git_/packfile.html" title="Packfile" class="chapter  " data-progress="9.4" style="left: 88.88888888888889%;"></a>
+    
+        <a href="../git_/refspec.html" title="Refspec" class="chapter  " data-progress="9.5" style="left: 91.66666666666667%;"></a>
+    
+        <a href="../git_/__.html" title="데이터 전송 프로토콜" class="chapter  " data-progress="9.6" style="left: 94.44444444444444%;"></a>
+    
+        <a href="../git_/___.html" title="운영 및 데이터 복구" class="chapter  " data-progress="9.7" style="left: 97.22222222222223%;"></a>
+    
+        <a href="../git_/.html" title="요약" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_309">
+                    
+                        <h1 id="-merge-">브랜치와 Merge의 기초</h1>
+<p>실제 개발과정에서 겪을 만한 예제를 하나 살펴보자. 브랜치와 Merge는 보통 이런 식으로 진행한다:</p>
+<ol>
+<li>작업 중인 웹사이트가 있다.</li>
+<li>새로운 이슈를 처리할 새 Branch를 하나 생성.</li>
+<li>새로 만든 Branch에서 작업 중.</li>
+</ol>
+<p>이때 중요한 문제가 생겨서 그것을 해결하는 Hotfix를 먼저 만들어야 한다. 그러면 다음과 같이 할 수 있다:</p>
+<ol>
+<li>새로운 이슈를 처리하기 이전의 운영(Production) 브랜치로 복원.</li>
+<li>Hotfix 브랜치를 새로 하나 생성.</li>
+<li>수정한 Hotfix 테스트를 마치고 운영 브랜치로 Merge.</li>
+<li>다시 작업하던 브랜치로 옮겨가서 하던 일 진행.</li>
+</ol>
+<h2 id="-">브랜치의 기초</h2>
+<p>먼저 커밋을 몇 번 했다고 가정하자.</p>
+<p><img src="http://git-scm.com/figures/18333fig0310-tn.png" alt=""></p>
+<p>그림 3-10. 현재 커밋 히스토리</p>
+<p>이슈 관리 시스템에 등록된 53번 이슈를 처리한다고 하면 이 이슈에 집중할 수 있는 브랜치를 새로 하나 만든다. Git은 어떤 이슈 관리 시스템에도 종속돼 있지 않다. 브랜치를 만들면서 Checkout까지 한 번에 하려면 <code>git checkout</code> 명령에 <code>-b</code>라는 옵션을 준다.</p>
+<pre><code>$ git checkout -b iss53
+Switched <span class="hljs-built_in">to</span> <span class="hljs-operator">a</span> <span class="hljs-built_in">new</span> branch <span class="hljs-string">'iss53'</span>
+</code></pre><p>위 명령은 아래 명령을 줄여놓은 것이다:</p>
+<pre><code><span class="hljs-variable">$ </span>git branch iss53
+<span class="hljs-variable">$ </span>git checkout iss53
+</code></pre><p>그림 3-11은 위 명령의 결과를 나타낸다.</p>
+<p><img src="http://git-scm.com/figures/18333fig0311-tn.png" alt=""></p>
+<p>그림 3-11. 브랜치 포인터를 새로 만듦</p>
+<p>iss53 브랜치를 Checkout했기 때문에(즉, HEAD는 iss53 브랜치를 가리킨다) 뭔가 일을 하고 커밋하면 iss53 브랜치가 앞으로 진행한다:</p>
+<pre><code><span class="hljs-variable">$ </span>vim index.html
+<span class="hljs-variable">$ </span>git commit -a -m <span class="hljs-string">'added a new footer [issue 53]'</span>
+</code></pre><p><img src="http://git-scm.com/figures/18333fig0312-tn.png" alt=""></p>
+<p>그림 3-12. 진행 중인 iss53 브랜치</p>
+<p>다른 상황을 가정해보자. 만드는 사이트에 문제가 생겨서 즉시 고쳐야 한다. 버그를 해결한 Hotfix에 &#39;iss53&#39;이 섞이는 것을 방지하기 위해 &#39;iss53&#39;와 관련된 코드를 어딘가에 저장해두고 원래 운영 환경의 소스로 복구해야 한다. Git을 사용하면 이런 노력을 들일 필요 없이 그냥 master 브랜치로 옮기면 된다.</p>
+<p>그렇지만, 브랜치를 이동하려면 해야 할 일이 있다. 아직 커밋하지 않은 파일이 Checkout할 브랜치와 충돌 나면 브랜치를 변경할 수 없다. 브랜치를 변경할 때에는 워킹 디렉토리를 정리하는 것이 좋다. 이런 문제를 다루는 방법은(주로, Stash이나 커밋 Amend에 대해) 나중에 다룰 것이다. 지금은 작업하던 것을 모두 커밋하고 master 브랜치로 옮긴다:</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout master
+<span class="hljs-constant">Switched</span> to branch <span class="hljs-string">'master'</span>
+</code></pre><p>이때 워킹 디렉토리는 53번 이슈를 시작하기 이전 모습으로 되돌려지기 때문에 새로운 문제에 집중할 수 있는 환경이 만들어진다. Git은 자동으로 워킹 디렉토리에 파일들을 추가하고, 지우고, 수정해서 Checkout한 브랜치의 스냅샷으로 되돌려 놓는다는 것을 기억해야 한다.</p>
+<p>hotfix라는 브랜치를 만들고 새로운 이슈를 해결할 때까지 사용한다:</p>
+<pre><code>$ git checkout <span class="hljs-attribute">-b</span> hotfix
+Switched <span class="hljs-keyword">to</span> a <span class="hljs-literal">new</span> branch <span class="hljs-string">'hotfix'</span>
+$ vim index<span class="hljs-built_in">.</span>html
+$ git commit <span class="hljs-attribute">-a</span> <span class="hljs-attribute">-m</span> <span class="hljs-string">'fixed the broken email address'</span>
+<span class="hljs-preprocessor">[</span>hotfix<span class="hljs-preprocessor">]</span><span class="hljs-markup">: created 3a0874c: 'fixed the broken email address'
+ 1 files changed, 0 insertions(+), 1 deletions(-)</span>
+</code></pre><p><img src="http://git-scm.com/figures/18333fig0313-tn.png" alt=""></p>
+<p>그림 3-13. master 브랜치에서 갈라져 나온 hotfix 브랜치</p>
+<p>운영 환경에 적용하려면 문제를 제대로 고쳤는지 테스트하고 master 브랜치에 합쳐야 한다. <code>git merge</code> 명령으로 다음과 같이 한다:</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout master
+<span class="hljs-variable">$ </span>git merge hotfix
+<span class="hljs-constant">Updating</span> f42c576..<span class="hljs-number">3</span>a0874c
+<span class="hljs-constant">Fast</span> forward
+ <span class="hljs-constant">README</span> |    <span class="hljs-number">1</span> -
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">0</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>Merge 메시지에서 &#39;Fast forward&#39;가 보이는가? Merge할 브랜치가 가리키고 있던 커밋이 현 브랜치가 가리키는 것보다 &#39;앞으로 진행한&#39; 커밋이기 때문에 master 브랜치 포인터는 최신 커밋으로 이동한다. 이런 Merge 방식을 &#39;Fast forward&#39;라고 부른다. 다시 말해서 A 브랜치에서 다른 B 브랜치를 Merge할 때 B가 A 이후의 커밋을 가리키고 있으면 그저 A가 B의 커밋을 가리키게 할 뿐이다.</p>
+<p>이제 hotfix는 master 브랜치에 포함됐고 운영환경에 적용할 수 있다(그림 3-14).</p>
+<p><img src="http://git-scm.com/figures/18333fig0314-tn.png" alt=""></p>
+<p>그림 3-14. Merge 후 hotfix 브랜치와 같은 것을 가리키는 master 브랜치</p>
+<p>문제를 급히 해결하고 master 브랜치에 적용하고 나면 다시 일하던 브랜치로 돌아가야 한다. 하지만, 그전에 필요없는 hotfix 브랜치를 삭제한다. <code>git branch</code> 명령에 <code>-d</code> 옵션을 주고 브랜치를 삭제한다.</p>
+<pre><code>$ git branch <span class="hljs-operator">-d</span> hotfix
+Deleted branch hotfix (<span class="hljs-number">3</span>a0874c).
+</code></pre><p>자 이제 이슈 53번을 처리하던 환경으로 되돌아가서 하던 일을 계속 하자(그림 3-15):</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout iss53
+<span class="hljs-constant">Switched</span> to branch <span class="hljs-string">'iss53'</span>
+<span class="hljs-variable">$ </span>vim index.html
+<span class="hljs-variable">$ </span>git commit -a -m <span class="hljs-string">'finished the new footer [issue 53]'</span>
+[iss53]<span class="hljs-symbol">:</span> created <span class="hljs-symbol">ad82d7a:</span> <span class="hljs-string">'finished the new footer [issue 53]'</span>
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p><img src="http://git-scm.com/figures/18333fig0315-tn.png" alt=""></p>
+<p>그림 3-15. master와 별개로 진행하는 iss53 브랜치</p>
+<p>위에서 작업한 hotfix가 iss53 브랜치에 영향을 끼치지 않는다는 점을 이해하는 것이 중요하다. <code>git merge master</code> 명령으로 master 브랜치를 iss53 브랜치에 Merge하면 iss53 브랜치에 hotfix가 적용된다. 아니면 iss53 브랜치가 master에 Merge할 수 있는 수준이 될 때까지 기다렸다가 Merge하면 hotfix와 iss53가 합쳐진다.</p>
+<h2 id="merge-">Merge의 기초</h2>
+<p>53번 이슈를 다 구현하고 master 브랜치에 Merge하는 과정을 살펴보자. master 브랜치에 Merge하는 것은 앞서 살펴본 hotfix 브랜치를 Merge하는 것과 비슷하다. <code>git merge</code> 명령으로 합칠 브랜치에서 합쳐질 브랜치를 Merge하면 된다:</p>
+<pre><code>$ git checkout master
+$ git <span class="hljs-operator"><span class="hljs-keyword">merge</span> iss53
+<span class="hljs-keyword">Merge</span> made <span class="hljs-keyword">by</span> recursive.
+ README |    <span class="hljs-number">1</span> +
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)</span>
+</code></pre><p>hotfix를 Merge했을 때와 메시지가 다르다. 현 브랜치가 가리키는 커밋이 Merge할 브랜치의 조상이 아니므로 Git은 &#39;Fast-forward&#39;로 Merge하지 않는다. 이러면 Git은 각 브랜치가 가리키는 커밋 두 개와 공통 조상 하나를 사용하여 3-way Merge를 한다. 그림 3-16에 이 Merge에서 사용하는 커밋 세 개가 표시된다.</p>
+<p><img src="http://git-scm.com/figures/18333fig0316-tn.png" alt=""></p>
+<p>그림 3-16. Git은 Merge에 필요한 공통 커밋을 자동으로 찾음</p>
+<p>단순히 브랜치 포인터를 최신 커밋으로 옮기는 게 아니라 3-way Merge의 결과를 별도의 커밋으로 만들고 나서 해당 브랜치가 그 커밋을 가리키도록 이동시킨다(그림 3-17). 그래서 이런 커밋은 부모가 여러 개고 Merge 커밋이라고 부른다.</p>
+<p>Git은 Merge하는데 필요한 최적의 공통 조상을 자동으로 찾는다. 이런 기능도 Git이 다른 버전 관리 시스템보다 나은 점이다. CVS나 Subversion 같은 버전 관리 시스템은 개발자가 직접 공통 조상을 찾아서 Merge해야 한다. Git은 다른 시스템보다 Merge가 대단히 쉽다.</p>
+<p><img src="http://git-scm.com/figures/18333fig0317-tn.png" alt=""></p>
+<p>그림 3-17. Git은 Merge할 때 Merge에 대한 정보가 들어 있는 커밋를 하나 만든다.</p>
+<p>iss53 브랜치를 master에 Merge하고 나면 더는 iss53 브랜치가 필요 없다. 다음 명령으로 브랜치를 삭제하고 이슈의 상태를 처리 완료로 표시한다:</p>
+<pre><code>$ git branch <span class="hljs-operator">-d</span> iss53
+</code></pre><h2 id="-">충돌의 기초</h2>
+<p>가끔씩 3-way Merge가 실패할 때도 있다. Merge하는 두 브랜치에서 같은 파일의 한 부분을 동시에 수정하고 Merge하면 Git은 해당 부분을 Merge하지 못한다. 예를 들어, 53번 이슈와 hotfix가 같은 부분을 수정했다면 Git은 Merge하지 못하고 다음과 같은 충돌(Conflict) 메시지를 출력한다:</p>
+<pre><code>$ git <span class="hljs-built_in">merge</span> iss53
+Auto-merging index.html
+CONFLICT (content): Merge conflict <span class="hljs-operator">in</span> index.html
+Automatic <span class="hljs-built_in">merge</span> failed; fix conflicts <span class="hljs-operator">and</span> <span class="hljs-keyword">then</span> commit <span class="hljs-operator">the</span> <span class="hljs-built_in">result</span>.
+</code></pre><p>Git은 자동으로 Merge하지 못해서 새 커밋이 생기지 않는다. 변경사항의 충돌을 개발자가 해결하지 않는 한 Merge 과정을 진행할 수 없다. Merge 충돌이 일어났을 때 Git이 어떤 파일을 Merge할 수 없었는지 살펴보려면 <code>git status</code> 명령을 이용한다:</p>
+<pre><code>[master*]$ git status
+index.html: needs merge
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use 'git add &lt;file&gt;...' to update what will be committed)</span>
+<span class="hljs-preprocessor">#   (use 'git checkout -- &lt;file&gt;...' to discard changes in working directory)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    unmerged:   index.html</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>충돌이 일어난 파일은 unmerged 상태로 표시된다. Git은 충돌이 난 부분을 표준 형식에 따라 표시해준다. 그러면 개발자는 해당 부분을 수동으로 해결한다. 충돌 난 부분은 다음과 같이 표시된다.</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:index.html
+<span class="hljs-header">&lt;div id='footer'&gt;contact : email.support@github.com&lt;/div&gt;
+=======</span>
+&lt;div id=<span class="hljs-emphasis">'footer'</span>&gt;
+<span class="hljs-code">  please contact us at support@github.com</span>
+&lt;/div&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; iss53:index.html
+</code></pre><p><code>=======</code> 위쪽의 내용은 HEAD 버전(merge 명령을 실행할 때 작업하던 master 브랜치)의 내용이고 아래쪽은 iss53 브랜치의 내용이다. 충돌을 해결하려면 위쪽이나 아래쪽 내용 중에서 고르거나 새로 작성하여 Merge한다. 다음은 아예 새로 작성하여 충돌을 해결하는 예제다:</p>
+<pre><code>&lt;<span class="hljs-operator">div</span> id=<span class="hljs-string">'footer'</span>&gt;
+please contact us <span class="hljs-keyword">at</span> email.support@github.com
+&lt;/<span class="hljs-operator">div</span>&gt;
+</code></pre><p>충돌한 양쪽에서 조금씩 가져와서 새로 수정했다. 그리고 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 가 포함된 행을 삭제하였다. 이렇게 충돌한 부분을 해결하고 <code>git add</code> 명령으로 다시 Git에 저장한다. 충돌을 쉽게 해결하기 위해 다른 Merge 도구도 이용할 수 있다. <code>git mergetool</code> 명령으로 실행한다:</p>
+<pre><code>$ git mergetool
+<span class="hljs-built_in">merge</span> tool candidates: kdiff3 tkdiff xxdiff meld gvimdiff opendiff emerge vimdiff
+Merging <span class="hljs-operator">the</span> <span class="hljs-built_in">files</span>: index.html
+
+Normal <span class="hljs-built_in">merge</span> conflict <span class="hljs-keyword">for</span> <span class="hljs-string">'index.html'</span>:
+  {<span class="hljs-built_in">local</span>}: modified
+  {remote}: modified
+Hit <span class="hljs-constant">return</span> <span class="hljs-built_in">to</span> start <span class="hljs-built_in">merge</span> resolution tool (opendiff):
+</code></pre><p>Mac에서는 <code>opendiff</code>가 실행된다. 기본 도구 말고 사용할 수 있는 다른 Merge 도구도 있는데, &#39;merge tool candidates&#39; 부분에 보여준다. 여기에 표시된 도구 중 하나를 고를 수 있다. Merge 도구를 변경하는 방법은 <em>7장</em>에서 다룬다.</p>
+<p>Merge 도구를 종료하면 Git은 잘 Merge했는지 물어본다. 잘 마쳤다고 입력하면 자동으로 <code>git add</code>가 수행되고 해당 파일이 Staging Area에 저장된다.</p>
+<p><code>git status</code> 명령으로 충돌이 해결된 상태인지 다시 한번 확인해볼 수 있다.</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use 'git reset HEAD &lt;file&gt;...' to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   index.html</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>충돌을 해결하고 나서 해당 파일이 Staging Area에 저장됐는지 확인했으면 <code>git commit</code> 명령으로 Merge 한 것을 커밋한다. 충돌을 해결하고 Merge할 때에는 커밋 메시지가 아래와 같다.</p>
+<pre><code>Merge branch <span class="hljs-string">'iss53'</span>
+
+Conflicts:
+  index.html
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># It looks like you may be committing a MERGE.</span>
+<span class="hljs-preprocessor"># If this is not correct, please remove the file</span>
+<span class="hljs-preprocessor"># .git/MERGE_HEAD</span>
+<span class="hljs-preprocessor"># and try again.</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>어떻게 충돌을 해결했고 좀 더 확인해야 하는 부분은 무엇을 어떻게 했는지 자세하게 기록한다. 자세한 기록은 나중에 이 Merge 커밋을 이해하는데 도움을 줄 것이다.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_/_.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_/_.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,1036 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>迁移到 Git | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_/.html" />
+        
+        
+        <link rel="prev" href="../git_/git__subversion.html" />
+        
+
+        <meta property="og:title" content="迁移到 Git | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="8.2" data-basepath=".." data-revision="1396895602546">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_/_git.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="index.html">
+                
+                <a href="../index.html">
+                    <i class="fa fa-check"></i> <b>1)</b> 起步
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> 关于版本控制
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="git_.html">
+                            
+                            <a href="../git_.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Git 简史
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="git_.html">
+                            
+                            <a href="../git_.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git 基础
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="_git.html">
+                            
+                            <a href="../_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> 安装 Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="_git_.html">
+                            
+                            <a href="../_git_.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> 初次运行 Git 前的配置
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> 获取帮助
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> 小结
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git 基础
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="git_/_git_.html">
+                            
+                            <a href="../git_/_git_.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> 取得项目的 Git 仓库
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> 记录每次更新到仓库
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> 查看提交历史
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> 撤消操作
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> 远程仓库的使用
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> 打标签
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> 技巧和窍门
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> 小结
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git 分支
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> 何谓分支
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> 分支的新建与合并
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> 分支的管理
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> 利用分支进行开发的工作流程
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> 远程分支
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> 分支的衍合
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> 小结
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="_git/README.html">
+                
+                <a href="../_git/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> 服务器上的 Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> 协议
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="_git/_git.html">
+                            
+                            <a href="../_git/_git.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> 在服务器上部署 Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="_git/_ssh_.html">
+                            
+                            <a href="../_git/_ssh_.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> 生成 SSH 公钥
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> 架设服务器
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> 公共访问
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="_git/gitweb.html">
+                            
+                            <a href="../_git/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="_git/gitosis.html">
+                            
+                            <a href="../_git/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="_git/gitolite.html">
+                            
+                            <a href="../_git/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="_git/git_.html">
+                            
+                            <a href="../_git/git_.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git 守护进程
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="_git/git_.html">
+                            
+                            <a href="../_git/git_.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git 托管服务
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> 小结
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="_git/README.html">
+                
+                <a href="../_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> 分布式 Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> 分布式工作流程
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> 为项目作贡献
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> 项目的管理
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> 小结
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git 工具
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_/revision.html">
+                            
+                            <a href="../git_/revision.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> 修订版本（Revision）选择
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> 交互式暂存
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_/stashing.html">
+                            
+                            <a href="../git_/stashing.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> 储藏（Stashing）
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> 重写历史
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_/_git_.html">
+                            
+                            <a href="../git_/_git_.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> 使用 Git 调试
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> 子模块
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> 子树合并
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> 总结
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="_git/README.html">
+                
+                <a href="../_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> 自定义 Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="_git/_git.html">
+                            
+                            <a href="../_git/_git.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> 配置 Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="_git/git.html">
+                            
+                            <a href="../_git/git.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git属性
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="_git/git.html">
+                            
+                            <a href="../_git/git.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git挂钩
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="_git/git_.html">
+                            
+                            <a href="../_git/git_.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Git 强制策略实例
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> 总结
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git 与其他系统
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_/git__subversion.html">
+                            
+                            <a href="../git_/git__subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git 与 Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_/_git.html">
+                            
+                            <a href="../git_/_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> 迁移到 Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> 总结
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Git 内部原理
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git_/_plumbing__porcelain.html">
+                            
+                            <a href="../git_/_plumbing__porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> 底层命令 (Plumbing) 和高层命令 (Porcelain)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Git 对象
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git_/git_references.html">
+                            
+                            <a href="../git_/git_references.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Git References
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git_/packfiles.html">
+                            
+                            <a href="../git_/packfiles.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Packfiles
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git_/the_refspec.html">
+                            
+                            <a href="../git_/the_refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> The Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> 传输协议
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> 维护及数据恢复
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> 总结
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 72%;min-width: 68%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../git_.html" title="Git 基础" class="chapter done " data-progress="1.3" style="left: 4%;"></a>
+    
+        <a href="../_git.html" title="安装 Git" class="chapter done " data-progress="1.4" style="left: 8%;"></a>
+    
+        <a href="../_git_.html" title="初次运行 Git 前的配置" class="chapter done " data-progress="1.5" style="left: 12%;"></a>
+    
+        <a href="../.html" title="小结" class="chapter done " data-progress="1.7" style="left: 16%;"></a>
+    
+        <a href="../_git/_ssh_.html" title="生成 SSH 公钥" class="chapter done " data-progress="4.3" style="left: 20%;"></a>
+    
+        <a href="../_git/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 24%;"></a>
+    
+        <a href="../_git/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 28%;"></a>
+    
+        <a href="../_git/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 32%;"></a>
+    
+        <a href="../git_/revision.html" title="修订版本（Revision）选择" class="chapter done " data-progress="6.1" style="left: 36%;"></a>
+    
+        <a href="../git_/stashing.html" title="储藏（Stashing）" class="chapter done " data-progress="6.3" style="left: 40%;"></a>
+    
+        <a href="../git_/_git_.html" title="使用 Git 调试" class="chapter done " data-progress="6.5" style="left: 44%;"></a>
+    
+        <a href="../_git/README.html" title="自定义 Git" class="chapter done new-chapter" data-progress="7" style="left: 48%;"></a>
+    
+        <a href="../_git/_git.html" title="配置 Git" class="chapter done " data-progress="7.1" style="left: 52%;"></a>
+    
+        <a href="../_git/git.html" title="Git挂钩" class="chapter done " data-progress="7.3" style="left: 56%;"></a>
+    
+        <a href="../_git/git_.html" title="Git 强制策略实例" class="chapter done " data-progress="7.4" style="left: 60%;"></a>
+    
+        <a href="../_git/.html" title="总结" class="chapter done " data-progress="7.5" style="left: 64%;"></a>
+    
+        <a href="../git_/git__subversion.html" title="Git 与 Subversion" class="chapter done " data-progress="8.1" style="left: 68%;"></a>
+    
+        <a href="../git_/_git.html" title="迁移到 Git" class="chapter done " data-progress="8.2" style="left: 72%;"></a>
+    
+        <a href="../git_/README.html" title="Git 内部原理" class="chapter  new-chapter" data-progress="9" style="left: 76%;"></a>
+    
+        <a href="../git_/_plumbing__porcelain.html" title="底层命令 (Plumbing) 和高层命令 (Porcelain)" class="chapter  " data-progress="9.1" style="left: 80%;"></a>
+    
+        <a href="../git_/git_.html" title="Git 对象" class="chapter  " data-progress="9.2" style="left: 84%;"></a>
+    
+        <a href="../git_/git_references.html" title="Git References" class="chapter  " data-progress="9.3" style="left: 88%;"></a>
+    
+        <a href="../git_/packfiles.html" title="Packfiles" class="chapter  " data-progress="9.4" style="left: 92%;"></a>
+    
+        <a href="../git_/the_refspec.html" title="The Refspec" class="chapter  " data-progress="9.5" style="left: 96%;"></a>
+    
+        <a href="../git_/.html" title="总结" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_174">
+                    
+                        <h1 id="-git">迁移到 Git</h1>
+<p>如果在其他版本控制系统中保存了某项目的代码而后决定转而使用 Git，那么该项目必须经历某种形式的迁移。本节将介绍 Git 中包含的一些针对常见系统的导入脚本，并将展示编写自定义的导入脚本的方法。</p>
+<h2 id="-">导入</h2>
+<p>你将学习到如何从专业重量级的版本控制系统中导入数据—— Subversion 和 Perforce —— 因为据我所知这二者的用户是（向 Git）转换的主要群体，而且 Git 为此二者附带了高质量的转换工具。</p>
+<h2 id="subversion">Subversion</h2>
+<p>读过前一节有关 <code>git svn</code> 的内容以后，你应该能轻而易举的根据其中的指导来 <code>git svn clone</code> 一个仓库了；然后，停止 Subversion 的使用，向一个新 Git server 推送，并开始使用它。想保留历史记录，所花的时间应该不过就是从 Subversion 服务器拉取数据的时间（可能要等上好一会就是了）。</p>
+<p>然而，这样的导入并不完美；而且还要花那么多时间，不如干脆一次把它做对！首当其冲的任务是作者信息。在 Subversion，每个提交者在都在主机上有一个用户名，记录在提交信息中。上节例子中多处显示了 <code>schacon</code> ，比如 <code>blame</code> 的输出以及 <code>git svn log</code>。如果想让这条信息更好的映射到 Git 作者数据里，则需要 从 Subversion 用户名到 Git 作者的一个映射关系。建立一个叫做 <code>user.txt</code> 的文件，用如下格式表示映射关系：</p>
+<pre><code>schacon = <span class="hljs-constant">Scott</span> <span class="hljs-constant">Chacon</span> &lt;schacon<span class="hljs-variable">@geemail</span>.com&gt;
+selse = <span class="hljs-constant">Someo</span> <span class="hljs-constant">Nelse</span> &lt;selse<span class="hljs-variable">@geemail</span>.com&gt;
+</code></pre><p>通过该命令可以获得 SVN 作者的列表：</p>
+<pre><code>$ svn <span class="hljs-keyword">log</span> ^<span class="hljs-subst">/</span> <span class="hljs-subst">--</span><span class="hljs-built_in">xml</span> <span class="hljs-subst">|</span> grep <span class="hljs-attribute">-P</span> <span class="hljs-string">"^&lt;author"</span> <span class="hljs-subst">|</span> sort <span class="hljs-attribute">-u</span> <span class="hljs-subst">|</span> <span class="hljs-subst">\</span>
+      perl <span class="hljs-attribute">-pe</span> <span class="hljs-string">'s/&lt;author&gt;(.*?)&lt;\/author&gt;/$1 = /'</span> <span class="hljs-subst">&gt;</span> users<span class="hljs-built_in">.</span>txt
+</code></pre><p>它将输出 XML 格式的日志——你可以找到作者，建立一个单独的列表，然后从 XML 中抽取出需要的信息。（显而易见，本方法要求主机上安装了<code>grep</code>，<code>sort</code> 和 <code>perl</code>.）然后把输出重定向到 user.txt 文件，然后就可以在每一项的后面添加相应的 Git 用户数据。</p>
+<p>为 <code>git svn</code> 提供该文件可以然它更精确的映射作者数据。你还可以在 <code>clone</code> 或者 <code>init</code>后面添加 <code>--no-metadata</code> 来阻止 <code>git svn</code> 包含那些 Subversion 的附加信息。这样 <code>import</code> 命令就变成了：</p>
+<pre><code>$ git svn clone http:<span class="hljs-comment">//my-project.googlecode.com/svn/ \</span>
+      <span class="hljs-subst">--</span>authors<span class="hljs-attribute">-file</span><span class="hljs-subst">=</span>users<span class="hljs-built_in">.</span>txt <span class="hljs-subst">--</span>no<span class="hljs-attribute">-metadata</span> <span class="hljs-attribute">-s</span> my_project
+</code></pre><p>现在 <code>my_project</code> 目录下导入的 Subversion 应该比原来整洁多了。原来的 commit 看上去是这样：</p>
+<pre><code>commit <span class="hljs-number">37</span>efa680e8473b615de980fa935944215428a35a
+<span class="hljs-label">Author:</span> schacon &lt;schacon<span class="hljs-localvars">@4</span>c93b258-<span class="hljs-number">373</span>f-<span class="hljs-number">11</span>de-be05-<span class="hljs-number">5</span>f7a86268029&gt;
+<span class="hljs-label">Date:</span>   Sun May <span class="hljs-number">3</span> <span class="hljs-number">00</span>:<span class="hljs-number">12</span>:<span class="hljs-number">22</span> <span class="hljs-number">2009</span> +<span class="hljs-number">0000</span>
+
+    fixed install - go to trunk
+
+    git-svn-id: https://my-project<span class="hljs-preprocessor">.googlecode</span><span class="hljs-preprocessor">.com</span>/svn/trunk<span class="hljs-localvars">@94</span> <span class="hljs-number">4</span>c93b258-<span class="hljs-number">373</span>f-<span class="hljs-number">11</span>de-
+    be05-<span class="hljs-number">5</span>f7a86268029
+</code></pre><p>现在是这样：</p>
+<pre><code><span class="hljs-operator"><span class="hljs-keyword">commit</span> <span class="hljs-number">03</span>a8785f44c8ea5cdb0e8834b7c8e6c469be2ff2
+Author: Scott Chacon &lt;schacon@geemail.com&gt;
+<span class="hljs-keyword">Date</span>:   Sun May <span class="hljs-number">3</span> <span class="hljs-number">00</span>:<span class="hljs-number">12</span>:<span class="hljs-number">22</span> <span class="hljs-number">2009</span> +<span class="hljs-number">0000</span>
+
+    fixed install - <span class="hljs-keyword">go</span> <span class="hljs-keyword">to</span> trunk</span>
+</code></pre><p>不仅作者一项干净了不少，<code>git-svn-id</code> 也就此消失了。</p>
+<p>你还需要一点 <code>post-import（导入后）</code> 清理工作。最起码的，应该清理一下 <code>git svn</code> 创建的那些怪异的索引结构。首先要移动标签，把它们从奇怪的远程分支变成实际的标签，然后把剩下的分支移动到本地。</p>
+<p>要把标签变成合适的 Git 标签，运行</p>
+<pre><code>$ git <span class="hljs-keyword">for</span>-each-ref refs/remotes/tags | cut <span class="hljs-operator">-d</span> / <span class="hljs-operator">-f</span> <span class="hljs-number">4</span>- | grep -v @ | <span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> tagname; <span class="hljs-keyword">do</span> git tag <span class="hljs-string">"<span class="hljs-variable">$tagname</span>"</span> <span class="hljs-string">"tags/<span class="hljs-variable">$tagname</span>"</span>; git branch -r <span class="hljs-operator">-d</span> <span class="hljs-string">"tags/<span class="hljs-variable">$tagname</span>"</span>; <span class="hljs-keyword">done</span>
+</code></pre><p>该命令将原本以 <code>tag/</code> 开头的远程分支的索引变成真正的（轻巧的）标签。</p>
+<p>接下来，把 <code>refs/remotes</code> 下面剩下的索引变成本地分支：</p>
+<pre><code>$ git <span class="hljs-keyword">for</span>-each-ref refs/remotes | cut <span class="hljs-operator">-d</span> / <span class="hljs-operator">-f</span> <span class="hljs-number">3</span>- | grep -v @ | <span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> branchname; <span class="hljs-keyword">do</span> git branch <span class="hljs-string">"<span class="hljs-variable">$branchname</span>"</span> <span class="hljs-string">"refs/remotes/<span class="hljs-variable">$branchname</span>"</span>; git branch -r <span class="hljs-operator">-d</span> <span class="hljs-string">"<span class="hljs-variable">$branchname</span>"</span>; <span class="hljs-keyword">done</span>
+</code></pre><p>现在所有的旧分支都变成真正的 Git 分支，所有的旧标签也变成真正的 Git 标签。最后一项工作就是把新建的 Git 服务器添加为远程服务器并且向它推送。下面是新增远程服务器的例子：</p>
+<pre><code><span class="hljs-variable">$ </span>git remote add origin git<span class="hljs-variable">@my</span>-git-<span class="hljs-symbol">server:</span>myrepository.git
+</code></pre><p>为了让所有的分支和标签都得到上传，我们使用这条命令：</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">push</span> <span class="hljs-comment">origin</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">all</span>
+<span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">push</span> <span class="hljs-comment">origin</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">tags</span>
+</code></pre><p>所有的分支和标签现在都应该整齐干净的躺在新的 Git 服务器里了。</p>
+<h2 id="perforce">Perforce</h2>
+<p>你将了解到的下一个被导入的系统是 Perforce. Git 发行的时候同时也附带了一个 Perforce 导入脚本，不过它是包含在源码的 <code>contrib</code> 部分——而不像 <code>git svn</code> 那样默认可用。运行它之前必须获取 Git 的源码，可以在 git.kernel.org 下载：</p>
+<pre><code>$ git clone git://git<span class="hljs-preprocessor">.kernel</span><span class="hljs-preprocessor">.org</span>/pub/scm/git/git<span class="hljs-preprocessor">.git</span>
+$ cd git/contrib/fast-import
+</code></pre><p>在这个 <code>fast-import</code> 目录下，应该有一个叫做 <code>git-p4</code> 的 Python 可执行脚本。主机上必须装有 Python 和 <code>p4</code> 工具该导入才能正常进行。例如，你要从 Perforce 公共代码仓库（译注： Perforce Public Depot，Perforce 官方提供的代码寄存服务）导入 Jam 工程。为了设定客户端，我们要把 P4PORT 环境变量 export 到 Perforce 仓库：</p>
+<pre><code>$ <span class="hljs-keyword">export</span> P4PORT=<span class="hljs-keyword">public</span>.perforce.com:<span class="hljs-number">1666</span>
+</code></pre><p>运行 <code>git-p4 clone</code> 命令将从 Perforce 服务器导入 Jam 项目，我们需要给出仓库和项目的路径以及导入的目标路径：</p>
+<pre><code>$ git<span class="hljs-attribute">-p4</span> clone <span class="hljs-comment">//public/jam/src@all /opt/p4import</span>
+Importing from <span class="hljs-comment">//public/jam/src@all into /opt/p4import</span>
+Reinitialized existing Git repository <span class="hljs-keyword">in</span> /opt/p4import<span class="hljs-subst">/</span><span class="hljs-built_in">.</span>git<span class="hljs-subst">/</span>
+<span class="hljs-keyword">Import</span> destination: refs/remotes/p4/master
+Importing revision <span class="hljs-number">4409</span> (<span class="hljs-number">100</span><span class="hljs-subst">%</span>)
+</code></pre><p>现在去 <code>/opt/p4import</code> 目录运行一下 <code>git log</code> ，就能看到导入的成果：</p>
+<pre><code>$ git log -2
+<span class="hljs-operator"><span class="hljs-keyword">commit</span> <span class="hljs-number">1</span>fd4ec126171790efd2db83548b85b1bbbc07dc2
+Author: Perforce staff &lt;support@perforce.com&gt;
+<span class="hljs-keyword">Date</span>:   Thu Aug <span class="hljs-number">19</span> <span class="hljs-number">10</span>:<span class="hljs-number">18</span>:<span class="hljs-number">45</span> <span class="hljs-number">2004</span> -<span class="hljs-number">0800</span>
+
+    <span class="hljs-keyword">Drop</span> <span class="hljs-string">'rc3'</span> moniker <span class="hljs-keyword">of</span> jam-<span class="hljs-number">2.5</span>.  Folded rc2 <span class="hljs-keyword">and</span> rc3 RELNOTES <span class="hljs-keyword">into</span>
+    the main part <span class="hljs-keyword">of</span> the document.  Built new tar/zip balls.
+
+    <span class="hljs-keyword">Only</span> <span class="hljs-number">16</span> months later.
+
+    [git-p4: depot-paths = <span class="hljs-string">"//public/jam/src/"</span>: change = <span class="hljs-number">4409</span>]
+
+<span class="hljs-keyword">commit</span> ca8870db541a23ed867f38847eda65bf4363371d
+Author: Richard Geiger &lt;rmg@perforce.com&gt;
+<span class="hljs-keyword">Date</span>:   Tue Apr <span class="hljs-number">22</span> <span class="hljs-number">20</span>:<span class="hljs-number">51</span>:<span class="hljs-number">34</span> <span class="hljs-number">2003</span> -<span class="hljs-number">0800</span>
+
+    <span class="hljs-keyword">Update</span> derived jamgram.c
+
+    [git-p4: depot-paths = <span class="hljs-string">"//public/jam/src/"</span>: change = <span class="hljs-number">3108</span>]</span>
+</code></pre><p>每一个 commit 里都有一个 <code>git-p4</code> 标识符。这个标识符可以保留，以防以后需要引用 Perforce 的修改版本号。然而，如果想删除这些标识符，现在正是时候——在开启新仓库之前。可以通过 <code>git filter-branch</code> 来批量删除这些标识符：</p>
+<pre><code>$ git filter-branch --msg-filter <span class="hljs-comment">'</span>
+        sed -e <span class="hljs-string">"/^\[git-p4:/d"</span>
+<span class="hljs-comment">'</span>
+Rewrite <span class="hljs-number">1</span>fd4ec126171790efd2db83548b85b1bbbc07dc2 (<span class="hljs-number">123</span>/<span class="hljs-number">123</span>)
+Ref <span class="hljs-comment">'refs/heads/master' was rewritten</span>
+</code></pre><p>现在运行一下 <code>git log</code>，你会发现这些 commit 的 SHA-1 校验值都发生了改变，而那些 <code>git-p4</code> 字串则从提交信息里消失了：</p>
+<pre><code>$ git log -2
+<span class="hljs-operator"><span class="hljs-keyword">commit</span> <span class="hljs-number">10</span>a16d60cffca14d454a15c6164378f4082bc5b0
+Author: Perforce staff &lt;support@perforce.com&gt;
+<span class="hljs-keyword">Date</span>:   Thu Aug <span class="hljs-number">19</span> <span class="hljs-number">10</span>:<span class="hljs-number">18</span>:<span class="hljs-number">45</span> <span class="hljs-number">2004</span> -<span class="hljs-number">0800</span>
+
+    <span class="hljs-keyword">Drop</span> <span class="hljs-string">'rc3'</span> moniker <span class="hljs-keyword">of</span> jam-<span class="hljs-number">2.5</span>.  Folded rc2 <span class="hljs-keyword">and</span> rc3 RELNOTES <span class="hljs-keyword">into</span>
+    the main part <span class="hljs-keyword">of</span> the document.  Built new tar/zip balls.
+
+    <span class="hljs-keyword">Only</span> <span class="hljs-number">16</span> months later.
+
+<span class="hljs-keyword">commit</span> <span class="hljs-number">2</span>b6c6db311dd76c34c66ec1c40a49405e6b527b2
+Author: Richard Geiger &lt;rmg@perforce.com&gt;
+<span class="hljs-keyword">Date</span>:   Tue Apr <span class="hljs-number">22</span> <span class="hljs-number">20</span>:<span class="hljs-number">51</span>:<span class="hljs-number">34</span> <span class="hljs-number">2003</span> -<span class="hljs-number">0800</span>
+
+    <span class="hljs-keyword">Update</span> derived jamgram.c</span>
+</code></pre><p>至此导入已经完成，可以开始向新的 Git 服务器推送了。</p>
+<h2 id="-">自定导入脚本</h2>
+<p>如果先前的系统不是 Subversion 或 Perforce 之一，先上网找一下有没有与之对应的导入脚本——导入 CVS，Clear Case，Visual Source Safe，甚至存档目录的导入脚本已经存在。假如这些工具都不适用，或者使用的工具很少见，抑或你需要导入过程具有更多可制定性，则应该使用 <code>git fast-import</code>。该命令从标准输入读取简单的指令来写入具体的 Git 数据。这样创建 Git 对象比运行纯 Git 命令或者手动写对象要简单的多（更多相关内容见第九章）。通过它，你可以编写一个导入脚本来从导入源读取必要的信息，同时在标准输出直接输出相关指示。你可以运行该脚本并把它的输出管道连接到 <code>git fast-import</code>。</p>
+<p>下面演示一下如何编写一个简单的导入脚本。假设你在进行一项工作，并且按时通过把工作目录复制为以时间戳 <code>back_YY_MM_DD</code> 命名的目录来进行备份，现在你需要把它们导入 Git 。目录结构如下：</p>
+<pre><code><span class="hljs-variable">$ </span>ls /opt/import_from
+back_2009_01_02
+back_2009_01_04
+back_2009_01_14
+back_2009_02_03
+current
+</code></pre><p>为了导入到一个 Git 目录，我们首先回顾一下 Git 储存数据的方式。你可能还记得，Git 本质上是一个 commit 对象的链表，每一个对象指向一个内容的快照。而这里需要做的工作就是告诉 <code>fast-import</code> 内容快照的位置，什么样的 commit 数据指向它们，以及它们的顺序。我们采取一次处理一个快照的策略，为每一个内容目录建立对应的 commit ，每一个 commit 与之前的建立链接。</p>
+<p>正如在第七章 &quot;Git 执行策略一例&quot; 一节中一样，我们将使用 Ruby 来编写这个脚本，因为它是我日常使用的语言而且阅读起来简单一些。你可以用任何其他熟悉的语言来重写这个例子——它仅需要把必要的信息打印到标准输出而已。同时，如果你在使用 Windows，这意味着你要特别留意不要在换行的时候引入回车符（译注：carriage returns，Windows 换行时加入的符号，通常说的 <code>\r</code> ）—— Git 的 fast-import 对仅使用换行符（LF）而非 Windows 的回车符（CRLF）要求非常严格。</p>
+<p>首先，进入目标目录并且找到所有子目录，每一个子目录将作为一个快照被导入为一个 commit。我们将依次进入每一个子目录并打印所需的命令来导出它们。脚本的主循环大致是这样：</p>
+<pre><code>last_mark = nil
+
+<span class="hljs-comment"># 循环遍历所有目录</span>
+Dir.chdir(ARGV[<span class="hljs-number">0</span>]) <span class="hljs-built_in">do</span>
+  Dir.glob(<span class="hljs-string">"*"</span>).<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |dir|
+    next <span class="hljs-keyword">if</span> File.<span class="hljs-built_in">file</span>?(dir)
+
+    <span class="hljs-comment"># 进入目标目录</span>
+    Dir.chdir(dir) <span class="hljs-built_in">do</span>
+      last_mark = print_export(dir, last_mark)
+    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+</code></pre><p>我们在每一个目录里运行 <code>print_export</code> ，它会取出上一个快照的索引和标记并返回本次快照的索引和标记；由此我们就可以正确的把二者连接起来。&quot;标记（mark）&quot; 是 <code>fast-import</code> 中对 commit 标识符的叫法；在创建 commit 的同时，我们逐一赋予一个标记以便以后在把它连接到其他 commit 时使用。因此，在 <code>print_export</code> 方法中要做的第一件事就是根据目录名生成一个标记：</p>
+<pre><code><span class="hljs-attribute">mark </span>=<span class="hljs-string"> convert_dir_to_mark(dir)</span>
+</code></pre><p>实现该函数的方法是建立一个目录的数组序列并使用数组的索引值作为标记，因为标记必须是一个整数。这个方法大致是这样的：</p>
+<pre><code><span class="hljs-variable">$marks</span> = []
+<span class="hljs-function"><span class="hljs-keyword">def</span> </span>convert_dir_to_mark(dir)
+  <span class="hljs-keyword">if</span> !<span class="hljs-variable">$marks</span>.<span class="hljs-keyword">include</span>?(dir)
+    <span class="hljs-variable">$marks</span> &lt;&lt; dir
+  <span class="hljs-keyword">end</span>
+  (<span class="hljs-variable">$marks</span>.index(dir) + <span class="hljs-number">1</span>).to_s
+<span class="hljs-keyword">end</span>
+</code></pre><p>有了整数来代表每个 commit，我们现在需要提交附加信息中的日期。由于日期是用目录名表示的，我们就从中解析出来。<code>print_export</code> 文件的下一行将是：</p>
+<pre><code><span class="hljs-attribute">date </span>=<span class="hljs-string"> convert_dir_to_date(dir)</span>
+</code></pre><p>而 <code>convert_dir_to_date</code> 则定义为</p>
+<pre><code>def convert_dir_to_date(dir)
+  <span class="hljs-keyword">if</span> dir == <span class="hljs-string">'current'</span>
+    <span class="hljs-constant">return</span> Time.now().to_i
+  <span class="hljs-keyword">else</span>
+    dir = dir.gsub(<span class="hljs-string">'back_'</span>, <span class="hljs-string">''</span>)
+    (year, month, day) = dir.<span class="hljs-built_in">split</span>(<span class="hljs-string">'_'</span>)
+    <span class="hljs-constant">return</span> Time.<span class="hljs-built_in">local</span>(year, month, day).to_i
+  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+</code></pre><p>它为每个目录返回一个整型值。提交附加信息里最后一项所需的是提交者数据，我们在一个全局变量中直接定义之：</p>
+<pre><code><span class="hljs-variable">$author</span> = <span class="hljs-string">'Scott Chacon &lt;schacon@example.com&gt;'</span>
+</code></pre><p>我们差不多可以开始为导入脚本输出提交数据了。第一项信息指明我们定义的是一个 commit 对象以及它所在的分支，随后是我们生成的标记，提交者信息以及提交备注，然后是前一个 commit 的索引，如果有的话。代码大致这样：</p>
+<pre><code><span class="hljs-comment"># 打印导入所需的信息</span>
+puts <span class="hljs-string">'commit refs/heads/master'</span>
+puts <span class="hljs-string">'mark :'</span> + mark
+puts <span class="hljs-string">"committer <span class="hljs-subst">#{<span class="hljs-variable">$author</span>}</span> <span class="hljs-subst">#{date}</span> -0700"</span>
+export_data(<span class="hljs-string">'imported from '</span> + dir)
+puts <span class="hljs-string">'from :'</span> + last_mark <span class="hljs-keyword">if</span> last_mark
+</code></pre><p>时区（-0700）处于简化目的使用硬编码。如果是从其他版本控制系统导入，则必须以变量的形式指明时区。
+提交备注必须以特定格式给出：</p>
+<pre><code><span class="hljs-typedef"><span class="hljs-keyword">data</span> <span class="hljs-container">(<span class="hljs-title">size</span>)</span>\n<span class="hljs-container">(<span class="hljs-title">contents</span>)</span></span>
+</code></pre><p>该格式包含了单词 data，所读取数据的大小，一个换行符，最后是数据本身。由于随后指明文件内容的时候要用到相同的格式，我们写一个辅助方法，<code>export_data</code>：</p>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> </span>export_data(string)
+  print <span class="hljs-string">"data <span class="hljs-subst">#{string.size}</span>\n<span class="hljs-subst">#{string}</span>"</span>
+<span class="hljs-keyword">end</span>
+</code></pre><p>唯一剩下的就是每一个快照的内容了。这简单的很，因为它们分别处于一个目录——你可以输出 <code>deleeall</code> 命令，随后是目录中每个文件的内容。Git 会正确的记录每一个快照：</p>
+<pre><code>puts <span class="hljs-string">'deleteall'</span>
+Dir.glob(<span class="hljs-string">"**/*"</span>).<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |<span class="hljs-built_in">file</span>|
+  next <span class="hljs-keyword">if</span> !File.<span class="hljs-built_in">file</span>?(<span class="hljs-built_in">file</span>)
+  inline_data(<span class="hljs-built_in">file</span>)
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+</code></pre><p>注意：由于很多系统把每次修订看作一个 commit 到另一个 commit 的变化量，fast-import 也可以依据每次提交获取一个命令来指出哪些文件被添加，删除或者修改过，以及修改的内容。我们将需要计算快照之间的差别并且仅仅给出这项数据，不过该做法要复杂很多——还如不直接把所有数据丢给 Git 然它自己搞清楚。假如前面这个方法更适用于你的数据，参考 <code>fast-import</code> 的 man 帮助页面来了解如何以这种方式提供数据。</p>
+<p>列举新文件内容或者指明带有新内容的已修改文件的格式如下：</p>
+<pre><code>M <span class="hljs-number">644</span> <span class="hljs-keyword">inline</span> path/<span class="hljs-keyword">to</span>/<span class="hljs-keyword">file</span>
+data (size)
+(<span class="hljs-keyword">file</span> contents)
+</code></pre><p>这里，644 是权限模式（加入有可执行文件，则需要探测之并设定为 755），而 inline 说明我们在本行结束之后立即列出文件的内容。我们的 <code>inline_data</code> 方法大致是：</p>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> </span>inline_data(file, code = <span class="hljs-string">'M'</span>, mode = <span class="hljs-string">'644'</span>)
+  content = <span class="hljs-constant">File</span>.read(file)
+  puts <span class="hljs-string">"<span class="hljs-subst">#{code}</span> <span class="hljs-subst">#{mode}</span> inline <span class="hljs-subst">#{file}</span>"</span>
+  export_data(content)
+<span class="hljs-keyword">end</span>
+</code></pre><p>我们重用了前面定义过的 <code>export_data</code>，因为这里和指明提交注释的格式如出一辙。</p>
+<p>最后一项工作是返回当前的标记以便下次循环的使用。</p>
+<pre><code><span class="hljs-keyword">return</span> mark
+</code></pre><p>注意：如果你在用 Windows，一定记得添加一项额外的步骤。前面提过，Windows 使用 CRLF 作为换行字符而 Git fast-import 只接受 LF。为了绕开这个问题来满足 git fast-import，你需要让 ruby 用 LF 取代 CRLF：</p>
+<pre><code><span class="hljs-variable">$stdout</span>.<span class="hljs-keyword">binmode</span>
+</code></pre><p>搞定了。现在运行该脚本，你将得到如下内容：</p>
+<pre><code>$ ruby import.rb /opt/import_from
+commit refs/heads/master
+mark :<span class="hljs-number">1</span>
+committer Scott Chacon &lt;schacon@geemail.com&gt; <span class="hljs-number">1230883200</span> -<span class="hljs-number">0700</span>
+data <span class="hljs-number">29</span>
+imported <span class="hljs-built_in">from</span> back_2009_01_02deleteall
+M <span class="hljs-number">644</span> inline <span class="hljs-built_in">file</span>.rb
+data <span class="hljs-number">12</span>
+<span class="hljs-built_in">version</span> <span class="hljs-constant">two</span>
+commit refs/heads/master
+mark :<span class="hljs-number">2</span>
+committer Scott Chacon &lt;schacon@geemail.com&gt; <span class="hljs-number">1231056000</span> -<span class="hljs-number">0700</span>
+data <span class="hljs-number">29</span>
+imported <span class="hljs-built_in">from</span> back_2009_01_04from :<span class="hljs-number">1</span>
+deleteall
+M <span class="hljs-number">644</span> inline <span class="hljs-built_in">file</span>.rb
+data <span class="hljs-number">14</span>
+<span class="hljs-built_in">version</span> <span class="hljs-constant">three</span>
+M <span class="hljs-number">644</span> inline <span class="hljs-built_in">new</span>.rb
+data <span class="hljs-number">16</span>
+<span class="hljs-built_in">new</span> <span class="hljs-built_in">version</span> <span class="hljs-constant">one</span>
+(...)
+</code></pre><p>要运行导入脚本，在需要导入的目录把该内容用管道定向到 <code>git fast-import</code>。你可以建立一个空目录然后运行 <code>git init</code> 作为开头，然后运行该脚本：</p>
+<pre><code>$ git init
+Initialized empty Git repository in /opt/import<span class="hljs-emphasis">_to/.git/
+$ ruby import.rb /opt/import_</span>from | git fast-import
+<span class="hljs-header">git-fast-import statistics:
+---------------------------------------------------------------------</span>
+Alloc'd objects:       5000
+Total objects:           18 (         1 duplicates                  )
+<span class="hljs-code">      blobs  :            7 (         1 duplicates          0 deltas)</span>
+<span class="hljs-code">      trees  :            6 (         0 duplicates          1 deltas)</span>
+<span class="hljs-code">      commits:            5 (         0 duplicates          0 deltas)</span>
+<span class="hljs-code">      tags   :            0 (         0 duplicates          0 deltas)</span>
+Total branches:           1 (         1 loads     )
+<span class="hljs-code">      marks:           1024 (         5 unique    )</span>
+<span class="hljs-code">      atoms:              3</span>
+Memory total:          2255 KiB
+<span class="hljs-code">       pools:          2098 KiB</span>
+<span class="hljs-header">     objects:           156 KiB
+---------------------------------------------------------------------</span>
+pack<span class="hljs-emphasis">_report: getpagesize()            =       4096
+pack_</span>report: core.packedGitWindowSize =   33554432
+pack<span class="hljs-emphasis">_report: core.packedGitLimit      =  268435456
+pack_</span>report: pack<span class="hljs-emphasis">_used_</span>ctr            =          9
+pack<span class="hljs-emphasis">_report: pack_</span>mmap<span class="hljs-emphasis">_calls          =          5
+pack_</span>report: pack<span class="hljs-emphasis">_open_</span>windows        =          1 /          1
+<span class="hljs-header">pack_report: pack_mapped              =       1356 /       1356
+---------------------------------------------------------------------</span>
+</code></pre><p>你会发现，在它成功执行完毕以后，会给出一堆有关已完成工作的数据。上例在一个分支导入了5次提交数据，包含了18个对象。现在可以运行 <code>git log</code> 来检视新的历史：</p>
+<pre><code>$ git log -2
+<span class="hljs-operator"><span class="hljs-keyword">commit</span> <span class="hljs-number">10</span>bfe7d22ce15ee25b60a824c8982157ca593d41
+Author: Scott Chacon &lt;schacon@example.com&gt;
+<span class="hljs-keyword">Date</span>:   Sun May <span class="hljs-number">3</span> <span class="hljs-number">12</span>:<span class="hljs-number">57</span>:<span class="hljs-number">39</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    imported <span class="hljs-keyword">from</span> <span class="hljs-keyword">current</span>
+
+<span class="hljs-keyword">commit</span> <span class="hljs-number">7e519590</span>de754d079dd73b44d695a42c9d2df452
+Author: Scott Chacon &lt;schacon@example.com&gt;
+<span class="hljs-keyword">Date</span>:   Tue Feb <span class="hljs-number">3</span> <span class="hljs-number">01</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    imported <span class="hljs-keyword">from</span> back_2009_02_03</span>
+</code></pre><p>就它了——一个干净整洁的 Git 仓库。需要注意的是此时没有任何内容被检出——刚开始当前目录里没有任何文件。要获取它们，你得转到 <code>master</code> 分支的所在：</p>
+<pre><code>$ ls
+$ git reset <span class="hljs-comment">--hard master</span>
+HEAD <span class="hljs-keyword">is</span> now <span class="hljs-keyword">at</span> <span class="hljs-number">10</span>bfe7d imported <span class="hljs-keyword">from</span> current
+$ ls
+<span class="hljs-type">file</span>.rb  lib
+</code></pre><p><code>fast-import</code> 还可以做更多——处理不同的文件模式，二进制文件，多重分支与合并，标签，进展标识等等。一些更加复杂的实例可以在 Git 源码的 <code>contib/fast-import</code> 目录里找到；其中较为出众的是前面提过的 <code>git-p4</code> 脚本。</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_/git__subversion.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_/.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

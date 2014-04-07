@@ -1,0 +1,408 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Working with Remotes | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../bazoj_de_git/tagging.html" />
+        
+        
+        <link rel="prev" href="../bazoj_de_git/undoing_things.html" />
+        
+
+        <meta property="og:title" content="Working with Remotes | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.5" data-basepath=".." data-revision="1396895597437">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/bazoj_de_git/working_with_remotes.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="ekkomenci/README.html">
+                
+                <a href="../ekkomenci/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Ekkomenci
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="ekkomenci/pri_versikontrolo.html">
+                            
+                            <a href="../ekkomenci/pri_versikontrolo.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Pri versikontrolo
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="ekkomenci/a_short_history_of_git.html">
+                            
+                            <a href="../ekkomenci/a_short_history_of_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> A Short History of Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="ekkomenci/git_basics.html">
+                            
+                            <a href="../ekkomenci/git_basics.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git Basics
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="ekkomenci/installing_git.html">
+                            
+                            <a href="../ekkomenci/installing_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Installing Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="ekkomenci/first_time_git_setup.html">
+                            
+                            <a href="../ekkomenci/first_time_git_setup.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> First-Time Git Setup
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="ekkomenci/getting_help.html">
+                            
+                            <a href="../ekkomenci/getting_help.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Getting Help
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="ekkomenci/summary.html">
+                            
+                            <a href="../ekkomenci/summary.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="bazoj_de_git/README.html">
+                
+                <a href="../bazoj_de_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Bazoj de Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="bazoj_de_git/ekhavi_git_deponejon.html">
+                            
+                            <a href="../bazoj_de_git/ekhavi_git_deponejon.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Ekhavi Git-deponejon
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="bazoj_de_git/registri_sangojn_en_la_deponejo.html">
+                            
+                            <a href="../bazoj_de_git/registri_sangojn_en_la_deponejo.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Registri ŝanĝojn en la deponejo
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="bazoj_de_git/viewing_the_commit_history.html">
+                            
+                            <a href="../bazoj_de_git/viewing_the_commit_history.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Viewing the Commit History
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="bazoj_de_git/undoing_things.html">
+                            
+                            <a href="../bazoj_de_git/undoing_things.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Undoing Things
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="bazoj_de_git/working_with_remotes.html">
+                            
+                            <a href="../bazoj_de_git/working_with_remotes.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Working with Remotes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="bazoj_de_git/tagging.html">
+                            
+                            <a href="../bazoj_de_git/tagging.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="bazoj_de_git/tips_and_tricks.html">
+                            
+                            <a href="../bazoj_de_git/tips_and_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips and Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="bazoj_de_git/summary.html">
+                            
+                            <a href="../bazoj_de_git/summary.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 82.3529411764706%;min-width: 76.47058823529412%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../ekkomenci/README.html" title="Ekkomenci" class="chapter done new-chapter" data-progress="1" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../ekkomenci/pri_versikontrolo.html" title="Pri versikontrolo" class="chapter done " data-progress="1.1" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../ekkomenci/a_short_history_of_git.html" title="A Short History of Git" class="chapter done " data-progress="1.2" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../ekkomenci/git_basics.html" title="Git Basics" class="chapter done " data-progress="1.3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../ekkomenci/installing_git.html" title="Installing Git" class="chapter done " data-progress="1.4" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../ekkomenci/first_time_git_setup.html" title="First-Time Git Setup" class="chapter done " data-progress="1.5" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../ekkomenci/getting_help.html" title="Getting Help" class="chapter done " data-progress="1.6" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../ekkomenci/summary.html" title="Summary" class="chapter done " data-progress="1.7" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../bazoj_de_git/README.html" title="Bazoj de Git" class="chapter done new-chapter" data-progress="2" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../bazoj_de_git/ekhavi_git_deponejon.html" title="Ekhavi Git-deponejon" class="chapter done " data-progress="2.1" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../bazoj_de_git/registri_sangojn_en_la_deponejo.html" title="Registri ŝanĝojn en la deponejo" class="chapter done " data-progress="2.2" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../bazoj_de_git/viewing_the_commit_history.html" title="Viewing the Commit History" class="chapter done " data-progress="2.3" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../bazoj_de_git/undoing_things.html" title="Undoing Things" class="chapter done " data-progress="2.4" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../bazoj_de_git/working_with_remotes.html" title="Working with Remotes" class="chapter done " data-progress="2.5" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../bazoj_de_git/tagging.html" title="Tagging" class="chapter  " data-progress="2.6" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../bazoj_de_git/tips_and_tricks.html" title="Tips and Tricks" class="chapter  " data-progress="2.7" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../bazoj_de_git/summary.html" title="Summary" class="chapter  " data-progress="2.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_97">
+                    
+                        <h1 id="working-with-remotes">Working with Remotes</h1>
+<p>To be able to collaborate on any Git project, you need to know how to manage your remote repositories. Remote repositories are versions of your project that are hosted on the Internet or network somewhere. You can have several of them, each of which generally is either read-only or read/write for you. Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work.
+Managing remote repositories includes knowing how to add remote repositories, remove remotes that are no longer valid, manage various remote branches and define them as being tracked or not, and more. In this section, we’ll cover these remote-management skills.</p>
+<h2 id="showing-your-remotes">Showing Your Remotes</h2>
+<p>To see which remote servers you have configured, you can run the <code>git remote</code> command. It lists the shortnames of each remote handle you’ve specified. If you’ve cloned your repository, you should at least see <em>origin</em> — that is the default name Git gives to the server you cloned from:</p>
+<pre><code>$ git clone git:<span class="hljs-comment">//github.com/schacon/ticgit.git</span>
+Initialized empty Git repository <span class="hljs-keyword">in</span> /<span class="hljs-keyword">private</span>/tmp/ticgit/.git/
+remote: Counting objects: <span class="hljs-number">595</span>, <span class="hljs-keyword">done</span>.
+remote: Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">269</span>/<span class="hljs-number">269</span>), <span class="hljs-keyword">done</span>.
+remote: Total <span class="hljs-number">595</span> (delta <span class="hljs-number">255</span>), reused <span class="hljs-number">589</span> (delta <span class="hljs-number">253</span>)
+Receiving objects: <span class="hljs-number">100</span>% (<span class="hljs-number">595</span>/<span class="hljs-number">595</span>), <span class="hljs-number">73.31</span> KiB | <span class="hljs-number">1</span> KiB/s, <span class="hljs-keyword">done</span>.
+Resolving deltas: <span class="hljs-number">100</span>% (<span class="hljs-number">255</span>/<span class="hljs-number">255</span>), <span class="hljs-keyword">done</span>.
+$ cd ticgit
+$ git remote
+origin
+</code></pre><p>You can also specify <code>-v</code>, which shows you the URL that Git has stored for the shortname to be expanded to:</p>
+<pre><code>$ git remote -v
+origin  git://github<span class="hljs-preprocessor">.com</span>/schacon/ticgit<span class="hljs-preprocessor">.git</span> (fetch)
+origin  git://github<span class="hljs-preprocessor">.com</span>/schacon/ticgit<span class="hljs-preprocessor">.git</span> (<span class="hljs-keyword">push</span>)
+</code></pre><p>If you have more than one remote, the command lists them all. For example, my Grit repository looks something like this.</p>
+<pre><code>$ cd grit
+$ git remote -v
+bakkdoor  git://github<span class="hljs-preprocessor">.com</span>/bakkdoor/grit<span class="hljs-preprocessor">.git</span>
+cho45     git://github<span class="hljs-preprocessor">.com</span>/cho45/grit<span class="hljs-preprocessor">.git</span>
+defunkt   git://github<span class="hljs-preprocessor">.com</span>/defunkt/grit<span class="hljs-preprocessor">.git</span>
+koke      git://github<span class="hljs-preprocessor">.com</span>/koke/grit<span class="hljs-preprocessor">.git</span>
+origin    git@github<span class="hljs-preprocessor">.com</span>:mojombo/grit<span class="hljs-preprocessor">.git</span>
+</code></pre><p>This means we can pull contributions from any of these users pretty easily. But notice that only the origin remote is an SSH URL, so it’s the only one I can push to (we’ll cover why this is in <em>Chapter 4</em>).</p>
+<h2 id="adding-remote-repositories">Adding Remote Repositories</h2>
+<p>I’ve mentioned and given some demonstrations of adding remote repositories in previous sections, but here is how to do it explicitly. To add a new remote Git repository as a shortname you can reference easily, run <code>git remote add [shortname] [url]</code>:</p>
+<pre><code>$ git remote
+origin
+$ git remote <span class="hljs-keyword">add</span> pb git://github<span class="hljs-preprocessor">.com</span>/paulboone/ticgit<span class="hljs-preprocessor">.git</span>
+$ git remote -v
+origin    git://github<span class="hljs-preprocessor">.com</span>/schacon/ticgit<span class="hljs-preprocessor">.git</span>
+pb    git://github<span class="hljs-preprocessor">.com</span>/paulboone/ticgit<span class="hljs-preprocessor">.git</span>
+</code></pre><p>Now you can use the string <code>pb</code> on the command line in lieu of the whole URL. For example, if you want to fetch all the information that Paul has but that you don’t yet have in your repository, you can run <code>git fetch pb</code>:</p>
+<pre><code>$ git fetch pb
+remote: Counting objects: <span class="hljs-number">58</span>, <span class="hljs-keyword">done</span>.
+remote: Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">41</span>/<span class="hljs-number">41</span>), <span class="hljs-keyword">done</span>.
+remote: Total <span class="hljs-number">44</span> (delta <span class="hljs-number">24</span>), reused <span class="hljs-number">1</span> (delta <span class="hljs-number">0</span>)
+Unpacking objects: <span class="hljs-number">100</span>% (<span class="hljs-number">44</span>/<span class="hljs-number">44</span>), <span class="hljs-keyword">done</span>.
+From git:<span class="hljs-comment">//github.com/paulboone/ticgit</span>
+ * [<span class="hljs-keyword">new</span> branch]      master     -&gt; pb/master
+ * [<span class="hljs-keyword">new</span> branch]      ticgit     -&gt; pb/ticgit
+</code></pre><p>Paul’s master branch is accessible locally as <code>pb/master</code> — you can merge it into one of your branches, or you can check out a local branch at that point if you want to inspect it.</p>
+<h2 id="fetching-and-pulling-from-your-remotes">Fetching and Pulling from Your Remotes</h2>
+<p>As you just saw, to get data from your remote projects, you can run:</p>
+<pre><code><span class="hljs-variable">$ </span>git fetch [remote-name]
+</code></pre><p>The command goes out to that remote project and pulls down all the data from that remote project that you don’t have yet. After you do this, you should have references to all the branches from that remote, which you can merge in or inspect at any time. (We’ll go over what branches are and how to use them in much more detail in <em>Chapter 3</em>.)</p>
+<p>If you clone a repository, the command automatically adds that remote repository under the name <em>origin</em>. So, <code>git fetch origin</code> fetches any new work that has been pushed to that server since you cloned (or last fetched from) it. It’s important to note that the <code>fetch</code> command pulls the data to your local repository — it doesn’t automatically merge it with any of your work or modify what you’re currently working on. You have to merge it manually into your work when you’re ready.</p>
+<p>If you have a branch set up to track a remote branch (see the next section and <em>Chapter 3</em> for more information), you can use the <code>git pull</code> command to automatically fetch and then merge a remote branch into your current branch. This may be an easier or more comfortable workflow for you; and by default, the <code>git clone</code> command automatically sets up your local master branch to track the remote master branch on the server you cloned from (assuming the remote has a master branch). Running <code>git pull</code> generally fetches data from the server you originally cloned from and automatically tries to merge it into the code you’re currently working on.</p>
+<h2 id="pushing-to-your-remotes">Pushing to Your Remotes</h2>
+<p>When you have your project at a point that you want to share, you have to push it upstream. The command for this is simple: <code>git push [remote-name] [branch-name]</code>. If you want to push your master branch to your <code>origin</code> server (again, cloning generally sets up both of those names for you automatically), then you can run this to push your work back up to the server:</p>
+<pre><code><span class="hljs-variable">$ </span>git push origin master
+</code></pre><p>This command works only if you cloned from a server to which you have write access and if nobody has pushed in the meantime. If you and someone else clone at the same time and they push upstream and then you push upstream, your push will rightly be rejected. You’ll have to pull down their work first and incorporate it into yours before you’ll be allowed to push. See <em>Chapter 3</em> for more detailed information on how to push to remote servers.</p>
+<h2 id="inspecting-a-remote">Inspecting a Remote</h2>
+<p>If you want to see more information about a particular remote, you can use the <code>git remote show [remote-name]</code> command. If you run this command with a particular shortname, such as <code>origin</code>, you get something like this:</p>
+<pre><code>$ git remote show origin
+* remote origin
+  <span class="hljs-built_in">URL</span>: git://github.com/schacon/ticgit.git
+  Remote branch merged <span class="hljs-operator">with</span> <span class="hljs-string">'git pull'</span> <span class="hljs-keyword">while</span> <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">branch</span> <span class="hljs-title">master</span></span>
+    master
+  Tracked remote branches
+    master
+    ticgit
+</code></pre><p>It lists the URL for the remote repository as well as the tracking branch information. The command helpfully tells you that if you’re on the master branch and you run <code>git pull</code>, it will automatically merge in the master branch on the remote after it fetches all the remote references. It also lists all the remote references it has pulled down.</p>
+<p>That is a simple example you’re likely to encounter. When you’re using Git more heavily, however, you may see much more information from <code>git remote show</code>:</p>
+<pre><code>$ git remote show origin
+* remote origin
+  <span class="hljs-built_in">URL</span>: git@github.com:defunkt/github.git
+  Remote branch merged <span class="hljs-operator">with</span> <span class="hljs-string">'git pull'</span> <span class="hljs-keyword">while</span> <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">branch</span> <span class="hljs-title">issues</span></span>
+    issues
+  Remote branch merged <span class="hljs-operator">with</span> <span class="hljs-string">'git pull'</span> <span class="hljs-keyword">while</span> <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">branch</span> <span class="hljs-title">master</span></span>
+    master
+  New remote branches (next fetch will store <span class="hljs-operator">in</span> remotes/origin)
+    caching
+  Stale tracking branches (use <span class="hljs-string">'git remote prune'</span>)
+    libwalker
+    walker2
+  Tracked remote branches
+    acl
+    apiv2
+    dashboard2
+    issues
+    master
+    postgres
+  Local branch pushed <span class="hljs-operator">with</span> <span class="hljs-string">'git push'</span>
+    master:master
+</code></pre><p>This command shows which branch is automatically pushed when you run <code>git push</code> on certain branches. It also shows you which remote branches on the server you don’t yet have, which remote branches you have that have been removed from the server, and multiple branches that are automatically merged when you run <code>git pull</code>.</p>
+<h2 id="removing-and-renaming-remotes">Removing and Renaming Remotes</h2>
+<p>If you want to rename a reference, in newer versions of Git you can run <code>git remote rename</code> to change a remote’s shortname. For instance, if you want to rename <code>pb</code> to <code>paul</code>, you can do so with <code>git remote rename</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git remote rename pb paul
+<span class="hljs-variable">$ </span>git remote
+origin
+paul
+</code></pre><p>It’s worth mentioning that this changes your remote branch names, too. What used to be referenced at <code>pb/master</code> is now at <code>paul/master</code>.</p>
+<p>If you want to remove a reference for some reason — you’ve moved the server or are no longer using a particular mirror, or perhaps a contributor isn’t contributing anymore — you can use <code>git remote rm</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git remote rm paul
+<span class="hljs-variable">$ </span>git remote
+origin
+</code></pre>
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../bazoj_de_git/undoing_things.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../bazoj_de_git/tagging.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

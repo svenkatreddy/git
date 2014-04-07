@@ -1,0 +1,451 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Değişiklikleri Geri Almak | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../gitin_temelleri/uzak_ucbirimlerle_calismak.html" />
+        
+        
+        <link rel="prev" href="../gitin_temelleri/kayit_tarihcesini_goruntulemek.html" />
+        
+
+        <meta property="og:title" content="Değişiklikleri Geri Almak | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.4" data-basepath=".." data-revision="1396895602594">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/gitin_temelleri/degisiklikleri_geri_almak.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="baslangic/README.html">
+                
+                <a href="../baslangic/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Başlangıç
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="baslangic/surum_kontrolu_hakkinda.html">
+                            
+                            <a href="../baslangic/surum_kontrolu_hakkinda.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Sürüm Kontrolü Hakkında
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="baslangic/gitin_kisa_bir_tarihcesi.html">
+                            
+                            <a href="../baslangic/gitin_kisa_bir_tarihcesi.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Git&#39;in Kısa Bir Tarihçesi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="baslangic/gitin_temelleri.html">
+                            
+                            <a href="../baslangic/gitin_temelleri.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git&#39;in Temelleri
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="baslangic/gitin_kurulumu.html">
+                            
+                            <a href="../baslangic/gitin_kurulumu.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Git&#39;in Kurulumu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="baslangic/ilk_ayarlamalar.html">
+                            
+                            <a href="../baslangic/ilk_ayarlamalar.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> İlk Ayarlamalar
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="baslangic/yardim_almak.html">
+                            
+                            <a href="../baslangic/yardim_almak.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Yardım Almak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="baslangic/ozet.html">
+                            
+                            <a href="../baslangic/ozet.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Özet
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="gitin_temelleri/README.html">
+                
+                <a href="../gitin_temelleri/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git&#39;in Temelleri
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html">
+                            
+                            <a href="../gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Bir Git Yazılım Havuzu Edinmek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.html">
+                            
+                            <a href="../gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Değişiklikleri Yazılım Havuzuna Kaydetmek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="gitin_temelleri/kayit_tarihcesini_goruntulemek.html">
+                            
+                            <a href="../gitin_temelleri/kayit_tarihcesini_goruntulemek.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Kayıt Tarihçesini Görüntülemek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="gitin_temelleri/degisiklikleri_geri_almak.html">
+                            
+                            <a href="../gitin_temelleri/degisiklikleri_geri_almak.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Değişiklikleri Geri Almak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="gitin_temelleri/uzak_ucbirimlerle_calismak.html">
+                            
+                            <a href="../gitin_temelleri/uzak_ucbirimlerle_calismak.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Uzak Uçbirimlerle Çalışmak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="gitin_temelleri/etiketleme.html">
+                            
+                            <a href="../gitin_temelleri/etiketleme.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Etiketleme
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="gitin_temelleri/ipuclari.html">
+                            
+                            <a href="../gitin_temelleri/ipuclari.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> İpuçları
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="gitin_temelleri/ozet.html">
+                            
+                            <a href="../gitin_temelleri/ozet.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Özet
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="gitte_dallanma/README.html">
+                
+                <a href="../gitte_dallanma/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git&#39;te Dallanma
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="gitte_dallanma/dal_nedir.html">
+                            
+                            <a href="../gitte_dallanma/dal_nedir.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Dal Nedir?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.html">
+                            
+                            <a href="../gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Dallanma ve Birleştirmenin Temelleri
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="gitte_dallanma/dal_yonetimi.html">
+                            
+                            <a href="../gitte_dallanma/dal_yonetimi.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Dal Yönetimi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="gitte_dallanma/dallanma_is_akislari.html">
+                            
+                            <a href="../gitte_dallanma/dallanma_is_akislari.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Dallanma İş Akışları
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="gitte_dallanma/uzak_ucbirim_dallari.html">
+                            
+                            <a href="../gitte_dallanma/uzak_ucbirim_dallari.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Uzak Uçbirim Dalları
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="gitte_dallanma/rebasing__zemin_kok.html">
+                            
+                            <a href="../gitte_dallanma/rebasing__zemin_kok.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing ## Zemin, Kök,
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="gitte_dallanma/summary.html">
+                            
+                            <a href="../gitte_dallanma/summary.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 52%;min-width: 48%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../baslangic/README.html" title="Başlangıç" class="chapter done new-chapter" data-progress="1" style="left: 4%;"></a>
+    
+        <a href="../baslangic/surum_kontrolu_hakkinda.html" title="Sürüm Kontrolü Hakkında" class="chapter done " data-progress="1.1" style="left: 8%;"></a>
+    
+        <a href="../baslangic/gitin_kisa_bir_tarihcesi.html" title="Git&#39;in Kısa Bir Tarihçesi" class="chapter done " data-progress="1.2" style="left: 12%;"></a>
+    
+        <a href="../baslangic/gitin_temelleri.html" title="Git&#39;in Temelleri" class="chapter done " data-progress="1.3" style="left: 16%;"></a>
+    
+        <a href="../baslangic/gitin_kurulumu.html" title="Git&#39;in Kurulumu" class="chapter done " data-progress="1.4" style="left: 20%;"></a>
+    
+        <a href="../baslangic/ilk_ayarlamalar.html" title="İlk Ayarlamalar" class="chapter done " data-progress="1.5" style="left: 24%;"></a>
+    
+        <a href="../baslangic/yardim_almak.html" title="Yardım Almak" class="chapter done " data-progress="1.6" style="left: 28%;"></a>
+    
+        <a href="../baslangic/ozet.html" title="Özet" class="chapter done " data-progress="1.7" style="left: 32%;"></a>
+    
+        <a href="../gitin_temelleri/README.html" title="Git&#39;in Temelleri" class="chapter done new-chapter" data-progress="2" style="left: 36%;"></a>
+    
+        <a href="../gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html" title="Bir Git Yazılım Havuzu Edinmek" class="chapter done " data-progress="2.1" style="left: 40%;"></a>
+    
+        <a href="../gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.html" title="Değişiklikleri Yazılım Havuzuna Kaydetmek" class="chapter done " data-progress="2.2" style="left: 44%;"></a>
+    
+        <a href="../gitin_temelleri/kayit_tarihcesini_goruntulemek.html" title="Kayıt Tarihçesini Görüntülemek" class="chapter done " data-progress="2.3" style="left: 48%;"></a>
+    
+        <a href="../gitin_temelleri/degisiklikleri_geri_almak.html" title="Değişiklikleri Geri Almak" class="chapter done " data-progress="2.4" style="left: 52%;"></a>
+    
+        <a href="../gitin_temelleri/uzak_ucbirimlerle_calismak.html" title="Uzak Uçbirimlerle Çalışmak" class="chapter  " data-progress="2.5" style="left: 56%;"></a>
+    
+        <a href="../gitin_temelleri/etiketleme.html" title="Etiketleme" class="chapter  " data-progress="2.6" style="left: 60%;"></a>
+    
+        <a href="../gitin_temelleri/ipuclari.html" title="İpuçları" class="chapter  " data-progress="2.7" style="left: 64%;"></a>
+    
+        <a href="../gitin_temelleri/ozet.html" title="Özet" class="chapter  " data-progress="2.8" style="left: 68%;"></a>
+    
+        <a href="../gitte_dallanma/README.html" title="Git&#39;te Dallanma" class="chapter  new-chapter" data-progress="3" style="left: 72%;"></a>
+    
+        <a href="../gitte_dallanma/dal_nedir.html" title="Dal Nedir?" class="chapter  " data-progress="3.1" style="left: 76%;"></a>
+    
+        <a href="../gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.html" title="Dallanma ve Birleştirmenin Temelleri" class="chapter  " data-progress="3.2" style="left: 80%;"></a>
+    
+        <a href="../gitte_dallanma/dal_yonetimi.html" title="Dal Yönetimi" class="chapter  " data-progress="3.3" style="left: 84%;"></a>
+    
+        <a href="../gitte_dallanma/dallanma_is_akislari.html" title="Dallanma İş Akışları" class="chapter  " data-progress="3.4" style="left: 88%;"></a>
+    
+        <a href="../gitte_dallanma/uzak_ucbirim_dallari.html" title="Uzak Uçbirim Dalları" class="chapter  " data-progress="3.5" style="left: 92%;"></a>
+    
+        <a href="../gitte_dallanma/rebasing__zemin_kok.html" title="Rebasing ## Zemin, Kök," class="chapter  " data-progress="3.6" style="left: 96%;"></a>
+    
+        <a href="../gitte_dallanma/summary.html" title="Summary" class="chapter  " data-progress="3.7" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_222">
+                    
+                        <h1 id="de-i-iklikleri-geri-almak">Değişiklikleri Geri Almak</h1>
+<p>Herhangi bir noktada yaptığınız bir değişikliği geri almak isteyebilirsiniz. Burada yapılan değişiklikleri geri almakta kullanılabilecek bazı araçları inceleyeceğiz. Dikkatli olun, zira geri alınan bu değişikliklerden bazılarını yeniden gerçekleştiremeyebilirsiniz. Bu, eğer bir hata yaparsanız, bunu Git&#39;i kullanarak telafi edemeyeceğiniz, az sayıda alanından biridir.</p>
+<h2 id="son-kay-t-i-lemini-de-i-tirmek">Son Kayıt İşlemini Değiştirmek</h2>
+<p>Eğer kaydı çok erken yapmışsanız, bazı dosyaları eklemeyi unutmuşsanız ya da kayıt mesajında hata yapmışsanız, sık rastlanan düzeltme işlemlerinden birini kullanabilirsiniz. Kaydı değiştirmek isterseniz, <code>commit</code> komutunu <code>--amend</code> seçeneğiyle çalıştırabilirsiniz:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">commit</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">amend</span>
+</code></pre><p>Bu komut, hazırlık alanındaki değişiklikleri alıp bunları kaydı değiştirmek için kullanır. Eğer son kaydınızdan beri hiçbir değişiklik yapmamışsanız (örneğin, bu komutu yeni bir kayıt yaptıktan hemen sonra çalıştırıyorsanız) o zaman kaydınızın bellek kopyası aynı kalacak ve değiştireceğiniz tek şey kayıt mesajı olacaktır.</p>
+<p>Aynı kayıt mesajı editörü açılır, fakat editörde bir önceki kaydın kayıt mesajı görünür. Mesajı her zamanki gibi değiştirebilirsiniz, ama bu yeni kayıt mesajı öncekinin yerine geçecektir.</p>
+<p>Söz gelimi, eğer bir kayıt sırasında belirli bir dosyada yaptığınız değişiklikleri kayda hazırlamayı unuttuğunuzu fark ederseniz, şöyle bir şey yapabilirsiniz:</p>
+<pre><code><span class="hljs-variable">$ </span>git commit -m <span class="hljs-string">'initial commit'</span>
+<span class="hljs-variable">$ </span>git add forgotten_file
+<span class="hljs-variable">$ </span>git commit --amend
+</code></pre><p>Bu üç komuttan sonra, tarihçenize tek bir kayıt işlenmiştir —son kayıt öncekinin yerine geçer.</p>
+<h2 id="kayda-haz-rlanm-bir-dosyay-haz-rl-k-alan-ndan-kald-rmak">Kayda Hazırlanmış Bir Dosyayı Hazırlık Alanından Kaldırmak</h2>
+<p>Bu iki alt bölüm kayda hazırlık alanındaki ve çalışma klasörünüzdeki değişiklikleri nasıl idare edeceğinizi gösteriyor. İşin güzel yanı, bu iki alanın durumunu öğrenmek için kullanacağınız komut aynı zamanda bu alanlardaki değişiklikleri nasıl geri alabileceğinizi de hatırlatıyor. Diyelim ki iki dosyayı değiştirdiniz ve bu iki değişikliği ayrı birer kayıt olarak işlemek istiyorsunuz, ama yanlışlıkla <code>git add *</code> komutunu kullanarak ikisini birden hazırlık alanına aldınız. Bunlardan birini nasıl hazırlık alanından çıkarabilirsiniz? <code>git status</code> komutu size bunu da anımsatıyor:</p>
+<pre><code>$ git add .
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       modified:   README.txt</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>“Changes to be committed” yazısının hemen altında &quot;use <code>git reset HEAD &lt;file&gt;...</code> to unstage&quot; yazdığını görüyoruz. <code>benchmarks.rb</code> dosyasını bu öneriye uygun olarak hazırlık alanından kaldıralım:</p>
+<pre><code>$ git reset<span class="hljs-constant"> HEAD </span>benchmarks.rb
+benchmarks.rb: locally modified
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       modified:   README.txt</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Komut biraz tuhaf, ama iş görüyor. <code>benchmarks.rb</code> dosyası hazırlık alanından kaldırıldı ama hâlâ değişmiş olarak görünüyor.</p>
+<h2 id="de-i-mi-durumdaki-bir-dosyay-de-i-memi-duruma-geri-getirmek">Değişmiş Durumdaki Bir Dosyayı Değişmemiş Duruma Geri Getirmek</h2>
+<p>Peki <code>benchmarks.rb</code> dosyasındaki değişiklikleri korumak istemiyorsanız? Yaptığınız değişiklikleri kolayca nasıl geri alacaksınız —son kayıtta nasıl görünüyorsa o haline (ya da ilk klonlandığı haline, yahut çalışma klasörünüze ilk aldığınız haline) nasıl geri getireceksiniz? Neyse ki <code>git status</code> komutu bunu nasıl yapacağınızı da söylüyor. Son örnek çıktıda hazırlık alanı dışındaki değişiklikler şöyle görünüyor:</p>
+<pre><code><span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Yaptığınız değişiklikleri nasıl çöpe atabileceğinizi açıkça söylüyor (en azından Git&#39;in 1.6.1&#39;le başlayan yeni sürümleri bunu yapıyor —eğer daha eski bir sürümle çalışıyorsanız, kolaylık sağlayan bu özellikleri edinebilmek için programı güncellemenizi öneririz). Gelin, söyleneni yapalım:</p>
+<pre><code>$ git checkout -- benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       modified:   README.txt</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Gördüğünüz gibi değişiklikler çöpe atıldı. Bunun tehlikeli bir komut olduğunu aklınızdan çıkarmayın: o dosyaya yaptığınız bütün değişiklikler şimdi yok oldu —dosyanın üstüne yeni bir dosya kopyaladınız. Eğer dosyadaki değişiklikleri istemediğinizden yüzde yüz emin değilseniz asla bu komutu kullanmayın. Eğer sorun bu dosyada yaptığınız değişikliklerin başka işlemler yapmanıza engel olması ise bir sonraki bölümde ele alacağımız zulalama (<em>stash</em>) ve dallandırma (<em>branch</em>) işlemlerini kullanmanız daha iyi olacaktır.</p>
+<p>Unutmayın, Git&#39;te kaydedilmiş her şey neredeyse her zaman kurtarılabilir. Silinmiş dallardaki kayıtlar ve hatta <code>--amend</code> seçeneğiyle üzerine yazılmış kayıtlar bile kurtarılabilirler (veri kurtarma konusunda bkz. <em>9. Bölüm</em>). Diğer taraftan, kaydedilmemiş bir değişikliği kaybederseniz büyük olasılıkla onu kurtarmanız mümkün olmaz.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../gitin_temelleri/kayit_tarihcesini_goruntulemek.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../gitin_temelleri/uzak_ucbirimlerle_calismak.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

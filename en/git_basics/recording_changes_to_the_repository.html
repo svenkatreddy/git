@@ -1,0 +1,1159 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Recording Changes to the Repository | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_basics/viewing_the_commit_history.html" />
+        
+        
+        <link rel="prev" href="../git_basics/getting_a_git_repository.html" />
+        
+
+        <meta property="og:title" content="Recording Changes to the Repository | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.2" data-basepath=".." data-revision="1396895695437">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_basics/recording_changes_to_the_repository.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="getting_started/README.html">
+                
+                <a href="../getting_started/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Getting Started
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="getting_started/about_version_control.html">
+                            
+                            <a href="../getting_started/about_version_control.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> About Version Control
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="getting_started/a_short_history_of_git.html">
+                            
+                            <a href="../getting_started/a_short_history_of_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> A Short History of Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="getting_started/git_basics.html">
+                            
+                            <a href="../getting_started/git_basics.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git Basics
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="getting_started/installing_git.html">
+                            
+                            <a href="../getting_started/installing_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Installing Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="getting_started/first_time_git_setup.html">
+                            
+                            <a href="../getting_started/first_time_git_setup.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> First-Time Git Setup
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="getting_started/getting_help.html">
+                            
+                            <a href="../getting_started/getting_help.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Getting Help
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="getting_started/summary.html">
+                            
+                            <a href="../getting_started/summary.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="git_basics/README.html">
+                
+                <a href="../git_basics/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git Basics
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="git_basics/getting_a_git_repository.html">
+                            
+                            <a href="../git_basics/getting_a_git_repository.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Getting a Git Repository
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git_basics/recording_changes_to_the_repository.html">
+                            
+                            <a href="../git_basics/recording_changes_to_the_repository.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Recording Changes to the Repository
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git_basics/viewing_the_commit_history.html">
+                            
+                            <a href="../git_basics/viewing_the_commit_history.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Viewing the Commit History
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git_basics/undoing_things.html">
+                            
+                            <a href="../git_basics/undoing_things.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Undoing Things
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git_basics/working_with_remotes.html">
+                            
+                            <a href="../git_basics/working_with_remotes.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Working with Remotes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="git_basics/tagging.html">
+                            
+                            <a href="../git_basics/tagging.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="git_basics/tips_and_tricks.html">
+                            
+                            <a href="../git_basics/tips_and_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips and Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="git_basics/summary.html">
+                            
+                            <a href="../git_basics/summary.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="git_branching/README.html">
+                
+                <a href="../git_branching/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git Branching
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="git_branching/what_a_branch_is.html">
+                            
+                            <a href="../git_branching/what_a_branch_is.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> What a Branch Is
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="git_branching/basic_branching_and_merging.html">
+                            
+                            <a href="../git_branching/basic_branching_and_merging.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Basic Branching and Merging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="git_branching/branch_management.html">
+                            
+                            <a href="../git_branching/branch_management.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Branch Management
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="git_branching/branching_workflows.html">
+                            
+                            <a href="../git_branching/branching_workflows.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Branching Workflows
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="git_branching/remote_branches.html">
+                            
+                            <a href="../git_branching/remote_branches.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Remote Branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="git_branching/rebasing.html">
+                            
+                            <a href="../git_branching/rebasing.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="git_branching/summary.html">
+                            
+                            <a href="../git_branching/summary.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_on_the_server/README.html">
+                
+                <a href="../git_on_the_server/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git on the Server
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_on_the_server/the_protocols.html">
+                            
+                            <a href="../git_on_the_server/the_protocols.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> The Protocols
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_on_the_server/getting_git_on_a_server.html">
+                            
+                            <a href="../git_on_the_server/getting_git_on_a_server.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Getting Git on a Server
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_on_the_server/generating_your_ssh_public_key.html">
+                            
+                            <a href="../git_on_the_server/generating_your_ssh_public_key.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Generating Your SSH Public Key
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_on_the_server/setting_up_the_server.html">
+                            
+                            <a href="../git_on_the_server/setting_up_the_server.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Setting Up the Server
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_on_the_server/public_access.html">
+                            
+                            <a href="../git_on_the_server/public_access.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Public Access
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_on_the_server/gitweb.html">
+                            
+                            <a href="../git_on_the_server/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_on_the_server/gitosis.html">
+                            
+                            <a href="../git_on_the_server/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_on_the_server/gitolite.html">
+                            
+                            <a href="../git_on_the_server/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_on_the_server/git_daemon.html">
+                            
+                            <a href="../git_on_the_server/git_daemon.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git Daemon
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_on_the_server/hosted_git.html">
+                            
+                            <a href="../git_on_the_server/hosted_git.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Hosted Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_on_the_server/summary.html">
+                            
+                            <a href="../git_on_the_server/summary.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="distributed_git/README.html">
+                
+                <a href="../distributed_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Distributed Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="distributed_git/distributed_workflows.html">
+                            
+                            <a href="../distributed_git/distributed_workflows.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Distributed Workflows
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="distributed_git/contributing_to_a_project.html">
+                            
+                            <a href="../distributed_git/contributing_to_a_project.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Contributing to a Project
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="distributed_git/maintaining_a_project.html">
+                            
+                            <a href="../distributed_git/maintaining_a_project.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Maintaining a Project
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="distributed_git/summary.html">
+                            
+                            <a href="../distributed_git/summary.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_tools/README.html">
+                
+                <a href="../git_tools/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git Tools
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_tools/revision_selection.html">
+                            
+                            <a href="../git_tools/revision_selection.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Revision Selection
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_tools/interactive_staging.html">
+                            
+                            <a href="../git_tools/interactive_staging.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Interactive Staging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_tools/stashing.html">
+                            
+                            <a href="../git_tools/stashing.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Stashing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_tools/rewriting_history.html">
+                            
+                            <a href="../git_tools/rewriting_history.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Rewriting History
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_tools/debugging_with_git.html">
+                            
+                            <a href="../git_tools/debugging_with_git.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Debugging with Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_tools/submodules.html">
+                            
+                            <a href="../git_tools/submodules.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Submodules
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_tools/subtree_merging.html">
+                            
+                            <a href="../git_tools/subtree_merging.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Subtree Merging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_tools/summary.html">
+                            
+                            <a href="../git_tools/summary.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="customizing_git/README.html">
+                
+                <a href="../customizing_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Customizing Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="customizing_git/git_configuration.html">
+                            
+                            <a href="../customizing_git/git_configuration.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Git Configuration
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="customizing_git/git_attributes.html">
+                            
+                            <a href="../customizing_git/git_attributes.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git Attributes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="customizing_git/git_hooks.html">
+                            
+                            <a href="../customizing_git/git_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git Hooks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="customizing_git/an_example_git_enforced_policy.html">
+                            
+                            <a href="../customizing_git/an_example_git_enforced_policy.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> An Example Git-Enforced Policy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="customizing_git/summary.html">
+                            
+                            <a href="../customizing_git/summary.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_and_other_systems/README.html">
+                
+                <a href="../git_and_other_systems/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git and Other Systems
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_and_other_systems/git_and_subversion.html">
+                            
+                            <a href="../git_and_other_systems/git_and_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git and Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_and_other_systems/migrating_to_git.html">
+                            
+                            <a href="../git_and_other_systems/migrating_to_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Migrating to Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_and_other_systems/summary.html">
+                            
+                            <a href="../git_and_other_systems/summary.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git_internals/README.html">
+                
+                <a href="../git_internals/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Git Internals
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git_internals/plumbing_and_porcelain.html">
+                            
+                            <a href="../git_internals/plumbing_and_porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Plumbing and Porcelain
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git_internals/git_objects.html">
+                            
+                            <a href="../git_internals/git_objects.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Git Objects
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git_internals/git_references.html">
+                            
+                            <a href="../git_internals/git_references.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Git References
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git_internals/packfiles.html">
+                            
+                            <a href="../git_internals/packfiles.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Packfiles
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git_internals/the_refspec.html">
+                            
+                            <a href="../git_internals/the_refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> The Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git_internals/transfer_protocols.html">
+                            
+                            <a href="../git_internals/transfer_protocols.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Transfer Protocols
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git_internals/maintenance_and_data_recovery.html">
+                            
+                            <a href="../git_internals/maintenance_and_data_recovery.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Maintenance and Data Recovery
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git_internals/summary.html">
+                            
+                            <a href="../git_internals/summary.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 15.714285714285714%;min-width: 14.285714285714286%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../getting_started/README.html" title="Getting Started" class="chapter done new-chapter" data-progress="1" style="left: 1.4285714285714286%;"></a>
+    
+        <a href="../getting_started/about_version_control.html" title="About Version Control" class="chapter done " data-progress="1.1" style="left: 2.857142857142857%;"></a>
+    
+        <a href="../getting_started/a_short_history_of_git.html" title="A Short History of Git" class="chapter done " data-progress="1.2" style="left: 4.285714285714286%;"></a>
+    
+        <a href="../getting_started/git_basics.html" title="Git Basics" class="chapter done " data-progress="1.3" style="left: 5.714285714285714%;"></a>
+    
+        <a href="../getting_started/installing_git.html" title="Installing Git" class="chapter done " data-progress="1.4" style="left: 7.142857142857143%;"></a>
+    
+        <a href="../getting_started/first_time_git_setup.html" title="First-Time Git Setup" class="chapter done " data-progress="1.5" style="left: 8.571428571428571%;"></a>
+    
+        <a href="../getting_started/getting_help.html" title="Getting Help" class="chapter done " data-progress="1.6" style="left: 10%;"></a>
+    
+        <a href="../getting_started/summary.html" title="Summary" class="chapter done " data-progress="1.7" style="left: 11.428571428571429%;"></a>
+    
+        <a href="../git_basics/README.html" title="Git Basics" class="chapter done new-chapter" data-progress="2" style="left: 12.857142857142858%;"></a>
+    
+        <a href="../git_basics/getting_a_git_repository.html" title="Getting a Git Repository" class="chapter done " data-progress="2.1" style="left: 14.285714285714286%;"></a>
+    
+        <a href="../git_basics/recording_changes_to_the_repository.html" title="Recording Changes to the Repository" class="chapter done " data-progress="2.2" style="left: 15.714285714285714%;"></a>
+    
+        <a href="../git_basics/viewing_the_commit_history.html" title="Viewing the Commit History" class="chapter  " data-progress="2.3" style="left: 17.142857142857142%;"></a>
+    
+        <a href="../git_basics/undoing_things.html" title="Undoing Things" class="chapter  " data-progress="2.4" style="left: 18.571428571428573%;"></a>
+    
+        <a href="../git_basics/working_with_remotes.html" title="Working with Remotes" class="chapter  " data-progress="2.5" style="left: 20%;"></a>
+    
+        <a href="../git_basics/tagging.html" title="Tagging" class="chapter  " data-progress="2.6" style="left: 21.428571428571427%;"></a>
+    
+        <a href="../git_basics/tips_and_tricks.html" title="Tips and Tricks" class="chapter  " data-progress="2.7" style="left: 22.857142857142858%;"></a>
+    
+        <a href="../git_basics/summary.html" title="Summary" class="chapter  " data-progress="2.8" style="left: 24.285714285714285%;"></a>
+    
+        <a href="../git_branching/README.html" title="Git Branching" class="chapter  new-chapter" data-progress="3" style="left: 25.714285714285715%;"></a>
+    
+        <a href="../git_branching/what_a_branch_is.html" title="What a Branch Is" class="chapter  " data-progress="3.1" style="left: 27.142857142857142%;"></a>
+    
+        <a href="../git_branching/basic_branching_and_merging.html" title="Basic Branching and Merging" class="chapter  " data-progress="3.2" style="left: 28.571428571428573%;"></a>
+    
+        <a href="../git_branching/branch_management.html" title="Branch Management" class="chapter  " data-progress="3.3" style="left: 30%;"></a>
+    
+        <a href="../git_branching/branching_workflows.html" title="Branching Workflows" class="chapter  " data-progress="3.4" style="left: 31.428571428571427%;"></a>
+    
+        <a href="../git_branching/remote_branches.html" title="Remote Branches" class="chapter  " data-progress="3.5" style="left: 32.857142857142854%;"></a>
+    
+        <a href="../git_branching/rebasing.html" title="Rebasing" class="chapter  " data-progress="3.6" style="left: 34.285714285714285%;"></a>
+    
+        <a href="../git_branching/summary.html" title="Summary" class="chapter  " data-progress="3.7" style="left: 35.714285714285715%;"></a>
+    
+        <a href="../git_on_the_server/README.html" title="Git on the Server" class="chapter  new-chapter" data-progress="4" style="left: 37.142857142857146%;"></a>
+    
+        <a href="../git_on_the_server/the_protocols.html" title="The Protocols" class="chapter  " data-progress="4.1" style="left: 38.57142857142857%;"></a>
+    
+        <a href="../git_on_the_server/hosted_git.html" title="Hosted Git" class="chapter  " data-progress="4.10" style="left: 40%;"></a>
+    
+        <a href="../git_on_the_server/summary.html" title="Summary" class="chapter  " data-progress="4.11" style="left: 41.42857142857143%;"></a>
+    
+        <a href="../git_on_the_server/getting_git_on_a_server.html" title="Getting Git on a Server" class="chapter  " data-progress="4.2" style="left: 42.857142857142854%;"></a>
+    
+        <a href="../git_on_the_server/generating_your_ssh_public_key.html" title="Generating Your SSH Public Key" class="chapter  " data-progress="4.3" style="left: 44.285714285714285%;"></a>
+    
+        <a href="../git_on_the_server/setting_up_the_server.html" title="Setting Up the Server" class="chapter  " data-progress="4.4" style="left: 45.714285714285715%;"></a>
+    
+        <a href="../git_on_the_server/public_access.html" title="Public Access" class="chapter  " data-progress="4.5" style="left: 47.142857142857146%;"></a>
+    
+        <a href="../git_on_the_server/gitweb.html" title="GitWeb" class="chapter  " data-progress="4.6" style="left: 48.57142857142857%;"></a>
+    
+        <a href="../git_on_the_server/gitosis.html" title="Gitosis" class="chapter  " data-progress="4.7" style="left: 50%;"></a>
+    
+        <a href="../git_on_the_server/gitolite.html" title="Gitolite" class="chapter  " data-progress="4.8" style="left: 51.42857142857143%;"></a>
+    
+        <a href="../git_on_the_server/git_daemon.html" title="Git Daemon" class="chapter  " data-progress="4.9" style="left: 52.857142857142854%;"></a>
+    
+        <a href="../distributed_git/README.html" title="Distributed Git" class="chapter  new-chapter" data-progress="5" style="left: 54.285714285714285%;"></a>
+    
+        <a href="../distributed_git/distributed_workflows.html" title="Distributed Workflows" class="chapter  " data-progress="5.1" style="left: 55.714285714285715%;"></a>
+    
+        <a href="../distributed_git/contributing_to_a_project.html" title="Contributing to a Project" class="chapter  " data-progress="5.2" style="left: 57.142857142857146%;"></a>
+    
+        <a href="../distributed_git/maintaining_a_project.html" title="Maintaining a Project" class="chapter  " data-progress="5.3" style="left: 58.57142857142857%;"></a>
+    
+        <a href="../distributed_git/summary.html" title="Summary" class="chapter  " data-progress="5.4" style="left: 60%;"></a>
+    
+        <a href="../git_tools/README.html" title="Git Tools" class="chapter  new-chapter" data-progress="6" style="left: 61.42857142857143%;"></a>
+    
+        <a href="../git_tools/revision_selection.html" title="Revision Selection" class="chapter  " data-progress="6.1" style="left: 62.857142857142854%;"></a>
+    
+        <a href="../git_tools/interactive_staging.html" title="Interactive Staging" class="chapter  " data-progress="6.2" style="left: 64.28571428571429%;"></a>
+    
+        <a href="../git_tools/stashing.html" title="Stashing" class="chapter  " data-progress="6.3" style="left: 65.71428571428571%;"></a>
+    
+        <a href="../git_tools/rewriting_history.html" title="Rewriting History" class="chapter  " data-progress="6.4" style="left: 67.14285714285714%;"></a>
+    
+        <a href="../git_tools/debugging_with_git.html" title="Debugging with Git" class="chapter  " data-progress="6.5" style="left: 68.57142857142857%;"></a>
+    
+        <a href="../git_tools/submodules.html" title="Submodules" class="chapter  " data-progress="6.6" style="left: 70%;"></a>
+    
+        <a href="../git_tools/subtree_merging.html" title="Subtree Merging" class="chapter  " data-progress="6.7" style="left: 71.42857142857143%;"></a>
+    
+        <a href="../git_tools/summary.html" title="Summary" class="chapter  " data-progress="6.8" style="left: 72.85714285714286%;"></a>
+    
+        <a href="../customizing_git/README.html" title="Customizing Git" class="chapter  new-chapter" data-progress="7" style="left: 74.28571428571429%;"></a>
+    
+        <a href="../customizing_git/git_configuration.html" title="Git Configuration" class="chapter  " data-progress="7.1" style="left: 75.71428571428571%;"></a>
+    
+        <a href="../customizing_git/git_attributes.html" title="Git Attributes" class="chapter  " data-progress="7.2" style="left: 77.14285714285714%;"></a>
+    
+        <a href="../customizing_git/git_hooks.html" title="Git Hooks" class="chapter  " data-progress="7.3" style="left: 78.57142857142857%;"></a>
+    
+        <a href="../customizing_git/an_example_git_enforced_policy.html" title="An Example Git-Enforced Policy" class="chapter  " data-progress="7.4" style="left: 80%;"></a>
+    
+        <a href="../customizing_git/summary.html" title="Summary" class="chapter  " data-progress="7.5" style="left: 81.42857142857143%;"></a>
+    
+        <a href="../git_and_other_systems/README.html" title="Git and Other Systems" class="chapter  new-chapter" data-progress="8" style="left: 82.85714285714286%;"></a>
+    
+        <a href="../git_and_other_systems/git_and_subversion.html" title="Git and Subversion" class="chapter  " data-progress="8.1" style="left: 84.28571428571429%;"></a>
+    
+        <a href="../git_and_other_systems/migrating_to_git.html" title="Migrating to Git" class="chapter  " data-progress="8.2" style="left: 85.71428571428571%;"></a>
+    
+        <a href="../git_and_other_systems/summary.html" title="Summary" class="chapter  " data-progress="8.3" style="left: 87.14285714285714%;"></a>
+    
+        <a href="../git_internals/README.html" title="Git Internals" class="chapter  new-chapter" data-progress="9" style="left: 88.57142857142857%;"></a>
+    
+        <a href="../git_internals/plumbing_and_porcelain.html" title="Plumbing and Porcelain" class="chapter  " data-progress="9.1" style="left: 90%;"></a>
+    
+        <a href="../git_internals/git_objects.html" title="Git Objects" class="chapter  " data-progress="9.2" style="left: 91.42857142857143%;"></a>
+    
+        <a href="../git_internals/git_references.html" title="Git References" class="chapter  " data-progress="9.3" style="left: 92.85714285714286%;"></a>
+    
+        <a href="../git_internals/packfiles.html" title="Packfiles" class="chapter  " data-progress="9.4" style="left: 94.28571428571429%;"></a>
+    
+        <a href="../git_internals/the_refspec.html" title="The Refspec" class="chapter  " data-progress="9.5" style="left: 95.71428571428571%;"></a>
+    
+        <a href="../git_internals/transfer_protocols.html" title="Transfer Protocols" class="chapter  " data-progress="9.6" style="left: 97.14285714285714%;"></a>
+    
+        <a href="../git_internals/maintenance_and_data_recovery.html" title="Maintenance and Data Recovery" class="chapter  " data-progress="9.7" style="left: 98.57142857142857%;"></a>
+    
+        <a href="../git_internals/summary.html" title="Summary" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_1055">
+                    
+                        <h1 id="recording-changes-to-the-repository">Recording Changes to the Repository</h1>
+<p>You have a bona fide Git repository and a checkout or working copy of the files for that project. You need to make some changes and commit snapshots of those changes into your repository each time the project reaches a state you want to record.</p>
+<p>Remember that each file in your working directory can be in one of two states: <em>tracked</em> or <em>untracked</em>. <em>Tracked</em> files are files that were in the last snapshot; they can be <em>unmodified</em>, <em>modified</em>, or <em>staged</em>. <em>Untracked</em> files are everything else — any files in your working directory that were not in your last snapshot and are not in your staging area.  When you first clone a repository, all of your files will be tracked and unmodified because you just checked them out and haven’t edited anything.</p>
+<p>As you edit files, Git sees them as modified, because you’ve changed them since your last commit. You <em>stage</em> these modified files and then commit all your staged changes, and the cycle repeats. This lifecycle is illustrated in Figure 2-1.</p>
+<p><img src="http://git-scm.com/figures/18333fig0201-tn.png" alt=""></p>
+<p>Figure 2-1. The lifecycle of the status of your files.</p>
+<h2 id="checking-the-status-of-your-files">Checking the Status of Your Files</h2>
+<p>The main tool you use to determine which files are in which state is the <code>git status</code> command. If you run this command directly after a clone, you should see something like this:</p>
+<pre><code>$ git status
+<span class="hljs-keyword">On</span> branch master
+<span class="hljs-literal">nothing</span> <span class="hljs-keyword">to</span> commit, working directory clean
+</code></pre><p>This means you have a clean working directory — in other words, no tracked files are modified. Git also doesn’t see any untracked files, or they would be listed here. Finally, the command tells you which branch you’re on. For now, that is always <code>master</code>, which is the default; you won’t worry about it here. The next chapter will go over branches and references in detail.</p>
+<p>Let’s say you add a new file to your project, a simple <code>README</code> file. If the file didn’t exist before, and you run <code>git status</code>, you see your untracked file like so:</p>
+<pre><code>$ vim README
+$ git status
+On branch master
+Untracked <span class="hljs-built_in">files</span>:
+  (use <span class="hljs-string">"git add &lt;file&gt;..."</span> <span class="hljs-built_in">to</span> <span class="hljs-built_in">include</span> <span class="hljs-operator">in</span> what will be committed)
+
+        README
+
+nothing added <span class="hljs-built_in">to</span> commit but untracked <span class="hljs-built_in">files</span> present (use <span class="hljs-string">"git add"</span> <span class="hljs-built_in">to</span> track)
+</code></pre><p>You can see that your new <code>README</code> file is untracked, because it’s under the “Untracked files” heading in your status output. Untracked basically means that Git sees a file you didn’t have in the previous snapshot (commit); Git won’t start including it in your commit snapshots until you explicitly tell it to do so. It does this so you don’t accidentally begin including generated binary files or other files that you did not mean to include. You do want to start including README, so let’s start tracking the file.</p>
+<h2 id="tracking-new-files">Tracking New Files</h2>
+<p>In order to begin tracking a new file, you use the command <code>git add</code>. To begin tracking the <code>README</code> file, you can run this:</p>
+<pre><code><span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>If you run your status command again, you can see that your <code>README</code> file is now tracked and staged:</p>
+<pre><code>$ git status
+<span class="hljs-keyword">On</span> branch master
+Changes <span class="hljs-keyword">to</span> be committed:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git reset HEAD &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> unstage)
+
+        <span class="hljs-keyword">new</span> <span class="hljs-keyword">file</span>:   README
+</code></pre><p>You can tell that it’s staged because it’s under the “Changes to be committed” heading. If you commit at this point, the version of the file at the time you ran <code>git add</code> is what will be in the historical snapshot. You may recall that when you ran <code>git init</code> earlier, you then ran <code>git add (files)</code> — that was to begin tracking files in your directory. The <code>git add</code> command takes a path name for either a file or a directory; if it’s a directory, the command adds all the files in that directory recursively.</p>
+<h2 id="staging-modified-files">Staging Modified Files</h2>
+<p>Let’s change a file that was already tracked. If you change a previously tracked file called <code>benchmarks.rb</code> and then run your <code>status</code> command again, you get something that looks like this:</p>
+<pre><code>$ git status
+<span class="hljs-keyword">On</span> branch master
+Changes <span class="hljs-keyword">to</span> be committed:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git reset HEAD &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> unstage)
+
+        <span class="hljs-keyword">new</span> <span class="hljs-keyword">file</span>:   README
+
+Changes <span class="hljs-keyword">not</span> staged <span class="hljs-keyword">for</span> commit:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git add &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> update what will be committed)
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git checkout -- &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> discard changes <span class="hljs-keyword">in</span> working directory)
+
+        modified:   benchmarks.rb
+</code></pre><p>The <code>benchmarks.rb</code> file appears under a section named “Changes not staged for commit” — which means that a file that is tracked has been modified in the working directory but not yet staged. To stage it, you run the <code>git add</code> command (it’s a multipurpose command — you use it to begin tracking new files, to stage files, and to do other things like marking merge-conflicted files as resolved). Let’s run <code>git add</code> now to stage the <code>benchmarks.rb</code> file, and then run <code>git status</code> again:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-keyword">On</span> branch master
+Changes <span class="hljs-keyword">to</span> be committed:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git reset HEAD &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> unstage)
+
+        <span class="hljs-keyword">new</span> <span class="hljs-keyword">file</span>:   README
+        modified:   benchmarks.rb
+</code></pre><p>Both files are staged and will go into your next commit. At this point, suppose you remember one little change that you want to make in <code>benchmarks.rb</code> before you commit it. You open it again and make that change, and you’re ready to commit. However, let’s run <code>git status</code> one more time:</p>
+<pre><code>$ vim benchmarks.rb
+$ git status
+<span class="hljs-keyword">On</span> branch master
+Changes <span class="hljs-keyword">to</span> be committed:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git reset HEAD &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> unstage)
+
+        <span class="hljs-keyword">new</span> <span class="hljs-keyword">file</span>:   README
+        modified:   benchmarks.rb
+
+Changes <span class="hljs-keyword">not</span> staged <span class="hljs-keyword">for</span> commit:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git add &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> update what will be committed)
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git checkout -- &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> discard changes <span class="hljs-keyword">in</span> working directory)
+
+        modified:   benchmarks.rb
+</code></pre><p>What the heck? Now <code>benchmarks.rb</code> is listed as both staged and unstaged. How is that possible? It turns out that Git stages a file exactly as it is when you run the <code>git add</code> command. If you commit now, the version of <code>benchmarks.rb</code> as it was when you last ran the <code>git add</code> command is how it will go into the commit, not the version of the file as it looks in your working directory when you run <code>git commit</code>. If you modify a file after you run <code>git add</code>, you have to run <code>git add</code> again to stage the latest version of the file:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-keyword">On</span> branch master
+Changes <span class="hljs-keyword">to</span> be committed:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git reset HEAD &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> unstage)
+
+        <span class="hljs-keyword">new</span> <span class="hljs-keyword">file</span>:   README
+        modified:   benchmarks.rb
+</code></pre><h2 id="ignoring-files">Ignoring Files</h2>
+<p>Often, you’ll have a class of files that you don’t want Git to automatically add or even show you as being untracked. These are generally automatically generated files such as log files or files produced by your build system. In such cases, you can create a file listing patterns to match them named <code>.gitignore</code>.  Here is an example <code>.gitignore</code> file:</p>
+<pre><code><span class="hljs-variable">$ </span>cat .gitignore
+*.[oa]
+*~
+</code></pre><p>The first line tells Git to ignore any files ending in <code>.o</code> or <code>.a</code> — <em>object</em> and <em>archive</em> files that may be the product of building your code. The second line tells Git to ignore all files that end with a tilde (<code>~</code>), which is used by many text editors such as Emacs to mark temporary files. You may also include a <code>log</code>, <code>tmp</code>, or <code>pid</code> directory; automatically generated documentation; and so on. Setting up a <code>.gitignore</code> file before you get going is generally a good idea so you don’t accidentally commit files that you really don’t want in your Git repository.</p>
+<p>The rules for the patterns you can put in the <code>.gitignore</code> file are as follows:</p>
+<ul>
+<li>Blank lines or lines starting with <code>#</code> are ignored.</li>
+<li>Standard glob patterns work.</li>
+<li>You can end patterns with a forward slash (<code>/</code>) to specify a directory.</li>
+<li>You can negate a pattern by starting it with an exclamation point (<code>!</code>).</li>
+</ul>
+<p>Glob patterns are like simplified regular expressions that shells use. An asterisk (<code>*</code>) matches zero or more characters; <code>[abc]</code> matches any character inside the brackets (in this case <code>a</code>, <code>b</code>, or <code>c</code>); a question mark (<code>?</code>) matches a single character; and brackets enclosing characters separated by a hyphen(<code>[0-9]</code>) matches any character in the range (in this case 0 through 9) .</p>
+<p>Here is another example <code>.gitignore</code> file:</p>
+<pre><code><span class="hljs-preprocessor"># a comment - this is ignored</span>
+<span class="hljs-preprocessor"># no .a files</span>
+*.a
+<span class="hljs-preprocessor"># but do track lib.a, even though you're ignoring .a files above</span>
+!lib.a
+<span class="hljs-preprocessor"># only ignore the root TODO file, not subdir/TODO</span>
+/TODO
+<span class="hljs-preprocessor"># ignore all files in the build/ directory</span>
+build/
+<span class="hljs-preprocessor"># ignore doc/notes.txt, but not doc/server/arch.txt</span>
+doc<span class="hljs-comment">/*.txt
+# ignore all .txt files in the doc/ directory
+doc/**/</span>*.txt
+</code></pre><p>A <code>**/</code> pattern is available in Git since version 1.8.2.</p>
+<h2 id="viewing-your-staged-and-unstaged-changes">Viewing Your Staged and Unstaged Changes</h2>
+<p>If the <code>git status</code> command is too vague for you — you want to know exactly what you changed, not just which files were changed — you can use the <code>git diff</code> command. We’ll cover <code>git diff</code> in more detail later; but you’ll probably use it most often to answer these two questions: What have you changed but not yet staged? And what have you staged that you are about to commit? Although <code>git status</code> answers those questions very generally, <code>git diff</code> shows you the exact lines added and removed — the patch, as it were.</p>
+<p>Let’s say you edit and stage the <code>README</code> file again and then edit the <code>benchmarks.rb</code> file without staging it. If you run your <code>status</code> command, you once again see something like this:</p>
+<pre><code>$ git status
+<span class="hljs-keyword">On</span> branch master
+Changes <span class="hljs-keyword">to</span> be committed:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git reset HEAD &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> unstage)
+
+        <span class="hljs-keyword">new</span> <span class="hljs-keyword">file</span>:   README
+
+Changes <span class="hljs-keyword">not</span> staged <span class="hljs-keyword">for</span> commit:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git add &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> update what will be committed)
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git checkout -- &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> discard changes <span class="hljs-keyword">in</span> working directory)
+
+        modified:   benchmarks.rb
+</code></pre><p>To see what you’ve changed but not yet staged, type <code>git diff</code> with no other arguments:</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..da65585 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+           @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+         <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+         run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+           <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+           <span class="hljs-built_in">log</span>.size
+</code></pre><p>That command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.</p>
+<p>If you want to see what you’ve staged that will go into your next commit, you can use <code>git diff --cached</code>. (In Git versions 1.6.1 and later, you can also use <code>git diff --staged</code>, which may be easier to remember.) This command compares your staged changes to your last commit:</p>
+<pre><code>$ git diff --cached
+diff --git a/README b/README
+new file mode 100644
+index 0000000..03902a1
+<span class="hljs-header">--- /dev/null</span>
+<span class="hljs-header">+++ b/README2</span>
+<span class="hljs-chunk">@@ -0,0 +1,5 @@</span>
+<span class="hljs-addition">+grit</span>
+<span class="hljs-addition">+ by Tom Preston-Werner, Chris Wanstrath</span>
+<span class="hljs-addition">+ http://github.com/mojombo/grit</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+Grit is a Ruby library for extracting information from a Git repository</span>
+</code></pre><p>It’s important to note that <code>git diff</code> by itself doesn’t show all changes made since your last commit — only changes that are still unstaged. This can be confusing, because if you’ve staged all of your changes, <code>git diff</code> will give you no output.</p>
+<p>For another example, if you stage the <code>benchmarks.rb</code> file and then edit it, you can use <code>git diff</code> to see the changes in the file that are staged and the changes that are unstaged:</p>
+<pre><code>$ git add benchmarks.rb
+$ echo '# test line' &gt;&gt; benchmarks.rb
+$ git status
+<span class="hljs-keyword">On</span> branch master
+Changes <span class="hljs-keyword">to</span> be committed:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git reset HEAD &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> unstage)
+
+        modified:   benchmarks.rb
+
+Changes <span class="hljs-keyword">not</span> staged <span class="hljs-keyword">for</span> commit:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git add &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> update what will be committed)
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git checkout -- &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> discard changes <span class="hljs-keyword">in</span> working directory)
+
+        modified:   benchmarks.rb
+</code></pre><p>Now you can use <code>git diff</code> to see what is still unstaged</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index e445e28.<span class="hljs-number">.86</span>b2f7c <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">127</span>,<span class="hljs-number">3</span> +<span class="hljs-number">127</span>,<span class="hljs-number">4</span> @@ <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+ main()
+
+ <span class="hljs-comment">##pp Grit::GitRuby.cache_client.stats</span>
++<span class="hljs-comment"># test line</span>
+</code></pre><p>and <code>git diff --cached</code> to see what you’ve staged so far:</p>
+<pre><code>$ git diff <span class="hljs-comment">--cached</span>
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..e445e28 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+          @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+        run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+          <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+          <span class="hljs-built_in">log</span>.size
+</code></pre><h2 id="committing-your-changes">Committing Your Changes</h2>
+<p>Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged — any files you have created or modified that you haven’t run <code>git add</code> on since you edited them — won’t go into this commit. They will stay as modified files on your disk.
+In this case, the last time you ran <code>git status</code>, you saw that everything was staged, so you’re ready to commit your changes. The simplest way to commit is to type <code>git commit</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git commit
+</code></pre><p>Doing so launches your editor of choice. (This is set by your shell’s <code>$EDITOR</code> environment variable — usually vim or emacs, although you can configure it with whatever you want using the <code>git config --global core.editor</code> command as you saw in <em>Chapter 1</em>).</p>
+<p>The editor displays the following text (this example is a Vim screen):</p>
+<pre><code><span class="hljs-preprocessor"># Please enter the commit message for your changes. Lines starting</span>
+<span class="hljs-preprocessor"># with '#' will be ignored, and an empty message aborts the commit.</span>
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#       new file:   README</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+~
+~
+~
+<span class="hljs-string">".git/COMMIT_EDITMSG"</span> <span class="hljs-number">10</span>L, <span class="hljs-number">283</span>C
+</code></pre><p>You can see that the default commit message contains the latest output of the <code>git status</code> command commented out and one empty line on top. You can remove these comments and type your commit message, or you can leave them there to help you remember what you’re committing. (For an even more explicit reminder of what you’ve modified, you can pass the <code>-v</code> option to <code>git commit</code>. Doing so also puts the diff of your change in the editor so you can see exactly what you did.) When you exit the editor, Git creates your commit with that commit message (with the comments and diff stripped out).</p>
+<p>Alternatively, you can type your commit message inline with the <code>commit</code> command by specifying it after a <code>-m</code> flag, like this:</p>
+<pre><code>$ git <span class="hljs-operator"><span class="hljs-keyword">commit</span> -m <span class="hljs-string">"Story 182: Fix benchmarks for speed"</span>
+[master <span class="hljs-number">463</span>dc4f] Fix benchmarks <span class="hljs-keyword">for</span> speed
+ <span class="hljs-number">2</span> files changed, <span class="hljs-number">3</span> insertions(+)
+ <span class="hljs-keyword">create</span> mode <span class="hljs-number">100644</span> README</span>
+</code></pre><p>Now you’ve created your first commit! You can see that the commit has given you some output about itself: which branch you committed to (<code>master</code>), what SHA-1 checksum the commit has (<code>463dc4f</code>), how many files were changed, and statistics about lines added and removed in the commit.</p>
+<p>Remember that the commit records the snapshot you set up in your staging area. Anything you didn’t stage is still sitting there modified; you can do another commit to add it to your history. Every time you perform a commit, you’re recording a snapshot of your project that you can revert to or compare to later.</p>
+<h2 id="skipping-the-staging-area">Skipping the Staging Area</h2>
+<p>Although it can be amazingly useful for crafting commits exactly how you want them, the staging area is sometimes a bit more complex than you need in your workflow. If you want to skip the staging area, Git provides a simple shortcut. Providing the <code>-a</code> option to the <code>git commit</code> command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the <code>git add</code> part:</p>
+<pre><code>$ git status
+<span class="hljs-keyword">On</span> branch master
+Changes <span class="hljs-keyword">not</span> staged <span class="hljs-keyword">for</span> commit:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git add &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> update what will be committed)
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git checkout -- &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> discard changes <span class="hljs-keyword">in</span> working directory)
+
+        modified:   benchmarks.rb
+
+no changes added <span class="hljs-keyword">to</span> commit (<span class="hljs-keyword">use</span> <span class="hljs-string">"git add"</span> <span class="hljs-keyword">and</span>/<span class="hljs-keyword">or</span> <span class="hljs-string">"git commit -a"</span>)
+$ git commit -a -m <span class="hljs-attribute">'added</span> <span class="hljs-keyword">new</span> benchmarks'
+[master <span class="hljs-number">83e38</span>c7] added <span class="hljs-keyword">new</span> benchmarks
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">5</span> insertions(+)
+</code></pre><p>Notice how you don’t have to run <code>git add</code> on the <code>benchmarks.rb</code> file in this case before you commit.</p>
+<h2 id="removing-files">Removing Files</h2>
+<p>To remove a file from Git, you have to remove it from your tracked files (more accurately, remove it from your staging area) and then commit. The <code>git rm</code> command does that and also removes the file from your working directory so you don’t see it as an untracked file next time around.</p>
+<p>If you simply remove the file from your working directory, it shows up under the “Changes not staged for commit” (that is, <em>unstaged</em>) area of your <code>git status</code> output:</p>
+<pre><code>$ rm grit.gemspec
+$ git status
+<span class="hljs-keyword">On</span> branch master
+Changes <span class="hljs-keyword">not</span> staged <span class="hljs-keyword">for</span> commit:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git add/rm &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> update what will be committed)
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git checkout -- &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> discard changes <span class="hljs-keyword">in</span> working directory)
+
+        deleted:    grit.gemspec
+
+no changes added <span class="hljs-keyword">to</span> commit (<span class="hljs-keyword">use</span> <span class="hljs-string">"git add"</span> <span class="hljs-keyword">and</span>/<span class="hljs-keyword">or</span> <span class="hljs-string">"git commit -a"</span>)
+</code></pre><p>Then, if you run <code>git rm</code>, it stages the file’s removal:</p>
+<pre><code>$ git rm grit.gemspec
+rm <span class="hljs-attribute">'grit</span>.gemspec'
+$ git status
+<span class="hljs-keyword">On</span> branch master
+Changes <span class="hljs-keyword">to</span> be committed:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git reset HEAD &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> unstage)
+
+        deleted:    grit.gemspec
+</code></pre><p>The next time you commit, the file will be gone and no longer tracked. If you modified the file and added it to the index already, you must force the removal with the <code>-f</code> option. This is a safety feature to prevent accidental removal of data that hasn’t yet been recorded in a snapshot and that can’t be recovered from Git.</p>
+<p>Another useful thing you may want to do is to keep the file in your working tree but remove it from your staging area. In other words, you may want to keep the file on your hard drive but not have Git track it anymore. This is particularly useful if you forgot to add something to your <code>.gitignore</code> file and accidentally staged it, like a large log file or a bunch of <code>.a</code> compiled files. To do this, use the <code>--cached</code> option:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">rm</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">cached</span> <span class="hljs-comment">readme</span><span class="hljs-string">.</span><span class="hljs-comment">txt</span>
+</code></pre><p>You can pass files, directories, and file-glob patterns to the <code>git rm</code> command. That means you can do things such as</p>
+<pre><code>$ git rm <span class="hljs-keyword">log</span>/\*.<span class="hljs-keyword">log</span>
+</code></pre><p>Note the backslash (<code>\</code>) in front of the <code>*</code>. This is necessary because Git does its own filename expansion in addition to your shell’s filename expansion. On Windows with the system console, the backslash must be omitted. This command removes all files that have the <code>.log</code> extension in the <code>log/</code> directory. Or, you can do something like this:</p>
+<pre><code><span class="hljs-variable">$ </span>git rm \*~
+</code></pre><p>This command removes all files that end with <code>~</code>.</p>
+<h2 id="moving-files">Moving Files</h2>
+<p>Unlike many other VCS systems, Git doesn’t explicitly track file movement. If you rename a file in Git, no metadata is stored in Git that tells it you renamed the file. However, Git is pretty smart about figuring that out after the fact — we’ll deal with detecting file movement a bit later.</p>
+<p>Thus it’s a bit confusing that Git has a <code>mv</code> command. If you want to rename a file in Git, you can run something like</p>
+<pre><code><span class="hljs-variable">$ </span>git mv file_from file_to
+</code></pre><p>and it works fine. In fact, if you run something like this and look at the status, you’ll see that Git considers it a renamed file:</p>
+<pre><code>$ git mv README.txt README
+$ git status
+<span class="hljs-keyword">On</span> branch master
+Changes <span class="hljs-keyword">to</span> be committed:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git reset HEAD &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> unstage)
+
+        renamed:    README.txt -&gt; README
+</code></pre><p>However, this is equivalent to running something like this:</p>
+<pre><code><span class="hljs-variable">$ </span>mv <span class="hljs-constant">README</span>.txt <span class="hljs-constant">README</span>
+<span class="hljs-variable">$ </span>git rm <span class="hljs-constant">README</span>.txt
+<span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Git figures out that it’s a rename implicitly, so it doesn’t matter if you rename a file that way or with the <code>mv</code> command. The only real difference is that <code>mv</code> is one command instead of three — it’s a convenience function. More important, you can use any tool you like to rename a file, and address the add/rm later, before you commit.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_basics/getting_a_git_repository.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_basics/viewing_the_commit_history.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

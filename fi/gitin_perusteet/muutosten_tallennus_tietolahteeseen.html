@@ -1,0 +1,598 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Muutosten tallennus tietolähteeseen | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../gitin_perusteet/pysyvien_muutosten_historian_tarkasteleminen.html" />
+        
+        
+        <link rel="prev" href="../gitin_perusteet/git_tietolahteen_hankinta.html" />
+        
+
+        <meta property="og:title" content="Muutosten tallennus tietolähteeseen | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.2" data-basepath=".." data-revision="1396895597438">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/gitin_perusteet/muutosten_tallennus_tietolahteeseen.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="alkusanat/README.html">
+                
+                <a href="../alkusanat/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Alkusanat
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="alkusanat/versionhallinnasta.html">
+                            
+                            <a href="../alkusanat/versionhallinnasta.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Versionhallinnasta
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="alkusanat/gitin_lyhyt_historia.html">
+                            
+                            <a href="../alkusanat/gitin_lyhyt_historia.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Gitin lyhyt historia
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="alkusanat/gitin_perusteet.html">
+                            
+                            <a href="../alkusanat/gitin_perusteet.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Gitin perusteet
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="alkusanat/gitin_asennus.html">
+                            
+                            <a href="../alkusanat/gitin_asennus.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Gitin asennus
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="alkusanat/ensikerran_git_asetukset.html">
+                            
+                            <a href="../alkusanat/ensikerran_git_asetukset.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Ensikerran Git-asetukset
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="alkusanat/avunsaanti.html">
+                            
+                            <a href="../alkusanat/avunsaanti.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Avunsaanti
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="alkusanat/yhteenveto.html">
+                            
+                            <a href="../alkusanat/yhteenveto.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Yhteenveto
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="gitin_perusteet/README.html">
+                
+                <a href="../gitin_perusteet/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Gitin perusteet
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="gitin_perusteet/git_tietolahteen_hankinta.html">
+                            
+                            <a href="../gitin_perusteet/git_tietolahteen_hankinta.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Git-tietolähteen hankinta
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="gitin_perusteet/muutosten_tallennus_tietolahteeseen.html">
+                            
+                            <a href="../gitin_perusteet/muutosten_tallennus_tietolahteeseen.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Muutosten tallennus tietolähteeseen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="gitin_perusteet/pysyvien_muutosten_historian_tarkasteleminen.html">
+                            
+                            <a href="../gitin_perusteet/pysyvien_muutosten_historian_tarkasteleminen.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Pysyvien muutosten historian tarkasteleminen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="gitin_perusteet/asioiden_kumoaminen.html">
+                            
+                            <a href="../gitin_perusteet/asioiden_kumoaminen.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Asioiden kumoaminen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="gitin_perusteet/working_with_remotes.html">
+                            
+                            <a href="../gitin_perusteet/working_with_remotes.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Working with Remotes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="gitin_perusteet/tagging.html">
+                            
+                            <a href="../gitin_perusteet/tagging.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="gitin_perusteet/tips_and_tricks.html">
+                            
+                            <a href="../gitin_perusteet/tips_and_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips and Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="gitin_perusteet/summary.html">
+                            
+                            <a href="../gitin_perusteet/summary.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 64.70588235294117%;min-width: 58.8235294117647%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../alkusanat/README.html" title="Alkusanat" class="chapter done new-chapter" data-progress="1" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../alkusanat/versionhallinnasta.html" title="Versionhallinnasta" class="chapter done " data-progress="1.1" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../alkusanat/gitin_lyhyt_historia.html" title="Gitin lyhyt historia" class="chapter done " data-progress="1.2" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../alkusanat/gitin_perusteet.html" title="Gitin perusteet" class="chapter done " data-progress="1.3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../alkusanat/gitin_asennus.html" title="Gitin asennus" class="chapter done " data-progress="1.4" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../alkusanat/ensikerran_git_asetukset.html" title="Ensikerran Git-asetukset" class="chapter done " data-progress="1.5" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../alkusanat/avunsaanti.html" title="Avunsaanti" class="chapter done " data-progress="1.6" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../alkusanat/yhteenveto.html" title="Yhteenveto" class="chapter done " data-progress="1.7" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../gitin_perusteet/README.html" title="Gitin perusteet" class="chapter done new-chapter" data-progress="2" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../gitin_perusteet/git_tietolahteen_hankinta.html" title="Git-tietolähteen hankinta" class="chapter done " data-progress="2.1" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../gitin_perusteet/muutosten_tallennus_tietolahteeseen.html" title="Muutosten tallennus tietolähteeseen" class="chapter done " data-progress="2.2" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../gitin_perusteet/pysyvien_muutosten_historian_tarkasteleminen.html" title="Pysyvien muutosten historian tarkasteleminen" class="chapter  " data-progress="2.3" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../gitin_perusteet/asioiden_kumoaminen.html" title="Asioiden kumoaminen" class="chapter  " data-progress="2.4" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../gitin_perusteet/working_with_remotes.html" title="Working with Remotes" class="chapter  " data-progress="2.5" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../gitin_perusteet/tagging.html" title="Tagging" class="chapter  " data-progress="2.6" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../gitin_perusteet/tips_and_tricks.html" title="Tips and Tricks" class="chapter  " data-progress="2.7" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../gitin_perusteet/summary.html" title="Summary" class="chapter  " data-progress="2.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_118">
+                    
+                        <h1 id="muutosten-tallennus-tietol-hteeseen">Muutosten tallennus tietolähteeseen</h1>
+<p>Sinulla on oikea Git-tietolähde ja tiedonhaku (checkout) tai työkopio projektin tiedostoista. Sinun täytyy tehdä joitain muutoksia ja pysyviä tilannekuvia näistä muutoksista sinun tietolähteeseesi joka kerta, kun projekti saavuttaa tilan, jonka haluat tallentaa.</p>
+<p>Muista, että jokainen tiedosto työhakemistossasi voi olla yhdessä kahdesta tilasta: <em>jäljitetty</em> tai <em>jäljittämätön</em>. <em>Jäljitetyt</em> tiedostot ovat tiedostoja, jotka olivat viimeisimmässä tilannekuvassa; ne voivat olla <em>muokkaamattomia</em>, <em>muokattuja</em> tai <em>lavastettuja</em>. <em>Jäljittämättömät</em> tiedostot ovat kaikkea muuta - mitkä tahansa tiedostoja työhakemistossasi, jotka eivät olleet viimeisimmässä tilannekuvassa ja jotka eivät ole lavastusalueella. Kun ensimmäisen kerran kloonaat tietolähteen, kaikki tiedostoistasi tulevat olemaan jäljitettyjä ja muokkaamattomia, koska sinä juuri hait ne etkä ole muokannut vielä mitään.</p>
+<p>Editoidessasi tiedostoja Git näkee ne muokattuina, koska olet muuttanut niitä viimeisimmän pysyvän muutoksen jälkeen. <em>Lavastat</em> nämä muutetut tiedostot, jonka jälkeen muutat kaikki lavastetut muutokset pysyvästi, ja sykli toistuu. Tämä elämänsykli on kuvattu Kuvassa 2-1.</p>
+<p><img src="http://git-scm.com/figures/18333fig0201-tn.png" alt=""></p>
+<p>Kuva 2-1. Tiedostojesi tilan elämänsykli.</p>
+<h2 id="tiedostojesi-tilan-tarkistaminen">Tiedostojesi tilan tarkistaminen</h2>
+<p>Päätyökalu tiedostojesi eri tilojen selvittämiseen on <code>git status</code> -komento. Jos suoritat tämän komennon suoraan kloonauksen jälkeen, sinun tulisi nähdä jotain vastaavaa:</p>
+<pre><code>$ git status
+<span class="hljs-comment"># On branch master</span>
+nothing <span class="hljs-built_in">to</span> commit (working <span class="hljs-built_in">directory</span> clean)
+</code></pre><p>Tämä tarkoittaa, että sinulla on puhdas työhakemisto - toisin sanoen, jäljitettyjä tiedostoja ei ole muutettu. Git ei myöskään näe yhtään jäljittämätöntä tiedostoa, muuten ne olisi listattu näkymään. Lopuksi komento kertoo sinulle missä haarassa olet. Tällä hetkellä se on aina <code>master</code>-haara, joka on oletusarvo; sinun ei tarvitse huolehtia siitä nyt. Seuraava luku käy läpi haarautumiset ja viittaukset yksityiskohtaisesti.</p>
+<p>Sanotaan vaikka, että lisäät uuden tiedoston projektiin, vaikka yksinkertaisen <code>README</code>-tiedoston. Jos tiedosto ei ollut olemassa ennen, ja ajat <code>git status</code> -komennon, näet jäljittämättömän tiedoston tällä tavoin:</p>
+<pre><code>$ vim README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Untracked files:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    README</span>
+nothing added to commit but untracked files present (use <span class="hljs-string">"git add"</span> to track)
+</code></pre><p>Voit nähdä, että juuri luomasi <code>README</code>-tiedosto on jäljittämätön, koska se on otsikon ”Untracked files” alla tilatulosteessa. Jäljittämätön tarkoittaa periaatteessa sitä, että Git näkee tiedoston, jota ei ollut edellisessä tilannekuvassa (pysyvässä muutoksessa); Git ei aloita sisällyttämään sitä sinun pysyviin muutostilannekuviisi, ennen kuin sinä varta vasten käsket sen tehdä niin. Se tekee tämän, että et vahingossa alkaisi lisätä generoituja binaaritiedostoja tai muita tiedostoja, joita et tarkoittanut lisätä. Haluat lisätä READMEn, joten aloitetaan jäljittämään tiedostoa.</p>
+<h2 id="uusien-tiedostojen-j-ljitys">Uusien tiedostojen jäljitys</h2>
+<p>Jotta voisit jäljittää uusia tiedostoja, sinun täytyy käyttää <code>git add</code> -komentoa. Aloittaaksesi <code>README</code>-tiedoston jäljittämisen, voit ajaa tämän:</p>
+<pre><code><span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Jos ajat status-komennon uudestaan, näet että <code>README</code>-tiedostosi on nyt jäljitetty ja lavastettu:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Voit nähdä, että se on lavastettu, koska se on otsikon ”Changes to be committed” alla. Jos teet pysyvän muutoksen tässä kohtaa, versio tiedostosta sillä hetkellä kun ajoit <code>git add</code> -komennon on se, joka tulee olemaan historian tilannekuvassa. Voit palauttaa mieleen hetken, jolloin ajoit <code>git init</code> -komennon aikaisemmin, ajoit sen jälkeen <code>git add (tiedostot)</code> -komennon - tämä komento aloitti tiedostojen jäljittämisen hakemistossa. <code>Git add</code> -komento ottaa polun nimen joko tiedostolle tai hakemistolle; jos se on hakemisto, komento lisää kaikki tiedostot hakemiston alta rekursiivisesti.</p>
+<h2 id="muutettujen-tiedostojen-lavastus">Muutettujen tiedostojen lavastus</h2>
+<p>Muutetaanpa tiedostoa, joka on jo jäljitetty. Jos muutat aikaisemmin jäljitettyä <code>benchmarks.rb</code>-tiedostoa ja sen jälkeen ajat <code>status</code>-komennon uudestaan, saat suunnilleen tämän näköisen tulosteen:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p><code>Benchmarks.rb</code>-tiedosto näkyy kohdan ”Changes not staged for commit” alla - mikä tarkoittaa, että tiedostoa, jota jäljitetään, on muokattu työskentelyhakemistossa, mutta sitä ei vielä ole lavastettu. Lavastaaksesi sen, ajat <code>git add</code> -komennon (se on monitoimikomento - käytät sitä aloittaaksesi uusien tiedostojen jäljittämisen, lavastaaksesi tiedostoja, ja tehdäksesi muita asioita, kuten merkataksesi liitoskonfliktitiedostot ratkaistuksi). Ajetaanpa nyt <code>git add</code> -komento lavastaaksemme <code>benchmarks.rb</code>-tiedoston, ja ajetaan sitten <code>git status</code> -komento uudestaan:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Kummatkin tiedostot ovat lavastettuja ja tulevat menemään seuraavaan pysyvään muutokseen. Oletetaan, että tässä kohdassa muistat pienen muutoksen, jonka haluat tehdä <code>benchmarks.rb</code>-tiedostoon, ennen kuin teet pysyvää muutosta. Avaat tiedoston uudestaan ja muutat sitä, jonka jälkeen olet valmis tekemään pysyvän muutoksen. Ajetaan silti <code>git status</code> -komento vielä kerran:</p>
+<pre><code>$ vim benchmarks.rb 
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Mitä ihmettä? Nyt <code>benchmarks.rb</code> on listattu sekä lavastettuna että lavastamattomana. Miten se on mahdollista? Tapahtuu niin, että Git lavastaa tiedoston juuri sellaisena kuin se on, kun ajat <code>git add</code> -komennon. Jos teet pysyvän muutoksen nyt, <code>benchmark.rb</code>-tiedoston versio sillä hetkellä, kun ajoit <code>git add</code> -komennon, on se, joka menee tähän pysyvään muutokseen, eikä se tiedoston versio, joka on työskentelyhakemistossasi sillä hetkellä, kun ajat <code>git commit</code> -komennon. Jos muutat tiedostoa sen jälkeen, kun olet ajanut <code>git add</code> -komennon, sinun täytyy ajaa <code>git add</code> uudestaan lavastaaksesi uusimman version tiedostosta:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><h2 id="tiedostojen-sivuuttaminen">Tiedostojen sivuuttaminen</h2>
+<p>Usein sinulla on luokka tiedostoja, joita et halua Gitin automaattisesti lisäävän tai edes näyttävän, että ne ovat jäljittämättömiä. Näitä ovat yleensä automaattisesti generoidut tiedostot, kuten lokitiedostot tai tiedostot, jotka sinun rakennejärjestelmä on luonut. Tällaisissa tapauksissa, voit luoda tiedostonlistausmalleja löytääksesi ne, <code>.gitignore</code>-tiedostoon. Tässä on esimerkki <code>.gitignore</code>-tiedostosta:</p>
+<pre><code><span class="hljs-variable">$ </span>cat .gitignore
+*.[oa]
+*~
+</code></pre><p>Ensimmäinen rivi kertoo Gitille, että jokainen tiedosto, joka loppuu <code>.o</code>- tai <code>.a</code>- päätteeseen, sivuutetaan - näitä ovat mm. <em>olio-</em> ja <em>arkistotiedostot</em>, jotka voivat olla ohjelmakoodisi rakennuksen tulos. Toinen rivi kertoo Gitille, että kaikki tiedostot, jotka loppuvat tildeen (<code>~</code>), jotka ovat yleensä monen tekstieditorin, kuten Emacsin tapa merkata väliaikaisia tiedostoja, sivuutetaan. Voit myös sisällyttää <code>log</code>-, <code>tmp</code>-, tai <code>pid</code>-hakemiston; automaattisesti generoidun dokumentaation; ja niin edelleen. Välttääksesi sellaisten tiedostojen joutumisten Git-tietolähteeseen, joita et sinne alunperinkään halua menevän, on <code>.gitignore</code>-tiedoston asettaminen ennen varsinaisen työskentelyn aloittamista yleensä hyvä idea.</p>
+<p>Säännöt malleille, joita voit laittaa <code>.gitignore</code>-tiedostoon ovat seuraavanlaiset:</p>
+<ul>
+<li>Tyhjät rivit ja rivit, jotka alkavat <code>#</code>-merkillä, sivuutetaan.</li>
+<li>Yleiset keräysmallit toimivat.</li>
+<li>Voit päättää malleja kauttaviivalla (<code>/</code>) määrittääksesi hakemiston.</li>
+<li>Voit kieltää mallin aloittamalla sen huutomerkillä (<code>!</code>).</li>
+</ul>
+<p>Keräysmallit ovat kuin yksinkertaistettuja säännöllisiä lausekkeita, joita komentorivit käyttävät. Asteriski (<code>*</code>) löytää nolla tai enemmän merkkiä; <code>[abc]</code> löytää jokaisen merkin, joka on hakasulkujen sisällä (tässä tapauksessa a:n, b:n tai c:n); kysymysmerkki (<code>?</code>) löytää yksittäisen merkin; hakasulut, jotka ovat väliviivalla erotettujen merkkien ympärillä (<code>[0-9]</code>) löytävät jokaisen merkin, joka on merkkien välissä, tai on itse merkki (tässä tapauksessa merkit 0:sta 9:ään).</p>
+<p>Tässä toinen esimerkki .gitignore-tiedostosta:</p>
+<pre><code><span class="hljs-preprocessor"># kommentti – tämä sivuutetaan</span>
+<span class="hljs-preprocessor"># ei .a tiedostoja</span>
+*.a
+<span class="hljs-preprocessor"># mutta jäljitä lib.a, vaikka sivuutatkin .a tiedostot yllä</span>
+!lib.a
+<span class="hljs-preprocessor"># sivuttaa vain juuren TODO-tiedosto, ei subdir/TODO-tiedostoa</span>
+/TODO
+<span class="hljs-preprocessor"># sivuttaa kaikki tiedostot build/-hakemistosta</span>
+build/
+<span class="hljs-preprocessor"># sivuttaa doc/notes.txt, mutta ei doc/server/arch.txt</span>
+doc<span class="hljs-comment">/*.txt
+# sivuuttaa kaikki .txt-tiedostot doc/-hakemistosta
+doc/**/</span>*.txt
+</code></pre><p><code>**/</code>-malli on saatavilla Gitin versiosta 1.8.2 lähtien.</p>
+<h2 id="lavastettujen-ja-lavastamattomien-muutosten-tarkastelu">Lavastettujen ja lavastamattomien muutosten tarkastelu</h2>
+<p>Jos <code>git status</code> -komento on liian epämääräinen sinulle - haluat tietää tarkalleen mitä on muutettu, et ainoastaan sitä, mitkä tiedostot ovat muuttuneet - voit käyttää <code>git diff</code> -komentoa. Me käsittelemme <code>git diff</code> -kommenon yksityiskohtaisesti myöhemmin; mutta sinä tulet mahdollisesti käyttämään sitä useasti, vastataksesi näihin kahteen kysymykseen: Mitä olet muuttanut, mutta et ole vielä lavastanut? Ja mitä sellaista olet lavastanut, josta olet tekemässä pysyvän muutoksen? Vaikkakin <code>git status</code> vastaa näihin kysymyksiin yleisesti, <code>git diff</code> näyttää sinulle tarkalleen ne rivit, jotka on lisätty ja poistettu - vähän niin kuin pätsi.</p>
+<p>Sanotaan vaikka, että muokkaat ja lavastat <code>README</code>-tiedostoa uudestaan, jonka jälkeen muokkaat <code>benchmarks.rb</code>-tiedostoa, ilman että lavastat sitä. Jos ajat <code>status</code>-komennon, näet jälleen kerran jotain tällaista:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Nähdäksesi, mitä olet muuttanut, mutta et vielä lavastanut, kirjoita <code>git diff</code> ilman mitään muita argumentteja:</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..da65585 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+           @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+         <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+         run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+           <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+           <span class="hljs-built_in">log</span>.size
+</code></pre><p>Tämä komento vertailee sitä, mitä sinun työskentelyhakemistossa on verrattuna siihen, mitä sinun lavastusalueellasi on. Tulos kertoo tekemäsi muutokset, joita et ole vielä lavastanut.</p>
+<p>Jos haluat nähdä, mitä sellaista olet lavastanut, joka menee seuraavaan pysyvään muutokseen, voit käyttää <code>git diff --cached</code> -komentoa. (Gitin versiosta 1.6.1 lähtien voit käyttää myös <code>git diff --staged</code> -komentoa, joka on helpompi muistaa.) Tämä komento vertailee lavastettuja muutoksia viimeisimpään pysyvään muutokseen.</p>
+<pre><code>$ git diff --cached
+diff --git a/README b/README
+new file mode 100644
+index 0000000..03902a1
+<span class="hljs-header">--- /dev/null</span>
+<span class="hljs-header">+++ b/README2</span>
+<span class="hljs-chunk">@@ -0,0 +1,5 @@</span>
+<span class="hljs-addition">+grit</span>
+<span class="hljs-addition">+ by Tom Preston-Werner, Chris Wanstrath</span>
+<span class="hljs-addition">+ http://github.com/mojombo/grit</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+Grit is a Ruby library for extracting information from a Git repository</span>
+</code></pre><p>On tärkeää ottaa huomioon, että <code>git diff</code> itsessään ei näytä kaikkia muutoksia viimeisimmästä pysyvästä muutoksesta lähtien - vain muutokset, jotka ovat yhä lavastamattomia. Tämä voi olla sekavaa, koska kun olet lavastanut kaikki muutoksesi, <code>git diff</code> ei anna ollenkaan tulostetta.</p>
+<p>Toisena esimerkkinä, jos lavastat <code>benchmarks.rb</code>-tiedoston ja sitten muokkaat sitä, voit käyttää <code>git diff</code> -komentoa nähdäksesi tiedoston lavastetut muutokset ja lavastamattomat muutokset:</p>
+<pre><code>$ git add benchmarks.rb
+$ echo <span class="hljs-string">'# test line'</span> &gt;&gt; benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Nyt voit käyttää <code>git diff</code> -komentoa nähdäksesi, mitä on yhä lavastamatta:</p>
+<pre><code>$ git diff 
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index e445e28.<span class="hljs-number">.86</span>b2f7c <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">127</span>,<span class="hljs-number">3</span> +<span class="hljs-number">127</span>,<span class="hljs-number">4</span> @@ <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+ main()
+
+ <span class="hljs-comment">##pp Grit::GitRuby.cache_client.stats </span>
++<span class="hljs-comment"># test line</span>
+</code></pre><p>Ja <code>git diff --cached</code> -komentoa nähdäksesi, mitä olet lavastanut tähän mennessä:</p>
+<pre><code>$ git diff <span class="hljs-comment">--cached</span>
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..e445e28 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+          @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++              
+        run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+          <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+          <span class="hljs-built_in">log</span>.size
+</code></pre><h2 id="pysyvien-muutoksien-tekeminen">Pysyvien muutoksien tekeminen</h2>
+<p>Nyt, kun lavastusalueesi on asetettu niin kuin sen haluat, voit tehdä muutoksistasi pysyviä. Muista, että kaikki, mikä vielä on lavastamatta - mitkä tahansa tiedostot, jotka olet luonut tai joita olet muokannut, joihin et ole ajanut <code>git add</code> -komentoa editoinnin jälkeen - eivät mene pysyvään muutokseen. Ne pysyvät muokattuina tiedostoina levylläsi.
+Tässä tapauksessa oletamme, että viime kerran, kun ajoit <code>git status</code> -komennon, näit, että kaikki oli lavastettu, joten olet valmis tekemään pysyvän muutoksen. Helpoin tapa pysyvän muutoksen tekoon on kirjoittaa <code>git commit</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git commit
+</code></pre><p>Tämän suorittaminen aukaisee editorisi. (Tämä on asetettu komentorivisi <code>$EDITOR</code> ympäristömuuttujalla - yleensä vim tai emacs, kuitenkin voit konfiguroida sen käyttämään mitä haluat, käyttäen <code>git config --global core.editor</code> -komentoa, kuten <em>Luvussa 1</em> näit).</p>
+<p>Editori näyttää seuraavanlaisen tekstin (tämä esimerkki on Vimistä):</p>
+<pre><code><span class="hljs-preprocessor"># Please enter the commit message for your changes. Lines starting</span>
+<span class="hljs-preprocessor"># with '#' will be ignored, and an empty message aborts the commit.</span>
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       new file:   README</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb </span>
+~
+~
+~
+<span class="hljs-string">".git/COMMIT_EDITMSG"</span> <span class="hljs-number">10</span>L, <span class="hljs-number">283</span>C
+</code></pre><p>Voit nähdä, että oletuksena pysyvän muutoksen viesti sisältää viimeisimmän <code>git status</code> -komennon tulosteen kommentoituna ja yhden tyhjän rivin ylhäällä. Voit poistaa nämä kommentit ja kirjoittaa pysyvän muutoksen viestisi, tai voit jättää kommentit viestiin auttamaan sinua muistamaan mihin olet pysyvää muutosta tekemässä. (Saadaksesi vieläkin tarkemman muistutukseen muutoksistasi, voit antaa <code>-v</code>-option <code>git commit</code> -komennolle. Tämä optio laittaa myös diff-muutostulosteen editoriin, jotta näet tarkalleen mitä teit.) Kun poistut editorista, Git luo pysyvän muutoksesi viestilläsi (kommentit ja diff pois lukien).</p>
+<p>Vaihtoehtoisesti, voit kirjoittaa pysyvän muutoksen viestin suoraan <code>commit</code>-kommennolla antamalla sen <code>-m</code>-lipun jälkeen, näin:</p>
+<pre><code>$ git commit -m "Story 182: Fix benchmarks for speed"
+[<span class="hljs-link_reference">master</span>]:<span class="hljs-link_url"> created 463dc4f: "Fix benchmarks for speed"</span><span class="hljs-link_url">
+ 2 files changed, 3 insertions(+), 0 deletions(-)</span><span class="hljs-link_url">
+ create mode 100644 README</span>
+</code></pre><p>Nyt olet luonut ensimmäisen pysyvän muutoksen! Voit nähdä, että pysyvä muutos on antanut sinulle tulosteen itsestään: kertoen mihin haaraan teit pysyvän muutoksen (<code>master</code>), mikä SHA-1 tarkistussumma pysyvällä muutoksella on (<code>463dc4f</code>), kuinka monta tiedostoa muutettiin ja tilastoja pysyvän muutoksen rivien lisäyksistä ja poistoista.</p>
+<p>Muista, että pysyvä muutos tallentaa tilannekuvan lavastusalueestasi. Kaikki, mitä et lavastanut on yhä istumassa projektissasi muokattuna; voit tehdä toisen pysyvän muutoksen lisätäksesi ne historiaasi. Joka kerta, kun teet pysyvän muutoksen, olet tallentamassa tilannekuvaa projektistasi. Tilannekuvaa, johon voit palata tai jota voit vertailla myöhemmin. </p>
+<h2 id="lavastusalueen-ohittaminen">Lavastusalueen ohittaminen</h2>
+<p>Vaikka lavastusalue voi olla uskomattoman hyödyllinen pysyvien muutoksien tekoon tarkalleen niin kuin ne haluat, on lavastusalue joskus hieman liian monimutkainen, kuin mitä työnkulussasi tarvitsisit. Jos haluat ohittaa lavastusalueen, Git tarjoaa siihen helpon oikoreitin. Antamalla <code>-a</code>-option <code>git commit</code> -komennolle, asettaa Gitin automaattisesti lavastamaan jokaisen jo jäljitetyn tiedoston ennen pysyvää muutosta, antaen sinun ohittaa <code>git add</code> -osan:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+$ git commit -a -m <span class="hljs-string">'added new benchmarks'</span>
+[master <span class="hljs-number">83e38</span>c7] added <span class="hljs-keyword">new</span> benchmarks
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">5</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>Huomaa, miten sinun ei tarvitse ajaa <code>git add</code> -komentoa <code>benchmarks.rb</code>-tiedostolle tässä tapauksessa pysyvää muutosta tehdessäsi.</p>
+<h2 id="tiedostojen-poistaminen">Tiedostojen poistaminen</h2>
+<p>Poistaaksesi tiedoston Gitistä, sinun täytyy poistaa se sinun jäljitetyistä tiedostoistasi (tarkemmin sanoen, poistaa se lavastusalueeltasi) ja sitten tehdä pysyvä muutos. Komento <code>git rm</code> tekee tämän ja myös poistaa tiedoston työskentelyhakemistostasi, joten et näe sitä enää jäljittämättömänä tiedostona.</p>
+<p>Jos yksinkertaisesti poistat tiedoston työskentelyhakemistostasi, näkyy se ”Changes not staged for commit” otsikon alla (se on, <em>lavastamaton</em>) <code>git status</code> -tulosteessasi:</p>
+<pre><code>$ rm grit.gemspec
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add/rm &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Jos ajat tämän jälkeen <code>git rm</code> -komennon, se lavastaa tiedostot poistoon:</p>
+<pre><code>$ git rm grit.gemspec
+rm <span class="hljs-string">'grit.gemspec'</span>
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Seuraavan kerran, kun teet pysyvän muutoksen, tiedosto katoaa ja sitä ei jäljitetä enää. Jos muokkasit tiedostoa ja lisäsit sen jo indeksiin, täytyy sinun pakottaa poisto <code>-f</code>-optiolla. Tämä on turvallisuusominaisuus, joka estää vahingossa tapahtuvan datan poistamisen, datan, jota ei ole vielä tallennettu tilannekuvaksi ja jota ei voida palauttaa Gitistä.</p>
+<p>Toinen hyödyllinen asia, jonka saatat haluta tehdä, on tiedoston pitäminen työskentelypuussa, mutta samalla sen poistaminen lavastusalueelta. Toisin sanoen, voit haluta pitää tiedoston kovalevylläsi, mutta et halua, että Git jäljittää sitä enää. Tämä on erityisesti hyödyllinen, jos unohdit lisätä jotain <code>.gitignore</code>-tiedostoosi ja vahingossa lavastit sellaisen, kuten suuri lokitiedosto tai joukko <code>.a</code>-muotoon käännettyjä tiedostoja. Tehdäksesi tämän, käytä <code>--cached</code>-optiota:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">rm</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">cached</span> <span class="hljs-comment">readme</span><span class="hljs-string">.</span><span class="hljs-comment">txt</span>
+</code></pre><p>Voit antaa tiedostoja, hakemistoja tai tiedoston keräysmalleja <code>git rm</code> -komennolle. Tämä tarkoittaa sitä, että voit tehdä asioita kuten:</p>
+<pre><code>$ git rm <span class="hljs-keyword">log</span>/\*.<span class="hljs-keyword">log</span>
+</code></pre><p>Huomaa kenoviiva (<code>\</code>) <code>*</code>-merkin edessä. Windowsin järjestelmäkonsolissa kenoviiva täytyy jättää pois. Tämä on tarpeellinen, koska Git tekee oman tiedostonimilaajennuksensa komentorivisi tiedostonimilaajennuksen lisänä. Tämä komento poistaa kaikki tiedostot, joilla on <code>.log</code>-liite, <code>log/</code>-hakemistosta. Voit myös tehdä näin:</p>
+<pre><code><span class="hljs-variable">$ </span>git rm \*~
+</code></pre><p>Tämä komento poistaa kaikki tiedostot, jotka loppuvat <code>~</code>-merkkiin.</p>
+<h2 id="tiedostojen-siirt-minen">Tiedostojen siirtäminen</h2>
+<p>Toisin kuin monet muut VCS-järjestelmät, Git ei jäljitä suoranaisesti tiedostojen siirtämistä. Jos nimeät tiedoston uudelleen Gitissä, Gitiin ei tallenneta metadataa, joka kertoo, että nimesit tiedoston uudelleen. Git on kuitenkin melko älykäs selvittämään sen myöhemmin — käsittelemme tiedostojen siirtämisen havaitsemista hieman myöhemmin.</p>
+<p>Siksi on hieman sekavaa, että Gitissä on <code>mv</code>-komento. Jos haluat nimetä tiedoston uudelleen Gitissä, voit ajaa jotakuinkin seuraavasti</p>
+<pre><code><span class="hljs-variable">$ </span>git mv lähdetiedosto kohdetiedosto
+</code></pre><p>ja se toimii hienosti. Itse asiassa, jos ajat jotakuinkin tällä tavalla ja katsot tilaa, näet Gitin pitävän sitä uudelleennimettynä tiedostona:</p>
+<pre><code>$ git mv README.txt README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Your branch is ahead of 'origin/master' by 1 commit.</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       renamed:    README.txt -&gt; README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Tämä on kuitenkin sama, kuin ajaisit seuraavasti:</p>
+<pre><code><span class="hljs-variable">$ </span>mv <span class="hljs-constant">README</span>.txt <span class="hljs-constant">README</span>
+<span class="hljs-variable">$ </span>git rm <span class="hljs-constant">README</span>.txt
+<span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Git ymmärtää sen olevan uudelleennimeäminen epäsuorasti, joten ei ole väliä, nimeätkö tiedoston uudelleen tällä tavalla vai <code>mv</code>-komennolla. Ainoa todellinen ero on, että <code>mv</code> on yksi komento kolmen sijaan — se on helppokäyttötoiminto. Tärkeämpää, voit käyttää tiedoston uudelleennimeämiseen mitä työkalua haluat ja käsitellä add/rm myöhemmin, ennen kuin teet pysyvän muutoksen.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../gitin_perusteet/git_tietolahteen_hankinta.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../gitin_perusteet/pysyvien_muutosten_historian_tarkasteleminen.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

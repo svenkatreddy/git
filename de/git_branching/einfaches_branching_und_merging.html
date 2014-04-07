@@ -1,0 +1,1139 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Einfaches Branching und Merging | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_branching/branch_management.html" />
+        
+        
+        <link rel="prev" href="../git_branching/was_ist_ein_branch.html" />
+        
+
+        <meta property="og:title" content="Einfaches Branching und Merging | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="3.2" data-basepath=".." data-revision="1396895639016">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_branching/einfaches_branching_und_merging.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="getting_started/README.html">
+                
+                <a href="../getting_started/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Getting Started
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="getting_started/wozu_versionskontrolle.html">
+                            
+                            <a href="../getting_started/wozu_versionskontrolle.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Wozu Versionskontrolle?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="getting_started/die_geschichte_von_git.html">
+                            
+                            <a href="../getting_started/die_geschichte_von_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Die Geschichte von Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="getting_started/git_grundlagen.html">
+                            
+                            <a href="../getting_started/git_grundlagen.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git Grundlagen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="getting_started/git_installieren.html">
+                            
+                            <a href="../getting_started/git_installieren.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Git installieren
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="getting_started/git_konfigurieren.html">
+                            
+                            <a href="../getting_started/git_konfigurieren.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Git konfigurieren
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="getting_started/hilfe_finden.html">
+                            
+                            <a href="../getting_started/hilfe_finden.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Hilfe finden
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="getting_started/zusammenfassung.html">
+                            
+                            <a href="../getting_started/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="git_basics/README.html">
+                
+                <a href="../git_basics/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git Basics
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="git_basics/ein_git_repository_anlegen.html">
+                            
+                            <a href="../git_basics/ein_git_repository_anlegen.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Ein Git Repository anlegen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git_basics/anderungen_am_repository_nachverfolgen.html">
+                            
+                            <a href="../git_basics/anderungen_am_repository_nachverfolgen.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Änderungen am Repository nachverfolgen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git_basics/die_commit_historie_anzeigen.html">
+                            
+                            <a href="../git_basics/die_commit_historie_anzeigen.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Die Commit Historie anzeigen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git_basics/anderungen_ruckgangig_machen.html">
+                            
+                            <a href="../git_basics/anderungen_ruckgangig_machen.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Änderungen rückgängig machen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git_basics/mit_externen_repositorys_arbeiten.html">
+                            
+                            <a href="../git_basics/mit_externen_repositorys_arbeiten.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Mit externen Repositorys arbeiten
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="git_basics/tags.html">
+                            
+                            <a href="../git_basics/tags.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tags
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="git_basics/tipps_und_tricks.html">
+                            
+                            <a href="../git_basics/tipps_und_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tipps und Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="git_basics/zusammenfassung.html">
+                            
+                            <a href="../git_basics/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="git_branching/README.html">
+                
+                <a href="../git_branching/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git Branching
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="git_branching/was_ist_ein_branch.html">
+                            
+                            <a href="../git_branching/was_ist_ein_branch.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Was ist ein Branch?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="git_branching/einfaches_branching_und_merging.html">
+                            
+                            <a href="../git_branching/einfaches_branching_und_merging.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Einfaches Branching und Merging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="git_branching/branch_management.html">
+                            
+                            <a href="../git_branching/branch_management.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Branch Management
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="git_branching/branching_workflows.html">
+                            
+                            <a href="../git_branching/branching_workflows.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Branching Workflows
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="git_branching/externe_branches.html">
+                            
+                            <a href="../git_branching/externe_branches.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Externe Branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="git_branching/rebasing.html">
+                            
+                            <a href="../git_branching/rebasing.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="git_branching/zusammenfassung.html">
+                            
+                            <a href="../git_branching/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_on_the_server/README.html">
+                
+                <a href="../git_on_the_server/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git on the Server
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_on_the_server/die_protokolle.html">
+                            
+                            <a href="../git_on_the_server/die_protokolle.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Die Protokolle
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_on_the_server/git_auf_einen_server_bekommen.html">
+                            
+                            <a href="../git_on_the_server/git_auf_einen_server_bekommen.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Git auf einen Server bekommen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_on_the_server/generiere_deinen_offentlichen_ssh_schlussel.html">
+                            
+                            <a href="../git_on_the_server/generiere_deinen_offentlichen_ssh_schlussel.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Generiere Deinen öffentlichen SSH-Schlüssel
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_on_the_server/einrichten_des_servers.html">
+                            
+                            <a href="../git_on_the_server/einrichten_des_servers.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Einrichten des Servers
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_on_the_server/offentlicher_zugang.html">
+                            
+                            <a href="../git_on_the_server/offentlicher_zugang.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Öffentlicher Zugang
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_on_the_server/gitweb.html">
+                            
+                            <a href="../git_on_the_server/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_on_the_server/gitosis.html">
+                            
+                            <a href="../git_on_the_server/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_on_the_server/gitolite.html">
+                            
+                            <a href="../git_on_the_server/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_on_the_server/git_daemon.html">
+                            
+                            <a href="../git_on_the_server/git_daemon.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git Daemon
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_on_the_server/git_hosting.html">
+                            
+                            <a href="../git_on_the_server/git_hosting.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git Hosting
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_on_the_server/einrichten_eines_benutzeraccounts.html">
+                            
+                            <a href="../git_on_the_server/einrichten_eines_benutzeraccounts.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Einrichten eines Benutzeraccounts
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.12" data-path="git_on_the_server/zusammenfassung.html">
+                            
+                            <a href="../git_on_the_server/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>4.12)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="distributed_git/README.html">
+                
+                <a href="../distributed_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Distributed Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="distributed_git/distribuierte_workflows.html">
+                            
+                            <a href="../distributed_git/distribuierte_workflows.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Distribuierte Workflows
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="distributed_git/an_einem_projekt_mitarbeiten.html">
+                            
+                            <a href="../distributed_git/an_einem_projekt_mitarbeiten.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> An einem Projekt mitarbeiten
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="distributed_git/ein_projekt_betreiben.html">
+                            
+                            <a href="../distributed_git/ein_projekt_betreiben.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Ein Projekt betreiben
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="distributed_git/zusammenfassung.html">
+                            
+                            <a href="../distributed_git/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_tools/README.html">
+                
+                <a href="../git_tools/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git Tools
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_tools/revision_auswahl.html">
+                            
+                            <a href="../git_tools/revision_auswahl.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Revision Auswahl
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_tools/interaktives_stagen.html">
+                            
+                            <a href="../git_tools/interaktives_stagen.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Interaktives Stagen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_tools/stashen.html">
+                            
+                            <a href="../git_tools/stashen.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Stashen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_tools/anderungshistorie_verandern.html">
+                            
+                            <a href="../git_tools/anderungshistorie_verandern.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Änderungshistorie verändern
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_tools/mit_hilfe_von_git_debuggen.html">
+                            
+                            <a href="../git_tools/mit_hilfe_von_git_debuggen.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Mit Hilfe von Git debuggen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_tools/submodule.html">
+                            
+                            <a href="../git_tools/submodule.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Submodule
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_tools/subtree_merging.html">
+                            
+                            <a href="../git_tools/subtree_merging.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Subtree Merging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_tools/zusammenfassung.html">
+                            
+                            <a href="../git_tools/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="customizing_git/README.html">
+                
+                <a href="../customizing_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Customizing Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="customizing_git/git_konfiguration.html">
+                            
+                            <a href="../customizing_git/git_konfiguration.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Git Konfiguration
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="customizing_git/git_attribute.html">
+                            
+                            <a href="../customizing_git/git_attribute.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git Attribute
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="customizing_git/git_hooks.html">
+                            
+                            <a href="../customizing_git/git_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git Hooks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="customizing_git/beispiel_fur_die_durchsetzung_von_richtlinien_mit_hilfe_von_git.html">
+                            
+                            <a href="../customizing_git/beispiel_fur_die_durchsetzung_von_richtlinien_mit_hilfe_von_git.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Beispiel für die Durchsetzung von Richtlinien mit Hilfe von Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="customizing_git/zusammenfassung.html">
+                            
+                            <a href="../customizing_git/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_and_other_systems/README.html">
+                
+                <a href="../git_and_other_systems/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git and Other Systems
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_and_other_systems/git_und_subversion.html">
+                            
+                            <a href="../git_and_other_systems/git_und_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git und Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_and_other_systems/zu_git_umziehen.html">
+                            
+                            <a href="../git_and_other_systems/zu_git_umziehen.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Zu Git umziehen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_and_other_systems/zusammenfassung.html">
+                            
+                            <a href="../git_and_other_systems/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git_internals/README.html">
+                
+                <a href="../git_internals/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Git Internals
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git_internals/plumbing_und_porcelain.html">
+                            
+                            <a href="../git_internals/plumbing_und_porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Plumbing und Porcelain
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git_internals/git_objekte.html">
+                            
+                            <a href="../git_internals/git_objekte.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Git Objekte
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git_internals/git_referenzen.html">
+                            
+                            <a href="../git_internals/git_referenzen.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Git-Referenzen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git_internals/pack_dateien.html">
+                            
+                            <a href="../git_internals/pack_dateien.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Pack-Dateien
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git_internals/die_refspec.html">
+                            
+                            <a href="../git_internals/die_refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Die Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git_internals/transfer_protokolle.html">
+                            
+                            <a href="../git_internals/transfer_protokolle.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Transfer-Protokolle
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git_internals/wartung_und_datenwiederherstellung.html">
+                            
+                            <a href="../git_internals/wartung_und_datenwiederherstellung.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Wartung und Datenwiederherstellung
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git_internals/zusammenfassung.html">
+                            
+                            <a href="../git_internals/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 28.169014084507044%;min-width: 26.760563380281692%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../getting_started/README.html" title="Getting Started" class="chapter done new-chapter" data-progress="1" style="left: 1.408450704225352%;"></a>
+    
+        <a href="../getting_started/wozu_versionskontrolle.html" title="Wozu Versionskontrolle?" class="chapter done " data-progress="1.1" style="left: 2.816901408450704%;"></a>
+    
+        <a href="../getting_started/die_geschichte_von_git.html" title="Die Geschichte von Git" class="chapter done " data-progress="1.2" style="left: 4.225352112676056%;"></a>
+    
+        <a href="../getting_started/git_grundlagen.html" title="Git Grundlagen" class="chapter done " data-progress="1.3" style="left: 5.633802816901408%;"></a>
+    
+        <a href="../getting_started/git_installieren.html" title="Git installieren" class="chapter done " data-progress="1.4" style="left: 7.042253521126761%;"></a>
+    
+        <a href="../getting_started/git_konfigurieren.html" title="Git konfigurieren" class="chapter done " data-progress="1.5" style="left: 8.450704225352112%;"></a>
+    
+        <a href="../getting_started/hilfe_finden.html" title="Hilfe finden" class="chapter done " data-progress="1.6" style="left: 9.859154929577464%;"></a>
+    
+        <a href="../getting_started/zusammenfassung.html" title="Zusammenfassung" class="chapter done " data-progress="1.7" style="left: 11.267605633802816%;"></a>
+    
+        <a href="../git_basics/README.html" title="Git Basics" class="chapter done new-chapter" data-progress="2" style="left: 12.67605633802817%;"></a>
+    
+        <a href="../git_basics/ein_git_repository_anlegen.html" title="Ein Git Repository anlegen" class="chapter done " data-progress="2.1" style="left: 14.084507042253522%;"></a>
+    
+        <a href="../git_basics/anderungen_am_repository_nachverfolgen.html" title="Änderungen am Repository nachverfolgen" class="chapter done " data-progress="2.2" style="left: 15.492957746478874%;"></a>
+    
+        <a href="../git_basics/die_commit_historie_anzeigen.html" title="Die Commit Historie anzeigen" class="chapter done " data-progress="2.3" style="left: 16.901408450704224%;"></a>
+    
+        <a href="../git_basics/anderungen_ruckgangig_machen.html" title="Änderungen rückgängig machen" class="chapter done " data-progress="2.4" style="left: 18.309859154929576%;"></a>
+    
+        <a href="../git_basics/mit_externen_repositorys_arbeiten.html" title="Mit externen Repositorys arbeiten" class="chapter done " data-progress="2.5" style="left: 19.718309859154928%;"></a>
+    
+        <a href="../git_basics/tags.html" title="Tags" class="chapter done " data-progress="2.6" style="left: 21.12676056338028%;"></a>
+    
+        <a href="../git_basics/tipps_und_tricks.html" title="Tipps und Tricks" class="chapter done " data-progress="2.7" style="left: 22.535211267605632%;"></a>
+    
+        <a href="../git_basics/zusammenfassung.html" title="Zusammenfassung" class="chapter done " data-progress="2.8" style="left: 23.943661971830984%;"></a>
+    
+        <a href="../git_branching/README.html" title="Git Branching" class="chapter done new-chapter" data-progress="3" style="left: 25.35211267605634%;"></a>
+    
+        <a href="../git_branching/was_ist_ein_branch.html" title="Was ist ein Branch?" class="chapter done " data-progress="3.1" style="left: 26.760563380281692%;"></a>
+    
+        <a href="../git_branching/einfaches_branching_und_merging.html" title="Einfaches Branching und Merging" class="chapter done " data-progress="3.2" style="left: 28.169014084507044%;"></a>
+    
+        <a href="../git_branching/branch_management.html" title="Branch Management" class="chapter  " data-progress="3.3" style="left: 29.577464788732396%;"></a>
+    
+        <a href="../git_branching/branching_workflows.html" title="Branching Workflows" class="chapter  " data-progress="3.4" style="left: 30.985915492957748%;"></a>
+    
+        <a href="../git_branching/externe_branches.html" title="Externe Branches" class="chapter  " data-progress="3.5" style="left: 32.394366197183096%;"></a>
+    
+        <a href="../git_branching/rebasing.html" title="Rebasing" class="chapter  " data-progress="3.6" style="left: 33.80281690140845%;"></a>
+    
+        <a href="../git_branching/zusammenfassung.html" title="Zusammenfassung" class="chapter  " data-progress="3.7" style="left: 35.2112676056338%;"></a>
+    
+        <a href="../git_on_the_server/README.html" title="Git on the Server" class="chapter  new-chapter" data-progress="4" style="left: 36.61971830985915%;"></a>
+    
+        <a href="../git_on_the_server/die_protokolle.html" title="Die Protokolle" class="chapter  " data-progress="4.1" style="left: 38.028169014084504%;"></a>
+    
+        <a href="../git_on_the_server/git_hosting.html" title="Git Hosting" class="chapter  " data-progress="4.10" style="left: 39.436619718309856%;"></a>
+    
+        <a href="../git_on_the_server/einrichten_eines_benutzeraccounts.html" title="Einrichten eines Benutzeraccounts" class="chapter  " data-progress="4.11" style="left: 40.84507042253521%;"></a>
+    
+        <a href="../git_on_the_server/zusammenfassung.html" title="Zusammenfassung" class="chapter  " data-progress="4.12" style="left: 42.25352112676056%;"></a>
+    
+        <a href="../git_on_the_server/git_auf_einen_server_bekommen.html" title="Git auf einen Server bekommen" class="chapter  " data-progress="4.2" style="left: 43.66197183098591%;"></a>
+    
+        <a href="../git_on_the_server/generiere_deinen_offentlichen_ssh_schlussel.html" title="Generiere Deinen öffentlichen SSH-Schlüssel" class="chapter  " data-progress="4.3" style="left: 45.070422535211264%;"></a>
+    
+        <a href="../git_on_the_server/einrichten_des_servers.html" title="Einrichten des Servers" class="chapter  " data-progress="4.4" style="left: 46.478873239436616%;"></a>
+    
+        <a href="../git_on_the_server/offentlicher_zugang.html" title="Öffentlicher Zugang" class="chapter  " data-progress="4.5" style="left: 47.88732394366197%;"></a>
+    
+        <a href="../git_on_the_server/gitweb.html" title="GitWeb" class="chapter  " data-progress="4.6" style="left: 49.29577464788732%;"></a>
+    
+        <a href="../git_on_the_server/gitosis.html" title="Gitosis" class="chapter  " data-progress="4.7" style="left: 50.70422535211268%;"></a>
+    
+        <a href="../git_on_the_server/gitolite.html" title="Gitolite" class="chapter  " data-progress="4.8" style="left: 52.11267605633803%;"></a>
+    
+        <a href="../git_on_the_server/git_daemon.html" title="Git Daemon" class="chapter  " data-progress="4.9" style="left: 53.521126760563384%;"></a>
+    
+        <a href="../distributed_git/README.html" title="Distributed Git" class="chapter  new-chapter" data-progress="5" style="left: 54.929577464788736%;"></a>
+    
+        <a href="../distributed_git/distribuierte_workflows.html" title="Distribuierte Workflows" class="chapter  " data-progress="5.1" style="left: 56.33802816901409%;"></a>
+    
+        <a href="../distributed_git/an_einem_projekt_mitarbeiten.html" title="An einem Projekt mitarbeiten" class="chapter  " data-progress="5.2" style="left: 57.74647887323944%;"></a>
+    
+        <a href="../distributed_git/ein_projekt_betreiben.html" title="Ein Projekt betreiben" class="chapter  " data-progress="5.3" style="left: 59.15492957746479%;"></a>
+    
+        <a href="../distributed_git/zusammenfassung.html" title="Zusammenfassung" class="chapter  " data-progress="5.4" style="left: 60.563380281690144%;"></a>
+    
+        <a href="../git_tools/README.html" title="Git Tools" class="chapter  new-chapter" data-progress="6" style="left: 61.971830985915496%;"></a>
+    
+        <a href="../git_tools/revision_auswahl.html" title="Revision Auswahl" class="chapter  " data-progress="6.1" style="left: 63.38028169014085%;"></a>
+    
+        <a href="../git_tools/interaktives_stagen.html" title="Interaktives Stagen" class="chapter  " data-progress="6.2" style="left: 64.78873239436619%;"></a>
+    
+        <a href="../git_tools/stashen.html" title="Stashen" class="chapter  " data-progress="6.3" style="left: 66.19718309859155%;"></a>
+    
+        <a href="../git_tools/anderungshistorie_verandern.html" title="Änderungshistorie verändern" class="chapter  " data-progress="6.4" style="left: 67.6056338028169%;"></a>
+    
+        <a href="../git_tools/mit_hilfe_von_git_debuggen.html" title="Mit Hilfe von Git debuggen" class="chapter  " data-progress="6.5" style="left: 69.01408450704226%;"></a>
+    
+        <a href="../git_tools/submodule.html" title="Submodule" class="chapter  " data-progress="6.6" style="left: 70.4225352112676%;"></a>
+    
+        <a href="../git_tools/subtree_merging.html" title="Subtree Merging" class="chapter  " data-progress="6.7" style="left: 71.83098591549296%;"></a>
+    
+        <a href="../git_tools/zusammenfassung.html" title="Zusammenfassung" class="chapter  " data-progress="6.8" style="left: 73.2394366197183%;"></a>
+    
+        <a href="../customizing_git/README.html" title="Customizing Git" class="chapter  new-chapter" data-progress="7" style="left: 74.64788732394366%;"></a>
+    
+        <a href="../customizing_git/git_konfiguration.html" title="Git Konfiguration" class="chapter  " data-progress="7.1" style="left: 76.05633802816901%;"></a>
+    
+        <a href="../customizing_git/git_attribute.html" title="Git Attribute" class="chapter  " data-progress="7.2" style="left: 77.46478873239437%;"></a>
+    
+        <a href="../customizing_git/git_hooks.html" title="Git Hooks" class="chapter  " data-progress="7.3" style="left: 78.87323943661971%;"></a>
+    
+        <a href="../customizing_git/beispiel_fur_die_durchsetzung_von_richtlinien_mit_hilfe_von_git.html" title="Beispiel für die Durchsetzung von Richtlinien mit Hilfe von Git" class="chapter  " data-progress="7.4" style="left: 80.28169014084507%;"></a>
+    
+        <a href="../customizing_git/zusammenfassung.html" title="Zusammenfassung" class="chapter  " data-progress="7.5" style="left: 81.69014084507042%;"></a>
+    
+        <a href="../git_and_other_systems/README.html" title="Git and Other Systems" class="chapter  new-chapter" data-progress="8" style="left: 83.09859154929578%;"></a>
+    
+        <a href="../git_and_other_systems/git_und_subversion.html" title="Git und Subversion" class="chapter  " data-progress="8.1" style="left: 84.50704225352112%;"></a>
+    
+        <a href="../git_and_other_systems/zu_git_umziehen.html" title="Zu Git umziehen" class="chapter  " data-progress="8.2" style="left: 85.91549295774648%;"></a>
+    
+        <a href="../git_and_other_systems/zusammenfassung.html" title="Zusammenfassung" class="chapter  " data-progress="8.3" style="left: 87.32394366197182%;"></a>
+    
+        <a href="../git_internals/README.html" title="Git Internals" class="chapter  new-chapter" data-progress="9" style="left: 88.73239436619718%;"></a>
+    
+        <a href="../git_internals/plumbing_und_porcelain.html" title="Plumbing und Porcelain" class="chapter  " data-progress="9.1" style="left: 90.14084507042253%;"></a>
+    
+        <a href="../git_internals/git_objekte.html" title="Git Objekte" class="chapter  " data-progress="9.2" style="left: 91.54929577464789%;"></a>
+    
+        <a href="../git_internals/git_referenzen.html" title="Git-Referenzen" class="chapter  " data-progress="9.3" style="left: 92.95774647887323%;"></a>
+    
+        <a href="../git_internals/pack_dateien.html" title="Pack-Dateien" class="chapter  " data-progress="9.4" style="left: 94.36619718309859%;"></a>
+    
+        <a href="../git_internals/die_refspec.html" title="Die Refspec" class="chapter  " data-progress="9.5" style="left: 95.77464788732394%;"></a>
+    
+        <a href="../git_internals/transfer_protokolle.html" title="Transfer-Protokolle" class="chapter  " data-progress="9.6" style="left: 97.1830985915493%;"></a>
+    
+        <a href="../git_internals/wartung_und_datenwiederherstellung.html" title="Wartung und Datenwiederherstellung" class="chapter  " data-progress="9.7" style="left: 98.59154929577464%;"></a>
+    
+        <a href="../git_internals/zusammenfassung.html" title="Zusammenfassung" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_921">
+                    
+                        <h1 id="einfaches-branching-und-merging">Einfaches Branching und Merging</h1>
+<!--Let’s go through a simple example of branching and merging with a workflow that you might use in the real world. You’ll follow these steps:-->
+
+<p>Lass uns das Ganze an einem Beispiel durchgehen, dessen Workflow zum Thema Branching und Zusammenführen Du im echten Leben verwenden kannst. Folge einfach diesen Schritten:</p>
+<!--1. Do work on a web site.-->
+<!--2. Create a branch for a new story you’re working on.-->
+<!--3. Do some work in that branch.-->
+
+<ol>
+<li>Arbeite an einer Webseite.</li>
+<li>Erstell einen Branch für irgendeine neue Geschichte, an der Du arbeitest.</li>
+<li>Arbeite in dem Branch.</li>
+</ol>
+<!--At this stage, you’ll receive a call that another issue is critical and you need a hotfix. You’ll do the following:-->
+
+<p>In diesem Augenblick kommt ein Anruf, dass ein kritisches Problem aufgetreten ist und sofort gelöst werden muss. Du machst folgendes:</p>
+<!--1. Switch back to your production branch.-->
+<!--2. Create a branch to add the hotfix.-->
+<!--3. After it’s tested, merge the hotfix branch, and push to production.-->
+<!--4. Switch back to your original story and continue working.-->
+
+<ol>
+<li>Schalte zurück zu Deinem „Produktiv“-Zweig.</li>
+<li>Erstelle eine Branch für den Hotfix.</li>
+<li>Nach dem Testen führst Du den Hotfix-Branch mit dem „Produktiv“-Branch zusammen.</li>
+<li>Schalte wieder auf Deine alte Arbeit zurück und werkel weiter.</li>
+</ol>
+<!--## Basic Branching-->
+## Branching Grundlagen
+
+<!--First, let’s say you’re working on your project and have a couple of commits already (see Figure 3-10).-->
+
+<p>Sagen wir, Du arbeitest an Deinem Projekt und hast bereits einige Commits durchgeführt (siehe Abbildung 3-10).</p>
+<!--Figure 3-10. A short and simple commit history.-->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0310-tn.png" alt=""></p>
+<p>Abbildung 3-10. Eine kurze, einfache Commit-Historie</p>
+<!--You’ve decided that you’re going to work on issue #53 in whatever issue-tracking system your company uses. To be clear, Git isn’t tied into any particular issue-tracking system; but because issue #53 is a focused topic that you want to work on, you’ll create a new branch in which to work. To create a branch and switch to it at the same time, you can run the `git checkout` command with the `-b` switch:-->
+
+<p>Du hast Dich dafür entschieden an dem Issue #53, des Issue-Trackers XY, zu arbeiten. Um eines klarzustellen, Git ist an kein Issue-Tracking-System gebunden. Da der Issue #53 allerdings ein Schwerpunktthema betrifft, wirst Du einen neuen Branch erstellen um daran zu arbeiten. Um in einem Arbeitsschritt einen neuen Branch zu erstellen und zu aktivieren kannst Du das Kommando <code>git checkout</code> mit der Option <code>-b</code> verwenden:</p>
+<pre><code>$ git checkout -b iss53
+Switched <span class="hljs-built_in">to</span> <span class="hljs-operator">a</span> <span class="hljs-built_in">new</span> branch <span class="hljs-string">'iss53'</span>
+</code></pre><!--This is shorthand for:-->
+
+<p>Das ist die Kurzform von</p>
+<pre><code><span class="hljs-variable">$ </span>git branch iss53
+<span class="hljs-variable">$ </span>git checkout iss53
+</code></pre><!--Figure 3-11 illustrates the result.-->
+
+<p>Abbildung 3-11 verdeutlicht das Ergebnis.</p>
+<!--Figure 3-11. Creating a new branch pointer.-->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0311-tn.png" alt=""></p>
+<p>Abbildung 3-11. Erstellung eines neuen Branch-Zeigers</p>
+<!--You work on your web site and do some commits. Doing so moves the `iss53` branch forward, because you have it checked out (that is, your HEAD is pointing to it; see Figure 3-12):-->
+
+<p>Du arbeitest an Deiner Web-Seite und machst ein paar Commits. Das bewegt den <code>iss53</code>-Branch vorwärts, da Du ihn ausgebucht hast (das heißt, dass Dein HEAD-Zeiger darauf verweist; siehe Abbildung 3-12):</p>
+<pre><code><span class="hljs-variable">$ </span>vim index.html
+<span class="hljs-variable">$ </span>git commit -a -m <span class="hljs-string">'added a new footer [issue 53]'</span>
+</code></pre><!--Figure 3-12. The iss53 branch has moved forward with your work.-->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0312-tn.png" alt=""></p>
+<p>Abbildung 3-12. Der <code>iss53</code>-Branch hat mit Deiner Arbeit Schritt gehalten.</p>
+<!--Now you get the call that there is an issue with the web site, and you need to fix it immediately. With Git, you don’t have to deploy your fix along with the `iss53` changes you’ve made, and you don’t have to put a lot of effort into reverting those changes before you can work on applying your fix to what is in production. All you have to do is switch back to your master branch.-->
+
+<p>Nun bekommst Du einen Anruf, in dem Dir mitgeteilt wird, dass es ein Problem mit der Internet-Seite gibt, das Du umgehend beheben sollst. Mit Git musst Du Deine Fehlerkorrektur nicht zusammen mit den <code>iss53</code>-Änderungen einbringen. Und Du musst keine Zeit damit verschwenden Deine bisherigen Änderungen rückgängig zu machen, bevor Du mit der Fehlerbehebung an der Produktionsumgebung beginnen kannst. Alles was Du tun musst, ist zu Deinem MASTER-Branch wechseln.</p>
+<!--However, before you do that, note that if your working directory or staging area has uncommitted changes that conflict with the branch you’re checking out, Git won’t let you switch branches. It’s best to have a clean working state when you switch branches. There are ways to get around this (namely, stashing and commit amending) that we’ll cover later. For now, you’ve committed all your changes, so you can switch back to your master branch:-->
+
+<p>Beachte jedoch, dass Dich Git den Branch nur wechseln lässt, wenn bisherige Änderungen in Deinem Arbeitsverzeichnis oder Deiner Staging-Area nicht in Konflikt mit dem Zweig stehen, zu dem Du nun wechseln möchtest. Am besten es liegt ein sauberer Status vor wenn man den Branch wechselt. Wir werden uns später mit Wegen befassen, dieses Verhalten zu umgehen (namentlich „Stashing“ und „Commit Ammending“). Vorerst aber hast Du Deine Änderungen bereits comitted, sodass Du zu Deinem MASTER-Branch zurückwechseln kannst.</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout master
+<span class="hljs-constant">Switched</span> to branch <span class="hljs-string">'master'</span>
+</code></pre><!--At this point, your project working directory is exactly the way it was before you started working on issue #53, and you can concentrate on your hotfix. This is an important point to remember: Git resets your working directory to look like the snapshot of the commit that the branch you check out points to. It adds, removes, and modifies files automatically to make sure your working copy is what the branch looked like on your last commit to it.-->
+
+<p>Zu diesem Zeitpunkt befindet sich das Arbeitsverzeichnis des Projektes in exakt dem gleichen Zustand, in dem es sich befand, als Du mit der Arbeit an Issue #53 begonnen hast und Du kannst Dich direkt auf Deinen Hotfix konzentrieren. Dies ist ein wichtiger Moment um sich vor Augen zu halten, dass Git Dein Arbeitsverzeichnis auf den Zustand des Commits, auf den dieser Branch zeigt, zurücksetzt. Es erstellt, entfernt und verändert Dateien automatisch, um sicherzustellen, dass Deine Arbeitskopie haargenau so aussieht wie der Zweig nach Deinem letzten Commit.</p>
+<!--Next, you have a hotfix to make. Let’s create a hotfix branch on which to work until it’s completed (see Figure 3-13):-->
+
+<p>Nun hast Du einen Hotfix zu erstellen. Lass uns dazu einen Hotfix-Branch erstellen, an dem Du bis zu dessen Fertigstellung arbeitest (siehe Abbildung 3-13):</p>
+<pre><code>$ git checkout <span class="hljs-attribute">-b</span> hotfix
+Switched <span class="hljs-keyword">to</span> a <span class="hljs-literal">new</span> branch <span class="hljs-string">'hotfix'</span>
+$ vim index<span class="hljs-built_in">.</span>html
+$ git commit <span class="hljs-attribute">-a</span> <span class="hljs-attribute">-m</span> <span class="hljs-string">'fixed the broken email address'</span>
+<span class="hljs-preprocessor">[</span>hotfix <span class="hljs-number">3</span>a0874c<span class="hljs-preprocessor">]</span><span class="hljs-markup"> fixed the broken email address
+ 1 files changed, 1 deletion(-)</span>
+</code></pre><!--Figure 3-13. hotfix branch based back at your master branch point.-->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0313-tn.png" alt=""></p>
+<p>Abbildung 3-13. Der Hotfix-Branch basiert auf dem zurückliegenden Master-Branch.</p>
+<!--You can run your tests, make sure the hotfix is what you want, and merge it back into your master branch to deploy to production. You do this with the `git merge` command:-->
+
+<p>Mach Deine Tests, stell sicher das sich der Hotfix verhält wie erwartet und führe ihn mit dem Master-Branch zusammen, um ihn in die Produktionsumgebung zu integrieren. Das machst Du mit dem <code>git merge</code>-Kommando:</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout master
+<span class="hljs-variable">$ </span>git merge hotfix
+<span class="hljs-constant">Updating</span> f42c576..<span class="hljs-number">3</span>a0874c
+<span class="hljs-constant">Fast</span>-forward
+ <span class="hljs-constant">README</span> | <span class="hljs-number">1</span> -
+ <span class="hljs-number">1</span> file changed, <span class="hljs-number">1</span> deletion(-)
+</code></pre><!--You’ll notice the phrase "Fast forward" in that merge. Because the commit pointed to by the branch you merged in was directly upstream of the commit you’re on, Git moves the pointer forward. To phrase that another way, when you try to merge one commit with a commit that can be reached by following the first commit’s history, Git simplifies things by moving the pointer forward because there is no divergent work to merge together — this is called a "fast forward".-->
+
+<p>Du wirst die Mitteilung „Fast Forward“ während des Zusammenführens bemerken. Da der neue Commit direkt von dem ursprünglichen Commit, auf den sich der nun eingebrachte Zweig bezieht, abstammt, bewegt Git einfach den Zeiger weiter. Mit anderen Worten kann Git den neuen Commit, durch verfolgen der Commitabfolge, direkt erreichen, dann bewegt es ausschließlich den Branch-Zeiger. Zu einer tatsächlichen Kombination der Commits besteht ja kein Anlass. Dieses Vorgehen wird „Fast Forward“ genannt.</p>
+<!--Your change is now in the snapshot of the commit pointed to by the `master` branch, and you can deploy your change (see Figure 3-14).-->
+
+<p>Deine Modifikationen befinden sich nun als Schnappschuss in dem Commit, auf den der <code>master</code>-Branch zeigt, diese lassen sich nun veröffentlichen (siehe Abbildung 3-14).</p>
+<!--Figure 3-14. Your master branch points to the same place as your hotfix branch after the merge.-->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0314-tn.png" alt=""></p>
+<p>Abbildung 3-14. Der Master-Branch zeigt nach der Zusammenführung auf den gleichen Commit wie der Hotfix-Branch.</p>
+<!--After your super-important fix is deployed, you’re ready to switch back to the work you were doing before you were interrupted. However, first you’ll delete the `hotfix` branch, because you no longer need it — the `master` branch points at the same place. You can delete it with the `-d` option to `git branch`:-->
+
+<p>Nachdem Dein superwichtiger Hotfix veröffentlicht wurde, kannst Du Dich wieder Deiner ursprünglichen Arbeit zuwenden. Vorher wird sich allerdings des nun nutzlosen Hotfix-Zweiges entledigt, schließlich zeigt der Master-Branch ebenfalls auf die aktuelle Version. Du kannst ihn mit der <code>-d</code>-Option von <code>git branch</code> entfernen:</p>
+<pre><code>$ git branch <span class="hljs-operator">-d</span> hotfix
+Deleted branch hotfix (was <span class="hljs-number">3</span>a0874c).
+</code></pre><!--Now you can switch back to your work-in-progress branch on issue #53 and continue working on it (see Figure 3-15):-->
+
+<p>Nun kannst Du zu Deinem Issue #53-Branch zurückwechseln und mit Deiner Arbeit fortfahren (Abbildung 3-15):</p>
+<pre><code>$ git checkout iss53
+Switched <span class="hljs-keyword">to</span> branch <span class="hljs-attribute">'iss53</span>'
+$ vim index.html
+$ git commit -a -m <span class="hljs-attribute">'finished</span> the <span class="hljs-keyword">new</span> footer [issue <span class="hljs-number">53</span>]'
+[iss53 ad82d7a] finished the <span class="hljs-keyword">new</span> footer [issue <span class="hljs-number">53</span>]
+ <span class="hljs-number">1</span> <span class="hljs-keyword">file</span> changed, <span class="hljs-number">1</span> insertion(+)
+</code></pre><!--Figure 3-15. Your iss53 branch can move forward independently.-->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0315-tn.png" alt=""></p>
+<p>Abbildung 3-15. Dein <code>iss53</code>-Branch kann sich unabhängig weiterentwickeln.</p>
+<!--It’s worth noting here that the work you did in your `hotfix` branch is not contained in the files in your `iss53` branch. If you need to pull it in, you can merge your `master` branch into your `iss53` branch by running `git merge master`, or you can wait to integrate those changes until you decide to pull the `iss53` branch back into `master` later.-->
+
+<p>An dieser Stelle ist anzumerken, dass die Änderungen an dem <code>hotfix</code>-Branch nicht in Deinen <code>iss53</code>-Zweig eingeflossen sind. Falls nötig kannst Du den <code>master</code>-Branch allerdings mit dem Kommando <code>git merge master</code> mit Deinem Zweig kombinieren. Oder Du wartest, bis Du den <code>iss53</code>-Branch später in den Master-Zweig zurückführst.</p>
+<!--## Basic Merging-->
+
+<h2 id="die-grundlagen-des-zusammenf-hrens-mergen-">Die Grundlagen des Zusammenführens (Mergen)</h2>
+<!--Suppose you’ve decided that your issue #53 work is complete and ready to be merged into your `master` branch. In order to do that, you’ll merge in your `iss53` branch, much like you merged in your `hotfix` branch earlier. All you have to do is check out the branch you wish to merge into and then run the `git merge` command:-->
+
+<p>Angenommen Du entscheidest dich, dass Deine Arbeit an issue #53 getan ist und Du diese mit der <code>master</code> Branch zusammenführen möchtest. Das passiert, indem Du ein <code>merge</code> in die <code>iss53</code> Branch machst, ähnlich dem <code>merge</code> mit der <code>hotfix</code> Branch von vorhin. Alles was Du machen musst, ist ein <code>checkout</code> der Branch, in die Du das <code>merge</code> machen willst und das Ausführen des Kommandos <code>git merge</code>:</p>
+<pre><code>$ git checkout master
+$ git <span class="hljs-built_in">merge</span> iss53
+Auto-merging README
+Merge made <span class="hljs-keyword">by</span> <span class="hljs-operator">the</span> <span class="hljs-string">'recursive'</span> strategy.
+ README | <span class="hljs-number">1</span> +
+ <span class="hljs-number">1</span> <span class="hljs-built_in">file</span> changed, <span class="hljs-number">1</span> insertion(+)
+</code></pre><!--This looks a bit different than the `hotfix` merge you did earlier. In this case, your development history has diverged from some older point. Because the commit on the branch you’re on isn’t a direct ancestor of the branch you’re merging in, Git has to do some work. In this case, Git does a simple three-way merge, using the two snapshots pointed to by the branch tips and the common ancestor of the two. Figure 3-16 highlights the three snapshots that Git uses to do its merge in this case.-->
+
+<p>Das sieht ein bisschen anders aus als das <code>hotfix merge</code> von vorhin. Hier läuft Deine Entwicklungshistorie auseinander. Ein <code>commit</code> auf Deine Arbeits-Branch ist kein direkter Nachfolger der Branch in die Du das <code>merge</code> gemacht hast, Git hat da einiges zu tun, es macht einen 3-Wege <code>merge</code>: es geht von den beiden <code>snapshots</code> der Branches und dem allgemeinen Nachfolger der beiden aus. Abbildung 3-16 zeigt die drei <code>snapshots</code>, die Git in diesem Fall für das <code>merge</code> verwendet.</p>
+<!--Figure 3-16. Git automatically identifies the best common-ancestor merge base for branch merging.-->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0316-tn.png" alt=""></p>
+<p>Abbildung 3-16. Git ermittelt automatisch die beste Nachfolgebasis für die Branchzusammenführung.</p>
+<!--Instead of just moving the branch pointer forward, Git creates a new snapshot that results from this three-way merge and automatically creates a new commit that points to it (see Figure 3-17). This is referred to as a merge commit and is special in that it has more than one parent.-->
+
+<p>Anstatt einfach den &#39;pointer&#39; weiterzubewegen, erstellt Git einen neuen <code>snapshot</code>, der aus dem 3-Wege &#39;merge&#39; resultiert und erzeugt einen neuen &#39;commit&#39;, der darauf verweist (siehe Abbildung 3-17). Dies wird auch als &#39;merge commit&#39; bezeichnet und ist ein Spezialfall, weil es mehr als nur ein Elternteil hat.</p>
+<!--It’s worth pointing out that Git determines the best common ancestor to use for its merge base; this is different than CVS or Subversion (before version 1.5), where the developer doing the merge has to figure out the best merge base for themselves. This makes merging a heck of a lot easier in Git than in these other systems.-->
+
+<p>Es ist wichtig herauszustellen, dass Git den besten Nachfolger für die &#39;merge&#39; Basis ermittelt, denn hierin unterscheidet es sich von CVS und Subversion (vor Version 1.5), wo der Entwickler die &#39;merge&#39; Basis selbst ermitteln muss. Damit wird das Zusammenführen in Git um einiges leichter, als in anderen Systemen.</p>
+<!--Figure 3-17. Git automatically creates a new commit object that contains the merged work.-->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0317-tn.png" alt=""></p>
+<p>Abbildung 3-17. Git erstellt automatisch ein &#39;commit&#39;, dass die zusammengeführte Arbeit enthält.</p>
+<!--Now that your work is merged in, you have no further need for the `iss53` branch. You can delete it and then manually close the ticket in your ticket-tracking system:-->
+
+<p>Jetzt da wir die Arbeit zusammengeführt haben, ist der <code>iss53</code>-Branch nicht mehr notwendig. Du kannst ihn löschen und das Ticket im Ticket-Tracking-System schliessen.</p>
+<pre><code>$ git branch <span class="hljs-operator">-d</span> iss53
+</code></pre><!--## Basic Merge Conflicts-->
+## Grundlegende Merge-Konflikte
+
+<!--Occasionally, this process doesn’t go smoothly. If you changed the same part of the same file differently in the two branches you’re merging together, Git won’t be able to merge them cleanly. If your fix for issue #53 modified the same part of a file as the `hotfix`, you’ll get a merge conflict that looks something like this:-->
+
+<p>Gelegentlich verläuft der Prozess nicht ganz so glatt. Wenn Du an den selben Stellen in den selben Dateien unterschiedlicher Branches etwas geändert hast, kann Git diese nicht sauber zusammenführen. Wenn Dein Fix an &#39;issue #53&#39; die selbe Stelle in einer Datei verändert hat, die Du auch mit <code>hotfix</code> angefasst hast, wirst Du einen &#39;merge&#39;-Konflikt erhalten, der ungefähr so aussehen könnte:</p>
+<pre><code>$ git <span class="hljs-built_in">merge</span> iss53
+Auto-merging index.html
+CONFLICT (content): Merge conflict <span class="hljs-operator">in</span> index.html
+Automatic <span class="hljs-built_in">merge</span> failed; fix conflicts <span class="hljs-operator">and</span> <span class="hljs-keyword">then</span> commit <span class="hljs-operator">the</span> <span class="hljs-built_in">result</span>.
+</code></pre><!--Git hasn’t automatically created a new merge commit. It has paused the process while you resolve the conflict. If you want to see which files are unmerged at any point after a merge conflict, you can run `git status`:-->
+
+<p>Git hat hier keinen &#39;merge commit&#39; erstellt. Es hat den Prozess gestoppt, damit Du den Konflikt beseitigen kannst. Wenn Du sehen willst, welche Dateien &#39;unmerged&#39; aufgrund eines &#39;merge&#39; Konflikts sind, benutze einfach <code>git status</code>:</p>
+<pre><code>$ git status
+<span class="hljs-keyword">On</span> branch master
+You have unmerged paths.
+  (fix conflicts <span class="hljs-keyword">and</span> run <span class="hljs-string">"git commit"</span>)
+
+Unmerged paths:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git add &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> mark resolution)
+
+        both modified:      index.html
+
+no changes added <span class="hljs-keyword">to</span> commit (<span class="hljs-keyword">use</span> <span class="hljs-string">"git add"</span> <span class="hljs-keyword">and</span>/<span class="hljs-keyword">or</span> <span class="hljs-string">"git commit -a"</span>)
+</code></pre><!--Anything that has merge conflicts and hasn’t been resolved is listed as unmerged. Git adds standard conflict-resolution markers to the files that have conflicts, so you can open them manually and resolve those conflicts. Your file contains a section that looks something like this:-->
+
+<p>Alles, was einen &#39;merge&#39; Konflikt aufweist und nicht gelöst werden konnte, wird als &#39;unmerged&#39; aufgeführt. Git fügt den betroffenen Dateien Standard-Konfliktlösungsmarker hinzu, sodass Du diese öffnen und den Konflikt manuell lösen kannst. Deine Datei enthält einen Bereich, der so aussehen könnte:</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<span class="hljs-header">&lt;div id="footer"&gt;contact : email.support@github.com&lt;/div&gt;
+=======</span>
+&lt;div id="footer"&gt;
+<span class="hljs-code">  please contact us at support@github.com</span>
+&lt;/div&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; iss53
+</code></pre><!--This means the version in HEAD (your master branch, because that was what you had checked out when you ran your merge command) is the top part of that block (everything above the `=======`), while the version in your `iss53` branch looks like everything in the bottom part. In order to resolve the conflict, you have to either choose one side or the other or merge the contents yourself. For instance, you might resolve this conflict by replacing the entire block with this:-->
+
+<p>Das heisst, die Version in HEAD (Deines &#39;master&#39;-Branches, denn der wurde per &#39;checkout&#39; aktiviert als Du das &#39;merge&#39; gemacht hast) ist der obere Teil des Blocks (alles oberhalb von &#39;=======&#39;), und die Version aus dem <code>iss53</code>-Branch sieht wie der darunter befindliche Teil aus. Um den Konflikt zu lösen, musst Du Dich entweder für einen der beiden Teile entscheiden oder Du ersetzt den Teil komplett:</p>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-property">id</span>=<span class="hljs-string">"footer"</span>&gt;
+please contact us <span class="hljs-keyword">at</span> email.support@github.com
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre><!--This resolution has a little of each section, and I’ve fully removed the `<<<<<<<`, `=======`, and `>>>>>>>` lines. After you’ve resolved each of these sections in each conflicted file, run `git add` on each file to mark it as resolved. Staging the file marks it as resolved in Git.-->
+<!--If you want to use a graphical tool to resolve these issues, you can run `git mergetool`, which fires up an appropriate visual merge tool and walks you through the conflicts:-->
+
+<p>Diese Lösung hat von beiden Teilen etwas und ich habe die Zeilen mit <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, und <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> komplett gelöscht. Nachdem Du alle problematischen Bereiche, in allen durch den Konflikt betroffenen Dateien, beseitigt hast, führe einfach <code>git add</code> für alle betroffenen Dateien aus und markieren sie damit als bereinigt. Dieses &#39;staging&#39; der Dateien markiert sie für Git als bereinigt.
+Wenn Du ein grafischen Tool zur Bereinigung benutzen willst, dann verwende <code>git mergetool</code>. Das welches ein passendes grafisches &#39;merge&#39;-Tool startet und Dich durch die Konfliktbereiche führt:</p>
+<pre><code>$ git mergetool
+
+This message is displayed because <span class="hljs-string">'merge.tool'</span> is <span class="hljs-operator">not</span> configured.
+See <span class="hljs-string">'git mergetool --tool-help'</span> <span class="hljs-operator">or</span> <span class="hljs-string">'git help config'</span> <span class="hljs-keyword">for</span> more details.
+<span class="hljs-string">'git mergetool'</span> will now attempt <span class="hljs-built_in">to</span> use <span class="hljs-constant">one</span> <span class="hljs-operator">of</span> <span class="hljs-operator">the</span> following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc3 codecompare vimdiff emerge
+Merging:
+index.html
+
+Normal <span class="hljs-built_in">merge</span> conflict <span class="hljs-keyword">for</span> <span class="hljs-string">'index.html'</span>:
+  {<span class="hljs-built_in">local</span>}: modified <span class="hljs-built_in">file</span>
+  {remote}: modified <span class="hljs-built_in">file</span>
+Hit <span class="hljs-constant">return</span> <span class="hljs-built_in">to</span> start <span class="hljs-built_in">merge</span> resolution tool (opendiff):
+</code></pre><!--If you want to use a merge tool other than the default (Git chose `opendiff` for me in this case because I ran the command on a Mac), you can see all the supported tools listed at the top after “... one of the following tools:”. Type the name of the tool you’d rather use. In Chapter 7, we’ll discuss how you can change this default value for your environment.-->
+
+<p>Wenn Du ein anderes Tool anstelle des Standardwerkzeug für ein &#39;merge&#39; verwenden möchtest (Git verwendet in meinem Fall <code>opendiff</code>, da ich auf einem Mac arbeite), dann kannst Du alle unterstützten Werkzeuge oben – unter „one of the following tools“ – aufgelistet sehen. Tippe einfach den Namen Deines gewünschten Werkzeugs ein. In Kapitel 7 besprechen wir, wie Du diesen Standardwert in Deiner Umgebung dauerhaft ändern kannst.</p>
+<!--After you exit the merge tool, Git asks you if the merge was successful. If you tell the script that it was, it stages the file to mark it as resolved for you.-->
+
+<p>Wenn Du das &#39;merge&#39; Werkzeug beendest, fragt Dich Git, ob das Zusammenführen erfolgreich war. Wenn Du mit &#39;Ja&#39; antwortest, wird das Skript diese Dateien als gelöst markieren.</p>
+<!--You can run `git status` again to verify that all conflicts have been resolved:-->
+
+<p>Du kannst <code>git status</code> erneut ausführen, um zu sehen, ob alle Konflikte gelöst sind:</p>
+<pre><code>$ git status
+<span class="hljs-keyword">On</span> branch master
+Changes <span class="hljs-keyword">to</span> be committed:
+  (<span class="hljs-keyword">use</span> <span class="hljs-string">"git reset HEAD &lt;file&gt;..."</span> <span class="hljs-keyword">to</span> unstage)
+
+        modified:   index.html
+</code></pre><!--If you’re happy with that, and you verify that everything that had conflicts has been staged, you can type `git commit` to finalize the merge commit. The commit message by default looks something like this:-->
+
+<p>Wenn Du zufrieden bist und Du geprüft hast, dass alle Konflikte beseitigt wurden, kannst Du <code>git commit</code> ausführen um den &#39;merge commit&#39; abzuschliessen. Die Standardbeschreibung für diese Art &#39;commit&#39; sieht wie folgt aus:</p>
+<pre><code>Merge branch <span class="hljs-string">'iss53'</span>
+
+Conflicts:
+  index.html
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># It looks like you may be committing a merge.</span>
+<span class="hljs-preprocessor"># If this is not correct, please remove the file</span>
+<span class="hljs-preprocessor">#       .git/MERGE_HEAD</span>
+<span class="hljs-preprocessor"># and try again.</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><!--You can modify that message with details about how you resolved the merge if you think it would be helpful to others looking at this merge in the future — why you did what you did, if it’s not obvious.-->
+
+<p>Wenn Du glaubst für zukünftige Betrachter des Commits könnte interessant sein warum Du getan hast, was Du getan hast, dann kannst Du der Commit-Beschreibung noch zusätzliche Informationen hinzufügen – sofern das nicht trivial erscheint.</p>
+<!--# Branch Management-->
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_branching/was_ist_ein_branch.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_branching/branch_management.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

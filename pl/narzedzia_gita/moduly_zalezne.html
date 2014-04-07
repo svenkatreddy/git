@@ -1,0 +1,1110 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Moduły zależne | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../narzedzia_gita/wlaczanie_innych_projektow.html" />
+        
+        
+        <link rel="prev" href="../narzedzia_gita/debugowanie_z_gitem.html" />
+        
+
+        <meta property="og:title" content="Moduły zależne | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="6.6" data-basepath=".." data-revision="1396895622000">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/narzedzia_gita/moduly_zalezne.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="pierwsze_kroki/README.html">
+                
+                <a href="../pierwsze_kroki/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Pierwsze kroki
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="pierwsze_kroki/wprowadzenie_do_kontroli_wersji.html">
+                            
+                            <a href="../pierwsze_kroki/wprowadzenie_do_kontroli_wersji.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Wprowadzenie do kontroli wersji
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="pierwsze_kroki/krotka_historia_git.html">
+                            
+                            <a href="../pierwsze_kroki/krotka_historia_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Krótka historia Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="pierwsze_kroki/podstawy_git.html">
+                            
+                            <a href="../pierwsze_kroki/podstawy_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Podstawy Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="pierwsze_kroki/instalacja_git.html">
+                            
+                            <a href="../pierwsze_kroki/instalacja_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Instalacja Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="pierwsze_kroki/wstepna_konfiguracja_git.html">
+                            
+                            <a href="../pierwsze_kroki/wstepna_konfiguracja_git.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Wstępna konfiguracja Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="pierwsze_kroki/uzyskiwanie_pomocy.html">
+                            
+                            <a href="../pierwsze_kroki/uzyskiwanie_pomocy.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Uzyskiwanie pomocy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="pierwsze_kroki/podsumowanie.html">
+                            
+                            <a href="../pierwsze_kroki/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="podstawy_gita/README.html">
+                
+                <a href="../podstawy_gita/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Podstawy Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="podstawy_gita/pierwsze_repozytorium_gita.html">
+                            
+                            <a href="../podstawy_gita/pierwsze_repozytorium_gita.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Pierwsze repozytorium Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="podstawy_gita/rejestrowanie_zmian_w_repozytorium.html">
+                            
+                            <a href="../podstawy_gita/rejestrowanie_zmian_w_repozytorium.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Rejestrowanie zmian w repozytorium
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="podstawy_gita/podglad_historii_rewizji.html">
+                            
+                            <a href="../podstawy_gita/podglad_historii_rewizji.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Podgląd historii rewizji
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="podstawy_gita/cofanie_zmian.html">
+                            
+                            <a href="../podstawy_gita/cofanie_zmian.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Cofanie zmian
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="podstawy_gita/praca_ze_zdalnym_repozytorium.html">
+                            
+                            <a href="../podstawy_gita/praca_ze_zdalnym_repozytorium.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Praca ze zdalnym repozytorium
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="podstawy_gita/tagowanie_etykietowanie.html">
+                            
+                            <a href="../podstawy_gita/tagowanie_etykietowanie.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagowanie (etykietowanie)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="podstawy_gita/sztuczki_i_kruczki.html">
+                            
+                            <a href="../podstawy_gita/sztuczki_i_kruczki.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Sztuczki i kruczki
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="podstawy_gita/podsumowanie.html">
+                            
+                            <a href="../podstawy_gita/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="galezie_gita/README.html">
+                
+                <a href="../galezie_gita/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Gałęzie Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="galezie_gita/czym_jest_galaz.html">
+                            
+                            <a href="../galezie_gita/czym_jest_galaz.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Czym jest gałąź
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="galezie_gita/podstawy_rozgaleziania_i_scalania.html">
+                            
+                            <a href="../galezie_gita/podstawy_rozgaleziania_i_scalania.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Podstawy rozgałęziania i scalania
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="galezie_gita/zarzadzanie_galeziami.html">
+                            
+                            <a href="../galezie_gita/zarzadzanie_galeziami.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Zarządzanie gałęziami
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="galezie_gita/sposoby_pracy_z_galeziami.html">
+                            
+                            <a href="../galezie_gita/sposoby_pracy_z_galeziami.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Sposoby pracy z gałęziami
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="galezie_gita/galezie_zdalne.html">
+                            
+                            <a href="../galezie_gita/galezie_zdalne.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Gałęzie zdalne
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="galezie_gita/zmiana_bazy.html">
+                            
+                            <a href="../galezie_gita/zmiana_bazy.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Zmiana bazy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="galezie_gita/podsumowanie.html">
+                            
+                            <a href="../galezie_gita/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_na_serwerze/README.html">
+                
+                <a href="../git_na_serwerze/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git na serwerze
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_na_serwerze/protokoly.html">
+                            
+                            <a href="../git_na_serwerze/protokoly.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Protokoły
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_na_serwerze/uruchomienie_git_na_serwerze.html">
+                            
+                            <a href="../git_na_serwerze/uruchomienie_git_na_serwerze.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Uruchomienie Git na serwerze
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_na_serwerze/generacja_pary_kluczy_ssh.html">
+                            
+                            <a href="../git_na_serwerze/generacja_pary_kluczy_ssh.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Generacja pary kluczy SSH
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_na_serwerze/konfiguracja_serwera.html">
+                            
+                            <a href="../git_na_serwerze/konfiguracja_serwera.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Konfiguracja serwera
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_na_serwerze/dostep_publiczny.html">
+                            
+                            <a href="../git_na_serwerze/dostep_publiczny.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Dostęp publiczny
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_na_serwerze/gitolite.html">
+                            
+                            <a href="../git_na_serwerze/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_na_serwerze/git_demon.html">
+                            
+                            <a href="../git_na_serwerze/git_demon.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Git Demon
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_na_serwerze/hosting_gita.html">
+                            
+                            <a href="../git_na_serwerze/hosting_gita.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Hosting Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_na_serwerze/podsumowanie.html">
+                            
+                            <a href="../git_na_serwerze/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="rozproszony_git/README.html">
+                
+                <a href="../rozproszony_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Rozproszony Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="rozproszony_git/rozproszone_przeplywy_pracy.html">
+                            
+                            <a href="../rozproszony_git/rozproszone_przeplywy_pracy.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Rozproszone przepływy pracy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="rozproszony_git/wgrywanie_zmian_do_projektu.html">
+                            
+                            <a href="../rozproszony_git/wgrywanie_zmian_do_projektu.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Wgrywanie zmian do projektu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="rozproszony_git/utrzymywanie_projektu.html">
+                            
+                            <a href="../rozproszony_git/utrzymywanie_projektu.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Utrzymywanie projektu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="rozproszony_git/podsumowanie.html">
+                            
+                            <a href="../rozproszony_git/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="narzedzia_gita/README.html">
+                
+                <a href="../narzedzia_gita/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Narzędzia Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="narzedzia_gita/wskazywanie_rewizji.html">
+                            
+                            <a href="../narzedzia_gita/wskazywanie_rewizji.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Wskazywanie rewizji
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="narzedzia_gita/interaktywne_uzywanie_przechowali.html">
+                            
+                            <a href="../narzedzia_gita/interaktywne_uzywanie_przechowali.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Interaktywne używanie przechowali
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="narzedzia_gita/schowek.html">
+                            
+                            <a href="../narzedzia_gita/schowek.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Schowek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="narzedzia_gita/przepisywanie_historii.html">
+                            
+                            <a href="../narzedzia_gita/przepisywanie_historii.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Przepisywanie Historii
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="narzedzia_gita/debugowanie_z_gitem.html">
+                            
+                            <a href="../narzedzia_gita/debugowanie_z_gitem.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Debugowanie z Gitem
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="narzedzia_gita/moduly_zalezne.html">
+                            
+                            <a href="../narzedzia_gita/moduly_zalezne.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Moduły zależne
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="narzedzia_gita/wlaczanie_innych_projektow.html">
+                            
+                            <a href="../narzedzia_gita/wlaczanie_innych_projektow.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Włączanie innych projektów
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="narzedzia_gita/podsumowanie.html">
+                            
+                            <a href="../narzedzia_gita/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="dostosowywanie_gita/README.html">
+                
+                <a href="../dostosowywanie_gita/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Dostosowywanie Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="dostosowywanie_gita/konfiguracja_gita.html">
+                            
+                            <a href="../dostosowywanie_gita/konfiguracja_gita.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Konfiguracja Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="dostosowywanie_gita/git_attributes.html">
+                            
+                            <a href="../dostosowywanie_gita/git_attributes.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git Attributes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="dostosowywanie_gita/git_hooks.html">
+                            
+                            <a href="../dostosowywanie_gita/git_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git Hooks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="dostosowywanie_gita/an_example_git_enforced_policy.html">
+                            
+                            <a href="../dostosowywanie_gita/an_example_git_enforced_policy.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> An Example Git-Enforced Policy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="dostosowywanie_gita/summary.html">
+                            
+                            <a href="../dostosowywanie_gita/summary.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_i_inne_systemy/README.html">
+                
+                <a href="../git_i_inne_systemy/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git i inne systemy
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_i_inne_systemy/git_i_subversion.html">
+                            
+                            <a href="../git_i_inne_systemy/git_i_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git i Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_i_inne_systemy/migracja_do_gita.html">
+                            
+                            <a href="../git_i_inne_systemy/migracja_do_gita.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Migracja do Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_i_inne_systemy/podsumowanie.html">
+                            
+                            <a href="../git_i_inne_systemy/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="mechanizmy_wewnetrzne_w_git/README.html">
+                
+                <a href="../mechanizmy_wewnetrzne_w_git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Mechanizmy wewnętrzne w Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="mechanizmy_wewnetrzne_w_git/komendy_plumbing_i_porcelain.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/komendy_plumbing_i_porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Komendy Plumbing i Porcelain
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="mechanizmy_wewnetrzne_w_git/obiekty_gita.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/obiekty_gita.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Obiekty Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="mechanizmy_wewnetrzne_w_git/referencje_w_git.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/referencje_w_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Referencje w Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="mechanizmy_wewnetrzne_w_git/spakowane_pliki_packfiles.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/spakowane_pliki_packfiles.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Spakowane pliki (packfiles)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="mechanizmy_wewnetrzne_w_git/refspec.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="mechanizmy_wewnetrzne_w_git/protokoly_transferu.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/protokoly_transferu.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Protokoły transferu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Konserwacja i Odzyskiwanie Danych
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="mechanizmy_wewnetrzne_w_git/podsumowanie.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 69.11764705882354%;min-width: 67.6470588235294%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../pierwsze_kroki/README.html" title="Pierwsze kroki" class="chapter done new-chapter" data-progress="1" style="left: 1.4705882352941178%;"></a>
+    
+        <a href="../pierwsze_kroki/wprowadzenie_do_kontroli_wersji.html" title="Wprowadzenie do kontroli wersji" class="chapter done " data-progress="1.1" style="left: 2.9411764705882355%;"></a>
+    
+        <a href="../pierwsze_kroki/krotka_historia_git.html" title="Krótka historia Git" class="chapter done " data-progress="1.2" style="left: 4.411764705882353%;"></a>
+    
+        <a href="../pierwsze_kroki/podstawy_git.html" title="Podstawy Git" class="chapter done " data-progress="1.3" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../pierwsze_kroki/instalacja_git.html" title="Instalacja Git" class="chapter done " data-progress="1.4" style="left: 7.352941176470588%;"></a>
+    
+        <a href="../pierwsze_kroki/wstepna_konfiguracja_git.html" title="Wstępna konfiguracja Git" class="chapter done " data-progress="1.5" style="left: 8.823529411764707%;"></a>
+    
+        <a href="../pierwsze_kroki/uzyskiwanie_pomocy.html" title="Uzyskiwanie pomocy" class="chapter done " data-progress="1.6" style="left: 10.294117647058824%;"></a>
+    
+        <a href="../pierwsze_kroki/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="1.7" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../podstawy_gita/README.html" title="Podstawy Gita" class="chapter done new-chapter" data-progress="2" style="left: 13.235294117647058%;"></a>
+    
+        <a href="../podstawy_gita/pierwsze_repozytorium_gita.html" title="Pierwsze repozytorium Gita" class="chapter done " data-progress="2.1" style="left: 14.705882352941176%;"></a>
+    
+        <a href="../podstawy_gita/rejestrowanie_zmian_w_repozytorium.html" title="Rejestrowanie zmian w repozytorium" class="chapter done " data-progress="2.2" style="left: 16.176470588235293%;"></a>
+    
+        <a href="../podstawy_gita/podglad_historii_rewizji.html" title="Podgląd historii rewizji" class="chapter done " data-progress="2.3" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../podstawy_gita/cofanie_zmian.html" title="Cofanie zmian" class="chapter done " data-progress="2.4" style="left: 19.11764705882353%;"></a>
+    
+        <a href="../podstawy_gita/praca_ze_zdalnym_repozytorium.html" title="Praca ze zdalnym repozytorium" class="chapter done " data-progress="2.5" style="left: 20.58823529411765%;"></a>
+    
+        <a href="../podstawy_gita/tagowanie_etykietowanie.html" title="Tagowanie (etykietowanie)" class="chapter done " data-progress="2.6" style="left: 22.058823529411764%;"></a>
+    
+        <a href="../podstawy_gita/sztuczki_i_kruczki.html" title="Sztuczki i kruczki" class="chapter done " data-progress="2.7" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../podstawy_gita/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="2.8" style="left: 25%;"></a>
+    
+        <a href="../galezie_gita/README.html" title="Gałęzie Gita" class="chapter done new-chapter" data-progress="3" style="left: 26.470588235294116%;"></a>
+    
+        <a href="../galezie_gita/czym_jest_galaz.html" title="Czym jest gałąź" class="chapter done " data-progress="3.1" style="left: 27.941176470588236%;"></a>
+    
+        <a href="../galezie_gita/podstawy_rozgaleziania_i_scalania.html" title="Podstawy rozgałęziania i scalania" class="chapter done " data-progress="3.2" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../galezie_gita/zarzadzanie_galeziami.html" title="Zarządzanie gałęziami" class="chapter done " data-progress="3.3" style="left: 30.88235294117647%;"></a>
+    
+        <a href="../galezie_gita/sposoby_pracy_z_galeziami.html" title="Sposoby pracy z gałęziami" class="chapter done " data-progress="3.4" style="left: 32.35294117647059%;"></a>
+    
+        <a href="../galezie_gita/galezie_zdalne.html" title="Gałęzie zdalne" class="chapter done " data-progress="3.5" style="left: 33.8235294117647%;"></a>
+    
+        <a href="../galezie_gita/zmiana_bazy.html" title="Zmiana bazy" class="chapter done " data-progress="3.6" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../galezie_gita/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="3.7" style="left: 36.76470588235294%;"></a>
+    
+        <a href="../git_na_serwerze/README.html" title="Git na serwerze" class="chapter done new-chapter" data-progress="4" style="left: 38.23529411764706%;"></a>
+    
+        <a href="../git_na_serwerze/protokoly.html" title="Protokoły" class="chapter done " data-progress="4.1" style="left: 39.705882352941174%;"></a>
+    
+        <a href="../git_na_serwerze/uruchomienie_git_na_serwerze.html" title="Uruchomienie Git na serwerze" class="chapter done " data-progress="4.2" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../git_na_serwerze/generacja_pary_kluczy_ssh.html" title="Generacja pary kluczy SSH" class="chapter done " data-progress="4.3" style="left: 42.64705882352941%;"></a>
+    
+        <a href="../git_na_serwerze/konfiguracja_serwera.html" title="Konfiguracja serwera" class="chapter done " data-progress="4.4" style="left: 44.11764705882353%;"></a>
+    
+        <a href="../git_na_serwerze/dostep_publiczny.html" title="Dostęp publiczny" class="chapter done " data-progress="4.5" style="left: 45.588235294117645%;"></a>
+    
+        <a href="../git_na_serwerze/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.6" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../git_na_serwerze/git_demon.html" title="Git Demon" class="chapter done " data-progress="4.7" style="left: 48.529411764705884%;"></a>
+    
+        <a href="../git_na_serwerze/hosting_gita.html" title="Hosting Gita" class="chapter done " data-progress="4.8" style="left: 50%;"></a>
+    
+        <a href="../git_na_serwerze/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="4.9" style="left: 51.470588235294116%;"></a>
+    
+        <a href="../rozproszony_git/README.html" title="Rozproszony Git" class="chapter done new-chapter" data-progress="5" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../rozproszony_git/rozproszone_przeplywy_pracy.html" title="Rozproszone przepływy pracy" class="chapter done " data-progress="5.1" style="left: 54.411764705882355%;"></a>
+    
+        <a href="../rozproszony_git/wgrywanie_zmian_do_projektu.html" title="Wgrywanie zmian do projektu" class="chapter done " data-progress="5.2" style="left: 55.88235294117647%;"></a>
+    
+        <a href="../rozproszony_git/utrzymywanie_projektu.html" title="Utrzymywanie projektu" class="chapter done " data-progress="5.3" style="left: 57.35294117647059%;"></a>
+    
+        <a href="../rozproszony_git/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="5.4" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../narzedzia_gita/README.html" title="Narzędzia Gita" class="chapter done new-chapter" data-progress="6" style="left: 60.294117647058826%;"></a>
+    
+        <a href="../narzedzia_gita/wskazywanie_rewizji.html" title="Wskazywanie rewizji" class="chapter done " data-progress="6.1" style="left: 61.76470588235294%;"></a>
+    
+        <a href="../narzedzia_gita/interaktywne_uzywanie_przechowali.html" title="Interaktywne używanie przechowali" class="chapter done " data-progress="6.2" style="left: 63.23529411764706%;"></a>
+    
+        <a href="../narzedzia_gita/schowek.html" title="Schowek" class="chapter done " data-progress="6.3" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../narzedzia_gita/przepisywanie_historii.html" title="Przepisywanie Historii" class="chapter done " data-progress="6.4" style="left: 66.17647058823529%;"></a>
+    
+        <a href="../narzedzia_gita/debugowanie_z_gitem.html" title="Debugowanie z Gitem" class="chapter done " data-progress="6.5" style="left: 67.6470588235294%;"></a>
+    
+        <a href="../narzedzia_gita/moduly_zalezne.html" title="Moduły zależne" class="chapter done " data-progress="6.6" style="left: 69.11764705882354%;"></a>
+    
+        <a href="../narzedzia_gita/wlaczanie_innych_projektow.html" title="Włączanie innych projektów" class="chapter  " data-progress="6.7" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../narzedzia_gita/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="6.8" style="left: 72.05882352941177%;"></a>
+    
+        <a href="../dostosowywanie_gita/README.html" title="Dostosowywanie Gita" class="chapter  new-chapter" data-progress="7" style="left: 73.52941176470588%;"></a>
+    
+        <a href="../dostosowywanie_gita/konfiguracja_gita.html" title="Konfiguracja Gita" class="chapter  " data-progress="7.1" style="left: 75%;"></a>
+    
+        <a href="../dostosowywanie_gita/git_attributes.html" title="Git Attributes" class="chapter  " data-progress="7.2" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../dostosowywanie_gita/git_hooks.html" title="Git Hooks" class="chapter  " data-progress="7.3" style="left: 77.94117647058823%;"></a>
+    
+        <a href="../dostosowywanie_gita/an_example_git_enforced_policy.html" title="An Example Git-Enforced Policy" class="chapter  " data-progress="7.4" style="left: 79.41176470588235%;"></a>
+    
+        <a href="../dostosowywanie_gita/summary.html" title="Summary" class="chapter  " data-progress="7.5" style="left: 80.88235294117646%;"></a>
+    
+        <a href="../git_i_inne_systemy/README.html" title="Git i inne systemy" class="chapter  new-chapter" data-progress="8" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../git_i_inne_systemy/git_i_subversion.html" title="Git i Subversion" class="chapter  " data-progress="8.1" style="left: 83.82352941176471%;"></a>
+    
+        <a href="../git_i_inne_systemy/migracja_do_gita.html" title="Migracja do Gita" class="chapter  " data-progress="8.2" style="left: 85.29411764705883%;"></a>
+    
+        <a href="../git_i_inne_systemy/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="8.3" style="left: 86.76470588235294%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/README.html" title="Mechanizmy wewnętrzne w Git" class="chapter  new-chapter" data-progress="9" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/komendy_plumbing_i_porcelain.html" title="Komendy Plumbing i Porcelain" class="chapter  " data-progress="9.1" style="left: 89.70588235294117%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/obiekty_gita.html" title="Obiekty Gita" class="chapter  " data-progress="9.2" style="left: 91.17647058823529%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/referencje_w_git.html" title="Referencje w Git" class="chapter  " data-progress="9.3" style="left: 92.6470588235294%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/spakowane_pliki_packfiles.html" title="Spakowane pliki (packfiles)" class="chapter  " data-progress="9.4" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/refspec.html" title="Refspec" class="chapter  " data-progress="9.5" style="left: 95.58823529411765%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/protokoly_transferu.html" title="Protokoły transferu" class="chapter  " data-progress="9.6" style="left: 97.05882352941177%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html" title="Konserwacja i Odzyskiwanie Danych" class="chapter  " data-progress="9.7" style="left: 98.52941176470588%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_432">
+                    
+                        <h1 id="modu-y-zale-ne">Moduły zależne</h1>
+<!-- # Submodules -->
+
+<p>Często podczas pracy na jednym projektem, musisz włączyć inny projekt do niego. Być może będzie to biblioteka stworzona przez innych programistów, lub część projektu rozwijana niezależnie, którą można użyć w kilku innych projektach. W takiej sytuacji powstaje problem: chcesz nadal traktować te projekty jako oddzielne, ale mieć możliwość użycia jednego z nich w drugim.</p>
+<!-- It often happens that while working on one project, you need to use another project from within it. Perhaps it’s a library that a third party developed or that you’re developing separately and using in multiple parent projects. A common issue arises in these scenarios: you want to be able to treat the two projects as separate yet still be able to use one from within the other. -->
+
+<p>Sprawdźmy przykład. Załóżmy, że tworzysz stronę wykorzystującą kanały RSS/Atom. Jednak zamiast stworzenia własnego kodu który będzie się tym zajmował, decydujesz się na użycie zewnętrznej biblioteki. Będziesz musiał zainstalować ją z pakietu dostarczonego przez CPAN lub pakietu Ruby gem, lub skopiować jej kod źródłowy do swojego projektu. Problem z włączaniem biblioteki z zewnętrznego pakietu jest taki, że ciężko jest dostosować ją w jakikolwiek sposób oraz ciężko wdrożyć, ponieważ każdy użytkownik ma musi mieć taką bibliotekę zainstalowaną. Problem z włączaniem kodu biblioteki do własnego repozytorium jest taki, że po wprowadzeniu w niej jakichkolwiek zmian ciężko jest je włączyć, gdy kod biblioteki rozwinął się.</p>
+<!-- Here’s an example. Suppose you’re developing a web site and creating Atom feeds. Instead of writing your own Atom-generating code, you decide to use a library. You’re likely to have to either include this code from a shared library like a CPAN install or Ruby gem, or copy the source code into your own project tree. The issue with including the library is that it’s difficult to customize the library in any way and often more difficult to deploy it, because you need to make sure every client has that library available. The issue with vendoring the code into your own project is that any custom changes you make are difficult to merge when upstream changes become available. -->
+
+<p>Git rozwiązuje te problemy przez użycie modułów zależnych. Pozwalają one na trzymanie repozytorium Gita w podkatalogu znajdującym się w innym repozytorium. Pozwala to na sklonowanie repozytorium do swojego projektu i utrzymywanie zmian niezależnie. </p>
+<!-- Git addresses this issue using submodules. Submodules allow you to keep a Git repository as a subdirectory of another Git repository. This lets you clone another repository into your project and keep your commits separate. -->
+
+<h2 id="rozpocz-cie-prac-z-modu-ami-zale-nymi">Rozpoczęcie prac z modułami zależnymi</h2>
+<!-- ## Starting with Submodules -->
+
+<p>Załóżmy, że chcesz dodać bibliotekę Rack (biblioteka obsługująca serwer stron www napisana w Ruby) do swojego projektu, być może wprowadzić jakieś własne zmiany, ale nadal chcesz włączać zmiany wprowadzane w jej oryginalnym repozytorium. Pierwszą rzeczą jaką powinieneś zrobić jest sklonowanie zewnętrznego repozytorium do własnego podkatalogu. Dodajesz zewnętrzne projekty jako moduły zależne, za pomocą komendy <code>git submodule add</code>:</p>
+<!-- Suppose you want to add the Rack library (a Ruby web server gateway interface) to your project, possibly maintain your own changes to it, but continue to merge in upstream changes. The first thing you should do is clone the external repository into your subdirectory. You add external projects as submodules with the `git submodule add` command: -->
+
+<pre><code>$ git submodule <span class="hljs-keyword">add</span> git://github<span class="hljs-preprocessor">.com</span>/chneukirchen/rack<span class="hljs-preprocessor">.git</span> rack
+Initialized empty Git repository <span class="hljs-keyword">in</span> /opt/subtest/rack/<span class="hljs-preprocessor">.git</span>/
+<span class="hljs-label">remote:</span> Counting objects: <span class="hljs-number">3181</span>, done.
+<span class="hljs-label">remote:</span> Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">1534</span>/<span class="hljs-number">1534</span>), done.
+<span class="hljs-label">remote:</span> Total <span class="hljs-number">3181</span> (delta <span class="hljs-number">1951</span>), reused <span class="hljs-number">2623</span> (delta <span class="hljs-number">1603</span>)
+Receiving objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3181</span>/<span class="hljs-number">3181</span>), <span class="hljs-number">675.42</span> KiB | <span class="hljs-number">422</span> KiB/s, done.
+Resolving deltas: <span class="hljs-number">100</span>% (<span class="hljs-number">1951</span>/<span class="hljs-number">1951</span>), done.
+</code></pre><p>Masz teraz projekt Rack w podkatalogu o nazwie <code>rack</code>, który znajduje się w Twoim projekcie. Możesz przejść do tego podkatalogu, wprowadzić zmiany, dodać swoje własne zdalne repozytorium do którego będziesz mógł wypychać zmiany, pobierać i włączać zmiany z oryginalnego repozytorium, itd. Jeżeli uruchomisz komendę <code>git status</code> zaraz po dodaniu modułu, zobaczysz dwie rzeczy:</p>
+<!-- Now you have the Rack project under a subdirectory named `rack` within your project. You can go into that subdirectory, make changes, add your own writable remote repository to push your changes into, fetch and merge from the original repository, and more. If you run `git status` right after you add the submodule, you see two things: -->
+
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#      new file:   .gitmodules</span>
+<span class="hljs-preprocessor">#      new file:   rack</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Po pierwsze zobaczysz plik <code>.gitmodules</code>. Jest to plik konfiguracyjny, który przechowuje mapowania pomiędzy adresami URL projektów i lokalnymi podkatalogami do których je pobrałeś:</p>
+<!-- First you notice the `.gitmodules` file. This is a configuration file that stores the mapping between the project’s URL and the local subdirectory you’ve pulled it into: -->
+
+<pre><code>$ cat <span class="hljs-preprocessor">.gitmodules</span>
+[submodule <span class="hljs-string">"rack"</span>]
+      path = rack
+      url = git://github<span class="hljs-preprocessor">.com</span>/chneukirchen/rack<span class="hljs-preprocessor">.git</span>
+</code></pre><p>Jeżeli masz więcej modułów zależnych, będziesz miał więcej wpisów w tym pliku. Warto zaznaczysz, że ten plik jest również obsługiwany przez system kontroli wersji razem z innymi plikami, podobnie do <code>.gitignore</code>. Jest wypychany i pobierany razem z resztą projektu. Z niego inne osoby pobierające ten projekt dowiedzą sie skąd pobrać dodatkowe moduły. </p>
+<!-- If you have multiple submodules, you’ll have multiple entries in this file. It’s important to note that this file is version-controlled with your other files, like your `.gitignore` file. It’s pushed and pulled with the rest of your project. This is how other people who clone this project know where to get the submodule projects from. -->
+
+<p>Inny wynik komendy <code>git status</code> ma katalog rack. Jeżeli uruchomisz <code>git diff</code> na nim, zobaczysz coś interesującego:</p>
+<!-- The other listing in the `git status` output is the rack entry. If you run `git diff` on that, you see something interesting: -->
+
+<pre><code>$ git diff <span class="hljs-comment">--cached rack</span>
+diff <span class="hljs-comment">--git a/rack b/rack</span>
+<span class="hljs-built_in">new</span> <span class="hljs-built_in">file</span> mode <span class="hljs-number">160000</span>
+index <span class="hljs-number">0000000.</span><span class="hljs-number">.08</span>d709f
+<span class="hljs-comment">--- /dev/null</span>
++++ b/rack
+@@ -<span class="hljs-number">0</span>,<span class="hljs-number">0</span> +<span class="hljs-number">1</span> @@
++Subproject commit <span class="hljs-number">08</span>d709f78b8c5b0fbeb7821e37fa53e69afcf433
+</code></pre><p>Chociaż <code>rack</code> jest podkatalogiem w Twoim katalogu roboczym, Git widzi go jako moduł zależny i nie śledzi jego zawartości, jeżeli nie jesteś w tym katalogu. Zamiast tego, Git śledzi każdy commit z tego repozytorium. Kiedy zrobisz jakieś zmiany i wykonasz na nich commit w tym podkatalogu, projekt główny </p>
+<!-- Although `rack` is a subdirectory in your working directory, Git sees it as a submodule and doesn’t track its contents when you’re not in that directory. Instead, Git records it as a particular commit from that repository. When you make changes and commit in that subdirectory, the superproject notices that the HEAD there has changed and records the exact commit you’re currently working off of; that way, when others clone this project, they can re-create the environment exactly. -->
+
+<p>Ważnym jest, aby wskazać, że moduły zależne: zapisujesz dokładnie na jakimś etapie rozwoju (na dokładnym commicie). Nie możesz dodać modułu zależnego, który będzie wskazywał na gałąź <code>master</code> lub jakąś inną symboliczne odniesienie.</p>
+<!-- This is an important point with submodules: you record them as the exact commit they’re at. You can’t record a submodule at `master` or some other symbolic reference. -->
+
+<p>Jak commitujesz, zobaczysz coś podobnego do:</p>
+<!-- When you commit, you see something like this: -->
+
+<pre><code>$ git <span class="hljs-operator"><span class="hljs-keyword">commit</span> -m <span class="hljs-string">'first commit with submodule rack'</span>
+[master <span class="hljs-number">0550271</span>] <span class="hljs-keyword">first</span> <span class="hljs-keyword">commit</span> <span class="hljs-keyword">with</span> submodule rack
+ <span class="hljs-number">2</span> files changed, <span class="hljs-number">4</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+ <span class="hljs-keyword">create</span> mode <span class="hljs-number">100644</span> .gitmodules
+ <span class="hljs-keyword">create</span> mode <span class="hljs-number">160000</span> rack</span>
+</code></pre><p>Zauważ tryb 160000 dla wpisu dotyczącego rack. Jest to specjalny tryb w Gitcie, który oznacza tyle, że zapisujesz commmit jako wpis dotyczący katalogu, a nie podkatalogu czy pliku. </p>
+<!-- Notice the 160000 mode for the rack entry. That is a special mode in Git that basically means you’re recording a commit as a directory entry rather than a subdirectory or a file. -->
+
+<p>Możesz traktować katalog <code>rack</code> jako oddzielny projekt i od czasu do czasu aktualizować jego zawartość do ostatniej zmiany w nim. Wszystkie komendy Gita działają niezależnie w każdym z dwóch katalogów:</p>
+<!-- You can treat the `rack` directory as a separate project and then update your superproject from time to time with a pointer to the latest commit in that subproject. All the Git commands work independently in the two directories: -->
+
+<pre><code>$ git log -1
+<span class="hljs-operator"><span class="hljs-keyword">commit</span> <span class="hljs-number">0550271328</span>a0038865aad6331e620cd7238601bb
+Author: Scott Chacon &lt;schacon@gmail.com&gt;
+<span class="hljs-keyword">Date</span>:   Thu Apr <span class="hljs-number">9</span> <span class="hljs-number">09</span>:<span class="hljs-number">03</span>:<span class="hljs-number">56</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    <span class="hljs-keyword">first</span> <span class="hljs-keyword">commit</span> <span class="hljs-keyword">with</span> submodule rack
+$ cd rack/
+$ git log -<span class="hljs-number">1</span>
+<span class="hljs-keyword">commit</span> <span class="hljs-number">08</span>d709f78b8c5b0fbeb7821e37fa53e69afcf433
+Author: Christian Neukirchen &lt;chneukirchen@gmail.com&gt;
+<span class="hljs-keyword">Date</span>:   Wed Mar <span class="hljs-number">25</span> <span class="hljs-number">14</span>:<span class="hljs-number">49</span>:<span class="hljs-number">04</span> <span class="hljs-number">2009</span> +<span class="hljs-number">0100</span>
+
+    Document version change</span>
+</code></pre><h2 id="klonowanie-projektu-z-modu-ami-zale-nymi">Klonowanie projektu z modułami zależnymi</h2>
+<!-- ## Cloning a Project with Submodules -->
+
+<p>Sklonujesz tym razem projekt, który ma sobie moduł zależny. Kiedy pobierzesz taki projekt, otrzymasz katalogi które zawierają moduły zależne, ale nie będzie w nich żadnych plików: </p>
+<!-- Here you’ll clone a project with a submodule in it. When you receive such a project, you get the directories that contain submodules, but none of the files yet: -->
+
+<pre><code>$ git clone git://github<span class="hljs-preprocessor">.com</span>/schacon/myproject<span class="hljs-preprocessor">.git</span>
+Initialized empty Git repository <span class="hljs-keyword">in</span> /opt/myproject/<span class="hljs-preprocessor">.git</span>/
+<span class="hljs-label">remote:</span> Counting objects: <span class="hljs-number">6</span>, done.
+<span class="hljs-label">remote:</span> Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">4</span>/<span class="hljs-number">4</span>), done.
+<span class="hljs-label">remote:</span> Total <span class="hljs-number">6</span> (delta <span class="hljs-number">0</span>), reused <span class="hljs-number">0</span> (delta <span class="hljs-number">0</span>)
+Receiving objects: <span class="hljs-number">100</span>% (<span class="hljs-number">6</span>/<span class="hljs-number">6</span>), done.
+$ cd myproject
+$ ls -l
+total <span class="hljs-number">8</span>
+-rw-r--r--  <span class="hljs-number">1</span> schacon  admin   <span class="hljs-number">3</span> Apr  <span class="hljs-number">9</span> <span class="hljs-number">09</span>:<span class="hljs-number">11</span> README
+drwxr-xr-<span class="hljs-built_in">x</span>  <span class="hljs-number">2</span> schacon  admin  <span class="hljs-number">68</span> Apr  <span class="hljs-number">9</span> <span class="hljs-number">09</span>:<span class="hljs-number">11</span> rack
+$ ls rack/
+$
+</code></pre><p>Powstał katalog <code>rack</code>, ale pusty. Musisz uruchomić dwie komendy: <code>git submodule init</code>, aby zainicjować lokalny plik konfiguracyjny, oraz <code>git submodule update</code>, aby pobrać wszystkie dane z tego projektu i nałożyć zmiany dotyczące tego modułu z projektu głównego:</p>
+<!-- The `rack` directory is there, but empty. You must run two commands: `git submodule init` to initialize your local configuration file, and `git submodule update` to fetch all the data from that project and check out the appropriate commit listed in your superproject: -->
+
+<pre><code>$ git submodule init
+Submodule <span class="hljs-string">'rack'</span> (git:<span class="hljs-comment">//github.com/chneukirchen/rack.git) registered for path 'rack'</span>
+$ git submodule update
+Initialized empty Git repository <span class="hljs-keyword">in</span> /opt/myproject/rack/.git/
+remote: Counting objects: <span class="hljs-number">3181</span>, done.
+remote: Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">1534</span>/<span class="hljs-number">1534</span>), done.
+remote: Total <span class="hljs-number">3181</span> (delta <span class="hljs-number">1951</span>), reused <span class="hljs-number">2623</span> (delta <span class="hljs-number">1603</span>)
+Receiving objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3181</span>/<span class="hljs-number">3181</span>), <span class="hljs-number">675.42</span> KiB | <span class="hljs-number">173</span> KiB/s, done.
+Resolving deltas: <span class="hljs-number">100</span>% (<span class="hljs-number">1951</span>/<span class="hljs-number">1951</span>), done.
+Submodule path <span class="hljs-string">'rack'</span>: <span class="hljs-keyword">checked</span> <span class="hljs-keyword">out</span> <span class="hljs-string">'08d709f78b8c5b0fbeb7821e37fa53e69afcf433'</span>
+</code></pre><p>Teraz Twój podkatalog <code>rack</code> jest w dokładnie takim samym stanie w jakim był, gdy commitowałeś go wcześniej. Jeżeli inny programista zrobi zmiany w kodzie rack i zapisze je, a Ty pobierzesz je i włączysz, otrzymasz dziwny wynik:</p>
+<!-- Now your `rack` subdirectory is at the exact state it was in when you committed earlier. If another developer makes changes to the rack code and commits, and you pull that reference down and merge it in, you get something a bit odd: -->
+
+<pre><code>$ git merge origin/master
+Updating <span class="hljs-number">0550271.</span><span class="hljs-number">.85</span>a3eee
+Fast forward
+ rack |    <span class="hljs-number">2</span> +-
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+[master*]$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#      modified:   rack</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Włączyłeś zmiany które były po prostu przesunięciem wskaźnika ostatniej wersji dla tego modułu; jednak kod nie został zaktualizowany, więc wygląda to trochę tak, jakbyś miał niespójne dane w swoim katalogu roboczym:</p>
+<!-- You merged in what is basically a change to the pointer for your submodule; but it doesn’t update the code in the submodule directory, so it looks like you have a dirty state in your working directory: -->
+
+<pre><code>$ git diff
+diff --git a/rack b/rack
+index 6c5e70b..08d709f 160000
+<span class="hljs-header">--- a/rack</span>
+<span class="hljs-header">+++ b/rack</span>
+@@ -1 +1 @@
+<span class="hljs-deletion">-Subproject commit 6c5e70b984a60b3cecd395edd5b48a7575bf58e0</span>
+<span class="hljs-addition">+Subproject commit 08d709f78b8c5b0fbeb7821e37fa53e69afcf433</span>
+</code></pre><p>Dzieje się tak dlatego, ponieważ wskaźnik który masz dla modułu zależnego, nie istnieje w jego katalogu. Aby to poprawić, musisz uruchomić <code>git submodule update</code> ponownie:</p>
+<!-- This is the case because the pointer you have for the submodule isn’t what is actually in the submodule directory. To fix this, you must run `git submodule update` again: -->
+
+<pre><code>$ git submodule update
+remote: Counting objects: <span class="hljs-number">5</span>, <span class="hljs-keyword">done</span>.
+remote: Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3</span>/<span class="hljs-number">3</span>), <span class="hljs-keyword">done</span>.
+remote: Total <span class="hljs-number">3</span> (delta <span class="hljs-number">1</span>), reused <span class="hljs-number">2</span> (delta <span class="hljs-number">0</span>)
+Unpacking objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3</span>/<span class="hljs-number">3</span>), <span class="hljs-keyword">done</span>.
+From git@github.com:schacon/rack
+   <span class="hljs-number">08</span>d709f.<span class="hljs-number">.6</span>c5e70b  master     -&gt; origin/master
+Submodule path <span class="hljs-string">'rack'</span>: checked out <span class="hljs-string">'6c5e70b984a60b3cecd395edd5b48a7575bf58e0'</span>
+</code></pre><p>Musisz wykonywać tę komendę, za każdym razem gdy ściągniesz zmiany z modułu do swojego projektu. Trochę to dziwne, ale działa.</p>
+<!-- You have to do this every time you pull down a submodule change in the main project. It’s strange, but it works. -->
+
+<p>Często zdarza się natrafić na problem związany z tym, że programista wprowadza zmiany lokalnie w jakimś module, ale nie wypycha ich na publiczny serwer. Następnie commituje on wskaźnik do tej nie publicznej zmiany i wypycha do głównego projektu. Kiedy inni programiści będą chcieli uruchomić <code>git submodule update</code>, komenda ta nie będzie mogła znaleźć commita na który zmiana wskazuje, ponieważ istnieje ona tylko na komputerze tamtego programisty. Jeżeli tak się stanie, zobaczysz błąd podobny do:</p>
+<!-- One common problem happens when a developer makes a change locally in a submodule but doesn’t push it to a public server. Then, they commit a pointer to that non-public state and push up the superproject. When other developers try to run `git submodule update`, the submodule system can’t find the commit that is referenced, because it exists only on the first developer’s system. If that happens, you see an error like this: -->
+
+<pre><code>$ git submodule <span class="hljs-operator"><span class="hljs-keyword">update</span>
+fatal: reference isn’t a tree: <span class="hljs-number">6</span>c5e70b984a60b3cecd395edd5b48a7575bf58e0
+Unable <span class="hljs-keyword">to</span> checkout <span class="hljs-string">'6c5e70b984a60b3cecd395edd5ba7575bf58e0'</span> <span class="hljs-keyword">in</span> submodule path <span class="hljs-string">'rack'</span></span>
+</code></pre><p>Musisz dojść do tego, kto ostatnio zmieniał ten moduł: </p>
+<!-- You have to see who last changed the submodule: -->
+
+<pre><code>$ git log -1 rack
+<span class="hljs-operator"><span class="hljs-keyword">commit</span> <span class="hljs-number">85</span>a3eee996800fcfa91e2119372dd4172bf76678
+Author: Scott Chacon &lt;schacon@gmail.com&gt;
+<span class="hljs-keyword">Date</span>:   Thu Apr <span class="hljs-number">9</span> <span class="hljs-number">09</span>:<span class="hljs-number">19</span>:<span class="hljs-number">14</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    added a submodule reference I will never make <span class="hljs-keyword">public</span>. hahahahaha!</span>
+</code></pre><p>W takiej sytuacji piszesz do niego e-mail i mówisz mu co o tym sądzisz.</p>
+<!-- Then, you e-mail that guy and yell at him. -->
+
+<h2 id="superprojekty">Superprojekty</h2>
+<!-- ## Superprojects -->
+
+<p>Czasami, programiści chcą pobrać tylko część podkatalogów z dużego projektu, w zależności czym ich zespół się zajmuje. Jest to częste, jeżeli używałeś CVS lub Subversion, gdzie miałeś zdefiniowany moduł lub kolekcję podkatalogów i chciałbyś trzymać się tego sposobu pracy.</p>
+<!-- Sometimes, developers want to get a combination of a large project’s subdirectories, depending on what team they’re on. This is common if you’re coming from CVS or Subversion, where you’ve defined a module or collection of subdirectories, and you want to keep this type of workflow. -->
+
+<p>Można to łatwo osiągnąć w Gitcie, tworząc dla każdego podkatalogu osobne repozytorium Gita, a następnie tworząc superprojekt który zawiera różne moduły. Zyskiem z takiego podejścia jest to, że możesz dokładniej określić zależności między projektami za pomocą tagów i gałęzi w superprojekcie.</p>
+<!-- A good way to do this in Git is to make each of the subdirectories a separate Git repository and then create superproject Git repositories that contain multiple submodules. A benefit of this approach is that you can more specifically define the relationships between the projects with tags and branches in the superprojects. -->
+
+<h2 id="problemy-z-modu-ami-zale-nymi">Problemy z modułami zależnymi</h2>
+<!-- ## Issues with Submodules -->
+
+<p>Używanie modułów zależnych wiąże się również z pewnymi problemami. Po pierwsze musisz być ostrożny podczas pracy w katalogu modułu. Kiedy uruchamiasz komendę <code>git submodule update</code>, sprawdza ona konkretną wersję projektu, ale nie w gałęzi. Nazywane to jest posiadaniem odłączonego HEADa - co oznacza, że HEAD wskazuje bezpośrednio na commit, a nie na symboliczną referencję. Problem w tym, że zazwyczaj nie chcesz pracować w takim środowisku, bo łatwo o utratę zmian. Jeżeli zrobisz po raz pierwszy <code>submodule update</code>, wprowadzisz zmiany w tym module bez tworzenia nowej gałęzi do tego, i potem ponownie uruchomisz <code>git submodule update</code> z poziomu projektu głównego bez commitowania ich, Git nadpisze te zmiany bez żadnej informacji zwrotnej. Technicznie rzecz biorąc nie stracisz swoich zmian, ale nie będziesz miał gałęzi która wskazuje na nie, będzie więc trudno je odzyskać.</p>
+<!-- Using submodules isn’t without hiccups, however. First, you must be relatively careful when working in the submodule directory. When you run `git submodule update`, it checks out the specific version of the project, but not within a branch. This is called having a detached HEAD — it means the HEAD file points directly to a commit, not to a symbolic reference. The issue is that you generally don’t want to work in a detached HEAD environment, because it’s easy to lose changes. If you do an initial `submodule update`, commit in that submodule directory without creating a branch to work in, and then run `git submodule update` again from the superproject without committing in the meantime, Git will overwrite your changes without telling you.  Technically you won’t lose the work, but you won’t have a branch pointing to it, so it will be somewhat difficult to retrieve. -->
+
+<p>Aby uniknąć tego problemu, stwórz gałąź gdy pracujesz w katalogu modułu za pomocą <code>git checkout -b work</code> lub podobnej komendy. Kiedy zrobisz aktualizację modułu kolejny raz, cofnie on Twoje zmiany, ale przynajmniej masz wskaźnik dzięki któremu możesz do nich dotrzeć. </p>
+<!-- To avoid this issue, create a branch when you work in a submodule directory with `git checkout -b work` or something equivalent. When you do the submodule update a second time, it will still revert your work, but at least you have a pointer to get back to. -->
+
+<p>Przełączanie gałęzi które mają w sobie moduły zależne może również być kłopotliwe. Gdy stworzysz nową gałąź, dodanie w niej moduł, a następnie przełączysz się z powrotem na gałąź która nie zawiera tego modułu, będziesz miał nadal katalog w którym jest moduł, ale nie będzie on śledzony:</p>
+<!-- Switching branches with submodules in them can also be tricky. If you create a new branch, add a submodule there, and then switch back to a branch without that submodule, you still have the submodule directory as an untracked directory: -->
+
+<pre><code>$ git checkout -b rack
+Switched to a new branch <span class="hljs-string">"rack"</span>
+$ git submodule add git@github.com:schacon/rack.git rack
+Initialized empty Git repository <span class="hljs-keyword">in</span> /opt/myproj/rack/.git/
+<span class="hljs-keyword">...</span>
+Receiving objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3184</span>/<span class="hljs-number">3184</span>), <span class="hljs-number">677.42</span> KiB | <span class="hljs-number">34</span> KiB/s, done.
+Resolving deltas: <span class="hljs-number">100</span>% (<span class="hljs-number">1952</span>/<span class="hljs-number">1952</span>), done.
+$ git commit -am <span class="hljs-string">'added rack submodule'</span>
+[rack cc49a69] added rack submodule
+ <span class="hljs-number">2</span> files changed, <span class="hljs-number">4</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+ create mode <span class="hljs-number">100644</span> .gitmodules
+ create mode <span class="hljs-number">160000</span> rack
+$ git checkout master
+Switched to branch <span class="hljs-string">"master"</span>
+$ git status
+<span class="hljs-comment"># On branch master</span>
+<span class="hljs-comment"># Untracked files:</span>
+<span class="hljs-comment">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#      rack/</span>
+</code></pre><p>Musisz albo przenieść go gdzieś lub usunąć, będziesz musiał ponownie go sklonować po przełączeniu </p>
+<!-- You have to either move it out of the way or remove it, in which case you have to clone it again when you switch back—and you may lose local changes or branches that you didn’t push up. -->
+
+<p>Ostatnim głównym problemem z którym ludzie się spotykają, jest sytuacja w której, chcemy przejść z podkatalogów na moduły zależne. Jeżeli miałeś dodane pliki w swoim projekcie, a następnie chciałbyś przenieść część z nich do osobnego modułu, musisz być ostrożny bo inaczej Git będzie sprawiał kłopoty. Załóżmy że masz pliki związane z rack w podkatalogu swojego projektu i chcesz przenieść je do osobnego modułu. Jeżeli usuniesz ten podkatalog i uruchomisz <code>submodule add</code>, Git pokaże błąd:</p>
+<!-- The last main caveat that many people run into involves switching from subdirectories to submodules. If you’ve been tracking files in your project and you want to move them out into a submodule, you must be careful or Git will get angry at you. Assume that you have the rack files in a subdirectory of your project, and you want to switch it to a submodule. If you delete the subdirectory and then run `submodule add`, Git yells at you: -->
+
+<pre><code><span class="hljs-variable">$ </span>rm -<span class="hljs-constant">Rf</span> rack/
+<span class="hljs-variable">$ </span>git submodule add git<span class="hljs-variable">@github</span>.<span class="hljs-symbol">com:</span>schacon/rack.git rack
+<span class="hljs-string">'rack'</span> already exists <span class="hljs-keyword">in</span> the index
+</code></pre><p>Musisz najpierw usunąć z przechowalni katalog <code>rack</code>. Następnie możesz dodać moduł:</p>
+<!-- You have to unstage the `rack` directory first. Then you can add the submodule: -->
+
+<pre><code>$ git rm -r rack
+$ git submodule <span class="hljs-keyword">add</span> git@github<span class="hljs-preprocessor">.com</span>:schacon/rack<span class="hljs-preprocessor">.git</span> rack
+Initialized empty Git repository <span class="hljs-keyword">in</span> /opt/testsub/rack/<span class="hljs-preprocessor">.git</span>/
+<span class="hljs-label">remote:</span> Counting objects: <span class="hljs-number">3184</span>, done.
+<span class="hljs-label">remote:</span> Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">1465</span>/<span class="hljs-number">1465</span>), done.
+<span class="hljs-label">remote:</span> Total <span class="hljs-number">3184</span> (delta <span class="hljs-number">1952</span>), reused <span class="hljs-number">2770</span> (delta <span class="hljs-number">1675</span>)
+Receiving objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3184</span>/<span class="hljs-number">3184</span>), <span class="hljs-number">677.42</span> KiB | <span class="hljs-number">88</span> KiB/s, done.
+Resolving deltas: <span class="hljs-number">100</span>% (<span class="hljs-number">1952</span>/<span class="hljs-number">1952</span>), done.
+</code></pre><p>Teraz załóżmy że zrobiłeś to w gałęzi. Jeżeli spróbujesz przełączyć się ponownie na gałąź w której te pliki znajdują się w projekcie a nie w module zależnym - otrzymasz błąd:</p>
+<!-- Now suppose you did that in a branch. If you try to switch back to a branch where those files are still in the actual tree rather than a submodule — you get this error: -->
+
+<pre><code>$ git checkout master
+error: Untracked working tree <span class="hljs-built_in">file</span> <span class="hljs-string">'rack/AUTHORS'</span> would be overwritten <span class="hljs-keyword">by</span> <span class="hljs-built_in">merge</span>.
+</code></pre><p>Musisz przenieść gdzieś katalogu modułu <code>rack</code>, zanim będziesz mógł zmienić na gałąź która go nie ma:</p>
+<!-- You have to move the `rack` submodule directory out of the way before you can switch to a branch that doesn’t have it: -->
+
+<pre><code><span class="hljs-variable">$ </span>mv rack /tmp/
+<span class="hljs-variable">$ </span>git checkout master
+<span class="hljs-constant">Switched</span> to branch <span class="hljs-string">"master"</span>
+<span class="hljs-variable">$ </span>ls
+<span class="hljs-constant">README</span>    rack
+</code></pre><p>Potem, gdy przełączysz się z powrotem, otrzymasz pusty katalog <code>rack</code>. Musisz albo uruchomić <code>git submodule update</code> w celu ponownego pobrania, lub przenieść katalog <code>/tmp/rack</code> z powrotem do pustego katalogu.</p>
+<!-- Then, when you switch back, you get an empty `rack` directory. You can either run `git submodule update` to reclone, or you can move your `/tmp/rack` directory back into the empty directory. -->
+
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../narzedzia_gita/debugowanie_z_gitem.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../narzedzia_gita/wlaczanie_innych_projektow.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

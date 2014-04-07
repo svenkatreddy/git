@@ -1,0 +1,480 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Viewing the Commit History | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../_git/undoing_things.html" />
+        
+        
+        <link rel="prev" href="../_git/____repository.html" />
+        
+
+        <meta property="og:title" content="Viewing the Commit History | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.3" data-basepath=".." data-revision="1396895597415">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/_git/viewing_the_commit_history.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="_/README.html">
+                
+                <a href="../_/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> الإستعداد للبدء!
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="_/__version_control.html">
+                            
+                            <a href="../_/__version_control.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> إدارة الإصدارات (Version Control)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="_/___git.html">
+                            
+                            <a href="../_/___git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> لمحة تاريخية عن Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="_/_git.html">
+                            
+                            <a href="../_/_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> أوليات Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="_/_git.html">
+                            
+                            <a href="../_/_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> تصيب Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="_/_git__.html">
+                            
+                            <a href="../_/_git__.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> إعداد Git لأول مرة
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="_/__.html">
+                            
+                            <a href="../_/__.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> الحصول على المساعدة
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="_/.html">
+                            
+                            <a href="../_/.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> الملخص
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="_git/README.html">
+                
+                <a href="../_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> مبادئ Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="_git/__repository___git.html">
+                            
+                            <a href="../_git/__repository___git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> الحصول على repository لمشروعك بـ Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="_git/____repository.html">
+                            
+                            <a href="../_git/____repository.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> تسجيل التعديلات في الـ repository
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="_git/viewing_the_commit_history.html">
+                            
+                            <a href="../_git/viewing_the_commit_history.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Viewing the Commit History
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="_git/undoing_things.html">
+                            
+                            <a href="../_git/undoing_things.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Undoing Things
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="_git/working_with_remotes.html">
+                            
+                            <a href="../_git/working_with_remotes.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Working with Remotes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="_git/tagging.html">
+                            
+                            <a href="../_git/tagging.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="_git/tips_and_tricks.html">
+                            
+                            <a href="../_git/tips_and_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips and Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="_git/summary.html">
+                            
+                            <a href="../_git/summary.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 68.75%;min-width: 62.5%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../_/README.html" title="الإستعداد للبدء!" class="chapter done new-chapter" data-progress="1" style="left: 6.25%;"></a>
+    
+        <a href="../_/__version_control.html" title="إدارة الإصدارات (Version Control)" class="chapter done " data-progress="1.1" style="left: 12.5%;"></a>
+    
+        <a href="../_/___git.html" title="لمحة تاريخية عن Git" class="chapter done " data-progress="1.2" style="left: 18.75%;"></a>
+    
+        <a href="../_/_git.html" title="تصيب Git" class="chapter done " data-progress="1.4" style="left: 25%;"></a>
+    
+        <a href="../_/_git__.html" title="إعداد Git لأول مرة" class="chapter done " data-progress="1.5" style="left: 31.25%;"></a>
+    
+        <a href="../_/__.html" title="الحصول على المساعدة" class="chapter done " data-progress="1.6" style="left: 37.5%;"></a>
+    
+        <a href="../_/.html" title="الملخص" class="chapter done " data-progress="1.7" style="left: 43.75%;"></a>
+    
+        <a href="../_git/README.html" title="مبادئ Git" class="chapter done new-chapter" data-progress="2" style="left: 50%;"></a>
+    
+        <a href="../_git/__repository___git.html" title="الحصول على repository لمشروعك بـ Git" class="chapter done " data-progress="2.1" style="left: 56.25%;"></a>
+    
+        <a href="../_git/____repository.html" title="تسجيل التعديلات في الـ repository" class="chapter done " data-progress="2.2" style="left: 62.5%;"></a>
+    
+        <a href="../_git/viewing_the_commit_history.html" title="Viewing the Commit History" class="chapter done " data-progress="2.3" style="left: 68.75%;"></a>
+    
+        <a href="../_git/undoing_things.html" title="Undoing Things" class="chapter  " data-progress="2.4" style="left: 75%;"></a>
+    
+        <a href="../_git/working_with_remotes.html" title="Working with Remotes" class="chapter  " data-progress="2.5" style="left: 81.25%;"></a>
+    
+        <a href="../_git/tagging.html" title="Tagging" class="chapter  " data-progress="2.6" style="left: 87.5%;"></a>
+    
+        <a href="../_git/tips_and_tricks.html" title="Tips and Tricks" class="chapter  " data-progress="2.7" style="left: 93.75%;"></a>
+    
+        <a href="../_git/summary.html" title="Summary" class="chapter  " data-progress="2.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_68">
+                    
+                        <h1 id="viewing-the-commit-history">Viewing the Commit History</h1>
+<p>After you have created several commits, or if you have cloned a repository with an existing commit history, you’ll probably want to look back to see what has happened. The most basic and powerful tool to do this is the <code>git log</code> command.</p>
+<p>These examples use a very simple project called simplegit that I often use for demonstrations. To get the project, run </p>
+<pre><code>git <span class="hljs-keyword">clone</span> git:<span class="hljs-comment">//github.com/schacon/simplegit-progit.git</span>
+</code></pre><p>When you run <code>git log</code> in this project, you should get output that looks something like this:</p>
+<pre><code>$ git log
+<span class="hljs-operator"><span class="hljs-keyword">commit</span> ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+<span class="hljs-keyword">Date</span>:   Mon Mar <span class="hljs-number">17</span> <span class="hljs-number">21</span>:<span class="hljs-number">52</span>:<span class="hljs-number">11</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    changed the version <span class="hljs-keyword">number</span>
+
+<span class="hljs-keyword">commit</span> <span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+<span class="hljs-keyword">Date</span>:   Sat Mar <span class="hljs-number">15</span> <span class="hljs-number">16</span>:<span class="hljs-number">40</span>:<span class="hljs-number">33</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    removed unnecessary test code
+
+<span class="hljs-keyword">commit</span> a11bef06a3f659402fe7563abf99ad00de2209e6
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+<span class="hljs-keyword">Date</span>:   Sat Mar <span class="hljs-number">15</span> <span class="hljs-number">10</span>:<span class="hljs-number">31</span>:<span class="hljs-number">28</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    <span class="hljs-keyword">first</span> <span class="hljs-keyword">commit</span></span>
+</code></pre><p>By default, with no arguments, <code>git log</code> lists the commits made in that repository in reverse chronological order. That is, the most recent commits show up first. As you can see, this command lists each commit with its SHA-1 checksum, the author’s name and e-mail, the date written, and the commit message.</p>
+<p>A huge number and variety of options to the <code>git log</code> command are available to show you exactly what you’re looking for. Here, we’ll show you some of the most-used options.</p>
+<p>One of the more helpful options is <code>-p</code>, which shows the diff introduced in each commit. You can also use <code>-2</code>, which limits the output to only the last two entries:</p>
+<pre><code>$ git <span class="hljs-built_in">log</span> –p -<span class="hljs-number">2</span>
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Mon Mar <span class="hljs-number">17</span> <span class="hljs-number">21</span>:<span class="hljs-number">52</span>:<span class="hljs-number">11</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    changed <span class="hljs-operator">the</span> <span class="hljs-built_in">version</span> <span class="hljs-built_in">number</span>
+
+diff <span class="hljs-comment">--git a/Rakefile b/Rakefile</span>
+index a874b73.<span class="hljs-number">.8</span>f94139 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/Rakefile</span>
++++ b/Rakefile
+@@ -<span class="hljs-number">5</span>,<span class="hljs-number">7</span> +<span class="hljs-number">5</span>,<span class="hljs-number">7</span> @@ <span class="hljs-built_in">require</span> <span class="hljs-string">'rake/gempackagetask'</span>
+ spec = Gem::Specification.<span class="hljs-built_in">new</span> <span class="hljs-built_in">do</span> |s|
+-    s.<span class="hljs-built_in">version</span>   =   <span class="hljs-string">"0.1.0"</span>
++    s.<span class="hljs-built_in">version</span>   =   <span class="hljs-string">"0.1.1"</span>
+     s.author    =   <span class="hljs-string">"Scott Chacon"</span>
+
+commit <span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Sat Mar <span class="hljs-number">15</span> <span class="hljs-number">16</span>:<span class="hljs-number">40</span>:<span class="hljs-number">33</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    removed unnecessary test code
+
+diff <span class="hljs-comment">--git a/lib/simplegit.rb b/lib/simplegit.rb</span>
+index a0a60ae.<span class="hljs-number">.47</span>c6340 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/lib/simplegit.rb</span>
++++ b/lib/simplegit.rb
+@@ -<span class="hljs-number">18</span>,<span class="hljs-number">8</span> +<span class="hljs-number">18</span>,<span class="hljs-number">3</span> @@ class SimpleGit
+     <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
+ <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+-
+-<span class="hljs-keyword">if</span> $<span class="hljs-number">0</span> == __FILE__
+-  git = SimpleGit.<span class="hljs-built_in">new</span>
+-  puts git.show
+-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+\ No newline <span class="hljs-keyword">at</span> <span class="hljs-function"><span class="hljs-keyword">end</span> <span class="hljs-title">of</span> <span class="hljs-title">file</span></span>
+</code></pre><p>This option displays the same information but with a diff directly following each entry. This is very helpful for code review or to quickly browse what happened during a series of commits that a collaborator has added.
+You can also use a series of summarizing options with <code>git log</code>. For example, if you want to see some abbreviated stats for each commit, you can use the <code>--stat</code> option:</p>
+<pre><code>$ git log --stat 
+commit ca82a6dff817ec66f44342007202690a93763949
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gee-mail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Mon Mar <span class="hljs-number">17</span> <span class="hljs-number">21</span>:<span class="hljs-number">52</span>:<span class="hljs-number">11</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    changed the version number
+
+ Rakefile |    <span class="hljs-number">2</span> +-
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+
+commit <span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gee-mail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Sat Mar <span class="hljs-number">15</span> <span class="hljs-number">16</span>:<span class="hljs-number">40</span>:<span class="hljs-number">33</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    removed unnecessary test code
+
+ lib/simplegit<span class="hljs-preprocessor">.rb</span> |    <span class="hljs-number">5</span> -----
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">0</span> insertions(+), <span class="hljs-number">5</span> deletions(-)
+
+commit a11bef06a3f659402fe7563abf99ad00de2209e6
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gee-mail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Sat Mar <span class="hljs-number">15</span> <span class="hljs-number">10</span>:<span class="hljs-number">31</span>:<span class="hljs-number">28</span> <span class="hljs-number">2008</span> -<span class="hljs-number">0700</span>
+
+    first commit
+
+ README           |    <span class="hljs-number">6</span> ++++++
+ Rakefile         |   <span class="hljs-number">23</span> +++++++++++++++++++++++
+ lib/simplegit<span class="hljs-preprocessor">.rb</span> |   <span class="hljs-number">25</span> +++++++++++++++++++++++++
+ <span class="hljs-number">3</span> files changed, <span class="hljs-number">54</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>As you can see, the <code>--stat</code> option prints below each commit entry a list of modified files, how many files were changed, and how many lines in those files were added and removed. It also puts a summary of the information at the end.
+Another really useful option is <code>--pretty</code>. This option changes the log output to formats other than the default. A few prebuilt options are available for you to use. The oneline option prints each commit on a single line, which is useful if you’re looking at a lot of commits. In addition, the <code>short</code>, <code>full</code>, and <code>fuller</code> options show the output in roughly the same format but with less or more information, respectively:</p>
+<pre><code>$ git <span class="hljs-built_in">log</span> <span class="hljs-comment">--pretty=oneline</span>
+ca82a6dff817ec66f44342007202690a93763949 changed <span class="hljs-operator">the</span> <span class="hljs-built_in">version</span> <span class="hljs-built_in">number</span>
+<span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7 removed unnecessary test code
+a11bef06a3f659402fe7563abf99ad00de2209e6 <span class="hljs-keyword">first</span> commit
+</code></pre><p>The most interesting option is <code>format</code>, which allows you to specify your own log output format. This is especially useful when you’re generating output for machine parsing — because you specify the format explicitly, you know it won’t change with updates to Git:</p>
+<pre><code>$ git <span class="hljs-keyword">log</span> --pretty=<span class="hljs-keyword">format</span>:<span class="hljs-string">"<span class="hljs-variable">%h</span> - <span class="hljs-variable">%an</span>, <span class="hljs-variable">%ar</span> : <span class="hljs-variable">%s</span>"</span>
+ca82a6d - Scott Chacon, <span class="hljs-number">11</span> months ago : changed the version number
+085bb3b - Scott Chacon, <span class="hljs-number">11</span> months ago : removed unnecessary test code
+a11bef<span class="hljs-number">0</span> - Scott Chacon, <span class="hljs-number">11</span> months ago : first commit
+</code></pre><p>Table 2-1 lists some of the more useful options that format takes.</p>
+<pre><code>Option    Description of Output
+<span class="hljs-tag">%<span class="hljs-title">H</span></span>    Commit hash
+<span class="hljs-tag">%<span class="hljs-title">h</span></span>    Abbreviated commit hash
+<span class="hljs-tag">%<span class="hljs-title">T</span></span>    Tree hash
+<span class="hljs-tag">%<span class="hljs-title">t</span></span>    Abbreviated tree hash
+<span class="hljs-tag">%<span class="hljs-title">P</span></span>    Parent hashes
+<span class="hljs-tag">%<span class="hljs-title">p</span></span>    Abbreviated parent hashes
+<span class="hljs-tag">%<span class="hljs-title">an</span></span>    Author name
+<span class="hljs-tag">%<span class="hljs-title">ae</span></span>    Author e-mail
+<span class="hljs-tag">%<span class="hljs-title">ad</span></span>    Author date (format respects the –date= option)
+<span class="hljs-tag">%<span class="hljs-title">ar</span></span>    Author date, relative
+<span class="hljs-tag">%<span class="hljs-title">cn</span></span>    Committer name
+<span class="hljs-tag">%<span class="hljs-title">ce</span></span>    Committer email
+<span class="hljs-tag">%<span class="hljs-title">cd</span></span>    Committer date
+<span class="hljs-tag">%<span class="hljs-title">cr</span></span>    Committer date, relative
+<span class="hljs-tag">%<span class="hljs-title">s</span></span>    Subject
+</code></pre><p>You may be wondering what the difference is between <em>author</em> and <em>committer</em>. The author is the person who originally wrote the work, whereas the committer is the person who last applied the work. So, if you send in a patch to a project and one of the core members applies the patch, both of you get credit — you as the author and the core member as the committer. We’ll cover this distinction a bit more in Chapter 5.</p>
+<p>The oneline and format options are particularly useful with another <code>log</code> option called <code>--graph</code>. This option adds a nice little ASCII graph showing your branch and merge history, which we can see our copy of the Grit project repository:</p>
+<pre><code>$ git <span class="hljs-built_in">log</span> <span class="hljs-comment">--pretty=format:"%h %s" --graph</span>
+* <span class="hljs-number">2</span>d3acf9 ignore errors <span class="hljs-built_in">from</span> SIGCHLD <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">trap</span></span>
+*  <span class="hljs-number">5e3</span>ee11 Merge branch <span class="hljs-string">'master'</span> <span class="hljs-operator">of</span> git://github.com/dustin/grit
+|\  
+| * <span class="hljs-number">420</span>eac9 Added <span class="hljs-operator">a</span> method <span class="hljs-keyword">for</span> getting <span class="hljs-operator">the</span> current branch.
+* | <span class="hljs-number">30e367</span>c timeout code <span class="hljs-operator">and</span> tests
+* | <span class="hljs-number">5</span>a09431 <span class="hljs-built_in">add</span> timeout protection <span class="hljs-built_in">to</span> grit
+* | e1193f8 support <span class="hljs-keyword">for</span> heads <span class="hljs-operator">with</span> slashes <span class="hljs-operator">in</span> them
+|/  
+* d6016bc <span class="hljs-built_in">require</span> <span class="hljs-built_in">time</span> <span class="hljs-keyword">for</span> xmlschema
+*  <span class="hljs-number">11</span>d191e Merge branch <span class="hljs-string">'defunkt'</span> <span class="hljs-keyword">into</span> <span class="hljs-built_in">local</span>
+</code></pre><p>Those are only some simple output-formatting options to <code>git log</code> — there are many more. Table 2-2 lists the options we’ve covered so far and some other common formatting options that may be useful, along with how they change the output of the log command.</p>
+<pre><code>Option    Description
+-p    <span class="hljs-operator"><span class="hljs-keyword">Show</span> the patch introduced <span class="hljs-keyword">with</span> <span class="hljs-keyword">each</span> <span class="hljs-keyword">commit</span>.
+--stat    <span class="hljs-keyword">Show</span> statistics <span class="hljs-keyword">for</span> files modified <span class="hljs-keyword">in</span> <span class="hljs-keyword">each</span> <span class="hljs-keyword">commit</span>.
+--shortstat    Display <span class="hljs-keyword">only</span> the changed/insertions/deletions line <span class="hljs-keyword">from</span> the --stat command.
+--name-<span class="hljs-keyword">only</span>    <span class="hljs-keyword">Show</span> the list <span class="hljs-keyword">of</span> files modified <span class="hljs-keyword">after</span> the <span class="hljs-keyword">commit</span> information.
+--name-status    <span class="hljs-keyword">Show</span> the list <span class="hljs-keyword">of</span> files affected <span class="hljs-keyword">with</span> added/modified/deleted information <span class="hljs-keyword">as</span> well.
+--abbrev-<span class="hljs-keyword">commit</span>    <span class="hljs-keyword">Show</span> <span class="hljs-keyword">only</span> the <span class="hljs-keyword">first</span> few characters <span class="hljs-keyword">of</span> the SHA-<span class="hljs-number">1</span> checksum instead <span class="hljs-keyword">of</span> <span class="hljs-keyword">all</span> <span class="hljs-number">40.</span>
+--<span class="hljs-keyword">relative</span>-<span class="hljs-keyword">date</span>    Display the <span class="hljs-keyword">date</span> <span class="hljs-keyword">in</span> a <span class="hljs-keyword">relative</span> format (<span class="hljs-keyword">for</span> example, “<span class="hljs-number">2</span> weeks ago”) instead <span class="hljs-keyword">of</span> <span class="hljs-keyword">using</span> the <span class="hljs-keyword">full</span> <span class="hljs-keyword">date</span> format.
+--graph    Display an ASCII graph <span class="hljs-keyword">of</span> the branch <span class="hljs-keyword">and</span> <span class="hljs-keyword">merge</span> history beside the log <span class="hljs-keyword">output</span>.
+--pretty    <span class="hljs-keyword">Show</span> commits <span class="hljs-keyword">in</span> an alternate format. Options include oneline, short, <span class="hljs-keyword">full</span>, fuller, <span class="hljs-keyword">and</span> format (<span class="hljs-keyword">where</span> you specify your own format).</span>
+</code></pre><h2 id="limiting-log-output">Limiting Log Output</h2>
+<p>In addition to output-formatting options, git log takes a number of useful limiting options — that is, options that let you show only a subset of commits. You’ve seen one such option already — the <code>-2</code> option, which show only the last two commits. In fact, you can do <code>-&lt;n&gt;</code>, where <code>n</code> is any integer to show the last <code>n</code> commits. In reality, you’re unlikely to use that often, because Git by default pipes all output through a pager so you see only one page of log output at a time.</p>
+<p>However, the time-limiting options such as <code>--since</code> and <code>--until</code> are very useful. For example, this command gets the list of commits made in the last two weeks:</p>
+<pre><code>$ git <span class="hljs-built_in">log</span> <span class="hljs-comment">--since=2.weeks</span>
+</code></pre><p>This command works with lots of formats — you can specify a specific date (“2008-01-15”) or a relative date such as “2 years 1 day 3 minutes ago”.</p>
+<p>You can also filter the list to commits that match some search criteria. The <code>--author</code> option allows you to filter on a specific author, and the <code>--grep</code> option lets you search for keywords in the commit messages. (Note that if you want to specify both author and grep options, you have to add <code>--all-match</code> or the command will match commits with either.)</p>
+<p>The last really useful option to pass to <code>git log</code> as a filter is a path. If you specify a directory or file name, you can limit the log output to commits that introduced a change to those files. This is always the last option and is generally preceded by double dashes (<code>--</code>) to separate the paths from the options.</p>
+<p>In Table 2-3 we’ll list these and a few other common options for your reference.</p>
+<pre><code>Option    Description
+-(n)    <span class="hljs-operator"><span class="hljs-keyword">Show</span> <span class="hljs-keyword">only</span> the <span class="hljs-keyword">last</span> n commits
+--since, --<span class="hljs-keyword">after</span>    Limit the commits <span class="hljs-keyword">to</span> those made <span class="hljs-keyword">after</span> the specified <span class="hljs-keyword">date</span>.
+--until, --<span class="hljs-keyword">before</span>    Limit the commits <span class="hljs-keyword">to</span> those made <span class="hljs-keyword">before</span> the specified <span class="hljs-keyword">date</span>.
+--author    <span class="hljs-keyword">Only</span> <span class="hljs-keyword">show</span> commits <span class="hljs-keyword">in</span> which the author entry matches the specified string.
+--committer    <span class="hljs-keyword">Only</span> <span class="hljs-keyword">show</span> commits <span class="hljs-keyword">in</span> which the committer entry matches the specified string.</span>
+</code></pre><p>For example, if you want to see which commits modifying test files in the Git source code history were committed by Junio Hamano and were not merges in the month of October 2008, you can run something like this:</p>
+<pre><code>$ git <span class="hljs-keyword">log</span> --pretty=<span class="hljs-string">"<span class="hljs-variable">%h</span> - <span class="hljs-variable">%s</span>"</span> --author=gitster --since=<span class="hljs-string">"2008-10-01"</span> \
+   --before=<span class="hljs-string">"2008-11-01"</span> --<span class="hljs-keyword">no</span>-merges -- t/
+<span class="hljs-number">5610</span>e3b - Fix testcase failure <span class="hljs-keyword">when</span> extended attribute
+acd3b9e - Enhance hold_lock_file_for<span class="hljs-number">_</span>{update,append}()
+f563754 - demonstrate breakage of detached checkout wi
+d1a43f2 - <span class="hljs-keyword">reset</span> --hard/<span class="hljs-keyword">read</span>-tree --<span class="hljs-keyword">reset</span> -u: remove un
+<span class="hljs-number">51</span>a94af - Fix <span class="hljs-string">"checkout --track -b newbranch"</span> on detac
+b0ad11e - pull: allow <span class="hljs-string">"git pull origin <span class="hljs-variable">$something</span>:<span class="hljs-variable">$cur</span></span>
+</code></pre><p>Of the nearly 20,000 commits in the Git source code history, this command shows the 6 that match those criteria.</p>
+<h2 id="using-a-gui-to-visualize-history">Using a GUI to Visualize History</h2>
+<p>If you like to use a more graphical tool to visualize your commit history, you may want to take a look at a Tcl/Tk program called gitk that is distributed with Git. Gitk is basically a visual <code>git log</code> tool, and it accepts nearly all the filtering options that <code>git log</code> does. If you type gitk on the command line in your project, you should see something like Figure 2-2.</p>
+<p><img src="http://git-scm.com/figures/18333fig0202-tn.png" alt=""></p>
+<p>Figure 2-2. The gitk history visualizer.</p>
+<p>You can see the commit history in the top half of the window along with a nice ancestry graph. The diff viewer in the bottom half of the window shows you the changes introduced at any commit you click.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../_git/____repository.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../_git/undoing_things.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

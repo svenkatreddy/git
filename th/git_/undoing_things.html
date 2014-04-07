@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Undoing Things | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_/working_with_remotes.html" />
+        
+        
+        <link rel="prev" href="../git_/viewing_the_commit_history.html" />
+        
+
+        <meta property="og:title" content="Undoing Things | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.4" data-basepath=".." data-revision="1396895596490">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_/undoing_things.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="index.html">
+                
+                <a href="../index.html">
+                    <i class="fa fa-check"></i> <b>1)</b> เริ่มต้นใช้งาน
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="_version_control.html">
+                            
+                            <a href="../_version_control.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> เกี่ยวกับ Version Control
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="_git.html">
+                            
+                            <a href="../_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> ประวัติย่อของ Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="git_.html">
+                            
+                            <a href="../git_.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git ขั้นพื้นฐาน
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="_git.html">
+                            
+                            <a href="../_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> การติดตั้ง Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="first_time_git_setup.html">
+                            
+                            <a href="../first_time_git_setup.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> First-Time Git Setup
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="getting_help.html">
+                            
+                            <a href="../getting_help.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Getting Help
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> สรุป
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git ขั้นพื้นฐาน
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="git_/_git_repository.html">
+                            
+                            <a href="../git_/_git_repository.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> เริ่มต้นใช้งาน Git Repository
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git_/_repository.html">
+                            
+                            <a href="../git_/_repository.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> การบันทึกการแก้ไขใน Repository
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git_/viewing_the_commit_history.html">
+                            
+                            <a href="../git_/viewing_the_commit_history.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Viewing the Commit History
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git_/undoing_things.html">
+                            
+                            <a href="../git_/undoing_things.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Undoing Things
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git_/working_with_remotes.html">
+                            
+                            <a href="../git_/working_with_remotes.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Working with Remotes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="git_/tagging.html">
+                            
+                            <a href="../git_/tagging.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="git_/tips_and_tricks.html">
+                            
+                            <a href="../git_/tips_and_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips and Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="git_/summary.html">
+                            
+                            <a href="../git_/summary.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 73.33333333333333%;min-width: 66.66666666666667%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../_version_control.html" title="เกี่ยวกับ Version Control" class="chapter done " data-progress="1.1" style="left: 6.666666666666667%;"></a>
+    
+        <a href="../git_.html" title="Git ขั้นพื้นฐาน" class="chapter done " data-progress="1.3" style="left: 13.333333333333334%;"></a>
+    
+        <a href="../_git.html" title="การติดตั้ง Git" class="chapter done " data-progress="1.4" style="left: 20%;"></a>
+    
+        <a href="../first_time_git_setup.html" title="First-Time Git Setup" class="chapter done " data-progress="1.5" style="left: 26.666666666666668%;"></a>
+    
+        <a href="../getting_help.html" title="Getting Help" class="chapter done " data-progress="1.6" style="left: 33.333333333333336%;"></a>
+    
+        <a href="../.html" title="สรุป" class="chapter done " data-progress="1.7" style="left: 40%;"></a>
+    
+        <a href="../git_/README.html" title="Git ขั้นพื้นฐาน" class="chapter done new-chapter" data-progress="2" style="left: 46.666666666666664%;"></a>
+    
+        <a href="../git_/_git_repository.html" title="เริ่มต้นใช้งาน Git Repository" class="chapter done " data-progress="2.1" style="left: 53.333333333333336%;"></a>
+    
+        <a href="../git_/_repository.html" title="การบันทึกการแก้ไขใน Repository" class="chapter done " data-progress="2.2" style="left: 60%;"></a>
+    
+        <a href="../git_/viewing_the_commit_history.html" title="Viewing the Commit History" class="chapter done " data-progress="2.3" style="left: 66.66666666666667%;"></a>
+    
+        <a href="../git_/undoing_things.html" title="Undoing Things" class="chapter done " data-progress="2.4" style="left: 73.33333333333333%;"></a>
+    
+        <a href="../git_/working_with_remotes.html" title="Working with Remotes" class="chapter  " data-progress="2.5" style="left: 80%;"></a>
+    
+        <a href="../git_/tagging.html" title="Tagging" class="chapter  " data-progress="2.6" style="left: 86.66666666666667%;"></a>
+    
+        <a href="../git_/tips_and_tricks.html" title="Tips and Tricks" class="chapter  " data-progress="2.7" style="left: 93.33333333333333%;"></a>
+    
+        <a href="../git_/summary.html" title="Summary" class="chapter  " data-progress="2.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_50">
+                    
+                        <h1 id="undoing-things">Undoing Things</h1>
+<p>At any stage, you may want to undo something. Here, we’ll review a few basic tools for undoing changes that you’ve made. Be careful, because you can’t always undo some of these undos. This is one of the few areas in Git where you may lose some work if you do it wrong.</p>
+<h2 id="changing-your-last-commit">Changing Your Last Commit</h2>
+<p>One of the common undos takes place when you commit too early and possibly forget to add some files, or you mess up your commit message. If you want to try that commit again, you can run commit with the <code>--amend</code> option:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">commit</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">amend</span>
+</code></pre><p>This command takes your staging area and uses it for the commit. If you’ve have made no changes since your last commit (for instance, you run this command immediately after your previous commit), then your snapshot will look exactly the same and all you’ll change is your commit message.</p>
+<p>The same commit-message editor fires up, but it already contains the message of your previous commit. You can edit the message the same as always, but it overwrites your previous commit.</p>
+<p>As an example, if you commit and then realize you forgot to stage the changes in a file you wanted to add to this commit, you can do something like this:</p>
+<pre><code><span class="hljs-variable">$ </span>git commit -m <span class="hljs-string">'initial commit'</span>
+<span class="hljs-variable">$ </span>git add forgotten_file
+<span class="hljs-variable">$ </span>git commit --amend 
+</code></pre><p>All three of these commands end up with a single commit — the second commit replaces the results of the first.</p>
+<h2 id="unstaging-a-staged-file">Unstaging a Staged File</h2>
+<p>The next two sections demonstrate how to wrangle your staging area and working directory changes. The nice part is that the command you use to determine the state of those two areas also reminds you how to undo changes to them. For example, let’s say you’ve changed two files and want to commit them as two separate changes, but you accidentally type <code>git add *</code> and stage them both. How can you unstage one of the two? The <code>git status</code> command reminds you:</p>
+<pre><code>$ git add .
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       modified:   README.txt</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Right below the “Changes to be committed” text, it says use <code>git reset HEAD &lt;file&gt;...</code> to unstage. So, let’s use that advice to unstage the benchmarks.rb file:</p>
+<pre><code>$ git reset<span class="hljs-constant"> HEAD </span>benchmarks.rb 
+benchmarks.rb: locally modified
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       modified:   README.txt</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>The command is a bit strange, but it works. The benchmarks.rb file is modified but once again unstaged.</p>
+<h2 id="unmodifying-a-modified-file">Unmodifying a Modified File</h2>
+<p>What if you realize that you don’t want to keep your changes to the benchmarks.rb file? How can you easily unmodify it — revert it back to what it looked like when you last committed (or initially cloned, or however you got it into your working directory)? Luckily, <code>git status</code> tells you how to do that, too. In the last example output, the unstaged area looks like this:</p>
+<pre><code><span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>It tells you pretty explicitly how to discard the changes you’ve made (at least, the newer versions of Git, 1.6.1 and later, do this — if you have an older version, we highly recommend upgrading it to get some of these nicer usability features). Let’s do what it says:</p>
+<pre><code>$ git checkout -- benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       modified:   README.txt</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>You can see that the changes have been reverted. You should also realize that this is a dangerous command: any changes you made to that file are gone — you just copied another file over it. Don’t ever use this command unless you absolutely know that you don’t want the file. If you just need to get it out of the way, we’ll go over stashing and branching in the next chapter; these are generally better ways to go. </p>
+<p>Remember, anything that is committed in Git can almost always be recovered. Even commits that were on branches that were deleted or commits that were overwritten with an <code>--amend</code> commit can be recovered (see Chapter 9 for data recovery). However, anything you lose that was never committed is likely never to be seen again.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_/viewing_the_commit_history.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_/working_with_remotes.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

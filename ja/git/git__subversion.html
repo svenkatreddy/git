@@ -1,0 +1,1014 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Git と Subversion | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git/git_.html" />
+        
+        
+        <link rel="prev" href="../git/README.html" />
+        
+
+        <meta property="og:title" content="Git と Subversion | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="8.1" data-basepath=".." data-revision="1396895597440">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git/git__subversion.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Git のさまざまなツール
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> リビジョンの選択
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> 対話的なステージング
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> 作業を隠す
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> 歴史の書き換え
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Git によるデバッグ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> サブモジュール
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> サブツリーマージ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.8)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="index.html">
+                
+                <a href="../index.html">
+                    <i class="fa fa-check"></i> <b>2)</b> 使い始める
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> バージョン管理に関して
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Git略史
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Gitの基本
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Gitのインストール
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> 最初のGitの構成
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> ヘルプを見る
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git のブランチ機能
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> ブランチとは
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> ブランチとマージの基本
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> ブランチの管理
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> ブランチでの作業の流れ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> リモートブランチ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> リベース
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git サーバー
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> プロトコル
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_/_git_.html">
+                            
+                            <a href="../git_/_git_.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> サーバー用の Git の取得
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_/ssh_.html">
+                            
+                            <a href="../git_/ssh_.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> SSH 公開鍵の作成
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> サーバーのセットアップ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> 一般公開
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_/gitweb.html">
+                            
+                            <a href="../git_/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_/gitosis.html">
+                            
+                            <a href="../git_/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_/gitolite.html">
+                            
+                            <a href="../git_/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git デーモン
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git のホスティング
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Git での分散作業
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> 分散作業の流れ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> プロジェクトへの貢献
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> プロジェクトの運営
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git の基本
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Git リポジトリの取得
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> 変更内容のリポジトリへの記録
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> コミット履歴の閲覧
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> 作業のやり直し
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> リモートでの作業
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> タグ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> ヒントと裏技
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Git のカスタマイズ
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Git の設定
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git の属性
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git フック
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Git ポリシーの実施例
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git/README.html">
+                
+                <a href="../git/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Gitとその他のシステムの連携
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git/git__subversion.html">
+                            
+                            <a href="../git/git__subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git と Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git/git_.html">
+                            
+                            <a href="../git/git_.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Git への移行
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git/README.html">
+                
+                <a href="../git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Gitの内側
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git/plumbingporcelain.html">
+                            
+                            <a href="../git/plumbingporcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> 配管（Plumbing）と磁器（Porcelain）
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git/git.html">
+                            
+                            <a href="../git/git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Gitオブジェクト
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git/git.html">
+                            
+                            <a href="../git/git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Gitの参照
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> パックファイル
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git/refspec.html">
+                            
+                            <a href="../git/refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> 参照仕様（Refspec）
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> トランスファープロトコル
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> メインテナンスとデータリカバリ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> 要約
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 64.70588235294117%;min-width: 58.8235294117647%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../git.html" title="最初のGitの構成" class="chapter done " data-progress="2.5" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../.html" title="まとめ" class="chapter done " data-progress="2.7" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../git_/_git_.html" title="サーバー用の Git の取得" class="chapter done " data-progress="4.2" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../git_/ssh_.html" title="SSH 公開鍵の作成" class="chapter done " data-progress="4.3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../git_/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../git_/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../git_/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../git_/README.html" title="Git のカスタマイズ" class="chapter done new-chapter" data-progress="7" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../git_/git_.html" title="Git ポリシーの実施例" class="chapter done " data-progress="7.4" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../git_/.html" title="まとめ" class="chapter done " data-progress="7.5" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../git/git__subversion.html" title="Git と Subversion" class="chapter done " data-progress="8.1" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../git/git_.html" title="Git への移行" class="chapter  " data-progress="8.2" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../git/README.html" title="Gitの内側" class="chapter  new-chapter" data-progress="9" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../git/plumbingporcelain.html" title="配管（Plumbing）と磁器（Porcelain）" class="chapter  " data-progress="9.1" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../git/git.html" title="Gitの参照" class="chapter  " data-progress="9.3" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../git/refspec.html" title="参照仕様（Refspec）" class="chapter  " data-progress="9.5" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../git/.html" title="要約" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_128">
+                    
+                        <h1 id="git-subversion">Git と Subversion</h1>
+<p>現在のところ、オープンソースや企業のプロジェクトの大多数が、ソースコードの管理に Subversion を利用しています。Subversion は最も人気のあるオープンソースのVCSで、10年近く前から使われています。Subversion 以前は CVS がソースコード管理に広く用いられていたのですが、多くの点で両者はよく似ています。</p>
+<p>Git の素晴しい機能のひとつに、Git と Subversion を双方向にブリッジする <code>git svn</code> があります。このツールを使うと、Subversion のクライアントとして Git を使うことができます。つまり、ローカルの作業では Git の機能を十分に活用することができて、あたかも Subversion を使っているかのように Subversion サーバーに変更をコミットすることができます。共同作業をしている人達が古き良き方法を使っているのと
+同時に、ローカルでのブランチ作成やマージ、ステージング・エリア、リベース、チェリーピックなどの Git の機能を使うことができるということです。共同の作業環境に Git を忍び込ませておいて、仲間の開発者たちが Git より効率良く作業できるように手助けをしつつ、Git の全面的な採用のための根回しをしてゆく、というのが賢いやり方です。Subversion ブリッジは、分散VCS の素晴しい世界へのゲートウェイ・ドラッグといえるでしょう。</p>
+<h2 id="git-svn">git svn</h2>
+<p>Git と Subversion の橋渡しをするコマンド群のベースとなるコマンドが <code>git svn</code> です。すべてはここから始めることができます。この後に続くコマンドはかなりたくさんあるので、いくつかのワークフローを通して一般的なものから身につけていきましょう。</p>
+<p>注意すべきことは、<code>git svn</code> を使っているときは Subversion を相手にしているのだということです。これは、Git ほど洗練されてはいません。ローカルでのブランチ作成やマージは簡単にできますが、作業内容をリベースするなどして歴史をできるだけ一直線に保つようにし、Git リモートリポジトリを相手にするときのように考えるのは避けましょう。</p>
+<p>歴史を書き換えてもう一度プッシュしようなどとしてはいけません。また、他の開発者との共同作業のために複数の Git リポジトリに並行してプッシュするのもいけません。Subversion が扱えるのは一本の直線上の歴史だけで、ちょっとしたことですぐに混乱してしまいます。チームのメンバーの中に SVN を使う人と Git を使う人がいる場合は、全員が SVN サーバーを使って共同作業するようにしましょう。そうすれば、少しは生きやすくなります。</p>
+<h2 id="-">準備</h2>
+<p>この機能を説明するには、書き込みアクセス権を持つ標準的な SVN リポジトリが必要です。もしこのサンプルをコピーして試したいのなら、私のテスト用リポジトリの書き込み可能なコピーを作らなければなりません。これを簡単に行うには、<code>svnsync</code> というツールを使います。最近のバージョンの Subversion、少なくとも 1.4 以降に付属しているツールです。テスト用として、新しい Subversion リポジトリを Google code 上に作りました。これは <code>protobuf</code> プロジェクトの一部で、<code>protobuf</code> は構造化されたデータを符号化してネットワーク上で転送するためのツールです。</p>
+<p>まずはじめに、新しいローカル Subversion リポジトリを作ります。</p>
+<pre><code><span class="hljs-variable">$ </span>mkdir /tmp/test-svn
+<span class="hljs-variable">$ </span>svnadmin create /tmp/test-svn
+</code></pre><p>そして、すべてのユーザーが revprop を変更できるようにします。簡単な方法は、常に 0 で終了する pre-revprop-change スクリプトを追加することです。</p>
+<pre><code>$ cat /tmp/test-svn/hooks/pre-revprop-change
+<span class="hljs-shebang">#!/bin/sh</span>
+<span class="hljs-keyword">exit</span> <span class="hljs-number">0</span>;
+$ chmod +x /tmp/test-svn/hooks/pre-revprop-change
+</code></pre><p>これで、ローカルマシンにこのプロジェクトを同期できるようになりました。同期元と同期先のリポジトリを指定して <code>svnsync init</code> を実行します。</p>
+<pre><code><span class="hljs-variable">$ </span>svnsync init <span class="hljs-symbol">file:</span>/<span class="hljs-regexp">//tmp</span><span class="hljs-regexp">/test-svn http:/</span><span class="hljs-regexp">/progit-example.googlecode.com/svn</span><span class="hljs-regexp">/</span>
+</code></pre><p>このコマンドは、同期を実行するためのプロパティを設定します。次に、このコマンドでコードをコピーします。</p>
+<pre><code>$ svnsync sync file:///tmp/test-svn
+Committed revision <span class="hljs-number">1.</span>
+Copied properties <span class="hljs-keyword">for</span> revision <span class="hljs-number">1.</span>
+Committed revision <span class="hljs-number">2.</span>
+Copied properties <span class="hljs-keyword">for</span> revision <span class="hljs-number">2.</span>
+Committed revision <span class="hljs-number">3.</span>
+<span class="hljs-keyword">...</span>
+</code></pre><p>この操作は数分で終わりますが、もし元のリポジトリのコピー先がローカルではなく別のリモートリポジトリだった場合、この処理には約一時間かかります。総コミット数はたかだか 100 にも満たないにもかかわらず。Subversion では、リビジョンごとにクローンを作ってコピー先のリポジトリに投入していかなければなりません。これはばかばかしいほど非効率的ですが、簡単に済ませるにはこの方法しかないのです。</p>
+<h2 id="-">はじめましょう</h2>
+<p>書き込み可能な Subversion リポジトリが手に入ったので、一般的なワークフローに沿って進めましょう。まずは <code>git svn clone</code> コマンドを実行します。このコマンドは、Subversion リポジトリ全体をローカルの Git リポジトリにインポートします。どこかにホストされている実際の Subversion リポジトリから取り込む場合は <code>file:///tmp/test-svn</code> の部分を Subversion リポジトリの URL に変更しましょう。</p>
+<pre><code>$ git svn clone file:<span class="hljs-comment">///tmp/test-svn -T trunk -b branches -t tags</span>
+Initialized empty Git repository <span class="hljs-keyword">in</span> /Users/schacon/projects/testsvnsync/svn<span class="hljs-subst">/</span><span class="hljs-built_in">.</span>git<span class="hljs-subst">/</span>
+r1 <span class="hljs-subst">=</span> b4e387bc68740b5af56c2a5faf4003ae42bd135c (trunk)
+      A    m4/acx_pthread<span class="hljs-built_in">.</span>m4
+      A    m4/stl_hash<span class="hljs-built_in">.</span>m4
+<span class="hljs-attribute">...</span>
+r75 <span class="hljs-subst">=</span> d1957f3b307922124eec6314e15bcda59e3d9610 (trunk)
+Found possible branch point: file:<span class="hljs-comment">///tmp/test-svn/trunk =&gt; \</span>
+    file:<span class="hljs-comment">///tmp/test-svn /branches/my-calc-branch, 75</span>
+Found branch <span class="hljs-keyword">parent</span>: (my<span class="hljs-attribute">-calc</span><span class="hljs-attribute">-branch</span>) d1957f3b307922124eec6314e15bcda59e3d9610
+Following <span class="hljs-keyword">parent</span> <span class="hljs-keyword">with</span> do_switch
+Successfully followed <span class="hljs-keyword">parent</span>
+r76 <span class="hljs-subst">=</span> <span class="hljs-number">8624824</span>ecc0badd73f40ea2f01fce51894189b01 (my<span class="hljs-attribute">-calc</span><span class="hljs-attribute">-branch</span>)
+Checked out HEAD:
+ file:<span class="hljs-comment">///tmp/test-svn/branches/my-calc-branch r76</span>
+</code></pre><p>これは、指定した URL に対して <code>git svn init</code> に続けて <code>git svn fetch</code> を実行するのと同じ意味です。しばらく時間がかかります。test プロジェクトには 75 のコミットしかなくてコードベースもそれほど大きくないので、数分しかかかりません。しかし、Git は各バージョンをそれぞれチェックアウトしては個別にコミットしています。もし数百数千のコミットがあるプロジェクトで試すと、終わるまでには数時間から下手をすると数日かかってしまうかもしれません。</p>
+<p><code>-T trunk -b branches -t tags</code> の部分は、この Subversion リポジトリが標準的なブランチとタグの規約に従っていることを表しています。trunk、branches、tags にもし別の名前をつけているのなら、この部分を変更します。この規約は一般に使われているものなので、単に <code>-s</code> とだけ指定することもできます。これは、先の 3 つのオプションを指定したのと同じ標準のレイアウトを表します。つまり、次のようにしても同じ意味になるということです。</p>
+<pre><code>$ git svn clone file:<span class="hljs-comment"><span class="hljs-xmlDocTag">///</span>tmp/test-svn -s</span>
+</code></pre><p>これで、ブランチやタグも取り込んだ Git リポジトリができあがりました。</p>
+<pre><code>$ git branch -a
+* master
+  my-calc-branch
+  tags/<span class="hljs-number">2.0</span><span class="hljs-number">.2</span>
+  tags/<span class="hljs-keyword">release</span>-<span class="hljs-number">2.0</span><span class="hljs-number">.1</span>
+  tags/<span class="hljs-keyword">release</span>-<span class="hljs-number">2.0</span><span class="hljs-number">.2</span>
+  tags/<span class="hljs-keyword">release</span>-<span class="hljs-number">2.0</span><span class="hljs-number">.2</span>rc1
+  trunk
+</code></pre><p>このツールがリモート参照を取り込むときの名前空間が通常と異なることに注意しましょう。Git リポジトリのクローンを作成した場合は、リモートサーバー上のすべてのブランチが <code>origin/[branch]</code> のような形式で取り込まれます。つまりリモートの名前で名前空間が作られます。しかし、<code>git svn</code> はリモートが複数あることを想定しておらず、すべてのリモートサーバーを名前空間なしに保存します。Git のコマンド <code>show-ref</code> を使うと、すべての参照名を完全な形式で見ることができます。</p>
+<pre><code>$ git show-ref
+<span class="hljs-number">1</span>cbd4904d9982f386d87f88fce1c24ad7c0f0471 refs/heads/master
+aee1ecc26318164f355a883f5d99cff0c852d3c4 refs/<span class="hljs-comment">remotes/my-calc-branch</span>
+<span class="hljs-number">03</span>d09b0e2aad427e34a6d50ff147128e76c0e0f5 refs/<span class="hljs-comment">remotes/tags/2.0.2</span>
+<span class="hljs-number">50</span>d02cc0adc9da4319eeba0900430ba219b9c376 refs/<span class="hljs-comment">remotes/tags/release-2.0.1</span>
+<span class="hljs-number">4</span>caaa711a50c77879a91b8b90380060f672745cb refs/<span class="hljs-comment">remotes/tags/release-2.0.2</span>
+<span class="hljs-number">1</span>c4cb508144c513ff1214c3488abe66dcb92916f refs/<span class="hljs-comment">remotes/tags/release-2.0.2rc1</span>
+<span class="hljs-number">1</span>cbd4904d9982f386d87f88fce1c24ad7c0f0471 refs/<span class="hljs-comment">remotes/trunk</span>
+</code></pre><p>通常の Git リポジトリは、このようになります。</p>
+<pre><code>$ git show-ref
+<span class="hljs-number">83</span>e38c7a0af325a9722f2fdc56b10188806d83a1 refs/heads/master
+<span class="hljs-number">3</span>e15e38c198baac84223acfc6224bb8b99ff2281 refs/<span class="hljs-comment">remotes/gitserver/master</span>
+<span class="hljs-number">0</span>a30dd3b0c795b80212ae723640d4e5d48cabdff refs/<span class="hljs-comment">remotes/origin/master</span>
+<span class="hljs-number">25812380387</span>fdd55f916652be4881c6f11600d6f refs/<span class="hljs-comment">remotes/origin/testing</span>
+</code></pre><p>2 つのリモートサーバーがあり、一方の <code>gitserver</code> には <code>master</code> ブランチが、そしてもう一方の <code>origin</code> には <code>master</code> と <code>testing</code> の 2 つのブランチがあります。</p>
+<p>サンプルのリモート参照が <code>git svn</code> でどのように取り込まれたかに注目しましょう。タグはリモートブランチとして取り込まれており、Git のタグにはなっていません。Subversion から取り込んだ内容は、まるで tags という名前のリモートからブランチを取り込んだように見えます。</p>
+<h2 id="subversion-">Subversion へのコミットの書き戻し</h2>
+<p>作業リポジトリを手に入れたあなたはプロジェクト上で何らかの作業を終え、コミットを上流に書き戻すことになりました。Git を SVN クライアントとして使います。どれかひとつのファイルを変更してコミットした時点では、Git上でローカルに存在するそのコミットはSubversionサーバー上には存在しません。</p>
+<pre><code>$ git commit -am 'Adding git-svn instructions <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> README'
+[master <span class="hljs-number">97031e5</span>] Adding git-svn instructions <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> README
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>次に、これをプッシュして上流を変更しなければなりません。この変更が Subversion に対してどのように作用するのかに注意しましょう。オフラインで行った複数のコミットを、すべて一度に Subversion サーバーにプッシュすることができます。Subversion サーバーにプッシュするには <code>git svn dcommit</code> コマンドを使います。</p>
+<pre><code>$ git svn dcommit
+Committing to file:///tmp/test-svn/trunk <span class="hljs-keyword">...</span>
+       M      README.txt
+Committed r79
+       M      README.txt
+r79 = 938b1a547c2cc92033b74d32030e86468294a5c8 (trunk)
+No changes between current HEAD and refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+</code></pre><p>このコマンドは、Subversionサーバーからのコード上で行われたすべてのコミットに対して個別に Subversion 上にコミットし、ローカルの Git のコミットを書き換えて一意な識別子を含むようにします。ここで重要なのは、書き換えによってすべてのローカルコミットの SHA-1 チェックサムが変化するということです。この理由もあって、Git ベースのリモートリポジトリにあるプロジェクトと Subversion サーバーを同時に使うことはおすすめできません。直近のコミットを調べれば、新たに <code>git-svn-id</code> が追記されたことがわかります。</p>
+<pre><code>$ git <span class="hljs-keyword">log</span> <span class="hljs-subst">-</span><span class="hljs-number">1</span>
+commit <span class="hljs-number">938</span>b1a547c2cc92033b74d32030e86468294a5c8
+Author: schacon <span class="hljs-subst">&lt;</span>schacon@<span class="hljs-number">4</span>c93b258<span class="hljs-subst">-</span><span class="hljs-number">373</span>f<span class="hljs-subst">-</span><span class="hljs-number">11</span>de<span class="hljs-attribute">-be05</span><span class="hljs-subst">-</span><span class="hljs-number">5</span>f7a86268029<span class="hljs-subst">&gt;</span>
+<span class="hljs-built_in">Date</span>:   Sat May <span class="hljs-number">2</span> <span class="hljs-number">22</span>:<span class="hljs-number">06</span>:<span class="hljs-number">44</span> <span class="hljs-number">2009</span> <span class="hljs-subst">+</span><span class="hljs-number">0000</span>
+
+    Adding git<span class="hljs-attribute">-svn</span> instructions <span class="hljs-keyword">to</span> the README
+
+    git<span class="hljs-attribute">-svn</span><span class="hljs-attribute">-id</span>: file:<span class="hljs-comment">///tmp/test-svn/trunk@79 4c93b258-373f-11de-be05-5f7a86268029</span>
+</code></pre><p>元のコミットの SHA チェックサムが <code>97031e5</code> で始まっていたのに対して今は <code>938b1a5</code> に変わっていることに注目しましょう。Git と Subversion の両方のサーバーにプッシュしたい場合は、まず Subversion サーバーにプッシュ (<code>dcommit</code>) してから Git のほうにプッシュしなければなりません。dcommit でコミットデータが書き換わるからです。</p>
+<h2 id="-">新しい変更の取り込み</h2>
+<p>複数の開発者と作業をしていると、遅かれ早かれ、誰かがプッシュしたあとに他の人がプッシュしようとして衝突を起こすということが発生します。他の人の作業をマージするまで、その変更は却下されます。<code>git svn</code> では、このようになります。</p>
+<pre><code>$ git svn dcommit
+Committing <span class="hljs-built_in">to</span> <span class="hljs-built_in">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk ...</span>
+Merge conflict during commit: Your <span class="hljs-built_in">file</span> <span class="hljs-operator">or</span> <span class="hljs-built_in">directory</span> <span class="hljs-string">'README.txt'</span> is probably \
+out-<span class="hljs-operator">of</span>-<span class="hljs-built_in">date</span>: resource out <span class="hljs-operator">of</span> <span class="hljs-built_in">date</span>; <span class="hljs-keyword">try</span> updating <span class="hljs-keyword">at</span> /Users/schacon/libexec/git-\
+core/git-svn <span class="hljs-built_in">line</span> <span class="hljs-number">482</span>
+</code></pre><p>この状態を解決するには <code>git svn rebase</code> を実行します。これは、サーバー上の変更のうちまだ取り込んでいない変更をすべて取り込んでから、自分の作業をリベースします。</p>
+<pre><code>$ git svn rebase
+       M      README.txt
+r80 = ff829ab914e8775c7c025d741beb3d523ee30bc4 (trunk)
+First, rewinding head <span class="hljs-keyword">to</span> replay your work <span class="hljs-function_start"><span class="hljs-keyword">on</span></span> top <span class="hljs-keyword">of</span> <span class="hljs-keyword">it</span>...
+Applying: <span class="hljs-keyword">first</span> user change
+</code></pre><p>これで手元の作業が Subversion サーバー上の最新状態の上でなされたことになったので、無事に <code>dcommit</code> することができます。</p>
+<pre><code>$ git svn dcommit
+Committing to file:///tmp/test-svn/trunk <span class="hljs-keyword">...</span>
+       M      README.txt
+Committed r81
+       M      README.txt
+r81 = 456cbe6337abe49154db70106d1836bc1332deed (trunk)
+No changes between current HEAD and refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+</code></pre><p>ここで注意すべき点は、Git の場合は上流での変更をすべてマージしてからでなければプッシュできないけれど、<code>git svn</code> の場合は衝突さえしなければマージしなくてもプッシュできるということです。だれかがあるファイルを変更した後で自分が別のファイルを変更してプッシュしても、<code>dcommit</code> は正しく動作します。</p>
+<pre><code>$ git svn dcommit
+Committing <span class="hljs-built_in">to</span> <span class="hljs-built_in">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk ...</span>
+       M      configure.ac
+Committed r84
+       M      autogen.sh
+r83 = <span class="hljs-number">8</span>aa54a74d452f82eee10076ab2584c1fc424853b (trunk)
+       M      configure.ac
+r84 = cdbac939211ccb18aa744e581e46563af5d962d0 (trunk)
+W: d2f23b80f67aaaa1f6f5aaef48fce3263ac71a92 <span class="hljs-operator">and</span> refs/remotes/trunk differ, \
+  <span class="hljs-keyword">using</span> rebase:
+:<span class="hljs-number">100755</span> <span class="hljs-number">100755</span> efa5a59965fbbb5b2b0a12890f1b351bb5493c18 \
+  <span class="hljs-number">015e4</span>c98c482f0fa71e4d5434338014530b37fa6 M   autogen.sh
+First, rewinding head <span class="hljs-built_in">to</span> replay your work <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">top</span> <span class="hljs-title">of</span> <span class="hljs-title">it</span>...</span>
+Nothing <span class="hljs-built_in">to</span> <span class="hljs-built_in">do</span>.
+</code></pre><p>これは忘れずに覚えておきましょう。というのも、プッシュした後の結果はどの開発者の作業環境にも存在しない状態になっているからです。たまたま衝突しなかっただけで互換性のない変更をプッシュしてしまったときに、その問題を見つけるのが難しくなります。これが、Git サーバーを使う場合と異なる点です。Git の場合はクライアントの状態をチェックしてからでないと変更を公開できませんが、SVN の場合はコミットの直前とコミット後の状態が同等であるかどうかすら確かめられないのです。</p>
+<p>もし自分のコミット準備がまだできていなくても、Subversion から変更を取り込むときにもこのコマンドを使わなければなりません。<code>git svn fetch</code> でも新しいデータを取得することはできますが、<code>git svn rebase</code> はデータを取得するだけでなくローカルのコミットの更新も行います。</p>
+<pre><code>$ git svn rebase
+       M      generate_descriptor_proto.sh
+r82 = bd16df9173e424c6f52c337ab6efa7f7643282f1 (trunk)
+First, rewinding head <span class="hljs-keyword">to</span> replay your work <span class="hljs-function_start"><span class="hljs-keyword">on</span></span> top <span class="hljs-keyword">of</span> <span class="hljs-keyword">it</span>...
+Fast-forwarded master <span class="hljs-keyword">to</span> refs/remotes/trunk.
+</code></pre><p><code>git svn rebase</code> をときどき実行しておけば、手元のコードを常に最新の状態に保っておけます。しかし、このコマンドを実行するときには作業ディレクトリがクリーンな状態であることを確認しておく必要があります。手元で変更をしている場合は、stash で作業を退避させるか一時的にコミットしてからでないと <code>git svn rebase</code> を実行してはいけません。さもないと、もしリベースの結果としてマージが衝突すればコマンドの実行が止まってしまいます。</p>
+<h2 id="git-">Git でのブランチに関する問題</h2>
+<p>Git のワークフローに慣れてくると、トピックブランチを作ってそこで作業を行い、それをマージすることもあるでしょう。git svn を使って Subversion サーバーにプッシュする場合は、それらのブランチをまとめてプッシュするのではなく一つのブランチ上にリベースしてからプッシュしたくなるかもしれません。リベースしたほうがよい理由は、Subversion はリニアに歴史を管理していて Git のようなマージができないからです。git svn がスナップショットを Subversion のコミットに変換するときには、最初の親だけに続けます。</p>
+<p>歴史が次のような状態になっているものとしましょう。<code>experiment</code> ブランチを作ってそこで 2 回のコミットを済ませ、それを <code>master</code> にマージしたところです。ここで <code>dcommit</code> すると、出力はこのようになります。</p>
+<pre><code>$ git svn dcommit
+Committing to file:///tmp/test-svn/trunk ...
+       M      CHANGES<span class="hljs-preprocessor">.txt</span>
+Committed r85
+       M      CHANGES<span class="hljs-preprocessor">.txt</span>
+r85 = <span class="hljs-number">4</span>bfebeec434d156c36f2bcd18f4e3d97dc3269a2 (trunk)
+No changes between current HEAD <span class="hljs-keyword">and</span> refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+<span class="hljs-label">COPYING.txt:</span> locally modified
+<span class="hljs-label">INSTALL.txt:</span> locally modified
+       M      COPYING<span class="hljs-preprocessor">.txt</span>
+       M      INSTALL<span class="hljs-preprocessor">.txt</span>
+Committed r86
+       M      INSTALL<span class="hljs-preprocessor">.txt</span>
+       M      COPYING<span class="hljs-preprocessor">.txt</span>
+r86 = <span class="hljs-number">2647</span>f6b86ccfcaad4ec58c520e369ec81f7c283c (trunk)
+No changes between current HEAD <span class="hljs-keyword">and</span> refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+</code></pre><p>歴史をマージしたブランチで <code>dcommit</code> を実行してもうまく動作します。ただし、Git プロジェクト上での歴史を見ると、<code>experiment</code> ブランチ上でのコミットは書き換えられていません。そこでのすべての変更は、SVN 上での単一のマージコミットとなっています。</p>
+<p>他の人がその作業をクローンしたときには、すべての作業をひとまとめにしたマージコミットしか見ることができません。そのコミットがどこから来たのか、そしていつコミットされたのかを知ることができないのです。</p>
+<h2 id="subversion-">Subversion のブランチ</h2>
+<p>Subversion のブランチは Git のブランチとは異なります。可能ならば、Subversion のブランチは使わないようにするのがベストでしょう。しかし、Subversion のブランチの作成やコミットも、git svn を使ってすることができます。</p>
+<h3 id="-svn-">新しい SVN ブランチの作成</h3>
+<p>Subversion に新たなブランチを作るには <code>git svn branch [branchname]</code> を実行します。</p>
+<pre><code>$ git svn branch opera
+Copying <span class="hljs-keyword">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk at r87 to file:///tmp/test-svn/branches/opera...</span>
+Found possible branch point: <span class="hljs-keyword">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk =&gt; \</span>
+  <span class="hljs-keyword">file</span>:<span class="hljs-comment">///tmp/test-svn/branches/opera, 87</span>
+Found branch <span class="hljs-keyword">parent</span>: (opera) <span class="hljs-number">1</span>f6bfe471083cbca06ac8d4176f7ad4de0d62e5f
+Following <span class="hljs-keyword">parent</span> with do_switch
+Successfully followed <span class="hljs-keyword">parent</span>
+r89 = <span class="hljs-number">9</span>b6fe0b90c5c9adf9165f700897518dbc54a7cbf (opera)
+</code></pre><p>これは Subversion の <code>svn copy trunk branches/opera</code> コマンドと同じ意味で、Subversion サーバー上で実行されます。ここで注意すべき点は、このコマンドを実行しても新しいブランチに入ったことにはならないということです。この後コミットをすると、そのコミットはサーバーの <code>trunk</code> に対して行われます。<code>opera</code> ではありません。</p>
+<h2 id="-">アクティブなブランチの切り替え</h2>
+<p>Git が dcommit の行き先のブランチを決めるときには、あなたの手元の歴史上にある Subversion ブランチのいずれかのヒントを使います。手元にはひとつしかないはずで、それは現在のブランチの歴史上の直近のコミットにある <code>git-svn-id</code> です。</p>
+<p>複数のブランチを同時に操作するときは、ローカルブランチを <code>dcommit</code> でその Subversion ブランチにコミットするのかを設定することができます。そのためには、Subversion のブランチをインポートしてローカルブランチを作ります。<code>opera</code> ブランチを個別に操作したい場合は、このようなコマンドを実行します。</p>
+<pre><code><span class="hljs-variable">$ </span>git branch opera remotes/opera
+</code></pre><p>これで、<code>opera</code> ブランチを <code>trunk</code> (手元の <code>master</code> ブランチ) にマージするときに通常の <code>git merge</code> が使えるようになりました。しかし、そのときには適切なコミットメッセージを (<code>-m</code> で) 指定しなければなりません。さもないと、有用な情報ではなく単なる &quot;Merge branch opera&quot; というメッセージになってしまいます。</p>
+<p><code>git merge</code> を使ってこの操作を行ったとしても、そしてそれが Subversion でのマージよりもずっと簡単だったとしても (Git は自動的に適切なマージベースを検出してくれるからね)、これは通常の Git のマージコミットとは違うということを覚えておきましょう。このデータを Subversion に書き戻すことになりますが Subversion では複数の親を持つコミットは処理できません。そのため、プッシュした後は、別のブランチ上で行ったすべての操作をひとまとめにした単一のコミットに見えてしまいます。あるブランチを別のブランチにマージしたら、元のブランチに戻って作業を続けるのは困難です。Git なら簡単なのですが。<code>dcommit</code> コマンドを実行すると、どのブランチからマージしたのかという情報はすべて消えてしまいます。そのため、それ以降のマージ元の算出は間違ったものとなります。dcommit は、<code>git merge</code> の結果をまるで <code>git merge --squash</code> を実行したのと同じ状態にしてしまうのです。残念ながら、これを回避するよい方法はありません。Subversion 側にこの情報を保持する方法がないからです。Subversion をサーバーに使う以上は、常にこの制約に縛られることになります。問題を回避するには、trunk にマージしたらローカルブランチ (この場合は <code>opera</code>) を削除しなければなりません。</p>
+<h2 id="subversion-">Subversion コマンド</h2>
+<p><code>git svn</code> ツールセットには、Git への移行をしやすくするための多くのコマンドが用意されています。Subversion で使い慣れていたのと同等の機能を提供するコマンド群です。その中からいくつかを紹介します。</p>
+<h3 id="svn-">SVN 形式のログ</h3>
+<p>Subversion に慣れているので SVN が出力する形式で歴史を見たい、という場合は <code>git svn log</code> を実行しましょう。すると、コミットの歴史が SVN 形式で表示されます。</p>
+<pre><code><span class="hljs-header">$ git svn log
+------------------------------------------------------------------------</span>
+r87 | schacon | 2009-05-02 16:07:37 -0700 (Sat, 02 May 2009) | 2 lines
+
+autogen change
+
+<span class="hljs-code">------------------------------------------------------------------------
+r86 | schacon | 2009-05-02 16:00:21 -0700 (Sat, 02 May 2009) | 2 lines
+
+Merge branch 'experiment'
+
+------------------------------------------------------------------------</span>
+r85 | schacon | 2009-05-02 16:00:09 -0700 (Sat, 02 May 2009) | 2 lines
+
+updated the changelog
+</code></pre><p><code>git svn log</code> に関して知っておくべき重要なことがふたつあります。まず。このコマンドはオフラインで動作します。実際の <code>svn log</code> コマンドのように Subversion サーバーにデータを問い合わせたりしません。次に、すでに Subversion サーバーにコミット済みのコミットしか表示されません。つまり、ローカルの Git へのコミットのうちまだ dcommit していないものは表示されないし、その間に他の人が Subversion サーバーにコミットした内容も表示されません。最後に Subversion サーバーの状態を調べたときのログが表示されると考えればよいでしょう。</p>
+<h3 id="svn-">SVN アノテーション</h3>
+<p><code>git svn log</code> コマンドが <code>svn log</code> コマンドをオフラインでシミュレートしているのと同様に、<code>svn annotate</code> と同様のことを <code>git svn blame [FILE]</code> で実現できます。出力は、このようになります。</p>
+<pre><code>$ git svn blame README.txt
+ <span class="hljs-number">2</span>   temporal Protocol Buffers - Google<span class="hljs-attribute">'s</span> data interchange format
+ <span class="hljs-number">2</span>   temporal Copyright <span class="hljs-number">2008</span> Google Inc.
+ <span class="hljs-number">2</span>   temporal http://code.google.com/apis/protocolbuffers/
+ <span class="hljs-number">2</span>   temporal
+<span class="hljs-number">22</span>   temporal C++ Installation - Unix
+<span class="hljs-number">22</span>   temporal =======================
+ <span class="hljs-number">2</span>   temporal
+<span class="hljs-number">79</span>    schacon Committing <span class="hljs-keyword">in</span> git-svn.
+<span class="hljs-number">78</span>    schacon
+ <span class="hljs-number">2</span>   temporal <span class="hljs-keyword">To</span> build <span class="hljs-keyword">and</span> install the C++ Protocol <span class="hljs-keyword">Buffer</span> runtime <span class="hljs-keyword">and</span> the Protocol
+ <span class="hljs-number">2</span>   temporal <span class="hljs-keyword">Buffer</span> compiler (protoc) execute the following:
+ <span class="hljs-number">2</span>   temporal
+</code></pre><p>先ほどと同様、このコマンドも Git にローカルにコミットした内容や他から Subversion にプッシュされていたコミットは表示できません。</p>
+<h3 id="svn-">SVN サーバ情報</h3>
+<p><code>svn info</code> と同様のサーバー情報を取得するには <code>git svn info</code> を実行します。</p>
+<pre><code>$ git svn info
+<span class="hljs-label">Path:</span> .
+<span class="hljs-label">URL:</span> https://schacon-test<span class="hljs-preprocessor">.googlecode</span><span class="hljs-preprocessor">.com</span>/svn/trunk
+Repository Root: https://schacon-test<span class="hljs-preprocessor">.googlecode</span><span class="hljs-preprocessor">.com</span>/svn
+Repository UUID: <span class="hljs-number">4</span>c93b258-<span class="hljs-number">373</span>f-<span class="hljs-number">11</span>de-be05-<span class="hljs-number">5</span>f7a86268029
+<span class="hljs-label">Revision:</span> <span class="hljs-number">87</span>
+Node Kind: directory
+<span class="hljs-label">Schedule:</span> normal
+Last Changed Author: schacon
+Last Changed Rev: <span class="hljs-number">87</span>
+Last Changed Date: <span class="hljs-number">2009</span>-<span class="hljs-number">05</span>-<span class="hljs-number">02</span> <span class="hljs-number">16</span>:<span class="hljs-number">07</span>:<span class="hljs-number">37</span> -<span class="hljs-number">0700</span> (Sat, <span class="hljs-number">02</span> May <span class="hljs-number">2009</span>)
+</code></pre><p><code>blame</code> や <code>log</code> と同様にこれもオフラインで動作し、最後に Subversion サーバーと通信した時点での情報しか表示されません。</p>
+<h3 id="subversion-">Subversion が無視するものを無視する</h3>
+<p>どこかに <code>svn:ignore</code> プロパティが設定されている Subversion リポジトリをクローンした場合は、対応する <code>.gitignore</code> ファイルを用意したくなることでしょう。コミットすべきではないファイルを誤ってコミットしてしまうことを防ぐためにです。<code>git svn</code> には、この問題に対応するためのコマンドが二つ用意されています。まず最初が <code>git svn create-ignore</code> で、これは、対応する <code>.gitignore</code> ファイルを自動生成して次のコミットに含めます。</p>
+<p>もうひとつは <code>git svn show-ignore</code> で、これは <code>.gitignore</code> に書き込む内容を標準出力に送ります。この出力を、プロジェクトの exclude ファイルにリダイレクトしましょう。</p>
+<pre><code><span class="hljs-variable">$ </span>git svn show-ignore &gt; .git/info/exclude
+</code></pre><p>これで、プロジェクトに <code>.gitignore</code> ファイルを散らかさなくてもよくなります。Subversion 使いのチームの中で Git を使うのが自分だけだという場合、他のメンバーにとっては <code>.gitignore</code> ファイルは目障りでしょう。そのような場合はこの方法が使えます。</p>
+<h2 id="git-svn-">Git-Svn のまとめ</h2>
+<p><code>git svn</code> ツール群は、Subversion サーバーに行き詰まっている場合や使っている開発環境が Subversion サーバー前提になっている場合などに便利です。Git のできそこないだと感じるかもしれません。また、他のメンバーとの間で混乱が起こるかもしれません。トラブルを避けるために、次のガイドラインに従いましょう。</p>
+<ul>
+<li>Git の歴史をリニアに保ち続け、<code>git merge</code> によるマージコミットを含めないようにする。本流以外のブランチでの作業を書き戻すときは、マージではなくリベースすること。</li>
+<li>Git サーバーを別途用意したりしないこと、新しい開発者がクローンするときのスピードをあげるためにサーバーを用意することはあるでしょうが、そこに <code>git-svn-id</code> エントリを持たないコミットをプッシュしてはいけません。<code>pre-receive</code> フックを追加してコミットメッセージをチェックし、<code>git-svn-id</code> がなければプッシュを拒否するようにしてもよいでしょう。</li>
+</ul>
+<p>これらのガイドラインを守れば、Subversion サーバーでの作業にも耐えられることでしょう。しかし、もし本物の Git サーバーに移行できるのなら、そうしたほうがチームにとってずっと利益になります。</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git/git_.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

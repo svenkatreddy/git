@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Branching Pada Git | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../branching_pada_git/apakah_branch_itu.html" />
+        
+        
+        <link rel="prev" href="../dasar_dasar_git/simpulan.html" />
+        
+
+        <meta property="og:title" content="Branching Pada Git | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="3" data-basepath=".." data-revision="1396895602592">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/branching_pada_git/README.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="memulai_git/README.html">
+                
+                <a href="../memulai_git/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Memulai Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="memulai_git/tentang_version_control.html">
+                            
+                            <a href="../memulai_git/tentang_version_control.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Tentang Version Control
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="memulai_git/sejarah_singkat_git.html">
+                            
+                            <a href="../memulai_git/sejarah_singkat_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Sejarah Singkat Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="memulai_git/dasar_git.html">
+                            
+                            <a href="../memulai_git/dasar_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Dasar Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="memulai_git/menginstall_git.html">
+                            
+                            <a href="../memulai_git/menginstall_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Menginstall Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="memulai_git/setup_git_untuk_pertama_kalinya.html">
+                            
+                            <a href="../memulai_git/setup_git_untuk_pertama_kalinya.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Setup Git Untuk Pertama Kalinya
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="memulai_git/memperoleh_pertolongan.html">
+                            
+                            <a href="../memulai_git/memperoleh_pertolongan.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Memperoleh Pertolongan
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="memulai_git/kesimpulan.html">
+                            
+                            <a href="../memulai_git/kesimpulan.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Kesimpulan
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="dasar_dasar_git/README.html">
+                
+                <a href="../dasar_dasar_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Dasar-dasar Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="dasar_dasar_git/mengambil_repositori_git.html">
+                            
+                            <a href="../dasar_dasar_git/mengambil_repositori_git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Mengambil Repositori Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="dasar_dasar_git/merekam_perubahan_ke_dalam_repositori.html">
+                            
+                            <a href="../dasar_dasar_git/merekam_perubahan_ke_dalam_repositori.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Merekam Perubahan ke dalam Repositori
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="dasar_dasar_git/melihat_sejarah_commit.html">
+                            
+                            <a href="../dasar_dasar_git/melihat_sejarah_commit.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Melihat Sejarah Commit
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="dasar_dasar_git/membatalkan_apapun.html">
+                            
+                            <a href="../dasar_dasar_git/membatalkan_apapun.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Membatalkan Apapun
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="dasar_dasar_git/bekerja_berjarak.html">
+                            
+                            <a href="../dasar_dasar_git/bekerja_berjarak.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Bekerja Berjarak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="dasar_dasar_git/menandai.html">
+                            
+                            <a href="../dasar_dasar_git/menandai.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Menandai
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="dasar_dasar_git/tips_dan_tricks.html">
+                            
+                            <a href="../dasar_dasar_git/tips_dan_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips dan Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="dasar_dasar_git/simpulan.html">
+                            
+                            <a href="../dasar_dasar_git/simpulan.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Simpulan
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="branching_pada_git/README.html">
+                
+                <a href="../branching_pada_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Branching Pada Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="branching_pada_git/apakah_branch_itu.html">
+                            
+                            <a href="../branching_pada_git/apakah_branch_itu.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Apakah Branch Itu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="branching_pada_git/basic_branching_and_merging.html">
+                            
+                            <a href="../branching_pada_git/basic_branching_and_merging.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Basic Branching and Merging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="branching_pada_git/manajemen_branch.html">
+                            
+                            <a href="../branching_pada_git/manajemen_branch.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Manajemen Branch
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="branching_pada_git/alur_kerja_branching.html">
+                            
+                            <a href="../branching_pada_git/alur_kerja_branching.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Alur Kerja Branching
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="branching_pada_git/remote_branches.html">
+                            
+                            <a href="../branching_pada_git/remote_branches.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Remote Branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="branching_pada_git/rebasing.html">
+                            
+                            <a href="../branching_pada_git/rebasing.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="branching_pada_git/kesimpulan.html">
+                            
+                            <a href="../branching_pada_git/kesimpulan.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Kesimpulan
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 72%;min-width: 68%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../memulai_git/README.html" title="Memulai Git" class="chapter done new-chapter" data-progress="1" style="left: 4%;"></a>
+    
+        <a href="../memulai_git/tentang_version_control.html" title="Tentang Version Control" class="chapter done " data-progress="1.1" style="left: 8%;"></a>
+    
+        <a href="../memulai_git/sejarah_singkat_git.html" title="Sejarah Singkat Git" class="chapter done " data-progress="1.2" style="left: 12%;"></a>
+    
+        <a href="../memulai_git/dasar_git.html" title="Dasar Git" class="chapter done " data-progress="1.3" style="left: 16%;"></a>
+    
+        <a href="../memulai_git/menginstall_git.html" title="Menginstall Git" class="chapter done " data-progress="1.4" style="left: 20%;"></a>
+    
+        <a href="../memulai_git/setup_git_untuk_pertama_kalinya.html" title="Setup Git Untuk Pertama Kalinya" class="chapter done " data-progress="1.5" style="left: 24%;"></a>
+    
+        <a href="../memulai_git/memperoleh_pertolongan.html" title="Memperoleh Pertolongan" class="chapter done " data-progress="1.6" style="left: 28%;"></a>
+    
+        <a href="../memulai_git/kesimpulan.html" title="Kesimpulan" class="chapter done " data-progress="1.7" style="left: 32%;"></a>
+    
+        <a href="../dasar_dasar_git/README.html" title="Dasar-dasar Git" class="chapter done new-chapter" data-progress="2" style="left: 36%;"></a>
+    
+        <a href="../dasar_dasar_git/mengambil_repositori_git.html" title="Mengambil Repositori Git" class="chapter done " data-progress="2.1" style="left: 40%;"></a>
+    
+        <a href="../dasar_dasar_git/merekam_perubahan_ke_dalam_repositori.html" title="Merekam Perubahan ke dalam Repositori" class="chapter done " data-progress="2.2" style="left: 44%;"></a>
+    
+        <a href="../dasar_dasar_git/melihat_sejarah_commit.html" title="Melihat Sejarah Commit" class="chapter done " data-progress="2.3" style="left: 48%;"></a>
+    
+        <a href="../dasar_dasar_git/membatalkan_apapun.html" title="Membatalkan Apapun" class="chapter done " data-progress="2.4" style="left: 52%;"></a>
+    
+        <a href="../dasar_dasar_git/bekerja_berjarak.html" title="Bekerja Berjarak" class="chapter done " data-progress="2.5" style="left: 56%;"></a>
+    
+        <a href="../dasar_dasar_git/menandai.html" title="Menandai" class="chapter done " data-progress="2.6" style="left: 60%;"></a>
+    
+        <a href="../dasar_dasar_git/tips_dan_tricks.html" title="Tips dan Tricks" class="chapter done " data-progress="2.7" style="left: 64%;"></a>
+    
+        <a href="../dasar_dasar_git/simpulan.html" title="Simpulan" class="chapter done " data-progress="2.8" style="left: 68%;"></a>
+    
+        <a href="../branching_pada_git/README.html" title="Branching Pada Git" class="chapter done new-chapter" data-progress="3" style="left: 72%;"></a>
+    
+        <a href="../branching_pada_git/apakah_branch_itu.html" title="Apakah Branch Itu" class="chapter  " data-progress="3.1" style="left: 76%;"></a>
+    
+        <a href="../branching_pada_git/basic_branching_and_merging.html" title="Basic Branching and Merging" class="chapter  " data-progress="3.2" style="left: 80%;"></a>
+    
+        <a href="../branching_pada_git/manajemen_branch.html" title="Manajemen Branch" class="chapter  " data-progress="3.3" style="left: 84%;"></a>
+    
+        <a href="../branching_pada_git/alur_kerja_branching.html" title="Alur Kerja Branching" class="chapter  " data-progress="3.4" style="left: 88%;"></a>
+    
+        <a href="../branching_pada_git/remote_branches.html" title="Remote Branches" class="chapter  " data-progress="3.5" style="left: 92%;"></a>
+    
+        <a href="../branching_pada_git/rebasing.html" title="Rebasing" class="chapter  " data-progress="3.6" style="left: 96%;"></a>
+    
+        <a href="../branching_pada_git/kesimpulan.html" title="Kesimpulan" class="chapter  " data-progress="3.7" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_186">
+                    
+                        <h1 id="branching-pada-git">Branching Pada Git</h1>
+<p>Hampir setiap VCS memiliki sejumlah dukungan atas branching (percabangan). Branching adalah membuat cabang dari repositori utama dan melanjutkan melakukan pekerjaan pada cabang yang baru tersebut tanpa perlu khawatir mengacaukan yang utama. Dalam banyak VCS, branching adalah proses yang agak mahal, karena seringkali mengharuskan anda untuk membuat salinan baru dari direktori kode sumber, dimana dapat memakan waktu lama untuk proyek-proyek yang besar.</p>
+<p>Beberapa orang menyebut model branching dalam Git sebagai &quot;killer feature,&quot; hal inilah yang membuat Git berbeda di komunitas VCS. Mengapa begitu istimewa? Cara Git membuat cabang sangatlah ringan, membuat operasi branching hampir seketika dan berpindah bolak-balik antara cabang umumnya sama cepatnya. Tidak seperti VCS lainnya, Git mendorong alur kerja dimana kita sering membuat cabang dan kemudian menggabungkannya, bahkan dapat beberapa kali dalam sehari. Memahami dan menguasai fitur ini memberi anda perangkat yang ampuh, unik, dan benar-benar dapat mengubah cara anda melakukan pengembangan (develop).</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../dasar_dasar_git/simpulan.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../branching_pada_git/apakah_branch_itu.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

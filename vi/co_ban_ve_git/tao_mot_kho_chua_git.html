@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Tạo Một Kho Chứa Git | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../co_ban_ve_git/ghi_lai_thay_doi_vao_kho_chua.html" />
+        
+        
+        <link rel="prev" href="../co_ban_ve_git/README.html" />
+        
+
+        <meta property="og:title" content="Tạo Một Kho Chứa Git | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.1" data-basepath=".." data-revision="1396895602594">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/co_ban_ve_git/tao_mot_kho_chua_git.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="bat_dau/README.html">
+                
+                <a href="../bat_dau/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Bắt Đầu
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="bat_dau/ve_quan_ly_phien_ban.html">
+                            
+                            <a href="../bat_dau/ve_quan_ly_phien_ban.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Về Quản Lý Phiên Bản
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="bat_dau/so_luoc_lich_su_cua_git.html">
+                            
+                            <a href="../bat_dau/so_luoc_lich_su_cua_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Sơ Lược Lịch Sử của Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="bat_dau/co_ban_ve_git.html">
+                            
+                            <a href="../bat_dau/co_ban_ve_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Cơ Bản về Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="bat_dau/cai_dat_git.html">
+                            
+                            <a href="../bat_dau/cai_dat_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Cài Đặt Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="bat_dau/cau_hinh_git_lan_dau.html">
+                            
+                            <a href="../bat_dau/cau_hinh_git_lan_dau.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Cấu Hình Git Lần Đầu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="bat_dau/tro_giup.html">
+                            
+                            <a href="../bat_dau/tro_giup.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Trợ Giúp
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="bat_dau/tom_tat.html">
+                            
+                            <a href="../bat_dau/tom_tat.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Tóm Tắt
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="co_ban_ve_git/README.html">
+                
+                <a href="../co_ban_ve_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Cơ Bản Về Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="co_ban_ve_git/tao_mot_kho_chua_git.html">
+                            
+                            <a href="../co_ban_ve_git/tao_mot_kho_chua_git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Tạo Một Kho Chứa Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="co_ban_ve_git/ghi_lai_thay_doi_vao_kho_chua.html">
+                            
+                            <a href="../co_ban_ve_git/ghi_lai_thay_doi_vao_kho_chua.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Ghi Lại Thay Đổi vào Kho Chứa
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="co_ban_ve_git/xem_lich_su_commit.html">
+                            
+                            <a href="../co_ban_ve_git/xem_lich_su_commit.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Xem Lịch Sử Commit
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="co_ban_ve_git/phuc_hoi.html">
+                            
+                            <a href="../co_ban_ve_git/phuc_hoi.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Phục Hồi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="co_ban_ve_git/lam_viec_tu_xa.html">
+                            
+                            <a href="../co_ban_ve_git/lam_viec_tu_xa.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Làm Việc Từ Xa
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="co_ban_ve_git/danh_dau.html">
+                            
+                            <a href="../co_ban_ve_git/danh_dau.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Đánh Dấu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="co_ban_ve_git/meo_nho.html">
+                            
+                            <a href="../co_ban_ve_git/meo_nho.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Mẹo Nhỏ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="co_ban_ve_git/tong_ket.html">
+                            
+                            <a href="../co_ban_ve_git/tong_ket.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Tổng Kết
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="phan_nhanh_trong_git/README.html">
+                
+                <a href="../phan_nhanh_trong_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Phân Nhánh Trong Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="phan_nhanh_trong_git/nhanh_la_gi.html">
+                            
+                            <a href="../phan_nhanh_trong_git/nhanh_la_gi.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Nhánh Là Gì?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="phan_nhanh_trong_git/co_ban_ve_phan_nhanh_va_tich_hop.html">
+                            
+                            <a href="../phan_nhanh_trong_git/co_ban_ve_phan_nhanh_va_tich_hop.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Cơ Bản Về Phân Nhánh và Tích Hợp
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="phan_nhanh_trong_git/quan_ly_cac_nhanh.html">
+                            
+                            <a href="../phan_nhanh_trong_git/quan_ly_cac_nhanh.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Quản Lý Các Nhánh
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="phan_nhanh_trong_git/quy_trinh_lam_viec_phan_nhanh.html">
+                            
+                            <a href="../phan_nhanh_trong_git/quy_trinh_lam_viec_phan_nhanh.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Quy Trình Làm Việc Phân Nhánh
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="phan_nhanh_trong_git/nhanh_remote.html">
+                            
+                            <a href="../phan_nhanh_trong_git/nhanh_remote.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Nhánh Remote
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="phan_nhanh_trong_git/rebasing.html">
+                            
+                            <a href="../phan_nhanh_trong_git/rebasing.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="phan_nhanh_trong_git/tong_ket.html">
+                            
+                            <a href="../phan_nhanh_trong_git/tong_ket.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Tổng Kết
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 40%;min-width: 36%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../bat_dau/README.html" title="Bắt Đầu" class="chapter done new-chapter" data-progress="1" style="left: 4%;"></a>
+    
+        <a href="../bat_dau/ve_quan_ly_phien_ban.html" title="Về Quản Lý Phiên Bản" class="chapter done " data-progress="1.1" style="left: 8%;"></a>
+    
+        <a href="../bat_dau/so_luoc_lich_su_cua_git.html" title="Sơ Lược Lịch Sử của Git" class="chapter done " data-progress="1.2" style="left: 12%;"></a>
+    
+        <a href="../bat_dau/co_ban_ve_git.html" title="Cơ Bản về Git" class="chapter done " data-progress="1.3" style="left: 16%;"></a>
+    
+        <a href="../bat_dau/cai_dat_git.html" title="Cài Đặt Git" class="chapter done " data-progress="1.4" style="left: 20%;"></a>
+    
+        <a href="../bat_dau/cau_hinh_git_lan_dau.html" title="Cấu Hình Git Lần Đầu" class="chapter done " data-progress="1.5" style="left: 24%;"></a>
+    
+        <a href="../bat_dau/tro_giup.html" title="Trợ Giúp" class="chapter done " data-progress="1.6" style="left: 28%;"></a>
+    
+        <a href="../bat_dau/tom_tat.html" title="Tóm Tắt" class="chapter done " data-progress="1.7" style="left: 32%;"></a>
+    
+        <a href="../co_ban_ve_git/README.html" title="Cơ Bản Về Git" class="chapter done new-chapter" data-progress="2" style="left: 36%;"></a>
+    
+        <a href="../co_ban_ve_git/tao_mot_kho_chua_git.html" title="Tạo Một Kho Chứa Git" class="chapter done " data-progress="2.1" style="left: 40%;"></a>
+    
+        <a href="../co_ban_ve_git/ghi_lai_thay_doi_vao_kho_chua.html" title="Ghi Lại Thay Đổi vào Kho Chứa" class="chapter  " data-progress="2.2" style="left: 44%;"></a>
+    
+        <a href="../co_ban_ve_git/xem_lich_su_commit.html" title="Xem Lịch Sử Commit" class="chapter  " data-progress="2.3" style="left: 48%;"></a>
+    
+        <a href="../co_ban_ve_git/phuc_hoi.html" title="Phục Hồi" class="chapter  " data-progress="2.4" style="left: 52%;"></a>
+    
+        <a href="../co_ban_ve_git/lam_viec_tu_xa.html" title="Làm Việc Từ Xa" class="chapter  " data-progress="2.5" style="left: 56%;"></a>
+    
+        <a href="../co_ban_ve_git/danh_dau.html" title="Đánh Dấu" class="chapter  " data-progress="2.6" style="left: 60%;"></a>
+    
+        <a href="../co_ban_ve_git/meo_nho.html" title="Mẹo Nhỏ" class="chapter  " data-progress="2.7" style="left: 64%;"></a>
+    
+        <a href="../co_ban_ve_git/tong_ket.html" title="Tổng Kết" class="chapter  " data-progress="2.8" style="left: 68%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/README.html" title="Phân Nhánh Trong Git" class="chapter  new-chapter" data-progress="3" style="left: 72%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/nhanh_la_gi.html" title="Nhánh Là Gì?" class="chapter  " data-progress="3.1" style="left: 76%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/co_ban_ve_phan_nhanh_va_tich_hop.html" title="Cơ Bản Về Phân Nhánh và Tích Hợp" class="chapter  " data-progress="3.2" style="left: 80%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/quan_ly_cac_nhanh.html" title="Quản Lý Các Nhánh" class="chapter  " data-progress="3.3" style="left: 84%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/quy_trinh_lam_viec_phan_nhanh.html" title="Quy Trình Làm Việc Phân Nhánh" class="chapter  " data-progress="3.4" style="left: 88%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/nhanh_remote.html" title="Nhánh Remote" class="chapter  " data-progress="3.5" style="left: 92%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/rebasing.html" title="Rebasing" class="chapter  " data-progress="3.6" style="left: 96%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/tong_ket.html" title="Tổng Kết" class="chapter  " data-progress="3.7" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_252">
+                    
+                        <h1 id="t-o-m-t-kho-ch-a-git">Tạo Một Kho Chứa Git</h1>
+<p>Bạn có thể tạo một dự án có sử dụng Git dựa theo hai phương pháp chính. Thứ nhất là dùng một dự án hay một thư mục đã có sẵn để nhập (import) vào Git. Thứ hai là tạo bản sao của một kho chứa Git đang hoạt động trên một máy chủ khác.</p>
+<h2 id="kh-i-t-o-m-t-kho-ch-a-t-th-m-c-c-">Khởi Tạo Một Kho Chứa Từ Thư Mục Cũ</h2>
+<p>Nếu như bạn muốn theo dõi một dự án cũ trong Git, bạn cần ở trong thư mục của dự án đó và gõ lệnh sau:</p>
+<pre><code><span class="hljs-variable">$ </span>git init
+</code></pre><p>Lệnh này sẽ tạo một thư mục mới có tên <code>.git</code>, thư mục này chứa tất cả các tập tin cần thiết cho kho chứa - đó chính là bộ khung/xương của kho chứa Git. Cho tới thời điểm hiện tại, vẫn chưa có gì trong dự án của bạn được theo dõi (track) hết. (Xem <em>Chương 9</em> để biết chính xác những tập tin gì có trong thư mục <code>.git</code> bạn vừa tạo.)</p>
+<p>Nếu bạn muốn kiếm soát phiên bản cho các tập tin có sẵn (đối lập với một thư mục trống), chắc chắn bạn nên bắt đầu theo dõi các tập tin đó và thực hiện commit đầu tiên/khởi tạo (initial commit). Bạn có thể hoàn thành việc này bằng cách chỉ định tập tin bạn muốn theo dõi trong mỗi lần commit sử dụng câu lệnh <code>git add</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git add *.c
+<span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+<span class="hljs-variable">$ </span>git commit -m <span class="hljs-string">'phiên bản đầu tiên/khởi tạo của dự án'</span>
+</code></pre><p>Chúng ta sẽ xem những lệnh này thực hiện những gì trong chốc lát nữa. Bâu giờ thì bạn đã có một kho chứ Git với các tập tin đã được theo dõi và một lần commit đầu tiên.</p>
+<h2 id="sao-ch-p-m-t-kho-ch-a-t-n-t-i">Sao Chép Một Kho Chứa Đã Tồn Tại</h2>
+<p>Nếu như bạn muốn có một bản sao của một kho chứa Git có sẵn - ví dụ như, một dự án mà bạn muốn đóng góp vào - câu lệnh bạn cần là <code>git clone</code>. Nếu như bạn đã quen thuộc với các hệ thống VCS khác như là Subversion, bạn sẽ nhận ra rằng câu lệnh này là <code>clone</code> chứ không phải <code>checkout</code>. Đây là một sự khác biệt lớn - Git nhận một bản sao của gần như tất cả dữ liệu mà máy chủ đang có. Mỗi phiên bản của mỗi tập tin sử dụng cho lịch sử của dự án được kéo về khi bạn chạy <code>git clone</code>. Thực tế, nếu ổ cứng máy chủ bị hư hỏng, bạn có thể sử dụng bất kỳ bản sao trên bất kỳ máy khách nào để khôi phục lại trạng thái của máy chủ khi nó được sao chép (bạn có thể mất một số tập tin phía máy chủ, nhưng tất cả phiên bản của dữ liệu vẫn tồn tại ở đó - xem chi tiết ở <em>Chương 4</em>).</p>
+<p>Sử dụng lệnh <code>git clone [url]</code> để sao chép một kho chứa. Ví dụ, nếu bạn muốn tạo một bản sao của thư viện Ruby Git có tên Grit, bạn có thể thực hiện như sau:</p>
+<pre><code><span class="hljs-variable">$ </span>git clone <span class="hljs-symbol">git:</span>/<span class="hljs-regexp">/github.com/schacon</span><span class="hljs-regexp">/grit.git</span>
+</code></pre><p>Một thư mục mới có tên <code>grit</code> sẽ được tạo, kèm theo thư mục <code>.git</code> và bản sao mới nhất của tất cả dữ liệu của kho chứa đó bên trong. Nếu bạn xem bên trong thư mục <code>grit</code>, bạn sẽ thấy các tập tin của dự án bên trong, và đã sẵn sàng cho bạn làm việc hoặc sử dụng. Nếu bạn muốn sao chép kho chứa này vào một thư mục có tên khác không phải là grit, bạn có thể chỉ định tên thư mục đó như là một tuỳ chọn tiếp theo khi chạy dòng lệnh:</p>
+<pre><code><span class="hljs-variable">$ </span>git clone <span class="hljs-symbol">git:</span>/<span class="hljs-regexp">/github.com/schacon</span><span class="hljs-regexp">/grit.git mygrit</span>
+</code></pre><p>Lệnh này thực thi tương tự như lệnh trước, nhưng thư mục của kho chứa lúc này sẽ có tên là <code>mygrit</code>.</p>
+<p>Bạn có thể sử dụng Git thông qua một số &quot;giao thức truyền tải&quot; (transfer protocol) khác nhau. Ví dụ trước sử dụng giao thức <code>git://</code>, nhưng bạn cũng có thể sử dụng <code>http(s)://</code> hoặc <code>user@server:/path.git</code> thông qua giao thức SSH. <em>Chương 4</em> sẽ giới thiệu tất cả các tuỳ chọn áp dụng trên máy chủ để nó có thể truy cập vào kho chứa Git của bạn cũng như từng ưu và nhược điểm riêng của chúng.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../co_ban_ve_git/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../co_ban_ve_git/ghi_lai_thay_doi_vao_kho_chua.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

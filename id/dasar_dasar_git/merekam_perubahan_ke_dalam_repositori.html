@@ -1,0 +1,680 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Merekam Perubahan ke dalam Repositori | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../dasar_dasar_git/melihat_sejarah_commit.html" />
+        
+        
+        <link rel="prev" href="../dasar_dasar_git/mengambil_repositori_git.html" />
+        
+
+        <meta property="og:title" content="Merekam Perubahan ke dalam Repositori | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.2" data-basepath=".." data-revision="1396895602592">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/dasar_dasar_git/merekam_perubahan_ke_dalam_repositori.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="memulai_git/README.html">
+                
+                <a href="../memulai_git/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Memulai Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="memulai_git/tentang_version_control.html">
+                            
+                            <a href="../memulai_git/tentang_version_control.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Tentang Version Control
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="memulai_git/sejarah_singkat_git.html">
+                            
+                            <a href="../memulai_git/sejarah_singkat_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Sejarah Singkat Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="memulai_git/dasar_git.html">
+                            
+                            <a href="../memulai_git/dasar_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Dasar Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="memulai_git/menginstall_git.html">
+                            
+                            <a href="../memulai_git/menginstall_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Menginstall Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="memulai_git/setup_git_untuk_pertama_kalinya.html">
+                            
+                            <a href="../memulai_git/setup_git_untuk_pertama_kalinya.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Setup Git Untuk Pertama Kalinya
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="memulai_git/memperoleh_pertolongan.html">
+                            
+                            <a href="../memulai_git/memperoleh_pertolongan.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Memperoleh Pertolongan
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="memulai_git/kesimpulan.html">
+                            
+                            <a href="../memulai_git/kesimpulan.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Kesimpulan
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="dasar_dasar_git/README.html">
+                
+                <a href="../dasar_dasar_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Dasar-dasar Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="dasar_dasar_git/mengambil_repositori_git.html">
+                            
+                            <a href="../dasar_dasar_git/mengambil_repositori_git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Mengambil Repositori Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="dasar_dasar_git/merekam_perubahan_ke_dalam_repositori.html">
+                            
+                            <a href="../dasar_dasar_git/merekam_perubahan_ke_dalam_repositori.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Merekam Perubahan ke dalam Repositori
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="dasar_dasar_git/melihat_sejarah_commit.html">
+                            
+                            <a href="../dasar_dasar_git/melihat_sejarah_commit.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Melihat Sejarah Commit
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="dasar_dasar_git/membatalkan_apapun.html">
+                            
+                            <a href="../dasar_dasar_git/membatalkan_apapun.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Membatalkan Apapun
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="dasar_dasar_git/bekerja_berjarak.html">
+                            
+                            <a href="../dasar_dasar_git/bekerja_berjarak.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Bekerja Berjarak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="dasar_dasar_git/menandai.html">
+                            
+                            <a href="../dasar_dasar_git/menandai.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Menandai
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="dasar_dasar_git/tips_dan_tricks.html">
+                            
+                            <a href="../dasar_dasar_git/tips_dan_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips dan Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="dasar_dasar_git/simpulan.html">
+                            
+                            <a href="../dasar_dasar_git/simpulan.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Simpulan
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="branching_pada_git/README.html">
+                
+                <a href="../branching_pada_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Branching Pada Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="branching_pada_git/apakah_branch_itu.html">
+                            
+                            <a href="../branching_pada_git/apakah_branch_itu.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Apakah Branch Itu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="branching_pada_git/basic_branching_and_merging.html">
+                            
+                            <a href="../branching_pada_git/basic_branching_and_merging.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Basic Branching and Merging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="branching_pada_git/manajemen_branch.html">
+                            
+                            <a href="../branching_pada_git/manajemen_branch.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Manajemen Branch
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="branching_pada_git/alur_kerja_branching.html">
+                            
+                            <a href="../branching_pada_git/alur_kerja_branching.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Alur Kerja Branching
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="branching_pada_git/remote_branches.html">
+                            
+                            <a href="../branching_pada_git/remote_branches.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Remote Branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="branching_pada_git/rebasing.html">
+                            
+                            <a href="../branching_pada_git/rebasing.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="branching_pada_git/kesimpulan.html">
+                            
+                            <a href="../branching_pada_git/kesimpulan.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Kesimpulan
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 44%;min-width: 40%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../memulai_git/README.html" title="Memulai Git" class="chapter done new-chapter" data-progress="1" style="left: 4%;"></a>
+    
+        <a href="../memulai_git/tentang_version_control.html" title="Tentang Version Control" class="chapter done " data-progress="1.1" style="left: 8%;"></a>
+    
+        <a href="../memulai_git/sejarah_singkat_git.html" title="Sejarah Singkat Git" class="chapter done " data-progress="1.2" style="left: 12%;"></a>
+    
+        <a href="../memulai_git/dasar_git.html" title="Dasar Git" class="chapter done " data-progress="1.3" style="left: 16%;"></a>
+    
+        <a href="../memulai_git/menginstall_git.html" title="Menginstall Git" class="chapter done " data-progress="1.4" style="left: 20%;"></a>
+    
+        <a href="../memulai_git/setup_git_untuk_pertama_kalinya.html" title="Setup Git Untuk Pertama Kalinya" class="chapter done " data-progress="1.5" style="left: 24%;"></a>
+    
+        <a href="../memulai_git/memperoleh_pertolongan.html" title="Memperoleh Pertolongan" class="chapter done " data-progress="1.6" style="left: 28%;"></a>
+    
+        <a href="../memulai_git/kesimpulan.html" title="Kesimpulan" class="chapter done " data-progress="1.7" style="left: 32%;"></a>
+    
+        <a href="../dasar_dasar_git/README.html" title="Dasar-dasar Git" class="chapter done new-chapter" data-progress="2" style="left: 36%;"></a>
+    
+        <a href="../dasar_dasar_git/mengambil_repositori_git.html" title="Mengambil Repositori Git" class="chapter done " data-progress="2.1" style="left: 40%;"></a>
+    
+        <a href="../dasar_dasar_git/merekam_perubahan_ke_dalam_repositori.html" title="Merekam Perubahan ke dalam Repositori" class="chapter done " data-progress="2.2" style="left: 44%;"></a>
+    
+        <a href="../dasar_dasar_git/melihat_sejarah_commit.html" title="Melihat Sejarah Commit" class="chapter  " data-progress="2.3" style="left: 48%;"></a>
+    
+        <a href="../dasar_dasar_git/membatalkan_apapun.html" title="Membatalkan Apapun" class="chapter  " data-progress="2.4" style="left: 52%;"></a>
+    
+        <a href="../dasar_dasar_git/bekerja_berjarak.html" title="Bekerja Berjarak" class="chapter  " data-progress="2.5" style="left: 56%;"></a>
+    
+        <a href="../dasar_dasar_git/menandai.html" title="Menandai" class="chapter  " data-progress="2.6" style="left: 60%;"></a>
+    
+        <a href="../dasar_dasar_git/tips_dan_tricks.html" title="Tips dan Tricks" class="chapter  " data-progress="2.7" style="left: 64%;"></a>
+    
+        <a href="../dasar_dasar_git/simpulan.html" title="Simpulan" class="chapter  " data-progress="2.8" style="left: 68%;"></a>
+    
+        <a href="../branching_pada_git/README.html" title="Branching Pada Git" class="chapter  new-chapter" data-progress="3" style="left: 72%;"></a>
+    
+        <a href="../branching_pada_git/apakah_branch_itu.html" title="Apakah Branch Itu" class="chapter  " data-progress="3.1" style="left: 76%;"></a>
+    
+        <a href="../branching_pada_git/basic_branching_and_merging.html" title="Basic Branching and Merging" class="chapter  " data-progress="3.2" style="left: 80%;"></a>
+    
+        <a href="../branching_pada_git/manajemen_branch.html" title="Manajemen Branch" class="chapter  " data-progress="3.3" style="left: 84%;"></a>
+    
+        <a href="../branching_pada_git/alur_kerja_branching.html" title="Alur Kerja Branching" class="chapter  " data-progress="3.4" style="left: 88%;"></a>
+    
+        <a href="../branching_pada_git/remote_branches.html" title="Remote Branches" class="chapter  " data-progress="3.5" style="left: 92%;"></a>
+    
+        <a href="../branching_pada_git/rebasing.html" title="Rebasing" class="chapter  " data-progress="3.6" style="left: 96%;"></a>
+    
+        <a href="../branching_pada_git/kesimpulan.html" title="Kesimpulan" class="chapter  " data-progress="3.7" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_200">
+                    
+                        <h1 id="merekam-perubahan-ke-dalam-repositori">Merekam Perubahan ke dalam Repositori</h1>
+<p>Anda sudah memiliki repositori Git yang bonafide dan sebuah salinan kerja dari semua berkas untuk proyek tersebut. Anda harus membuat beberapa perubahan dan commit perubahan tersebut ke dalam repositori setiap saat proyek mencapai sebuah keadaan yang ingin Anda rekam.</p>
+<p>Ingat bahwa setiap berkas di dalam direktori kerja Anda dapat berada di 2 keadaan: terpantau atau tak-terpantau. Berkas terpantau adalah berkas yang sebelumnya berada di snapshot terakhir; mereka dapat berada dalam kondisi belum terubah, terubah, ataupun staged (berada di area stage). Berkas tak-terpantau adalah kebalikannya - merupakan berkas-berkas di dalam direktori kerja yang tidak berada di dalam snapshot terakhir dan juga tidak berada di area staging. Ketika Anda pertama kali menduplikasi sebuah repositori, semua berkas Anda akan terpantau dan belum terubah karena Anda baru saja melakukan checkout dan belum mengubah apapun.</p>
+<p>Sejalan dengan proses edit yang Anda lakukan terhadap berkas-berkas tersebut, Git mencatatnya sebagai terubah, karena Anda telah mengubahnya sejak terakhir commit. Anda kemudian memasukkan berkas-berkas terubah ini ke dalam area stage untuk kemudian dilakukan commit, dan terus siklus ini berulang. Siklus perubahan ini diilustrasikan di Figure-2.1 </p>
+<p><img src="http://git-scm.com/figures/18333fig0201-tn.png" alt=""></p>
+<p>Figure 2-1. The lifecycle of the status of your files.</p>
+<h2 id="cek-status-dari-berkas-anda">Cek Status dari Berkas Anda</h2>
+<p>Alat utama yang Anda gunakan untuk menentukan berkas-berkas mana yang berada dalam keadaan tertentu adalah melalui perintah <code>git status</code>. Jika Anda menggunakan alat ini langsung setelah sebuah <code>clone</code>, Anda akan melihat serupa seperti di bawah ini:</p>
+<pre><code>$ git status
+<span class="hljs-comment"># On branch master</span>
+nothing <span class="hljs-built_in">to</span> commit (working <span class="hljs-built_in">directory</span> clean)
+</code></pre><p>Ini berarti Anda memiliki direktori kerja yang bersih-dengan kata lain, tidak ada berkas terpantau yang terubah. Git juga tidak melihat berkas-berkas yang tak terpantau, karena pasti akan dilaporkan oleh alat ini. Juga, perintah ini memberitahu Anda tentang cabang tempat Anda berada. Pada saat ini, cabang akan selalu berada di master, karena sudah menjadi default-nya; Anda tidak perlu khawatir tentang cabang dulu. Bab berikutnya akan membahas tentang percabangan dan referensi secara lebih detil.</p>
+<p>Mari kita umpamakan Anda menambah sebuah berkas baru ke dalam proyek Anda, misalnya sesederhana berkas README. Jika file tersebut belum ada sebelumnya, dan Anda melakukan <code>git status</code>, Anda akan melihatnya sebagai berkas tak-terpantau seperti berikut ini:</p>
+<pre><code>$ vim README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Untracked files:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    README</span>
+nothing added to commit but untracked files present (use <span class="hljs-string">"git add"</span> to track)
+</code></pre><p>Anda akan melihat bahwa berkas baru Anda README belum terpantau, karena berada di bawah judul &quot;Untracked files&quot; di keluaran status Anda. Untracked pada dasarnya berarti bahwa Git melihat sebuah berkas yang sebelumnya tidak Anda miliki di snapshot (commit) sebelumnya; Git tidak akan mulai memasukkannya ke dalam snapshot commit hingga Anda secara eksplisit memerintahkan Git. Git berlaku seperti ini agar Anda tidak secara tak-sengaja mulai menyertakan berkas biner hasil kompilasi atau berkas lain yang tidak Anda inginkan untuk disertakan. Anda hanya ingin mulai menyertakan README, mari kita mulai memantau berkas tersebut.</p>
+<h2 id="memantau-berkas-baru">Memantau Berkas Baru</h2>
+<p>Untuk mulai memantau berkas baru, Anda menggunakan perintah <code>git add</code>. Untuk mulai memantau berkas README tadi, Anda menjalankannya seperti berikut:</p>
+<pre><code><span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Jika Anda menjalankan perintah <code>status</code> lagi, Anda akan melihat bahwa berkas README Anda sekarang sudah terpantau dan sudah masuk ke dalam area stage:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Anda dapat mengatakan bahwa berkas tersebut berada di dalam area stage karena tertulis di bawah judul &quot;Changes to be committed&quot;. Jika Anda melakukan commit pada saat ini, versi berkas pada saat Anda menjalankan <code>git add</code> inilah yang akan dimasukkan ke dalam sejarah snapshot. Anda mungkin ingat bahwa ketika Anda menjalankan <code>git init</code> sebelumnya, Anda melanjutkannya dengan <code>git add (nama berkas)</code> - yang akan mulai dipantau di direktori Anda. Perintah <code>git add</code> ini mengambil alamat dari berkas ataupun direktori; jika sebuah direktori, perintah tersebut akan menambahkan seluruh berkas yang berada di dalam direktori secara rekursif.</p>
+<h2 id="memasukkan-berkas-terubah-ke-dalam-area-stage">Memasukkan Berkas Terubah ke Dalam Area Stage</h2>
+<p>Mari kita ubah sebuah berkas yang sudah terpantau. Jika Anda mengubah berkas yang sebelumnya terpantau bernama <code>benchmarks.rb</code> dan kemudian menjalankan perintah <code>status</code> lagi, Anda akan mendapatkan keluaran kurang lebih seperti ini:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Berkas benchmarks.rb terlihat di bawah bagian yang bernama &quot;Changes not staged for commit&quot; - yang berarti bahwa sebuah berkas terpantau telah berubah di dalam direktori kerja namun belum masuk ke area stage. Untuk memasukkannya ke area stage, Anda menjalankan perintah <code>git add</code> (perintah ini adalah perintah multiguna - Anda menggunakannya untuk mulai memantau berkas baru, untuk memasukkannya ke area stage, dan untuk melakukan hal lain seperti menandai berkas terkonflik menjadi terpecahkan). Mari kita sekarang jalankan <code>git add</code> untuk memasukkan berkas benchmarks.rb ke dalam area stage, dan jalankan <code>git status</code> lagi:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Kedua file sekarang berada di area stage dan akan masuk ke dalam commit Anda berikutnya. Pada saat ini, semisal Anda teringat satu perubahan yang Anda ingin buat di benchmarks.rb sebelum Anda lakukan commit. Anda buka berkas tersebut kembali dan melakukan perubahan tersebut, dan Anda siap untuk melakukan commit. Namun, mari kita coba jalankan <code>git status</code> kembali:</p>
+<pre><code>$ vim benchmarks.rb 
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Apa? Sekarang benchmarks.rb terdaftar di dua tempat: area stage dan area terubah. Bagaimana hal ini bisa terjadi? Ternyata Git memasukkan berkas ke area stage tepat seperti ketika Anda menjalankan perintah <code>git add</code>. Jika Anda commit sekarang, versi benchmarks.rb pada saat Anda terakhir lakukan perintah <code>git add</code>-lah yang akan masuk ke dalam commit, bukan versi berkas yang saat ini terlihat di direktori kerja Anda ketika Anda menjalankan <code>git commit</code>. Jika Anda mengubah sebuah berkas setelah Anda menjalankan <code>git add</code>, Anda harus menjalankan <code>git add</code> kembali untuk memasukkan versi berkas terakhir ke dalam area stage:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><h2 id="mengabaikan-berkas">Mengabaikan Berkas</h2>
+<p>Terkadang, Anda memiliki sekumpulan berkas yang Anda tidak ingin Git tambahkan secara otomatis atau bahkan terlihat sebagai tak-terpantau. Biasanya berkas hasil keluaran seperti berkas log atau berkas yang dihasilkan oleh sistem build Anda. Dalam kasus ini, Anda dapat membuat sebuah berkas bernama .gitignore yang berisi pola dari berkas terabaikan. Berikut adalah sebuah contoh isi dari berkas .gitignore:</p>
+<pre><code><span class="hljs-variable">$ </span>cat .gitignore
+*.[oa]
+*~
+</code></pre><p>Baris pertama memberitahu Git untuk mengabaikan semua file yang berakhiran .o atau .a - berkas object dan arsip yang mungkin dihasilkan dari kompilasi kode Anda. Baris kedua memberitahu Git untuk mengabaikan semua file yang berakhiran dengan sebuah tilde (<code>~</code>), yang biasanya digunakan oleh banyak aplikasi olah-kata seperti Emacs untuk menandai berkas sementara. Anda juga dapat memasukkan direktori log, tmp ataupun pid; dokumentasi otomatis; dan lainnya. Menata berkas .gitignore sebelum Anda mulai bekerja secara umum merupakan ide yang baik sehingga Anda tidak secara tak-sengaja melakukan commit terhadap berkas yang sangat tidak Anda inginkan berada di dalam repositori Git.</p>
+<p>Aturan untuk pola yang dapat Anda gunakan di dalam berkas .gitignore adalah sebagai berikut:</p>
+<ul>
+<li>Baris kosong atau baris dimulai dengan # akan diabaikan.</li>
+<li>Pola glob standar dapat digunakan.</li>
+<li>Anda dapat mengakhir pola dengan sebuah slash (<code>/</code>) untuk menandai sebuah direktori.</li>
+<li>Anda dapat menegasikan sebuah pola dengan memulainya menggunakan karakter tanda seru (<code>!</code>).</li>
+</ul>
+<p>Pola Glob adalah seperti regular expression yang disederhanakan yang biasanya digunakan di shell. Sebuah asterisk (<code>*</code>) berarti 0 atau lebih karakter; <code>[abc]</code> terpasangkan dengan karakter apapun yang ditulis dalam kurung siku (dalam hal ini a, b, atau c); sebuah tanda tanya (<code>?</code>) terpasangkan dengan sebuah karakter; dan kurung siku yang melingkupi karakter yang terpisahkan dengan sebuah tanda hubung(<code>[0-9]</code>) terpasangkan dengan karakter apapun yang berada diantaranya (dalam hal ini 0 hingga 9).</p>
+<p>Berikut adalah contoh lain dari isi berkas .gitignore:</p>
+<pre><code><span class="hljs-preprocessor"># sebuah komentar – akan diabaikan</span>
+<span class="hljs-preprocessor"># abaikan berkas .a</span>
+*.a
+<span class="hljs-preprocessor"># tapi pantau lib.a, walaupun Anda abaikan berkas .a di atas</span>
+!lib.a
+<span class="hljs-preprocessor"># hanya abaikan berkas TODO yang berada di rooto, bukan di subdir/TODO</span>
+/TODO
+<span class="hljs-preprocessor"># abaikan semua berkas di dalam direktori build/</span>
+build/
+<span class="hljs-preprocessor"># abaikan doc/notes.txt, tapi bukan doc/server/arch.txt</span>
+doc<span class="hljs-comment">/*.txt</span>
+</code></pre><h2 id="melihat-perubahan-di-area-stage-dan-di-luar-area-stage">Melihat Perubahan di Area Stage dan di luar Area Stage</h2>
+<p>Jika perintah <code>git status</code> terlalu kabur untuk Anda - Anda ingin mengetahui secara pasti apa yang telah berubah, bukan hanya berkas mana yang berubah - Anda dapat menggunakan perintah <code>git diff</code>. Kita akan bahas <code>git diff</code> secara lebih detil nanti; namun Anda mungkin menggunakannya paling sering untuk menjawab 2 pertanyaan berikut: Apa yang Anda ubah tapi belum dimasukkan ke area stage? Dan apa yang telah Anda ubah yang akan segera Anda commit? Walaupun <code>git status</code> menjawab pertanyaan tersebut secara umum, <code>git diff</code> menunjukkan kepada Anda dengan tepat baris yang ditambahkan dan dibuang - dalam bentuk patch-nya.</p>
+<p>Mari kita anggap Anda mengubah dan memasukkan berkas README ke area stage lagi dan kemudian mengubah berkas benchmarks.rb tanpa memasukkannya ke area stage. Jika Anda jalankan perintah <code>status</code> Anda, Anda akan sekali lagi melihat keluaran seperti berikut:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Untuk melihat apa yang Anda telah ubah namun belum masuk ke area stage, ketikkan <code>git diff</code> tanpa argumen lainnya.</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..da65585 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+           @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+         <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+         run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+           <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+           <span class="hljs-built_in">log</span>.size
+</code></pre><p>Perintah di atas membandingkan apa yang ada di direktori kerja Anda dengan apa yang ada di area stage. Hasilnya memberitahu Anda bahwa perubahan yang Anda ubah namun belum masuk ke area stage.</p>
+<p>Jika Anda ingin melihat apa yang telah Anda masukkan ke area stage yang nantinya akan masuk ke commit Anda berikutnya, Anda dapat menggunakan <code>git diff --cached</code>. (Di Git versi 1.6.1 atau yang lebih tinggi, Anda dapat juga menggunakan <code>git diff --staged</code>, yang mungkin lebih mudah untuk diingat). Perintah ini membandingkan area stage Anda dengan commit Anda terakhir:</p>
+<pre><code>$ git diff --cached
+diff --git a/README b/README
+new file mode 100644
+index 0000000..03902a1
+<span class="hljs-header">--- /dev/null</span>
+<span class="hljs-header">+++ b/README2</span>
+<span class="hljs-chunk">@@ -0,0 +1,5 @@</span>
+<span class="hljs-addition">+grit</span>
+<span class="hljs-addition">+ by Tom Preston-Werner, Chris Wanstrath</span>
+<span class="hljs-addition">+ http://github.com/mojombo/grit</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+Grit is a Ruby library for extracting information from a Git repository</span>
+</code></pre><p>Satu hal penting yang harus dicatat adalah bahwa <code>git diff</code> saja tidak memperlihatkan semua perubahan yang telah Anda lakukan sejak terakhir Anda commit - hanya perubahan yang belum masuk ke area stage saja. Mungkin agak sedikit membingungkan, karena jika Anda telah memasukkan semua perubahan ke area stage, <code>git diff</code> akan memberikan keluaran kosong.</p>
+<p>Sebagai contoh lain, jika Anda memasukkan berkas benchmarks.rb ke area stage dan kemudian meng-editnya, Anda dapat menggunakan <code>git diff</code> untuk melihat perubahan di berkas tersebut yang telah masuk ke area stage dan perubahan yang masih di luar area stage:</p>
+<pre><code>$ git add benchmarks.rb
+$ echo <span class="hljs-string">'# test line'</span> &gt;&gt; benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Sekarang Anda dapat menggunakan <code>git diff</code> untuk melihat apa saja yang masih belum dimasukkan ke area stage:</p>
+<pre><code>$ git diff 
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index e445e28.<span class="hljs-number">.86</span>b2f7c <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">127</span>,<span class="hljs-number">3</span> +<span class="hljs-number">127</span>,<span class="hljs-number">4</span> @@ <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+ main()
+
+ <span class="hljs-comment">##pp Grit::GitRuby.cache_client.stats </span>
++<span class="hljs-comment"># test line</span>
+</code></pre><p>dan <code>git diff --cached</code> untuk melihat apa yang telah Anda masukkan ke area stage sejauh ini:</p>
+<pre><code>$ git diff <span class="hljs-comment">--cached</span>
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..e445e28 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+          @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++              
+        run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+          <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+          <span class="hljs-built_in">log</span>.size
+</code></pre><h2 id="commit-perubahan-anda">Commit Perubahan Anda</h2>
+<p>Sekarang setelah area stage Anda tertata sebagaimana yang Anda inginkan, Anda dapat melakukan commit terhadap perubahan Anda. Ingat bahwa apapun yang masih di luar area stage - berkas apapun yang Anda telah buat atau ubah yang belum Anda jalankan <code>git add</code> terhadapnya sejak terakhir Anda edit - tidak akan masuk ke dalam commit ini. Perubahan tersebut akan tetap sebagai berkas terubah di cakram Anda. 
+Dalam hal ini, saat terakhir Anda jalankan <code>git status</code>, Anda telah melihat bahwa semuanya telah masuk ke stage, sehingga Anda siap untuk melakukan commit dari perubahan Anda. Cara termudah untuk melakukan commit adalah dengan mengetikkan <code>git commit</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git commit
+</code></pre><p>Dengan melakukan ini, aplikasi olahkata pilihan Anda akan terjalankan (Ini ditata oleh variabel lingkungan <code>$EDITOR</code> di shell Anda - biasanya vim atau emacs, walaupun Anda dapat mengkonfigurasinya dengan apapun yang Anda inginkan menggunakan perintah <code>git config -- global core.editor</code> yang telah Anda lihat di Bab 1).</p>
+<p>Aplikasi olahkata akan menampilakn teks berikut (contoh berikut adalah dari layar Vim):</p>
+<pre><code><span class="hljs-preprocessor"># Please enter the commit message for your changes. Lines starting</span>
+<span class="hljs-preprocessor"># with '#' will be ignored, and an empty message aborts the commit.</span>
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       new file:   README</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb </span>
+~
+~
+~
+<span class="hljs-string">".git/COMMIT_EDITMSG"</span> <span class="hljs-number">10</span>L, <span class="hljs-number">283</span>C
+</code></pre><p>Anda dapat melihat bahwa pesan commit standar berisi keluaran terakhir dari perintah <code>git status</code> yang terkomentari dan sebuah baris kosong di bagian atas. Anda dapat membuang komentar-komentar ini dan mengetikkan pesan commit Anda, atau Anda dapat membiarkannya untuk membantu Anda mengingat apa yang akan Anda commit. (Untuk pengingat yang lebih eksplisit dari apa yang Anda ubah, Anda dapat menggunakan opsi <code>-v</code> di perintah <code>git commit</code>. Melakukan hal ini akan membuat diff dari perubahan Anda di dalam olahkata sehingga Anda dapat melihat secara tepat apa yang telah Anda lakukan). Ketika Anda keluar dari olahkata, Git akan membuat commit Anda dengan pesan yang Anda buat (dengan bagian terkomentari dibuang).</p>
+<p>Cara lainnya, Anda dapat mengetikkan pesan commit Anda sebaris denegan perintah <code>commit</code> dengan mencantumkannya setelah tanda -m seperti berikut:</p>
+<pre><code>$ git commit -m "Story 182: Fix benchmarks for speed"
+[<span class="hljs-link_reference">master</span>]:<span class="hljs-link_url"> created 463dc4f: "Fix benchmarks for speed"</span><span class="hljs-link_url">
+ 2 files changed, 3 insertions(+), 0 deletions(-)</span><span class="hljs-link_url">
+ create mode 100644 README</span>
+</code></pre><p>Sekarang Anda telah membuat commit pertama Anda~ Anda dapat lihat bahwa commit tersebut telah memberi Anda beberapa keluaran tentang dirinya sendiri: cabang apa yang Anda jadikan target commit (master), ceksum SHA-1 apa yang commit tersebut miliki (<code>463dc4f</code>), berapa banyak berkas yang diubah, dan statistik tentang jumlah baris yang ditambah dan dibuang dalam commit tersebut.</p>
+<p>Ingat bahwa commit merekam snapshot yang Anda telah tata di area stage. Apapun yang tidak Anda masukkan ke area stage akan tetap berada di tempatnya, tetap dalam keadaan terubah; Anda dapat melakukan commit lagi untuk memasukkannya ke dalam sejarah Anda. Setiap saat Anda melakukan sebuah commit, Anda merekamkan sebuah snapshot dari proyek Anda yang bisa Anda kembalikan atau Anda bandingkan nantinya.</p>
+<h2 id="melewatkan-area-stage">Melewatkan Area Stage</h2>
+<p>Walaupun dapat menjadi sangat berguna untuk menata commit tepat sebagaimana Anda inginkan, area stage terkadang sedikit lebih kompleks dibandingkan apa yang Anda butuhkan di dalam alurkerja Anda. Jika Anda ingin melewatkan area stage, Git menyediakan sebuah jalan pintas sederhana. Dengan memberikan opsi <code>-a</code> ke perintah <code>git commit</code> akan membuat Git secara otomatis menempatkan setiap berkas yang telah terpantau ke area stage sebelum melakukan commit, membuat Anda dapat melewatkan bagian <code>git add</code>:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+$ git commit -a -m <span class="hljs-string">'added new benchmarks'</span>
+[master <span class="hljs-number">83e38</span>c7] added <span class="hljs-keyword">new</span> benchmarks
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">5</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>Perhatikan bagaimana Anda tidak perlu menjalankan <code>git add</code> terhadap berkas benchmarks.rb dalam hal ini sebelum Anda commit.</p>
+<h2 id="menghapus-berkas">Menghapus Berkas</h2>
+<p>Untuk menghapus sebuah berkas dari Git, Anda harus menghapusnya dari berkas terpantau (lebih tepatnya, mengpus dari area stage) dan kemudian commit. Perintah <code>git rm</code> melakukan hal tadi dan juga menghapus berkas tersebut dari direktori kerja Anda sehingga Anda tidak melihatnya sebagai berkas yang tak terpantau nantinya.</p>
+<p>Jika Anda hanya menghapus berkas dari direktori kerja Anda, berkas tersebut akan muncul di bagian &quot;Changes not staged for commit&quot; (yaitu, di luar area stage) dari keluaran <code>git status</code> Anda:</p>
+<pre><code>$ rm grit.gemspec
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add/rm &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Kemudian, jika Anda jalankan <code>git rm</code>, Git akan memasukkan penghapusan berkas tersebut ke area stage:</p>
+<pre><code>$ git rm grit.gemspec
+rm <span class="hljs-string">'grit.gemspec'</span>
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Pada saat Anda commit nantinya, berkas tersebut akan hilang dan tidak lagi terpantau. Jika Anda mengubah berkas tersebut dan menambahkannya lagi ke index, Anda harus memaksa penghapusannya dengan menggunakan opsi <code>-f</code>. Ini adalah fitur keamanan (safety) untuk mencegah ketidaksengajaan penghapusan terhadap data yang belum terekam di dalam snapshot dan tak dapat dikembalikan oleh Git.</p>
+<p>Hal berguna lain yang Anda dapat lakukan adalah untuk tetap menyimpan berkas di direktori kerja tetapi menghapusnya dari area kerja. Dengan kata lain, Anda mungkin ingin tetap menyimpan berkas tersebut di dalam cakram keras tetapi tidak ingin Git untuk memantaunya lagi. Hal ini khususnya berguna jika Anda lupa untuk menambahkan sesuaitu ke berkas <code>.gitignore</code> Anda dan secara tak-sengaja menambahkannya, seperti sebuah berkas log yang besar, atau sekumpulan berkas hasil kompilasi <code>.a</code>. Untuk melakukan ini, gunakan opsi <code>--cached</code>:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">rm</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">cached</span> <span class="hljs-comment">readme</span><span class="hljs-string">.</span><span class="hljs-comment">txt</span>
+</code></pre><p>Anda dapat menambahkan nama berkas, direktori, dan pola glob ke perintah <code>git rm</code>. Ini berarti Anda dapat melakukan hal seperti</p>
+<pre><code>$ git rm <span class="hljs-keyword">log</span>/\*.<span class="hljs-keyword">log</span>
+</code></pre><p>Perhatikan karakter backslash (<code>\</code>) di depan tanda <code>*</code>. Ini dibutuhkan agar Git juga meng-ekspansi nama berkas sebagai tambahan dari ekspansi nama berkas oleh shell Anda. Perintah ini mengapus semua berkas yang memiliki ekstensi <code>.log</code> di dalam direktori <code>log/</code>. Atau, Anda dapat melakukannya seperti ini:</p>
+<pre><code><span class="hljs-variable">$ </span>git rm \*~
+</code></pre><p>Perintah ini akan membuang semua berkas yang berakhiran dengan <code>~</code>.</p>
+<h2 id="memindahkan-berkas">Memindahkan Berkas</h2>
+<p>Tidak seperti kebanyakan sistem VCS lainnya, Git tidak secara eksplisit memantau perpindahan berkas. Jika Anda mengubag nama berkas di Git, tidak ada metada yang tersimpan di Git yang menyatakan bahwa Anda mengubah nama berkas tersebut. Namun demikian, Git cukup cerdas untuk menemukannya berdasarkan fakta yang ada - kita akan membicarakan tentang mendeteksi perpindahan berkas sebentar lagi.</p>
+<p>Untuk itu agak membingungkan bahwa Git memiliki perintah <code>mv</code>. Jika Anda hendak mengubah nama berkas di Git, Anda dapat menjalankan seperti berikut</p>
+<pre><code><span class="hljs-variable">$ </span>git mv file_from file_to
+</code></pre><p>dan itu berjalan baik. Bahkan, jika Anda menjalankannya seperti ini kemudian melihat ke status, Anda akan melihat bahwa Git menganggapnya sebagai perintah pengubahan nama berkas. </p>
+<pre><code>$ git mv README.txt README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Your branch is ahead of 'origin/master' by 1 commit.</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       renamed:    README.txt -&gt; README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Namun sebetulnya hal ini serupa dengan menjalankan perintah-perintah berikut:</p>
+<pre><code><span class="hljs-variable">$ </span>mv <span class="hljs-constant">README</span>.txt <span class="hljs-constant">README</span>
+<span class="hljs-variable">$ </span>git rm <span class="hljs-constant">README</span>.txt
+<span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Git mengetahui secara implisit bahwa perubahan yang terjadi merupakan proses pengubahan nama, sehingga sebetulnya tidaklah terlalu bermasalah jika Anda mengubah nama sebuah berkas dengan cara ini atau dengan menggunakan perintah <code>mv</code>. Satu-satunya perbedaan utama adalah <code>mv</code> berjumlah satu perintah dan bukannya tiga - yang membuat fungsi ini lebih nyaman digunakan. Lebih penting lagi, Anda sebetulnya dapat menggunakan alat apapun yang Anda suka untuk mengubah nama berkas, tinggal tambahkan perintah add/rm di bagian akhir, sesaat sebelum Anda melakukan commit.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../dasar_dasar_git/mengambil_repositori_git.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../dasar_dasar_git/melihat_sejarah_commit.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

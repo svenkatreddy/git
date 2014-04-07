@@ -1,0 +1,735 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Зачувување на промени во вашето репозитори | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../osnovi_na_git/viewing_the_commit_history.html" />
+        
+        
+        <link rel="prev" href="../osnovi_na_git/dobivae_git_repozitori.html" />
+        
+
+        <meta property="og:title" content="Зачувување на промени во вашето репозитори | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.2" data-basepath=".." data-revision="1396895610963">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/osnovi_na_git/zachuvuvae_na_promeni_vo_vasheto_repozitori.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="kako_da_zapochnam/README.html">
+                
+                <a href="../kako_da_zapochnam/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Како да започнам
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="kako_da_zapochnam/za_kontrola_na_verziite.html">
+                            
+                            <a href="../kako_da_zapochnam/za_kontrola_na_verziite.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> За контрола на верзиите
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="kako_da_zapochnam/kratka_istoria_na_git.html">
+                            
+                            <a href="../kako_da_zapochnam/kratka_istoria_na_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Кратка историја на Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="kako_da_zapochnam/osnovi_na_git.html">
+                            
+                            <a href="../kako_da_zapochnam/osnovi_na_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Основи на Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="kako_da_zapochnam/instalatsia_na_git.html">
+                            
+                            <a href="../kako_da_zapochnam/instalatsia_na_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Инсталација на Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="kako_da_zapochnam/prvo_postavuvae_na_git.html">
+                            
+                            <a href="../kako_da_zapochnam/prvo_postavuvae_na_git.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Прво поставување на Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="kako_da_zapochnam/dobivae_pomosh.html">
+                            
+                            <a href="../kako_da_zapochnam/dobivae_pomosh.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Добивање помош
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="kako_da_zapochnam/pregled.html">
+                            
+                            <a href="../kako_da_zapochnam/pregled.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Преглед
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="osnovi_na_git/README.html">
+                
+                <a href="../osnovi_na_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Основи на Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="osnovi_na_git/dobivae_git_repozitori.html">
+                            
+                            <a href="../osnovi_na_git/dobivae_git_repozitori.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Добивање Git Репозитори
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="osnovi_na_git/zachuvuvae_na_promeni_vo_vasheto_repozitori.html">
+                            
+                            <a href="../osnovi_na_git/zachuvuvae_na_promeni_vo_vasheto_repozitori.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Зачувување на промени во вашето репозитори
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="osnovi_na_git/viewing_the_commit_history.html">
+                            
+                            <a href="../osnovi_na_git/viewing_the_commit_history.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Viewing the Commit History
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="osnovi_na_git/undoing_things.html">
+                            
+                            <a href="../osnovi_na_git/undoing_things.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Undoing Things
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="osnovi_na_git/working_with_remotes.html">
+                            
+                            <a href="../osnovi_na_git/working_with_remotes.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Working with Remotes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="osnovi_na_git/tagging.html">
+                            
+                            <a href="../osnovi_na_git/tagging.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="osnovi_na_git/tips_and_tricks.html">
+                            
+                            <a href="../osnovi_na_git/tips_and_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips and Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="osnovi_na_git/summary.html">
+                            
+                            <a href="../osnovi_na_git/summary.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="granee_so_git/README.html">
+                
+                <a href="../granee_so_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Гранење со Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="granee_so_git/shto_e_granee.html">
+                            
+                            <a href="../granee_so_git/shto_e_granee.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Што е гранење
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="granee_so_git/osnovno_granee_i_spouvae.html">
+                            
+                            <a href="../granee_so_git/osnovno_granee_i_spouvae.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Основно Гранење и Спојување
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="granee_so_git/branch_management.html">
+                            
+                            <a href="../granee_so_git/branch_management.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Branch Management
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="granee_so_git/branching_workflows.html">
+                            
+                            <a href="../granee_so_git/branching_workflows.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Branching Workflows
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="granee_so_git/remote_branches.html">
+                            
+                            <a href="../granee_so_git/remote_branches.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Remote Branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="granee_so_git/rebasing.html">
+                            
+                            <a href="../granee_so_git/rebasing.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="granee_so_git/summary.html">
+                            
+                            <a href="../granee_so_git/summary.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="distribuiran_git/README.html">
+                
+                <a href="../distribuiran_git/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Дистрибуиран Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="distribuiran_git/distribuirani_nachini_na_rabota.html">
+                            
+                            <a href="../distribuiran_git/distribuirani_nachini_na_rabota.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Дистрибуирани начини на работа
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="distribuiran_git/contributing_to_a_project.html">
+                            
+                            <a href="../distribuiran_git/contributing_to_a_project.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Contributing to a Project
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="distribuiran_git/maintaining_a_project.html">
+                            
+                            <a href="../distribuiran_git/maintaining_a_project.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Maintaining a Project
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="distribuiran_git/summary.html">
+                            
+                            <a href="../distribuiran_git/summary.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 36.666666666666664%;min-width: 33.333333333333336%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../kako_da_zapochnam/README.html" title="Како да започнам" class="chapter done new-chapter" data-progress="1" style="left: 3.3333333333333335%;"></a>
+    
+        <a href="../kako_da_zapochnam/za_kontrola_na_verziite.html" title="За контрола на верзиите" class="chapter done " data-progress="1.1" style="left: 6.666666666666667%;"></a>
+    
+        <a href="../kako_da_zapochnam/kratka_istoria_na_git.html" title="Кратка историја на Git" class="chapter done " data-progress="1.2" style="left: 10%;"></a>
+    
+        <a href="../kako_da_zapochnam/osnovi_na_git.html" title="Основи на Git" class="chapter done " data-progress="1.3" style="left: 13.333333333333334%;"></a>
+    
+        <a href="../kako_da_zapochnam/instalatsia_na_git.html" title="Инсталација на Git" class="chapter done " data-progress="1.4" style="left: 16.666666666666668%;"></a>
+    
+        <a href="../kako_da_zapochnam/prvo_postavuvae_na_git.html" title="Прво поставување на Git" class="chapter done " data-progress="1.5" style="left: 20%;"></a>
+    
+        <a href="../kako_da_zapochnam/dobivae_pomosh.html" title="Добивање помош" class="chapter done " data-progress="1.6" style="left: 23.333333333333332%;"></a>
+    
+        <a href="../kako_da_zapochnam/pregled.html" title="Преглед" class="chapter done " data-progress="1.7" style="left: 26.666666666666668%;"></a>
+    
+        <a href="../osnovi_na_git/README.html" title="Основи на Git" class="chapter done new-chapter" data-progress="2" style="left: 30%;"></a>
+    
+        <a href="../osnovi_na_git/dobivae_git_repozitori.html" title="Добивање Git Репозитори" class="chapter done " data-progress="2.1" style="left: 33.333333333333336%;"></a>
+    
+        <a href="../osnovi_na_git/zachuvuvae_na_promeni_vo_vasheto_repozitori.html" title="Зачувување на промени во вашето репозитори" class="chapter done " data-progress="2.2" style="left: 36.666666666666664%;"></a>
+    
+        <a href="../osnovi_na_git/viewing_the_commit_history.html" title="Viewing the Commit History" class="chapter  " data-progress="2.3" style="left: 40%;"></a>
+    
+        <a href="../osnovi_na_git/undoing_things.html" title="Undoing Things" class="chapter  " data-progress="2.4" style="left: 43.333333333333336%;"></a>
+    
+        <a href="../osnovi_na_git/working_with_remotes.html" title="Working with Remotes" class="chapter  " data-progress="2.5" style="left: 46.666666666666664%;"></a>
+    
+        <a href="../osnovi_na_git/tagging.html" title="Tagging" class="chapter  " data-progress="2.6" style="left: 50%;"></a>
+    
+        <a href="../osnovi_na_git/tips_and_tricks.html" title="Tips and Tricks" class="chapter  " data-progress="2.7" style="left: 53.333333333333336%;"></a>
+    
+        <a href="../osnovi_na_git/summary.html" title="Summary" class="chapter  " data-progress="2.8" style="left: 56.666666666666664%;"></a>
+    
+        <a href="../granee_so_git/README.html" title="Гранење со Git" class="chapter  new-chapter" data-progress="3" style="left: 60%;"></a>
+    
+        <a href="../granee_so_git/shto_e_granee.html" title="Што е гранење" class="chapter  " data-progress="3.1" style="left: 63.333333333333336%;"></a>
+    
+        <a href="../granee_so_git/osnovno_granee_i_spouvae.html" title="Основно Гранење и Спојување" class="chapter  " data-progress="3.2" style="left: 66.66666666666667%;"></a>
+    
+        <a href="../granee_so_git/branch_management.html" title="Branch Management" class="chapter  " data-progress="3.3" style="left: 70%;"></a>
+    
+        <a href="../granee_so_git/branching_workflows.html" title="Branching Workflows" class="chapter  " data-progress="3.4" style="left: 73.33333333333333%;"></a>
+    
+        <a href="../granee_so_git/remote_branches.html" title="Remote Branches" class="chapter  " data-progress="3.5" style="left: 76.66666666666667%;"></a>
+    
+        <a href="../granee_so_git/rebasing.html" title="Rebasing" class="chapter  " data-progress="3.6" style="left: 80%;"></a>
+    
+        <a href="../granee_so_git/summary.html" title="Summary" class="chapter  " data-progress="3.7" style="left: 83.33333333333333%;"></a>
+    
+        <a href="../distribuiran_git/README.html" title="Дистрибуиран Git" class="chapter  new-chapter" data-progress="4" style="left: 86.66666666666667%;"></a>
+    
+        <a href="../distribuiran_git/distribuirani_nachini_na_rabota.html" title="Дистрибуирани начини на работа" class="chapter  " data-progress="4.1" style="left: 90%;"></a>
+    
+        <a href="../distribuiran_git/contributing_to_a_project.html" title="Contributing to a Project" class="chapter  " data-progress="4.2" style="left: 93.33333333333333%;"></a>
+    
+        <a href="../distribuiran_git/maintaining_a_project.html" title="Maintaining a Project" class="chapter  " data-progress="4.3" style="left: 96.66666666666667%;"></a>
+    
+        <a href="../distribuiran_git/summary.html" title="Summary" class="chapter  " data-progress="4.4" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_293">
+                    
+                        <h1 id="-">Зачувување на промени во вашето репозитори</h1>
+<p>Во еден проект имате доверлив Git репозитори и checkout-увана работна копија од сите фајлови во проектот. Секогаш кога ќе сметате дека проектот на кој што работите достигнал некое ниво кое сакате да го зачувате треба да направите &#39;commit&#39; на промените во вашето репозитори. </p>
+<p>Запомнете дека секој фајл од вашиот работен директориум може да биде: да биде следен (&#39;tracked&#39;) или да не биде следен(&#39;untracked&#39;). Следени фајлови се сите оние кои биле во последната слика; Тие можат да бидат непроменети, променети или на сцена. Неследени фајлови се сите останати - било кои фајлови во вашиот работен директорим кои не биле во последната слика и не се на сцена. Кога за прв пат ќе клонирате некое репозитори сите ваши фајлови ќе бидат следени и непроменети бидејќи само сте ги checkout-увале и не сте направиле никаква промена во нив.</p>
+<p>Како што ќе правите промени во фајловите Git ќе ги препознава како фајлови со променета содржина бидејќи тоа се промени после вашиот последен &#39;commit&#39;.Ваквите фајлови ги ставате на сцена и им правите комит, се така во круг. Животниот циклус е прикажан на слика 2-1.</p>
+<p><img src="http://git-scm.com/figures/18333fig0201-tn.png" alt=""></p>
+<p>Слика 2-1. Животен циклус на статусот на фајловите.</p>
+<h2 id="-">Проверка на статусот на фајловите</h2>
+<p>Главната алатка која ја користите за да дознаете кој фајл во која фаза се наоѓа е Git статус командата. Ако ја извршите оваа комнада веднаш по клонирањето треба да забележите нешто вака:
+    $ git status</p>
+<pre><code><span class="hljs-comment"># On branch master</span>
+nothing <span class="hljs-built_in">to</span> commit (working <span class="hljs-built_in">directory</span> clean)
+</code></pre><p>Ова значи дека имате чист работен директориѕм, т.е. не постојат следени и променети фајлови. Git не нашол неследени фајлови, во спротивно ќе бидат прикажани овде. Како последна информација што ви ја дава оваа команда е тоа на кој бранч се наоѓате. За сега тоа секогаш е главниот бранч кој е предодреден; не треба да ве засега тоа во овој момент. Во следното поглавје ќе бидат детално разгледани бранчовите и референците.  </p>
+<p>Да речеме дека сте додале нов фајл во вашиот проект, некој едноставен README фајл. Ако фајлот не постоел претходно и ако ја извршите командата <code>git status</code>, ќе го забележите следното:</p>
+<pre><code>$ vim README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Untracked files:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    README</span>
+nothing added to commit but untracked files present (use <span class="hljs-string">"git add"</span> to track)
+</code></pre><p>Од статусот можеда забележите дека вашиот нов README фајл не е следен и се наоѓа во “Untracked files”. Untracked во основа значи дека Git гледа фајл кој не сте го имале во последната слика (последниот комит); Git нема да го додаде новиот фајл во вашите слики кои ги комитирате се додека не му го кажете тоа експлицитно. Ова е така за да не почнете да додавате ненамерно генерирани бин фајлови или други фајлови кои не сте мислеле да ги додавате. Сакате да го додадете README, па ајде да почнеме да го следиме фајлот.</p>
+<h2 id="-">Следење на нови фајлови</h2>
+<p>За да почнете да следите некој нов фајл морате да ја користите командата <code>git add</code>. За да започнете да го следите фајлот README можете да го извршите ова:</p>
+<pre><code><span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Ако ја извршите статус командата повторно ќе забележите дека фајлот README сега е фајл кој се следи и е на сцена:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Можете да кажете дека фајлот е на сцена затоа што се наоѓа во “Changes to be committed”. Ако направите комит во оваа точка, историска слика ќе биде верзијата на фајлот пред да ја извршите командата git add. You may recall that when you ran git init earlier, you then ran git add (files) — that was to begin tracking files in your directory. The git add command takes a path name for either a file or a directory; if it’s a directory, the command adds all the files in that directory recursively.</p>
+<h2 id="-">Поставуванје на сцена променети фајлови</h2>
+<p>Ајде да промениме еден фајл кој е веќе следен. Ако внесете промени во фајлот <code>benchmarks.rb</code>, кој веќе е следен и потоа повторно ја извршите командата <code>status</code>, ќе добиете нешто вака:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Фајлот benchmarks.rb се појавува по делот именуван како “Changes not staged for commit” - што значи дека се внесени промени во фајл (од вашиот работен директориум) кој е веќе следен но сеуште не е поставен на сцена. За да го поставите на сцена ја извршувате командата <code>git add</code> (ова е повеќе наменска команда - се користи за да почнете да следите некој фајл, за да поставите на сцена некој фајл и за други работи, како на пример означување на фајлови кај кои има merge конфликт како разрешени т.е. без merge конфликт). Ајде сега да ја извршиме командата <code>git add</code> за да го поставиме на сцена фајлот benchmarks.rb и потоа повторно ќе ја извршиме <code>git status</code> командата:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>И двата фајла се на сцена и ќе бидат вклучени ва вашиот следен комит. Да претпоставиме дека имате усте некоја мала промена која сакате да ја направите во benchmarks.rb пред да направите комит. Го отворате попвторно фајлот, ја правите промената и спремни сте да направие комит. Коко и да е ајде сега уште еднаш да ја извршиме <code>git status</code> командатa:</p>
+<pre><code>$ vim benchmarks.rb 
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Што? Сега benchmarks.rb е прикажан и под фајлови поставени на сцена и под фајлови кои не се поставени на сцена. Како е можно? Излегува дека Git го поставува фајлот на сцена ист онаков каков што бил пред да ја извршите git add командата. Ако направите комит во овој момент, верзијата на benchmarks.rb фајлот која ќе биде комитирана ќе биде иста како онаа кога последен пат сте ја извршиле git add командата а не како онаа што е во вашиот работен директориум во моментот кога правите комит. Ако внесете промени во некој фајл откако ќе ја извршите <code>git add</code> командата морате да ја извршите истата команда уште еднаш за да ја поставите на сцена последната верзија на фајлот:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><h2 id="-">Игнорирање на фајлови</h2>
+<p>Често ќе имате класа на фајлови кои не сакате Git втоматски да ги додава или да ги покажува како фајлови кои не се следени. Овие фајлови често се автоматски генерирани фајлови како што се log фајлови или фајлови генерирани од вашиот систем за билдање. Во такви случаи можете да креирате правило за листање именувано како .gitignore. Еве еден пример на .gitignore фајл:</p>
+<pre><code><span class="hljs-variable">$ </span>cat .gitignore
+*.[oa]
+*~
+</code></pre><p>The first line tells Git to ignore any files ending in .o or .a — object and archive files that may be the product of building your code. The second line tells Git to ignore all files that end with a tilde (<code>~</code>), which is used by many text editors such as Emacs to mark temporary files. You may also include a log, tmp, or pid directory; automatically generated documentation; and so on. Setting up a .gitignore file before you get going is generally a good idea so you don’t accidentally commit files that you really don’t want in your Git repository.</p>
+<p>The rules for the patterns you can put in the .gitignore file are as follows:</p>
+<ul>
+<li>Blank lines or lines starting with # are ignored.</li>
+<li>Standard glob patterns work.</li>
+<li>You can end patterns with a forward slash (<code>/</code>) to specify a directory.</li>
+<li>You can negate a pattern by starting it with an exclamation point (<code>!</code>).</li>
+</ul>
+<p>Glob patterns are like simplified regular expressions that shells use. An asterisk (<code>*</code>) matches zero or more characters; <code>[abc]</code> matches any character inside the brackets (in this case a, b, or c); a question mark (<code>?</code>) matches a single character; and brackets enclosing characters separated by a hyphen(<code>[0-9]</code>) matches any character between them (in this case 0 through 9) . </p>
+<p>Here is another example .gitignore file:</p>
+<pre><code><span class="hljs-preprocessor"># a comment – this is ignored</span>
+<span class="hljs-preprocessor"># no .a files</span>
+*.a
+<span class="hljs-preprocessor"># but do track lib.a, even though you're ignoring .a files above</span>
+!lib.a
+<span class="hljs-preprocessor"># only ignore the root TODO file, not subdir/TODO</span>
+/TODO
+<span class="hljs-preprocessor"># ignore all files in the build/ directory</span>
+build/
+<span class="hljs-preprocessor"># ignore doc/notes.txt, but not doc/server/arch.txt</span>
+doc<span class="hljs-comment">/*.txt</span>
+</code></pre><h2 id="viewing-your-staged-and-unstaged-changes">Viewing Your Staged and Unstaged Changes</h2>
+<p>If the <code>git status</code> command is too vague for you — you want to know exactly what you changed, not just which files were changed — you can use the <code>git diff</code> command. We’ll cover <code>git diff</code> in more detail later; but you’ll probably use it most often to answer these two questions: What have you changed but not yet staged? And what have you staged that you are about to commit? Although <code>git status</code> answers those questions very generally, <code>git diff</code> shows you the exact lines added and removed — the patch, as it were. </p>
+<p>Let’s say you edit and stage the README file again and then edit the benchmarks.rb file without staging it. If you run your <code>status</code> command, you once again see something like this:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>To see what you’ve changed but not yet staged, type <code>git diff</code> with no other arguments:</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..da65585 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+           @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+         <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+         run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+           <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+           <span class="hljs-built_in">log</span>.size
+</code></pre><p>That command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.</p>
+<p>If you want to see what you’ve staged that will go into your next commit, you can use <code>git diff –-cached</code>. (In Git versions 1.6.1 and later, you can also use <code>git diff –-staged</code>, which may be easier to remember.) This command compares your staged changes to your last commit:</p>
+<pre><code>$ git diff --cached
+diff --git a/README b/README
+new file mode 100644
+index 0000000..03902a1
+<span class="hljs-header">--- /dev/null</span>
+<span class="hljs-header">+++ b/README2</span>
+<span class="hljs-chunk">@@ -0,0 +1,5 @@</span>
+<span class="hljs-addition">+grit</span>
+<span class="hljs-addition">+ by Tom Preston-Werner, Chris Wanstrath</span>
+<span class="hljs-addition">+ http://github.com/mojombo/grit</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+Grit is a Ruby library for extracting information from a Git repository</span>
+</code></pre><p>It’s important to note that <code>git diff</code> by itself doesn’t show all changes made since your last commit — only changes that are still unstaged. This can be confusing, because if you’ve staged all of your changes, <code>git diff</code> will give you no output.</p>
+<p>For another example, if you stage the benchmarks.rb file and then edit it, you can use <code>git diff</code> to see the changes in the file that are staged and the changes that are unstaged:</p>
+<pre><code>$ git add benchmarks.rb
+$ echo <span class="hljs-string">'# test line'</span> &gt;&gt; benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Now you can use <code>git diff</code> to see what is still unstaged</p>
+<pre><code>$ git diff 
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index e445e28.<span class="hljs-number">.86</span>b2f7c <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">127</span>,<span class="hljs-number">3</span> +<span class="hljs-number">127</span>,<span class="hljs-number">4</span> @@ <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+ main()
+
+ <span class="hljs-comment">##pp Grit::GitRuby.cache_client.stats </span>
++<span class="hljs-comment"># test line</span>
+</code></pre><p>and <code>git diff --cached</code> to see what you’ve staged so far:</p>
+<pre><code>$ git diff <span class="hljs-comment">--cached</span>
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..e445e28 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+          @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++              
+        run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+          <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+          <span class="hljs-built_in">log</span>.size
+</code></pre><h2 id="committing-your-changes">Committing Your Changes</h2>
+<p>Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged — any files you have created or modified that you haven’t run <code>git add</code> on since you edited them — won’t go into this commit. They will stay as modified files on your disk.
+In this case, the last time you ran <code>git status</code>, you saw that everything was staged, so you’re ready to commit your changes. The simplest way to commit is to type <code>git commit</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git commit
+</code></pre><p>Doing so launches your editor of choice. (This is set by your shell’s <code>$EDITOR</code> environment variable — usually vim or emacs, although you can configure it with whatever you want using the <code>git config --global core.editor</code> command as you saw in Chapter 1). </p>
+<p>The editor displays the following text (this example is a Vim screen):</p>
+<pre><code><span class="hljs-preprocessor"># Please enter the commit message for your changes. Lines starting</span>
+<span class="hljs-preprocessor"># with '#' will be ignored, and an empty message aborts the commit.</span>
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       new file:   README</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb </span>
+~
+~
+~
+<span class="hljs-string">".git/COMMIT_EDITMSG"</span> <span class="hljs-number">10</span>L, <span class="hljs-number">283</span>C
+</code></pre><p>You can see that the default commit message contains the latest output of the <code>git status</code> command commented out and one empty line on top. You can remove these comments and type your commit message, or you can leave them there to help you remember what you’re committing. (For an even more explicit reminder of what you’ve modified, you can pass the <code>-v</code> option to <code>git commit</code>. Doing so also puts the diff of your change in the editor so you can see exactly what you did.) When you exit the editor, Git creates your commit with that commit message (with the comments and diff stripped out).</p>
+<p>Alternatively, you can type your commit message inline with the <code>commit</code> command by specifying it after a -m flag, like this:</p>
+<pre><code>$ git commit -m "Story 182: Fix benchmarks for speed"
+[<span class="hljs-link_reference">master</span>]:<span class="hljs-link_url"> created 463dc4f: "Fix benchmarks for speed"</span><span class="hljs-link_url">
+ 2 files changed, 3 insertions(+), 0 deletions(-)</span><span class="hljs-link_url">
+ create mode 100644 README</span>
+</code></pre><p>Now you’ve created your first commit! You can see that the commit has given you some output about itself: which branch you committed to (master), what SHA-1 checksum the commit has (<code>463dc4f</code>), how many files were changed, and statistics about lines added and removed in the commit.</p>
+<p>Remember that the commit records the snapshot you set up in your staging area. Anything you didn’t stage is still sitting there modified; you can do another commit to add it to your history. Every time you perform a commit, you’re recording a snapshot of your project that you can revert to or compare to later.</p>
+<h2 id="skipping-the-staging-area">Skipping the Staging Area</h2>
+<p>Although it can be amazingly useful for crafting commits exactly how you want them, the staging area is sometimes a bit more complex than you need in your workflow. If you want to skip the staging area, Git provides a simple shortcut. Providing the <code>-a</code> option to the <code>git commit</code> command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the <code>git add</code> part:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+$ git commit -a -m <span class="hljs-string">'added new benchmarks'</span>
+[master <span class="hljs-number">83e38</span>c7] added <span class="hljs-keyword">new</span> benchmarks
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">5</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>Notice how you don’t have to run <code>git add</code> on the benchmarks.rb file in this case before you commit.</p>
+<h2 id="removing-files">Removing Files</h2>
+<p>To remove a file from Git, you have to remove it from your tracked files (more accurately, remove it from your staging area) and then commit. The <code>git rm</code> command does that and also removes the file from your working directory so you don’t see it as an untracked file next time around.</p>
+<p>If you simply remove the file from your working directory, it shows up under the “Changes not staged for commit” (that is, <em>unstaged</em>) area of your <code>git status</code> output:</p>
+<pre><code>$ rm grit.gemspec
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add/rm &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Then, if you run <code>git rm</code>, it stages the file’s removal:</p>
+<pre><code>$ git rm grit.gemspec
+rm <span class="hljs-string">'grit.gemspec'</span>
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>The next time you commit, the file will be gone and no longer tracked. If you modified the file and added it to the index already, you must force the removal with the <code>-f</code> option. This is a safety feature to prevent accidental removal of data that hasn’t yet been recorded in a snapshot and that can’t be recovered from Git.</p>
+<p>Another useful thing you may want to do is to keep the file in your working tree but remove it from your staging area. In other words, you may want to keep the file on your hard drive but not have Git track it anymore. This is particularly useful if you forgot to add something to your <code>.gitignore</code> file and accidentally added it, like a large log file or a bunch of <code>.a</code> compiled files. To do this, use the <code>--cached</code> option:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">rm</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">cached</span> <span class="hljs-comment">readme</span><span class="hljs-string">.</span><span class="hljs-comment">txt</span>
+</code></pre><p>You can pass files, directories, and file-glob patterns to the <code>git rm</code> command. That means you can do things such as</p>
+<pre><code>$ git rm <span class="hljs-keyword">log</span>/\*.<span class="hljs-keyword">log</span>
+</code></pre><p>Note the backslash (<code>\</code>) in front of the <code>*</code>. This is necessary because Git does its own filename expansion in addition to your shell’s filename expansion. This command removes all files that have the <code>.log</code> extension in the <code>log/</code> directory. Or, you can do something like this:</p>
+<pre><code><span class="hljs-variable">$ </span>git rm \*~
+</code></pre><p>This command removes all files that end with <code>~</code>.</p>
+<h2 id="moving-files">Moving Files</h2>
+<p>Unlike many other VCS systems, Git doesn’t explicitly track file movement. If you rename a file in Git, no metadata is stored in Git that tells it you renamed the file. However, Git is pretty smart about figuring that out after the fact — we’ll deal with detecting file movement a bit later.</p>
+<p>Thus it’s a bit confusing that Git has a <code>mv</code> command. If you want to rename a file in Git, you can run something like</p>
+<pre><code><span class="hljs-variable">$ </span>git mv file_from file_to
+</code></pre><p>and it works fine. In fact, if you run something like this and look at the status, you’ll see that Git considers it a renamed file:</p>
+<pre><code>$ git mv README.txt README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Your branch is ahead of 'origin/master' by 1 commit.</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       renamed:    README.txt -&gt; README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>However, this is equivalent to running something like this:</p>
+<pre><code><span class="hljs-variable">$ </span>mv <span class="hljs-constant">README</span>.txt <span class="hljs-constant">README</span>
+<span class="hljs-variable">$ </span>git rm <span class="hljs-constant">README</span>.txt
+<span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Git figures out that it’s a rename implicitly, so it doesn’t matter if you rename a file that way or with the <code>mv</code> command. The only real difference is that <code>mv</code> is one command instead of three — it’s a convenience function. More important, you can use any tool you like to rename a file, and address the add/rm later, before you commit.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../osnovi_na_git/dobivae_git_repozitori.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../osnovi_na_git/viewing_the_commit_history.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

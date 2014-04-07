@@ -1,0 +1,859 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Gitolite | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_/git_.html" />
+        
+        
+        <link rel="prev" href="../git_/gitosis.html" />
+        
+
+        <meta property="og:title" content="Gitolite | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="4.8" data-basepath=".." data-revision="1396895597440">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_/gitolite.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Git のさまざまなツール
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> リビジョンの選択
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> 対話的なステージング
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> 作業を隠す
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> 歴史の書き換え
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Git によるデバッグ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> サブモジュール
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> サブツリーマージ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.8)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="index.html">
+                
+                <a href="../index.html">
+                    <i class="fa fa-check"></i> <b>2)</b> 使い始める
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> バージョン管理に関して
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Git略史
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Gitの基本
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Gitのインストール
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> 最初のGitの構成
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> ヘルプを見る
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git のブランチ機能
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> ブランチとは
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> ブランチとマージの基本
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> ブランチの管理
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> ブランチでの作業の流れ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> リモートブランチ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> リベース
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git サーバー
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> プロトコル
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_/_git_.html">
+                            
+                            <a href="../git_/_git_.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> サーバー用の Git の取得
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_/ssh_.html">
+                            
+                            <a href="../git_/ssh_.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> SSH 公開鍵の作成
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> サーバーのセットアップ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> 一般公開
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_/gitweb.html">
+                            
+                            <a href="../git_/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_/gitosis.html">
+                            
+                            <a href="../git_/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_/gitolite.html">
+                            
+                            <a href="../git_/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git デーモン
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git のホスティング
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Git での分散作業
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> 分散作業の流れ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> プロジェクトへの貢献
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> プロジェクトの運営
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git の基本
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Git リポジトリの取得
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> 変更内容のリポジトリへの記録
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> コミット履歴の閲覧
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> 作業のやり直し
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> リモートでの作業
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> タグ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> ヒントと裏技
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Git のカスタマイズ
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Git の設定
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git の属性
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git フック
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Git ポリシーの実施例
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git/README.html">
+                
+                <a href="../git/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Gitとその他のシステムの連携
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git/git__subversion.html">
+                            
+                            <a href="../git/git__subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git と Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git/git_.html">
+                            
+                            <a href="../git/git_.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Git への移行
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git/README.html">
+                
+                <a href="../git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Gitの内側
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git/plumbingporcelain.html">
+                            
+                            <a href="../git/plumbingporcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> 配管（Plumbing）と磁器（Porcelain）
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git/git.html">
+                            
+                            <a href="../git/git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Gitオブジェクト
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git/git.html">
+                            
+                            <a href="../git/git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Gitの参照
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> パックファイル
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git/refspec.html">
+                            
+                            <a href="../git/refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> 参照仕様（Refspec）
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> トランスファープロトコル
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> メインテナンスとデータリカバリ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> 要約
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 41.1764705882353%;min-width: 35.294117647058826%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../git.html" title="最初のGitの構成" class="chapter done " data-progress="2.5" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../.html" title="まとめ" class="chapter done " data-progress="2.7" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../git_/_git_.html" title="サーバー用の Git の取得" class="chapter done " data-progress="4.2" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../git_/ssh_.html" title="SSH 公開鍵の作成" class="chapter done " data-progress="4.3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../git_/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../git_/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../git_/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../git_/README.html" title="Git のカスタマイズ" class="chapter  new-chapter" data-progress="7" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../git_/git_.html" title="Git ポリシーの実施例" class="chapter  " data-progress="7.4" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../git_/.html" title="まとめ" class="chapter  " data-progress="7.5" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../git/git__subversion.html" title="Git と Subversion" class="chapter  " data-progress="8.1" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../git/git_.html" title="Git への移行" class="chapter  " data-progress="8.2" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../git/README.html" title="Gitの内側" class="chapter  new-chapter" data-progress="9" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../git/plumbingporcelain.html" title="配管（Plumbing）と磁器（Porcelain）" class="chapter  " data-progress="9.1" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../git/git.html" title="Gitの参照" class="chapter  " data-progress="9.3" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../git/refspec.html" title="参照仕様（Refspec）" class="chapter  " data-progress="9.5" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../git/.html" title="要約" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_135">
+                    
+                        <h1 id="gitolite">Gitolite</h1>
+<p>このセクションでは､Gitoliteの紹介およびインストールと初期設定の方法を解説します｡しかし、完全な状態ではなく、Gitolite に付属する大量のドキュメントに取って代わるものというわけでもありません。また､このセクションは時々更新される可能性があるので､[最新の情報][gldpg]も確認しておくとよいでしょう｡</p>
+<p>GitoliteはGitに認可機能を与えるもので､認証には<code>sshd</code>か<code>httpd</code>を使用します(復習: 認証とはユーザーが誰かを確認することで､認可とはユーザーがアクセスを許可されているかどうかを確認することです)｡</p>
+<p>Gitolite は、単なるリポジトリ単位の権限付与だけではなくリポジトリ内のブランチやタグ単位で権限を付与することができます。つまり、特定の人 (あるいはグループ) にだけ特定の &quot;refs&quot; (ブランチあるいはタグ) に対するプッシュ権限を与えて他の人には許可しないといったことができるのです。</p>
+<h2 id="-">インストール</h2>
+<p>Gitolite のインストールは非常に簡単で、豊富な付属ドキュメントを読まなくてもインストールできます。必要なものは、何らかの Unix 系サーバのアカウントです。root アクセス権は不要です。Git や Perl、そして OpenSSH 互換の SSH サーバは既にインストールされているものとします。以下の例では、<code>gitserver</code> というホストにあるアカウント <code>git</code> を使います。</p>
+<p>Gitolite は、いわゆる &quot;サーバー&quot; ソフトウェアとしては少し変わっています。アクセスは SSH 経由で行うので、サーバー上のすべての userid が &quot;gitolite host&quot; となり得ます。もっともシンプルなインストール方法をこれから解説していきますので､その他の方法についてはドキュメントを確認してください｡</p>
+<p>まずは､ユーザー<code>git</code>をインストール先のサーバー上に作成し､そのユーザーでログインします｡sshの公開鍵(デフォルト設定で<code>ssh-keygen</code>を実行している場合は､<code>~/.ssh/id_rsa.pub</code>がそれに当たります)をあなたのワークステーションからコピーし､ファイル名を<code>&lt;yourname&gt;.pub</code> (以下の例では<code>scott.pub</code>を使用します)に変更しておきます｡次に､以下のコマンドを実行します:</p>
+<pre><code>git <span class="hljs-keyword">clone</span> git:<span class="hljs-comment">//github.com/sitaramc/gitolite</span>
+gitolite/install -ln
+    <span class="hljs-comment"># $HOME/bin が存在し､かつPATHが通っているものとします</span>
+gitolite setup -pk <span class="hljs-variable">$HOME</span>/scott.pub
+</code></pre><p><code>gitolite-admin</code>という名前のGitリポジトリが､最後のコマンドにより作成されます｡</p>
+<p>最後に､あなたのワークステーションに戻って､<code>git clone git@gitserver:gitolite-admin</code>を実行します｡これで完了です! Gitolite はサーバにインストールされ、<code>gitolite-admin</code> という新しいリポジトリがあなたのワークステーションにできあがりました。Gitolite の設定を管理するには、このリポジトリに変更を加えてプッシュします。</p>
+<h2 id="-">インストールのカスタマイズ</h2>
+<p>デフォルトのインストールは素早く済ませられ、たいていの人にとってはこれで十分でしょう。しかし、必要に応じてインストール方法をカスタマイズすることもできます。rcファイルを変更してカスタマイズすることも可能ですし､もしそれ以上を望むのであれば､gitoliteのカスタマイズについてのドキュメントを確認してください｡</p>
+<h2 id="-">設定ファイルおよびアクセス制御ルール</h2>
+<p>インストールが終わったら、あなたのワークステーションにクローンしたばかりの<code>gitolite-admin</code> リポジトリに移動して､中をのぞいてみましょう。</p>
+<pre><code><span class="hljs-variable">$ </span>cd ~<span class="hljs-regexp">/gitolite-admin/</span>
+<span class="hljs-variable">$ </span>ls
+conf/  keydir/
+<span class="hljs-variable">$ </span>find conf keydir -type f
+conf/gitolite.conf
+keydir/scott.pub
+<span class="hljs-variable">$ </span>cat conf/gitolite.conf
+
+repo gitolite-admin
+    <span class="hljs-constant">RW</span>+                 = scott
+
+repo testing
+    <span class="hljs-constant">RW</span>+                 = <span class="hljs-variable">@all</span>
+</code></pre><p>&quot;scott&quot; (先ほどの <code>gitolite setup</code> コマンドで、指定した公開鍵の名前です) が、<code>gitolite-admin</code> リポジトリおよび同名の公開鍵ファイルへの読み書き権限を持っていることに注目しましょう。</p>
+<p>ユーザーを追加するのは簡単です｡&quot;alice&quot;というユーザーを追加するなら､彼女の公開鍵を取得し､<code>alice.pub</code>に名前を変更､そしてそれをあなたのワークステーションにクローンされたgitolite-adminレポジトリ内の<code>keydir</code>ディレクトリにコピーします｡変更を追加し､コミットし､プッシュすれば､ユーザーの追加は完了です｡</p>
+<p>Gitolite の設定ファイルの構文はドキュメントに詳しく書かれているので、ここでは大事なところに絞って説明します。</p>
+<p>ユーザやリポジトリをグループにまとめることもできます。グループ名は単なるマクロのようなものです。グループを定義する際には、それがユーザであるかプロジェクトであるかは無関係です。実際にその「マクロ」を <em>使う</em> 段階になって初めてそれらを区別することになります。</p>
+<pre><code><span class="hljs-variable">@oss_repos</span>      = linux perl rakudo git gitolite
+<span class="hljs-variable">@secret_repos</span>   = fenestra pear
+
+<span class="hljs-variable">@admins</span>         = scott
+<span class="hljs-variable">@interns</span>        = ashok
+<span class="hljs-variable">@engineers</span>      = sitaram dilbert wally alice
+<span class="hljs-variable">@staff</span>          = <span class="hljs-variable">@admins</span> <span class="hljs-variable">@engineers</span> <span class="hljs-variable">@interns</span>
+</code></pre><p>パーミッションは、&quot;ref&quot; レベルで設定することができます。次の例では、インターン (@interns) は &quot;int&quot; ブランチにしかプッシュできないように設定しています。エンジニア (@engineers) は名前が &quot;eng-&quot; で始まるすべてのブランチにプッシュでき、また &quot;rc&quot; のあとに一桁の数字が続く名前のタグにもプッシュできます。また、管理者 (@admins) はすべての ref に対してあらゆることができます。</p>
+<pre><code>repo <span class="hljs-variable">@oss_repos</span>
+    <span class="hljs-constant">RW</span>  int<span class="hljs-variable">$ </span>               = <span class="hljs-variable">@interns</span>
+    <span class="hljs-constant">RW</span>  eng-                = <span class="hljs-variable">@engineers</span>
+    <span class="hljs-constant">RW</span>  refs/tags/rc[<span class="hljs-number">0</span>-<span class="hljs-number">9</span>]   = <span class="hljs-variable">@engineers</span>
+    <span class="hljs-constant">RW</span>+                     = <span class="hljs-variable">@admins</span>
+</code></pre><p><code>RW</code> や <code>RW+</code> の後に書かれている式は正規表現 (regex) で、これにマッチする refname (ref) が対象となります。なので、これに &quot;refex&quot; と名付けました! もちろん、refex はこの例で示したよりずっと強力なものです。Perl の正規表現になじめない人は、あまりやりすぎないようにしましょう。</p>
+<p>また、すでにお気づきかもしれませんが、<code>refs/</code> で始まらない refex を指定すると、Gitolite はその先頭に <code>refs/heads/</code> がついているものとみなします。これは構文上の利便性を意識したものです。</p>
+<p>設定ファイルの構文の中でも重要なのは、ひとつのリポジトリに対するルールをすべてひとまとめにしなくてもよいということです。共通の設定をひとまとめにして上の例のように <code>oss_repos</code> に対してルールを設定し、その後で個々の場合について個別のルールを追加していくこともできます。</p>
+<pre><code><span class="hljs-attribute">repo gitolite
+    RW+                     </span>=<span class="hljs-string"> sitaram</span>
+</code></pre><p>このルールは、<code>gitolite</code> リポジトリのルール群に追加されます。</p>
+<p>で、実際のアクセス制御ルールはどのように書けばいいの? と思われたことでしょう。簡単に説明します。</p>
+<p>Gitolite のアクセス制御には二段階のレベルがあります。まず最初はリポジトリレベルのアクセス制御です。あるリポジトリへの読み込み (書き込み) アクセス権を持っているということは、そのリポジトリの <em>すべての</em> ref に対する読み込み (書き込み) 権限を持っていることを意味します。Gitosisにはこのレベルのアクセス制御しかありませんでした｡</p>
+<p>もうひとつのレベルは &quot;書き込み&quot; アクセス権だけを制御するものですが、リポジトリ内のブランチやタグ単位で設定できます。ユーザ名、試みられるアクセス (<code>W</code> あるいは <code>+</code>)、そして更新される refname が既知となります。アクセスルールのチェックは、設定ファイルに書かれている順に行われ、この組み合わせにマッチ (単なる文字列マッチではなく正規表現によるマッチであることに注意しましょう) するものを探していきます。マッチするものが見つかったら、プッシュが成功します。マッチしなかった場合は、アクセスが拒否されます。</p>
+<h2 id="-">&quot;拒否&quot; ルールによる高度なアクセス制御</h2>
+<p>これまでに見てきた権限は <code>R</code>、<code>RW</code> あるいは <code>RW+</code> だけでした。しかし、Gitolite にはそれ以外の権限もあります。それが <code>-</code> で、&quot;禁止&quot; をあらわすものです。これを使えばより強力なアクセス制御ができるようになりますが、少し設定は複雑になります。マッチしなければアクセスを拒否するというだけでなく、ルールを書く順番もからんでくることになるからです。</p>
+<p>上の例で、エンジニアは master と integ <em>以外</em> のすべてのブランチを巻き戻せるように設定しようとすると、次のようになります。</p>
+<pre><code>    <span class="hljs-constant">RW</span>  master integ    = <span class="hljs-variable">@engineers</span>
+    -   master integ    = <span class="hljs-variable">@engineers</span>
+    <span class="hljs-constant">RW</span>+                 = <span class="hljs-variable">@engineers</span>
+</code></pre><p>この場合も上から順にルールを適用し、最初にマッチしたアクセス権をあてはめます。何もマッチしなければアクセスは拒否されます。master や integ に対する巻き戻し以外のプッシュは、最初のルールにマッチするので許可されます。これらのブランチに対する巻き戻しのプッシュは最初のルールにマッチしません。そこで二番目のルールに移動し、この時点で拒否されます。master と integ 以外への (巻き戻しを含む) 任意のプッシュは最初の二つのルールのいずれにもマッチしないので、三番目のルールが適用されます。</p>
+<h2 id="-">ファイル単位でのプッシュの制限</h2>
+<p>変更をプッシュすることのできるブランチを制限するだけでなく、変更できるファイルを制限することも可能です。たとえば、Makefile (あるいはその他のプログラム) などは誰もが変更できるというものではないでしょう。このファイルはさまざまなものに依存しており、変更によっては壊れてしまうことがあるかもしれないからです。そんな場合は次のように設定します。</p>
+<pre><code>repo foo
+    <span class="hljs-constant">RW</span>                      =   <span class="hljs-variable">@junior_devs</span> <span class="hljs-variable">@senior_devs</span>
+
+    -   <span class="hljs-constant">VREF</span>/<span class="hljs-constant">NAME</span>/<span class="hljs-constant">Makefile</span>  =   <span class="hljs-variable">@junior_devs</span>
+</code></pre><p>この機能には大幅な変更が加えられているので､Gitoliteの旧バージョンから移行してきたユーザーは気をつけてください｡移行の手引きを確認してください｡</p>
+<h2 id="-">個人ブランチ</h2>
+<p>Gitolite には &quot;個人ブランチ&quot; (&quot;個人的なブランチ用の名前空間&quot; と言ったほうがいいでしょうか) という機能があります。これは、法人の環境では非常に便利なものです。</p>
+<p>Git の世界では、いわゆる「プルリクエスト」によるコードのやりとりが頻繁に発生します。しかし法人の環境では、権限のない人によるアクセスは厳禁です。開発者のワークステーションにはそんな権限はありません。そこで、まず一度中央サーバにプッシュして、そこからプルしてもらうよう誰かにお願いすることになります。</p>
+<p>これを中央管理型の VCS でやろうとすると、同じ名前のブランチが乱造されることになってしまいます。また、これらのアクセス権限を設定するのは管理者にとって面倒な作業です。</p>
+<p>Gitolite では、開発者ごとに &quot;personal&quot; あるいは &quot;scratch&quot; といった名前空間プレフィックス (たとえば <code>refs/personal/&lt;devname&gt;/*</code>) を定義できます。詳細は､ドキュメントを確認してください｡</p>
+<h2 id="-">&quot;ワイルドカード&quot; リポジトリ</h2>
+<p>Gitolite では、ワイルドカード (実際のところは Perl の正規表現です) を使ってリポジトリを指定することができます。たとえば <code>assignments/s[0-9][0-9]/a[0-9][0-9]</code> のようにします。この機能を使うと、新たな権限モード (<code>C</code>) が用意されます。これは、ワイルドカードにマッチするリポジトリの作成を許可するモードです。新たに作成したリポジトリの所有者は自動的にそのユーザに設定され、他のユーザに <code>R</code> あるいは <code>RW</code> の権限を付与できるようになります。この機能についても､詳細はドキュメントを確認してください｡</p>
+<h2 id="-">その他の機能</h2>
+<p>最後にその他の機能の例を紹介しましょう。これらについての詳しい説明は、ドキュメントにあります。</p>
+<p><strong>ログ記録</strong>: Gitolite は、成功したアクセスをすべてログに記録します。巻き戻し権限 (<code>RW+</code>) を与えているときに、誰かが <code>master</code> を吹っ飛ばしてしまったとしましょう。そんなときにはログファイルが救世主となります。ログを見れば、問題を起こした SHA をすぐに発見できるでしょう。</p>
+<p><strong>アクセス権の報告</strong>: もうひとつの便利な機能は、サーバに ssh で接続したときに起こります。gitolite はあなたがアクセスするリポジトリとどのようなアクセスができるかを表示します。たとえばこんな感じです。</p>
+<pre><code>    hello scott, this is git@git running gitolite3 v3<span class="hljs-number">.01</span><span class="hljs-subst">-</span><span class="hljs-number">18</span><span class="hljs-attribute">-g9609868</span> <span class="hljs-keyword">on</span> git <span class="hljs-number">1.7</span><span class="hljs-number">.4</span><span class="hljs-number">.4</span>
+
+         R     anu<span class="hljs-attribute">-wsd</span>
+         R     entrans
+         R  W  git<span class="hljs-attribute">-notes</span>
+         R  W  gitolite
+         R  W  gitolite<span class="hljs-attribute">-admin</span>
+         R     indic_web_input
+         R     shreelipi_converter
+</code></pre><p><strong>委譲</strong>: 大規模な環境では、特定のリポジトリのグループに対する責任を委譲して個別に管理させることもできます。こうすれば主管理者の負荷が軽減され、主管理者がボトルネックとなることも少なくなります。</p>
+<p><strong>ミラーリング</strong>: Gitolite は、複数のミラーを保守したり、プライマリサーバーが落ちたときに簡単にミラーに切り替えたりすることができます。</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_/gitosis.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_/git_.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

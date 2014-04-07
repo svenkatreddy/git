@@ -1,0 +1,1419 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Wgrywanie zmian do projektu | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../rozproszony_git/utrzymywanie_projektu.html" />
+        
+        
+        <link rel="prev" href="../rozproszony_git/rozproszone_przeplywy_pracy.html" />
+        
+
+        <meta property="og:title" content="Wgrywanie zmian do projektu | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="5.2" data-basepath=".." data-revision="1396895622000">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/rozproszony_git/wgrywanie_zmian_do_projektu.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="pierwsze_kroki/README.html">
+                
+                <a href="../pierwsze_kroki/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Pierwsze kroki
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="pierwsze_kroki/wprowadzenie_do_kontroli_wersji.html">
+                            
+                            <a href="../pierwsze_kroki/wprowadzenie_do_kontroli_wersji.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Wprowadzenie do kontroli wersji
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="pierwsze_kroki/krotka_historia_git.html">
+                            
+                            <a href="../pierwsze_kroki/krotka_historia_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Krótka historia Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="pierwsze_kroki/podstawy_git.html">
+                            
+                            <a href="../pierwsze_kroki/podstawy_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Podstawy Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="pierwsze_kroki/instalacja_git.html">
+                            
+                            <a href="../pierwsze_kroki/instalacja_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Instalacja Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="pierwsze_kroki/wstepna_konfiguracja_git.html">
+                            
+                            <a href="../pierwsze_kroki/wstepna_konfiguracja_git.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Wstępna konfiguracja Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="pierwsze_kroki/uzyskiwanie_pomocy.html">
+                            
+                            <a href="../pierwsze_kroki/uzyskiwanie_pomocy.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Uzyskiwanie pomocy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="pierwsze_kroki/podsumowanie.html">
+                            
+                            <a href="../pierwsze_kroki/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="podstawy_gita/README.html">
+                
+                <a href="../podstawy_gita/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Podstawy Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="podstawy_gita/pierwsze_repozytorium_gita.html">
+                            
+                            <a href="../podstawy_gita/pierwsze_repozytorium_gita.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Pierwsze repozytorium Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="podstawy_gita/rejestrowanie_zmian_w_repozytorium.html">
+                            
+                            <a href="../podstawy_gita/rejestrowanie_zmian_w_repozytorium.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Rejestrowanie zmian w repozytorium
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="podstawy_gita/podglad_historii_rewizji.html">
+                            
+                            <a href="../podstawy_gita/podglad_historii_rewizji.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Podgląd historii rewizji
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="podstawy_gita/cofanie_zmian.html">
+                            
+                            <a href="../podstawy_gita/cofanie_zmian.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Cofanie zmian
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="podstawy_gita/praca_ze_zdalnym_repozytorium.html">
+                            
+                            <a href="../podstawy_gita/praca_ze_zdalnym_repozytorium.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Praca ze zdalnym repozytorium
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="podstawy_gita/tagowanie_etykietowanie.html">
+                            
+                            <a href="../podstawy_gita/tagowanie_etykietowanie.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagowanie (etykietowanie)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="podstawy_gita/sztuczki_i_kruczki.html">
+                            
+                            <a href="../podstawy_gita/sztuczki_i_kruczki.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Sztuczki i kruczki
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="podstawy_gita/podsumowanie.html">
+                            
+                            <a href="../podstawy_gita/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="galezie_gita/README.html">
+                
+                <a href="../galezie_gita/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Gałęzie Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="galezie_gita/czym_jest_galaz.html">
+                            
+                            <a href="../galezie_gita/czym_jest_galaz.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Czym jest gałąź
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="galezie_gita/podstawy_rozgaleziania_i_scalania.html">
+                            
+                            <a href="../galezie_gita/podstawy_rozgaleziania_i_scalania.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Podstawy rozgałęziania i scalania
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="galezie_gita/zarzadzanie_galeziami.html">
+                            
+                            <a href="../galezie_gita/zarzadzanie_galeziami.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Zarządzanie gałęziami
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="galezie_gita/sposoby_pracy_z_galeziami.html">
+                            
+                            <a href="../galezie_gita/sposoby_pracy_z_galeziami.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Sposoby pracy z gałęziami
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="galezie_gita/galezie_zdalne.html">
+                            
+                            <a href="../galezie_gita/galezie_zdalne.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Gałęzie zdalne
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="galezie_gita/zmiana_bazy.html">
+                            
+                            <a href="../galezie_gita/zmiana_bazy.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Zmiana bazy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="galezie_gita/podsumowanie.html">
+                            
+                            <a href="../galezie_gita/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_na_serwerze/README.html">
+                
+                <a href="../git_na_serwerze/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git na serwerze
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_na_serwerze/protokoly.html">
+                            
+                            <a href="../git_na_serwerze/protokoly.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Protokoły
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_na_serwerze/uruchomienie_git_na_serwerze.html">
+                            
+                            <a href="../git_na_serwerze/uruchomienie_git_na_serwerze.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Uruchomienie Git na serwerze
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_na_serwerze/generacja_pary_kluczy_ssh.html">
+                            
+                            <a href="../git_na_serwerze/generacja_pary_kluczy_ssh.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Generacja pary kluczy SSH
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_na_serwerze/konfiguracja_serwera.html">
+                            
+                            <a href="../git_na_serwerze/konfiguracja_serwera.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Konfiguracja serwera
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_na_serwerze/dostep_publiczny.html">
+                            
+                            <a href="../git_na_serwerze/dostep_publiczny.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Dostęp publiczny
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_na_serwerze/gitolite.html">
+                            
+                            <a href="../git_na_serwerze/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_na_serwerze/git_demon.html">
+                            
+                            <a href="../git_na_serwerze/git_demon.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Git Demon
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_na_serwerze/hosting_gita.html">
+                            
+                            <a href="../git_na_serwerze/hosting_gita.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Hosting Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_na_serwerze/podsumowanie.html">
+                            
+                            <a href="../git_na_serwerze/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="rozproszony_git/README.html">
+                
+                <a href="../rozproszony_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Rozproszony Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="rozproszony_git/rozproszone_przeplywy_pracy.html">
+                            
+                            <a href="../rozproszony_git/rozproszone_przeplywy_pracy.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Rozproszone przepływy pracy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="rozproszony_git/wgrywanie_zmian_do_projektu.html">
+                            
+                            <a href="../rozproszony_git/wgrywanie_zmian_do_projektu.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Wgrywanie zmian do projektu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="rozproszony_git/utrzymywanie_projektu.html">
+                            
+                            <a href="../rozproszony_git/utrzymywanie_projektu.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Utrzymywanie projektu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="rozproszony_git/podsumowanie.html">
+                            
+                            <a href="../rozproszony_git/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="narzedzia_gita/README.html">
+                
+                <a href="../narzedzia_gita/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Narzędzia Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="narzedzia_gita/wskazywanie_rewizji.html">
+                            
+                            <a href="../narzedzia_gita/wskazywanie_rewizji.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Wskazywanie rewizji
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="narzedzia_gita/interaktywne_uzywanie_przechowali.html">
+                            
+                            <a href="../narzedzia_gita/interaktywne_uzywanie_przechowali.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Interaktywne używanie przechowali
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="narzedzia_gita/schowek.html">
+                            
+                            <a href="../narzedzia_gita/schowek.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Schowek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="narzedzia_gita/przepisywanie_historii.html">
+                            
+                            <a href="../narzedzia_gita/przepisywanie_historii.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Przepisywanie Historii
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="narzedzia_gita/debugowanie_z_gitem.html">
+                            
+                            <a href="../narzedzia_gita/debugowanie_z_gitem.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Debugowanie z Gitem
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="narzedzia_gita/moduly_zalezne.html">
+                            
+                            <a href="../narzedzia_gita/moduly_zalezne.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Moduły zależne
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="narzedzia_gita/wlaczanie_innych_projektow.html">
+                            
+                            <a href="../narzedzia_gita/wlaczanie_innych_projektow.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Włączanie innych projektów
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="narzedzia_gita/podsumowanie.html">
+                            
+                            <a href="../narzedzia_gita/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="dostosowywanie_gita/README.html">
+                
+                <a href="../dostosowywanie_gita/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Dostosowywanie Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="dostosowywanie_gita/konfiguracja_gita.html">
+                            
+                            <a href="../dostosowywanie_gita/konfiguracja_gita.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Konfiguracja Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="dostosowywanie_gita/git_attributes.html">
+                            
+                            <a href="../dostosowywanie_gita/git_attributes.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git Attributes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="dostosowywanie_gita/git_hooks.html">
+                            
+                            <a href="../dostosowywanie_gita/git_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git Hooks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="dostosowywanie_gita/an_example_git_enforced_policy.html">
+                            
+                            <a href="../dostosowywanie_gita/an_example_git_enforced_policy.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> An Example Git-Enforced Policy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="dostosowywanie_gita/summary.html">
+                            
+                            <a href="../dostosowywanie_gita/summary.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_i_inne_systemy/README.html">
+                
+                <a href="../git_i_inne_systemy/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git i inne systemy
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_i_inne_systemy/git_i_subversion.html">
+                            
+                            <a href="../git_i_inne_systemy/git_i_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git i Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_i_inne_systemy/migracja_do_gita.html">
+                            
+                            <a href="../git_i_inne_systemy/migracja_do_gita.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Migracja do Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_i_inne_systemy/podsumowanie.html">
+                            
+                            <a href="../git_i_inne_systemy/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="mechanizmy_wewnetrzne_w_git/README.html">
+                
+                <a href="../mechanizmy_wewnetrzne_w_git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Mechanizmy wewnętrzne w Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="mechanizmy_wewnetrzne_w_git/komendy_plumbing_i_porcelain.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/komendy_plumbing_i_porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Komendy Plumbing i Porcelain
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="mechanizmy_wewnetrzne_w_git/obiekty_gita.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/obiekty_gita.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Obiekty Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="mechanizmy_wewnetrzne_w_git/referencje_w_git.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/referencje_w_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Referencje w Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="mechanizmy_wewnetrzne_w_git/spakowane_pliki_packfiles.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/spakowane_pliki_packfiles.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Spakowane pliki (packfiles)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="mechanizmy_wewnetrzne_w_git/refspec.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="mechanizmy_wewnetrzne_w_git/protokoly_transferu.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/protokoly_transferu.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Protokoły transferu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Konserwacja i Odzyskiwanie Danych
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="mechanizmy_wewnetrzne_w_git/podsumowanie.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 55.88235294117647%;min-width: 54.411764705882355%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../pierwsze_kroki/README.html" title="Pierwsze kroki" class="chapter done new-chapter" data-progress="1" style="left: 1.4705882352941178%;"></a>
+    
+        <a href="../pierwsze_kroki/wprowadzenie_do_kontroli_wersji.html" title="Wprowadzenie do kontroli wersji" class="chapter done " data-progress="1.1" style="left: 2.9411764705882355%;"></a>
+    
+        <a href="../pierwsze_kroki/krotka_historia_git.html" title="Krótka historia Git" class="chapter done " data-progress="1.2" style="left: 4.411764705882353%;"></a>
+    
+        <a href="../pierwsze_kroki/podstawy_git.html" title="Podstawy Git" class="chapter done " data-progress="1.3" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../pierwsze_kroki/instalacja_git.html" title="Instalacja Git" class="chapter done " data-progress="1.4" style="left: 7.352941176470588%;"></a>
+    
+        <a href="../pierwsze_kroki/wstepna_konfiguracja_git.html" title="Wstępna konfiguracja Git" class="chapter done " data-progress="1.5" style="left: 8.823529411764707%;"></a>
+    
+        <a href="../pierwsze_kroki/uzyskiwanie_pomocy.html" title="Uzyskiwanie pomocy" class="chapter done " data-progress="1.6" style="left: 10.294117647058824%;"></a>
+    
+        <a href="../pierwsze_kroki/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="1.7" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../podstawy_gita/README.html" title="Podstawy Gita" class="chapter done new-chapter" data-progress="2" style="left: 13.235294117647058%;"></a>
+    
+        <a href="../podstawy_gita/pierwsze_repozytorium_gita.html" title="Pierwsze repozytorium Gita" class="chapter done " data-progress="2.1" style="left: 14.705882352941176%;"></a>
+    
+        <a href="../podstawy_gita/rejestrowanie_zmian_w_repozytorium.html" title="Rejestrowanie zmian w repozytorium" class="chapter done " data-progress="2.2" style="left: 16.176470588235293%;"></a>
+    
+        <a href="../podstawy_gita/podglad_historii_rewizji.html" title="Podgląd historii rewizji" class="chapter done " data-progress="2.3" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../podstawy_gita/cofanie_zmian.html" title="Cofanie zmian" class="chapter done " data-progress="2.4" style="left: 19.11764705882353%;"></a>
+    
+        <a href="../podstawy_gita/praca_ze_zdalnym_repozytorium.html" title="Praca ze zdalnym repozytorium" class="chapter done " data-progress="2.5" style="left: 20.58823529411765%;"></a>
+    
+        <a href="../podstawy_gita/tagowanie_etykietowanie.html" title="Tagowanie (etykietowanie)" class="chapter done " data-progress="2.6" style="left: 22.058823529411764%;"></a>
+    
+        <a href="../podstawy_gita/sztuczki_i_kruczki.html" title="Sztuczki i kruczki" class="chapter done " data-progress="2.7" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../podstawy_gita/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="2.8" style="left: 25%;"></a>
+    
+        <a href="../galezie_gita/README.html" title="Gałęzie Gita" class="chapter done new-chapter" data-progress="3" style="left: 26.470588235294116%;"></a>
+    
+        <a href="../galezie_gita/czym_jest_galaz.html" title="Czym jest gałąź" class="chapter done " data-progress="3.1" style="left: 27.941176470588236%;"></a>
+    
+        <a href="../galezie_gita/podstawy_rozgaleziania_i_scalania.html" title="Podstawy rozgałęziania i scalania" class="chapter done " data-progress="3.2" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../galezie_gita/zarzadzanie_galeziami.html" title="Zarządzanie gałęziami" class="chapter done " data-progress="3.3" style="left: 30.88235294117647%;"></a>
+    
+        <a href="../galezie_gita/sposoby_pracy_z_galeziami.html" title="Sposoby pracy z gałęziami" class="chapter done " data-progress="3.4" style="left: 32.35294117647059%;"></a>
+    
+        <a href="../galezie_gita/galezie_zdalne.html" title="Gałęzie zdalne" class="chapter done " data-progress="3.5" style="left: 33.8235294117647%;"></a>
+    
+        <a href="../galezie_gita/zmiana_bazy.html" title="Zmiana bazy" class="chapter done " data-progress="3.6" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../galezie_gita/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="3.7" style="left: 36.76470588235294%;"></a>
+    
+        <a href="../git_na_serwerze/README.html" title="Git na serwerze" class="chapter done new-chapter" data-progress="4" style="left: 38.23529411764706%;"></a>
+    
+        <a href="../git_na_serwerze/protokoly.html" title="Protokoły" class="chapter done " data-progress="4.1" style="left: 39.705882352941174%;"></a>
+    
+        <a href="../git_na_serwerze/uruchomienie_git_na_serwerze.html" title="Uruchomienie Git na serwerze" class="chapter done " data-progress="4.2" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../git_na_serwerze/generacja_pary_kluczy_ssh.html" title="Generacja pary kluczy SSH" class="chapter done " data-progress="4.3" style="left: 42.64705882352941%;"></a>
+    
+        <a href="../git_na_serwerze/konfiguracja_serwera.html" title="Konfiguracja serwera" class="chapter done " data-progress="4.4" style="left: 44.11764705882353%;"></a>
+    
+        <a href="../git_na_serwerze/dostep_publiczny.html" title="Dostęp publiczny" class="chapter done " data-progress="4.5" style="left: 45.588235294117645%;"></a>
+    
+        <a href="../git_na_serwerze/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.6" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../git_na_serwerze/git_demon.html" title="Git Demon" class="chapter done " data-progress="4.7" style="left: 48.529411764705884%;"></a>
+    
+        <a href="../git_na_serwerze/hosting_gita.html" title="Hosting Gita" class="chapter done " data-progress="4.8" style="left: 50%;"></a>
+    
+        <a href="../git_na_serwerze/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="4.9" style="left: 51.470588235294116%;"></a>
+    
+        <a href="../rozproszony_git/README.html" title="Rozproszony Git" class="chapter done new-chapter" data-progress="5" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../rozproszony_git/rozproszone_przeplywy_pracy.html" title="Rozproszone przepływy pracy" class="chapter done " data-progress="5.1" style="left: 54.411764705882355%;"></a>
+    
+        <a href="../rozproszony_git/wgrywanie_zmian_do_projektu.html" title="Wgrywanie zmian do projektu" class="chapter done " data-progress="5.2" style="left: 55.88235294117647%;"></a>
+    
+        <a href="../rozproszony_git/utrzymywanie_projektu.html" title="Utrzymywanie projektu" class="chapter  " data-progress="5.3" style="left: 57.35294117647059%;"></a>
+    
+        <a href="../rozproszony_git/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="5.4" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../narzedzia_gita/README.html" title="Narzędzia Gita" class="chapter  new-chapter" data-progress="6" style="left: 60.294117647058826%;"></a>
+    
+        <a href="../narzedzia_gita/wskazywanie_rewizji.html" title="Wskazywanie rewizji" class="chapter  " data-progress="6.1" style="left: 61.76470588235294%;"></a>
+    
+        <a href="../narzedzia_gita/interaktywne_uzywanie_przechowali.html" title="Interaktywne używanie przechowali" class="chapter  " data-progress="6.2" style="left: 63.23529411764706%;"></a>
+    
+        <a href="../narzedzia_gita/schowek.html" title="Schowek" class="chapter  " data-progress="6.3" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../narzedzia_gita/przepisywanie_historii.html" title="Przepisywanie Historii" class="chapter  " data-progress="6.4" style="left: 66.17647058823529%;"></a>
+    
+        <a href="../narzedzia_gita/debugowanie_z_gitem.html" title="Debugowanie z Gitem" class="chapter  " data-progress="6.5" style="left: 67.6470588235294%;"></a>
+    
+        <a href="../narzedzia_gita/moduly_zalezne.html" title="Moduły zależne" class="chapter  " data-progress="6.6" style="left: 69.11764705882354%;"></a>
+    
+        <a href="../narzedzia_gita/wlaczanie_innych_projektow.html" title="Włączanie innych projektów" class="chapter  " data-progress="6.7" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../narzedzia_gita/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="6.8" style="left: 72.05882352941177%;"></a>
+    
+        <a href="../dostosowywanie_gita/README.html" title="Dostosowywanie Gita" class="chapter  new-chapter" data-progress="7" style="left: 73.52941176470588%;"></a>
+    
+        <a href="../dostosowywanie_gita/konfiguracja_gita.html" title="Konfiguracja Gita" class="chapter  " data-progress="7.1" style="left: 75%;"></a>
+    
+        <a href="../dostosowywanie_gita/git_attributes.html" title="Git Attributes" class="chapter  " data-progress="7.2" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../dostosowywanie_gita/git_hooks.html" title="Git Hooks" class="chapter  " data-progress="7.3" style="left: 77.94117647058823%;"></a>
+    
+        <a href="../dostosowywanie_gita/an_example_git_enforced_policy.html" title="An Example Git-Enforced Policy" class="chapter  " data-progress="7.4" style="left: 79.41176470588235%;"></a>
+    
+        <a href="../dostosowywanie_gita/summary.html" title="Summary" class="chapter  " data-progress="7.5" style="left: 80.88235294117646%;"></a>
+    
+        <a href="../git_i_inne_systemy/README.html" title="Git i inne systemy" class="chapter  new-chapter" data-progress="8" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../git_i_inne_systemy/git_i_subversion.html" title="Git i Subversion" class="chapter  " data-progress="8.1" style="left: 83.82352941176471%;"></a>
+    
+        <a href="../git_i_inne_systemy/migracja_do_gita.html" title="Migracja do Gita" class="chapter  " data-progress="8.2" style="left: 85.29411764705883%;"></a>
+    
+        <a href="../git_i_inne_systemy/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="8.3" style="left: 86.76470588235294%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/README.html" title="Mechanizmy wewnętrzne w Git" class="chapter  new-chapter" data-progress="9" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/komendy_plumbing_i_porcelain.html" title="Komendy Plumbing i Porcelain" class="chapter  " data-progress="9.1" style="left: 89.70588235294117%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/obiekty_gita.html" title="Obiekty Gita" class="chapter  " data-progress="9.2" style="left: 91.17647058823529%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/referencje_w_git.html" title="Referencje w Git" class="chapter  " data-progress="9.3" style="left: 92.6470588235294%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/spakowane_pliki_packfiles.html" title="Spakowane pliki (packfiles)" class="chapter  " data-progress="9.4" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/refspec.html" title="Refspec" class="chapter  " data-progress="9.5" style="left: 95.58823529411765%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/protokoly_transferu.html" title="Protokoły transferu" class="chapter  " data-progress="9.6" style="left: 97.05882352941177%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html" title="Konserwacja i Odzyskiwanie Danych" class="chapter  " data-progress="9.7" style="left: 98.52941176470588%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_459">
+                    
+                        <h1 id="wgrywanie-zmian-do-projektu">Wgrywanie zmian do projektu</h1>
+<p>Znasz już różne sposoby pracy, oraz powinieneś posiadać solidne podstawy używania Gita. W tej sekcji, nauczysz się kilku najczęstszych sposobów aby uczestniczyć w projekcie.</p>
+<!-- You know what the different workflows are, and you should have a pretty good grasp of fundamental Git usage. In this section, you’ll learn about a few common patterns for contributing to a project. -->
+
+<p>Główną trudnością podczas opisywania tego procesu, jest bardzo duża różnorodność sposobów w jaki jest to realizowane. Ponieważ Git jest bardzo elastycznym narzędziem, ludzie mogą i współpracują ze sobą na różne sposoby, dlatego też trudne jest pokazanie w jaki sposób Ty powinieneś  - każdy projekt jest inny. Niektóre ze zmiennych które warto wziąć pod uwagę to ilość aktywnych współpracowników, wybrany sposób przepływów pracy, uprawnienia, oraz prawdopodobnie sposób współpracy z zewnętrznymi programistami.</p>
+<!-- The main difficulty with describing this process is that there are a huge number of variations on how it’s done. Because Git is very flexible, people can and do work together many ways, and it’s problematic to describe how you should contribute to a project — every project is a bit different. Some of the variables involved are active contributor size, chosen workflow, your commit access, and possibly the external contribution method. -->
+
+<p>Pierwszą zmienną jest ilość aktywnych współpracowników. Ilu aktywnych współpracowników/programistów aktywnie wgrywa zmiany do projektu, oraz jak często? Najczęściej będzie to sytuacja, w której uczestniczy dwóch lub trzech programistów, wgrywających kilka razy na dzień zmiany (lub nawet mniej, przy projektach nie rozwijanych aktywnie). Dla bardzo dużych firm lub projektów, ilość programistów może wynieść nawet tysiące, z dziesiątkami lub nawet setkami zmian wgrywanych każdego dnia. Jest to bardzo ważne, ponieważ przy zwiększającej się liczbie programistów, wypływa coraz więcej problemów podczas włączania efektów ich prac. Zmiany które próbujesz wgrać, mogą stać się nieużyteczne, lub niepotrzebne ze względu na zmiany innych osób z zespołu. Tylko w jaki sposób zachować spójność kodu i poprawność wszystkich przygotowanych łatek?</p>
+<!-- The first variable is active contributor size. How many users are actively contributing code to this project, and how often? In many instances, you’ll have two or three developers with a few commits a day, or possibly less for somewhat dormant projects. For really large companies or projects, the number of developers could be in the thousands, with dozens or even hundreds of patches coming in each day. This is important because with more and more developers, you run into more issues with making sure your code applies cleanly or can be easily merged. Changes you submit may be rendered obsolete or severely broken by work that is merged in while you were working or while your changes were waiting to be approved or applied. How can you keep your code consistently up to date and your patches valid? -->
+
+<p>Następną zmienną jest sposób przepływu pracy w projekcie. Czy jest scentralizowany, w którym każdy programista ma równy dostęp do wgrywania kodu? Czy projekt posiada głównego opiekuna, lub osobę integrującą, która sprawdza wszystkie łatki? Czy wszystkie łatki są wzajemnie zatwierdzane? Czy uczestniczysz w tym procesie? Czy funkcjonuje porucznik, do którego musisz najpierw przekazać swoje zmiany?</p>
+<!-- The next variable is the workflow in use for the project. Is it centralized, with each developer having equal write access to the main codeline? Does the project have a maintainer or integration manager who checks all the patches? Are all the patches peer-reviewed and approved? Are you involved in that process? Is a lieutenant system in place, and do you have to submit your work to them first? -->
+
+<p>Następnym elementem są uprawnienia do repozytorium. Sposób pracy z repozytorium do którego możesz wgrywać zmiany bezpośrednio, jest zupełnie inny, od tego w którym masz dostęp tylko do odczytu. Jeżeli nie masz uprawnień do zapisu, w jaki sposób w projekcie akceptowane są zmiany? Czy ma on określoną politykę? Jak duże zmiany wgrywasz za jednym razem? Jak często je wgrywasz?</p>
+<!-- The next issue is your commit access. The workflow required in order to contribute to a project is much different if you have write access to the project than if you don’t. If you don’t have write access, how does the project prefer to accept contributed work? Does it even have a policy? How much work are you contributing at a time? How often do you contribute? -->
+
+<p>Odpowiedzi na wszystkie te pytania, mogą wpływać na to w jaki sposób będziesz wgrywał zmiany do repozytorium, oraz jaki rodzaj przepływu pracy jest najlepszy lub nawet dostępny dla Ciebie. Omówię aspekty każdej z nich w serii przypadków użycia, przechodząc od prostych do bardziej złożonych, powinieneś móc skonstruować konkretny przepływ pracy który możesz zastosować w praktyce z tych przykładów.</p>
+<!-- All these questions can affect how you contribute effectively to a project and what workflows are preferred or available to you. I’ll cover aspects of each of these in a series of use cases, moving from simple to more complex; you should be able to construct the specific workflows you need in practice from these examples. -->
+
+<h2 id="wskaz-wki-wgrywania-zmian">Wskazówki wgrywania zmian</h2>
+<p>Zanim spojrzysz na poszczególne przypadki użycia, najpierw szybka informacja o treści komentarzy do zmian (&quot;commit messages&quot;). Dobre wytyczne do tworzenia commitów, oraz związanych z nią treścią komentarzy pozwala na łatwiejszą pracę z Gitem oraz innymi współpracownikami. Projekt Git dostarcza dokumentację która pokazuje kilka dobrych rad dotyczących tworzenia commit-ów i łat - możesz ją znaleźć w kodzie źródłowym Gita w pliku <code>Documentation/SubmittingPatches</code>.</p>
+<!-- Before you start looking at the specific use cases, here’s a quick note about commit messages. Having a good guideline for creating commits and sticking to it makes working with Git and collaborating with others a lot easier. The Git project provides a document that lays out a number of good tips for creating commits from which to submit patches — you can read it in the Git source code in the `Documentation/SubmittingPatches` file. -->
+
+<p>Po pierwsze, nie chcesz wgrywać żadnych błędów związanych z poprawkami pustych znaków (np. spacji). Git dostarcza łatwy sposób do tego - zanim wgrasz zmiany, uruchom <code>git diff --check</code>, komenda ta pokaże możliwe nadmiarowe spacje. Poniżej mamy przykład takiej sytuacji, zamieniłem kolor czerwony na terminalu znakami <code>X</code>:</p>
+<!-- First, you don’t want to submit any whitespace errors. Git provides an easy way to check for this — before you commit, run `git diff -\-check`, which identifies possible whitespace errors and lists them for you. Here is an example, where I’ve replaced a red terminal color with `X`s: -->
+
+<pre><code>$ git diff --check
+lib/simplegit<span class="hljs-preprocessor">.rb</span>:<span class="hljs-number">5</span>: trailing whitespace.
++    @git_dir = File<span class="hljs-preprocessor">.expand</span>_path(git_dir)XX
+lib/simplegit<span class="hljs-preprocessor">.rb</span>:<span class="hljs-number">7</span>: trailing whitespace.
++ XXXXXXXXXXX
+lib/simplegit<span class="hljs-preprocessor">.rb</span>:<span class="hljs-number">26</span>: trailing whitespace.
++    def command(git_cmd)XXXX
+</code></pre><p>Jeżeli uruchomisz tę komendę przed commit-em, dowiesz się czy zamierzasz wgrać zmiany które mogą zdenerwować innych programistów.</p>
+<!-- If you run that command before committing, you can tell if you’re about to commit whitespace issues that may annoy other developers. -->
+
+<p>Następnie spróbuj w każdym commit-ie zawrzeć logicznie odrębny zestaw zmian. Jeżeli możesz, twórz nie za duże łatki - nie programuj cały weekend poprawiając pięć różnych błędów, aby następnie wszystkie je wypuścić w jednym dużym commit-cie w poniedziałek. Nawet jeżeli nie zatwierdzasz zmian w ciągu weekendu, użyj przechowalni (&quot;stage&quot;), aby w poniedziałek rozdzielić zmiany na przynajmniej jeden commit dla każdego błędu, dodając użyteczny komentarz do każdego commitu. Jeżeli niektóre ze zmian modyfikują ten sam plik, spróbuj użyć komendy <code>git add --patch</code>, aby częściowo dodać zmiany do przechowalni (dokładniej opisane to jest w rozdziale 6). Końcowa migawka projektu w gałęzi jest identyczna, nieważne czy zrobisz jeden czy pięć commitów, więc spróbuj ułatwić życie swoim współpracownikom kiedy będą musieli przeglądać Twoje zmiany. Takie podejście ułatwia również pobranie lub przywrócenie pojedynczych zestawów zmian w razie potrzeby. Rozdział 6 opisuje kilka ciekawych trików dotyczących nadpisywania historii zmian i interaktywnego dodawania plików do przechowalni - używaj ich do utrzymania czystej i przejrzystej historii.</p>
+<!-- Next, try to make each commit a logically separate changeset. If you can, try to make your changes digestible — don’t code for a whole weekend on five different issues and then submit them all as one massive commit on Monday. Even if you don’t commit during the weekend, use the staging area on Monday to split your work into at least one commit per issue, with a useful message per commit. If some of the changes modify the same file, try to use `git add -\-patch` to partially stage files (covered in detail in Chapter 6). The project snapshot at the tip of the branch is identical whether you do one commit or five, as long as all the changes are added at some point, so try to make things easier on your fellow developers when they have to review your changes. This approach also makes it easier to pull out or revert one of the changesets if you need to later. Chapter 6 describes a number of useful Git tricks for rewriting history and interactively staging files — use these tools to help craft a clean and understandable history. -->
+
+<p>Ostatnią rzeczą na którą należy zwrócić uwagę są komentarze do zmian. Tworzenie dobrych komentarzy pozwala na łatwiejsze używanie i współpracę za pomocą Gita. Generalną zasadą powinno być to, że treść komentarza rozpoczyna się od pojedynczej linii nie dłuższej niż 50 znaków, która zwięźle opisuje zmianę, następnie powinna znaleźć się pusta linia, a poniżej niej szczegółowy opis zmiany. Projekt Git wymaga bardzo dokładnych wyjaśnień motywujących twoją zmianę w stosunku do poprzedniej implementacji - jest to dobra wskazówka do naśladowania. Dobrym pomysłem jest używania czasu teraźniejszego w trybie rozkazującym. Innymi słowy, używaj komend. Zamiast &quot;Dodałem testy dla&quot; lub &quot;Dodawania testów dla&quot;, użyj &quot;Dodaj testy do&quot;.
+Poniżej znajduje się szablon komentarza przygotowany przez Tima Pope z tpope.net:</p>
+<!-- The last thing to keep in mind is the commit message. Getting in the habit of creating quality commit messages makes using and collaborating with Git a lot easier. As a general rule, your messages should start with a single line that’s no more than about 50 characters and that describes the changeset concisely, followed by a blank line, followed by a more detailed explanation. The Git project requires that the more detailed explanation include your motivation for the change and contrast its implementation with previous behavior — this is a good guideline to follow. It’s also a good idea to use the imperative present tense in these messages. In other words, use commands. Instead of "I added tests for" or "Adding tests for," use "Add tests for."
+Here is a template originally written by Tim Pope at tpope.net: -->
+
+<pre><code>Krótki (50 znaków lub mniej) opis zmiany
+
+Bardziej szczegółowy tekst jeżeli jest taka konieczność. Zawijaj
+wiersze po około 72 znakach. Czasami pierwsza linia jest traktowana
+jako temat wiadomości email, a reszta komentarza jako treść. Pusta
+linia oddzielająca opis od streszczenia jest konieczna (chyba że
+ominiesz szczegółowy opis kompletnie); narzędzia takie jak `rebase`
+mogą się pogubić jeżeli nie oddzielisz ich.
+
+Kolejne paragrafy przychodzą po pustej linii.
+
+ -<span class="ruby"> wypunktowania są poprawne, również
+</span>
+ -<span class="ruby"> zazwyczaj łącznik lub gwiazdka jest używana <span class="hljs-keyword">do</span> punktowania,
+</span>   poprzedzona pojedynczym znakiem spacji, z pustą linią pomiędzy,
+   jednak zwyczaje mogą się tutaj różnić.
+</code></pre><p>Jeżeli wszystkie Twoje komentarz do zmian będą wyglądały jak ten, współpraca będzie dużo łatwiejsza dla Ciebie i twoich współpracowników. Projekt Git ma poprawnie sformatowane komentarze, uruchom polecenie <code>git log --no-merges</code> na tym projekcie, aby zobaczyć jak wygląda ładnie sformatowana i prowadzona historia zmian.</p>
+<!-- If all your commit messages look like this, things will be a lot easier for you and the developers you work with. The Git project has well-formatted commit messages — I encourage you to run `git log -\-no-merges` there to see what a nicely formatted project-commit history looks like. -->
+
+<p>W poniższych przykładach, i przez większość tej książki, ze względu na zwięzłość nie sformatowałem treści komentarzy tak ładnie; używam opcji <code>-m</code> do <code>git commit</code>. Rób tak jak mówię, nie tak jak robię.</p>
+<!-- In the following examples, and throughout most of this book, for the sake of brevity I don’t format messages nicely like this; instead, I use the `-m` option to `git commit`. Do as I say, not as I do. -->
+
+<h2 id="ma-e-prywatne-zespo-y">Małe prywatne zespoły</h2>
+<p>Najprostszym przykładem który możesz spotkać, to prywatne repozytorium z jednym lub dwoma innymi współpracownikami. Jako prywatne, mam na myśli repozytorium z zamkniętym kodem źródłowym - nie dostępnym do odczytu dla innych.Ty i inny deweloperzy mają uprawniania do wgrywania (&quot;push&quot;) swoich zmian.</p>
+<!-- The simplest setup you’re likely to encounter is a private project with one or two other developers. By private, I mean closed source — not read-accessible to the outside world. You and the other developers all have push access to the repository. -->
+
+<p>W takim środowisku możesz naśladować sposób pracy znany z Subversion czy innego scentralizowanego systemu kontroli wersji. Nadal masz wszystkie zalety takie jak commitowanie bez dostępu do centralnego serwera, oraz prostsze tworzenie gałęzi i łączenie zmian, ale przepływ pracy jest bardzo podobny; główną różnicą jest to, że łączenie zmian wykonywane jest po stronie klienta a nie serwera podczas commitu.
+Zobaczmy jak to może wyglądać, w sytuacji w której dwóch programistów rozpocznie prace z współdzielonym repozytorium. Pierwszy programista, John, klonuje repozytorium, wprowadza zmiany i zatwierdza je lokalnie. (Zamieniłem część informacji znakami <code>...</code> aby skrócić przykłady.)</p>
+<!-- In this environment, you can follow a workflow similar to what you might do when using Subversion or another centralized system. You still get the advantages of things like offline committing and vastly simpler branching and merging, but the workflow can be very similar; the main difference is that merges happen client-side rather than on the server at commit time.
+    Let’s see what it might look like when two developers start to work together with a shared repository. The first developer, John, clones the repository, makes a change, and commits locally. (I’m replacing the protocol messages with `...` in these examples to shorten them somewhat.) -->
+
+<pre><code><span class="hljs-comment"># Komputer Johna</span>
+$ git clone john@githost:simplegit.git
+Initialized empty Git repository <span class="hljs-keyword">in</span> /home/john/simplegit/.git/
+<span class="hljs-keyword">...</span>
+$ cd simplegit/
+$ vim lib/simplegit.rb
+$ git commit -am <span class="hljs-string">'removed invalid default value'</span>
+[master 738ee87] removed invalid default value
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>Drugi programista, Jessica, robi to samo — klonuje repozytorium i commituje zmianę:</p>
+<pre><code><span class="hljs-comment"># Komputer Jessici</span>
+$ git clone jessica@githost:simplegit.git
+Initialized empty Git repository <span class="hljs-keyword">in</span> /home/jessica/simplegit/.git/
+<span class="hljs-keyword">...</span>
+$ cd simplegit/
+$ vim TODO
+$ git commit -am <span class="hljs-string">'add reset task'</span>
+[master fbff5bc] add reset task
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>Następnie, Jessica wypycha swoje zmiany na serwer:</p>
+<pre><code><span class="hljs-comment"># Komputer Jessici</span>
+$ git push origin master
+<span class="hljs-keyword">...</span>
+To jessica@githost:simplegit.git
+   1edee6b..fbff5bc  master -&gt; master
+</code></pre><p>John próbuje również wypchnąć swoje zmiany:</p>
+<pre><code><span class="hljs-preprocessor"># Komputer Johna</span>
+$ git push origin master
+<span class="hljs-keyword">To</span> john@githost:simplegit.git
+ ! [rejected]        master -&gt; master (non-fast forward)
+<span class="hljs-keyword">error</span>: failed <span class="hljs-keyword">to</span> push some refs <span class="hljs-keyword">to</span> <span class="hljs-comment">'john@githost:simplegit.git'</span>
+</code></pre><p>John nie może wypchnąć swoich zmian, ponieważ w międzyczasie Jessica wypchnęła swoje. To jest szczególnie ważne do zrozumienia, jeżeli przywykłeś do Subversion, ponieważ zauważysz że każdy z deweloperów zmieniał inne pliki. Chociaż Subversion automatycznie połączy zmiany po stronie serwera jeżeli zmieniane były inne pliki, w Git musisz połączyć zmiany lokalnie. John musi pobrać zmiany Jessici oraz włączyć je do swojego repozytorium zanim będzie wypychał swoje zmiany:</p>
+<!-- John isn’t allowed to push because Jessica has pushed in the meantime. This is especially important to understand if you’re used to Subversion, because you’ll notice that the two developers didn’t edit the same file. Although Subversion automatically does such a merge on the server if different files are edited, in Git you must merge the commits locally. John has to fetch Jessica’s changes and merge them in before he will be allowed to push: -->
+
+<pre><code>$ git fetch origin
+<span class="hljs-keyword">...</span>
+From john@githost:simplegit
+ + 049d078...fbff5bc master     -&gt; origin/master
+</code></pre><p>W tym momencie lokalne repozytorium Johna wygląda podobnie do tego z rys. 5-4.</p>
+<!-- At this point, John’s local repository looks something like Figure 5-4. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0504-tn.png" alt=""></p>
+<p>Figure 5-4. Lokalne repozytorium Johna.</p>
+<p>John ma już odniesienie do zmian które wypchnęła Jessica, ale musi je lokalnie połączyć ze swoimi zmianami, zanim będzie w stanie wypchnąć je:</p>
+<!-- John has a reference to the changes Jessica pushed up, but he has to merge them into his own work before he is allowed to push: -->
+
+<pre><code>$ git <span class="hljs-operator"><span class="hljs-keyword">merge</span> origin/master
+<span class="hljs-keyword">Merge</span> made <span class="hljs-keyword">by</span> recursive.
+ TODO |    <span class="hljs-number">1</span> +
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)</span>
+</code></pre><p>Łączenie zmian poszło bez problemów - historia zmian u Johna wygląda tak jak na rys. 5-5.</p>
+<!-- The merge goes smoothly — John’s commit history now looks like Figure 5-5. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0505-tn.png" alt=""></p>
+<p>Figure 5-5. Repozytorium Johna po połączeniu z origin/master.</p>
+<p>Teraz, John może przetestować swój kod aby upewnić się że nadal działa poprawnie, oraz następnie wypchnąć swoje zmiany na serwer:</p>
+<!-- Now, John can test his code to make sure it still works properly, and then he can push his new merged work up to the server: -->
+
+<pre><code>$ git push origin master
+<span class="hljs-keyword">...</span>
+To john@githost:simplegit.git
+   fbff5bc..72bbc59  master -&gt; master
+</code></pre><p>Ostatecznie, historia zmian u Johna wygląda tak jak na rys. 5-6.</p>
+<!-- Finally, John’s commit history looks like Figure 5-6. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0506-tn.png" alt=""></p>
+<p>Figure 5-6. Historia zmian Johna po wypchnięciu ich na serwer &quot;origin&quot;.</p>
+<!-- Figure 5-6. John’s history after pushing to the origin server. -->
+
+<p>W tym samym czasie, Jessica pracowała na swojej tematycznej gałęzi. Stworzyła gałąź <code>issue54</code> oraz wprowadziła trzy zmiany w niej. Nie pobrała jeszcze zmian Johna, więc jej historia zmian wygląda tak jak na rys. 5-7.</p>
+<!-- In the meantime, Jessica has been working on a topic branch. She’s created a topic branch called `issue54` and done three commits on that branch. She hasn’t fetched John’s changes yet, so her commit history looks like Figure 5-7. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0507-tn.png" alt=""></p>
+<p>Figure 5-7. Początkowa historia zmian u Jessici.</p>
+<p>Jessica chce zsynchronizować się ze zmianami Johna, więc pobiera (&quot;fetch&quot;):</p>
+<!-- Jessica wants to sync up with John, so she fetches: -->
+
+<pre><code><span class="hljs-comment"># Jessica's Machine</span>
+$ git fetch origin
+<span class="hljs-keyword">...</span>
+From jessica@githost:simplegit
+   fbff5bc..72bbc59  master     -&gt; origin/master
+</code></pre><p>Ta komenda pobiera zmiany Johna, które wprowadził w międzyczasie. Historia zmian u Jessici wygląda tak jak na rys. 5-8.</p>
+<!-- That pulls down the work John has pushed up in the meantime. Jessica’s history now looks like Figure 5-8. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0508-tn.png" alt=""></p>
+<p>Figure 5-8. Historia zmian u Jessici po pobraniu zmian Johna.</p>
+<!-- Figure 5-8. Jessica’s history after fetching John’s changes. -->
+
+<p>Jessica uważa swoje prace w tej gałęzi za zakończone, ale chciałaby wiedzieć jakie zmiany musi włączyć aby mogła wypchnąć swoje. Uruchamia komendę <code>git log</code> aby się tego dowiedzieć:</p>
+<!-- Jessica thinks her topic branch is ready, but she wants to know what she has to merge her work into so that she can push. She runs `git log` to find out: -->
+
+<pre><code>$ git log <span class="hljs-comment">--no-merges origin/master ^issue54</span>
+<span class="hljs-operator"><span class="hljs-keyword">commit</span> <span class="hljs-number">738</span>ee872852dfaa9d6634e0dea7a324040193016
+Author: John Smith &lt;jsmith@example.com&gt;
+<span class="hljs-keyword">Date</span>:   Fri May <span class="hljs-number">29</span> <span class="hljs-number">16</span>:<span class="hljs-number">01</span>:<span class="hljs-number">27</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    removed invalid <span class="hljs-keyword">default</span> <span class="hljs-keyword">value</span></span>
+</code></pre><p>Teraz Jessica może połączyć zmiany ze swojej gałęzi z gałęzią &quot;master&quot;, włączyć zmiany Johna (<code>origin/master</code>) do swojej gałęzi <code>master</code>, oraz następnie wypchnąć zmiany ponownie na serwer.</p>
+<!-- Now, Jessica can merge her topic work into her master branch, merge John’s work (`origin/master`) into her `master` branch, and then push back to the server again. First, she switches back to her master branch to integrate all this work: -->
+
+<pre><code>$ git checkout master
+Switched <span class="hljs-keyword">to</span> branch <span class="hljs-string">"master"</span>
+Your branch <span class="hljs-keyword">is</span> <span class="hljs-keyword">behind</span> 'origin/master' <span class="hljs-keyword">by</span> <span class="hljs-number">2</span> commits, <span class="hljs-keyword">and</span> can be fast-forwarded.
+</code></pre><p>Może ona włączyć <code>origin/master</code> lub <code>issue54</code> jako pierwszą, obie są nadrzędne więc kolejność nie ma znaczenia. Końcowa wersja plików powinna być identyczna bez względu na kolejność którą wybierze; tylko historia będzie się lekko różniła. Wybiera pierwszą do włączenia gałąź <code>issue54</code>:</p>
+<!-- She can merge either `origin/master` or `issue54` first — they’re both upstream, so the order doesn’t matter. The end snapshot should be identical no matter which order she chooses; only the history will be slightly different. She chooses to merge in `issue54` first: -->
+
+<pre><code>$ git merge issue54
+Updating fbff5bc..<span class="hljs-number">4</span>af4298
+Fast forward
+ README           <span class="hljs-string">|    1 +</span>
+ lib/simplegit.rb <span class="hljs-string">|    6 +++++-</span>
+ <span class="hljs-number">2</span> files changed, <span class="hljs-number">6</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>Nie było problemów; jak widzisz był to proste połączenie tzw. fast-forward. Teraz Jessica może włączyć zmiany Johna (<code>origin/master</code>):</p>
+<!-- No problems occur; as you can see, it was a simple fast-forward. Now Jessica merges in John’s work (`origin/master`): -->
+
+<pre><code>$ git merge origin/master
+<span class="hljs-keyword">Auto</span>-merging <span class="hljs-keyword">lib</span>/simplegit.rb
+Merge made <span class="hljs-keyword">by</span> recursive.
+ <span class="hljs-keyword">lib</span>/simplegit.rb |    <span class="hljs-number">2</span> +-
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>Wszystko połączyło się bez problemów, więc historia zmian u Jessici wygląda tak jak na rys. 5-9.</p>
+<!-- Everything merges cleanly, and Jessica’s history looks like Figure 5-9. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0509-tn.png" alt=""></p>
+<p>Figure 5-9. Historia zmian u Jessici po włączeniu zmian Johna.</p>
+<!-- Figure 5-9. Jessica’s history after merging John’s changes. -->
+
+<p>Teraz <code>origin/master</code> jest dostępny z gałęzi <code>master</code> u Jessici, więc powinna bez problemów móc wypchnąć swoje zmiany (zakładając że w międzyczasie John nie wypchnął nic):</p>
+<!-- Now `origin/master` is reachable from Jessica’s `master` branch, so she should be able to successfully push (assuming John hasn’t pushed again in the meantime): -->
+
+<pre><code>$ git push origin master
+<span class="hljs-keyword">...</span>
+To jessica@githost:simplegit.git
+   72bbc59..8059c15  master -&gt; master
+</code></pre><p>Każdy programista wprowadził zmiany kilkukrotnie, oraz połączył zmiany drugiego bez problemów; zobacz rys. 5-10.</p>
+<!-- Each developer has committed a few times and merged each other’s work successfully; see Figure 5-10. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0510-tn.png" alt=""></p>
+<p>Figure 5-10. Historia zmian u Jessici po wypchnięciu zmian na serwer.</p>
+<!-- Figure 5-10. Jessica’s history after pushing all changes back to the server. -->
+
+<p>To jest jeden z najprostszych przepływów pracy. Pracujesz przez chwilę, generalnie na tematycznych gałęziach i włączasz je do gałęzi master kiedy są gotowe. Kiedy chcesz podzielić się swoją pracą, włączasz je do swojej gałęzi master, pobierasz i włączasz zmiany z <code>origin/master</code> jeżeli jakieś były, a następnie wypychasz gałąź <code>master</code> na serwer. Zazwyczaj sekwencja będzie wyglądała podobnie do tej pokazanej na rys. 5-11.</p>
+<!-- That is one of the simplest workflows. You work for a while, generally in a topic branch, and merge into your master branch when it’s ready to be integrated. When you want to share that work, you merge it into your own master branch, then fetch and merge `origin/master` if it has changed, and finally push to the `master` branch on the server. The general sequence is something like that shown in Figure 5-11. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0511-tn.png" alt=""></p>
+<p>Figure 5-11. Sekwencja zdarzeń dla prostego przepływu zmian między programistami.</p>
+<!-- Figure 5-11. General sequence of events for a simple multiple-developer Git workflow. -->
+
+<h2 id="prywatne-zarz-dzane-zespo-y">Prywatne zarządzane zespoły</h2>
+<p>W tym scenariuszu, zobaczysz jak działa współpraca w większych prywatnych grupach. Nauczysz się jak pracować w środowisku w którym małe grupy współpracują ze sobą nad funkcjonalnościami, a następnie stworzone przez nich zmiany są integrowane przez inną osobę.</p>
+<!-- In this next scenario, you’ll look at contributor roles in a larger private group. You’ll learn how to work in an environment where small groups collaborate on features and then those team-based contributions are integrated by another party. -->
+
+<p>Załóżmy że John i Jessica wspólnie pracują nad jedną funkcjonalnością, a Jessica i Josie nad drugą. W tej sytuacji, organizacja używa przepływu pracy z osobą integrującą zmiany, w której wyniki pracy poszczególnych grup są integrowane przez wyznaczone osoby, a gałąź <code>master</code> może być jedynie przez nie aktualizowana. W tym scenariuszu, cała praca wykonywana jest w osobnych gałęziach zespołów, a następnie zaciągana przez osoby integrujące.</p>
+<!-- Let’s say that John and Jessica are working together on one feature, while Jessica and Josie are working on a second. In this case, the company is using a type of integration-manager workflow where the work of the individual groups is integrated only by certain engineers, and the `master` branch of the main repo can be updated only by those engineers. In this scenario, all work is done in team-based branches and pulled together by the integrators later. -->
+
+<p>Prześledźmy sposób pracy Jessici w czasie gdy pracuje ona nad obiema funkcjonalnościami, współpracując jednocześnie z dwoma niezależnymi programistami. Zakładając że ma już sklonowane repozytorium, rozpoczyna pracę nad funkcjonalnością <code>featureA</code>. Tworzy nową gałąź dla niej i wprowadza w niej zmiany:</p>
+<!-- Let’s follow Jessica’s workflow as she works on her two features, collaborating in parallel with two different developers in this environment. Assuming she already has her repository cloned, she decides to work on `featureA` first. She creates a new branch for the feature and does some work on it there: -->
+
+<pre><code># Jessica<span class="hljs-attribute">'s</span> Machine
+$ git checkout -b featureA
+Switched <span class="hljs-keyword">to</span> a <span class="hljs-keyword">new</span> branch <span class="hljs-string">"featureA"</span>
+$ vim lib/simplegit.rb
+$ git commit -am <span class="hljs-attribute">'add</span> limit <span class="hljs-keyword">to</span> log <span class="hljs-keyword">function</span>'
+[featureA <span class="hljs-number">3300904</span>] add limit <span class="hljs-keyword">to</span> log <span class="hljs-keyword">function</span>
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>Teraz musi podzielić się swoją pracę z Johnem, więc wypycha zmiany z gałęzi <code>featureA</code> na serwer. Jessica nie ma uprawnień do zapisywania w gałęzi <code>master</code> - tylko osoby integrujące mają - musi więc wysłać osobną gałąź aby współpracować z Johnem:</p>
+<!-- At this point, she needs to share her work with John, so she pushes her `featureA` branch commits up to the server. Jessica doesn’t have push access to the `master` branch — only the integrators do — so she has to push to another branch in order to collaborate with John: -->
+
+<pre><code>$ git push origin featureA
+<span class="hljs-keyword">...</span>
+To jessica@githost:simplegit.git
+ * [new branch]      featureA -&gt; featureA
+</code></pre><p>Jessica powiadamia Johna przez wiadomość e-mail, że wysłała swoje zmiany w gałęzi <code>featureA</code> i on może je zweryfikować. W czasie gdy czeka na informację zwrotną od Johna, Jessica rozpoczyna pracę nad <code>featureB</code> z Josie. Na początku, tworzy nową gałąź przeznaczoną dla nowej funkcjonalności, podając jako gałąź źródłową gałąź <code>master</code> na serwerze.</p>
+<!-- Jessica e-mails John to tell him that she’s pushed some work into a branch named `featureA` and he can look at it now. While she waits for feedback from John, Jessica decides to start working on `featureB` with Josie. To begin, she starts a new feature branch, basing it off the server’s `master` branch: -->
+
+<pre><code><span class="hljs-comment"># Jessica's Machine</span>
+$ git fetch origin
+$ git checkout -b featureB origin/master
+Switched <span class="hljs-built_in">to</span> <span class="hljs-operator">a</span> <span class="hljs-built_in">new</span> branch <span class="hljs-string">"featureB"</span>
+</code></pre><p>Następnie, Jessica wprowadza kilka zmian i zapisuje je w gałęzi <code>featureB</code>:</p>
+<!-- Now, Jessica makes a couple of commits on the `featureB` branch: -->
+
+<pre><code><span class="hljs-variable">$ </span>vim lib/simplegit.rb
+<span class="hljs-variable">$ </span>git commit -am <span class="hljs-string">'made the ls-tree function recursive'</span>
+[featureB e5b0fdc] made the ls-tree function recursive
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+<span class="hljs-variable">$ </span>vim lib/simplegit.rb
+<span class="hljs-variable">$ </span>git commit -am <span class="hljs-string">'add ls-files'</span>
+[featureB <span class="hljs-number">8512791</span>] add ls-files
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">5</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>Repozytorium Jessici wygląda tak jak na rys. 5-12.</p>
+<!-- Jessica’s repository looks like Figure 5-12. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0512-tn.png" alt=""></p>
+<p>Figure 5-12. Początkowa historia zmian u Jessici.</p>
+<!-- Figure 5-12. Jessica’s initial commit history. -->
+
+<p>Jest gotowa do wypchnięcia swoich zmian, ale dostaje wiadomość e-mail od Josie, że gałąź z pierwszymi zmianami została już udostępniona na serwerze jako <code>featureBee</code>. Jessica najpierw musi połączyć te zmiany ze swoimi, zanim będzie mogła wysłać je na serwer. Może więc pobrać zmiany Jose za pomocą komendy <code>git fetch</code>:</p>
+<!-- She’s ready to push up her work, but gets an e-mail from Josie that a branch with some initial work on it was already pushed to the server as `featureBee`. Jessica first needs to merge those changes in with her own before she can push to the server. She can then fetch Josie’s changes down with `git fetch`: -->
+
+<pre><code>$ git fetch origin
+<span class="hljs-keyword">...</span>
+From jessica@githost:simplegit
+ * [new branch]      featureBee -&gt; origin/featureBee
+</code></pre><p>Jessica może teraz połączyć zmiany ze swoimi za pomocą <code>git merge</code>:</p>
+<!-- Jessica can now merge this into the work she did with `git merge`: -->
+
+<pre><code>$ git merge origin/featureBee
+<span class="hljs-keyword">Auto</span>-merging <span class="hljs-keyword">lib</span>/simplegit.rb
+Merge made <span class="hljs-keyword">by</span> recursive.
+ <span class="hljs-keyword">lib</span>/simplegit.rb |    <span class="hljs-number">4</span> ++++
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">4</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>Powstał drobny problem - musi wysłać połączone zmiany ze swojej gałęzi <code>featureB</code> do <code>featureBee</code> na serwerze. Może to zrobić poprzez wskazanie lokalnej i zdalnej gałęzi oddzielonej dwukropkiem (:), jako parametr do komendy <code>git push</code>:</p>
+<!-- There is a bit of a problem — she needs to push the merged work in her `featureB` branch to the `featureBee` branch on the server. She can do so by specifying the local branch followed by a colon (:) followed by the remote branch to the `git push` command: -->
+
+<pre><code>$ git push origin featureB:featureBee
+<span class="hljs-keyword">...</span>
+To jessica@githost:simplegit.git
+   fba9af8..cd685d1  featureB -&gt; featureBee
+</code></pre><p>jest to nazywane <em>refspec</em>. Zobacz rozdział 9, aby dowiedzieć się więcej o refspecs i rzeczami które można z nimi zrobić.</p>
+<!-- This is called a _refspec_. See Chapter 9 for a more detailed discussion of Git refspecs and different things you can do with them. -->
+
+<p>Następnie John wysyła wiadomość do Jessici z informacją że wgrał swoje zmiany do gałęzi <code>featureA</code> i prosi ją o ich weryfikację. Uruchamia więc ona <code>git fetch</code> aby je pobrać:</p>
+<!-- Next, John e-mails Jessica to say he’s pushed some changes to the `featureA` branch and ask her to verify them. She runs a `git fetch` to pull down those changes: -->
+
+<pre><code>$ git fetch origin
+<span class="hljs-keyword">...</span>
+From jessica@githost:simplegit
+   <span class="hljs-number">3300904.</span>.aad881d  featureA   -&gt; origin/featureA
+</code></pre><p>Następnie, może ona zobaczyć co zostało zmienione za pomocą komendy <code>git log</code>:</p>
+<!-- Then, she can see what has been changed with `git log`: -->
+
+<pre><code>$ git log origin/featureA ^featureA
+<span class="hljs-operator"><span class="hljs-keyword">commit</span> aad881d154acdaeb2b6b18ea0e827ed8a6d671e6
+Author: John Smith &lt;jsmith@example.com&gt;
+<span class="hljs-keyword">Date</span>:   Fri May <span class="hljs-number">29</span> <span class="hljs-number">19</span>:<span class="hljs-number">57</span>:<span class="hljs-number">33</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    changed log <span class="hljs-keyword">output</span> <span class="hljs-keyword">to</span> <span class="hljs-number">30</span> <span class="hljs-keyword">from</span> <span class="hljs-number">25</span></span>
+</code></pre><p>Na końcu, integruje ona zmiany Johna ze swoimi znajdującymi się w gałęzi <code>featureA</code>:</p>
+<!-- Finally, she merges John’s work into her own `featureA` branch: -->
+
+<pre><code>$ git checkout featureA
+Switched <span class="hljs-built_in">to</span> branch <span class="hljs-string">"featureA"</span>
+$ git <span class="hljs-built_in">merge</span> origin/featureA
+Updating <span class="hljs-number">3300904.</span>.aad881d
+Fast forward
+ lib/simplegit.rb |   <span class="hljs-number">10</span> +++++++++-
+<span class="hljs-number">1</span> <span class="hljs-built_in">files</span> changed, <span class="hljs-number">9</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>Jessica postanawia jednak wprowadzić jeszcze jakieś zmiany, więc commituje je ponownie i wysyła je z powrotem na serwer:</p>
+<!-- Jessica wants to tweak something, so she commits again and then pushes this back up to the server: -->
+
+<pre><code>$ git commit -am <span class="hljs-string">'small tweak'</span>
+[featureA 774b3ed] small tweak
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+$ git push origin featureA
+<span class="hljs-keyword">...</span>
+To jessica@githost:simplegit.git
+   <span class="hljs-number">3300904.</span>.774b3ed  featureA -&gt; featureA
+</code></pre><p>Historia zmian u Jessici wygląda teraz tak jak na rys. 5-13.</p>
+<!-- Jessica’s commit history now looks something like Figure 5-13. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0513-tn.png" alt=""></p>
+<p>Figure 5-13. Historia zmian Jessici po wprowadzeniu zmian w gałęzi.</p>
+<!-- Figure 5-13. Jessica’s history after committing on a feature branch. -->
+
+<p>Jessica, Josie i John powiadamiają osoby zajmujące się integracją, że gałęzie <code>featureA</code> i <code>featureBee</code> na serwerze są gotowe do integracji z głównym kodem. Po włączeniu tych gałęzi do głównej, zostaną pobrane zmiany, tworząc historię zmian podobną do tej na rys. 5-14.</p>
+<!-- Jessica, Josie, and John inform the integrators that the `featureA` and `featureBee` branches on the server are ready for integration into the mainline. After they integrate these branches into the mainline, a fetch will bring down the new merge commits, making the commit history look like Figure 5-14. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0514-tn.png" alt=""></p>
+<p>Figure 5-14. Historia zmian u Jessici po włączeniu jej obu gałęzi.</p>
+<!-- Figure 5-14. Jessica’s history after merging both her topic branches. -->
+
+<p>Duża ilość grup przechodzi na Gita ze względu na możliwość jednoczesnej współpracy kilku zespołów, oraz możliwości włączania efektów ich prac w późniejszym terminie. Możliwość tworzenie małych grup współpracujących przy pomocy zdalnych gałęzi bez konieczności angażowania pozostałych członków zespołu jest bardzo dużą zaletą Gita. Sekwencja przepływu pracy którą tutaj zobaczyłeś, jest podobna do tej na rys. 5-15.</p>
+<!-- Many groups switch to Git because of this ability to have multiple teams working in parallel, merging the different lines of work late in the process. The ability of smaller subgroups of a team to collaborate via remote branches without necessarily having to involve or impede the entire team is a huge benefit of Git. The sequence for the workflow you saw here is something like Figure 5-15. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0515-tn.png" alt=""></p>
+<p>Figure 5-15. Przebieg zdarzeń w takim przepływie.</p>
+<!-- Figure 5-15. Basic sequence of this managed-team workflow. -->
+
+<h2 id="publiczny-ma-y-projekt">Publiczny mały projekt</h2>
+<p>Uczestniczenie w publicznym projekcie trochę się różni. Ponieważ nie masz uprawnień do bezpośredniego wgrywania zmian w projekcie, musisz przekazać swoje zmiany do opiekunów w inny sposób. Pierwszy przykład opisuje udział w projekcie poprzez rozwidlenie poprzez serwis który to umożliwia. Obie strony repo.or.cz oraz GitHub umożliwiają takie działanie, a wielu opiekunów projektów oczekuje takiego stylu współpracy. Następny rozdział opisuje współpracę w projektach, które preferują otrzymywanie łat poprzez wiadomość e-mail.</p>
+<!-- Contributing to public projects is a bit different. Because you don’t have the permissions to directly update branches on the project, you have to get the work to the maintainers some other way. This first example describes contributing via forking on Git hosts that support easy forking. The repo.or.cz and GitHub hosting sites both support this, and many project maintainers expect this style of contribution. The next section deals with projects that prefer to accept contributed patches via e-mail. -->
+
+<p>Po pierwsze, na początku musisz sklonować główne repozytorium, stworzyć gałąź tematyczną dla zmian które planujesz wprowadzić, oraz zmiany te zrobić. Sekwencja komend wygląda tak:</p>
+<!-- First, you’ll probably want to clone the main repository, create a topic branch for the patch or patch series you’re planning to contribute, and do your work there. The sequence looks basically like this: -->
+
+<pre><code><span class="hljs-variable">$ </span>git clone (url)
+<span class="hljs-variable">$ </span>cd project
+<span class="hljs-variable">$ </span>git checkout -b featureA
+<span class="hljs-variable">$ </span>(work)
+<span class="hljs-variable">$ </span>git commit
+<span class="hljs-variable">$ </span>(work)
+<span class="hljs-variable">$ </span>git commit
+</code></pre><p>Możesz chcieć użyć <code>rebase -i</code>, aby złączyć swoje zmiany do jednego commita, lub przeorganizować je, tak aby łata była łatwiejsza do opiekuna do przeglądu - zobacz rozdział 6, aby dowiedzieć się więcej o tego typu operacjach.</p>
+<!-- You may want to use `rebase -i` to squash your work down to a single commit, or rearrange the work in the commits to make the patch easier for the maintainer to review — see Chapter 6 for more information about interactive rebasing. -->
+
+<p>Kiedy zmiany w Twojej gałęzi zostaną zakończone i jesteś gotowy do przekazania ich do opiekunów projektu, wejdź na stronę projektu i kliknij przycisk &quot;Fork&quot;, tworząc w ten sposób swoją własną kopię projektu z uprawnieniami do zapisu. Następnie musisz dodać nowe zdalne repozytorium, w tym przykładzie nazwane <code>myfork</code>:</p>
+<!-- When your branch work is finished and you’re ready to contribute it back to the maintainers, go to the original project page and click the "Fork" button, creating your own writable fork of the project. You then need to add in this new repository URL as a second remote, in this case named `myfork`: -->
+
+<pre><code><span class="hljs-variable">$ </span>git remote add myfork (url)
+</code></pre><p>Musisz wysłać swoje zmiany do niego. Najprościej będzie wypchnąć lokalną gałąź na której pracujesz do zdalnego repozytorium, zamiast włączać zmiany do gałęzi master i je wysyłać. Warto zrobić tak dlatego, że w sytuacji w której Twoje zmiany nie zostaną zaakceptowane, lub zostaną zaakceptowane tylko w części, nie będziesz musiał cofać swojej gałęzi master. Jeżeli opiekun włączy, zmieni bazę lub pobierze część twoich zmian, będziesz mógł je otrzymać zaciągając je z ich repozytorium:</p>
+<!-- You need to push your work up to it. It’s easiest to push the remote branch you’re working on up to your repository, rather than merging into your master branch and pushing that up. The reason is that if the work isn’t accepted or is cherry picked, you don’t have to rewind your master branch. If the maintainers merge, rebase, or cherry-pick your work, you’ll eventually get it back via pulling from their repository anyhow: -->
+
+<pre><code><span class="hljs-variable">$ </span>git push myfork featureA
+</code></pre><p>Kiedy wgrasz wprowadzone zmiany do swojego rozwidlenia projektu, powinieneś powiadomić o tym opiekuna. Jest to często nazywane <code>pull request</code>, i możesz je wygenerować poprzez stronę - GitHub ma przycisk &quot;pull request&quot;, który automatycznie generuje wiadomość do opiekuna - lub wykonaj komendę <code>git request-pull</code> i wyślij jej wynik do opiekuna projektu samodzielnie.</p>
+<!-- When your work has been pushed up to your fork, you need to notify the maintainer. This is often called a pull request, and you can either generate it via the website — GitHub has a "pull request" button that automatically messages the maintainer — or run the `git request-pull` command and e-mail the output to the project maintainer manually. -->
+
+<p>Komenda <code>request-pull</code> pobiera docelową gałąź do której chcesz wysłać zmiany, oraz adres URL repozytorium Gita z którego chcesz pobrać zmiany, oraz generuje podsumowanie zmian które będziesz wysyłał. Na przykład, jeżeli Jessica chce wysłać do Johna <code>pull request</code>, a wykonała dwie zmiany na swojej gałęzi którą właśnie wypchnęła, powinna uruchomić:</p>
+<!-- The `request-pull` command takes the base branch into which you want your topic branch pulled and the Git repository URL you want them to pull from, and outputs a summary of all the changes you’re asking to be pulled in. For instance, if Jessica wants to send John a pull request, and she’s done two commits on the topic branch she just pushed up, she can run this: -->
+
+<pre><code>$ git request-pull origin/master myfork
+The following changes since commit <span class="hljs-number">1</span>edee6b1d61823a2de3b09c160d7080b8d1b3a40:
+  John Smith (<span class="hljs-number">1</span>):
+        added <span class="hljs-operator">a</span> <span class="hljs-built_in">new</span> <span class="hljs-function"><span class="hljs-keyword">function</span></span>
+
+are available <span class="hljs-operator">in</span> <span class="hljs-operator">the</span> git repository <span class="hljs-keyword">at</span>:
+
+  git://githost/simplegit.git featureA
+
+Jessica Smith (<span class="hljs-number">2</span>):
+      <span class="hljs-built_in">add</span> limit <span class="hljs-built_in">to</span> <span class="hljs-built_in">log</span> <span class="hljs-function"><span class="hljs-keyword">function</span></span>
+      change <span class="hljs-built_in">log</span> output <span class="hljs-built_in">to</span> <span class="hljs-number">30</span> <span class="hljs-built_in">from</span> <span class="hljs-number">25</span>
+
+ lib/simplegit.rb |   <span class="hljs-number">10</span> +++++++++-
+ <span class="hljs-number">1</span> <span class="hljs-built_in">files</span> changed, <span class="hljs-number">9</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>Wynik tej komendy może być wysłany do opiekuna - mówi on z której wersji została stworzona gałąź, podsumowuje zmiany, oraz pokazuje skąd można je pobrać.</p>
+<!-- The output can be sent to the maintainer—it tells them where the work was branched from, summarizes the commits, and tells where to pull this work from. -->
+
+<p>W projekcie w którym nie jesteś opiekunem, najprostszym sposobem jest utrzymywanie gałęzi <code>master</code> która śledzi <code>origin/master</code>, a wprowadzać zmiany w tematycznych gałęziach, które możesz łatwo usunąć jeżeli zostaną odrzucone. Posiadanie oddzielnych gałęzi dla różnych funkcjonalności, ułatwia również tobie zmianę bazy (&quot;rebase&quot;) jeżeli główna gałąź zostanie zmieniona i przygotowana łata nie może się poprawnie nałożyć. Na przykład, jeżeli chcesz wysłać drugi zestaw zmian do projektu, nie kontynuuj pracy na gałęzi którą właśnie wypchnąłeś - rozpocznij nową z gałąź <code>master</code>:</p>
+<!-- On a project for which you’re not the maintainer, it’s generally easier to have a branch like `master` always track `origin/master` and to do your work in topic branches that you can easily discard if they’re rejected.  Having work themes isolated into topic branches also makes it easier for you to rebase your work if the tip of the main repository has moved in the meantime and your commits no longer apply cleanly. For example, if you want to submit a second topic of work to the project, don’t continue working on the topic branch you just pushed up — start over from the main repository’s `master` branch: -->
+
+<pre><code><span class="hljs-variable">$ </span>git checkout -b featureB origin/master
+<span class="hljs-variable">$ </span>(work)
+<span class="hljs-variable">$ </span>git commit
+<span class="hljs-variable">$ </span>git push myfork featureB
+<span class="hljs-variable">$ </span>(email maintainer)
+<span class="hljs-variable">$ </span>git fetch origin
+</code></pre><p>Teraz, każdy z zestawów zmian przechowywany jest w formie silosu - podobnego do kolejki z łatami - które możesz nadpisać, zmienić, bez konieczności nachodzenia na siebie, tak jak przedstawiono to na rys. 5-16.</p>
+<!-- Now, each of your topics is contained within a silo — similar to a patch queue — that you can rewrite, rebase, and modify without the topics interfering or interdepending on each other as in Figure 5-16. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0516-tn.png" alt=""></p>
+<p>Figure 5-16. Początkowa historia ze zmianami featureB.</p>
+<!-- Figure 5-16. Initial commit history with featureB work. -->
+
+<p>Załóżmy, że opiekun projektu pobrał Twoje zmiany i sprawdził twoją pierwszą gałąź, ale niestety nie aplikuje się ona czysto. W takiej sytuacji, możesz spróbować wykonać <code>rebase</code> na gałęzi <code>origin/master</code>, rozwiązać konflikty i ponownie wysłać zmiany:</p>
+<!-- Let’s say the project maintainer has pulled in a bunch of other patches and tried your first branch, but it no longer cleanly merges. In this case, you can try to rebase that branch on top of `origin/master`, resolve the conflicts for the maintainer, and then resubmit your changes: -->
+
+<pre><code><span class="hljs-variable">$ </span>git checkout featureA
+<span class="hljs-variable">$ </span>git rebase origin/master
+<span class="hljs-variable">$ </span>git push -f myfork featureA
+</code></pre><p>To przepisuje twoją historię, która wygląda teraz tak jak na rys. 5-17.</p>
+<!-- This rewrites your history to now look like Figure 5-17. -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0517-tn.png" alt=""></p>
+<p>Figure 5-17. Historia zmian po pracach na featureA.</p>
+<!-- Figure 5-17. Commit history after featureA work. -->
+
+<p>Z powodu zmiany bazy (&quot;rebase&quot;) na gałęzi, musisz użyć przełącznika <code>-f</code> do komendy push, tak abyś mógł nadpisać gałąź <code>featureA</code> na serwerze, commitem który nie jest jej potomkiem. Alternatywą może być wysłanie tych zmian do nowej gałęzi na serwerze (np. nazwanej <code>featureAv2</code>).</p>
+<!-- Because you rebased the branch, you have to specify the `-f` to your push command in order to be able to replace the `featureA` branch on the server with a commit that isn’t a descendant of it. An alternative would be to push this new work to a different branch on the server (perhaps called `featureAv2`). -->
+
+<p>Spójrzmy na jeszcze jeden scenariusz: opiekun spojrzał na zmiany w Twojej drugiej gałęzi i spodobał mu się pomysł, ale chciałby abyś zmienił sposób w jaki je zaimplementowałeś. Wykorzystasz to również do tego, aby przenieść zmiany do obecnej gałęzi <code>master</code>. Tworzysz więc nową gałąź bazując na <code>origin/master</code>, złączasz zmiany z gałęzi <code>featureB</code> tam, rozwiązujesz ewentualne konflikty, wprowadzasz zmiany w implementacji i następnie wypychasz zmiany do nowej gałęzi:</p>
+<!-- Let’s look at one more possible scenario: the maintainer has looked at work in your second branch and likes the concept but would like you to change an implementation detail. You’ll also take this opportunity to move the work to be based off the project’s current `master` branch. You start a new branch based off the current `origin/master` branch, squash the `featureB` changes there, resolve any conflicts, make the implementation change, and then push that up as a new branch: -->
+
+<pre><code><span class="hljs-variable">$ </span>git checkout -b featureBv2 origin/master
+<span class="hljs-variable">$ </span>git merge --no-commit --squash featureB
+<span class="hljs-variable">$ </span>(change implementation)
+<span class="hljs-variable">$ </span>git commit
+<span class="hljs-variable">$ </span>git push myfork featureBv2
+</code></pre><p>Opcja <code>--squash</code> pobiera wszystkie zmiany z gałęzi, oraz łączy je w jedną nie włączoną na gałęzi na której obecnie jesteś. Opcja <code>--no-commit</code> mówi Git aby nie zapisywał informacji o commit-cie. Pozwala to na zaimportowanie wszystkich zmian z innej gałęzi oraz wprowadzenie nowych przed ostatecznym zatwierdzeniem ich.</p>
+<!-- The `-\-squash` option takes all the work on the merged branch and squashes it into one non-merge commit on top of the branch you’re on. The `-\-no-commit` option tells Git not to automatically record a commit. This allows you to introduce all the changes from another branch and then make more changes before recording the new commit. -->
+
+<p>Teraz możesz wysłać do opiekuna wiadomość, że wprowadziłeś wszystkie wymagane zmiany, które może znaleźć w gałęzi <code>featureBv2</code> (zob. rys. 5-18).</p>
+<!-- Now you can send the maintainer a message that you’ve made the requested changes and they can find those changes in your `featureBv2` branch (see Figure 5-18). -->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0518-tn.png" alt=""></p>
+<p>Figure 5-18. Historia zmian po zmianach w featureBv2.</p>
+<!-- Figure 5-18. Commit history after featureBv2 work. -->
+
+<h2 id="du-y-publiczny-projekt">Duży publiczny projekt</h2>
+<p>Duża ilość większych projektów ma ustalone reguły dotyczące akceptowania łat - będziesz musiał sprawdzić konkretne zasady dla każdego z projektów, ponieważ będą się różniły. Jednak sporo większych projektów akceptuje łatki poprzez listy dyskusyjne przeznaczone dla programistów, dlatego też opiszę ten przykład teraz.</p>
+<!-- Many larger projects have established procedures for accepting patches — you’ll need to check the specific rules for each project, because they will differ. However, many larger public projects accept patches via a developer mailing list, so I’ll go over an example of that now. -->
+
+<p>Przepływ pracy jest podobny do poprzedniego - tworzysz tematyczne gałęzie dla każdej grupy zmian nad którymi pracujesz. Różnica polega na tym, w jaki sposób wysyłasz je do projektu. Zamiast tworzyć rozwidlenie i wypychać do niego zmiany, tworzysz wiadomość e-mail dla każdego zestawu zmian i wysyłasz je na listę dyskusyjną:</p>
+<!-- The workflow is similar to the previous use case — you create topic branches for each patch series you work on. The difference is how you submit them to the project. Instead of forking the project and pushing to your own writable version, you generate e-mail versions of each commit series and e-mail them to the developer mailing list: -->
+
+<pre><code><span class="hljs-variable">$ </span>git checkout -b topicA
+<span class="hljs-variable">$ </span>(work)
+<span class="hljs-variable">$ </span>git commit
+<span class="hljs-variable">$ </span>(work)
+<span class="hljs-variable">$ </span>git commit
+</code></pre><p>Teraz masz dwa commity, które chcesz wysłać na listę dyskusyjną. Uzyj <code>git format-patch</code> do wygenerowania plików w formacie mbox, które możesz wysłać na listę - zamieni to każdy commit w osobną wiadomość, z pierwszą linią komentarza (&quot;commit message&quot;) jako tematem, jego pozostałą częścią w treści, dołączając jednoczenie zawartość wprowadzanej zmiany. Fajną rzeczą jest to, że aplikowanie łatki przesłanej przez e-mail i wygenerowanej za pomocą <code>format-patch</code> zachowuje wszystkie informacje o commit-cie, co zobaczysz w kolejnej sekcji kiedy zaaplikujesz te zmiany:</p>
+<!-- Now you have two commits that you want to send to the mailing list. You use `git format-patch` to generate the mbox-formatted files that you can e-mail to the list — it turns each commit into an e-mail message with the first line of the commit message as the subject and the rest of the message plus the patch that the commit introduces as the body. The nice thing about this is that applying a patch from an e-mail generated with `format-patch` preserves all the commit information properly, as you’ll see more of in the next section when you apply these patches: -->
+
+<pre><code>$ git format<span class="hljs-attribute">-patch</span> <span class="hljs-attribute">-M</span> origin/master
+<span class="hljs-number">0001</span><span class="hljs-attribute">-add</span><span class="hljs-attribute">-limit</span><span class="hljs-attribute">-to</span><span class="hljs-attribute">-log</span><span class="hljs-attribute">-function</span><span class="hljs-built_in">.</span>patch
+<span class="hljs-number">0002</span><span class="hljs-attribute">-changed</span><span class="hljs-attribute">-log</span><span class="hljs-attribute">-output</span><span class="hljs-attribute">-to</span><span class="hljs-subst">-</span><span class="hljs-number">30</span><span class="hljs-attribute">-from</span><span class="hljs-subst">-</span><span class="hljs-number">25.</span>patch
+</code></pre><p>Komenda <code>format-patch</code> wypisuje nazwy plików które stworzyła. Opcja <code>-M</code> mówi Git, aby brał pod uwagę również zmiany nazw plików. Zawartość plików w efekcie końcowym wygląda tak:</p>
+<!-- The `format-patch` command prints out the names of the patch files it creates. The `-M` switch tells Git to look for renames. The files end up looking like this: -->
+
+<pre><code>$ cat <span class="hljs-number">0001</span>-<span class="hljs-built_in">add</span>-limit-<span class="hljs-built_in">to</span>-<span class="hljs-built_in">log</span>-<span class="hljs-function"><span class="hljs-keyword">function</span>.<span class="hljs-title">patch</span></span>
+From <span class="hljs-number">330090432754092</span>d704da8e76ca5c05c198e71a8 Mon Sep <span class="hljs-number">17</span> <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> <span class="hljs-number">2001</span>
+From: Jessica Smith &lt;jessica@example.com&gt;
+Date: Sun, <span class="hljs-number">6</span> Apr <span class="hljs-number">2008</span> <span class="hljs-number">10</span>:<span class="hljs-number">17</span>:<span class="hljs-number">23</span> -<span class="hljs-number">0700</span>
+Subject: [PATCH <span class="hljs-number">1</span>/<span class="hljs-number">2</span>] <span class="hljs-built_in">add</span> limit <span class="hljs-built_in">to</span> <span class="hljs-built_in">log</span> <span class="hljs-function"><span class="hljs-keyword">function</span></span>
+
+Limit <span class="hljs-built_in">log</span> functionality <span class="hljs-built_in">to</span> <span class="hljs-operator">the</span> <span class="hljs-keyword">first</span> <span class="hljs-number">20</span>
+
+<span class="hljs-comment">---</span>
+ lib/simplegit.rb |    <span class="hljs-number">2</span> +-
+ <span class="hljs-number">1</span> <span class="hljs-built_in">files</span> changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+
+diff <span class="hljs-comment">--git a/lib/simplegit.rb b/lib/simplegit.rb</span>
+index <span class="hljs-number">76</span>f47bc..f9815f1 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/lib/simplegit.rb</span>
++++ b/lib/simplegit.rb
+@@ -<span class="hljs-number">14</span>,<span class="hljs-number">7</span> +<span class="hljs-number">14</span>,<span class="hljs-number">7</span> @@ class SimpleGit
+   <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
+   def <span class="hljs-built_in">log</span>(treeish = <span class="hljs-string">'master'</span>)
+-    <span class="hljs-command"><span class="hljs-keyword">command</span>(<span class="hljs-string">"git log #{treeish}"</span>)</span>
++    <span class="hljs-command"><span class="hljs-keyword">command</span>(<span class="hljs-string">"git log -n 20 #{treeish}"</span>)</span>
+   <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
+   def ls_tree(treeish = <span class="hljs-string">'master'</span>)
+<span class="hljs-comment">--</span>
+<span class="hljs-number">1.6</span><span class="hljs-number">.2</span>.rc1<span class="hljs-number">.20</span>.g8c5b.dirty
+</code></pre><p>Możesz oczywiście zmienić te pliki i dodać większą ilość informacji w mailu, których nie chciałeś pokazywać w komentarzu do zmiany. Jeżeli dodasz tekst miedzy linię z <code>---</code>, oraz początkiem łaty (linia z <code>lib/simplegit.rb</code>), programiści będą mogli to przeczytać; ale podczas nakładania łaty zostanie do pominięte.</p>
+<!-- You can also edit these patch files to add more information for the e-mail list that you don’t want to show up in the commit message. If you add text between the `-\-\-` line and the beginning of the patch (the `lib/simplegit.rb` line), then developers can read it; but applying the patch excludes it. -->
+
+<p>Aby wysłać to na listę dyskusyjną, możesz albo wkleić zawartość plików w programie e-mail lub użyć programu uruchamianego z linii komend. Wklejanie tekstu często wprowadza problemy z zachowaniem formatowania, szczególnie przy użyciu tych &quot;mądrzejszych&quot; programów pocztowych, które nie zachowują poprawnie znaków nowej linii i spacji. Na szczęście Git udostępnia narzędzie, które pomoże Ci wysłać poprawnie sformatowane łaty poprzez protokół IMAP, może to być łatwiejsze dla Ciebie. Pokażę w jaki sposób wysyłać łaty przy pomocy Gmaila, którego używam; możesz znaleźć bardziej szczegółowe instrukcje dla różnych programów pocztowych na końcu wcześniej wymienionego pliku <code>Documentation/SubmittingPatches</code>, który znajduje się w kodzie źródłowym Gita.</p>
+<!-- To e-mail this to a mailing list, you can either paste the file into your e-mail program or send it via a command-line program. Pasting the text often causes formatting issues, especially with "smarter" clients that don’t preserve newlines and other whitespace appropriately. Luckily, Git provides a tool to help you send properly formatted patches via IMAP, which may be easier for you. I’ll demonstrate how to send a patch via Gmail, which happens to be the e-mail agent I use; you can read detailed instructions for a number of mail programs at the end of the aforementioned `Documentation/SubmittingPatches` file in the Git source code. -->
+
+<p>Najpierw musisz ustawić sekcję imap w swoim pliku <code>~/.gitconfig</code>. Możesz ustawić każdą wartość oddzielnie przy pomocy kilku komend <code>git config</code>, lub możesz je dodać ręcznie; jednak w efekcie twój plik konfiguracyjny powinien wyglądać podobnie do:</p>
+<!-- First, you need to set up the imap section in your `~/.gitconfig` file. You can set each value separately with a series of `git config` commands, or you can add them manually; but in the end, your config file should look something like this: -->
+
+<pre><code>[imap]
+  folder = <span class="hljs-string">"[Gmail]/Drafts"</span>
+  host = imaps:<span class="hljs-comment">//imap.gmail.com</span>
+  user = user<span class="hljs-annotation">@gmail</span>.com
+  pass = p4ssw0rd
+  port = <span class="hljs-number">993</span>
+  sslverify = <span class="hljs-keyword">false</span>
+</code></pre><p>Jeżeli twój serwer IMAP nie używa SSL, dwie ostatnie linie prawdopodobnie nie są potrzebne, a wartość host będzie <code>imap://</code> zamiast <code>imaps://</code>. Po ustawieniu tego, możesz używać komendy <code>git send-email</code> aby umieścić łatki w folderze Draft na serwerze IMAP:</p>
+<!-- If your IMAP server doesn’t use SSL, the last two lines probably aren’t necessary, and the host value will be `imap://` instead of `imaps://`.
+When that is set up, you can use `git send-email` to place the patch series in the Drafts folder of the specified IMAP server: -->
+
+<pre><code>$ git <span class="hljs-built_in">send</span>-email *.patch
+<span class="hljs-number">0001</span>-added-limit-<span class="hljs-built_in">to</span>-<span class="hljs-built_in">log</span>-<span class="hljs-function"><span class="hljs-keyword">function</span>.<span class="hljs-title">patch</span></span>
+<span class="hljs-number">0002</span>-changed-<span class="hljs-built_in">log</span>-output-<span class="hljs-built_in">to</span>-<span class="hljs-number">30</span>-<span class="hljs-built_in">from</span>-<span class="hljs-number">25.</span>patch
+Who should <span class="hljs-operator">the</span> emails appear <span class="hljs-built_in">to</span> be <span class="hljs-built_in">from</span>? [Jessica Smith &lt;jessica@example.com&gt;]
+Emails will be sent <span class="hljs-built_in">from</span>: Jessica Smith &lt;jessica@example.com&gt;
+Who should <span class="hljs-operator">the</span> emails be sent <span class="hljs-built_in">to</span>? jessica@example.com
+Message-ID <span class="hljs-built_in">to</span> be used <span class="hljs-keyword">as</span> In-Reply-To <span class="hljs-keyword">for</span> <span class="hljs-operator">the</span> <span class="hljs-keyword">first</span> email? y
+</code></pre><p>Następnie, Git pokaże garść informacji podobnych tych, dla każdej łaty którą wysyłasz:</p>
+<!-- Then, Git spits out a bunch of log information looking something like this for each patch you’re sending: -->
+
+<pre><code>(mbox) Adding cc: Jessica Smith &lt;jessica@example.com&gt; <span class="hljs-keyword">from</span>
+  \line <span class="hljs-comment">'From: Jessica Smith <span class="hljs-xmlDocTag">&lt;jessica@example.com&gt;</span>'</span>
+OK. Log says:
+Sendmail: /usr/sbin/sendmail -i jessica@example.com
+<span class="hljs-keyword">From</span>: Jessica Smith &lt;jessica@example.com&gt;
+<span class="hljs-keyword">To</span>: jessica@example.com
+Subject: [PATCH <span class="hljs-number">1</span>/<span class="hljs-number">2</span>] added limit <span class="hljs-keyword">to</span> log <span class="hljs-keyword">function</span>
+<span class="hljs-built_in">Date</span>: Sat, <span class="hljs-number">30</span> May <span class="hljs-number">2009</span> <span class="hljs-number">13</span>:<span class="hljs-number">29</span>:<span class="hljs-number">15</span> -<span class="hljs-number">0700</span>
+Message-Id: &lt;<span class="hljs-number">1243715356</span>-<span class="hljs-number">61726</span>-<span class="hljs-number">1</span>-git-send-email-jessica@example.com&gt;
+X-Mailer: git-send-email <span class="hljs-number">1.6</span><span class="hljs-number">.2</span>.rc1<span class="hljs-number">.20</span>.g8c5b.dirty
+<span class="hljs-keyword">In</span>-Reply-<span class="hljs-keyword">To</span>: &lt;y&gt;
+References: &lt;y&gt;
+
+Result: OK
+</code></pre><p>Od tego momentu powinieneś móc przejść do folderu Draft, zmienić pole odbiorcy wiadomości na adres listy dyskusyjnej do której wysyłasz łatę, ewentualnie dodać adres osób zainteresowanych tym tematem w kopii i wysłać.</p>
+<!-- At this point, you should be able to go to your Drafts folder, change the To field to the mailing list you’re sending the patch to, possibly CC the maintainer or person responsible for that section, and send it off. -->
+
+<h2 id="podsumowanie">Podsumowanie</h2>
+<p>Ten rozdział opisywał kilka z najczęściej używanych sposobów przepływu pracy z różnymi projektami Git które możesz spotkać, oraz wprowadził kilka nowych narzędzi które ułatwiają ten proces. W następnych sekcjach zobaczysz jak pracować z drugiej strony: prowadząc projekt Gita. Nauczysz się jak być miłosiernym dyktatorem oraz osobą integrującą zmiany innych.</p>
+<!-- This section has covered a number of common workflows for dealing with several very different types of Git projects you’re likely to encounter and introduced a couple of new tools to help you manage this process. Next, you’ll see how to work the other side of the coin: maintaining a Git project. You’ll learn how to be a benevolent dictator or integration manager. -->
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../rozproszony_git/rozproszone_przeplywy_pracy.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../rozproszony_git/utrzymywanie_projektu.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

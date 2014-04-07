@@ -1,0 +1,1019 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Git への移行 | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git/.html" />
+        
+        
+        <link rel="prev" href="../git/git__subversion.html" />
+        
+
+        <meta property="og:title" content="Git への移行 | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="8.2" data-basepath=".." data-revision="1396895597440">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git/git_.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Git のさまざまなツール
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> リビジョンの選択
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> 対話的なステージング
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> 作業を隠す
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> 歴史の書き換え
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Git によるデバッグ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> サブモジュール
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> サブツリーマージ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.8)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="index.html">
+                
+                <a href="../index.html">
+                    <i class="fa fa-check"></i> <b>2)</b> 使い始める
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> バージョン管理に関して
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Git略史
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Gitの基本
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Gitのインストール
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> 最初のGitの構成
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> ヘルプを見る
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git のブランチ機能
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> ブランチとは
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> ブランチとマージの基本
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> ブランチの管理
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> ブランチでの作業の流れ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> リモートブランチ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> リベース
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git サーバー
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> プロトコル
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_/_git_.html">
+                            
+                            <a href="../git_/_git_.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> サーバー用の Git の取得
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_/ssh_.html">
+                            
+                            <a href="../git_/ssh_.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> SSH 公開鍵の作成
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> サーバーのセットアップ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> 一般公開
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_/gitweb.html">
+                            
+                            <a href="../git_/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_/gitosis.html">
+                            
+                            <a href="../git_/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_/gitolite.html">
+                            
+                            <a href="../git_/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git デーモン
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git のホスティング
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Git での分散作業
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> 分散作業の流れ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> プロジェクトへの貢献
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> プロジェクトの運営
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git の基本
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Git リポジトリの取得
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> 変更内容のリポジトリへの記録
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> コミット履歴の閲覧
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> 作業のやり直し
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> リモートでの作業
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> タグ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> ヒントと裏技
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Git のカスタマイズ
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Git の設定
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git の属性
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git フック
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Git ポリシーの実施例
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git/README.html">
+                
+                <a href="../git/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Gitとその他のシステムの連携
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git/git__subversion.html">
+                            
+                            <a href="../git/git__subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git と Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git/git_.html">
+                            
+                            <a href="../git/git_.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Git への移行
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git/README.html">
+                
+                <a href="../git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Gitの内側
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git/plumbingporcelain.html">
+                            
+                            <a href="../git/plumbingporcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> 配管（Plumbing）と磁器（Porcelain）
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git/git.html">
+                            
+                            <a href="../git/git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Gitオブジェクト
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git/git.html">
+                            
+                            <a href="../git/git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Gitの参照
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> パックファイル
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git/refspec.html">
+                            
+                            <a href="../git/refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> 参照仕様（Refspec）
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> トランスファープロトコル
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> メインテナンスとデータリカバリ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> 要約
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 70.58823529411765%;min-width: 64.70588235294117%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../git.html" title="最初のGitの構成" class="chapter done " data-progress="2.5" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../.html" title="まとめ" class="chapter done " data-progress="2.7" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../git_/_git_.html" title="サーバー用の Git の取得" class="chapter done " data-progress="4.2" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../git_/ssh_.html" title="SSH 公開鍵の作成" class="chapter done " data-progress="4.3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../git_/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../git_/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../git_/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../git_/README.html" title="Git のカスタマイズ" class="chapter done new-chapter" data-progress="7" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../git_/git_.html" title="Git ポリシーの実施例" class="chapter done " data-progress="7.4" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../git_/.html" title="まとめ" class="chapter done " data-progress="7.5" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../git/git__subversion.html" title="Git と Subversion" class="chapter done " data-progress="8.1" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../git/git_.html" title="Git への移行" class="chapter done " data-progress="8.2" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../git/README.html" title="Gitの内側" class="chapter  new-chapter" data-progress="9" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../git/plumbingporcelain.html" title="配管（Plumbing）と磁器（Porcelain）" class="chapter  " data-progress="9.1" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../git/git.html" title="Gitの参照" class="chapter  " data-progress="9.3" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../git/refspec.html" title="参照仕様（Refspec）" class="chapter  " data-progress="9.5" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../git/.html" title="要約" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_127">
+                    
+                        <h1 id="git-">Git への移行</h1>
+<p>別の VCS で管理している既存のコードベースを Git で管理しようと思ったら、何らかの方法でそのプロジェクトを移行しなければなりません。この節では、一般的なシステム上の Git に含まれているインポートツールについて説明します。そして、インポートツールを自作する方法も扱います。</p>
+<h2 id="-">インポート</h2>
+<p>ここでは、業務のソースコード管理に使われる2大ツールである Subversion と Perforce からデータをインポートする方法を説明します。現在 Git への移行を考えている人たちの多くがこれらを使っていると聞いています。そのため、これらからのインポート用に、Git には高品質のツールが付属しています。</p>
+<h2 id="subversion">Subversion</h2>
+<p>先ほどの節で <code>git svn</code> の使い方を読んでいれば、話は簡単です。まず <code>git svn clone</code> でリポジトリを作り、そして Subversion サーバーを使うのをやめ、新しい Git サーバーにプッシュし、あとはそれを使い始めればいいのです。これまでの歴史が欲しいのなら、それも Subversion サーバーからプルすることができます (多少時間がかかります)。</p>
+<p>しかし、インポートは完全ではありません。また時間もかかるので、正しくやるのがいいでしょう。まず最初に問題になるのが作者 (author) の情報です。Subversion ではコミットした人すべてがシステム上にユーザーを持っており、それがコミット情報として記録されます。たとえば先ほどの節のサンプルで言うと <code>schacon</code> がそれで、<code>blame</code> の出力や <code>git svn log</code> の出力に含まれています。これをうまく Git の作者データとしてマップするには、Subversion のユーザーと Git の作者のマッピングが必要です。<code>users.txt</code> という名前のファイルを作り、このような書式でマッピングを記述します。</p>
+<pre><code>schacon = <span class="hljs-constant">Scott</span> <span class="hljs-constant">Chacon</span> &lt;schacon<span class="hljs-variable">@geemail</span>.com&gt;
+selse = <span class="hljs-constant">Someo</span> <span class="hljs-constant">Nelse</span> &lt;selse<span class="hljs-variable">@geemail</span>.com&gt;
+</code></pre><p>SVN で使っている作者の一覧を取得するには、このようにします。</p>
+<pre><code>$ svn <span class="hljs-keyword">log</span> ^<span class="hljs-subst">/</span> <span class="hljs-subst">--</span><span class="hljs-built_in">xml</span> <span class="hljs-subst">|</span> grep <span class="hljs-attribute">-P</span> <span class="hljs-string">"^&lt;author"</span> <span class="hljs-subst">|</span> sort <span class="hljs-attribute">-u</span> <span class="hljs-subst">|</span> <span class="hljs-subst">\</span>
+      perl <span class="hljs-attribute">-pe</span> <span class="hljs-string">'s/&lt;author&gt;(.*?)&lt;\/author&gt;/$1 = /'</span> <span class="hljs-subst">&gt;</span> users<span class="hljs-built_in">.</span>txt
+</code></pre><p>これは、まずログを XML フォーマットで出力します。その中から作者を捜して重複を省き、XML を除去します (ちょっと見ればわかりますが、これは <code>grep</code> や <code>sort</code>、そして <code>perl</code> といったコマンドが使える環境でないと動きません)。この出力を users.txt にリダイレクトし、そこに Git のユーザーデータを書き足していきます。</p>
+<p>このファイルを <code>git svn</code> に渡せば、作者のデータをより正確にマッピングできるようになります。また、Subversion が通常インポートするメタデータを含めないよう <code>git svn</code> に指示することもできます。そのためには <code>--no-metadata</code> を <code>clone</code> コマンドあるいは <code>init</code> コマンドに渡します。そうすると、 <code>import</code> コマンドは次のようになります。</p>
+<pre><code>$ git svn clone http:<span class="hljs-comment">//my-project.googlecode.com/svn/ \</span>
+      <span class="hljs-subst">--</span>authors<span class="hljs-attribute">-file</span><span class="hljs-subst">=</span>users<span class="hljs-built_in">.</span>txt <span class="hljs-subst">--</span>no<span class="hljs-attribute">-metadata</span> <span class="hljs-attribute">-s</span> my_project
+</code></pre><p>これで、Subversion をちょっとマシにインポートした <code>my_project</code> ディレクトリができあがりました。コミットがこんなふうに記録されるのではなく、</p>
+<pre><code>commit <span class="hljs-number">37</span>efa680e8473b615de980fa935944215428a35a
+<span class="hljs-label">Author:</span> schacon &lt;schacon<span class="hljs-localvars">@4</span>c93b258-<span class="hljs-number">373</span>f-<span class="hljs-number">11</span>de-be05-<span class="hljs-number">5</span>f7a86268029&gt;
+<span class="hljs-label">Date:</span>   Sun May <span class="hljs-number">3</span> <span class="hljs-number">00</span>:<span class="hljs-number">12</span>:<span class="hljs-number">22</span> <span class="hljs-number">2009</span> +<span class="hljs-number">0000</span>
+
+    fixed install - go to trunk
+
+    git-svn-id: https://my-project<span class="hljs-preprocessor">.googlecode</span><span class="hljs-preprocessor">.com</span>/svn/trunk<span class="hljs-localvars">@94</span> <span class="hljs-number">4</span>c93b258-<span class="hljs-number">373</span>f-<span class="hljs-number">11</span>de-
+    be05-<span class="hljs-number">5</span>f7a86268029
+</code></pre><p>次のように記録されています。</p>
+<pre><code><span class="hljs-operator"><span class="hljs-keyword">commit</span> <span class="hljs-number">03</span>a8785f44c8ea5cdb0e8834b7c8e6c469be2ff2
+Author: Scott Chacon &lt;schacon@geemail.com&gt;
+<span class="hljs-keyword">Date</span>:   Sun May <span class="hljs-number">3</span> <span class="hljs-number">00</span>:<span class="hljs-number">12</span>:<span class="hljs-number">22</span> <span class="hljs-number">2009</span> +<span class="hljs-number">0000</span>
+
+    fixed install - <span class="hljs-keyword">go</span> <span class="hljs-keyword">to</span> trunk</span>
+</code></pre><p>Author フィールドの見た目がずっとよくなっただけではなく、<code>git-svn-id</code> もなくなっています。</p>
+<p>インポートした後に、ちょっとした後始末が必要です。たとえば、<code>git svn</code> が準備した変な参照などです。まずはタグを移動して、奇妙なリモートブランチではなくちゃんとしたタグとして扱えるようにします。そして、残りのブランチを移動してローカルで扱えるようにします。</p>
+<p>タグを Git のタグとして扱うには、次のコマンドを実行します。</p>
+<pre><code>$ git <span class="hljs-keyword">for</span>-each-ref refs/remotes/tags | cut <span class="hljs-operator">-d</span> / <span class="hljs-operator">-f</span> <span class="hljs-number">4</span>- | grep -v @ | <span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> tagname; <span class="hljs-keyword">do</span> git tag <span class="hljs-string">"<span class="hljs-variable">$tagname</span>"</span> <span class="hljs-string">"tags/<span class="hljs-variable">$tagname</span>"</span>; git branch -r <span class="hljs-operator">-d</span> <span class="hljs-string">"tags/<span class="hljs-variable">$tagname</span>"</span>; <span class="hljs-keyword">done</span>
+</code></pre><p>これは、リモートブランチのうち <code>tag/</code> で始まる名前のものを、実際の (軽量な) タグに変えます。</p>
+<p>次に、<code>refs/remotes</code> 以下にあるそれ以外の参照をローカルブランチに移動します。</p>
+<pre><code>$ git <span class="hljs-keyword">for</span>-each-ref refs/remotes | cut <span class="hljs-operator">-d</span> / <span class="hljs-operator">-f</span> <span class="hljs-number">3</span>- | grep -v @ | <span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> branchname; <span class="hljs-keyword">do</span> git branch <span class="hljs-string">"<span class="hljs-variable">$branchname</span>"</span> <span class="hljs-string">"refs/remotes/<span class="hljs-variable">$branchname</span>"</span>; git branch -r <span class="hljs-operator">-d</span> <span class="hljs-string">"<span class="hljs-variable">$branchname</span>"</span>; <span class="hljs-keyword">done</span>
+</code></pre><p>これで、今まであった古いブランチはすべて Git のブランチとなり、古いタグもすべて Git のタグになりました。最後に残る作業は、新しい Git サーバーをリモートに追加してプッシュすることです。自分のサーバーをリモートとして追加するには以下のようにします｡</p>
+<pre><code><span class="hljs-variable">$ </span>git remote add origin git<span class="hljs-variable">@my</span>-git-<span class="hljs-symbol">server:</span>myrepository.git
+</code></pre><p>すべてのブランチやタグを一緒にプッシュするには、このようにします。</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">push</span> <span class="hljs-comment">origin</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">all</span>
+<span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">push</span> <span class="hljs-comment">origin</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">tags</span>
+</code></pre><p>これで、ブランチやタグも含めたすべてを、新しい Git サーバーにきれいにインポートできました。</p>
+<h2 id="perforce">Perforce</h2>
+<p>次のインポート元としてとりあげるのは Perforce です。Perforce からのインポートツールも Git に同梱されています｡ただし､使用しているGitのバージョンが1.7.11より古い場合は同梱されておらず､Gitソースコードの <code>contrib</code> から取り出す必要があります。ソースコードは git.kernel.org からダウンロードできます。</p>
+<pre><code>$ git clone git://git<span class="hljs-preprocessor">.kernel</span><span class="hljs-preprocessor">.org</span>/pub/scm/git/git<span class="hljs-preprocessor">.git</span>
+$ cd git/contrib/fast-import
+</code></pre><p>この <code>fast-import</code> ディレクトリにある実行可能な Python スクリプト <code>git-p4</code> が、それです。このツールを使うには、Python と <code>p4</code> ツールがマシンにインストールされていなければなりません。たとえば、Jam プロジェクトを Perforce Public Depot からインポートします。クライアントをセットアップするには、環境変数 P4PORT をエクスポートして Perforce depot の場所を指すようにしなければなりません。</p>
+<pre><code>$ <span class="hljs-keyword">export</span> P4PORT=<span class="hljs-keyword">public</span>.perforce.com:<span class="hljs-number">1666</span>
+</code></pre><p><code>git-p4 clone</code> コマンドを実行して Jam プロジェクトを Perforce サーバーからインポートし、depot とプロジェクトそしてプロジェクトの取り込み先のパスを指定します。</p>
+<pre><code>$ git<span class="hljs-attribute">-p4</span> clone <span class="hljs-comment">//public/jam/src@all /opt/p4import</span>
+Importing from <span class="hljs-comment">//public/jam/src@all into /opt/p4import</span>
+Reinitialized existing Git repository <span class="hljs-keyword">in</span> /opt/p4import<span class="hljs-subst">/</span><span class="hljs-built_in">.</span>git<span class="hljs-subst">/</span>
+<span class="hljs-keyword">Import</span> destination: refs/remotes/p4/master
+Importing revision <span class="hljs-number">4409</span> (<span class="hljs-number">100</span><span class="hljs-subst">%</span>)
+</code></pre><p><code>/opt/p4import</code> ディレクトリに移動して <code>git log</code> を実行すると、インポートされた内容を見ることができます。</p>
+<pre><code>$ git log -2
+<span class="hljs-operator"><span class="hljs-keyword">commit</span> <span class="hljs-number">1</span>fd4ec126171790efd2db83548b85b1bbbc07dc2
+Author: Perforce staff &lt;support@perforce.com&gt;
+<span class="hljs-keyword">Date</span>:   Thu Aug <span class="hljs-number">19</span> <span class="hljs-number">10</span>:<span class="hljs-number">18</span>:<span class="hljs-number">45</span> <span class="hljs-number">2004</span> -<span class="hljs-number">0800</span>
+
+    <span class="hljs-keyword">Drop</span> <span class="hljs-string">'rc3'</span> moniker <span class="hljs-keyword">of</span> jam-<span class="hljs-number">2.5</span>.  Folded rc2 <span class="hljs-keyword">and</span> rc3 RELNOTES <span class="hljs-keyword">into</span>
+    the main part <span class="hljs-keyword">of</span> the document.  Built new tar/zip balls.
+
+    <span class="hljs-keyword">Only</span> <span class="hljs-number">16</span> months later.
+
+    [git-p4: depot-paths = <span class="hljs-string">"//public/jam/src/"</span>: change = <span class="hljs-number">4409</span>]
+
+<span class="hljs-keyword">commit</span> ca8870db541a23ed867f38847eda65bf4363371d
+Author: Richard Geiger &lt;rmg@perforce.com&gt;
+<span class="hljs-keyword">Date</span>:   Tue Apr <span class="hljs-number">22</span> <span class="hljs-number">20</span>:<span class="hljs-number">51</span>:<span class="hljs-number">34</span> <span class="hljs-number">2003</span> -<span class="hljs-number">0800</span>
+
+    <span class="hljs-keyword">Update</span> derived jamgram.c
+
+    [git-p4: depot-paths = <span class="hljs-string">"//public/jam/src/"</span>: change = <span class="hljs-number">3108</span>]</span>
+</code></pre><p><code>git-p4</code> という識別子が各コミットに含まれることがわかるでしょう。この識別子はそのままにしておいてもかまいません。後で万一 Perforce のチェンジ番号を参照しなければならなくなったときのために使えます。しかし、もし削除したいのならここで消しておきましょう。新しいリポジトリ上で何か作業を始める前のこの段階で。<code>git filter-branch</code> を使えば、この識別子を一括削除することができます。</p>
+<pre><code>$ git filter-branch --msg-filter <span class="hljs-comment">'</span>
+        sed -e <span class="hljs-string">"/^\[git-p4:/d"</span>
+<span class="hljs-comment">'</span>
+Rewrite <span class="hljs-number">1</span>fd4ec126171790efd2db83548b85b1bbbc07dc2 (<span class="hljs-number">123</span>/<span class="hljs-number">123</span>)
+Ref <span class="hljs-comment">'refs/heads/master' was rewritten</span>
+</code></pre><p><code>git log</code> を実行すれば各コミットの SHA-1 チェックサムがすべて変わったことがわかります。そして <code>git-p4</code> 文字列はコミットメッセージから消えました。</p>
+<pre><code>$ git log -2
+<span class="hljs-operator"><span class="hljs-keyword">commit</span> <span class="hljs-number">10</span>a16d60cffca14d454a15c6164378f4082bc5b0
+Author: Perforce staff &lt;support@perforce.com&gt;
+<span class="hljs-keyword">Date</span>:   Thu Aug <span class="hljs-number">19</span> <span class="hljs-number">10</span>:<span class="hljs-number">18</span>:<span class="hljs-number">45</span> <span class="hljs-number">2004</span> -<span class="hljs-number">0800</span>
+
+    <span class="hljs-keyword">Drop</span> <span class="hljs-string">'rc3'</span> moniker <span class="hljs-keyword">of</span> jam-<span class="hljs-number">2.5</span>.  Folded rc2 <span class="hljs-keyword">and</span> rc3 RELNOTES <span class="hljs-keyword">into</span>
+    the main part <span class="hljs-keyword">of</span> the document.  Built new tar/zip balls.
+
+    <span class="hljs-keyword">Only</span> <span class="hljs-number">16</span> months later.
+
+<span class="hljs-keyword">commit</span> <span class="hljs-number">2</span>b6c6db311dd76c34c66ec1c40a49405e6b527b2
+Author: Richard Geiger &lt;rmg@perforce.com&gt;
+<span class="hljs-keyword">Date</span>:   Tue Apr <span class="hljs-number">22</span> <span class="hljs-number">20</span>:<span class="hljs-number">51</span>:<span class="hljs-number">34</span> <span class="hljs-number">2003</span> -<span class="hljs-number">0800</span>
+
+    <span class="hljs-keyword">Update</span> derived jamgram.c</span>
+</code></pre><p>これで、インポートした内容を新しい Git サーバーにプッシュする準備がととのいました。</p>
+<h2 id="-">カスタムインポーター</h2>
+<p>Subversion や Perforce 以外のシステムを使っている場合は、それ用のインポートツールを探さなければなりません。CVS、Clear Case、Visual Source Safe、あるいはアーカイブのディレクトリなどのためのツールはオンラインで公開されています。これらのツールがうまく動かなかったり手元で使っているバージョン管理ツールがもっとマイナーなものだったり、あるいはインポート処理で特殊な操作をしたりしたい場合は <code>git fast-import</code> を使います。このコマンドはシンプルな指示を標準入力から受け取って、特定の Git データを書き出します。生の Git コマンドを使ったり生のオブジェクトを書きだそうとしたりする (詳細は第 9 章を参照ください) よりもずっと簡単に Git オブジェクトを作ることができます。この方法を使えばインポートスクリプトを自作することができます。必要な情報を元のシステムから読み込み、単純な指示を標準出力に出せばよいのです。そして、このスクリプトの出力をパイプで <code>git fast-import</code> に送ります。</p>
+<p>手軽に試してみるために、シンプルなインポーターを書いてみましょう。currentで作業をしており、プロジェクトのバックアップはディレクトリまるごとのコピーで行っているものとします。バックアップディレクトリの名前は、タイムスタンプをもとに <code>back_YYYY_MM_DD</code> としています。これらを Git にインポートしてみましょう。ディレクトリの構造は、このようになっています。</p>
+<pre><code><span class="hljs-variable">$ </span>ls /opt/import_from
+back_2009_01_02
+back_2009_01_04
+back_2009_01_14
+back_2009_02_03
+current
+</code></pre><p>Git のディレクトリにインポートするにはまず、これらのデータをどのように Git に格納するかをレビューしなければなりません。Git は基本的にはコミットオブジェクトのリンクリストであり、コミットオブジェクトがコンテンツのスナップショットを指しています。<code>fast-import</code> に指示しなければならないのは、コンテンツのスナップショットが何でどのコミットデータがそれを指しているのかということと、コミットデータを取り込む順番だけです。ここでは、スナップショットをひとつずつたどって各ディレクトリの中身をさすコミットオブジェクトを作り、それらを日付順にリンクさせるものとします。</p>
+<p>第 7 章の「Git ポリシーの実施例」同様、ここでも Ruby を使って書きます。ふだんから使いなれており、きっと他の方にも読みやすいであろうからです。このサンプルをあなたの使いなれた言語で書き換えるのも簡単でしょう。単に適切な情報を標準出力に送るだけなのだから。また、Windows を使っている場合は、行末にキャリッジリターンを含めないように注意が必要です。git fast-import が想定している行末は LF だけであり、Windows で使われている CRLF は想定していません。</p>
+<p>まず最初に対象ディレクトリに移動し、コミットとしてインポートするスナップショットとしてサブディレクトリを識別します。基本的なメインループは、このようになります。</p>
+<pre><code>last_mark = nil
+
+<span class="hljs-comment"># 各ディレクトリをループ</span>
+Dir.chdir(ARGV[<span class="hljs-number">0</span>]) <span class="hljs-built_in">do</span>
+  Dir.glob(<span class="hljs-string">"*"</span>).<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |dir|
+    next <span class="hljs-keyword">if</span> File.<span class="hljs-built_in">file</span>?(dir)
+
+    <span class="hljs-comment"># 対象ディレクトリに移動</span>
+    Dir.chdir(dir) <span class="hljs-built_in">do</span>
+      last_mark = print_export(dir, last_mark)
+    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+</code></pre><p>各ディレクトリ内で実行している <code>print_export</code> は、前のスナップショットの内容とマークを受け取ってこのディレクトリの内容とマークを返します。このようにして、それぞれを適切にリンクさせます。「マーク」とは <code>fast-import</code> 用語で、コミットに対する識別子を意味します。コミットを作成するときにマークをつけ、それを使って他のコミットとリンクさせます。つまり、<code>print_export</code> メソッドで最初にやることは、ディレクトリ名からマークを生成することです。</p>
+<pre><code><span class="hljs-attribute">mark </span>=<span class="hljs-string"> convert_dir_to_mark(dir)</span>
+</code></pre><p>これを行うには、まずディレクトリの配列を作り、そのインデックスの値をマークとして使います。マークは整数値でなければならないからです。メソッドの中身はこのようになります。</p>
+<pre><code><span class="hljs-variable">$marks</span> = []
+<span class="hljs-function"><span class="hljs-keyword">def</span> </span>convert_dir_to_mark(dir)
+  <span class="hljs-keyword">if</span> !<span class="hljs-variable">$marks</span>.<span class="hljs-keyword">include</span>?(dir)
+    <span class="hljs-variable">$marks</span> &lt;&lt; dir
+  <span class="hljs-keyword">end</span>
+  (<span class="hljs-variable">$marks</span>.index(dir) + <span class="hljs-number">1</span>).to_s
+<span class="hljs-keyword">end</span>
+</code></pre><p>これで各コミットを整数値で表せるようになりました。次に必要なのは、コミットのメタデータ用の日付です。日付はディレクトリ名で表されているので、ここから取得します。<code>print_export</code> ファイルで次にすることは、これです。</p>
+<pre><code><span class="hljs-attribute">date </span>=<span class="hljs-string"> convert_dir_to_date(dir)</span>
+</code></pre><p><code>convert_dir_to_date</code> の定義は次のようになります。</p>
+<pre><code>def convert_dir_to_date(dir)
+  <span class="hljs-keyword">if</span> dir == <span class="hljs-string">'current'</span>
+    <span class="hljs-constant">return</span> Time.now().to_i
+  <span class="hljs-keyword">else</span>
+    dir = dir.gsub(<span class="hljs-string">'back_'</span>, <span class="hljs-string">''</span>)
+    (year, month, day) = dir.<span class="hljs-built_in">split</span>(<span class="hljs-string">'_'</span>)
+    <span class="hljs-constant">return</span> Time.<span class="hljs-built_in">local</span>(year, month, day).to_i
+  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+</code></pre><p>これは、各ディレクトリの日付に対応する整数値を返します。コミットのメタ情報として必要な最後の情報はコミッターのデータで、これはグローバル変数にハードコードします。</p>
+<pre><code><span class="hljs-variable">$author</span> = <span class="hljs-string">'Scott Chacon &lt;schacon@example.com&gt;'</span>
+</code></pre><p>これで、コミットのデータをインポーターに流せるようになりました。最初の情報で示しているのは、今定義しているのがコミットオブジェクトであることとどのブランチにいるのかを表す宣言です。その後に先ほど生成したマークが続き、さらにコミッターの情報とコミットメッセージが続いた後にひとつ前のコミットが (もし存在すれば) 続きます。コードはこのようになります。</p>
+<pre><code><span class="hljs-comment"># インポート情報の表示</span>
+puts <span class="hljs-string">'commit refs/heads/master'</span>
+puts <span class="hljs-string">'mark :'</span> + mark
+puts <span class="hljs-string">"committer <span class="hljs-subst">#{<span class="hljs-variable">$author</span>}</span> <span class="hljs-subst">#{date}</span> -0700"</span>
+export_data(<span class="hljs-string">'imported from '</span> + dir)
+puts <span class="hljs-string">'from :'</span> + last_mark <span class="hljs-keyword">if</span> last_mark
+</code></pre><p>タイムゾーン (-0700) をハードコードしているのは、そのほうがお手軽だったからです。別のシステムからインポートする場合は、タイムゾーンを適切に指定しなければなりません。コミットメッセージは、次のような特殊な書式にする必要があります。</p>
+<pre><code><span class="hljs-typedef"><span class="hljs-keyword">data</span> <span class="hljs-container">(<span class="hljs-title">size</span>)</span>\n<span class="hljs-container">(<span class="hljs-title">contents</span>)</span></span>
+</code></pre><p>まず最初に「data」という単語、そして読み込むデータのサイズ、改行、最後にデータがきます。同じ書式は後でファイルのコンテンツを指定するときにも使うので、ヘルパーメソッド <code>export_data</code> を作ります。</p>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> </span>export_data(string)
+  print <span class="hljs-string">"data <span class="hljs-subst">#{string.size}</span>\n<span class="hljs-subst">#{string}</span>"</span>
+<span class="hljs-keyword">end</span>
+</code></pre><p>残っているのは、各スナップショットが持つファイルのコンテンツを指定することです。今回の場合はどれも一つのディレクトリにまとまっているので簡単です。<code>deleteall</code> コマンドを表示し、それに続けてディレクトリ内の各ファイルの中身を表示すればよいのです。そうすれば、Git が各スナップショットを適切に記録します。</p>
+<pre><code>puts <span class="hljs-string">'deleteall'</span>
+Dir.glob(<span class="hljs-string">"**/*"</span>).<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |<span class="hljs-built_in">file</span>|
+  next <span class="hljs-keyword">if</span> !File.<span class="hljs-built_in">file</span>?(<span class="hljs-built_in">file</span>)
+  inline_data(<span class="hljs-built_in">file</span>)
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+</code></pre><p>注意:    多くのシステムではリビジョンを「あるコミットと別のコミットの差分」と考えているので、fast-importでもその形式でコマンドを受け取ることができます。つまりコミットを指定するときに、追加/削除/変更されたファイルと新しいコンテンツの中身で指定できるということです。各スナップショットの差分を算出してそのデータだけを渡すこともできますが、処理が複雑になります。すべてのデータを渡して、Git に差分を算出させたほうがよいでしょう。もし差分を渡すほうが手元のデータに適しているようなら、<code>fast-import</code> のマニュアルで詳細な方法を調べましょう。</p>
+<p>新しいファイルの内容、あるいは変更されたファイルと変更後の内容を表す書式は次のようになります。</p>
+<pre><code>M <span class="hljs-number">644</span> <span class="hljs-keyword">inline</span> path/<span class="hljs-keyword">to</span>/<span class="hljs-keyword">file</span>
+data (size)
+(<span class="hljs-keyword">file</span> contents)
+</code></pre><p>この 644 はモード (実行可能ファイルがある場合は、そのファイルについては 755 を指定する必要があります) を表し、inline とはファイルの内容をこの次の行に続けて指定するという意味です。<code>inline_data</code> メソッドは、このようになります。</p>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> </span>inline_data(file, code = <span class="hljs-string">'M'</span>, mode = <span class="hljs-string">'644'</span>)
+  content = <span class="hljs-constant">File</span>.read(file)
+  puts <span class="hljs-string">"<span class="hljs-subst">#{code}</span> <span class="hljs-subst">#{mode}</span> inline <span class="hljs-subst">#{file}</span>"</span>
+  export_data(content)
+<span class="hljs-keyword">end</span>
+</code></pre><p>先ほど定義した <code>export_data</code> メソッドを再利用することができます。この書式はコミットメッセージの書式と同じだからです。</p>
+<p>最後に必要となるのは、現在のマークを返して次の処理に渡せるようにすることです。</p>
+<pre><code><span class="hljs-keyword">return</span> mark
+</code></pre><p>注意: Windows 上で動かす場合はさらにもう一手間必要です。先述したように、Windows の改行文字は CRLF ですが git fast-import は LF にしか対応していません。この問題に対応して git fast-import をうまく動作させるには、CRLF ではなく LF を使うよう ruby に指示しなければなりません。</p>
+<pre><code><span class="hljs-variable">$stdout</span>.<span class="hljs-keyword">binmode</span>
+</code></pre><p>これで終わりです。このスクリプトを実行すれば、次のような結果が得られます。</p>
+<pre><code>$ ruby import.rb /opt/import_from
+commit refs/heads/master
+mark :<span class="hljs-number">1</span>
+committer Scott Chacon &lt;schacon@geemail.com&gt; <span class="hljs-number">1230883200</span> -<span class="hljs-number">0700</span>
+data <span class="hljs-number">29</span>
+imported <span class="hljs-built_in">from</span> back_2009_01_02deleteall
+M <span class="hljs-number">644</span> inline <span class="hljs-built_in">file</span>.rb
+data <span class="hljs-number">12</span>
+<span class="hljs-built_in">version</span> <span class="hljs-constant">two</span>
+commit refs/heads/master
+mark :<span class="hljs-number">2</span>
+committer Scott Chacon &lt;schacon@geemail.com&gt; <span class="hljs-number">1231056000</span> -<span class="hljs-number">0700</span>
+data <span class="hljs-number">29</span>
+imported <span class="hljs-built_in">from</span> back_2009_01_04from :<span class="hljs-number">1</span>
+deleteall
+M <span class="hljs-number">644</span> inline <span class="hljs-built_in">file</span>.rb
+data <span class="hljs-number">14</span>
+<span class="hljs-built_in">version</span> <span class="hljs-constant">three</span>
+M <span class="hljs-number">644</span> inline <span class="hljs-built_in">new</span>.rb
+data <span class="hljs-number">16</span>
+<span class="hljs-built_in">new</span> <span class="hljs-built_in">version</span> <span class="hljs-constant">one</span>
+(...)
+</code></pre><p>インポーターを動かすには、インポート先の Git レポジトリにおいて､インポーターの出力をパイプで <code>git fast-import</code> に渡す必要があります。インポート先に新しいディレクトリを作成したら､以下のように <code>git init</code> を実行し、そしてスクリプトを実行してみましょう｡</p>
+<pre><code>$ git init
+Initialized empty Git repository in /opt/import<span class="hljs-emphasis">_to/.git/
+$ ruby import.rb /opt/import_</span>from | git fast-import
+<span class="hljs-header">git-fast-import statistics:
+---------------------------------------------------------------------</span>
+Alloc'd objects:       5000
+Total objects:           18 (         1 duplicates                  )
+<span class="hljs-code">      blobs  :            7 (         1 duplicates          0 deltas)</span>
+<span class="hljs-code">      trees  :            6 (         0 duplicates          1 deltas)</span>
+<span class="hljs-code">      commits:            5 (         0 duplicates          0 deltas)</span>
+<span class="hljs-code">      tags   :            0 (         0 duplicates          0 deltas)</span>
+Total branches:           1 (         1 loads     )
+<span class="hljs-code">      marks:           1024 (         5 unique    )</span>
+<span class="hljs-code">      atoms:              3</span>
+Memory total:          2255 KiB
+<span class="hljs-code">       pools:          2098 KiB</span>
+<span class="hljs-header">     objects:           156 KiB
+---------------------------------------------------------------------</span>
+pack<span class="hljs-emphasis">_report: getpagesize()            =       4096
+pack_</span>report: core.packedGitWindowSize =   33554432
+pack<span class="hljs-emphasis">_report: core.packedGitLimit      =  268435456
+pack_</span>report: pack<span class="hljs-emphasis">_used_</span>ctr            =          9
+pack<span class="hljs-emphasis">_report: pack_</span>mmap<span class="hljs-emphasis">_calls          =          5
+pack_</span>report: pack<span class="hljs-emphasis">_open_</span>windows        =          1 /          1
+<span class="hljs-header">pack_report: pack_mapped              =       1356 /       1356
+---------------------------------------------------------------------</span>
+</code></pre><p>ご覧のとおり、処理が正常に完了すると、処理内容に関する統計情報が表示されます。この場合は、全部で 18 のオブジェクトからなる 5 つのコミットが 1 つのブランチにインポートされたことがわかります。では、<code>git log</code> で新しい歴史を確認しましょう。</p>
+<pre><code>$ git log -2
+<span class="hljs-operator"><span class="hljs-keyword">commit</span> <span class="hljs-number">10</span>bfe7d22ce15ee25b60a824c8982157ca593d41
+Author: Scott Chacon &lt;schacon@example.com&gt;
+<span class="hljs-keyword">Date</span>:   Sun May <span class="hljs-number">3</span> <span class="hljs-number">12</span>:<span class="hljs-number">57</span>:<span class="hljs-number">39</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    imported <span class="hljs-keyword">from</span> <span class="hljs-keyword">current</span>
+
+<span class="hljs-keyword">commit</span> <span class="hljs-number">7e519590</span>de754d079dd73b44d695a42c9d2df452
+Author: Scott Chacon &lt;schacon@example.com&gt;
+<span class="hljs-keyword">Date</span>:   Tue Feb <span class="hljs-number">3</span> <span class="hljs-number">01</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    imported <span class="hljs-keyword">from</span> back_2009_02_03</span>
+</code></pre><p>きれいな Git リポジトリができていますね。ここで重要なのは、この時点ではまだ何もチェックアウトされていないということです。作業ディレクトリには何もファイルがありません。ファイルを取得するには、ブランチをリセットして <code>master</code> の現在の状態にしなければなりません。</p>
+<pre><code>$ ls
+$ git reset <span class="hljs-comment">--hard master</span>
+HEAD <span class="hljs-keyword">is</span> now <span class="hljs-keyword">at</span> <span class="hljs-number">10</span>bfe7d imported <span class="hljs-keyword">from</span> current
+$ ls
+<span class="hljs-type">file</span>.rb  lib
+</code></pre><p><code>fast-import</code> ツールにはさらに多くの機能があります。さまざまなモードを処理したりバイナリデータを扱ったり、複数のブランチやそのマージ、タグ、進捗状況表示などです。より複雑なシナリオのサンプルは Git のソースコードの <code>contrib/fast-import</code> ディレクトリにあります。先ほど取り上げた <code>git-p4</code> スクリプトがよい例となるでしょう。</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git/git__subversion.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git/.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

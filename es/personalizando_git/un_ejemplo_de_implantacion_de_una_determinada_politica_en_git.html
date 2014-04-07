@@ -1,0 +1,1114 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Un ejemplo de implantación de una determinada política en Git | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../personalizando_git/recapitulacion.html" />
+        
+        
+        <link rel="prev" href="../personalizando_git/puntos_de_enganche_git.html" />
+        
+
+        <meta property="og:title" content="Un ejemplo de implantación de una determinada política en Git | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="1.4" data-basepath=".." data-revision="1396895622261">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/personalizando_git/un_ejemplo_de_implantacion_de_una_determinada_politica_en_git.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="personalizando_git/README.html">
+                
+                <a href="../personalizando_git/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Personalizando Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="personalizando_git/configuracion_de_git.html">
+                            
+                            <a href="../personalizando_git/configuracion_de_git.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Configuración de Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="personalizando_git/atributos_de_git.html">
+                            
+                            <a href="../personalizando_git/atributos_de_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Atributos de Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="personalizando_git/puntos_de_enganche_git.html">
+                            
+                            <a href="../personalizando_git/puntos_de_enganche_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Puntos de enganche Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="personalizando_git/un_ejemplo_de_implantacion_de_una_determinada_politica_en_git.html">
+                            
+                            <a href="../personalizando_git/un_ejemplo_de_implantacion_de_una_determinada_politica_en_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Un ejemplo de implantación de una determinada política en Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="personalizando_git/recapitulacion.html">
+                            
+                            <a href="../personalizando_git/recapitulacion.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Recapitulación
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="empezando/README.html">
+                
+                <a href="../empezando/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Empezando
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="empezando/acerca_del_control_de_versiones.html">
+                            
+                            <a href="../empezando/acerca_del_control_de_versiones.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Acerca del control de versiones
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="empezando/una_breve_historia_de_git.html">
+                            
+                            <a href="../empezando/una_breve_historia_de_git.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Una breve historia de Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="empezando/fundamentos_de_git.html">
+                            
+                            <a href="../empezando/fundamentos_de_git.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Fundamentos de Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="empezando/instalando_git.html">
+                            
+                            <a href="../empezando/instalando_git.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Instalando Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="empezando/configurando_git_por_primera_vez.html">
+                            
+                            <a href="../empezando/configurando_git_por_primera_vez.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Configurando Git por primera vez
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="empezando/obteniendo_ayuda.html">
+                            
+                            <a href="../empezando/obteniendo_ayuda.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Obteniendo ayuda
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="empezando/resumen.html">
+                            
+                            <a href="../empezando/resumen.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Resumen
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="ramificaciones_en_git/README.html">
+                
+                <a href="../ramificaciones_en_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Ramificaciones en Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="ramificaciones_en_git/que_es_una_rama.html">
+                            
+                            <a href="../ramificaciones_en_git/que_es_una_rama.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> ¿Qué es una rama?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="ramificaciones_en_git/procedimientos_basicos_para_ramificar_y_fusionar.html">
+                            
+                            <a href="../ramificaciones_en_git/procedimientos_basicos_para_ramificar_y_fusionar.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Procedimientos básicos para ramificar y fusionar
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="ramificaciones_en_git/gestion_de_ramificaciones.html">
+                            
+                            <a href="../ramificaciones_en_git/gestion_de_ramificaciones.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Gestión de ramificaciones
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="ramificaciones_en_git/flujos_de_trabajo_ramificados.html">
+                            
+                            <a href="../ramificaciones_en_git/flujos_de_trabajo_ramificados.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Flujos de trabajo ramificados
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="ramificaciones_en_git/ramas_remotas.html">
+                            
+                            <a href="../ramificaciones_en_git/ramas_remotas.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Ramas Remotas
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="ramificaciones_en_git/reorganizando_el_trabajo_realizado.html">
+                            
+                            <a href="../ramificaciones_en_git/reorganizando_el_trabajo_realizado.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Reorganizando el trabajo realizado
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="ramificaciones_en_git/recapitulacion.html">
+                            
+                            <a href="../ramificaciones_en_git/recapitulacion.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Recapitulación
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_en_un_servidor/README.html">
+                
+                <a href="../git_en_un_servidor/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git en un servidor
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_en_un_servidor/los_protocolos.html">
+                            
+                            <a href="../git_en_un_servidor/los_protocolos.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Los Protocolos
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_en_un_servidor/poniendo_git_en_un_servidor.html">
+                            
+                            <a href="../git_en_un_servidor/poniendo_git_en_un_servidor.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Poniendo Git en un Servidor
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_en_un_servidor/generando_tu_clave_publica_ssh.html">
+                            
+                            <a href="../git_en_un_servidor/generando_tu_clave_publica_ssh.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Generando tu clave pública SSH
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_en_un_servidor/preparando_el_servidor.html">
+                            
+                            <a href="../git_en_un_servidor/preparando_el_servidor.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Preparando el servidor
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_en_un_servidor/acceso_publico.html">
+                            
+                            <a href="../git_en_un_servidor/acceso_publico.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Acceso público
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_en_un_servidor/gitweb.html">
+                            
+                            <a href="../git_en_un_servidor/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_en_un_servidor/gitosis.html">
+                            
+                            <a href="../git_en_un_servidor/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_en_un_servidor/el_demonio_git.html">
+                            
+                            <a href="../git_en_un_servidor/el_demonio_git.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> El demonio Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_en_un_servidor/git_en_un_alojamiento_externo.html">
+                            
+                            <a href="../git_en_un_servidor/git_en_un_alojamiento_externo.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git en un alojamiento externo
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_en_un_servidor/recapitulacion.html">
+                            
+                            <a href="../git_en_un_servidor/recapitulacion.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Recapitulación
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="git_en_entornos_distribuidos/README.html">
+                
+                <a href="../git_en_entornos_distribuidos/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Git en entornos distribuidos
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="git_en_entornos_distribuidos/flujos_de_trabajo_distribuidos.html">
+                            
+                            <a href="../git_en_entornos_distribuidos/flujos_de_trabajo_distribuidos.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Flujos de trabajo distribuidos
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="git_en_entornos_distribuidos/contribuyendo_a_un_proyecto.html">
+                            
+                            <a href="../git_en_entornos_distribuidos/contribuyendo_a_un_proyecto.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Contribuyendo a un proyecto
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="git_en_entornos_distribuidos/gestionando_un_proyecto.html">
+                            
+                            <a href="../git_en_entornos_distribuidos/gestionando_un_proyecto.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Gestionando un proyecto
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="git_en_entornos_distribuidos/recapitulacion.html">
+                            
+                            <a href="../git_en_entornos_distribuidos/recapitulacion.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Recapitulación
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="las_herramientas_de_git/README.html">
+                
+                <a href="../las_herramientas_de_git/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Las herramientas de Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="las_herramientas_de_git/seleccion_de_confirmaciones_de_cambios_concretas.html">
+                            
+                            <a href="../las_herramientas_de_git/seleccion_de_confirmaciones_de_cambios_concretas.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Selección de confirmaciones de cambios concretas
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="las_herramientas_de_git/preparacion_interactiva.html">
+                            
+                            <a href="../las_herramientas_de_git/preparacion_interactiva.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Preparación interactiva
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="las_herramientas_de_git/guardado_rapido_provisional.html">
+                            
+                            <a href="../las_herramientas_de_git/guardado_rapido_provisional.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Guardado rápido provisional
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="las_herramientas_de_git/reescribiendo_la_historia.html">
+                            
+                            <a href="../las_herramientas_de_git/reescribiendo_la_historia.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Reescribiendo la historia
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="las_herramientas_de_git/depuracion_con_git.html">
+                            
+                            <a href="../las_herramientas_de_git/depuracion_con_git.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Depuración con Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="las_herramientas_de_git/submodulos.html">
+                            
+                            <a href="../las_herramientas_de_git/submodulos.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Submódulos
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="las_herramientas_de_git/fusion_de_subarboles.html">
+                            
+                            <a href="../las_herramientas_de_git/fusion_de_subarboles.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Fusión de subárboles
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="las_herramientas_de_git/recapitulacion.html">
+                            
+                            <a href="../las_herramientas_de_git/recapitulacion.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Recapitulación
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="fundamentos_de_git/README.html">
+                
+                <a href="../fundamentos_de_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Fundamentos de Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="fundamentos_de_git/obteniendo_un_repositorio_git.html">
+                            
+                            <a href="../fundamentos_de_git/obteniendo_un_repositorio_git.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Obteniendo un repositorio Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="fundamentos_de_git/guardando_cambios_en_el_repositorio.html">
+                            
+                            <a href="../fundamentos_de_git/guardando_cambios_en_el_repositorio.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Guardando cambios en el repositorio
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="fundamentos_de_git/viendo_el_historico_de_confirmaciones.html">
+                            
+                            <a href="../fundamentos_de_git/viendo_el_historico_de_confirmaciones.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Viendo el histórico de confirmaciones
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="fundamentos_de_git/deshaciendo_cosas.html">
+                            
+                            <a href="../fundamentos_de_git/deshaciendo_cosas.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Deshaciendo cosas
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="fundamentos_de_git/trabajando_con_repositorios_remotos.html">
+                            
+                            <a href="../fundamentos_de_git/trabajando_con_repositorios_remotos.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Trabajando con repositorios remotos
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.6" data-path="fundamentos_de_git/creando_etiquetas.html">
+                            
+                            <a href="../fundamentos_de_git/creando_etiquetas.html">
+                                <i class="fa fa-check"></i> <b>7.6)</b> Creando etiquetas
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.7" data-path="fundamentos_de_git/consejos_y_trucos.html">
+                            
+                            <a href="../fundamentos_de_git/consejos_y_trucos.html">
+                                <i class="fa fa-check"></i> <b>7.7)</b> Consejos y trucos
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.8" data-path="fundamentos_de_git/resumen.html">
+                            
+                            <a href="../fundamentos_de_git/resumen.html">
+                                <i class="fa fa-check"></i> <b>7.8)</b> Resumen
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_y_otros_sistemas/README.html">
+                
+                <a href="../git_y_otros_sistemas/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git y Otros Sistemas
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_y_otros_sistemas/git_y_subversion.html">
+                            
+                            <a href="../git_y_otros_sistemas/git_y_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git y Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_y_otros_sistemas/migrating_to_git.html">
+                            
+                            <a href="../git_y_otros_sistemas/migrating_to_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Migrating to Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_y_otros_sistemas/summary.html">
+                            
+                            <a href="../git_y_otros_sistemas/summary.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="los_entresijos_internos_de_git/README.html">
+                
+                <a href="../los_entresijos_internos_de_git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Los entresijos internos de Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="los_entresijos_internos_de_git/fontaneria_y_porcelana.html">
+                            
+                            <a href="../los_entresijos_internos_de_git/fontaneria_y_porcelana.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Fontaneria y porcelana
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="los_entresijos_internos_de_git/los_objetos_git.html">
+                            
+                            <a href="../los_entresijos_internos_de_git/los_objetos_git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Los objetos Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="los_entresijos_internos_de_git/referencias_git.html">
+                            
+                            <a href="../los_entresijos_internos_de_git/referencias_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Referencias Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="los_entresijos_internos_de_git/archivos_empaquetadores.html">
+                            
+                            <a href="../los_entresijos_internos_de_git/archivos_empaquetadores.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Archivos empaquetadores
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="los_entresijos_internos_de_git/las_especificaciones_para_hacer_referencia_a__refspec.html">
+                            
+                            <a href="../los_entresijos_internos_de_git/las_especificaciones_para_hacer_referencia_a__refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Las especificaciones para hacer referencia a...  (refspec)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="los_entresijos_internos_de_git/protocolos_de_transferencia.html">
+                            
+                            <a href="../los_entresijos_internos_de_git/protocolos_de_transferencia.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Protocolos de transferencia
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="los_entresijos_internos_de_git/mantenimiento_y_recuperacion_de_datos.html">
+                            
+                            <a href="../los_entresijos_internos_de_git/mantenimiento_y_recuperacion_de_datos.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Mantenimiento y recuperación de datos
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="los_entresijos_internos_de_git/recapitulacion.html">
+                            
+                            <a href="../los_entresijos_internos_de_git/recapitulacion.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Recapitulación
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 7.246376811594203%;min-width: 5.797101449275362%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../personalizando_git/README.html" title="Personalizando Git" class="chapter done new-chapter" data-progress="1" style="left: 1.4492753623188406%;"></a>
+    
+        <a href="../personalizando_git/configuracion_de_git.html" title="Configuración de Git" class="chapter done " data-progress="1.1" style="left: 2.898550724637681%;"></a>
+    
+        <a href="../personalizando_git/atributos_de_git.html" title="Atributos de Git" class="chapter done " data-progress="1.2" style="left: 4.3478260869565215%;"></a>
+    
+        <a href="../personalizando_git/puntos_de_enganche_git.html" title="Puntos de enganche Git" class="chapter done " data-progress="1.3" style="left: 5.797101449275362%;"></a>
+    
+        <a href="../personalizando_git/un_ejemplo_de_implantacion_de_una_determinada_politica_en_git.html" title="Un ejemplo de implantación de una determinada política en Git" class="chapter done " data-progress="1.4" style="left: 7.246376811594203%;"></a>
+    
+        <a href="../personalizando_git/recapitulacion.html" title="Recapitulación" class="chapter  " data-progress="1.5" style="left: 8.695652173913043%;"></a>
+    
+        <a href="../empezando/README.html" title="Empezando" class="chapter  new-chapter" data-progress="2" style="left: 10.144927536231885%;"></a>
+    
+        <a href="../empezando/acerca_del_control_de_versiones.html" title="Acerca del control de versiones" class="chapter  " data-progress="2.1" style="left: 11.594202898550725%;"></a>
+    
+        <a href="../empezando/una_breve_historia_de_git.html" title="Una breve historia de Git" class="chapter  " data-progress="2.2" style="left: 13.043478260869565%;"></a>
+    
+        <a href="../empezando/fundamentos_de_git.html" title="Fundamentos de Git" class="chapter  " data-progress="2.3" style="left: 14.492753623188406%;"></a>
+    
+        <a href="../empezando/instalando_git.html" title="Instalando Git" class="chapter  " data-progress="2.4" style="left: 15.942028985507246%;"></a>
+    
+        <a href="../empezando/configurando_git_por_primera_vez.html" title="Configurando Git por primera vez" class="chapter  " data-progress="2.5" style="left: 17.391304347826086%;"></a>
+    
+        <a href="../empezando/obteniendo_ayuda.html" title="Obteniendo ayuda" class="chapter  " data-progress="2.6" style="left: 18.840579710144926%;"></a>
+    
+        <a href="../empezando/resumen.html" title="Resumen" class="chapter  " data-progress="2.7" style="left: 20.28985507246377%;"></a>
+    
+        <a href="../ramificaciones_en_git/README.html" title="Ramificaciones en Git" class="chapter  new-chapter" data-progress="3" style="left: 21.73913043478261%;"></a>
+    
+        <a href="../ramificaciones_en_git/que_es_una_rama.html" title="¿Qué es una rama?" class="chapter  " data-progress="3.1" style="left: 23.18840579710145%;"></a>
+    
+        <a href="../ramificaciones_en_git/procedimientos_basicos_para_ramificar_y_fusionar.html" title="Procedimientos básicos para ramificar y fusionar" class="chapter  " data-progress="3.2" style="left: 24.63768115942029%;"></a>
+    
+        <a href="../ramificaciones_en_git/gestion_de_ramificaciones.html" title="Gestión de ramificaciones" class="chapter  " data-progress="3.3" style="left: 26.08695652173913%;"></a>
+    
+        <a href="../ramificaciones_en_git/flujos_de_trabajo_ramificados.html" title="Flujos de trabajo ramificados" class="chapter  " data-progress="3.4" style="left: 27.536231884057973%;"></a>
+    
+        <a href="../ramificaciones_en_git/ramas_remotas.html" title="Ramas Remotas" class="chapter  " data-progress="3.5" style="left: 28.985507246376812%;"></a>
+    
+        <a href="../ramificaciones_en_git/reorganizando_el_trabajo_realizado.html" title="Reorganizando el trabajo realizado" class="chapter  " data-progress="3.6" style="left: 30.434782608695652%;"></a>
+    
+        <a href="../ramificaciones_en_git/recapitulacion.html" title="Recapitulación" class="chapter  " data-progress="3.7" style="left: 31.884057971014492%;"></a>
+    
+        <a href="../git_en_un_servidor/README.html" title="Git en un servidor" class="chapter  new-chapter" data-progress="4" style="left: 33.333333333333336%;"></a>
+    
+        <a href="../git_en_un_servidor/los_protocolos.html" title="Los Protocolos" class="chapter  " data-progress="4.1" style="left: 34.78260869565217%;"></a>
+    
+        <a href="../git_en_un_servidor/recapitulacion.html" title="Recapitulación" class="chapter  " data-progress="4.10" style="left: 36.231884057971016%;"></a>
+    
+        <a href="../git_en_un_servidor/poniendo_git_en_un_servidor.html" title="Poniendo Git en un Servidor" class="chapter  " data-progress="4.2" style="left: 37.68115942028985%;"></a>
+    
+        <a href="../git_en_un_servidor/generando_tu_clave_publica_ssh.html" title="Generando tu clave pública SSH" class="chapter  " data-progress="4.3" style="left: 39.130434782608695%;"></a>
+    
+        <a href="../git_en_un_servidor/preparando_el_servidor.html" title="Preparando el servidor" class="chapter  " data-progress="4.4" style="left: 40.57971014492754%;"></a>
+    
+        <a href="../git_en_un_servidor/acceso_publico.html" title="Acceso público" class="chapter  " data-progress="4.5" style="left: 42.028985507246375%;"></a>
+    
+        <a href="../git_en_un_servidor/gitweb.html" title="GitWeb" class="chapter  " data-progress="4.6" style="left: 43.47826086956522%;"></a>
+    
+        <a href="../git_en_un_servidor/gitosis.html" title="Gitosis" class="chapter  " data-progress="4.7" style="left: 44.927536231884055%;"></a>
+    
+        <a href="../git_en_un_servidor/el_demonio_git.html" title="El demonio Git" class="chapter  " data-progress="4.8" style="left: 46.3768115942029%;"></a>
+    
+        <a href="../git_en_un_servidor/git_en_un_alojamiento_externo.html" title="Git en un alojamiento externo" class="chapter  " data-progress="4.9" style="left: 47.82608695652174%;"></a>
+    
+        <a href="../git_en_entornos_distribuidos/README.html" title="Git en entornos distribuidos" class="chapter  new-chapter" data-progress="5" style="left: 49.27536231884058%;"></a>
+    
+        <a href="../git_en_entornos_distribuidos/flujos_de_trabajo_distribuidos.html" title="Flujos de trabajo distribuidos" class="chapter  " data-progress="5.1" style="left: 50.72463768115942%;"></a>
+    
+        <a href="../git_en_entornos_distribuidos/contribuyendo_a_un_proyecto.html" title="Contribuyendo a un proyecto" class="chapter  " data-progress="5.2" style="left: 52.17391304347826%;"></a>
+    
+        <a href="../git_en_entornos_distribuidos/gestionando_un_proyecto.html" title="Gestionando un proyecto" class="chapter  " data-progress="5.3" style="left: 53.6231884057971%;"></a>
+    
+        <a href="../git_en_entornos_distribuidos/recapitulacion.html" title="Recapitulación" class="chapter  " data-progress="5.4" style="left: 55.072463768115945%;"></a>
+    
+        <a href="../las_herramientas_de_git/README.html" title="Las herramientas de Git" class="chapter  new-chapter" data-progress="6" style="left: 56.52173913043478%;"></a>
+    
+        <a href="../las_herramientas_de_git/seleccion_de_confirmaciones_de_cambios_concretas.html" title="Selección de confirmaciones de cambios concretas" class="chapter  " data-progress="6.1" style="left: 57.971014492753625%;"></a>
+    
+        <a href="../las_herramientas_de_git/preparacion_interactiva.html" title="Preparación interactiva" class="chapter  " data-progress="6.2" style="left: 59.42028985507246%;"></a>
+    
+        <a href="../las_herramientas_de_git/guardado_rapido_provisional.html" title="Guardado rápido provisional" class="chapter  " data-progress="6.3" style="left: 60.869565217391305%;"></a>
+    
+        <a href="../las_herramientas_de_git/reescribiendo_la_historia.html" title="Reescribiendo la historia" class="chapter  " data-progress="6.4" style="left: 62.31884057971015%;"></a>
+    
+        <a href="../las_herramientas_de_git/depuracion_con_git.html" title="Depuración con Git" class="chapter  " data-progress="6.5" style="left: 63.768115942028984%;"></a>
+    
+        <a href="../las_herramientas_de_git/submodulos.html" title="Submódulos" class="chapter  " data-progress="6.6" style="left: 65.21739130434783%;"></a>
+    
+        <a href="../las_herramientas_de_git/fusion_de_subarboles.html" title="Fusión de subárboles" class="chapter  " data-progress="6.7" style="left: 66.66666666666667%;"></a>
+    
+        <a href="../las_herramientas_de_git/recapitulacion.html" title="Recapitulación" class="chapter  " data-progress="6.8" style="left: 68.1159420289855%;"></a>
+    
+        <a href="../fundamentos_de_git/README.html" title="Fundamentos de Git" class="chapter  new-chapter" data-progress="7" style="left: 69.56521739130434%;"></a>
+    
+        <a href="../fundamentos_de_git/obteniendo_un_repositorio_git.html" title="Obteniendo un repositorio Git" class="chapter  " data-progress="7.1" style="left: 71.01449275362319%;"></a>
+    
+        <a href="../fundamentos_de_git/guardando_cambios_en_el_repositorio.html" title="Guardando cambios en el repositorio" class="chapter  " data-progress="7.2" style="left: 72.46376811594203%;"></a>
+    
+        <a href="../fundamentos_de_git/viendo_el_historico_de_confirmaciones.html" title="Viendo el histórico de confirmaciones" class="chapter  " data-progress="7.3" style="left: 73.91304347826087%;"></a>
+    
+        <a href="../fundamentos_de_git/deshaciendo_cosas.html" title="Deshaciendo cosas" class="chapter  " data-progress="7.4" style="left: 75.3623188405797%;"></a>
+    
+        <a href="../fundamentos_de_git/trabajando_con_repositorios_remotos.html" title="Trabajando con repositorios remotos" class="chapter  " data-progress="7.5" style="left: 76.81159420289855%;"></a>
+    
+        <a href="../fundamentos_de_git/creando_etiquetas.html" title="Creando etiquetas" class="chapter  " data-progress="7.6" style="left: 78.26086956521739%;"></a>
+    
+        <a href="../fundamentos_de_git/consejos_y_trucos.html" title="Consejos y trucos" class="chapter  " data-progress="7.7" style="left: 79.71014492753623%;"></a>
+    
+        <a href="../fundamentos_de_git/resumen.html" title="Resumen" class="chapter  " data-progress="7.8" style="left: 81.15942028985508%;"></a>
+    
+        <a href="../git_y_otros_sistemas/README.html" title="Git y Otros Sistemas" class="chapter  new-chapter" data-progress="8" style="left: 82.6086956521739%;"></a>
+    
+        <a href="../git_y_otros_sistemas/git_y_subversion.html" title="Git y Subversion" class="chapter  " data-progress="8.1" style="left: 84.05797101449275%;"></a>
+    
+        <a href="../git_y_otros_sistemas/migrating_to_git.html" title="Migrating to Git" class="chapter  " data-progress="8.2" style="left: 85.5072463768116%;"></a>
+    
+        <a href="../git_y_otros_sistemas/summary.html" title="Summary" class="chapter  " data-progress="8.3" style="left: 86.95652173913044%;"></a>
+    
+        <a href="../los_entresijos_internos_de_git/README.html" title="Los entresijos internos de Git" class="chapter  new-chapter" data-progress="9" style="left: 88.40579710144928%;"></a>
+    
+        <a href="../los_entresijos_internos_de_git/fontaneria_y_porcelana.html" title="Fontaneria y porcelana" class="chapter  " data-progress="9.1" style="left: 89.85507246376811%;"></a>
+    
+        <a href="../los_entresijos_internos_de_git/los_objetos_git.html" title="Los objetos Git" class="chapter  " data-progress="9.2" style="left: 91.30434782608695%;"></a>
+    
+        <a href="../los_entresijos_internos_de_git/referencias_git.html" title="Referencias Git" class="chapter  " data-progress="9.3" style="left: 92.7536231884058%;"></a>
+    
+        <a href="../los_entresijos_internos_de_git/archivos_empaquetadores.html" title="Archivos empaquetadores" class="chapter  " data-progress="9.4" style="left: 94.20289855072464%;"></a>
+    
+        <a href="../los_entresijos_internos_de_git/las_especificaciones_para_hacer_referencia_a__refspec.html" title="Las especificaciones para hacer referencia a...  (refspec)" class="chapter  " data-progress="9.5" style="left: 95.65217391304348%;"></a>
+    
+        <a href="../los_entresijos_internos_de_git/protocolos_de_transferencia.html" title="Protocolos de transferencia" class="chapter  " data-progress="9.6" style="left: 97.10144927536231%;"></a>
+    
+        <a href="../los_entresijos_internos_de_git/mantenimiento_y_recuperacion_de_datos.html" title="Mantenimiento y recuperación de datos" class="chapter  " data-progress="9.7" style="left: 98.55072463768116%;"></a>
+    
+        <a href="../los_entresijos_internos_de_git/recapitulacion.html" title="Recapitulación" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_521">
+                    
+                        <h1 id="un-ejemplo-de-implantaci-n-de-una-determinada-pol-tica-en-git">Un ejemplo de implantación de una determinada política en Git</h1>
+<p>En esta sección, utilizarás lo aprendido para establecer un flujo de trabajo en Git que: compruebe si los mensajes de confirmación de cambios encajan en un determinado formato, obligue a realizar solo envios de avance directo, y permita solo a ciertos usuarios modificar ciertas carpetas del proyecto. Para ello, has de preparar los correspondientes scripts de cliente (para ayudar a los desarrolladores a saber de antemano si sus envios van a ser rechazados o no), y los correspondientes scripts de servidor (para obligar a cumplir esas políticas).</p>
+<p>He usado Ruby para escribir los ejemplos, tanto porque es mi lenguaje preferido de scripting y porque creo que es el más parecido a pseudocódigo; de tal forma que puedas ser capaz de seguir el código, incluso si no conoces Ruby. Pero, puede ser igualmente válido cualquier otro lenguaje. Todos los script de ejemplo que vienen de serie con Git están escritos en Perl o en Bash shell, por lo que tienes bastantes ejemplos en esos lenguajes de scripting.</p>
+<h2 id="punto-de-enganche-en-el-lado-servidor">Punto de enganche en el lado servidor</h2>
+<p>Todo el trabajo del lado servidor va en el script &#39;update&#39; de la carpeta &#39;hooks&#39;. El script &#39;update&#39; se lanza una vez por cada rama que se envia (push) al servidor; y recibe la referencia de la rama a la que se envia, la antigua revisión en que estaba la rama y la nueva revisión que se está enviando. También puedes tener acceso al usuario que está enviando, si este los envia a través de SSH. Si has permitido a cualquiera conectarse con un mismo usuario (como &quot;git&quot;, por ejemplo), has tenido que dar a dicho usuario una envoltura (shell wraper) que te permite determinar cual es el usuario que se conecta según sea su clave pública, permitiendote fijar una variable de entorno especificando dicho usuario. Aqui, asumiremos que el usuario conectado queda reflejado en la variable de entorno &#39;$USER&#39;, de tal forma que el script &#39;update&#39; comienza recogiendo toda la información que necesitas:</p>
+<pre><code><span class="hljs-comment">#!/usr/bin/env ruby#!/usr/bin/env ruby#!/usr/bin/env ruby</span>
+
+<span class="hljs-variable">$refname</span> = <span class="hljs-constant">ARGV</span>[<span class="hljs-number">0</span>]
+<span class="hljs-variable">$oldrev</span>  = <span class="hljs-constant">ARGV</span>[<span class="hljs-number">1</span>]
+<span class="hljs-variable">$newrev</span>  = <span class="hljs-constant">ARGV</span>[<span class="hljs-number">2</span>]
+<span class="hljs-variable">$user</span>    = <span class="hljs-constant">ENV</span>[<span class="hljs-string">'USER'</span>]
+
+puts <span class="hljs-string">"Enforcing Policies... \n(<span class="hljs-subst">#{<span class="hljs-variable">$refname</span>}</span>) (<span class="hljs-subst">#{<span class="hljs-variable">$oldrev</span>[<span class="hljs-number">0</span>,<span class="hljs-number">6</span>]}</span>) (<span class="hljs-subst">#{<span class="hljs-variable">$newrev</span>[<span class="hljs-number">0</span>,<span class="hljs-number">6</span>]}</span>)"</span>
+</code></pre><p>Sí, estoy usando variables globales. No me juzgues por ello, --es más sencillo mostrarlo de esta manera--.</p>
+<h3 id="obligando-a-utilizar-un-formato-espec-fico-en-el-mensaje-de-confirmaci-n-de-cambios">Obligando a utilizar un formato específico en el mensaje de confirmación de cambios</h3>
+<p>Tu primer reto es asegurarte que todos y cada uno de los mensajes de confirmación de cambios se ajustan a un determinado formato. Simplemente por fijar algo concreto, supongamos que cada mensaje ha de incluir un texto tal como &quot;ref: 1234&quot;, porque quieres enlazar cada confirmación de cambios con una determinada entrada de trabajo en un sistema de control. Has de mirar en cada confirmación de cambios (commit) recibida, para ver si contiene ese texto; y, si no lo trae, salir con un código distinto de cero, de tal forma que el envio (push) sea rechazado.</p>
+<p>Puedes obtener la lista de las claves SHA-1 de todos las confirmaciones de cambios enviadas cogiendo los valores de &#39;$newrev&#39; y de &#39;$oldrev&#39;, y pasandolos a comando de mantenimiento de Git llamado &#39;git rev-list&#39;. Este comando es básicamente el mismo que &#39;git log&#39;, pero por defecto, imprime solo los valores SHA-1 y nada más. Con él, puedes obtener la lista de todas las claves SHA que se han introducido entre una clave SHA y otra clave SHA dadas; obtendrás algo así como esto:</p>
+<pre><code>$ git rev-<span class="hljs-built_in">list</span> <span class="hljs-number">538</span>c33..d14fc7
+d14fc7c847ab946ec39590d87783c69b031bdfb7
+<span class="hljs-number">9f</span>585da4401b0a3999e84113824d15245c13f0be
+<span class="hljs-number">234071</span>a1be950e2a8d078e6141f5cd20c1e61ad3
+dfa04c9ef3d5197182f13fb5b9b1fb7717d2222a
+<span class="hljs-number">17716</span>ec0f1ff5c77eff40b7fe912f9f6cfd0e475
+</code></pre><p>Puedes coger esta salida, establecer un bucle para recorrer cada una de esas confirmaciones de cambios, coger el mensaje de cada una y comprobarlo contra una expresión regular de búsqueda del patrón deseado.</p>
+<p>Tienes que imaginarte cómo puedes obtener el mensaj ede cada una de esas confirmaciones de cambios a comprobar. Para obtener los datos &quot;en crudo&quot;  de una confirmación de cambios, puedes utilizar otro comando de mantenimiento de Git denominado &#39;git cat-file&#39;. En el capítulo 9 volveremos en detalle sobre estos comandos de mantenimiento; pero, por ahora, esto es lo que obtienes con dicho comando:</p>
+<pre><code>$ git cat-<span class="hljs-built_in">file</span> commit ca82a6
+tree cfda3bf379e4f8dba8717dee55aab78aef7f4daf
+parent <span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+author Scott Chacon &lt;schacon@gmail.com&gt; <span class="hljs-number">1205815931</span> -<span class="hljs-number">0700</span>
+committer Scott Chacon &lt;schacon@gmail.com&gt; <span class="hljs-number">1240030591</span> -<span class="hljs-number">0700</span>
+
+changed <span class="hljs-operator">the</span> <span class="hljs-built_in">version</span> <span class="hljs-built_in">number</span>
+</code></pre><p>Una vía sencilla para obtener el mensaje, es la de ir hasta la primera línea en blanco y luego coger todo lo que siga a esta. En los sistemas Unix, lo puedes realizar con el comando &#39;sed&#39;:</p>
+<pre><code>$ git cat-<span class="hljs-built_in">file</span> commit ca82a6 | sed <span class="hljs-string">'1,/^$/d'</span>
+changed <span class="hljs-operator">the</span> <span class="hljs-built_in">version</span> <span class="hljs-built_in">number</span>
+</code></pre><p>Puedes usar este &quot;hechizo mágico&quot; para coger el mensaje de cada confirmación de cambios que se está enviando y salir si localizas algo que no cuadra en alguno de ellos. Para salir del script y rechazar el envio, recuerda que debes salir con un código distinto de cero. El método completo será algo así como:</p>
+<pre><code><span class="hljs-variable">$regex</span> = <span class="hljs-regexp">/\[ref: (\d+)\]/</span><span class="hljs-variable">$regex</span> = <span class="hljs-regexp">/\[ref: (\d+)\]/</span>
+
+<span class="hljs-comment"># enforced custom commit message format</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> </span>check_message_format
+  missed_revs = `git rev-list <span class="hljs-comment">#{$oldrev}..#{$newrev}`.split("\n")</span>
+  missed_revs.each <span class="hljs-keyword">do</span> |rev|
+    message = `git cat-file commit <span class="hljs-comment">#{rev} | sed '1,/^$/d'`</span>
+    <span class="hljs-keyword">if</span> !<span class="hljs-variable">$regex</span>.match(message)
+      puts <span class="hljs-string">"[POLICY] Your message is not formatted correctly"</span>
+      exit <span class="hljs-number">1</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+check_message_format
+</code></pre><p>Poniendo esto en tu script &#39;update&#39;, serán rechazadas todas las actualizaciones que contengan cambios con mensajes que no se ajusten a tus reglas.</p>
+<h3 id="implementando-un-sistema-de-control-de-accesos-basado-en-usuario">Implementando un sistema de control de accesos basado en usuario</h3>
+<p>Imaginemos que deseas implementar un sistema de control de accesos (Access Control List, ACL). Para vigilar qué usuarios pueden enviar (push) cambios a qué partes de tus proyectos. Algunas personas tendrán acceso completo, y otras tan solo acceso a ciertas carpetas o a ciertos archivos. Para implementar esto, has de escribir esas reglas de acceso en un archivo denominado &#39;acl&#39; ubicado en tu repositorio git básico en el servidor. Y tienes que preparar el enganche &#39;update&#39; para hacerle consultar esas reglas, mirar los archivos que están siendo subidos en las confirmaciones de cambio (commit) enviadas (push), y determinar así si el usuario emisor del  envio tiene o no permiso para actualizar esos archivos.</p>
+<p>Como hemos dicho, el primer paso es escribir tu lista de control de accesos (ACL). Su formato es muy parecido al del mecanismo CVS ACL: utiliza una serie de líneas donde el primer campo es &#39;avail&#39; o &#39;unavail&#39; (permitido o no permitido), el segundo campo es una lista de usuarios separados por comas, y el último campo es la ubicación (path) sobre el que aplicar la regla (dejarlo en blanco equivale a un acceso abierto). Cada uno de esos campos se separan entre sí con el caracter barra vertical (&#39;|&#39;).</p>
+<p>Por ejemplo, si tienes un par de administradores, algunos redactores técnicos con acceso a la carpeta &#39;doc&#39;, y un desarrollador que únicamente accede a las carpetas &#39;lib&#39; y &#39;test&#39;, el archivo ACL resultante seria:</p>
+<pre><code>avail|nickh,pjhyett,defunkt,tpw
+avail|usinclair,cdickens,ebronte|doc
+avail<span class="hljs-localvars">|schacon|lib
+avail|schacon|tests</span>
+</code></pre><p>Para implementarlo, hemos de leer previamente estos datos en una estructura que podamos emplear. En este caso, por razones de simplicidad, vamos a mostrar únicamente la forma de implementar las directivas &#39;avail&#39; (permitir). Este es un método que te devuelve un array asociativo cuya clave es el nombre del usuario y su valor es un array de ubicaciones (paths) donde ese usuario tiene acceso de escritura:</p>
+<pre><code>def get_acl_access_data(acl_file)
+  <span class="hljs-comment"># read in ACL data</span>
+  acl_file = File.<span class="hljs-built_in">read</span>(acl_file).<span class="hljs-built_in">split</span>(<span class="hljs-string">"\n"</span>).reject { |<span class="hljs-built_in">line</span>| <span class="hljs-built_in">line</span> == <span class="hljs-string">''</span> }
+  access = {}
+  acl_file.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |<span class="hljs-built_in">line</span>|
+    avail, users, path = <span class="hljs-built_in">line</span>.<span class="hljs-built_in">split</span>(<span class="hljs-string">'|'</span>)
+    next unless avail == <span class="hljs-string">'avail'</span>
+    users.<span class="hljs-built_in">split</span>(<span class="hljs-string">','</span>).<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |user|
+      access[user] ||= []
+      access[user] &lt;&lt; path
+    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  access
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+</code></pre><p>Si lo aplicamos sobre la lista ACL descrita anteriormente, este método &#39;get acl access_data&#39; devolverá una estructura de datos similar a esta:</p>
+<pre><code>{<span class="hljs-string">"defunkt"</span>=&gt;[nil],
+ <span class="hljs-string">"tpw"</span>=&gt;[nil],
+ <span class="hljs-string">"nickh"</span>=&gt;[nil],
+ <span class="hljs-string">"pjhyett"</span>=&gt;[nil],
+ <span class="hljs-string">"schacon"</span>=&gt;[<span class="hljs-string">"lib"</span>, <span class="hljs-string">"tests"</span>],
+ <span class="hljs-string">"cdickens"</span>=&gt;[<span class="hljs-string">"doc"</span>],
+ <span class="hljs-string">"usinclair"</span>=&gt;[<span class="hljs-string">"doc"</span>],
+ <span class="hljs-string">"ebronte"</span>=&gt;[<span class="hljs-string">"doc"</span>]}
+</code></pre><p>Una vez tienes los permisos en orden, necesitas averiguar las ubicaciones modificadas por las confirmaciones de cambios enviadas; de tal forma que puedas asegurarte de que el usuario que las está enviando tiene realmente permiso para modificarlas.</p>
+<p>Puedes comprobar facilmente qué archivos han sido modificados en cada confirmación de cambios, utilizando la opción &#39;--name-only&#39; del comando &#39;git log&#39; (citado brevemente en el capítulo 2):</p>
+<pre><code>$ git <span class="hljs-built_in">log</span> -<span class="hljs-number">1</span> --name-only --pretty=<span class="hljs-built_in">format</span>:<span class="hljs-string">''</span> <span class="hljs-number">9</span>f585d
+
+README
+lib/test.rb
+</code></pre><p>Utilizando la estructura ACL devuelta por el método &#39;get_acl_access_data&#39; y comprobandola sobre la lista de archivos de cada confirmación de cambios, puedes determinar si el usuario tiene o no permiso para enviar dichos cambios:</p>
+<pre><code><span class="hljs-comment"># only allows certain users to modify certain subdirectories in a project</span>
+def check_directory_perms
+  access = get_acl_access_data(<span class="hljs-string">'acl'</span>)
+
+  <span class="hljs-comment"># see if anyone is trying to push something they can't</span>
+  new_commits = `git rev-list <span class="hljs-comment">#{$oldrev}..#{$newrev}`.split("\n")</span>
+  new_commits.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |rev|
+    files_modified = `git <span class="hljs-built_in">log</span> -<span class="hljs-number">1</span> <span class="hljs-comment">--name-only --pretty=format:'' #{rev}`.split("\n")</span>
+    files_modified.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |path|
+      next <span class="hljs-keyword">if</span> path.size == <span class="hljs-number">0</span>
+      has_file_access = <span class="hljs-constant">false</span>
+      access[$user].<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |access_path|
+        <span class="hljs-keyword">if</span> !access_path || <span class="hljs-comment"># user has access to everything</span>
+          (path.index(access_path) == <span class="hljs-number">0</span>) <span class="hljs-comment"># access to this path</span>
+          has_file_access = <span class="hljs-constant">true</span> 
+        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+      <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+      <span class="hljs-keyword">if</span> !has_file_access
+        puts <span class="hljs-string">"[POLICY] You do not have access to push to #{path}"</span>
+        exit <span class="hljs-number">1</span>
+      <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">end</span>  </span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
+check_directory_permscheck_directory_perms
+</code></pre><p>La mayor parte de este código debería de ser sencillo de leer. Con &#39;git rev-list&#39;, obtienes una lista de las nuevas confirmaciones de cambio enviadas a tu servidor. Luego, para cada una de ellas, localizas los archivos modificados y te aseguras de que el usuario que las envia tiene realmente acceso a todas las ubicaciones que pretende modificar. Un &quot;rubysmo&quot; que posiblemente sea un tanto oscuro puede ser &#39;path.index(access_path) == 0&#39; . Simplemente devuelve verdadero en el caso de que la ubicacion comience por &#39;access_path&#39; ; de esta forma, nos aseguramos de que &#39;access_path&#39; no esté solo contenido en una de las ubicaciones permitidas, sino sea una ubicación permitida la que comience con la ubicación accedida. </p>
+<p>Una vez implementado todo esto, tus usuarios no podrán enviar confirmaciones de cambios con mensajes mal formados o con modificaciones sobre archivos fuera de las ubicaciones que les hayas designado.</p>
+<h3 id="obligando-a-realizar-envios-solo-de-avance-rapido-fast-forward-only-pushes-">Obligando a realizar envios solo-de-avance-rapido (Fast-Forward-Only pushes)</h3>
+<p>Lo único que nos queda por implementar es un mecanismo para limitar los envios a envios de avance rápido (Fast-Forward-Only pushes). En las versiones a partir de la 1.6, puedes ajustar las opciones &#39;receive.denyDeletes&#39; (prohibir borrados) y &#39;receive.denyNonFastForwards&#39; (prohibir envios que no sean avances-rápidos). Pero haciendolo a través de un enganche (hook), podrá funcionar también en versiones anteriores de Git, podrás modificarlo para que actue únicamente sobre ciertos usuarios, o podrás realizar cualquier otra acción que estimes oportuna.</p>
+<p>La lógica para hacer así la comprobación es la de mirar por si alguna confirmación de cambios se puede alcanzar desde la versión más antigua pero no desde la más reciente. Si hay alguna, entonces es un envio de avance-rápido (fast-forward push); sino hay ninguna, es un envio a prohibir:</p>
+<pre><code><span class="hljs-comment"># enforces fast-forward only pushes </span>
+def check_fast_forward
+  missed_refs = `git rev-list <span class="hljs-comment">#{$newrev}..#{$oldrev}`</span>
+  missed_ref_count = missed_refs.<span class="hljs-built_in">split</span>(<span class="hljs-string">"\n"</span>).size
+  <span class="hljs-keyword">if</span> missed_ref_count &gt; <span class="hljs-number">0</span>
+    puts <span class="hljs-string">"[POLICY] Cannot push a non fast-forward reference"</span>
+    exit <span class="hljs-number">1</span>
+  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
+check_fast_forward
+</code></pre><p>Una vez esté todo listo. Si lanzas el comando &#39;chmod u+x .git/hooks/update&#39;, siendo este el archivo donde has puesto todo este código; y luego intentas enviar una referencia que no sea de avance-rápido, obtendrás algo como esto:</p>
+<pre><code>$ git push -f origin master
+Counting objects: <span class="hljs-number">5</span>, done.
+Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3</span>/<span class="hljs-number">3</span>), done.
+Writing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3</span>/<span class="hljs-number">3</span>), <span class="hljs-number">323</span> bytes, done.
+Total <span class="hljs-number">3</span> (delta <span class="hljs-number">1</span>), reused <span class="hljs-number">0</span> (delta <span class="hljs-number">0</span>)
+Unpacking objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3</span>/<span class="hljs-number">3</span>), done.
+Enforcing Policies... 
+(refs/heads/master) (<span class="hljs-number">8338</span>c5) (c5b616)
+[POLICY] Cannot push a non-fast-forward reference
+<span class="hljs-keyword">error</span>: hooks/update exited <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> code <span class="hljs-number">1</span>
+<span class="hljs-keyword">error</span>: hook declined <span class="hljs-keyword">to</span> update refs/heads/master
+<span class="hljs-keyword">To</span> git@gitserver:project.git
+ ! [remote rejected] master -&gt; master (hook declined)
+<span class="hljs-keyword">error</span>: failed <span class="hljs-keyword">to</span> push some refs <span class="hljs-keyword">to</span> <span class="hljs-comment">'git@gitserver:project.git'[remote rejected] master -&gt; master (hook declined)</span>
+<span class="hljs-keyword">error</span>: failed <span class="hljs-keyword">to</span> push some refs <span class="hljs-keyword">to</span> <span class="hljs-comment">'git@gitserver:project.git'</span>
+</code></pre><p>Tenemos un para de aspectos interesantes aquí. Lo primero observado cuando el enganche (hook) arranca es:</p>
+<pre><code>Enforcing Policies<span class="hljs-attribute">...</span> 
+(refs/heads/master) (fb8c72) (c56860)
+</code></pre><p>Precisamente, lo enviado a la salida estandar stdout justo al principio del script de actualización. Cabe destacar que todo lo que se envie a la salida estandar stdout, será transferido al cliente.</p>
+<p>Lo segundo que se puede apreciar es el mensaje de error:</p>
+<pre><code>[POLICY] Cannot push a non fast-forward <span class="hljs-keyword">reference</span>
+<span class="hljs-keyword">error</span>: hooks/update exited <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> code <span class="hljs-number">1</span>
+<span class="hljs-keyword">error</span>: hook declined <span class="hljs-keyword">to</span> update refs/heads/master
+</code></pre><p>La primera línea la has enviado tú, pero las otras dos son de Git. Indicando que el script de actualización ha terminado con código no-cero y, por tanto, ha rechazado la modificación. Y, por último, se ve:</p>
+<pre><code><span class="hljs-keyword">To</span> git@gitserver:project.git
+ ! [remote rejected] master -&gt; master (hook declined)
+<span class="hljs-keyword">error</span>: failed <span class="hljs-keyword">to</span> push some refs <span class="hljs-keyword">to</span> <span class="hljs-comment">'git@gitserver:project.git'[remote rejected] master -&gt; master (hook declined)</span>
+<span class="hljs-keyword">error</span>: failed <span class="hljs-keyword">to</span> push some refs <span class="hljs-keyword">to</span> <span class="hljs-comment">'git@gitserver:project.git'</span>
+</code></pre><p>Un mensaje por cada referencia rechazada por el enganche (hook) de actualización, especificando que ha sido rechazada precisamente por un fallo en el enganche.</p>
+<p>Es más, si la referencia (ref marker) no se encuentra presente para alguna de las confirmaciones de cambio, verás el mensaje de error previsto para ello:</p>
+<pre><code>[POLICY] Your message <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> formatted correctly
+</code></pre><p>O si alguien intenta editar un archivo sobre el que no tiene acceso y luego envia una confirmación de cambios con ello, verá también algo similar. Por ejemplo, si un editor técnico intenta enviar una confirmación de cambios donde se haya modificado algo de la carpeta &#39;lib&#39;, verá:</p>
+<pre><code>[POLICY] You <span class="hljs-keyword">do</span> <span class="hljs-keyword">not</span> have access <span class="hljs-keyword">to</span> push <span class="hljs-keyword">to</span> <span class="hljs-keyword">lib</span>/test.rb
+</code></pre><p>Y eso es todo. De ahora en adelante, en tanto en cuando el script &#39;update&#39; este presente y sea ejecutable, tu repositorio nunca se verá perjudicado, nunca tendrá un mensaje de confirmación de cambios sin tu plantilla y tus usuarios estarán controlados.</p>
+<h2 id="puntos-de-enganche-del-lado-cliente">Puntos de enganche del lado cliente</h2>
+<p>Lo malo del sistema descrito en la sección anterior pueden ser los lamentos que inevitablemente se van a producir cuando los envios de tus usuarios sean rechazados. Ver rechazado en el último minuto su tan cuidadosamente preparado trabajo, puede ser realmente frustrante. Y, aún peor, tener que reescribir su histórico para corregirlo puede ser un auténtico calvario.</p>
+<p>La solución a este dilema es el proporcionarles algunos enganches (hook) del lado cliente, para que les avisen cuando están trabajando en algo que el servidor va a rechazarles. De esta forma, pueden corregir los problemas antes de confirmar cambios y antes de que se conviertan en algo realmente complicado de arreglar. Debido a que estos enganches no se transfieren junto con el clonado de un proyecto, tendrás que distribuirlos de alguna otra manera. Y luego pedir a tus usuarios que se los copien a sus carpetas &#39;.git/hooks&#39; y los hagan ejecutables. Puedes distribuir esos enganches dentro del mismo proyecto o en un proyecto separado. Pero no hay modo de implementarlos automáticamente.</p>
+<p>Para empezar, se necesita chequear el mensaje de confirmación inmediatamente antes de cada confirmación de cambios, para segurarse de que el servidor no los rechazará debido a un mensaje mal formateado. Para ello, se añade el enganche &#39;commit-msg&#39;. Comparando el mensaje del archivo pasado como primer argumento con el mensaje patrón, puedes obligar a Git a abortar la confirmación de cambios (commit) en caso de no coincidir ambos:</p>
+<pre><code><span class="hljs-comment">#!/usr/bin/env ruby</span>
+message_file = <span class="hljs-constant">ARGV</span>[<span class="hljs-number">0</span>]
+message = <span class="hljs-constant">File</span>.read(message_file)
+
+<span class="hljs-variable">$regex</span> = <span class="hljs-regexp">/\[ref: (\d+)\]/</span><span class="hljs-variable">$regex</span> = <span class="hljs-regexp">/\[ref: (\d+)\]/</span>
+
+<span class="hljs-keyword">if</span> !<span class="hljs-variable">$regex</span>.match(message)
+  puts <span class="hljs-string">"[POLICY] Your message is not formatted correctly"</span>
+  exit <span class="hljs-number">1</span>
+<span class="hljs-keyword">end</span>
+</code></pre><p>Si este script está en su sitio (el archivo &#39;.git/hooks/commit-msg&#39;) y es ejecutable, al confirmar cambios con un mensaje inapropiado, verás algo asi como:</p>
+<pre><code>$ git <span class="hljs-operator"><span class="hljs-keyword">commit</span> -am <span class="hljs-string">'test'</span>
+[POLICY] Your message <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> formatted correctly</span>
+</code></pre><p>Y la confirmación no se llevará a cabo. Sin embargo, si el mensaje está formateado adecuadamente, Git te permitirá confirmar cambios:</p>
+<pre><code>$ git commit -am <span class="hljs-string">'test [ref: 132]'</span>
+[master e05c914] test [<span class="hljs-keyword">ref</span>: <span class="hljs-number">132</span>]
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>A continuación, se necesita también asegurarse de no estar modificando archivos fuera del alcance de tus permisos. Si la carpeta &#39;.git&#39; de tu proyecto contiene una copia del archivo de control de accesos (ACL) utilizada previamente, este script &#39;pre-commit&#39; podrá comprobar los límites:</p>
+<pre><code>#!/usr/bin/env ruby#!/usr/bin/env ruby#!/usr/bin/env ruby
+
+$user    = ENV['USER']
+
+# [ <span class="hljs-operator"><span class="hljs-keyword">insert</span> acl_access_data method <span class="hljs-keyword">from</span> above ]
+
+# <span class="hljs-keyword">only</span> allows certain users <span class="hljs-keyword">to</span> modify certain subdirectories <span class="hljs-keyword">in</span> a project
+def check_directory_perms
+  access = get_acl_access_data(<span class="hljs-string">'.git/acl'</span>)
+
+  files_modified = <span class="hljs-string">`git diff-index --cached --name-only HEAD`</span>.split(<span class="hljs-string">"\n"</span>)
+  files_modified.<span class="hljs-keyword">each</span> <span class="hljs-keyword">do</span> |path|
+    <span class="hljs-keyword">next</span> <span class="hljs-keyword">if</span> path.<span class="hljs-keyword">size</span> == <span class="hljs-number">0</span>
+    has_file_access = <span class="hljs-keyword">false</span>
+    access[$<span class="hljs-keyword">user</span>].<span class="hljs-keyword">each</span> <span class="hljs-keyword">do</span> |access_path|
+    <span class="hljs-keyword">if</span> !access_path || (path.index(access_path) == <span class="hljs-number">0</span>)
+      has_file_access = <span class="hljs-keyword">true</span>
+    <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">if</span> !has_file_access
+      puts <span class="hljs-string">"[POLICY] You do not have access to push to #{path}"</span>
+      exit <span class="hljs-number">1</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+check_directory_permscheck_directory_perms</span>
+</code></pre><p>Este es un script prácticamente igual al del lado servidor. Pero con dos importantes diferencias. La primera es que el archivo ACL está en otra ubicación, debido a que el script corre desde tu carpeta de trabajo y no desde la carpeta de Git. Esto obliga a cambiar la ubicación del archivo ACL de</p>
+<pre><code><span class="hljs-keyword">access</span> = get_acl_access_data(<span class="hljs-attribute">'acl</span>')
+</code></pre><p>a </p>
+<pre><code>access = get_acl_access_data(<span class="hljs-string">'.git/acl'</span>)
+</code></pre><p>La segunda diferencia es la forma de listar los archivos modificados. Debido a que el metodo del lado servidor utiliza el registro de confirmaciones de cambio, pero, sin embargo, aquí la confirmación no se ha registrado aún, la lista de archivos se ha de obtener desde el área de preparación (staging area). En lugar de </p>
+<pre><code>files_modified = `git <span class="hljs-built_in">log</span> -<span class="hljs-number">1</span> --name-only --pretty=<span class="hljs-built_in">format</span>:<span class="hljs-string">''</span> <span class="hljs-preprocessor">#{ref}`</span>
+</code></pre><p>tenemos que utilizar </p>
+<pre><code><span class="hljs-comment">files_modified</span> <span class="hljs-comment">=</span> <span class="hljs-comment">`git</span> <span class="hljs-comment">diff</span><span class="hljs-literal">-</span><span class="hljs-comment">index</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">cached</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">name</span><span class="hljs-literal">-</span><span class="hljs-comment">only</span> <span class="hljs-comment">HEAD`</span>
+</code></pre><p>Estas dos son las únicas diferencias; en todo lo demás, el script funciona de la misma manera. Es necesario advertir de que se espera que trabajes localmente con el mismo usuario con el que enviarás (push) a la máquina remota. Si no fuera así, tendrás que ajustar manualmente la variable &#39;$user&#39;.</p>
+<p>El último aspecto a comprobar es el de no intentar enviar referencias que no sean de avance-rápido. Pero esto es algo más raro que suceda. Para tener una referencia que no sea de avance-rápido, tienes que haber reorganizado (rebase) una confirmación de cambios (commit) ya enviada anteriormente, o tienes que estar tratando de enviar una rama local distinta sobre la misma rama remota.</p>
+<p>De todas formas, el único aspecto accidental que puede interesante capturar son los intentos de reorganizar confirmaciones de cambios ya enviadas. El servidor te avisará de que no puedes enviar ningún no-avance-rapido, y el enganche te impedirá cualquier envio forzado</p>
+<p>Este es un ejemplo de script previo a reorganización que lo puede comprobar. Con la lista de confirmaciones de cambio que estás a punto de reescribir, las comprueba por si alguna de ellas existe en alguna de tus referencias remotas. Si encuentra alguna, aborta la reorganización:</p>
+<pre><code><span class="hljs-comment">#!/usr/bin/env ruby#!/usr/bin/env ruby#!/usr/bin/env ruby</span>
+
+base_branch = ARGV[<span class="hljs-number">0</span>]
+<span class="hljs-keyword">if</span> ARGV[<span class="hljs-number">1</span>]
+  topic_branch = ARGV[<span class="hljs-number">1</span>]
+<span class="hljs-keyword">else</span>
+  topic_branch = <span class="hljs-string">"HEAD"</span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
+target_shas = `git rev-list <span class="hljs-comment">#{base_branch}..#{topic_branch}`.split("\n")</span>
+remote_refs = `git branch -r`.<span class="hljs-built_in">split</span>(<span class="hljs-string">"\n"</span>).map { |r| r.strip }
+
+target_shas.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |sha|
+  remote_refs.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |remote_ref|
+    shas_pushed = `git rev-list ^<span class="hljs-comment">#{sha}^@ refs/remotes/#{remote_ref}`</span>
+    <span class="hljs-keyword">if</span> shas_pushed.<span class="hljs-built_in">split</span>(“\n”).<span class="hljs-built_in">include</span>?(sha)
+      puts <span class="hljs-string">"[POLICY] Commit #{sha} has already been pushed to #{remote_ref}"</span>
+      exit <span class="hljs-number">1</span>
+    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+</code></pre><p>Este script utiliza una sintaxis no contemplada en la sección de Selección de Revisiones del capítulo 6. La lista de confirmaciones de cambio previamente enviadas, se comprueba con:</p>
+<pre><code>git rev-list ^#{<span class="ruby">sha}</span>^@ refs/remotes/#{<span class="ruby">remote_ref}</span>
+</code></pre><p>La sintaxis &#39;SHA^@&#39; recupera todos los padres de esa confirmación de cambios (commit). Estas mirando por cualquier confirmación que se pueda alcanzar desde la última en la parte remota, pero que no se pueda alcanzar desde ninguno de los padres de cualquiera de las claves SHA que estás intentando enviar. Es decir, confirmaciones de avance-rápido.</p>
+<p>La mayor pega de este sistema es el que puede llegar a ser muy lento; y muchas veces es innecesario, ya que el propio servidor te va a avisar y te impedirá el envio, siempre y cuando no intentes forzar dicho envio con la opción &#39;-f&#39;. De todas formas, es un ejercicio interesante. Y, en teoria al menos, pude ayudarte a evitar reorganizaciones que luego tengas de hechar para atras y arreglarlas.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../personalizando_git/puntos_de_enganche_git.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../personalizando_git/recapitulacion.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

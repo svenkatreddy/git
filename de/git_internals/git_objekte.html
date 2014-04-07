@@ -1,0 +1,1153 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Git Objekte | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_internals/git_referenzen.html" />
+        
+        
+        <link rel="prev" href="../git_internals/plumbing_und_porcelain.html" />
+        
+
+        <meta property="og:title" content="Git Objekte | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="9.2" data-basepath=".." data-revision="1396895639016">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_internals/git_objekte.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="getting_started/README.html">
+                
+                <a href="../getting_started/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Getting Started
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="getting_started/wozu_versionskontrolle.html">
+                            
+                            <a href="../getting_started/wozu_versionskontrolle.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Wozu Versionskontrolle?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="getting_started/die_geschichte_von_git.html">
+                            
+                            <a href="../getting_started/die_geschichte_von_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Die Geschichte von Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="getting_started/git_grundlagen.html">
+                            
+                            <a href="../getting_started/git_grundlagen.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git Grundlagen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="getting_started/git_installieren.html">
+                            
+                            <a href="../getting_started/git_installieren.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Git installieren
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="getting_started/git_konfigurieren.html">
+                            
+                            <a href="../getting_started/git_konfigurieren.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Git konfigurieren
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="getting_started/hilfe_finden.html">
+                            
+                            <a href="../getting_started/hilfe_finden.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Hilfe finden
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="getting_started/zusammenfassung.html">
+                            
+                            <a href="../getting_started/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="git_basics/README.html">
+                
+                <a href="../git_basics/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git Basics
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="git_basics/ein_git_repository_anlegen.html">
+                            
+                            <a href="../git_basics/ein_git_repository_anlegen.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Ein Git Repository anlegen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git_basics/anderungen_am_repository_nachverfolgen.html">
+                            
+                            <a href="../git_basics/anderungen_am_repository_nachverfolgen.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Änderungen am Repository nachverfolgen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git_basics/die_commit_historie_anzeigen.html">
+                            
+                            <a href="../git_basics/die_commit_historie_anzeigen.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Die Commit Historie anzeigen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git_basics/anderungen_ruckgangig_machen.html">
+                            
+                            <a href="../git_basics/anderungen_ruckgangig_machen.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Änderungen rückgängig machen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git_basics/mit_externen_repositorys_arbeiten.html">
+                            
+                            <a href="../git_basics/mit_externen_repositorys_arbeiten.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Mit externen Repositorys arbeiten
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="git_basics/tags.html">
+                            
+                            <a href="../git_basics/tags.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tags
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="git_basics/tipps_und_tricks.html">
+                            
+                            <a href="../git_basics/tipps_und_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tipps und Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="git_basics/zusammenfassung.html">
+                            
+                            <a href="../git_basics/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="git_branching/README.html">
+                
+                <a href="../git_branching/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git Branching
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="git_branching/was_ist_ein_branch.html">
+                            
+                            <a href="../git_branching/was_ist_ein_branch.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Was ist ein Branch?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="git_branching/einfaches_branching_und_merging.html">
+                            
+                            <a href="../git_branching/einfaches_branching_und_merging.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Einfaches Branching und Merging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="git_branching/branch_management.html">
+                            
+                            <a href="../git_branching/branch_management.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Branch Management
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="git_branching/branching_workflows.html">
+                            
+                            <a href="../git_branching/branching_workflows.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Branching Workflows
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="git_branching/externe_branches.html">
+                            
+                            <a href="../git_branching/externe_branches.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Externe Branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="git_branching/rebasing.html">
+                            
+                            <a href="../git_branching/rebasing.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="git_branching/zusammenfassung.html">
+                            
+                            <a href="../git_branching/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_on_the_server/README.html">
+                
+                <a href="../git_on_the_server/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git on the Server
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_on_the_server/die_protokolle.html">
+                            
+                            <a href="../git_on_the_server/die_protokolle.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Die Protokolle
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_on_the_server/git_auf_einen_server_bekommen.html">
+                            
+                            <a href="../git_on_the_server/git_auf_einen_server_bekommen.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Git auf einen Server bekommen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_on_the_server/generiere_deinen_offentlichen_ssh_schlussel.html">
+                            
+                            <a href="../git_on_the_server/generiere_deinen_offentlichen_ssh_schlussel.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Generiere Deinen öffentlichen SSH-Schlüssel
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_on_the_server/einrichten_des_servers.html">
+                            
+                            <a href="../git_on_the_server/einrichten_des_servers.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Einrichten des Servers
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_on_the_server/offentlicher_zugang.html">
+                            
+                            <a href="../git_on_the_server/offentlicher_zugang.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Öffentlicher Zugang
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_on_the_server/gitweb.html">
+                            
+                            <a href="../git_on_the_server/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_on_the_server/gitosis.html">
+                            
+                            <a href="../git_on_the_server/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_on_the_server/gitolite.html">
+                            
+                            <a href="../git_on_the_server/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_on_the_server/git_daemon.html">
+                            
+                            <a href="../git_on_the_server/git_daemon.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git Daemon
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_on_the_server/git_hosting.html">
+                            
+                            <a href="../git_on_the_server/git_hosting.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git Hosting
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_on_the_server/einrichten_eines_benutzeraccounts.html">
+                            
+                            <a href="../git_on_the_server/einrichten_eines_benutzeraccounts.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Einrichten eines Benutzeraccounts
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.12" data-path="git_on_the_server/zusammenfassung.html">
+                            
+                            <a href="../git_on_the_server/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>4.12)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="distributed_git/README.html">
+                
+                <a href="../distributed_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Distributed Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="distributed_git/distribuierte_workflows.html">
+                            
+                            <a href="../distributed_git/distribuierte_workflows.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Distribuierte Workflows
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="distributed_git/an_einem_projekt_mitarbeiten.html">
+                            
+                            <a href="../distributed_git/an_einem_projekt_mitarbeiten.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> An einem Projekt mitarbeiten
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="distributed_git/ein_projekt_betreiben.html">
+                            
+                            <a href="../distributed_git/ein_projekt_betreiben.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Ein Projekt betreiben
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="distributed_git/zusammenfassung.html">
+                            
+                            <a href="../distributed_git/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_tools/README.html">
+                
+                <a href="../git_tools/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git Tools
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_tools/revision_auswahl.html">
+                            
+                            <a href="../git_tools/revision_auswahl.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Revision Auswahl
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_tools/interaktives_stagen.html">
+                            
+                            <a href="../git_tools/interaktives_stagen.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Interaktives Stagen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_tools/stashen.html">
+                            
+                            <a href="../git_tools/stashen.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Stashen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_tools/anderungshistorie_verandern.html">
+                            
+                            <a href="../git_tools/anderungshistorie_verandern.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Änderungshistorie verändern
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_tools/mit_hilfe_von_git_debuggen.html">
+                            
+                            <a href="../git_tools/mit_hilfe_von_git_debuggen.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Mit Hilfe von Git debuggen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_tools/submodule.html">
+                            
+                            <a href="../git_tools/submodule.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Submodule
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_tools/subtree_merging.html">
+                            
+                            <a href="../git_tools/subtree_merging.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Subtree Merging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_tools/zusammenfassung.html">
+                            
+                            <a href="../git_tools/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="customizing_git/README.html">
+                
+                <a href="../customizing_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Customizing Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="customizing_git/git_konfiguration.html">
+                            
+                            <a href="../customizing_git/git_konfiguration.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Git Konfiguration
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="customizing_git/git_attribute.html">
+                            
+                            <a href="../customizing_git/git_attribute.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git Attribute
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="customizing_git/git_hooks.html">
+                            
+                            <a href="../customizing_git/git_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git Hooks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="customizing_git/beispiel_fur_die_durchsetzung_von_richtlinien_mit_hilfe_von_git.html">
+                            
+                            <a href="../customizing_git/beispiel_fur_die_durchsetzung_von_richtlinien_mit_hilfe_von_git.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Beispiel für die Durchsetzung von Richtlinien mit Hilfe von Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="customizing_git/zusammenfassung.html">
+                            
+                            <a href="../customizing_git/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_and_other_systems/README.html">
+                
+                <a href="../git_and_other_systems/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git and Other Systems
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_and_other_systems/git_und_subversion.html">
+                            
+                            <a href="../git_and_other_systems/git_und_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git und Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_and_other_systems/zu_git_umziehen.html">
+                            
+                            <a href="../git_and_other_systems/zu_git_umziehen.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Zu Git umziehen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_and_other_systems/zusammenfassung.html">
+                            
+                            <a href="../git_and_other_systems/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git_internals/README.html">
+                
+                <a href="../git_internals/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Git Internals
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git_internals/plumbing_und_porcelain.html">
+                            
+                            <a href="../git_internals/plumbing_und_porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Plumbing und Porcelain
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git_internals/git_objekte.html">
+                            
+                            <a href="../git_internals/git_objekte.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Git Objekte
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git_internals/git_referenzen.html">
+                            
+                            <a href="../git_internals/git_referenzen.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Git-Referenzen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git_internals/pack_dateien.html">
+                            
+                            <a href="../git_internals/pack_dateien.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Pack-Dateien
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git_internals/die_refspec.html">
+                            
+                            <a href="../git_internals/die_refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Die Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git_internals/transfer_protokolle.html">
+                            
+                            <a href="../git_internals/transfer_protokolle.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Transfer-Protokolle
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git_internals/wartung_und_datenwiederherstellung.html">
+                            
+                            <a href="../git_internals/wartung_und_datenwiederherstellung.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Wartung und Datenwiederherstellung
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git_internals/zusammenfassung.html">
+                            
+                            <a href="../git_internals/zusammenfassung.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Zusammenfassung
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 91.54929577464789%;min-width: 90.14084507042253%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../getting_started/README.html" title="Getting Started" class="chapter done new-chapter" data-progress="1" style="left: 1.408450704225352%;"></a>
+    
+        <a href="../getting_started/wozu_versionskontrolle.html" title="Wozu Versionskontrolle?" class="chapter done " data-progress="1.1" style="left: 2.816901408450704%;"></a>
+    
+        <a href="../getting_started/die_geschichte_von_git.html" title="Die Geschichte von Git" class="chapter done " data-progress="1.2" style="left: 4.225352112676056%;"></a>
+    
+        <a href="../getting_started/git_grundlagen.html" title="Git Grundlagen" class="chapter done " data-progress="1.3" style="left: 5.633802816901408%;"></a>
+    
+        <a href="../getting_started/git_installieren.html" title="Git installieren" class="chapter done " data-progress="1.4" style="left: 7.042253521126761%;"></a>
+    
+        <a href="../getting_started/git_konfigurieren.html" title="Git konfigurieren" class="chapter done " data-progress="1.5" style="left: 8.450704225352112%;"></a>
+    
+        <a href="../getting_started/hilfe_finden.html" title="Hilfe finden" class="chapter done " data-progress="1.6" style="left: 9.859154929577464%;"></a>
+    
+        <a href="../getting_started/zusammenfassung.html" title="Zusammenfassung" class="chapter done " data-progress="1.7" style="left: 11.267605633802816%;"></a>
+    
+        <a href="../git_basics/README.html" title="Git Basics" class="chapter done new-chapter" data-progress="2" style="left: 12.67605633802817%;"></a>
+    
+        <a href="../git_basics/ein_git_repository_anlegen.html" title="Ein Git Repository anlegen" class="chapter done " data-progress="2.1" style="left: 14.084507042253522%;"></a>
+    
+        <a href="../git_basics/anderungen_am_repository_nachverfolgen.html" title="Änderungen am Repository nachverfolgen" class="chapter done " data-progress="2.2" style="left: 15.492957746478874%;"></a>
+    
+        <a href="../git_basics/die_commit_historie_anzeigen.html" title="Die Commit Historie anzeigen" class="chapter done " data-progress="2.3" style="left: 16.901408450704224%;"></a>
+    
+        <a href="../git_basics/anderungen_ruckgangig_machen.html" title="Änderungen rückgängig machen" class="chapter done " data-progress="2.4" style="left: 18.309859154929576%;"></a>
+    
+        <a href="../git_basics/mit_externen_repositorys_arbeiten.html" title="Mit externen Repositorys arbeiten" class="chapter done " data-progress="2.5" style="left: 19.718309859154928%;"></a>
+    
+        <a href="../git_basics/tags.html" title="Tags" class="chapter done " data-progress="2.6" style="left: 21.12676056338028%;"></a>
+    
+        <a href="../git_basics/tipps_und_tricks.html" title="Tipps und Tricks" class="chapter done " data-progress="2.7" style="left: 22.535211267605632%;"></a>
+    
+        <a href="../git_basics/zusammenfassung.html" title="Zusammenfassung" class="chapter done " data-progress="2.8" style="left: 23.943661971830984%;"></a>
+    
+        <a href="../git_branching/README.html" title="Git Branching" class="chapter done new-chapter" data-progress="3" style="left: 25.35211267605634%;"></a>
+    
+        <a href="../git_branching/was_ist_ein_branch.html" title="Was ist ein Branch?" class="chapter done " data-progress="3.1" style="left: 26.760563380281692%;"></a>
+    
+        <a href="../git_branching/einfaches_branching_und_merging.html" title="Einfaches Branching und Merging" class="chapter done " data-progress="3.2" style="left: 28.169014084507044%;"></a>
+    
+        <a href="../git_branching/branch_management.html" title="Branch Management" class="chapter done " data-progress="3.3" style="left: 29.577464788732396%;"></a>
+    
+        <a href="../git_branching/branching_workflows.html" title="Branching Workflows" class="chapter done " data-progress="3.4" style="left: 30.985915492957748%;"></a>
+    
+        <a href="../git_branching/externe_branches.html" title="Externe Branches" class="chapter done " data-progress="3.5" style="left: 32.394366197183096%;"></a>
+    
+        <a href="../git_branching/rebasing.html" title="Rebasing" class="chapter done " data-progress="3.6" style="left: 33.80281690140845%;"></a>
+    
+        <a href="../git_branching/zusammenfassung.html" title="Zusammenfassung" class="chapter done " data-progress="3.7" style="left: 35.2112676056338%;"></a>
+    
+        <a href="../git_on_the_server/README.html" title="Git on the Server" class="chapter done new-chapter" data-progress="4" style="left: 36.61971830985915%;"></a>
+    
+        <a href="../git_on_the_server/die_protokolle.html" title="Die Protokolle" class="chapter done " data-progress="4.1" style="left: 38.028169014084504%;"></a>
+    
+        <a href="../git_on_the_server/git_hosting.html" title="Git Hosting" class="chapter done " data-progress="4.10" style="left: 39.436619718309856%;"></a>
+    
+        <a href="../git_on_the_server/einrichten_eines_benutzeraccounts.html" title="Einrichten eines Benutzeraccounts" class="chapter done " data-progress="4.11" style="left: 40.84507042253521%;"></a>
+    
+        <a href="../git_on_the_server/zusammenfassung.html" title="Zusammenfassung" class="chapter done " data-progress="4.12" style="left: 42.25352112676056%;"></a>
+    
+        <a href="../git_on_the_server/git_auf_einen_server_bekommen.html" title="Git auf einen Server bekommen" class="chapter done " data-progress="4.2" style="left: 43.66197183098591%;"></a>
+    
+        <a href="../git_on_the_server/generiere_deinen_offentlichen_ssh_schlussel.html" title="Generiere Deinen öffentlichen SSH-Schlüssel" class="chapter done " data-progress="4.3" style="left: 45.070422535211264%;"></a>
+    
+        <a href="../git_on_the_server/einrichten_des_servers.html" title="Einrichten des Servers" class="chapter done " data-progress="4.4" style="left: 46.478873239436616%;"></a>
+    
+        <a href="../git_on_the_server/offentlicher_zugang.html" title="Öffentlicher Zugang" class="chapter done " data-progress="4.5" style="left: 47.88732394366197%;"></a>
+    
+        <a href="../git_on_the_server/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 49.29577464788732%;"></a>
+    
+        <a href="../git_on_the_server/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 50.70422535211268%;"></a>
+    
+        <a href="../git_on_the_server/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 52.11267605633803%;"></a>
+    
+        <a href="../git_on_the_server/git_daemon.html" title="Git Daemon" class="chapter done " data-progress="4.9" style="left: 53.521126760563384%;"></a>
+    
+        <a href="../distributed_git/README.html" title="Distributed Git" class="chapter done new-chapter" data-progress="5" style="left: 54.929577464788736%;"></a>
+    
+        <a href="../distributed_git/distribuierte_workflows.html" title="Distribuierte Workflows" class="chapter done " data-progress="5.1" style="left: 56.33802816901409%;"></a>
+    
+        <a href="../distributed_git/an_einem_projekt_mitarbeiten.html" title="An einem Projekt mitarbeiten" class="chapter done " data-progress="5.2" style="left: 57.74647887323944%;"></a>
+    
+        <a href="../distributed_git/ein_projekt_betreiben.html" title="Ein Projekt betreiben" class="chapter done " data-progress="5.3" style="left: 59.15492957746479%;"></a>
+    
+        <a href="../distributed_git/zusammenfassung.html" title="Zusammenfassung" class="chapter done " data-progress="5.4" style="left: 60.563380281690144%;"></a>
+    
+        <a href="../git_tools/README.html" title="Git Tools" class="chapter done new-chapter" data-progress="6" style="left: 61.971830985915496%;"></a>
+    
+        <a href="../git_tools/revision_auswahl.html" title="Revision Auswahl" class="chapter done " data-progress="6.1" style="left: 63.38028169014085%;"></a>
+    
+        <a href="../git_tools/interaktives_stagen.html" title="Interaktives Stagen" class="chapter done " data-progress="6.2" style="left: 64.78873239436619%;"></a>
+    
+        <a href="../git_tools/stashen.html" title="Stashen" class="chapter done " data-progress="6.3" style="left: 66.19718309859155%;"></a>
+    
+        <a href="../git_tools/anderungshistorie_verandern.html" title="Änderungshistorie verändern" class="chapter done " data-progress="6.4" style="left: 67.6056338028169%;"></a>
+    
+        <a href="../git_tools/mit_hilfe_von_git_debuggen.html" title="Mit Hilfe von Git debuggen" class="chapter done " data-progress="6.5" style="left: 69.01408450704226%;"></a>
+    
+        <a href="../git_tools/submodule.html" title="Submodule" class="chapter done " data-progress="6.6" style="left: 70.4225352112676%;"></a>
+    
+        <a href="../git_tools/subtree_merging.html" title="Subtree Merging" class="chapter done " data-progress="6.7" style="left: 71.83098591549296%;"></a>
+    
+        <a href="../git_tools/zusammenfassung.html" title="Zusammenfassung" class="chapter done " data-progress="6.8" style="left: 73.2394366197183%;"></a>
+    
+        <a href="../customizing_git/README.html" title="Customizing Git" class="chapter done new-chapter" data-progress="7" style="left: 74.64788732394366%;"></a>
+    
+        <a href="../customizing_git/git_konfiguration.html" title="Git Konfiguration" class="chapter done " data-progress="7.1" style="left: 76.05633802816901%;"></a>
+    
+        <a href="../customizing_git/git_attribute.html" title="Git Attribute" class="chapter done " data-progress="7.2" style="left: 77.46478873239437%;"></a>
+    
+        <a href="../customizing_git/git_hooks.html" title="Git Hooks" class="chapter done " data-progress="7.3" style="left: 78.87323943661971%;"></a>
+    
+        <a href="../customizing_git/beispiel_fur_die_durchsetzung_von_richtlinien_mit_hilfe_von_git.html" title="Beispiel für die Durchsetzung von Richtlinien mit Hilfe von Git" class="chapter done " data-progress="7.4" style="left: 80.28169014084507%;"></a>
+    
+        <a href="../customizing_git/zusammenfassung.html" title="Zusammenfassung" class="chapter done " data-progress="7.5" style="left: 81.69014084507042%;"></a>
+    
+        <a href="../git_and_other_systems/README.html" title="Git and Other Systems" class="chapter done new-chapter" data-progress="8" style="left: 83.09859154929578%;"></a>
+    
+        <a href="../git_and_other_systems/git_und_subversion.html" title="Git und Subversion" class="chapter done " data-progress="8.1" style="left: 84.50704225352112%;"></a>
+    
+        <a href="../git_and_other_systems/zu_git_umziehen.html" title="Zu Git umziehen" class="chapter done " data-progress="8.2" style="left: 85.91549295774648%;"></a>
+    
+        <a href="../git_and_other_systems/zusammenfassung.html" title="Zusammenfassung" class="chapter done " data-progress="8.3" style="left: 87.32394366197182%;"></a>
+    
+        <a href="../git_internals/README.html" title="Git Internals" class="chapter done new-chapter" data-progress="9" style="left: 88.73239436619718%;"></a>
+    
+        <a href="../git_internals/plumbing_und_porcelain.html" title="Plumbing und Porcelain" class="chapter done " data-progress="9.1" style="left: 90.14084507042253%;"></a>
+    
+        <a href="../git_internals/git_objekte.html" title="Git Objekte" class="chapter done " data-progress="9.2" style="left: 91.54929577464789%;"></a>
+    
+        <a href="../git_internals/git_referenzen.html" title="Git-Referenzen" class="chapter  " data-progress="9.3" style="left: 92.95774647887323%;"></a>
+    
+        <a href="../git_internals/pack_dateien.html" title="Pack-Dateien" class="chapter  " data-progress="9.4" style="left: 94.36619718309859%;"></a>
+    
+        <a href="../git_internals/die_refspec.html" title="Die Refspec" class="chapter  " data-progress="9.5" style="left: 95.77464788732394%;"></a>
+    
+        <a href="../git_internals/transfer_protokolle.html" title="Transfer-Protokolle" class="chapter  " data-progress="9.6" style="left: 97.1830985915493%;"></a>
+    
+        <a href="../git_internals/wartung_und_datenwiederherstellung.html" title="Wartung und Datenwiederherstellung" class="chapter  " data-progress="9.7" style="left: 98.59154929577464%;"></a>
+    
+        <a href="../git_internals/zusammenfassung.html" title="Zusammenfassung" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_928">
+                    
+                        <h1 id="git-objekte">Git Objekte</h1>
+<!--Git is a content-addressable filesystem. Great. What does that mean?-->
+<!--It means that at the core of Git is a simple key-value data store. You can insert any kind of content into it, and it will give you back a key that you can use to retrieve the content again at any time. To demonstrate, you can use the plumbing command `hash-object`, which takes some data, stores it in your `.git` directory, and gives you back the key the data is stored as. First, you initialize a new Git repository and verify that there is nothing in the `objects` directory:-->
+
+<p>Git ist ein Dateisystem, das Inhalte addressieren kann. Prima. Aber was heißt das? Es bedeutet, dass Git im Kern nichts anderes ist als ein einfacher Key-Value-Store („Schlüssel-Wert-Speicher“). Du kannst darin jede Art von Inhalt ablegen und Git wird einen Schlüssel dafür zurückgeben, den Du dann verwenden kannst, um diesen Inhalt jederzeit nachzuschlagen. Um das auszuprobieren, kannst Du den Plumbing-Befehl <code>hash-object</code> verwenden. Dieser nimmt Daten entgegen, speichert diese in Deinem <code>.git</code>-Verzeichnis und gibt Dir den Schlüssel zurück, unter dem der Inhalt gespeichert wurde. Dazu initialisierst Du als erstes ein neues Git-Repository und verifizierst, dass das <code>objects</code>-Verzeichnis leer ist:</p>
+<pre><code>$ mkdir test
+$ cd test
+$ git init
+Initialized empty Git repository <span class="hljs-keyword">in</span> /tmp/test/<span class="hljs-preprocessor">.git</span>/
+$ find <span class="hljs-preprocessor">.git</span>/objects
+<span class="hljs-preprocessor">.git</span>/objects
+<span class="hljs-preprocessor">.git</span>/objects/info
+<span class="hljs-preprocessor">.git</span>/objects/pack
+$ find <span class="hljs-preprocessor">.git</span>/objects -type f
+$
+</code></pre><!--Git has initialized the `objects` directory and created `pack` and `info` subdirectories in it, but there are no regular files. Now, store some text in your Git database:-->
+
+<p>Git hat also ein Verzeichnis <code>objects</code> und darin die Unterverzeichnisse <code>pack</code> und <code>info</code> angelegt, bisher aber keine weiteren Dateien. Als nächsten speichern wir einen Text in dieser Git-Datenbank:</p>
+<pre><code>$ <span class="hljs-built_in">echo</span> <span class="hljs-string">'test content'</span> | git <span class="hljs-built_in">hash</span>-object -w --stdin
+d670460b4b4aece5915caf5c68d12f560a9fe3e4
+</code></pre><!--The `-w` tells `hash-object` to store the object; otherwise, the command simply tells you what the key would be. `-\-stdin` tells the command to read the content from stdin; if you don’t specify this, `hash-object` expects the path to a file. The output from the command is a 40-character checksum hash. This is the SHA-1 hash — a checksum of the content you’re storing plus a header, which you’ll learn about in a bit. Now you can see how Git has stored your data:-->
+
+<p>Die Option <code>-w</code> weist <code>git hash-object</code> an, das Objekt zu speichern. Andernfalls würde Dir der Befehl lediglich den Schlüssel mitteilen. <code>--stdin</code> weist den Befehl an, den Inhalt von der Standardeingabe einzulesen. Wenn Du diese Option weglässt, erwartet der Befehl zusätzlich einen Dateipfad. Die Ausgabe ist ein 40 Zeichen langer SHA-1-Hash, der eine Prüfsumme des gespeicherten Inhaltes darstellt (wir gehen auf diese Hashes gleich noch genauer ein). Git hat jetzt außerdem eine neue Datei in der Datenbank angelegt:</p>
+<pre><code>$ find .git/objects -<span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">f</span></span>
+.git/objects/d6/<span class="hljs-number">70460</span>b4b4aece5915caf5c68d12f560a9fe3e4
+</code></pre><!--You can see a file in the `objects` directory. This is how Git stores the content initially — as a single file per piece of content, named with the SHA-1 checksum of the content and its header. The subdirectory is named with the first 2 characters of the SHA, and the filename is the remaining 38 characters.-->
+
+<p>Jetzt liegt im Verzeichnis <code>objects</code> genau eine Datei. Anfangs speichert Git den Inhalt auf diese Art und Weise: In jeweils einer einzelnen Datei werden die Daten gespeichert, referenziert durch den SHA-1-Hash des Inhaltes und seines Headers. Der Name des Unterverzeichnis <code>d6</code> entspricht den ersten zwei Zeichen des SHA-1-Hashes. Die verbleibenden 38 Zeichen werden als Dateiname verwendet.</p>
+<!--You can pull the content back out of Git with the `cat-file` command. This command is sort of a Swiss army knife for inspecting Git objects. Passing `-p` to it instructs the `cat-file` command to figure out the type of content and display it nicely for you:-->
+
+<p>Mit dem Befehl <code>git cat-file</code> kannst Du den jeweiligen Inhalt nachschlagen. Dieser Befehl ist so etwas wie ein Schweizer Taschenmesser, wenn es um Objekte in der Git-Datenbank geht. Wenn Du die Option <code>-p</code> übergibst, versucht <code>git cat-file</code>, die Art des Inhaltes herauszufinden und lesbar darzustellen:</p>
+<pre><code>$ git cat<span class="hljs-attribute">-file</span> <span class="hljs-attribute">-p</span> d670460b4b4aece5915caf5c68d12f560a9fe3e4
+test content
+</code></pre><!--Now, you can add content to Git and pull it back out again. You can also do this with content in files. For example, you can do some simple version control on a file. First, create a new file and save its contents in your database:-->
+
+<p>Auf diese Weise kannst Du also Inhalte zu Git hinzufügen und von dort wieder auslesen. Das klappt auch mit Dateiinhalten. Wenn Du beispielsweise eine einzelne Datei versionieren willst, legst Du dazu die Datei zunächst an und speicherst ihren Inhalt in der Datenbank:</p>
+<pre><code>$ <span class="hljs-built_in">echo</span> <span class="hljs-string">'version 1'</span> &gt; test.txt
+$ git <span class="hljs-built_in">hash</span>-object -w test.txt
+<span class="hljs-number">83</span>baae61804e65cc73a7201a7252750c76066a30
+</code></pre><!--Then, write some new content to the file, and save it again:-->
+
+<p>Dann kannst Du Änderungen vornehmen und die Datei erneut speichern:</p>
+<pre><code>$ <span class="hljs-built_in">echo</span> <span class="hljs-string">'version 2'</span> &gt; test.txt
+$ git <span class="hljs-built_in">hash</span>-object -w test.txt
+<span class="hljs-number">1</span>f7a7a472abf3dd9643fd615f6da379c4acb3e3a
+</code></pre><!--Your database contains the two new versions of the file as well as the first content you stored there:-->
+
+<p>Die Datenbank enthält jetzt zwei weitere Versionen der Datei neben dem ursprünglich gespeicherten Inhalt:</p>
+<pre><code>$ find <span class="hljs-preprocessor">.git</span>/objects -type f
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">1</span>f/<span class="hljs-number">7</span>a7a472abf3dd9643fd615f6da379c4acb3e3a
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">83</span>/baae61804e65cc73a7201a7252750c76066a30
+<span class="hljs-preprocessor">.git</span>/objects/d6/<span class="hljs-number">70460</span>b4b4aece5915caf5c68d12f560a9fe3e4
+</code></pre><!--Now you can revert the file back to the first version-->
+
+<p>Jetzt kannst Du die erste Version der Datei mit folgendem Befehl wieder herstellen:</p>
+<pre><code><span class="hljs-variable">$ </span>git cat-file -p <span class="hljs-number">83</span>baae61804e65cc73a7201a7252750c76066a3<span class="hljs-number">0</span> &gt; test.txt
+<span class="hljs-variable">$ </span>cat test.txt
+version <span class="hljs-number">1</span>
+</code></pre><!--or the second version:-->
+
+<p>Oder die zweite Version:</p>
+<pre><code><span class="hljs-variable">$ </span>git cat-file -p <span class="hljs-number">1</span>f7a7a472abf3dd9643fd615f6da379c4acb3e3a &gt; test.txt
+<span class="hljs-variable">$ </span>cat test.txt
+version <span class="hljs-number">2</span>
+</code></pre><!--But remembering the SHA-1 key for each version of your file isn’t practical; plus, you aren’t storing the filename in your system — just the content. This object type is called a blob. You can have Git tell you the object type of any object in Git, given its SHA-1 key, with `cat-file -t`:-->
+
+<p>Sich den SHA-1-Hash für jede Version merken zu müssen, ist allerdings nicht sonderlich praktisch. Außerdem speicherst Du nicht den Dateinamen in der Datenbank, sondern lediglich den Inhalt der Datei. Ein solcher Objekttyp wird als „Blob“ bezeichnet. Mit <code>git cat-file -t</code> kannst Du Git nach dem Typ eines Objektes in der Datenbank fragen:</p>
+<pre><code>$ git cat<span class="hljs-attribute">-file</span> <span class="hljs-attribute">-t</span> <span class="hljs-number">1</span>f7a7a472abf3dd9643fd615f6da379c4acb3e3a
+blob
+</code></pre><!--## Tree Objects-->
+## Baum-Objekte
+
+<!--The next type you’ll look at is the tree object, which solves the problem of storing the filename and also allows you to store a group of files together. Git stores content in a manner similar to a UNIX filesystem, but a bit simplified. All the content is stored as tree and blob objects, with trees corresponding to UNIX directory entries and blobs corresponding more or less to inodes or file contents. A single tree object contains one or more tree entries, each of which contains a SHA-1 pointer to a blob or subtree with its associated mode, type, and filename. For example, the most recent tree in the simplegit project may look something like this:-->
+
+<p>Als Nächstes schauen wir uns den Objekttyp „Tree“ (Baum) an, der es ermöglicht, Dateinamen zu speichern und Dateien zu gruppieren. Git speichert Inhalte in einer ähnlichen Weise wie das UNIX-Dateisystem, allerdings ein bisschen vereinfacht. Sie werden als Tree- und Blob-Objekte abgelegt, wobei die Trees mit UNIX-Verzeichnis-Einträgen korrespondieren und Blobs mehr oder weniger mit den Inode-Einträgen bzw. Datei-Inhalten. Ein einzelnes Baum-Objekt enthält einen oder mehrere Einträge, von denen jeder ein SHA-1-Hash ist, der wiederum einen Blob oder einen Untertree referenziert. Jeder dieser Einträge verfügt außerdem über einen Modus, Typ und Dateinamen. Beispielsweise sieht das aktuelle Tree-Objekt im simplegit-Projekt möglicherweise so aus:</p>
+<pre><code>$ git cat<span class="hljs-attribute">-file</span> <span class="hljs-attribute">-p</span> master^{tree}
+<span class="hljs-number">100644</span> blob a906cb2a4a904a152e80877d4088654daad0c859      README
+<span class="hljs-number">100644</span> blob <span class="hljs-number">8</span>f94139338f9404f26296befa88755fc2598c289      Rakefile
+<span class="hljs-number">040000</span> tree <span class="hljs-number">99</span>f1a6d12cb4b6f19c8655fca46c3ecf317074e0      lib
+</code></pre><!--The `master^{tree}` syntax specifies the tree object that is pointed to by the last commit on your `master` branch. Notice that the `lib` subdirectory isn’t a blob but a pointer to another tree:-->
+
+<p>Die <code>master^{tree}</code>-Syntax spezifiziert, dass wir an dem Tree-Objekt interessiert sind, auf das der letzte Commit des Branches <code>master</code> zeigt. Beachte, dass das Unterverzeichnis <code>lib</code> nicht auf ein Blob, sondern wiederum auf einen weiteren Baum zeigt.</p>
+<pre><code>$ git cat<span class="hljs-attribute">-file</span> <span class="hljs-attribute">-p</span> <span class="hljs-number">99</span>f1a6d12cb4b6f19c8655fca46c3ecf317074e0
+<span class="hljs-number">100644</span> blob <span class="hljs-number">47</span>c6340d6459e05787f644c2447d2595f5d3a54b      simplegit<span class="hljs-built_in">.</span>rb
+</code></pre><!--Conceptually, the data that Git is storing is something like Figure 9-1.-->
+
+<p>Git speichert Daten also, konzeptuell gesehen, in etwa wie in Bild 9-1 dargestellt.</p>
+<!--Figure 9-1. Simple version of the Git data model.-->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0901-tn.png" alt=""></p>
+<p>Bild 9-1. Vereinfachte Darstellung des Git-Datenmodels.</p>
+<!--You can create your own tree. Git normally creates a tree by taking the state of your staging area or index and writing a tree object from it. So, to create a tree object, you first have to set up an index by staging some files. To create an index with a single entry — the first version of your test.txt file — you can use the plumbing command `update-index`. You use this command to artificially add the earlier version of the test.txt file to a new staging area. You must pass it the `-\-add` option because the file doesn’t yet exist in your staging area (you don’t even have a staging area set up yet) and `-\-cacheinfo` because the file you’re adding isn’t in your directory but is in your database. Then, you specify the mode, SHA-1, and filename:-->
+
+<p>Du kannst auch Deine eigenen Tree-Objekte anlegen. Git erzeugt Trees normalerweise, indem es die Inhalte der Staging-Area nimmt und als ein Tree-Objekt speichert. D.h., um ein Tree-Objekt anzulegen, musst Du zunächst einen Index (d.h. eine Staging-Area) aufbauen, indem Du einige Dateien hinzufügst. Um einen einzelnen Eintrag in den Index zu schreiben – z.B. die erste version der Datei test.txt – kannst Du den Plumbing-Befehl <code>git update-index</code> verwenden, der eine frühere Version dieser Datei künstlich zu einer neuen Staging-Area hinzufügt. Du musst ihm die Option <code>--add</code> übergeben, weil die Datei bisher noch nicht in der Staging-Area enthalten ist (Du hast ja bisher noch überhaupt keine Staging-Area aufgesetzt), und die Option <code>--cacheinfo</code>, weil Du eine Datei hinzufügst, die sich nicht in Deinem Verzeichnis befindet, sondern in der Datenbank. Du gibst außerdem den Modus, SHA-1-Hash und den Dateinamen an:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">update</span><span class="hljs-literal">-</span><span class="hljs-comment">index</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">add</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">cacheinfo</span> <span class="hljs-comment">100644</span> <span class="hljs-comment">\</span>
+  <span class="hljs-comment">83baae61804e65cc73a7201a7252750c76066a30</span> <span class="hljs-comment">test</span><span class="hljs-string">.</span><span class="hljs-comment">txt</span>
+</code></pre><!--In this case, you’re specifying a mode of `100644`, which means it’s a normal file. Other options are `100755`, which means it’s an executable file; and `120000`, which specifies a symbolic link. The mode is taken from normal UNIX modes but is much less flexible — these three modes are the only ones that are valid for files (blobs) in Git (although other modes are used for directories and submodules).-->
+
+<p>In diesem Fall gibst Du als Modus <code>100644</code> an, was bedeutet, dass es sich um eine normale Datei handelt. Eine ausführbare Datei wäre dagegen <code>100755</code> und ein symbolischer Link <code>120000</code>. Der Modus entspricht normalen UNIX-Datei-Modi, ist aber weniger flexibel. Die drei genannten Modi sind die einzigen, die in Git für Dateien (Blobs) verwendet werden (es gibt allerdings noch weitere Modi für Verzeichnisse und Submodule).</p>
+<!--Now, you can use the `write-tree` command to write the staging area out to a tree object. No `-w` option is needed — calling `write-tree` automatically creates a tree object from the state of the index if that tree doesn’t yet exist:-->
+
+<p>Jetzt kannst Du den Befehl <code>git write-tree</code> verwenden, um die Staging-Area als Tree-Objekt zu schreiben. Dazu brauchst Du die <code>-w</code> Option nicht angeben – <code>git write-tree</code> schreibt automatisch ein Tree-Objekt für Einträge der Staging-Area, für die es noch keinen Tree gibt:</p>
+<pre><code>$ git write<span class="hljs-attribute">-tree</span>
+d8329fc1cc938780ffdd9f94e0d364e0ea74f579
+$ git cat<span class="hljs-attribute">-file</span> <span class="hljs-attribute">-p</span> d8329fc1cc938780ffdd9f94e0d364e0ea74f579
+<span class="hljs-number">100644</span> blob <span class="hljs-number">83</span>baae61804e65cc73a7201a7252750c76066a30      test<span class="hljs-built_in">.</span>txt
+</code></pre><!--You can also verify that this is a tree object:-->
+
+<p>Um zu überprüfen, ob es sich wirklich um ein Tree-Objekt handelt:</p>
+<pre><code>$ git cat<span class="hljs-attribute">-file</span> <span class="hljs-attribute">-t</span> d8329fc1cc938780ffdd9f94e0d364e0ea74f579
+tree
+</code></pre><!--You’ll now create a new tree with the second version of test.txt and a new file as well:-->
+
+<p>Jetzt erzeugen wir einen neuen Tree mit der zweiten Version der Datei test.txt sowie einer neuen Datei:</p>
+<pre><code>$ echo <span class="hljs-string">'new file'</span> &gt; <span class="hljs-keyword">new</span>.txt
+$ git update-<span class="hljs-keyword">index</span> test.txt
+$ git update-<span class="hljs-keyword">index</span> --<span class="hljs-keyword">add</span> <span class="hljs-keyword">new</span>.txt
+</code></pre><!--Your staging area now has the new version of test.txt as well as the new file new.txt. Write out that tree (recording the state of the staging area or index to a tree object) and see what it looks like:-->
+
+<p>Die Staging-Area enthält jetzt eine neue Version der Datei test.txt sowie die neue Datei new.txt. Speichern wir diesen Tree (d.h. den gegenwärtigen Status der Staging-Area bzw. des Index als Tree-Objekt) und schauen ihn uns an:</p>
+<pre><code>$ git write<span class="hljs-attribute">-tree</span>
+<span class="hljs-number">0155</span>eb4229851634a0f03eb265b69f5a2d56f341
+$ git cat<span class="hljs-attribute">-file</span> <span class="hljs-attribute">-p</span> <span class="hljs-number">0155</span>eb4229851634a0f03eb265b69f5a2d56f341
+<span class="hljs-number">100644</span> blob fa49b077972391ad58037050f2a75f74e3671e92      <span class="hljs-literal">new</span><span class="hljs-built_in">.</span>txt
+<span class="hljs-number">100644</span> blob <span class="hljs-number">1</span>f7a7a472abf3dd9643fd615f6da379c4acb3e3a      test<span class="hljs-built_in">.</span>txt
+</code></pre><!--Notice that this tree has both file entries and also that the test.txt SHA is the "version 2" SHA from earlier (`1f7a7a`). Just for fun, you’ll add the first tree as a subdirectory into this one. You can read trees into your staging area by calling `read-tree`. In this case, you can read an existing tree into your staging area as a subtree by using the `-\-prefix` option to `read-tree`:-->
+
+<p>Beachte, dass das Tree-Objekt beide Datei-Einträge hat und dass der SHA-1-Hash der Datei test.txt noch derselbe „Version 2“-Hash ist wie zuvor (<code>1f7a7a</code>). Fügen wir jetzt den ersten Tree als ein Unterverzeichnis in diesem hier ein. Du kannst einen Tree mit <code>git read-tree</code> in die Staging-Area einlesen. In diesem Fall können wir einen bereits existierenden Tree als einen Untertree zur Staging-Area hinzufügen, indem wir die Option <code>--prefix</code> verwenden:</p>
+<pre><code>$ git <span class="hljs-built_in">read</span>-tree <span class="hljs-comment">--prefix=bak d8329fc1cc938780ffdd9f94e0d364e0ea74f579</span>
+$ git <span class="hljs-built_in">write</span>-tree
+<span class="hljs-number">3</span>c4e9cd789d88d8d89c1073707c3585e41b0e614
+$ git cat-<span class="hljs-built_in">file</span> -p <span class="hljs-number">3</span>c4e9cd789d88d8d89c1073707c3585e41b0e614
+<span class="hljs-number">040000</span> tree d8329fc1cc938780ffdd9f94e0d364e0ea74f579      bak
+<span class="hljs-number">100644</span> blob fa49b077972391ad58037050f2a75f74e3671e92      <span class="hljs-built_in">new</span>.txt
+<span class="hljs-number">100644</span> blob <span class="hljs-number">1</span>f7a7a472abf3dd9643fd615f6da379c4acb3e3a      test.txt
+</code></pre><!--If you created a working directory from the new tree you just wrote, you would get the two files in the top level of the working directory and a subdirectory named `bak` that contained the first version of the test.txt file. You can think of the data that Git contains for these structures as being like Figure 9-2.-->
+
+<p>Wenn Du ein Arbeitsverzeichnis aus diesem neuen Tree-Objekt auschecken würdest, würdest Du zwei Dateien im Hauptverzeichnis und ein Unterverzeichnis mit dem Namen <code>bak</code> erhalten, in dem sich die erste Version der Datei test.txt befindet. Du kannst Dir die Daten, die Git für diese Strukturen speichert, in etwa wie in Bild 9-2 vorstellen.</p>
+<!--Figure 9-2. The content structure of your current Git data.-->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0902-tn.png" alt=""></p>
+<p>Bild 9-2. Die Datenstruktur des gegenwärtigen Git-Repositorys.</p>
+<!--## Commit Objects-->
+## Objekte committen
+
+<!--You have three trees that specify the different snapshots of your project that you want to track, but the earlier problem remains: you must remember all three SHA-1 values in order to recall the snapshots. You also don’t have any information about who saved the snapshots, when they were saved, or why they were saved. This is the basic information that the commit object stores for you.-->
+
+<p>Du hast jetzt drei Trees, die verschiedene Snapshots Deines Projektes spezifizieren, die Du nachverfolgen willst. Das ursprüngliche Problem besteht aber weiterhin: Du musst Dir alle drei SHA-1-Hashwerte merken, um wieder an die Snapshots zu kommen. Ebenso fehlen Dir die Informationen darüber, wer die Snapshots gespeichert hat, wann sie gespeichert wurden und warum. Dies sind die drei Hauptinformationen, die ein Commit-Objekt für uns speichert.</p>
+<!--To create a commit object, you call `commit-tree` and specify a single tree SHA-1 and which commit objects, if any, directly preceded it. Start with the first tree you wrote:-->
+
+<p>Um ein Commit-Objekt anzulegen, verwendest Du den Befehl <code>git commit-tree</code>, spezifizierst den SHA-1-Hash eines einzelnen Trees und welche Commit-Objekte (sofern vorhanden) die direkten Vorgänger sind. Fangen wir damit an, den ersten Tree, den Du angelegt hast, einzuchecken:</p>
+<pre><code>$ <span class="hljs-built_in">echo</span> <span class="hljs-string">'first commit'</span> | git commit-tree d8329f
+fdf4fc3344e67ab068f836878b6c4951e3b15f3d
+</code></pre><!--Now you can look at your new commit object with `cat-file`:-->
+
+<p>Du kannst Dir dann dieses neue Commit-Objekt mit <code>cat-file</code> anschauen:</p>
+<pre><code><span class="hljs-variable">$ </span>git cat-file -p fdf4fc3
+tree d8329fc1cc938780ffdd9f94e0d364e0ea74f579
+author <span class="hljs-constant">Scott</span> <span class="hljs-constant">Chacon</span> &lt;schacon<span class="hljs-variable">@gmail</span>.com&gt; <span class="hljs-number">1243040974</span> -<span class="hljs-number">0700</span>
+committer <span class="hljs-constant">Scott</span> <span class="hljs-constant">Chacon</span> &lt;schacon<span class="hljs-variable">@gmail</span>.com&gt; <span class="hljs-number">1243040974</span> -<span class="hljs-number">0700</span>
+
+first commit
+</code></pre><!--The format for a commit object is simple: it specifies the top-level tree for the snapshot of the project at that point; the author/committer information pulled from your `user.name` and `user.email` configuration settings, with the current timestamp; a blank line, and then the commit message.-->
+
+<p>Das Format für ein Commit-Objekt ist einfach: es besteht aus dem obersten Tree für den Snapshot des Projektes zum gegebenen Zeitpunkt, die Autoren- und ggf. Committer-Information (jeweils entsprechend Deiner <code>user.name</code>- und <code>user.email</code>-Konfiguration) und dem aktuellen Zeitstempel. Dann folgen eine leere Zeile und die Commit-Nachricht.</p>
+<!--Next, you’ll write the other two commit objects, each referencing the commit that came directly before it:-->
+
+<p>Als Nächstes speichern wir die beiden anderen Commit-Objekte und referenzieren jeweils den vorhergehenden Commit:</p>
+<pre><code>$ echo <span class="hljs-string">'second commit'</span> <span class="hljs-subst">|</span> git commit<span class="hljs-attribute">-tree</span> <span class="hljs-number">0155</span>eb <span class="hljs-attribute">-p</span> fdf4fc3
+cac0cab538b970a37ea1e769cbbde608743bc96d
+$ echo <span class="hljs-string">'third commit'</span>  <span class="hljs-subst">|</span> git commit<span class="hljs-attribute">-tree</span> <span class="hljs-number">3</span>c4e9c <span class="hljs-attribute">-p</span> cac0cab
+<span class="hljs-number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9
+</code></pre><!--Each of the three commit objects points to one of the three snapshot trees you created. Oddly enough, you have a real Git history now that you can view with the `git log` command, if you run it on the last commit SHA-1:-->
+
+<p>Jedes der drei Commit-Objekte zeigt auf einen der drei Snapshot-Trees, die Du zuvor gespeichert hattest. Es mag Dich überraschen, aber Du hast jetzt bereits eine vollständige Git-Historie, die Du mit dem Befehl <code>git log</code> inspizieren kannst, indem Du den SHA-1-Hash des letzten Commits angibst:</p>
+<pre><code>$ git log --stat <span class="hljs-number">1</span>a410e
+commit <span class="hljs-number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gmail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Fri May <span class="hljs-number">22</span> <span class="hljs-number">18</span>:<span class="hljs-number">15</span>:<span class="hljs-number">24</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    third commit
+
+ bak/test<span class="hljs-preprocessor">.txt</span> |    <span class="hljs-number">1</span> +
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+
+commit cac0cab538b970a37ea1e769cbbde608743bc96d
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gmail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Fri May <span class="hljs-number">22</span> <span class="hljs-number">18</span>:<span class="hljs-number">14</span>:<span class="hljs-number">29</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    second commit
+
+ new<span class="hljs-preprocessor">.txt</span>  |    <span class="hljs-number">1</span> +
+ test<span class="hljs-preprocessor">.txt</span> |    <span class="hljs-number">2</span> +-
+ <span class="hljs-number">2</span> files changed, <span class="hljs-number">2</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+
+commit fdf4fc3344e67ab068f836878b6c4951e3b15f3d
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gmail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Fri May <span class="hljs-number">22</span> <span class="hljs-number">18</span>:<span class="hljs-number">09</span>:<span class="hljs-number">34</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    first commit
+
+ test<span class="hljs-preprocessor">.txt</span> |    <span class="hljs-number">1</span> +
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><!--Amazing. You’ve just done the low-level operations to build up a Git history without using any of the front ends. This is essentially what Git does when you run the `git add` and `git commit` commands — it stores blobs for the files that have changed, updates the index, writes out trees, and writes commit objects that reference the top-level trees and the commits that came immediately before them. These three main Git objects — the blob, the tree, and the commit — are initially stored as separate files in your `.git/objects` directory. Here are all the objects in the example directory now, commented with what they store:-->
+
+<p>Fantastisch, oder? Du hast jetzt sämtliche Low-Level-Operationen durchgeführt, die eine vollständige Git-Historie aufbauen, ohne aber irgendwelche Frontend-Befehle von Git zu verwenden. Im Wesentlichen ist das derselbe Prozess, der im Hintergrund stattfindet, wenn Du die Befehle <code>git add</code> und <code>git commit</code> ausführst. Sie speichern Blobs für die Dateien, die Du hinzugefügt oder geändert hast, aktualisieren den Index (d.h. die Staging-Area), speichern Trees und legen Commit Objekte an, die die obersten Trees sowie die Commits referenzieren, die ihnen unmittelbar vorhergingen. Diese drei Hauptobjekte – Blob, Tree und Commit – werden zunächst als separate Dateien im Verzeichnis <code>.git/objects</code> gespeichert. Hier ist eine Liste aller Objekte, die sich in unserem Beispiel-Repository jetzt in der Datenbank befinden – jeweils mit einem Kommentar darüber, was sie speichern:</p>
+<pre><code>$ find <span class="hljs-preprocessor">.git</span>/objects -type f
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">01</span>/<span class="hljs-number">55</span>eb4229851634a0f03eb265b69f5a2d56f341 <span class="hljs-preprocessor"># tree 2</span>
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">1</span>a/<span class="hljs-number">410</span>efbd13591db07496601ebc7a059dd55cfe9 <span class="hljs-preprocessor"># commit 3</span>
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">1</span>f/<span class="hljs-number">7</span>a7a472abf3dd9643fd615f6da379c4acb3e3a <span class="hljs-preprocessor"># test.txt v2</span>
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">3</span>c/<span class="hljs-number">4e9</span>cd789d88d8d89c1073707c3585e41b0e614 <span class="hljs-preprocessor"># tree 3</span>
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">83</span>/baae61804e65cc73a7201a7252750c76066a30 <span class="hljs-preprocessor"># test.txt v1</span>
+<span class="hljs-preprocessor">.git</span>/objects/ca/c0cab538b970a37ea1e769cbbde608743bc96d <span class="hljs-preprocessor"># commit 2</span>
+<span class="hljs-preprocessor">.git</span>/objects/d6/<span class="hljs-number">70460</span>b4b4aece5915caf5c68d12f560a9fe3e4 <span class="hljs-preprocessor"># 'test content'</span>
+<span class="hljs-preprocessor">.git</span>/objects/d8/<span class="hljs-number">329</span>fc1cc938780ffdd9f94e0d364e0ea74f579 <span class="hljs-preprocessor"># tree 1</span>
+<span class="hljs-preprocessor">.git</span>/objects/fa/<span class="hljs-number">49</span>b077972391ad58037050f2a75f74e3671e92 <span class="hljs-preprocessor"># new.txt</span>
+<span class="hljs-preprocessor">.git</span>/objects/fd/f4fc3344e67ab068f836878b6c4951e3b15f3d <span class="hljs-preprocessor"># commit 1</span>
+</code></pre><!--If you follow all the internal pointers, you get an object graph something like Figure 9-3.-->
+
+<p>Wenn man all diese internen Zeiger nachverfolgt, erhält man einen Objekt-Graphen wie den folgenden (Bild 9-3).</p>
+<!--Figure 9-3. All the objects in your Git directory.-->
+
+
+<p><img src="http://git-scm.com/figures/18333fig0903-tn.png" alt=""></p>
+<p>Bild 9-3. Alle Objekte in Deinem Git-Repository.</p>
+<!--## Object Storage-->
+## Objekt-Speicher
+
+<!--I mentioned earlier that a header is stored with the content. Let’s take a minute to look at how Git stores its objects. You’ll see how to store a blob object — in this case, the string "what is up, doc?" — interactively in the Ruby scripting language. You can start up interactive Ruby mode with the `irb` command:-->
+
+<p>Ich habe bereits erwähnt, dass zusammen mit dem jeweiligen Inhalt ein Header gespeichert wird. Schauen wir uns also genauer an, wie genau Git Objekte speichert. Du wirst sehen, wie ein Blob-Objekt – in diesem Fall die Zeichenkette „what is up, doc?“ gespeichert wird. Dazu nutzen wir den interaktiven Ruby-Modus, den Du mit dem Befehl <code>irb</code> starten kannst:</p>
+<pre><code><span class="hljs-variable">$ </span>irb
+&gt;&gt; content = <span class="hljs-string">"what is up, doc?"</span>
+=&gt; <span class="hljs-string">"what is up, doc?"</span>
+</code></pre><!--Git constructs a header that starts with the type of the object, in this case a blob. Then, it adds a space followed by the size of the content and finally a null byte:-->
+
+<p>Git erzeugt einen Header, der mit dem Objekttyp beginnt, in diesem Fall ist das ein Blob. Dann folgt ein Leerzeichen, die Anzahl der Zeichen des Inhalts und schließlich ein Nullbyte.</p>
+<pre><code>&gt;&gt; header = "blob #{<span class="ruby">content.length}</span>\0"
+=<span class="ruby">&gt; <span class="hljs-string">"blob 16\000"</span></span>
+</code></pre><!--Git concatenates the header and the original content and then calculates the SHA-1 checksum of that new content. You can calculate the SHA-1 value of a string in Ruby by including the SHA1 digest library with the `require` command and then calling `Digest::SHA1.hexdigest()` with the string:-->
+
+<p>Git fügt diesen Header mit dem ursprünglichen Inhalt zusammen und kalkuliert aus dem Ergebnis die SHA-1-Prüfsumme. Du kannst einen SHA-1-Hash in Ruby berechnen, indem Du die SHA1-Digest-Bibliothek mit <code>require</code> einbindest und dann <code>Digest::SHA1.hexdigest()</code> mit der Zeichenkette ausführst:</p>
+<pre><code>&gt;&gt; store = header + content<span class="hljs-function">
+=&gt;</span> <span class="hljs-string">"blob 16\000what is up, doc?"</span>
+&gt;&gt; <span class="hljs-built_in">require</span> <span class="hljs-string">'digest/sha1'</span><span class="hljs-function">
+=&gt;</span> <span class="hljs-literal">true</span>
+&gt;&gt; sha1 = <span class="hljs-attribute">Digest</span>::SHA1.hexdigest<span class="hljs-function"><span class="hljs-params">(store)</span>
+=&gt;</span> <span class="hljs-string">"bd9dbf5aae1a3862dd1526723246b20206e5fc37"</span>
+</code></pre><!--Git compresses the new content with zlib, which you can do in Ruby with the zlib library. First, you need to require the library and then run `Zlib::Deflate.deflate()` on the content:-->
+
+<p>Git komprimiert den neuen Inhalt (d.h. inklusive des Headers) mit zlib. In Ruby kannst Du dazu die zlib-Bibliothek verwenden, indem Du wiederum zuerst die Bibliothek mit <code>require</code> einbindest und dann <code>Zlib::Deflate.deflate()</code> mit dem Inhalt aufrufst:</p>
+<pre><code>&gt;&gt; <span class="hljs-built_in">require</span> <span class="hljs-string">'zlib'</span><span class="hljs-function">
+=&gt;</span> <span class="hljs-literal">true</span>
+&gt;&gt; zlib_content = <span class="hljs-attribute">Zlib</span>::Deflate.deflate<span class="hljs-function"><span class="hljs-params">(store)</span>
+=&gt;</span> <span class="hljs-string">"x\234K\312\311OR04c(\317H,Q\310,V(-\320QH\311O\266\a\000_\034\a\235"</span>
+</code></pre><!--Finally, you’ll write your zlib-deflated content to an object on disk. You’ll determine the path of the object you want to write out (the first two characters of the SHA-1 value being the subdirectory name, and the last 38 characters being the filename within that directory). In Ruby, you can use the `FileUtils.mkdir_p()` function to create the subdirectory if it doesn’t exist. Then, open the file with `File.open()` and write out the previously zlib-compressed content to the file with a `write()` call on the resulting file handle:-->
+
+<p>Schließlich schreibst Du den zlib-komprimierten Inhalt in eine Datei auf der Festplatte. Dazu bestimmst Du den Pfad, an den die Datei gespeichert wird (die ersten beiden Zeichen für das Unterverzeichnis und die verbleibenden 38 Zeichen für den Dateinamen). In Ruby kannst Du die Funktion <code>FileUtils.mkdir_p()</code> verwenden, um Unterverzeichnisse anzulegen, die noch nicht existieren. Dann öffnest Du die Datei mit <code>File.open()</code> und schreibst den komprimierten Inhalt mit <code>write()</code> in die Datei:</p>
+<pre><code>&gt;&gt; path = <span class="hljs-string">'.git/objects/'</span> + sha1[<span class="hljs-number">0</span>,<span class="hljs-number">2</span>] + <span class="hljs-string">'/'</span> + sha1[<span class="hljs-number">2</span>,<span class="hljs-number">38</span>]<span class="hljs-function">
+=&gt;</span> <span class="hljs-string">".git/objects/bd/9dbf5aae1a3862dd1526723246b20206e5fc37"</span>
+&gt;&gt; <span class="hljs-built_in">require</span> <span class="hljs-string">'fileutils'</span><span class="hljs-function">
+=&gt;</span> <span class="hljs-literal">true</span>
+&gt;&gt; FileUtils.mkdir_p<span class="hljs-function"><span class="hljs-params">(File.dirname(path))</span>
+=&gt;</span> <span class="hljs-string">".git/objects/bd"</span>
+&gt;&gt; File.open(path, <span class="hljs-string">'w'</span>) { |f| f.write zlib_content }<span class="hljs-function">
+=&gt;</span> <span class="hljs-number">32</span>
+</code></pre><!--That’s it — you’ve created a valid Git blob object. All Git objects are stored the same way, just with different types — instead of the string blob, the header will begin with commit or tree. Also, although the blob content can be nearly anything, the commit and tree content are very specifically formatted.-->
+
+<p>Das ist alles – Du hast jetzt ein gültiges Blob-Objekt geschrieben. Git-Objekte werden immer in dieser Weise gespeichert, lediglich mit verschiedenen Typen, d.h. anstelle der Zeichenkette „blob“ wird der Header mit „commit“ oder „tree“ anfangen. Außerdem sind Commit- und Tree-Inhalte auf eine sehr spezifische Weise formatiert, während Blobs beliebige Inhalte sein können.</p>
+<!--# Git References-->
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_internals/plumbing_und_porcelain.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_internals/git_referenzen.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

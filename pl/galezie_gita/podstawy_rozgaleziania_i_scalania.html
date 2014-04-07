@@ -1,0 +1,998 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Podstawy rozgałęziania i scalania | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../galezie_gita/zarzadzanie_galeziami.html" />
+        
+        
+        <link rel="prev" href="../galezie_gita/czym_jest_galaz.html" />
+        
+
+        <meta property="og:title" content="Podstawy rozgałęziania i scalania | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="3.2" data-basepath=".." data-revision="1396895622000">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/galezie_gita/podstawy_rozgaleziania_i_scalania.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="pierwsze_kroki/README.html">
+                
+                <a href="../pierwsze_kroki/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Pierwsze kroki
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="pierwsze_kroki/wprowadzenie_do_kontroli_wersji.html">
+                            
+                            <a href="../pierwsze_kroki/wprowadzenie_do_kontroli_wersji.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Wprowadzenie do kontroli wersji
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="pierwsze_kroki/krotka_historia_git.html">
+                            
+                            <a href="../pierwsze_kroki/krotka_historia_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Krótka historia Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="pierwsze_kroki/podstawy_git.html">
+                            
+                            <a href="../pierwsze_kroki/podstawy_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Podstawy Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="pierwsze_kroki/instalacja_git.html">
+                            
+                            <a href="../pierwsze_kroki/instalacja_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Instalacja Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="pierwsze_kroki/wstepna_konfiguracja_git.html">
+                            
+                            <a href="../pierwsze_kroki/wstepna_konfiguracja_git.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Wstępna konfiguracja Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="pierwsze_kroki/uzyskiwanie_pomocy.html">
+                            
+                            <a href="../pierwsze_kroki/uzyskiwanie_pomocy.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Uzyskiwanie pomocy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="pierwsze_kroki/podsumowanie.html">
+                            
+                            <a href="../pierwsze_kroki/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="podstawy_gita/README.html">
+                
+                <a href="../podstawy_gita/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Podstawy Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="podstawy_gita/pierwsze_repozytorium_gita.html">
+                            
+                            <a href="../podstawy_gita/pierwsze_repozytorium_gita.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Pierwsze repozytorium Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="podstawy_gita/rejestrowanie_zmian_w_repozytorium.html">
+                            
+                            <a href="../podstawy_gita/rejestrowanie_zmian_w_repozytorium.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Rejestrowanie zmian w repozytorium
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="podstawy_gita/podglad_historii_rewizji.html">
+                            
+                            <a href="../podstawy_gita/podglad_historii_rewizji.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Podgląd historii rewizji
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="podstawy_gita/cofanie_zmian.html">
+                            
+                            <a href="../podstawy_gita/cofanie_zmian.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Cofanie zmian
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="podstawy_gita/praca_ze_zdalnym_repozytorium.html">
+                            
+                            <a href="../podstawy_gita/praca_ze_zdalnym_repozytorium.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Praca ze zdalnym repozytorium
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="podstawy_gita/tagowanie_etykietowanie.html">
+                            
+                            <a href="../podstawy_gita/tagowanie_etykietowanie.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagowanie (etykietowanie)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="podstawy_gita/sztuczki_i_kruczki.html">
+                            
+                            <a href="../podstawy_gita/sztuczki_i_kruczki.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Sztuczki i kruczki
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="podstawy_gita/podsumowanie.html">
+                            
+                            <a href="../podstawy_gita/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="galezie_gita/README.html">
+                
+                <a href="../galezie_gita/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Gałęzie Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="galezie_gita/czym_jest_galaz.html">
+                            
+                            <a href="../galezie_gita/czym_jest_galaz.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Czym jest gałąź
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="galezie_gita/podstawy_rozgaleziania_i_scalania.html">
+                            
+                            <a href="../galezie_gita/podstawy_rozgaleziania_i_scalania.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Podstawy rozgałęziania i scalania
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="galezie_gita/zarzadzanie_galeziami.html">
+                            
+                            <a href="../galezie_gita/zarzadzanie_galeziami.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Zarządzanie gałęziami
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="galezie_gita/sposoby_pracy_z_galeziami.html">
+                            
+                            <a href="../galezie_gita/sposoby_pracy_z_galeziami.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Sposoby pracy z gałęziami
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="galezie_gita/galezie_zdalne.html">
+                            
+                            <a href="../galezie_gita/galezie_zdalne.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Gałęzie zdalne
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="galezie_gita/zmiana_bazy.html">
+                            
+                            <a href="../galezie_gita/zmiana_bazy.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Zmiana bazy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="galezie_gita/podsumowanie.html">
+                            
+                            <a href="../galezie_gita/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_na_serwerze/README.html">
+                
+                <a href="../git_na_serwerze/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git na serwerze
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_na_serwerze/protokoly.html">
+                            
+                            <a href="../git_na_serwerze/protokoly.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Protokoły
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_na_serwerze/uruchomienie_git_na_serwerze.html">
+                            
+                            <a href="../git_na_serwerze/uruchomienie_git_na_serwerze.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Uruchomienie Git na serwerze
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_na_serwerze/generacja_pary_kluczy_ssh.html">
+                            
+                            <a href="../git_na_serwerze/generacja_pary_kluczy_ssh.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Generacja pary kluczy SSH
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_na_serwerze/konfiguracja_serwera.html">
+                            
+                            <a href="../git_na_serwerze/konfiguracja_serwera.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Konfiguracja serwera
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_na_serwerze/dostep_publiczny.html">
+                            
+                            <a href="../git_na_serwerze/dostep_publiczny.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Dostęp publiczny
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_na_serwerze/gitolite.html">
+                            
+                            <a href="../git_na_serwerze/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_na_serwerze/git_demon.html">
+                            
+                            <a href="../git_na_serwerze/git_demon.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Git Demon
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_na_serwerze/hosting_gita.html">
+                            
+                            <a href="../git_na_serwerze/hosting_gita.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Hosting Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_na_serwerze/podsumowanie.html">
+                            
+                            <a href="../git_na_serwerze/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="rozproszony_git/README.html">
+                
+                <a href="../rozproszony_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Rozproszony Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="rozproszony_git/rozproszone_przeplywy_pracy.html">
+                            
+                            <a href="../rozproszony_git/rozproszone_przeplywy_pracy.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Rozproszone przepływy pracy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="rozproszony_git/wgrywanie_zmian_do_projektu.html">
+                            
+                            <a href="../rozproszony_git/wgrywanie_zmian_do_projektu.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Wgrywanie zmian do projektu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="rozproszony_git/utrzymywanie_projektu.html">
+                            
+                            <a href="../rozproszony_git/utrzymywanie_projektu.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Utrzymywanie projektu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="rozproszony_git/podsumowanie.html">
+                            
+                            <a href="../rozproszony_git/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="narzedzia_gita/README.html">
+                
+                <a href="../narzedzia_gita/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Narzędzia Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="narzedzia_gita/wskazywanie_rewizji.html">
+                            
+                            <a href="../narzedzia_gita/wskazywanie_rewizji.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Wskazywanie rewizji
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="narzedzia_gita/interaktywne_uzywanie_przechowali.html">
+                            
+                            <a href="../narzedzia_gita/interaktywne_uzywanie_przechowali.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Interaktywne używanie przechowali
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="narzedzia_gita/schowek.html">
+                            
+                            <a href="../narzedzia_gita/schowek.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Schowek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="narzedzia_gita/przepisywanie_historii.html">
+                            
+                            <a href="../narzedzia_gita/przepisywanie_historii.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Przepisywanie Historii
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="narzedzia_gita/debugowanie_z_gitem.html">
+                            
+                            <a href="../narzedzia_gita/debugowanie_z_gitem.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Debugowanie z Gitem
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="narzedzia_gita/moduly_zalezne.html">
+                            
+                            <a href="../narzedzia_gita/moduly_zalezne.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Moduły zależne
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="narzedzia_gita/wlaczanie_innych_projektow.html">
+                            
+                            <a href="../narzedzia_gita/wlaczanie_innych_projektow.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Włączanie innych projektów
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="narzedzia_gita/podsumowanie.html">
+                            
+                            <a href="../narzedzia_gita/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="dostosowywanie_gita/README.html">
+                
+                <a href="../dostosowywanie_gita/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Dostosowywanie Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="dostosowywanie_gita/konfiguracja_gita.html">
+                            
+                            <a href="../dostosowywanie_gita/konfiguracja_gita.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Konfiguracja Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="dostosowywanie_gita/git_attributes.html">
+                            
+                            <a href="../dostosowywanie_gita/git_attributes.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git Attributes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="dostosowywanie_gita/git_hooks.html">
+                            
+                            <a href="../dostosowywanie_gita/git_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git Hooks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="dostosowywanie_gita/an_example_git_enforced_policy.html">
+                            
+                            <a href="../dostosowywanie_gita/an_example_git_enforced_policy.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> An Example Git-Enforced Policy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="dostosowywanie_gita/summary.html">
+                            
+                            <a href="../dostosowywanie_gita/summary.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_i_inne_systemy/README.html">
+                
+                <a href="../git_i_inne_systemy/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git i inne systemy
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_i_inne_systemy/git_i_subversion.html">
+                            
+                            <a href="../git_i_inne_systemy/git_i_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git i Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_i_inne_systemy/migracja_do_gita.html">
+                            
+                            <a href="../git_i_inne_systemy/migracja_do_gita.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Migracja do Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_i_inne_systemy/podsumowanie.html">
+                            
+                            <a href="../git_i_inne_systemy/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="mechanizmy_wewnetrzne_w_git/README.html">
+                
+                <a href="../mechanizmy_wewnetrzne_w_git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Mechanizmy wewnętrzne w Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="mechanizmy_wewnetrzne_w_git/komendy_plumbing_i_porcelain.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/komendy_plumbing_i_porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Komendy Plumbing i Porcelain
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="mechanizmy_wewnetrzne_w_git/obiekty_gita.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/obiekty_gita.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Obiekty Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="mechanizmy_wewnetrzne_w_git/referencje_w_git.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/referencje_w_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Referencje w Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="mechanizmy_wewnetrzne_w_git/spakowane_pliki_packfiles.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/spakowane_pliki_packfiles.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Spakowane pliki (packfiles)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="mechanizmy_wewnetrzne_w_git/refspec.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="mechanizmy_wewnetrzne_w_git/protokoly_transferu.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/protokoly_transferu.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Protokoły transferu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Konserwacja i Odzyskiwanie Danych
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="mechanizmy_wewnetrzne_w_git/podsumowanie.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 29.41176470588235%;min-width: 27.941176470588236%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../pierwsze_kroki/README.html" title="Pierwsze kroki" class="chapter done new-chapter" data-progress="1" style="left: 1.4705882352941178%;"></a>
+    
+        <a href="../pierwsze_kroki/wprowadzenie_do_kontroli_wersji.html" title="Wprowadzenie do kontroli wersji" class="chapter done " data-progress="1.1" style="left: 2.9411764705882355%;"></a>
+    
+        <a href="../pierwsze_kroki/krotka_historia_git.html" title="Krótka historia Git" class="chapter done " data-progress="1.2" style="left: 4.411764705882353%;"></a>
+    
+        <a href="../pierwsze_kroki/podstawy_git.html" title="Podstawy Git" class="chapter done " data-progress="1.3" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../pierwsze_kroki/instalacja_git.html" title="Instalacja Git" class="chapter done " data-progress="1.4" style="left: 7.352941176470588%;"></a>
+    
+        <a href="../pierwsze_kroki/wstepna_konfiguracja_git.html" title="Wstępna konfiguracja Git" class="chapter done " data-progress="1.5" style="left: 8.823529411764707%;"></a>
+    
+        <a href="../pierwsze_kroki/uzyskiwanie_pomocy.html" title="Uzyskiwanie pomocy" class="chapter done " data-progress="1.6" style="left: 10.294117647058824%;"></a>
+    
+        <a href="../pierwsze_kroki/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="1.7" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../podstawy_gita/README.html" title="Podstawy Gita" class="chapter done new-chapter" data-progress="2" style="left: 13.235294117647058%;"></a>
+    
+        <a href="../podstawy_gita/pierwsze_repozytorium_gita.html" title="Pierwsze repozytorium Gita" class="chapter done " data-progress="2.1" style="left: 14.705882352941176%;"></a>
+    
+        <a href="../podstawy_gita/rejestrowanie_zmian_w_repozytorium.html" title="Rejestrowanie zmian w repozytorium" class="chapter done " data-progress="2.2" style="left: 16.176470588235293%;"></a>
+    
+        <a href="../podstawy_gita/podglad_historii_rewizji.html" title="Podgląd historii rewizji" class="chapter done " data-progress="2.3" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../podstawy_gita/cofanie_zmian.html" title="Cofanie zmian" class="chapter done " data-progress="2.4" style="left: 19.11764705882353%;"></a>
+    
+        <a href="../podstawy_gita/praca_ze_zdalnym_repozytorium.html" title="Praca ze zdalnym repozytorium" class="chapter done " data-progress="2.5" style="left: 20.58823529411765%;"></a>
+    
+        <a href="../podstawy_gita/tagowanie_etykietowanie.html" title="Tagowanie (etykietowanie)" class="chapter done " data-progress="2.6" style="left: 22.058823529411764%;"></a>
+    
+        <a href="../podstawy_gita/sztuczki_i_kruczki.html" title="Sztuczki i kruczki" class="chapter done " data-progress="2.7" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../podstawy_gita/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="2.8" style="left: 25%;"></a>
+    
+        <a href="../galezie_gita/README.html" title="Gałęzie Gita" class="chapter done new-chapter" data-progress="3" style="left: 26.470588235294116%;"></a>
+    
+        <a href="../galezie_gita/czym_jest_galaz.html" title="Czym jest gałąź" class="chapter done " data-progress="3.1" style="left: 27.941176470588236%;"></a>
+    
+        <a href="../galezie_gita/podstawy_rozgaleziania_i_scalania.html" title="Podstawy rozgałęziania i scalania" class="chapter done " data-progress="3.2" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../galezie_gita/zarzadzanie_galeziami.html" title="Zarządzanie gałęziami" class="chapter  " data-progress="3.3" style="left: 30.88235294117647%;"></a>
+    
+        <a href="../galezie_gita/sposoby_pracy_z_galeziami.html" title="Sposoby pracy z gałęziami" class="chapter  " data-progress="3.4" style="left: 32.35294117647059%;"></a>
+    
+        <a href="../galezie_gita/galezie_zdalne.html" title="Gałęzie zdalne" class="chapter  " data-progress="3.5" style="left: 33.8235294117647%;"></a>
+    
+        <a href="../galezie_gita/zmiana_bazy.html" title="Zmiana bazy" class="chapter  " data-progress="3.6" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../galezie_gita/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="3.7" style="left: 36.76470588235294%;"></a>
+    
+        <a href="../git_na_serwerze/README.html" title="Git na serwerze" class="chapter  new-chapter" data-progress="4" style="left: 38.23529411764706%;"></a>
+    
+        <a href="../git_na_serwerze/protokoly.html" title="Protokoły" class="chapter  " data-progress="4.1" style="left: 39.705882352941174%;"></a>
+    
+        <a href="../git_na_serwerze/uruchomienie_git_na_serwerze.html" title="Uruchomienie Git na serwerze" class="chapter  " data-progress="4.2" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../git_na_serwerze/generacja_pary_kluczy_ssh.html" title="Generacja pary kluczy SSH" class="chapter  " data-progress="4.3" style="left: 42.64705882352941%;"></a>
+    
+        <a href="../git_na_serwerze/konfiguracja_serwera.html" title="Konfiguracja serwera" class="chapter  " data-progress="4.4" style="left: 44.11764705882353%;"></a>
+    
+        <a href="../git_na_serwerze/dostep_publiczny.html" title="Dostęp publiczny" class="chapter  " data-progress="4.5" style="left: 45.588235294117645%;"></a>
+    
+        <a href="../git_na_serwerze/gitolite.html" title="Gitolite" class="chapter  " data-progress="4.6" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../git_na_serwerze/git_demon.html" title="Git Demon" class="chapter  " data-progress="4.7" style="left: 48.529411764705884%;"></a>
+    
+        <a href="../git_na_serwerze/hosting_gita.html" title="Hosting Gita" class="chapter  " data-progress="4.8" style="left: 50%;"></a>
+    
+        <a href="../git_na_serwerze/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="4.9" style="left: 51.470588235294116%;"></a>
+    
+        <a href="../rozproszony_git/README.html" title="Rozproszony Git" class="chapter  new-chapter" data-progress="5" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../rozproszony_git/rozproszone_przeplywy_pracy.html" title="Rozproszone przepływy pracy" class="chapter  " data-progress="5.1" style="left: 54.411764705882355%;"></a>
+    
+        <a href="../rozproszony_git/wgrywanie_zmian_do_projektu.html" title="Wgrywanie zmian do projektu" class="chapter  " data-progress="5.2" style="left: 55.88235294117647%;"></a>
+    
+        <a href="../rozproszony_git/utrzymywanie_projektu.html" title="Utrzymywanie projektu" class="chapter  " data-progress="5.3" style="left: 57.35294117647059%;"></a>
+    
+        <a href="../rozproszony_git/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="5.4" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../narzedzia_gita/README.html" title="Narzędzia Gita" class="chapter  new-chapter" data-progress="6" style="left: 60.294117647058826%;"></a>
+    
+        <a href="../narzedzia_gita/wskazywanie_rewizji.html" title="Wskazywanie rewizji" class="chapter  " data-progress="6.1" style="left: 61.76470588235294%;"></a>
+    
+        <a href="../narzedzia_gita/interaktywne_uzywanie_przechowali.html" title="Interaktywne używanie przechowali" class="chapter  " data-progress="6.2" style="left: 63.23529411764706%;"></a>
+    
+        <a href="../narzedzia_gita/schowek.html" title="Schowek" class="chapter  " data-progress="6.3" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../narzedzia_gita/przepisywanie_historii.html" title="Przepisywanie Historii" class="chapter  " data-progress="6.4" style="left: 66.17647058823529%;"></a>
+    
+        <a href="../narzedzia_gita/debugowanie_z_gitem.html" title="Debugowanie z Gitem" class="chapter  " data-progress="6.5" style="left: 67.6470588235294%;"></a>
+    
+        <a href="../narzedzia_gita/moduly_zalezne.html" title="Moduły zależne" class="chapter  " data-progress="6.6" style="left: 69.11764705882354%;"></a>
+    
+        <a href="../narzedzia_gita/wlaczanie_innych_projektow.html" title="Włączanie innych projektów" class="chapter  " data-progress="6.7" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../narzedzia_gita/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="6.8" style="left: 72.05882352941177%;"></a>
+    
+        <a href="../dostosowywanie_gita/README.html" title="Dostosowywanie Gita" class="chapter  new-chapter" data-progress="7" style="left: 73.52941176470588%;"></a>
+    
+        <a href="../dostosowywanie_gita/konfiguracja_gita.html" title="Konfiguracja Gita" class="chapter  " data-progress="7.1" style="left: 75%;"></a>
+    
+        <a href="../dostosowywanie_gita/git_attributes.html" title="Git Attributes" class="chapter  " data-progress="7.2" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../dostosowywanie_gita/git_hooks.html" title="Git Hooks" class="chapter  " data-progress="7.3" style="left: 77.94117647058823%;"></a>
+    
+        <a href="../dostosowywanie_gita/an_example_git_enforced_policy.html" title="An Example Git-Enforced Policy" class="chapter  " data-progress="7.4" style="left: 79.41176470588235%;"></a>
+    
+        <a href="../dostosowywanie_gita/summary.html" title="Summary" class="chapter  " data-progress="7.5" style="left: 80.88235294117646%;"></a>
+    
+        <a href="../git_i_inne_systemy/README.html" title="Git i inne systemy" class="chapter  new-chapter" data-progress="8" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../git_i_inne_systemy/git_i_subversion.html" title="Git i Subversion" class="chapter  " data-progress="8.1" style="left: 83.82352941176471%;"></a>
+    
+        <a href="../git_i_inne_systemy/migracja_do_gita.html" title="Migracja do Gita" class="chapter  " data-progress="8.2" style="left: 85.29411764705883%;"></a>
+    
+        <a href="../git_i_inne_systemy/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="8.3" style="left: 86.76470588235294%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/README.html" title="Mechanizmy wewnętrzne w Git" class="chapter  new-chapter" data-progress="9" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/komendy_plumbing_i_porcelain.html" title="Komendy Plumbing i Porcelain" class="chapter  " data-progress="9.1" style="left: 89.70588235294117%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/obiekty_gita.html" title="Obiekty Gita" class="chapter  " data-progress="9.2" style="left: 91.17647058823529%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/referencje_w_git.html" title="Referencje w Git" class="chapter  " data-progress="9.3" style="left: 92.6470588235294%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/spakowane_pliki_packfiles.html" title="Spakowane pliki (packfiles)" class="chapter  " data-progress="9.4" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/refspec.html" title="Refspec" class="chapter  " data-progress="9.5" style="left: 95.58823529411765%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/protokoly_transferu.html" title="Protokoły transferu" class="chapter  " data-progress="9.6" style="left: 97.05882352941177%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html" title="Konserwacja i Odzyskiwanie Danych" class="chapter  " data-progress="9.7" style="left: 98.52941176470588%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_411">
+                    
+                        <h1 id="podstawy-rozga-ziania-i-scalania">Podstawy rozgałęziania i scalania</h1>
+<p>Zajmijmy się prostym przykładem rozgałęziania i scalania używając schematu, jakiego mógłbyś użyć w rzeczywistej pracy. W tym celu wykonasz następujące czynności:</p>
+<ol>
+<li>Wykonasz pracę nad stroną internetową.</li>
+<li>Stworzysz gałąź dla nowej funkcji, nad którą pracujesz.</li>
+<li>Wykonasz jakąś pracę w tej gałęzi.</li>
+</ol>
+<p>Na tym etapie otrzymasz telefon, że inny problem jest obecnie priorytetem i potrzeba błyskawicznej poprawki. Oto, co robisz:</p>
+<ol>
+<li>Powrócisz na gałąź produkcyjną.</li>
+<li>Stworzysz nową gałąź, by dodać tam poprawkę.</li>
+<li>Po przetestowaniu, scalisz gałąź z poprawką i wypchniesz zmiany na serwer produkcyjny.</li>
+<li>Przełączysz się na powrót do gałęzi z nową funkcją i będziesz kontynuować pracę.</li>
+</ol>
+<h2 id="podstawy-rozga-ziania">Podstawy rozgałęziania</h2>
+<p>Na początek załóżmy, że pracujesz nad swoim projektem i masz już zatwierdzonych kilka zestawów zmian (patrz Rysunek 3-10).</p>
+<p><img src="http://git-scm.com/figures/18333fig0310-tn.png" alt=""></p>
+<p>Figure 3-10. Krótka i prosta historia zmian.</p>
+<p>Zdecydowałeś się zająć problemem #53 z systemu śledzenia zgłoszeń, którego używa Twoja firma, czymkolwiek by on nie był. Dla ścisłości, Git nie jest powiązany z żadnym konkretnym systemem tego typu; tym niemniej ponieważ problem #53 to dość konkretny temat, utworzysz nową gałąź by się nim zająć. Aby utworzyć gałąź i jednocześnie się na nią przełączyć, możesz wykonać polecenie <code>git checkout</code> z przełącznikiem <code>-b</code>:</p>
+<pre><code>$ git checkout -b iss53
+Switched <span class="hljs-built_in">to</span> <span class="hljs-operator">a</span> <span class="hljs-built_in">new</span> branch <span class="hljs-string">"iss53"</span>
+</code></pre><p>Jest to krótsza wersja:</p>
+<pre><code><span class="hljs-variable">$ </span>git branch iss53
+<span class="hljs-variable">$ </span>git checkout iss53
+</code></pre><p>Figure 3-11 pokazuje wynik.</p>
+<p><img src="http://git-scm.com/figures/18333fig0311-tn.png" alt=""></p>
+<p>Figure 3-11. Tworzenie wskaźnika nowej gałęzi.</p>
+<p>Pracujesz nad swoim serwisem WWW i zatwierdzasz kolejne zmiany. Każdorazowo naprzód przesuwa się także gałąź <code>iss53</code>, ponieważ jest aktywna (to znaczy, że wskazuje na nią wskaźnik HEAD; patrz Rysunek 2-12):</p>
+<pre><code><span class="hljs-variable">$ </span>vim index.html
+<span class="hljs-variable">$ </span>git commit -a -m <span class="hljs-string">'nowa stopka [#53]'</span>
+</code></pre><p><img src="http://git-scm.com/figures/18333fig0312-tn.png" alt=""></p>
+<p>Figure 3-12. Gałąź iss53 przesunęła się do przodu wraz z postępami w Twojej pracy.</p>
+<p>Teraz właśnie otrzymujesz telefon, że na stronie wykryto błąd i musisz go natychmiast poprawić. Z Gitem nie musisz wprowadzać poprawki razem ze zmianami wykonanymi w ramach pracy nad <code>iss35</code>. Co więcej, nie będzie cię również kosztować wiele wysiłku przywrócenie katalogu roboczego do stanu sprzed tych zmian, tak, by nanieść poprawki na kod, który używany jest na serwerze produkcyjnym. Wszystko, co musisz teraz zrobić, to przełączyć się z powrotem na gałąź master.</p>
+<p>Jednakże, nim to zrobisz, zauważ, że, jeśli Twój katalog roboczy lub poczekalnia zawierają niezatwierdzone zmiany, które są w konflikcie z gałęzią, do której chcesz się teraz przełączyć, Git nie pozwoli ci zmienić gałęzi. Przed przełączeniem gałęzi najlepiej jest doprowadzić katalog roboczy do czystego stanu. Istnieją sposoby pozwalające obejść to ograniczenie (mianowicie schowek oraz poprawianie zatwierdzonych już zmian) i zajmiemy się nimi później. Póki co zatwierdziłeś wszystkie swoje zmiany, więc możesz przełączyć się na swoją gałąź master:</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout master
+<span class="hljs-constant">Switched</span> to branch <span class="hljs-string">"master"</span>
+</code></pre><p>W tym momencie Twój katalog roboczy projektu jest dokładnie w takim stanie, w jakim był zanim zacząłeś pracę nad problemem #53, więc możesz skoncentrować się na swojej poprawce. Jest to ważna informacja do zapamiętania: Git resetuje katalog roboczy, by wyglądał dokładnie jak migawka zestawu zmian wskazywanego przez aktywną gałąź. Automatycznie dodaje, usuwa i modyfikuje pliki, by upewnić się, że kopia robocza wygląda tak, jak po ostatnich zatwierdzonych w niej zmianach.</p>
+<p>Masz jednak teraz do wykonania ważną poprawkę. Stwórzmy zatem gałąź, na której będziesz pracował do momentu poprawienia błędu (patrz Rysunek 3-13):</p>
+<pre><code>$ git checkout <span class="hljs-attribute">-b</span> <span class="hljs-string">'hotfix'</span>
+Switched <span class="hljs-keyword">to</span> a <span class="hljs-literal">new</span> branch <span class="hljs-string">"hotfix"</span>
+$ vim index<span class="hljs-built_in">.</span>html
+$ git commit <span class="hljs-attribute">-a</span> <span class="hljs-attribute">-m</span> <span class="hljs-string">'poprawiony adres e-mail'</span>
+<span class="hljs-preprocessor">[</span>hotfix<span class="hljs-preprocessor">]</span><span class="hljs-markup">: created 3a0874c: "poprawiony adres e-mail"
+ 1 files changed, 0 insertions(+), 1 deletions(-)</span>
+</code></pre><p><img src="http://git-scm.com/figures/18333fig0313-tn.png" alt=""></p>
+<p>Figure 3-13. Gałąź hotfix bazująca na gałęzi master.</p>
+<p>Możesz uruchomić swoje testy, upewnić się, że poprawka w gałęzi hotfix jest tym, czego potrzebujesz i scalić ją na powrót z gałęzią master, by następnie przenieść zmiany na serwer produkcyjny. Robi się to poleceniem <code>git merge</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout master
+<span class="hljs-variable">$ </span>git merge hotfix
+<span class="hljs-constant">Updating</span> f42c576..<span class="hljs-number">3</span>a0874c
+<span class="hljs-constant">Fast</span> forward
+ <span class="hljs-constant">README</span> |    <span class="hljs-number">1</span> -
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">0</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>Rezultat polecenia scalenia zawiera frazę „Fast forward”. Ponieważ zestaw zmian wskazywany przez scalaną gałąź był bezpośrednim rodzicem aktualnego zestawu zmian, Git przesuwa wskaźnik do przodu. Innymi słowy, jeśli próbujesz scalić zestaw zmian z innym, do którego dotrzeć można podążając wzdłuż historii tego pierwszego, Git upraszcza wszystko poprzez przesunięcie wskaźnika do przodu, ponieważ nie ma po drodze żadnych rozwidleń do scalenia — stąd nazwa „fast forward” („przewijanie”).</p>
+<p>Twoja zmiana jest teraz częścią migawki zestawu zmian wskazywanego przez gałąź <code>master</code> i możesz zaktualizować kod na serwerze produkcyjnym (zobacz Rysunek 3-14).</p>
+<p><img src="http://git-scm.com/figures/18333fig0314-tn.png" alt=""></p>
+<p>Figure 3-14. Po scaleniu Twoja gałąź master wskazuje to samo miejsce, co gałąź hotfix.</p>
+<p>Po tym, jak Twoje niezwykle istotne poprawki trafią na serwer, jesteś gotowy powrócić do uprzednio przerwanej pracy. Najpierw jednak usuniesz gałąź hotfix, gdyż nie jest już ci potrzebna — gałąź <code>master</code> wskazuje to samo miejsce. Możesz ją usunąć używając opcji <code>-d</code> polecenia <code>git branch</code>:</p>
+<pre><code>$ git branch <span class="hljs-operator">-d</span> hotfix
+Deleted branch hotfix (<span class="hljs-number">3</span>a0874c).
+</code></pre><p>Teraz możesz przełączyć się z powrotem do gałęzi z rozpoczętą wcześniej pracą nad problemem #53 i kontynuować pracę (patrz Rysunek 3-15):</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout iss53
+<span class="hljs-constant">Switched</span> to branch <span class="hljs-string">"iss53"</span>
+<span class="hljs-variable">$ </span>vim index.html
+<span class="hljs-variable">$ </span>git commit -a -m <span class="hljs-string">'skończona nowa stopka [#53]'</span>
+[iss53]<span class="hljs-symbol">:</span> created <span class="hljs-symbol">ad82d7a:</span> <span class="hljs-string">"skończona nowa stopka [#53]"</span>
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p><img src="http://git-scm.com/figures/18333fig0315-tn.png" alt=""></p>
+<p>Figure 3-15. Twoja gałąź iss53 może przesuwać się do przodu niezależnie.</p>
+<p>Warto tu zauważyć, że praca, jaką wykonałeś na gałęzi <code>hotfix</code> nie jest uwzględniona w plikach w gałęzi <code>iss53</code>. Jeśli jej potrzebujesz, możesz scalić zmiany z gałęzi <code>master</code> do gałęzi <code>iss53</code>, uruchamiając <code>git merge master</code>, możesz też zaczekać z integracją zmian na moment, kiedy zdecydujesz się przenieść zmiany z gałęzi <code>iss53</code> z powrotem do gałęzi <code>master</code>.</p>
+<h2 id="podstawy-scalania">Podstawy scalania</h2>
+<p>Załóżmy, że zdecydowałeś, że praca nad problemem #53 dobiegła końca i jest gotowa, by scalić ją do gałęzi <code>master</code>. Aby to zrobić, scalisz zmiany z gałęzi <code>iss53</code> tak samo, jak wcześniej zrobiłeś to z gałęzią <code>hotfix</code>. Wszystko, co musisz zrobić, to przełączyć się na gałąź, do której chcesz zmiany scalić, a następnie uruchomić polecenie <code>git merge</code>:</p>
+<pre><code>$ git checkout master
+$ git <span class="hljs-operator"><span class="hljs-keyword">merge</span> iss53
+<span class="hljs-keyword">Merge</span> made <span class="hljs-keyword">by</span> recursive.
+ README |    <span class="hljs-number">1</span> +
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)</span>
+</code></pre><p>Wygląda to odrobinę inaczej, niż w przypadku wcześniejszego scalenia gałęzi <code>hotfix</code>. W tym wypadku Twoja historia rozwoju została rozszczepiona na wcześniejszym etapie. Ponieważ zestaw zmian z gałęzi, na której obecnie jesteś, nie jest bezpośrednim potomkiem gałęzi, którą scalasz, Git musi w końcu popracować. W tym przypadku Git przeprowadza scalenie trójstronne (ang. three-way merge), używając dwóch migawek wskazywanych przez końcówki gałęzi oraz ich wspólnego przodka. Rysunek 3-16 pokazuje trzy migawki, których w tym przypadku Git używa do scalania.</p>
+<p><img src="http://git-scm.com/figures/18333fig0316-tn.png" alt=""></p>
+<p>Figure 3-16. Git automatycznie odnajduje najlepszego wspólnego przodka, który będzie punktem wyjściowym do scalenia gałęzi.</p>
+<p>Zamiast zwykłego przeniesienia wskaźnika gałęzi do przodu, Git tworzy nową migawkę, która jest wynikiem wspomnianego scalenia trójstronnego i automatycznie tworzy nowy zestaw zmian, wskazujący na ową migawkę (patrz Rysunek 3-17). Określane jest to mianem zmiany scalającej (ang. merge commit), która jest o tyle wyjątkowa, że posiada więcej niż jednego rodzica.</p>
+<p>Warto zaznaczyć, że Git sam określa najlepszego wspólnego przodka do wykorzystania jako punkt wyjściowy scalenia; różni się to od zachowania CVS czy Subversion (przed wersją 1.5), gdzie osoba scalająca zmiany musi punkt wyjściowy scalania znaleźć samodzielnie. Czyni to scalanie w Gicie znacznie łatwiejszym, niż w przypadku tamtych systemów.</p>
+<p><img src="http://git-scm.com/figures/18333fig0317-tn.png" alt=""></p>
+<p>Figure 3-17. Git automatycznie tworzy nowy zestaw zmian zawierający scaloną pracę.</p>
+<p>Teraz, kiedy Twoja praca jest już scalona, nie potrzebujesz dłużej gałęzi <code>iss53</code>. Możesz ją usunąć, a następnie ręcznie zamknąć zgłoszenie w swoim systemie śledzenia zadań:</p>
+<pre><code>$ git branch <span class="hljs-operator">-d</span> iss53
+</code></pre><h2 id="podstawowe-konflikty-scalania">Podstawowe konflikty scalania</h2>
+<p>Od czasu do czasu proces scalania nie przebiega tak gładko. Jeśli ten sam plik zmieniłeś w różny sposób w obu scalanych gałęziach, Git nie będzie w stanie scalić ich samodzielnie. Jeśli Twoja poprawka problemu #53 zmieniła tę samą część pliku, co zmiana w gałęzi <code>hotfix</code>, podczas scalania otrzymasz komunikat o konflikcie, wyglądający jak poniżej:</p>
+<pre><code>$ git <span class="hljs-built_in">merge</span> iss53
+Auto-merging index.html
+CONFLICT (content): Merge conflict <span class="hljs-operator">in</span> index.html
+Automatic <span class="hljs-built_in">merge</span> failed; fix conflicts <span class="hljs-operator">and</span> <span class="hljs-keyword">then</span> commit <span class="hljs-operator">the</span> <span class="hljs-built_in">result</span>.
+</code></pre><p>Git nie zatwierdził automatycznie zmiany scalającej. Wstrzymał on cały proces do czasu rozwiązania konfliktu przez Ciebie. Jeśli chcesz zobaczyć, które pliki pozostałe niescalone w dowolnym momencie po wystąpieniu konfliktu, możesz uruchomić <code>git status</code>:</p>
+<pre><code>[master*]$ git status
+index.html: needs merge
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    unmerged:   index.html</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Cokolwiek spowodowało konflikty i nie zostało automatycznie rozstrzygnięte, jest tutaj wymienione jako „unmerged” (niescalone). Git dodaje do problematycznych plików standardowe znaczniki rozwiązania konfliktu, możesz więc owe pliki otworzyć i samodzielnie rozwiązać konflikty. Twój plik zawiera teraz sekcję, która wygląda mniej więcej tak:</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:index.html
+<span class="hljs-header">&lt;div id="footer"&gt;contact : email.support@github.com&lt;/div&gt;
+=======</span>
+&lt;div id="footer"&gt;
+<span class="hljs-code">  please contact us at support@github.com</span>
+&lt;/div&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; iss53:index.html
+</code></pre><p>Oznacza to, że wersja wskazywana przez HEAD (Twoja gałąź master, ponieważ tam właśnie byłeś podczas uruchamiania polecenia scalania) znajduje się w górnej części bloku (wszystko powyżej <code>======</code>), a wersja z gałęzi <code>iss53</code> to wszystko poniżej. Aby rozwiązać konflikt, musisz wybrać jedną lub druga wersję albo własnoręcznie połączyć zawartość obu. Dla przykładu możesz rozwiązać konflikt, zastępując cały blok poniższą zawartością: </p>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-property">id</span>=<span class="hljs-string">"footer"</span>&gt;
+please contact us <span class="hljs-keyword">at</span> email.support@github.com
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre><p>To rozwiązanie ma po trochu z obu części, całkowicie usunąłem także linie <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code> i <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. Po rozstrzygnięciu wszystkich takich sekcji w każdym z problematycznych plików, uruchom <code>git add</code> na każdym z nich, aby oznaczyć go jako rozwiązany. Przeniesienie do poczekalni oznacza w Gicie rozwiązanie konfliktu.
+Jeśli chcesz do rozwiązania tych problemów użyć narzędzia graficznego, możesz wydać polecenie <code>git mergetool</code>. Uruchomi ono odpowiednie narzędzie graficzne, które przeprowadzi cię przez wszystkie konflikty:</p>
+<pre><code>$ git mergetool
+<span class="hljs-built_in">merge</span> tool candidates: kdiff3 tkdiff xxdiff meld gvimdiff opendiff emerge vimdiff
+Merging <span class="hljs-operator">the</span> <span class="hljs-built_in">files</span>: index.html
+
+Normal <span class="hljs-built_in">merge</span> conflict <span class="hljs-keyword">for</span> <span class="hljs-string">'index.html'</span>:
+  {<span class="hljs-built_in">local</span>}: modified
+  {remote}: modified
+Hit <span class="hljs-constant">return</span> <span class="hljs-built_in">to</span> start <span class="hljs-built_in">merge</span> resolution tool (opendiff):
+</code></pre><p>Jeśli chcesz użyć narzędzia innego niż domyślne (Git w tym przypadku wybrał dla mnie <code>opendiff</code>, ponieważ pracuję na Maku), możesz zobaczyć wszystkie wspierane narzędzia wymienione na samej górze, zaraz za „merge tool candidates”. Wpisz nazwę narzędzia, którego wolałbyś użyć. W Rozdziale 7 dowiemy się, jak zmienić domyślną wartość dla twojego środowiska pracy.</p>
+<p>Po opuszczeniu narzędzia do scalania, Git zapyta, czy wszystko przebiegło pomyślnie. Jeśli odpowiesz skryptowi, że tak właśnie było, plik zostanie umieszczony w poczekalni, by konflikt oznaczyć jako rozwiązany.</p>
+<p>Możesz uruchomić polecenie <code>git status</code> ponownie, by upewnić się, że wszystkie konflikty zostały rozwiązane:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   index.html</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Jeśli jesteś zadowolony i potwierdziłeś, że wszystkie problematyczne pliki zostały umieszczone w poczekalni, możesz wpisać <code>git commit</code>, by tym samym zatwierdzić zestaw zmian scalających. Jego domyślny opis wygląda jak poniżej:</p>
+<pre><code>Merge branch <span class="hljs-string">'iss53'</span>
+
+Conflicts:
+  index.html
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># It looks like you may be committing a MERGE.</span>
+<span class="hljs-preprocessor"># If this is not correct, please remove the file</span>
+<span class="hljs-preprocessor"># .git/MERGE_HEAD</span>
+<span class="hljs-preprocessor"># and try again.</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Możesz go zmodyfikować, dodając szczegółowy opis sposobu scalenia zmian, jeśli tylko uważasz, że taka informacja będzie pomocna innym, gdy przyjdzie im oglądać efekt scalenia w przyszłości — dlaczego zrobiłeś to w taki, a nie inny sposób, jeśli nie jest to oczywiste.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../galezie_gita/czym_jest_galaz.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../galezie_gita/zarzadzanie_galeziami.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

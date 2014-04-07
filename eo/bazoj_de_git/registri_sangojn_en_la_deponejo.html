@@ -1,0 +1,598 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Registri ŝanĝojn en la deponejo | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../bazoj_de_git/viewing_the_commit_history.html" />
+        
+        
+        <link rel="prev" href="../bazoj_de_git/ekhavi_git_deponejon.html" />
+        
+
+        <meta property="og:title" content="Registri ŝanĝojn en la deponejo | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.2" data-basepath=".." data-revision="1396895597437">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/bazoj_de_git/registri_sangojn_en_la_deponejo.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="ekkomenci/README.html">
+                
+                <a href="../ekkomenci/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Ekkomenci
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="ekkomenci/pri_versikontrolo.html">
+                            
+                            <a href="../ekkomenci/pri_versikontrolo.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Pri versikontrolo
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="ekkomenci/a_short_history_of_git.html">
+                            
+                            <a href="../ekkomenci/a_short_history_of_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> A Short History of Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="ekkomenci/git_basics.html">
+                            
+                            <a href="../ekkomenci/git_basics.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git Basics
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="ekkomenci/installing_git.html">
+                            
+                            <a href="../ekkomenci/installing_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Installing Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="ekkomenci/first_time_git_setup.html">
+                            
+                            <a href="../ekkomenci/first_time_git_setup.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> First-Time Git Setup
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="ekkomenci/getting_help.html">
+                            
+                            <a href="../ekkomenci/getting_help.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Getting Help
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="ekkomenci/summary.html">
+                            
+                            <a href="../ekkomenci/summary.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="bazoj_de_git/README.html">
+                
+                <a href="../bazoj_de_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Bazoj de Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="bazoj_de_git/ekhavi_git_deponejon.html">
+                            
+                            <a href="../bazoj_de_git/ekhavi_git_deponejon.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Ekhavi Git-deponejon
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="bazoj_de_git/registri_sangojn_en_la_deponejo.html">
+                            
+                            <a href="../bazoj_de_git/registri_sangojn_en_la_deponejo.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Registri ŝanĝojn en la deponejo
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="bazoj_de_git/viewing_the_commit_history.html">
+                            
+                            <a href="../bazoj_de_git/viewing_the_commit_history.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Viewing the Commit History
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="bazoj_de_git/undoing_things.html">
+                            
+                            <a href="../bazoj_de_git/undoing_things.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Undoing Things
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="bazoj_de_git/working_with_remotes.html">
+                            
+                            <a href="../bazoj_de_git/working_with_remotes.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Working with Remotes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="bazoj_de_git/tagging.html">
+                            
+                            <a href="../bazoj_de_git/tagging.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="bazoj_de_git/tips_and_tricks.html">
+                            
+                            <a href="../bazoj_de_git/tips_and_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips and Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="bazoj_de_git/summary.html">
+                            
+                            <a href="../bazoj_de_git/summary.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 64.70588235294117%;min-width: 58.8235294117647%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../ekkomenci/README.html" title="Ekkomenci" class="chapter done new-chapter" data-progress="1" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../ekkomenci/pri_versikontrolo.html" title="Pri versikontrolo" class="chapter done " data-progress="1.1" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../ekkomenci/a_short_history_of_git.html" title="A Short History of Git" class="chapter done " data-progress="1.2" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../ekkomenci/git_basics.html" title="Git Basics" class="chapter done " data-progress="1.3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../ekkomenci/installing_git.html" title="Installing Git" class="chapter done " data-progress="1.4" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../ekkomenci/first_time_git_setup.html" title="First-Time Git Setup" class="chapter done " data-progress="1.5" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../ekkomenci/getting_help.html" title="Getting Help" class="chapter done " data-progress="1.6" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../ekkomenci/summary.html" title="Summary" class="chapter done " data-progress="1.7" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../bazoj_de_git/README.html" title="Bazoj de Git" class="chapter done new-chapter" data-progress="2" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../bazoj_de_git/ekhavi_git_deponejon.html" title="Ekhavi Git-deponejon" class="chapter done " data-progress="2.1" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../bazoj_de_git/registri_sangojn_en_la_deponejo.html" title="Registri ŝanĝojn en la deponejo" class="chapter done " data-progress="2.2" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../bazoj_de_git/viewing_the_commit_history.html" title="Viewing the Commit History" class="chapter  " data-progress="2.3" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../bazoj_de_git/undoing_things.html" title="Undoing Things" class="chapter  " data-progress="2.4" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../bazoj_de_git/working_with_remotes.html" title="Working with Remotes" class="chapter  " data-progress="2.5" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../bazoj_de_git/tagging.html" title="Tagging" class="chapter  " data-progress="2.6" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../bazoj_de_git/tips_and_tricks.html" title="Tips and Tricks" class="chapter  " data-progress="2.7" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../bazoj_de_git/summary.html" title="Summary" class="chapter  " data-progress="2.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_91">
+                    
+                        <h1 id="registri-an-ojn-en-la-deponejo">Registri ŝanĝojn en la deponejo</h1>
+<p>Vi havas bone fidatan Git-deponejon kaj elprenon aŭ laborkopion de la dosieroj por tiu projekto. Vi bezonas fari iujn ŝanĝojn kaj enmeti momentbildojn de tiuj ŝanĝoj en vian deponejon ĉiufoje kiam la projekto atingas staton kiun vi volas registri.</p>
+<p>Memoru ke ĉiu dosiero en via labordosierujo povas esti en unu el du statoj: <em>sekvata</em> aŭ <em>nesekvata</em>. <em>Sekvataj</em> dosieroj estas dosieroj kiuj estis en la antaŭa momentbildo; ili povas esti <em>neŝanĝitaj</em>, <em>ŝanĝitaj</em>, aŭ <em>preparataj</em>. <em>Nesekvataj</em> dosieroj estas ĉio alia — ĉiuj dosieroj en via labordosierujo kiuj ne estis en via lasta momentbildo kaj kiuj ne estas en via preparejo. Kiam vi unue klonas deponejon, ĉiuj viaj dosieroj estos sekvataj kaj neŝanĝitaj ĉar vi ĵus elprenis ilin kaj nenion redaktis.</p>
+<p>As you edit files, Git sees them as modified, because you’ve changed them since your last commit. You <em>stage</em> these modified files and then commit all your staged changes, and the cycle repeats. This lifecycle is illustrated in Figure 2-1.</p>
+<p><img src="http://git-scm.com/figures/18333fig0201-tn.png" alt=""></p>
+<p>Figure 2-1. The lifecycle of the status of your files.</p>
+<h2 id="checking-the-status-of-your-files">Checking the Status of Your Files</h2>
+<p>The main tool you use to determine which files are in which state is the <code>git status</code> command. If you run this command directly after a clone, you should see something like this:</p>
+<pre><code>$ git status
+<span class="hljs-comment"># On branch master</span>
+nothing <span class="hljs-built_in">to</span> commit (working <span class="hljs-built_in">directory</span> clean)
+</code></pre><p>This means you have a clean working directory — in other words, no tracked files are modified. Git also doesn’t see any untracked files, or they would be listed here. Finally, the command tells you which branch you’re on. For now, that is always <code>master</code>, which is the default; you won’t worry about it here. The next chapter will go over branches and references in detail.</p>
+<p>Let’s say you add a new file to your project, a simple <code>README</code> file. If the file didn’t exist before, and you run <code>git status</code>, you see your untracked file like so:</p>
+<pre><code>$ vim README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Untracked files:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    README</span>
+nothing added to commit but untracked files present (use <span class="hljs-string">"git add"</span> to track)
+</code></pre><p>You can see that your new <code>README</code> file is untracked, because it’s under the “Untracked files” heading in your status output. Untracked basically means that Git sees a file you didn’t have in the previous snapshot (commit); Git won’t start including it in your commit snapshots until you explicitly tell it to do so. It does this so you don’t accidentally begin including generated binary files or other files that you did not mean to include. You do want to start including README, so let’s start tracking the file.</p>
+<h2 id="tracking-new-files">Tracking New Files</h2>
+<p>In order to begin tracking a new file, you use the command <code>git add</code>. To begin tracking the <code>README</code> file, you can run this:</p>
+<pre><code><span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>If you run your status command again, you can see that your <code>README</code> file is now tracked and staged:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>You can tell that it’s staged because it’s under the “Changes to be committed” heading. If you commit at this point, the version of the file at the time you ran <code>git add</code> is what will be in the historical snapshot. You may recall that when you ran <code>git init</code> earlier, you then ran <code>git add (files)</code> — that was to begin tracking files in your directory. The <code>git add</code> command takes a path name for either a file or a directory; if it’s a directory, the command adds all the files in that directory recursively.</p>
+<h2 id="staging-modified-files">Staging Modified Files</h2>
+<p>Let’s change a file that was already tracked. If you change a previously tracked file called <code>benchmarks.rb</code> and then run your <code>status</code> command again, you get something that looks like this:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>The <code>benchmarks.rb</code> file appears under a section named “Changes not staged for commit” — which means that a file that is tracked has been modified in the working directory but not yet staged. To stage it, you run the <code>git add</code> command (it’s a multipurpose command — you use it to begin tracking new files, to stage files, and to do other things like marking merge-conflicted files as resolved). Let’s run <code>git add</code> now to stage the <code>benchmarks.rb</code> file, and then run <code>git status</code> again:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Both files are staged and will go into your next commit. At this point, suppose you remember one little change that you want to make in <code>benchmarks.rb</code> before you commit it. You open it again and make that change, and you’re ready to commit. However, let’s run <code>git status</code> one more time:</p>
+<pre><code>$ vim benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>What the heck? Now <code>benchmarks.rb</code> is listed as both staged and unstaged. How is that possible? It turns out that Git stages a file exactly as it is when you run the <code>git add</code> command. If you commit now, the version of <code>benchmarks.rb</code> as it was when you last ran the <code>git add</code> command is how it will go into the commit, not the version of the file as it looks in your working directory when you run <code>git commit</code>. If you modify a file after you run <code>git add</code>, you have to run <code>git add</code> again to stage the latest version of the file:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><h2 id="ignoring-files">Ignoring Files</h2>
+<p>Often, you’ll have a class of files that you don’t want Git to automatically add or even show you as being untracked. These are generally automatically generated files such as log files or files produced by your build system. In such cases, you can create a file listing patterns to match them named <code>.gitignore</code>.  Here is an example <code>.gitignore</code> file:</p>
+<pre><code><span class="hljs-variable">$ </span>cat .gitignore
+*.[oa]
+*~
+</code></pre><p>The first line tells Git to ignore any files ending in <code>.o</code> or <code>.a</code> — <em>object</em> and <em>archive</em> files that may be the product of building your code. The second line tells Git to ignore all files that end with a tilde (<code>~</code>), which is used by many text editors such as Emacs to mark temporary files. You may also include a <code>log</code>, <code>tmp</code>, or <code>pid</code> directory; automatically generated documentation; and so on. Setting up a <code>.gitignore</code> file before you get going is generally a good idea so you don’t accidentally commit files that you really don’t want in your Git repository.</p>
+<p>The rules for the patterns you can put in the <code>.gitignore</code> file are as follows:</p>
+<ul>
+<li>Blank lines or lines starting with <code>#</code> are ignored.</li>
+<li>Standard glob patterns work.</li>
+<li>You can end patterns with a forward slash (<code>/</code>) to specify a directory.</li>
+<li>You can negate a pattern by starting it with an exclamation point (<code>!</code>).</li>
+</ul>
+<p>Glob patterns are like simplified regular expressions that shells use. An asterisk (<code>*</code>) matches zero or more characters; <code>[abc]</code> matches any character inside the brackets (in this case <code>a</code>, <code>b</code>, or <code>c</code>); a question mark (<code>?</code>) matches a single character; and brackets enclosing characters separated by a hyphen(<code>[0-9]</code>) matches any character in the range (in this case 0 through 9) .</p>
+<p>Here is another example <code>.gitignore</code> file:</p>
+<pre><code><span class="hljs-preprocessor"># a comment - this is ignored</span>
+<span class="hljs-preprocessor"># no .a files</span>
+*.a
+<span class="hljs-preprocessor"># but do track lib.a, even though you're ignoring .a files above</span>
+!lib.a
+<span class="hljs-preprocessor"># only ignore the root TODO file, not subdir/TODO</span>
+/TODO
+<span class="hljs-preprocessor"># ignore all files in the build/ directory</span>
+build/
+<span class="hljs-preprocessor"># ignore doc/notes.txt, but not doc/server/arch.txt</span>
+doc<span class="hljs-comment">/*.txt
+# ignore all .txt files in the doc/ directory
+doc/**/</span>*.txt
+</code></pre><p>A <code>**/</code> pattern is available in Git since version 1.8.2.</p>
+<h2 id="viewing-your-staged-and-unstaged-changes">Viewing Your Staged and Unstaged Changes</h2>
+<p>If the <code>git status</code> command is too vague for you — you want to know exactly what you changed, not just which files were changed — you can use the <code>git diff</code> command. We’ll cover <code>git diff</code> in more detail later; but you’ll probably use it most often to answer these two questions: What have you changed but not yet staged? And what have you staged that you are about to commit? Although <code>git status</code> answers those questions very generally, <code>git diff</code> shows you the exact lines added and removed — the patch, as it were.</p>
+<p>Let’s say you edit and stage the <code>README</code> file again and then edit the <code>benchmarks.rb</code> file without staging it. If you run your <code>status</code> command, you once again see something like this:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>To see what you’ve changed but not yet staged, type <code>git diff</code> with no other arguments:</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..da65585 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+           @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+         <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+         run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+           <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+           <span class="hljs-built_in">log</span>.size
+</code></pre><p>That command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.</p>
+<p>If you want to see what you’ve staged that will go into your next commit, you can use <code>git diff --cached</code>. (In Git versions 1.6.1 and later, you can also use <code>git diff --staged</code>, which may be easier to remember.) This command compares your staged changes to your last commit:</p>
+<pre><code>$ git diff --cached
+diff --git a/README b/README
+new file mode 100644
+index 0000000..03902a1
+<span class="hljs-header">--- /dev/null</span>
+<span class="hljs-header">+++ b/README2</span>
+<span class="hljs-chunk">@@ -0,0 +1,5 @@</span>
+<span class="hljs-addition">+grit</span>
+<span class="hljs-addition">+ by Tom Preston-Werner, Chris Wanstrath</span>
+<span class="hljs-addition">+ http://github.com/mojombo/grit</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+Grit is a Ruby library for extracting information from a Git repository</span>
+</code></pre><p>It’s important to note that <code>git diff</code> by itself doesn’t show all changes made since your last commit — only changes that are still unstaged. This can be confusing, because if you’ve staged all of your changes, <code>git diff</code> will give you no output.</p>
+<p>For another example, if you stage the <code>benchmarks.rb</code> file and then edit it, you can use <code>git diff</code> to see the changes in the file that are staged and the changes that are unstaged:</p>
+<pre><code>$ git add benchmarks.rb
+$ echo <span class="hljs-string">'# test line'</span> &gt;&gt; benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Now you can use <code>git diff</code> to see what is still unstaged</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index e445e28.<span class="hljs-number">.86</span>b2f7c <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">127</span>,<span class="hljs-number">3</span> +<span class="hljs-number">127</span>,<span class="hljs-number">4</span> @@ <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+ main()
+
+ <span class="hljs-comment">##pp Grit::GitRuby.cache_client.stats</span>
++<span class="hljs-comment"># test line</span>
+</code></pre><p>and <code>git diff --cached</code> to see what you’ve staged so far:</p>
+<pre><code>$ git diff <span class="hljs-comment">--cached</span>
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..e445e28 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+          @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+        run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+          <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+          <span class="hljs-built_in">log</span>.size
+</code></pre><h2 id="committing-your-changes">Committing Your Changes</h2>
+<p>Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged — any files you have created or modified that you haven’t run <code>git add</code> on since you edited them — won’t go into this commit. They will stay as modified files on your disk.
+In this case, the last time you ran <code>git status</code>, you saw that everything was staged, so you’re ready to commit your changes. The simplest way to commit is to type <code>git commit</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git commit
+</code></pre><p>Doing so launches your editor of choice. (This is set by your shell’s <code>$EDITOR</code> environment variable — usually vim or emacs, although you can configure it with whatever you want using the <code>git config --global core.editor</code> command as you saw in <em>Chapter 1</em>).</p>
+<p>The editor displays the following text (this example is a Vim screen):</p>
+<pre><code><span class="hljs-preprocessor"># Please enter the commit message for your changes. Lines starting</span>
+<span class="hljs-preprocessor"># with '#' will be ignored, and an empty message aborts the commit.</span>
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       new file:   README</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb</span>
+~
+~
+~
+<span class="hljs-string">".git/COMMIT_EDITMSG"</span> <span class="hljs-number">10</span>L, <span class="hljs-number">283</span>C
+</code></pre><p>You can see that the default commit message contains the latest output of the <code>git status</code> command commented out and one empty line on top. You can remove these comments and type your commit message, or you can leave them there to help you remember what you’re committing. (For an even more explicit reminder of what you’ve modified, you can pass the <code>-v</code> option to <code>git commit</code>. Doing so also puts the diff of your change in the editor so you can see exactly what you did.) When you exit the editor, Git creates your commit with that commit message (with the comments and diff stripped out).</p>
+<p>Alternatively, you can type your commit message inline with the <code>commit</code> command by specifying it after a <code>-m</code> flag, like this:</p>
+<pre><code>$ git commit -m "Story 182: Fix benchmarks for speed"
+[<span class="hljs-link_reference">master</span>]:<span class="hljs-link_url"> created 463dc4f: "Fix benchmarks for speed"</span><span class="hljs-link_url">
+ 2 files changed, 3 insertions(+), 0 deletions(-)</span><span class="hljs-link_url">
+ create mode 100644 README</span>
+</code></pre><p>Now you’ve created your first commit! You can see that the commit has given you some output about itself: which branch you committed to (<code>master</code>), what SHA-1 checksum the commit has (<code>463dc4f</code>), how many files were changed, and statistics about lines added and removed in the commit.</p>
+<p>Remember that the commit records the snapshot you set up in your staging area. Anything you didn’t stage is still sitting there modified; you can do another commit to add it to your history. Every time you perform a commit, you’re recording a snapshot of your project that you can revert to or compare to later.</p>
+<h2 id="skipping-the-staging-area">Skipping the Staging Area</h2>
+<p>Although it can be amazingly useful for crafting commits exactly how you want them, the staging area is sometimes a bit more complex than you need in your workflow. If you want to skip the staging area, Git provides a simple shortcut. Providing the <code>-a</code> option to the <code>git commit</code> command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the <code>git add</code> part:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+$ git commit -a -m <span class="hljs-string">'added new benchmarks'</span>
+[master <span class="hljs-number">83e38</span>c7] added <span class="hljs-keyword">new</span> benchmarks
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">5</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>Notice how you don’t have to run <code>git add</code> on the <code>benchmarks.rb</code> file in this case before you commit.</p>
+<h2 id="removing-files">Removing Files</h2>
+<p>To remove a file from Git, you have to remove it from your tracked files (more accurately, remove it from your staging area) and then commit. The <code>git rm</code> command does that and also removes the file from your working directory so you don’t see it as an untracked file next time around.</p>
+<p>If you simply remove the file from your working directory, it shows up under the “Changes not staged for commit” (that is, <em>unstaged</em>) area of your <code>git status</code> output:</p>
+<pre><code>$ rm grit.gemspec
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add/rm &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Then, if you run <code>git rm</code>, it stages the file’s removal:</p>
+<pre><code>$ git rm grit.gemspec
+rm <span class="hljs-string">'grit.gemspec'</span>
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>The next time you commit, the file will be gone and no longer tracked. If you modified the file and added it to the index already, you must force the removal with the <code>-f</code> option. This is a safety feature to prevent accidental removal of data that hasn’t yet been recorded in a snapshot and that can’t be recovered from Git.</p>
+<p>Another useful thing you may want to do is to keep the file in your working tree but remove it from your staging area. In other words, you may want to keep the file on your hard drive but not have Git track it anymore. This is particularly useful if you forgot to add something to your <code>.gitignore</code> file and accidentally staged it, like a large log file or a bunch of <code>.a</code> compiled files. To do this, use the <code>--cached</code> option:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">rm</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">cached</span> <span class="hljs-comment">readme</span><span class="hljs-string">.</span><span class="hljs-comment">txt</span>
+</code></pre><p>You can pass files, directories, and file-glob patterns to the <code>git rm</code> command. That means you can do things such as</p>
+<pre><code>$ git rm <span class="hljs-keyword">log</span>/\*.<span class="hljs-keyword">log</span>
+</code></pre><p>Note the backslash (<code>\</code>) in front of the <code>*</code>. This is necessary because Git does its own filename expansion in addition to your shell’s filename expansion. On Windows with the system console, the backslash must be omitted. This command removes all files that have the <code>.log</code> extension in the <code>log/</code> directory. Or, you can do something like this:</p>
+<pre><code><span class="hljs-variable">$ </span>git rm \*~
+</code></pre><p>This command removes all files that end with <code>~</code>.</p>
+<h2 id="moving-files">Moving Files</h2>
+<p>Unlike many other VCS systems, Git doesn’t explicitly track file movement. If you rename a file in Git, no metadata is stored in Git that tells it you renamed the file. However, Git is pretty smart about figuring that out after the fact — we’ll deal with detecting file movement a bit later.</p>
+<p>Thus it’s a bit confusing that Git has a <code>mv</code> command. If you want to rename a file in Git, you can run something like</p>
+<pre><code><span class="hljs-variable">$ </span>git mv file_from file_to
+</code></pre><p>and it works fine. In fact, if you run something like this and look at the status, you’ll see that Git considers it a renamed file:</p>
+<pre><code>$ git mv README.txt README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Your branch is ahead of 'origin/master' by 1 commit.</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       renamed:    README.txt -&gt; README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>However, this is equivalent to running something like this:</p>
+<pre><code><span class="hljs-variable">$ </span>mv <span class="hljs-constant">README</span>.txt <span class="hljs-constant">README</span>
+<span class="hljs-variable">$ </span>git rm <span class="hljs-constant">README</span>.txt
+<span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Git figures out that it’s a rename implicitly, so it doesn’t matter if you rename a file that way or with the <code>mv</code> command. The only real difference is that <code>mv</code> is one command instead of three — it’s a convenience function. More important, you can use any tool you like to rename a file, and address the add/rm later, before you commit.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../bazoj_de_git/ekhavi_git_deponejon.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../bazoj_de_git/viewing_the_commit_history.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

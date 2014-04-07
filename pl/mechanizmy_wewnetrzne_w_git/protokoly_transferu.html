@@ -1,0 +1,1015 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Protokoły transferu | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html" />
+        
+        
+        <link rel="prev" href="../mechanizmy_wewnetrzne_w_git/refspec.html" />
+        
+
+        <meta property="og:title" content="Protokoły transferu | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="9.6" data-basepath=".." data-revision="1396895622000">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/mechanizmy_wewnetrzne_w_git/protokoly_transferu.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="pierwsze_kroki/README.html">
+                
+                <a href="../pierwsze_kroki/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Pierwsze kroki
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="pierwsze_kroki/wprowadzenie_do_kontroli_wersji.html">
+                            
+                            <a href="../pierwsze_kroki/wprowadzenie_do_kontroli_wersji.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Wprowadzenie do kontroli wersji
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="pierwsze_kroki/krotka_historia_git.html">
+                            
+                            <a href="../pierwsze_kroki/krotka_historia_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Krótka historia Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="pierwsze_kroki/podstawy_git.html">
+                            
+                            <a href="../pierwsze_kroki/podstawy_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Podstawy Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="pierwsze_kroki/instalacja_git.html">
+                            
+                            <a href="../pierwsze_kroki/instalacja_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Instalacja Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="pierwsze_kroki/wstepna_konfiguracja_git.html">
+                            
+                            <a href="../pierwsze_kroki/wstepna_konfiguracja_git.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Wstępna konfiguracja Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="pierwsze_kroki/uzyskiwanie_pomocy.html">
+                            
+                            <a href="../pierwsze_kroki/uzyskiwanie_pomocy.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Uzyskiwanie pomocy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="pierwsze_kroki/podsumowanie.html">
+                            
+                            <a href="../pierwsze_kroki/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="podstawy_gita/README.html">
+                
+                <a href="../podstawy_gita/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Podstawy Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="podstawy_gita/pierwsze_repozytorium_gita.html">
+                            
+                            <a href="../podstawy_gita/pierwsze_repozytorium_gita.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Pierwsze repozytorium Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="podstawy_gita/rejestrowanie_zmian_w_repozytorium.html">
+                            
+                            <a href="../podstawy_gita/rejestrowanie_zmian_w_repozytorium.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Rejestrowanie zmian w repozytorium
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="podstawy_gita/podglad_historii_rewizji.html">
+                            
+                            <a href="../podstawy_gita/podglad_historii_rewizji.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Podgląd historii rewizji
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="podstawy_gita/cofanie_zmian.html">
+                            
+                            <a href="../podstawy_gita/cofanie_zmian.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Cofanie zmian
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="podstawy_gita/praca_ze_zdalnym_repozytorium.html">
+                            
+                            <a href="../podstawy_gita/praca_ze_zdalnym_repozytorium.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Praca ze zdalnym repozytorium
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="podstawy_gita/tagowanie_etykietowanie.html">
+                            
+                            <a href="../podstawy_gita/tagowanie_etykietowanie.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagowanie (etykietowanie)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="podstawy_gita/sztuczki_i_kruczki.html">
+                            
+                            <a href="../podstawy_gita/sztuczki_i_kruczki.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Sztuczki i kruczki
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="podstawy_gita/podsumowanie.html">
+                            
+                            <a href="../podstawy_gita/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="galezie_gita/README.html">
+                
+                <a href="../galezie_gita/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Gałęzie Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="galezie_gita/czym_jest_galaz.html">
+                            
+                            <a href="../galezie_gita/czym_jest_galaz.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Czym jest gałąź
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="galezie_gita/podstawy_rozgaleziania_i_scalania.html">
+                            
+                            <a href="../galezie_gita/podstawy_rozgaleziania_i_scalania.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Podstawy rozgałęziania i scalania
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="galezie_gita/zarzadzanie_galeziami.html">
+                            
+                            <a href="../galezie_gita/zarzadzanie_galeziami.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Zarządzanie gałęziami
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="galezie_gita/sposoby_pracy_z_galeziami.html">
+                            
+                            <a href="../galezie_gita/sposoby_pracy_z_galeziami.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Sposoby pracy z gałęziami
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="galezie_gita/galezie_zdalne.html">
+                            
+                            <a href="../galezie_gita/galezie_zdalne.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Gałęzie zdalne
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="galezie_gita/zmiana_bazy.html">
+                            
+                            <a href="../galezie_gita/zmiana_bazy.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Zmiana bazy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="galezie_gita/podsumowanie.html">
+                            
+                            <a href="../galezie_gita/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_na_serwerze/README.html">
+                
+                <a href="../git_na_serwerze/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git na serwerze
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_na_serwerze/protokoly.html">
+                            
+                            <a href="../git_na_serwerze/protokoly.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Protokoły
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_na_serwerze/uruchomienie_git_na_serwerze.html">
+                            
+                            <a href="../git_na_serwerze/uruchomienie_git_na_serwerze.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Uruchomienie Git na serwerze
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_na_serwerze/generacja_pary_kluczy_ssh.html">
+                            
+                            <a href="../git_na_serwerze/generacja_pary_kluczy_ssh.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Generacja pary kluczy SSH
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_na_serwerze/konfiguracja_serwera.html">
+                            
+                            <a href="../git_na_serwerze/konfiguracja_serwera.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Konfiguracja serwera
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_na_serwerze/dostep_publiczny.html">
+                            
+                            <a href="../git_na_serwerze/dostep_publiczny.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Dostęp publiczny
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_na_serwerze/gitolite.html">
+                            
+                            <a href="../git_na_serwerze/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_na_serwerze/git_demon.html">
+                            
+                            <a href="../git_na_serwerze/git_demon.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Git Demon
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_na_serwerze/hosting_gita.html">
+                            
+                            <a href="../git_na_serwerze/hosting_gita.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Hosting Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_na_serwerze/podsumowanie.html">
+                            
+                            <a href="../git_na_serwerze/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="rozproszony_git/README.html">
+                
+                <a href="../rozproszony_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Rozproszony Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="rozproszony_git/rozproszone_przeplywy_pracy.html">
+                            
+                            <a href="../rozproszony_git/rozproszone_przeplywy_pracy.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Rozproszone przepływy pracy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="rozproszony_git/wgrywanie_zmian_do_projektu.html">
+                            
+                            <a href="../rozproszony_git/wgrywanie_zmian_do_projektu.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Wgrywanie zmian do projektu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="rozproszony_git/utrzymywanie_projektu.html">
+                            
+                            <a href="../rozproszony_git/utrzymywanie_projektu.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Utrzymywanie projektu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="rozproszony_git/podsumowanie.html">
+                            
+                            <a href="../rozproszony_git/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="narzedzia_gita/README.html">
+                
+                <a href="../narzedzia_gita/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Narzędzia Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="narzedzia_gita/wskazywanie_rewizji.html">
+                            
+                            <a href="../narzedzia_gita/wskazywanie_rewizji.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Wskazywanie rewizji
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="narzedzia_gita/interaktywne_uzywanie_przechowali.html">
+                            
+                            <a href="../narzedzia_gita/interaktywne_uzywanie_przechowali.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Interaktywne używanie przechowali
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="narzedzia_gita/schowek.html">
+                            
+                            <a href="../narzedzia_gita/schowek.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Schowek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="narzedzia_gita/przepisywanie_historii.html">
+                            
+                            <a href="../narzedzia_gita/przepisywanie_historii.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Przepisywanie Historii
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="narzedzia_gita/debugowanie_z_gitem.html">
+                            
+                            <a href="../narzedzia_gita/debugowanie_z_gitem.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Debugowanie z Gitem
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="narzedzia_gita/moduly_zalezne.html">
+                            
+                            <a href="../narzedzia_gita/moduly_zalezne.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Moduły zależne
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="narzedzia_gita/wlaczanie_innych_projektow.html">
+                            
+                            <a href="../narzedzia_gita/wlaczanie_innych_projektow.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Włączanie innych projektów
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="narzedzia_gita/podsumowanie.html">
+                            
+                            <a href="../narzedzia_gita/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="dostosowywanie_gita/README.html">
+                
+                <a href="../dostosowywanie_gita/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Dostosowywanie Gita
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="dostosowywanie_gita/konfiguracja_gita.html">
+                            
+                            <a href="../dostosowywanie_gita/konfiguracja_gita.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Konfiguracja Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="dostosowywanie_gita/git_attributes.html">
+                            
+                            <a href="../dostosowywanie_gita/git_attributes.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git Attributes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="dostosowywanie_gita/git_hooks.html">
+                            
+                            <a href="../dostosowywanie_gita/git_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git Hooks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="dostosowywanie_gita/an_example_git_enforced_policy.html">
+                            
+                            <a href="../dostosowywanie_gita/an_example_git_enforced_policy.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> An Example Git-Enforced Policy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="dostosowywanie_gita/summary.html">
+                            
+                            <a href="../dostosowywanie_gita/summary.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_i_inne_systemy/README.html">
+                
+                <a href="../git_i_inne_systemy/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git i inne systemy
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_i_inne_systemy/git_i_subversion.html">
+                            
+                            <a href="../git_i_inne_systemy/git_i_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git i Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_i_inne_systemy/migracja_do_gita.html">
+                            
+                            <a href="../git_i_inne_systemy/migracja_do_gita.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Migracja do Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_i_inne_systemy/podsumowanie.html">
+                            
+                            <a href="../git_i_inne_systemy/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="mechanizmy_wewnetrzne_w_git/README.html">
+                
+                <a href="../mechanizmy_wewnetrzne_w_git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Mechanizmy wewnętrzne w Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="mechanizmy_wewnetrzne_w_git/komendy_plumbing_i_porcelain.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/komendy_plumbing_i_porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Komendy Plumbing i Porcelain
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="mechanizmy_wewnetrzne_w_git/obiekty_gita.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/obiekty_gita.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Obiekty Gita
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="mechanizmy_wewnetrzne_w_git/referencje_w_git.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/referencje_w_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Referencje w Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="mechanizmy_wewnetrzne_w_git/spakowane_pliki_packfiles.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/spakowane_pliki_packfiles.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Spakowane pliki (packfiles)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="mechanizmy_wewnetrzne_w_git/refspec.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="mechanizmy_wewnetrzne_w_git/protokoly_transferu.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/protokoly_transferu.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Protokoły transferu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Konserwacja i Odzyskiwanie Danych
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="mechanizmy_wewnetrzne_w_git/podsumowanie.html">
+                            
+                            <a href="../mechanizmy_wewnetrzne_w_git/podsumowanie.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Podsumowanie
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 97.05882352941177%;min-width: 95.58823529411765%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../pierwsze_kroki/README.html" title="Pierwsze kroki" class="chapter done new-chapter" data-progress="1" style="left: 1.4705882352941178%;"></a>
+    
+        <a href="../pierwsze_kroki/wprowadzenie_do_kontroli_wersji.html" title="Wprowadzenie do kontroli wersji" class="chapter done " data-progress="1.1" style="left: 2.9411764705882355%;"></a>
+    
+        <a href="../pierwsze_kroki/krotka_historia_git.html" title="Krótka historia Git" class="chapter done " data-progress="1.2" style="left: 4.411764705882353%;"></a>
+    
+        <a href="../pierwsze_kroki/podstawy_git.html" title="Podstawy Git" class="chapter done " data-progress="1.3" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../pierwsze_kroki/instalacja_git.html" title="Instalacja Git" class="chapter done " data-progress="1.4" style="left: 7.352941176470588%;"></a>
+    
+        <a href="../pierwsze_kroki/wstepna_konfiguracja_git.html" title="Wstępna konfiguracja Git" class="chapter done " data-progress="1.5" style="left: 8.823529411764707%;"></a>
+    
+        <a href="../pierwsze_kroki/uzyskiwanie_pomocy.html" title="Uzyskiwanie pomocy" class="chapter done " data-progress="1.6" style="left: 10.294117647058824%;"></a>
+    
+        <a href="../pierwsze_kroki/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="1.7" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../podstawy_gita/README.html" title="Podstawy Gita" class="chapter done new-chapter" data-progress="2" style="left: 13.235294117647058%;"></a>
+    
+        <a href="../podstawy_gita/pierwsze_repozytorium_gita.html" title="Pierwsze repozytorium Gita" class="chapter done " data-progress="2.1" style="left: 14.705882352941176%;"></a>
+    
+        <a href="../podstawy_gita/rejestrowanie_zmian_w_repozytorium.html" title="Rejestrowanie zmian w repozytorium" class="chapter done " data-progress="2.2" style="left: 16.176470588235293%;"></a>
+    
+        <a href="../podstawy_gita/podglad_historii_rewizji.html" title="Podgląd historii rewizji" class="chapter done " data-progress="2.3" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../podstawy_gita/cofanie_zmian.html" title="Cofanie zmian" class="chapter done " data-progress="2.4" style="left: 19.11764705882353%;"></a>
+    
+        <a href="../podstawy_gita/praca_ze_zdalnym_repozytorium.html" title="Praca ze zdalnym repozytorium" class="chapter done " data-progress="2.5" style="left: 20.58823529411765%;"></a>
+    
+        <a href="../podstawy_gita/tagowanie_etykietowanie.html" title="Tagowanie (etykietowanie)" class="chapter done " data-progress="2.6" style="left: 22.058823529411764%;"></a>
+    
+        <a href="../podstawy_gita/sztuczki_i_kruczki.html" title="Sztuczki i kruczki" class="chapter done " data-progress="2.7" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../podstawy_gita/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="2.8" style="left: 25%;"></a>
+    
+        <a href="../galezie_gita/README.html" title="Gałęzie Gita" class="chapter done new-chapter" data-progress="3" style="left: 26.470588235294116%;"></a>
+    
+        <a href="../galezie_gita/czym_jest_galaz.html" title="Czym jest gałąź" class="chapter done " data-progress="3.1" style="left: 27.941176470588236%;"></a>
+    
+        <a href="../galezie_gita/podstawy_rozgaleziania_i_scalania.html" title="Podstawy rozgałęziania i scalania" class="chapter done " data-progress="3.2" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../galezie_gita/zarzadzanie_galeziami.html" title="Zarządzanie gałęziami" class="chapter done " data-progress="3.3" style="left: 30.88235294117647%;"></a>
+    
+        <a href="../galezie_gita/sposoby_pracy_z_galeziami.html" title="Sposoby pracy z gałęziami" class="chapter done " data-progress="3.4" style="left: 32.35294117647059%;"></a>
+    
+        <a href="../galezie_gita/galezie_zdalne.html" title="Gałęzie zdalne" class="chapter done " data-progress="3.5" style="left: 33.8235294117647%;"></a>
+    
+        <a href="../galezie_gita/zmiana_bazy.html" title="Zmiana bazy" class="chapter done " data-progress="3.6" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../galezie_gita/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="3.7" style="left: 36.76470588235294%;"></a>
+    
+        <a href="../git_na_serwerze/README.html" title="Git na serwerze" class="chapter done new-chapter" data-progress="4" style="left: 38.23529411764706%;"></a>
+    
+        <a href="../git_na_serwerze/protokoly.html" title="Protokoły" class="chapter done " data-progress="4.1" style="left: 39.705882352941174%;"></a>
+    
+        <a href="../git_na_serwerze/uruchomienie_git_na_serwerze.html" title="Uruchomienie Git na serwerze" class="chapter done " data-progress="4.2" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../git_na_serwerze/generacja_pary_kluczy_ssh.html" title="Generacja pary kluczy SSH" class="chapter done " data-progress="4.3" style="left: 42.64705882352941%;"></a>
+    
+        <a href="../git_na_serwerze/konfiguracja_serwera.html" title="Konfiguracja serwera" class="chapter done " data-progress="4.4" style="left: 44.11764705882353%;"></a>
+    
+        <a href="../git_na_serwerze/dostep_publiczny.html" title="Dostęp publiczny" class="chapter done " data-progress="4.5" style="left: 45.588235294117645%;"></a>
+    
+        <a href="../git_na_serwerze/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.6" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../git_na_serwerze/git_demon.html" title="Git Demon" class="chapter done " data-progress="4.7" style="left: 48.529411764705884%;"></a>
+    
+        <a href="../git_na_serwerze/hosting_gita.html" title="Hosting Gita" class="chapter done " data-progress="4.8" style="left: 50%;"></a>
+    
+        <a href="../git_na_serwerze/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="4.9" style="left: 51.470588235294116%;"></a>
+    
+        <a href="../rozproszony_git/README.html" title="Rozproszony Git" class="chapter done new-chapter" data-progress="5" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../rozproszony_git/rozproszone_przeplywy_pracy.html" title="Rozproszone przepływy pracy" class="chapter done " data-progress="5.1" style="left: 54.411764705882355%;"></a>
+    
+        <a href="../rozproszony_git/wgrywanie_zmian_do_projektu.html" title="Wgrywanie zmian do projektu" class="chapter done " data-progress="5.2" style="left: 55.88235294117647%;"></a>
+    
+        <a href="../rozproszony_git/utrzymywanie_projektu.html" title="Utrzymywanie projektu" class="chapter done " data-progress="5.3" style="left: 57.35294117647059%;"></a>
+    
+        <a href="../rozproszony_git/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="5.4" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../narzedzia_gita/README.html" title="Narzędzia Gita" class="chapter done new-chapter" data-progress="6" style="left: 60.294117647058826%;"></a>
+    
+        <a href="../narzedzia_gita/wskazywanie_rewizji.html" title="Wskazywanie rewizji" class="chapter done " data-progress="6.1" style="left: 61.76470588235294%;"></a>
+    
+        <a href="../narzedzia_gita/interaktywne_uzywanie_przechowali.html" title="Interaktywne używanie przechowali" class="chapter done " data-progress="6.2" style="left: 63.23529411764706%;"></a>
+    
+        <a href="../narzedzia_gita/schowek.html" title="Schowek" class="chapter done " data-progress="6.3" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../narzedzia_gita/przepisywanie_historii.html" title="Przepisywanie Historii" class="chapter done " data-progress="6.4" style="left: 66.17647058823529%;"></a>
+    
+        <a href="../narzedzia_gita/debugowanie_z_gitem.html" title="Debugowanie z Gitem" class="chapter done " data-progress="6.5" style="left: 67.6470588235294%;"></a>
+    
+        <a href="../narzedzia_gita/moduly_zalezne.html" title="Moduły zależne" class="chapter done " data-progress="6.6" style="left: 69.11764705882354%;"></a>
+    
+        <a href="../narzedzia_gita/wlaczanie_innych_projektow.html" title="Włączanie innych projektów" class="chapter done " data-progress="6.7" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../narzedzia_gita/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="6.8" style="left: 72.05882352941177%;"></a>
+    
+        <a href="../dostosowywanie_gita/README.html" title="Dostosowywanie Gita" class="chapter done new-chapter" data-progress="7" style="left: 73.52941176470588%;"></a>
+    
+        <a href="../dostosowywanie_gita/konfiguracja_gita.html" title="Konfiguracja Gita" class="chapter done " data-progress="7.1" style="left: 75%;"></a>
+    
+        <a href="../dostosowywanie_gita/git_attributes.html" title="Git Attributes" class="chapter done " data-progress="7.2" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../dostosowywanie_gita/git_hooks.html" title="Git Hooks" class="chapter done " data-progress="7.3" style="left: 77.94117647058823%;"></a>
+    
+        <a href="../dostosowywanie_gita/an_example_git_enforced_policy.html" title="An Example Git-Enforced Policy" class="chapter done " data-progress="7.4" style="left: 79.41176470588235%;"></a>
+    
+        <a href="../dostosowywanie_gita/summary.html" title="Summary" class="chapter done " data-progress="7.5" style="left: 80.88235294117646%;"></a>
+    
+        <a href="../git_i_inne_systemy/README.html" title="Git i inne systemy" class="chapter done new-chapter" data-progress="8" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../git_i_inne_systemy/git_i_subversion.html" title="Git i Subversion" class="chapter done " data-progress="8.1" style="left: 83.82352941176471%;"></a>
+    
+        <a href="../git_i_inne_systemy/migracja_do_gita.html" title="Migracja do Gita" class="chapter done " data-progress="8.2" style="left: 85.29411764705883%;"></a>
+    
+        <a href="../git_i_inne_systemy/podsumowanie.html" title="Podsumowanie" class="chapter done " data-progress="8.3" style="left: 86.76470588235294%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/README.html" title="Mechanizmy wewnętrzne w Git" class="chapter done new-chapter" data-progress="9" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/komendy_plumbing_i_porcelain.html" title="Komendy Plumbing i Porcelain" class="chapter done " data-progress="9.1" style="left: 89.70588235294117%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/obiekty_gita.html" title="Obiekty Gita" class="chapter done " data-progress="9.2" style="left: 91.17647058823529%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/referencje_w_git.html" title="Referencje w Git" class="chapter done " data-progress="9.3" style="left: 92.6470588235294%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/spakowane_pliki_packfiles.html" title="Spakowane pliki (packfiles)" class="chapter done " data-progress="9.4" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/refspec.html" title="Refspec" class="chapter done " data-progress="9.5" style="left: 95.58823529411765%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/protokoly_transferu.html" title="Protokoły transferu" class="chapter done " data-progress="9.6" style="left: 97.05882352941177%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html" title="Konserwacja i Odzyskiwanie Danych" class="chapter  " data-progress="9.7" style="left: 98.52941176470588%;"></a>
+    
+        <a href="../mechanizmy_wewnetrzne_w_git/podsumowanie.html" title="Podsumowanie" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_425">
+                    
+                        <h1 id="protoko-y-transferu">Protokoły transferu</h1>
+<!-- # Transfer Protocols -->
+
+<p>Git może przesyłać dane między repozytoriami na dwa główne sposoby: poprzez protokół HTTP oraz poprzez tak zwane inteligentne protokoły, używane transportach <code>file://</code>, <code>ssh://</code> oraz <code>git://</code>. Ten rodział szybko pokaże w jaki sposób te protokoły działają.</p>
+<!-- Git can transfer data between two repositories in two major ways: over HTTP and via the so-called smart protocols used in the `file://`, `ssh://`, and `git://` transports. This section will quickly cover how these two main protocols operate. -->
+
+<h2 id="protok-prosty">Protokół prosty</h2>
+<!-- ## The Dumb Protocol -->
+
+<p>Transfer danych za pomocą protokołu HTTP jest często określany jako transfer prosty, ponieważ do jego działania nie jest wymagana obsługa Git na serwerze. Podczas pobierania danych za pomocą komendy &quot;fetch&quot;, wykonywane są kolejno zapytania GET, z których program kliencki może odnaleźć strukturę repozytorium Git. Prześledźmy proces <code>http-fetch</code> dla biblioteki simplegit:</p>
+<!-- Git transport over HTTP is often referred to as the dumb protocol because it requires no Git-specific code on the server side during the transport process. The fetch process is a series of GET requests, where the client can assume the layout of the Git repository on the server. Let’s follow the `http-fetch` process for the simplegit library: -->
+
+<pre><code><span class="hljs-variable">$ </span>git clone <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/github.com/schacon</span><span class="hljs-regexp">/simplegit-progit.git</span>
+</code></pre><p>Pierwszą rzeczą jaką wykonuje ta komenda, jest pobranie pliku <code>info/refs</code>. Plik ten jest zapisywany przez komendę <code>update-server-info</code>, dlatego też musisz włączyć komendę <code>post-receive</code>, aby przesyłanie danych przez HTTP działało poprawnie:</p>
+<!-- The first thing this command does is pull down the `info/refs` file. This file is written by the `update-server-info` command, which is why you need to enable that as a `post-receive` hook in order for the HTTP transport to work properly: -->
+
+<pre><code>=<span class="ruby">&gt; <span class="hljs-constant">GET</span> info/refs
+</span>ca82a6dff817ec66f44342007202690a93763949     refs/heads/master
+</code></pre><p>Masz teraz listę zdalnych referencji oraz ich sumy SHA. Następnie sprawdzasz co znajduje się w HEAD, tak aby było wiadomo jaką gałąź pobrać po zakończeniu:</p>
+<!-- Now you have a list of the remote references and SHAs. Next, you look for what the HEAD reference is so you know what to check out when you’re finished: -->
+
+<pre><code>=<span class="ruby">&gt; <span class="hljs-constant">GET</span> <span class="hljs-constant">HEAD</span>
+</span>ref: refs/heads/master
+</code></pre><p>Musisz pobrać gałąź <code>master</code> po ukończeniu całego procesu.
+W tym momencie możesz rozpocząć proces odnajdowania struktury repozytorium. Elementem początkowym jest commit <code>ca82a6</code>, który zobaczyłeś w pliku <code>info/refs</code>, pobierz go jako pierwszego:</p>
+<!-- You need to check out the `master` branch when you’ve completed the process.
+At this point, you’re ready to start the walking process. Because your starting point is the `ca82a6` commit object you saw in the `info/refs` file, you start by fetching that: -->
+
+<pre><code>=&gt; <span class="hljs-type">GET</span> objects/ca/<span class="hljs-number">82</span>a6dff817ec66f44342007202690a93763949
+(<span class="hljs-number">179</span> bytes <span class="hljs-keyword">of</span> binary <span class="hljs-typedef"><span class="hljs-keyword">data</span>)</span>
+</code></pre><p>Otrzymujesz w odpowiedzi obiekt - pobrany z serwera obiekt jest w luźnym formacie i został pobrany poprzez zapytanie HTTP GET. Możesz rozpakować ten plik, usunąć nagłówki i odczytać jego zawartość:</p>
+<!-- You get an object back — that object is in loose format on the server, and you fetched it over a static HTTP GET request. You can zlib-uncompress it, strip off the header, and look at the commit content: -->
+
+<pre><code>$ git cat-<span class="hljs-built_in">file</span> -p ca82a6dff817ec66f44342007202690a93763949
+tree cfda3bf379e4f8dba8717dee55aab78aef7f4daf
+parent <span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+author Scott Chacon &lt;schacon@gmail.com&gt; <span class="hljs-number">1205815931</span> -<span class="hljs-number">0700</span>
+committer Scott Chacon &lt;schacon@gmail.com&gt; <span class="hljs-number">1240030591</span> -<span class="hljs-number">0700</span>
+
+changed <span class="hljs-operator">the</span> <span class="hljs-built_in">version</span> <span class="hljs-built_in">number</span>
+</code></pre><p>W następnej kolejności masz dwa obiekty do pobrania - <code>cfda3b</code>, który jest obiektem tree z zawartością na którą wskazuje pobrany commit; oraz <code>085bb3</code>, który jest poprzednim commitem:</p>
+<!-- Next, you have two more objects to retrieve — `cfda3b`, which is the tree of content that the commit we just retrieved points to; and `085bb3`, which is the parent commit: -->
+
+<pre><code>=&gt; <span class="hljs-type">GET</span> objects/<span class="hljs-number">08</span>/<span class="hljs-number">5</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+(<span class="hljs-number">179</span> bytes <span class="hljs-keyword">of</span> <span class="hljs-typedef"><span class="hljs-keyword">data</span>)</span>
+</code></pre><p>Otrzymałeś więc kolejny obiekt commit. Pobierz zawartość obiektu tree:</p>
+<!-- That gives you your next commit object. Grab the tree object: -->
+
+<pre><code>=<span class="ruby">&gt; <span class="hljs-constant">GET</span> objects/cf/da3bf379e4f8dba8717dee55aab78aef7f4daf
+</span>(404 - Not Found)
+</code></pre><p>Oops - wygląda na to, że obiekt tree nie jest w luźnym formacie na serwerze, dlatego otrzymałeś odpowiedź 404. Przyczyn takiego stanu rzeczy może być kilka - obiekt może być w alternatywnym repozytorium, lub może być w pliku packfile w tym samym repozytorium. Git najpierw sprawdza czy są jakieś alternatywne repozytoria dodane:</p>
+<!-- Oops — it looks like that tree object isn’t in loose format on the server, so you get a 404 response back. There are a couple of reasons for this — the object could be in an alternate repository, or it could be in a packfile in this repository. Git checks for any listed alternates first: -->
+
+<pre><code>=<span class="ruby">&gt; <span class="hljs-constant">GET</span> objects/info/http-alternates
+</span>(empty file)
+</code></pre><p>Jeżeli zwrócona zostanie lista alternatywnych adresów URL, Git sprawdzi czy istnieją w nich szukane pliki w luźnym formacie lub spakowane pliki packfile - jest to bardzo fajny mechanizm umożliwiający współdzielenie plików dla projektów które rozwidlają się (ang. fork) jeden od drugiego. Jednak, ze względu na to, że nie ma żadnych alternatywnych plików w tym przykładzie, szukany obiekt musi być w spakowanym pliku packfile. Aby zobaczyć jakie pliki packfile są dostępne na serwerze, musisz pobrać plik <code>objects/info/packs</code> zawierający ich listę (ten plik jest również tworzony przez <code>update-server-info</code>):</p>
+<!-- If this comes back with a list of alternate URLs, Git checks for loose files and packfiles there — this is a nice mechanism for projects that are forks of one another to share objects on disk. However, because no alternates are listed in this case, your object must be in a packfile. To see what packfiles are available on this server, you need to get the `objects/info/packs` file, which contains a listing of them (also generated by `update-server-info`): -->
+
+<pre><code>=<span class="ruby">&gt; <span class="hljs-constant">GET</span> objects/info/packs
+</span>P pack-816a9b2334da9953e530f27bcac22082a9f5b835.pack
+</code></pre><p>Jest tylko jeden plik packfile na serwerze, więc szukany obiekt jest na pewno w nim, sprawdź jednak plik indeks aby mieć pewność. Jest to również przydatne, gdy masz wiele plików packfile na serwerze, tak abyś mógł zobaczyć który z nich zawiera obiekt którego szukasz:</p>
+<!-- There is only one packfile on the server, so your object is obviously in there, but you’ll check the index file to make sure. This is also useful if you have multiple packfiles on the server, so you can see which packfile contains the object you need: -->
+
+<pre><code>=&gt; <span class="hljs-type">GET</span> objects/pack/pack-<span class="hljs-number">816</span>a9b2334da9953e530f27bcac22082a9f5b835.idx
+(<span class="hljs-number">4</span>k <span class="hljs-keyword">of</span> binary <span class="hljs-typedef"><span class="hljs-keyword">data</span>)</span>
+</code></pre><p>Teraz, gdy pobrałeś już indeks pliku packfile, możesz zobaczyć jakie obiekty się w nim znajdują - ponieważ zawiera on listę sum SHA obiektów oraz informacje o tym w którym miejscu w pliku packfile ten obiekt się znajduje. Twój obiekt w nim jest, pobierz więc cały plik packfile:</p>
+<!-- Now that you have the packfile index, you can see if your object is in it — because the index lists the SHAs of the objects contained in the packfile and the offsets to those objects. Your object is there, so go ahead and get the whole packfile: -->
+
+<pre><code>=&gt; <span class="hljs-type">GET</span> objects/pack/pack-<span class="hljs-number">816</span>a9b2334da9953e530f27bcac22082a9f5b835.pack
+(<span class="hljs-number">13</span>k <span class="hljs-keyword">of</span> binary <span class="hljs-typedef"><span class="hljs-keyword">data</span>)</span>
+</code></pre><p>Masz już obiekt tree, możesz więc kontynuować przechodzenie przez wszystkie zmiany. Wszystkie one zawarte są również w pliku packfile który właśnie pobrałeś, nie musisz więc wykonywać żadnych dodatkowych zapytań do serwera. Git pobierze kopię roboczą z gałęzi <code>master</code>, na którą wskazywała referencja pobrana z HEAD na początku całego procesu.</p>
+<!-- You have your tree object, so you continue walking your commits. They’re all also within the packfile you just downloaded, so you don’t have to do any more requests to your server. Git checks out a working copy of the `master` branch that was pointed to by the HEAD reference you downloaded at the beginning. -->
+
+<p>Wynik działania całego procesu wygląda tak:</p>
+<!-- The entire output of this process looks like this: -->
+
+<pre><code>$ git <span class="hljs-keyword">clone</span> http:<span class="hljs-comment">//github.com/schacon/simplegit-progit.git</span>
+Initialized <span class="hljs-keyword">empty</span> Git repository in /<span class="hljs-keyword">private</span>/tmp/simplegit-progit/.git/
+got ca82a6dff817ec66f44342007202690a93763949
+walk ca82a6dff817ec66f44342007202690a93763949
+got <span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+Getting alternates <span class="hljs-keyword">list</span> <span class="hljs-keyword">for</span> http:<span class="hljs-comment">//github.com/schacon/simplegit-progit.git</span>
+Getting pack <span class="hljs-keyword">list</span> <span class="hljs-keyword">for</span> http:<span class="hljs-comment">//github.com/schacon/simplegit-progit.git</span>
+Getting index <span class="hljs-keyword">for</span> pack <span class="hljs-number">816</span>a9b2334da9953e530f27bcac22082a9f5b835
+Getting pack <span class="hljs-number">816</span>a9b2334da9953e530f27bcac22082a9f5b835
+ which contains cfda3bf379e4f8dba8717dee55aab78aef7f4daf
+walk <span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+walk a11bef06a3f659402fe7563abf99ad00de2209e6
+</code></pre><h2 id="protok-inteligentny">Protokół Inteligentny</h2>
+<!-- ## The Smart Protocol -->
+
+<p>Metoda pobierania za pomocą HTTP jest prosta, ale nieefektywna. Używanie protokołów inteligentnych jest znacznie częstszym sposobem do transferu danych. Te protokołu posiadają uruchomiony program na drugim końcu połączenia, który zna działanie Gita - może on odczytywać lokalne dane, oraz może wygenerować dane dla konkretnego klienta na podstawie tego jakie informacje on już posiada. Są dwa rodzaje procesów do przesyłania danych: para procesów do wgrywania danych, oraz para do pobierania.</p>
+<!-- The HTTP method is simple but a bit inefficient. Using smart protocols is a more common method of transferring data. These protocols have a process on the remote end that is intelligent about Git — it can read local data and figure out what the client has or needs and generate custom data for it. There are two sets of processes for transferring data: a pair for uploading data and a pair for downloading data. -->
+
+<h3 id="wgrywanie-danych">Wgrywanie Danych</h3>
+<!-- ### Uploading Data -->
+
+<p>Aby wgrać dane do zdalnego repozytorium, Git używa procesów <code>send-pack</code> oraz <code>receive-pack</code>. Proces <code>send-pack</code> uruchomiony jest po stronie klienta i łączy się do procesu <code>receive-pack</code> uruchomionego na zdalnym serwerze.</p>
+<!-- To upload data to a remote process, Git uses the `send-pack` and `receive-pack` processes. The `send-pack` process runs on the client and connects to a `receive-pack` process on the remote side. -->
+
+<p>Na przykład, załóżmy że uruchamiasz <code>git push origin master</code> w swoim projekcie, a <code>origin</code> jest zdefiniowany jako URL używający protokołu ssh. Git uruchamia proces <code>send-pack</code>, który zainicjuje połączenie przez SSH do Twojego serwera. Uruchamia on komendę na zdalnym serwerze przez SSH, podobną do:</p>
+<!-- For example, say you run `git push origin master` in your project, and `origin` is defined as a URL that uses the SSH protocol. Git fires up the `send-pack` process, which initiates a connection over SSH to your server. It tries to run a command on the remote server via an SSH call that looks something like this: -->
+
+<pre><code>$ ssh <span class="hljs-attribute">-x</span> git@github<span class="hljs-built_in">.</span>com <span class="hljs-string">"git-receive-pack 'schacon/simplegit-progit.git'"</span>
+<span class="hljs-number">005</span>bca82a6dff817ec66f4437202690a93763949 refs/heads/master report<span class="hljs-attribute">-status</span> delete<span class="hljs-attribute">-refs</span>
+<span class="hljs-number">003e085</span>bb3bcb608e1e84b2432f8ecbe6306e7e7 refs/heads/topic
+<span class="hljs-number">0000</span>
+</code></pre><p>Komenda <code>git-receive-pack</code> od razu odpowiada jedną linią dla każdej referencji którą aktualnie zawiera - w tym przypadku, tylko gałąź <code>master</code> oraz jej SHA. Pierwsza linia zawiera również listę funkcji serwera (tutaj <code>report-status</code> i <code>delete-refs</code>).</p>
+<!-- The `git-receive-pack` command immediately responds with one line for each reference it currently has — in this case, just the `master` branch and its SHA. The first line also has a list of the server’s capabilities (here, `report-status` and `delete-refs`). -->
+
+<p>Każda linia rozpoczyna się 4-bajtową wartością hex wskazującą na to, jak długa jest reszta linii. Pierwsza linia rozpoczyna się 005b, co daje 91 w hex, co oznacza że 91 bajtów pozostało w tej linii. Następna linia rozpoczyna się od 003e, czyli 62, odczytujesz więc pozostałe 62 bajty. Kolejna linia to 0000, oznaczająca że serwer zakończył listowanie referencji.</p>
+<!-- Each line starts with a 4-byte hex value specifying how long the rest of the line is. Your first line starts with 005b, which is 91 in hex, meaning that 91 bytes remain on that line. The next line starts with 003e, which is 62, so you read the remaining 62 bytes. The next line is 0000, meaning the server is done with its references listing. -->
+
+<p>Teraz, gdy zna on już stan który jest na serwerze, Twój proces <code>send-pack</code> ustala które z posiadanych commitów nie istnieją na serwerze. Dla każdej referencji która zostanie zaktualizowana podczas tego pusha, proces <code>send-pack</code> przekazuje <code>receive-pack</code> te informacje. Na przykład, jeżeli aktualizujesz gałąź <code>master</code> oraz dodajesz gałąź <code>experiment</code>, odpowiedź <code>send-pack</code> może wyglądać tak:</p>
+<!-- Now that it knows the server’s state, your `send-pack` process determines what commits it has that the server doesn’t. For each reference that this push will update, the `send-pack` process tells the `receive-pack` process that information. For instance, if you’re updating the `master` branch and adding an `experiment` branch, the `send-pack` response may look something like this: -->
+
+<pre><code><span class="hljs-number">0085</span>ca82a6dff817ec66f44342007202690a93763949  <span class="hljs-number">15027957951</span>b64cf874c3557a0f3547bd83b3ff6 refs/heads/master <span class="hljs-keyword">report</span>-status
+<span class="hljs-number">00670000000000000000000000000000000000000000</span> cdfdb42577e2506715f8cfeacdbabc092bf63e8d refs/heads/experiment
+<span class="hljs-number">0000</span>
+</code></pre><p>Wartość SHA-1 składająca się z samych &#39;0&#39; oznacza że nic nie było wcześniej - ponieważ dodajesz referencję experiment. Jeżeli usuwasz referencję, zobaczyć sytuację odwrotną: same zera po prawej stronie.</p>
+<!-- The SHA-1 value of all '0's means that nothing was there before — because you’re adding the experiment reference. If you were deleting a reference, you would see the opposite: all '0's on the right side. -->
+
+<p>Git wysyła linię dla każdej referencji którą aktualizujesz z starą sumą SHA, nową sumą SHA, oraz referencję. Pierwsza linia zawiera również funkcje obsługiwane prze klienta. Następnie, program kliencki wysyła plik packfile zawierający wszystkie obiekty których nie ma na serwerze. Na końcu, serwer wysyła odpowiedź wskazująca na poprawne lub błędne zakończenie: </p>
+<!-- Git sends a line for each reference you’re updating with the old SHA, the new SHA, and the reference that is being updated. The first line also has the client’s capabilities. Next, the client uploads a packfile of all the objects the server doesn’t have yet. Finally, the server responds with a success (or failure) indication: -->
+
+<pre><code><span class="hljs-number">000</span><span class="hljs-variable">Aunpack</span> <span class="hljs-ok">ok</span>
+</code></pre><h3 id="pobieranie-danych">Pobieranie Danych</h3>
+<!-- ### Downloading Data -->
+
+<p>Podczas pobierania danych, procesy <code>fetch-pack</code> oraz <code>upload-pack</code> są używane. Po stronie klienta uruchamiany jest proces <code>fetch-pack</code>, łączący się do <code>upload-pack</code> na drugim końcu, w celu ustalenia które dane mają być pobrane.</p>
+<!-- When you download data, the `fetch-pack` and `upload-pack` processes are involved. The client initiates a `fetch-pack` process that connects to an `upload-pack` process on the remote side to negotiate what data will be transferred down. -->
+
+<p>Istnieją różne sposoby na zainicjowanie procesu <code>upload-pack</code> na zdalnym repozytorium. Możesz uruchomić przez SSH, w sposób podobny do procesu <code>receive-pack</code>. Możesz również zainicjować ten proces przez demona Git, który domyślnie nasłuchuje na serwerze na porcie 9418. Proces <code>fetch-pack</code> wysyła dane, które wyglądają tak jak te, po połączeniu:</p>
+<!-- There are different ways to initiate the `upload-pack` process on the remote repository. You can run via SSH in the same manner as the `receive-pack` process. You can also initiate the process via the Git daemon, which listens on a server on port 9418 by default. The `fetch-pack` process sends data that looks like this to the daemon after connecting: -->
+
+<pre><code><span class="hljs-number">003</span>fgit<span class="hljs-attribute">-upload</span><span class="hljs-attribute">-pack</span> schacon/simplegit<span class="hljs-attribute">-progit</span><span class="hljs-built_in">.</span>git<span class="hljs-subst">\</span><span class="hljs-number">0</span>host<span class="hljs-subst">=</span>myserver<span class="hljs-built_in">.</span>com<span class="hljs-subst">\</span><span class="hljs-number">0</span>
+</code></pre><p>Rozpoczyna się ona 4 bajtami wskazującymi na to, ile danych będzie przesłanych, następnie komenda do uruchomienia zakończona znakiem null, a następnie nazwa domenowa serwera zakończona końcowym znakiem null. Demon Git sprawdza czy komenda może zostać uruchomiona, oraz czy repozytorium istnieje i ma publiczne uprawnienia. Jeżeli wszystko jest poprawnie, uruchamia proces <code>upload-pack</code> i przekazuje do niego zapytanie.</p>
+<!-- It starts with the 4 bytes specifying how much data is following, then the command to run followed by a null byte, and then the server’s hostname followed by a final null byte. The Git daemon checks that the command can be run and that the repository exists and has public permissions. If everything is cool, it fires up the `upload-pack` process and hands off the request to it. -->
+
+<p>jeżeli wykonujesz komendę fetch przez SSH, <code>fetch-pack</code> uruchamia komendę podobną do:</p>
+<!-- If you’re doing the fetch over SSH, `fetch-pack` instead runs something like this: -->
+
+<pre><code><span class="hljs-variable">$ </span>ssh -x git<span class="hljs-variable">@github</span>.com <span class="hljs-string">"git-upload-pack 'schacon/simplegit-progit.git'"</span>
+</code></pre><p>W każdym z tym przypadków, po połączeniu <code>fetch-pack</code>, <code>upload-pack</code> zwraca wyniki podobny do:</p>
+<!-- In either case, after `fetch-pack` connects, `upload-pack` sends back something like this: -->
+
+<pre><code><span class="hljs-number">0088</span>ca82a6dff817ec66f44342007202690a93763949 HEAD<span class="hljs-subst">\</span><span class="hljs-number">0</span>multi_ack thin<span class="hljs-attribute">-pack</span> <span class="hljs-subst">\</span>
+  side<span class="hljs-attribute">-band</span> side<span class="hljs-attribute">-band</span><span class="hljs-subst">-</span><span class="hljs-number">64</span>k ofs<span class="hljs-attribute">-delta</span> shallow no<span class="hljs-attribute">-progress</span> include<span class="hljs-attribute">-tag</span>
+<span class="hljs-number">003</span>fca82a6dff817ec66f44342007202690a93763949 refs/heads/master
+<span class="hljs-number">003e085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7 refs/heads/topic
+<span class="hljs-number">0000</span>
+</code></pre><p>jest to bardzo podobna odpowiedź to tej którą zwrócił <code>receive-pack</code>, ale z innymi obsługiwanymi funkcjami. Dodatkowo, zwracana jest referencja HEAD, tak aby klient wiedział co ma pobrać w przypadku klonowania repozytorium.</p>
+<!-- This is very similar to what `receive-pack` responds with, but the capabilities are different. In addition, it sends back the HEAD reference so the client knows what to check out if this is a clone. -->
+
+<p>W tym momencie, proces <code>fetch-pack</code> sprawdza jakie obiekty posiada i wysyła odpowiedź z obiektami które potrzebuje za pomocą &quot;want&quot; oraz sumy SHA. Wysyła informację o tym jakie obiekty już posiada za pomocą &quot;have&quot; oraz SHA. Na końcu listy, wypisuje &quot;done&quot;, aby proces <code>upload-pack</code> wiedział że ma rozpocząć wysyłanie spakowanych plików packfile z danymi które są potrzebne:</p>
+<!-- At this point, the `fetch-pack` process looks at what objects it has and responds with the objects that it needs by sending "want" and then the SHA it wants. It sends all the objects it already has with "have" and then the SHA. At the end of this list, it writes "done" to initiate the `upload-pack` process to begin sending the packfile of the data it needs: -->
+
+<pre><code><span class="hljs-number">0054</span>want ca82a6dff817ec66f44342007202690a93763949 ofs-delta
+<span class="hljs-number">0032</span>have <span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+<span class="hljs-number">0000</span>
+<span class="hljs-number">0009</span><span class="hljs-keyword">done</span>
+</code></pre><p>To są bardzo proste przykłady protokołów przesyłania danych. W bardziej skomplikowanych, program kliencki wspiera funkcje <code>multi_pack</code> lub <code>side-band</code>; ale ten przykład pokazuje Ci podstawowe działanie inteligentnych protokołów.</p>
+<!-- That is a very basic case of the transfer protocols. In more complex cases, the client supports `multi_ack` or `side-band` capabilities; but this example shows you the basic back and forth used by the smart protocol processes. -->
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../mechanizmy_wewnetrzne_w_git/refspec.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../mechanizmy_wewnetrzne_w_git/konserwacja_i_odzyskiwanie_danych.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

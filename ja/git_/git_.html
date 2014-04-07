@@ -1,0 +1,1016 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Git ポリシーの実施例 | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_/.html" />
+        
+        
+        <link rel="prev" href="../git_/git_.html" />
+        
+
+        <meta property="og:title" content="Git ポリシーの実施例 | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="7.4" data-basepath=".." data-revision="1396895597440">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_/git_.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Git のさまざまなツール
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> リビジョンの選択
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> 対話的なステージング
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> 作業を隠す
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> 歴史の書き換え
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Git によるデバッグ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> サブモジュール
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> サブツリーマージ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>1.8)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="index.html">
+                
+                <a href="../index.html">
+                    <i class="fa fa-check"></i> <b>2)</b> 使い始める
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> バージョン管理に関して
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Git略史
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Gitの基本
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Gitのインストール
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> 最初のGitの構成
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> ヘルプを見る
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git のブランチ機能
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> ブランチとは
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> ブランチとマージの基本
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> ブランチの管理
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> ブランチでの作業の流れ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> リモートブランチ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> リベース
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git サーバー
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> プロトコル
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_/_git_.html">
+                            
+                            <a href="../git_/_git_.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> サーバー用の Git の取得
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_/ssh_.html">
+                            
+                            <a href="../git_/ssh_.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> SSH 公開鍵の作成
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> サーバーのセットアップ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> 一般公開
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_/gitweb.html">
+                            
+                            <a href="../git_/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_/gitosis.html">
+                            
+                            <a href="../git_/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_/gitolite.html">
+                            
+                            <a href="../git_/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git デーモン
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git のホスティング
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Git での分散作業
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> 分散作業の流れ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> プロジェクトへの貢献
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> プロジェクトの運営
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git の基本
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Git リポジトリの取得
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> 変更内容のリポジトリへの記録
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> コミット履歴の閲覧
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> 作業のやり直し
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> リモートでの作業
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> タグ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> ヒントと裏技
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Git のカスタマイズ
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Git の設定
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git の属性
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git フック
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Git ポリシーの実施例
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git/README.html">
+                
+                <a href="../git/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Gitとその他のシステムの連携
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git/git__subversion.html">
+                            
+                            <a href="../git/git__subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git と Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git/git_.html">
+                            
+                            <a href="../git/git_.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Git への移行
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> まとめ
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git/README.html">
+                
+                <a href="../git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Gitの内側
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git/plumbingporcelain.html">
+                            
+                            <a href="../git/plumbingporcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> 配管（Plumbing）と磁器（Porcelain）
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git/git.html">
+                            
+                            <a href="../git/git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Gitオブジェクト
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git/git.html">
+                            
+                            <a href="../git/git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Gitの参照
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> パックファイル
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git/refspec.html">
+                            
+                            <a href="../git/refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> 参照仕様（Refspec）
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> トランスファープロトコル
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> メインテナンスとデータリカバリ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git/.html">
+                            
+                            <a href="../git/.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> 要約
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 52.94117647058823%;min-width: 47.05882352941177%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../git.html" title="最初のGitの構成" class="chapter done " data-progress="2.5" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../.html" title="まとめ" class="chapter done " data-progress="2.7" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../git_/_git_.html" title="サーバー用の Git の取得" class="chapter done " data-progress="4.2" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../git_/ssh_.html" title="SSH 公開鍵の作成" class="chapter done " data-progress="4.3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../git_/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../git_/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../git_/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../git_/README.html" title="Git のカスタマイズ" class="chapter done new-chapter" data-progress="7" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../git_/git_.html" title="Git ポリシーの実施例" class="chapter done " data-progress="7.4" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../git_/.html" title="まとめ" class="chapter  " data-progress="7.5" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../git/git__subversion.html" title="Git と Subversion" class="chapter  " data-progress="8.1" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../git/git_.html" title="Git への移行" class="chapter  " data-progress="8.2" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../git/README.html" title="Gitの内側" class="chapter  new-chapter" data-progress="9" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../git/plumbingporcelain.html" title="配管（Plumbing）と磁器（Porcelain）" class="chapter  " data-progress="9.1" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../git/git.html" title="Gitの参照" class="chapter  " data-progress="9.3" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../git/refspec.html" title="参照仕様（Refspec）" class="chapter  " data-progress="9.5" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../git/.html" title="要約" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_134">
+                    
+                        <h1 id="git-">Git ポリシーの実施例</h1>
+<p>このセクションでは、これまでに学んだ内容を使って実際に Git のワークフローを確立してみます。コミットメッセージの書式をチェックし、プッシュは fast-forward 限定にし、そしてプロジェクト内の各サブディレクトリに対して特定のユーザーだけが変更を加えられるようにするというものです。開発者に対して「なぜプッシュが却下されたのか」を伝えるためのクライアントスクリプト、そして実際にそのポリシーを実施するためのサーバースクリプトを作成します。</p>
+<p>スクリプトは Ruby を使って書きます。その理由のひとつは私が Ruby を好きなこと、そしてもうひとつの理由はその他のスクリプト言語の疑似コードとしてもそれっぽく見えるであろうということです。Ruby 使いじゃなくても、きっとコードの大まかな流れは追えるはずです。しかし、Ruby 以外の言語であってもきちんと動作します。Git に同梱されているサンプルスクリプトはすべて Perl あるいは Bash で書かれているので、それらの言語のサンプルも大量に見ることができます。</p>
+<h2 id="-">サーバーサイドフック</h2>
+<p>サーバーサイドの作業は、すべて hooks ディレクトリの update ファイルにまとめます。update ファイルはプッシュされるブランチごとに実行されるもので、プッシュされる参照と操作前のブランチのリビジョン、そしてプッシュされる新しいリビジョンを受け取ります。また、SSH 経由でのプッシュの場合は、プッシュしたユーザーを知ることもできます。全員に共通のユーザー (&quot;git&quot; など) を使って公開鍵認証をさせている場合は、公開鍵の情報に基づいて実際のユーザーを判断して環境変数を設定するというラッパーが必要です。ここでは、接続しているユーザー名が環境変数 <code>$USER</code> に格納されているものとします。スクリプトは、まずこれらの情報を取得するところから始まります。</p>
+<pre><code><span class="hljs-comment">#!/usr/bin/env ruby</span>
+
+<span class="hljs-variable">$refname</span> = <span class="hljs-constant">ARGV</span>[<span class="hljs-number">0</span>]
+<span class="hljs-variable">$oldrev</span>  = <span class="hljs-constant">ARGV</span>[<span class="hljs-number">1</span>]
+<span class="hljs-variable">$newrev</span>  = <span class="hljs-constant">ARGV</span>[<span class="hljs-number">2</span>]
+<span class="hljs-variable">$user</span>    = <span class="hljs-constant">ENV</span>[<span class="hljs-string">'USER'</span>]
+
+puts <span class="hljs-string">"Enforcing Policies... \n(<span class="hljs-subst">#{<span class="hljs-variable">$refname</span>}</span>) (<span class="hljs-subst">#{<span class="hljs-variable">$oldrev</span>[<span class="hljs-number">0</span>,<span class="hljs-number">6</span>]}</span>) (<span class="hljs-subst">#{<span class="hljs-variable">$newrev</span>[<span class="hljs-number">0</span>,<span class="hljs-number">6</span>]}</span>)"</span>
+</code></pre><p>ああ、グローバル変数を使ってるとかいうツッコミは勘弁してください。このほうが説明が楽なので。</p>
+<h3 id="-">特定のコミットメッセージ書式の強制</h3>
+<p>まずは、コミットメッセージを特定の書式に従わせることに挑戦してみましょう。ここでは、コミットメッセージには必ず &quot;ref: 1234&quot; 形式の文字列を含むこと、というルールにします。個々のコミットをチケットシステムとリンクさせたいという意図です。やらなければならないことは、プッシュされてきた各コミットのコミットメッセージにその文字列があるかどうかを調べ、もしなければゼロ以外の値で終了してプッシュを却下することです。</p>
+<p>プッシュされたすべてのコミットの SHA-1 値を取得するには、<code>$newrev</code> と <code>$oldrev</code> の内容を <code>git rev-list</code> という低レベル Git コマンドに渡します。これは基本的には <code>git log</code> コマンドのようなものですが、デフォルトでは SHA-1 値だけを表示してそれ以外の情報は出力しません。ふたつのコミットの間のすべてのコミットの SHA を得るには、次のようなコマンドを実行します。</p>
+<pre><code>$ git rev-<span class="hljs-built_in">list</span> <span class="hljs-number">538</span>c33..d14fc7
+d14fc7c847ab946ec39590d87783c69b031bdfb7
+<span class="hljs-number">9f</span>585da4401b0a3999e84113824d15245c13f0be
+<span class="hljs-number">234071</span>a1be950e2a8d078e6141f5cd20c1e61ad3
+dfa04c9ef3d5197182f13fb5b9b1fb7717d2222a
+<span class="hljs-number">17716</span>ec0f1ff5c77eff40b7fe912f9f6cfd0e475
+</code></pre><p>この出力を受け取ってループさせて各コミットの SHA を取得し、個々のメッセージを取り出し、正規表現でそのメッセージを調べることができます。</p>
+<p>さて、これらのコミットからコミットメッセージを取り出す方法を見つけなければなりません。生のコミットデータを取得するには、別の低レベルコマンド <code>git cat-file</code> を使います。低レベルコマンドについては第 9 章で詳しく説明しますが、とりあえずはこのコマンドがどんな結果を返すのだけを示します。</p>
+<pre><code>$ git cat-<span class="hljs-built_in">file</span> commit ca82a6
+tree cfda3bf379e4f8dba8717dee55aab78aef7f4daf
+parent <span class="hljs-number">085</span>bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+author Scott Chacon &lt;schacon@gmail.com&gt; <span class="hljs-number">1205815931</span> -<span class="hljs-number">0700</span>
+committer Scott Chacon &lt;schacon@gmail.com&gt; <span class="hljs-number">1240030591</span> -<span class="hljs-number">0700</span>
+
+changed <span class="hljs-operator">the</span> <span class="hljs-built_in">version</span> <span class="hljs-built_in">number</span>
+</code></pre><p>SHA-1 値がわかっているときにコミットからコミットメッセージを得るシンプルな方法は、空行を探してそれ以降をすべて取得するというものです。これには、Unix システムの <code>sed</code> コマンドが使えます。</p>
+<pre><code>$ git cat-<span class="hljs-built_in">file</span> commit ca82a6 | sed <span class="hljs-string">'1,/^$/d'</span>
+changed <span class="hljs-operator">the</span> <span class="hljs-built_in">version</span> <span class="hljs-built_in">number</span>
+</code></pre><p>この呪文を使ってコミットメッセージを取得し、もし条件にマッチしないものがあれば終了させればよいのです。スクリプトを抜けてプッシュを却下するには、ゼロ以外の値で終了させます。以上を踏まえると、このメソッドは次のようになります。</p>
+<pre><code>$regex = /\[ref: (\d+)\]/
+
+<span class="hljs-comment"># enforced custom commit message format</span>
+def check_message_format
+  missed_revs = `git rev-list <span class="hljs-comment">#{$oldrev}..#{$newrev}`.split("\n")</span>
+  missed_revs.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |rev|
+    message = `git cat-<span class="hljs-built_in">file</span> commit <span class="hljs-comment">#{rev} | sed '1,/^$/d'`</span>
+    <span class="hljs-keyword">if</span> !$regex.match(message)
+      puts <span class="hljs-string">"[POLICY] Your message is not formatted correctly"</span>
+      exit <span class="hljs-number">1</span>
+    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+check_message_format
+</code></pre><p>これを <code>update</code> スクリプトに追加すると、ルールを守らないコミットメッセージが含まれるコミットのプッシュを却下するようになります。</p>
+<h3 id="-">ユーザーベースのアクセス制御</h3>
+<p>アクセス制御リスト (ACL) を使って、ユーザーごとにプロジェクトのどの部分を変更できるのかを指定できるようにしてみましょう。全体にアクセスできるユーザーもいれば、特定のサブディレクトリやファイルだけにしか変更をプッシュできないユーザーもいる、といった仕組みです。これを実施するには、ルールを書いたファイル <code>acl</code> をサーバー上のベア Git リポジトリに置きます。<code>update</code> フックにこのファイルを読ませ、プッシュされたコミットにどのファイルが含まれているのかを調べ、そしてプッシュしたユーザーがそれらのファイルを変更する権限があるのかどうかを判断します。</p>
+<p>まずは ACL を作るところから始めましょう。ここでは、CVS の ACL と似た書式を使います。これは各項目を一行で表すもので、最初のフィールドは <code>avail</code> あるいは <code>unavail</code>、そして次の行がそのルールを適用するユーザーの一覧 (カンマ区切り)、そして最後のフィールドがそのルールを適用するパス (ブランクは全体へのアクセスを意味します) です。フィールドの区切りには、パイプ文字 (<code>|</code>) を使います。</p>
+<p>ここでは、全体にアクセスする管理者と <code>doc</code> ディレクトリにアクセスするドキュメント担当者、そして <code>lib</code> と <code>tests</code> サブディレクトリだけにアクセスできる開発者を設定します。ACL ファイルは次のようになります。</p>
+<pre><code>avail|nickh,pjhyett,defunkt,tpw
+avail|usinclair,cdickens,ebronte|doc
+avail<span class="hljs-localvars">|schacon|lib
+avail|schacon|tests</span>
+</code></pre><p>まずはこのデータを読み込んで、スクリプト内で使えるデータ構造にしてみましょう。例をシンプルにするために、ここでは <code>avail</code> ディレクティブだけを使います。次のメソッドは連想配列を返すものです。ユーザー名が配列のキー、そのユーザーが書き込み権を持つパスの配列が対応する値となります。</p>
+<pre><code>def get_acl_access_data(acl_file)
+  <span class="hljs-comment"># read in ACL data</span>
+  acl_file = File.<span class="hljs-built_in">read</span>(acl_file).<span class="hljs-built_in">split</span>(<span class="hljs-string">"\n"</span>).reject { |<span class="hljs-built_in">line</span>| <span class="hljs-built_in">line</span> == <span class="hljs-string">''</span> }
+  access = {}
+  acl_file.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |<span class="hljs-built_in">line</span>|
+    avail, users, path = <span class="hljs-built_in">line</span>.<span class="hljs-built_in">split</span>(<span class="hljs-string">'|'</span>)
+    next unless avail == <span class="hljs-string">'avail'</span>
+    users.<span class="hljs-built_in">split</span>(<span class="hljs-string">','</span>).<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |user|
+      access[user] ||= []
+      access[user] &lt;&lt; path
+    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  access
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+</code></pre><p>先ほどの ACL ファイルをこの <code>get_acl_access_data</code> メソッドに渡すと、このようなデータ構造を返します。</p>
+<pre><code>{<span class="hljs-string">"defunkt"</span>=&gt;[nil],
+ <span class="hljs-string">"tpw"</span>=&gt;[nil],
+ <span class="hljs-string">"nickh"</span>=&gt;[nil],
+ <span class="hljs-string">"pjhyett"</span>=&gt;[nil],
+ <span class="hljs-string">"schacon"</span>=&gt;[<span class="hljs-string">"lib"</span>, <span class="hljs-string">"tests"</span>],
+ <span class="hljs-string">"cdickens"</span>=&gt;[<span class="hljs-string">"doc"</span>],
+ <span class="hljs-string">"usinclair"</span>=&gt;[<span class="hljs-string">"doc"</span>],
+ <span class="hljs-string">"ebronte"</span>=&gt;[<span class="hljs-string">"doc"</span>]}
+</code></pre><p>これで権限がわかったので、あとはプッシュされた各コミットがどのパスを変更しようとしているのかを調べれば、そのユーザーがプッシュすることができるのかどうかを判断できます。</p>
+<p>あるコミットでどのファイルが変更されるのかを知るのはとても簡単で、<code>git log</code> コマンドに <code>--name-only</code> オプションを指定するだけです (第 2 章で簡単に説明しました)。</p>
+<pre><code>$ git <span class="hljs-built_in">log</span> -<span class="hljs-number">1</span> --name-only --pretty=<span class="hljs-built_in">format</span>:<span class="hljs-string">''</span> <span class="hljs-number">9</span>f585d
+
+README
+lib/test.rb
+</code></pre><p><code>get_acl_access_data</code> メソッドが返す ACL のデータとこのファイルリストを付き合わせれば、そのユーザーがコミットをプッシュする権限があるかどうかを判断できます。</p>
+<pre><code><span class="hljs-comment"># only allows certain users to modify certain subdirectories in a project</span>
+def check_directory_perms
+  access = get_acl_access_data(<span class="hljs-string">'acl'</span>)
+
+  <span class="hljs-comment"># see if anyone is trying to push something they can't</span>
+  new_commits = `git rev-list <span class="hljs-comment">#{$oldrev}..#{$newrev}`.split("\n")</span>
+  new_commits.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |rev|
+    files_modified = `git <span class="hljs-built_in">log</span> -<span class="hljs-number">1</span> <span class="hljs-comment">--name-only --pretty=format:'' #{rev}`.split("\n")</span>
+    files_modified.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |path|
+      next <span class="hljs-keyword">if</span> path.size == <span class="hljs-number">0</span>
+      has_file_access = <span class="hljs-constant">false</span>
+      access[$user].<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |access_path|
+        <span class="hljs-keyword">if</span> !access_path || <span class="hljs-comment"># user has access to everything</span>
+          (path.index(access_path) == <span class="hljs-number">0</span>) <span class="hljs-comment"># access to this path</span>
+          has_file_access = <span class="hljs-constant">true</span>
+        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+      <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+      <span class="hljs-keyword">if</span> !has_file_access
+        puts <span class="hljs-string">"[POLICY] You do not have access to push to #{path}"</span>
+        exit <span class="hljs-number">1</span>
+      <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
+check_directory_perms
+</code></pre><p>それほど難しい処理ではありません。まず最初に <code>git rev-list</code> でコミットの一覧を取得し、それぞれに対してどのファイルが変更されるのかを調べ、ユーザーがそのファイルを変更する権限があることを確かめています。Ruby を知らない人にはわかりにくいところがあるとすれば <code>path.index(access_path) == 0</code> でしょうか。これは、パスが <code>access_path</code> で始まるときに真となります。つまり、<code>access_path</code> がパスの一部に含まれるのではなく、パスがそれで始まっているということを確認しています。</p>
+<p>これで、まずい形式のコミットメッセージや権利のないファイルの変更を含むコミットはプッシュできなくなりました。</p>
+<h3 id="fast-forward-">Fast-Forward なプッシュへの限定</h3>
+<p>最後は、fast-forward なプッシュに限るという仕組みです。 <code>receive.denyDeletes</code> および <code>receive.denyNonFastForwards</code> という設定項目で設定できます｡また､フックを用いてこの制限を課すこともできますし､特定のユーザーにだけこの制約を加えたいなどといった変更にも対応できます。</p>
+<p>これを調べるには、旧リビジョンからたどれるすべてのコミットについて、新リビジョンから到達できないものがないかどうかを探します。もしひとつもなければ、それは fast-forward なプッシュです。ひとつでも見つかれば、却下することになります。</p>
+<pre><code><span class="hljs-comment"># enforces fast-forward only pushes</span>
+def check_fast_forward
+  missed_refs = `git rev-list <span class="hljs-comment">#{$newrev}..#{$oldrev}`</span>
+  missed_ref_count = missed_refs.<span class="hljs-built_in">split</span>(<span class="hljs-string">"\n"</span>).size
+  <span class="hljs-keyword">if</span> missed_ref_count &gt; <span class="hljs-number">0</span>
+    puts <span class="hljs-string">"[POLICY] Cannot push a non fast-forward reference"</span>
+    exit <span class="hljs-number">1</span>
+  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
+check_fast_forward
+</code></pre><p>これですべてがととのいました。これまでのコードを書き込んだファイルに対して <code>chmod u+x .git/hooks/update</code> を実行し、fast-forward ではない参照をプッシュしてみましょう。すると、こんなメッセージが表示されるでしょう。</p>
+<pre><code>$ git push -f origin master
+Counting objects: <span class="hljs-number">5</span>, done.
+Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3</span>/<span class="hljs-number">3</span>), done.
+Writing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3</span>/<span class="hljs-number">3</span>), <span class="hljs-number">323</span> bytes, done.
+Total <span class="hljs-number">3</span> (delta <span class="hljs-number">1</span>), reused <span class="hljs-number">0</span> (delta <span class="hljs-number">0</span>)
+Unpacking objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3</span>/<span class="hljs-number">3</span>), done.
+Enforcing Policies...
+(refs/heads/master) (<span class="hljs-number">8338</span>c5) (c5b616)
+[POLICY] Cannot push a non fast-forward reference
+<span class="hljs-keyword">error</span>: hooks/update exited <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> code <span class="hljs-number">1</span>
+<span class="hljs-keyword">error</span>: hook declined <span class="hljs-keyword">to</span> update refs/heads/master
+<span class="hljs-keyword">To</span> git@gitserver:project.git
+ ! [remote rejected] master -&gt; master (hook declined)
+<span class="hljs-keyword">error</span>: failed <span class="hljs-keyword">to</span> push some refs <span class="hljs-keyword">to</span> <span class="hljs-comment">'git@gitserver:project.git'</span>
+</code></pre><p>この中には、いくつか興味深い点があります。まず、フックの実行が始まったときの次の表示に注目しましょう。</p>
+<pre><code>Enforcing Policies<span class="hljs-attribute">...</span>
+(refs/heads/master) (<span class="hljs-number">8338</span>c5) (c5b616)
+</code></pre><p>これは、スクリプトの先頭で標準出力に表示した内容でした。ここで重要なのは「スクリプトから標準出力に送った内容は、すべてクライアントにも送られる」ということです。</p>
+<p>次に注目するのは、エラーメッセージです。</p>
+<pre><code>[POLICY] Cannot push a non fast-forward <span class="hljs-keyword">reference</span>
+<span class="hljs-keyword">error</span>: hooks/update exited <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> code <span class="hljs-number">1</span>
+<span class="hljs-keyword">error</span>: hook declined <span class="hljs-keyword">to</span> update refs/heads/master
+</code></pre><p>最初の行はスクリプトから出力したもので、その他の 2 行は Git が出力したものです。この 2 行では、スクリプトがゼロ以外の値で終了したためにプッシュが却下されたということを説明しています。最後に、次の部分に注目します。</p>
+<pre><code><span class="hljs-keyword">To</span> git@gitserver:project.git
+ ! [remote rejected] master -&gt; master (hook declined)
+<span class="hljs-keyword">error</span>: failed <span class="hljs-keyword">to</span> push some refs <span class="hljs-keyword">to</span> <span class="hljs-comment">'git@gitserver:project.git'</span>
+</code></pre><p>フックで却下したすべての参照について、remote rejected メッセージが表示されます。これを見れば、フック内での処理のせいで却下されたのだということがわかります。</p>
+<p>さらに、もしコミットメッセージに適切な ref が含まれていなければ、それを示す次のようなエラーメッセージが表示されるでしょう。</p>
+<pre><code>[POLICY] Your message <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> formatted correctly
+</code></pre><p>また、変更権限のないファイルを変更してそれを含むコミットをプッシュしようとしたときも、同様にエラーが表示されます。たとえば、ドキュメント担当者が <code>lib</code> ディレクトリ内の何かを変更しようとした場合のメッセージは次のようになります。</p>
+<pre><code>[POLICY] You <span class="hljs-keyword">do</span> <span class="hljs-keyword">not</span> have access <span class="hljs-keyword">to</span> push <span class="hljs-keyword">to</span> <span class="hljs-keyword">lib</span>/test.rb
+</code></pre><p>以上です。この <code>update</code> スクリプトが動いてさえいれば、もう二度とリポジトリが汚されることはありません。コミットメッセージは決まりどおりのきちんとしたものになるし、ユーザーに変なところをさわられる心配もなくなります。</p>
+<h2 id="-">クライアントサイドフック</h2>
+<p>この方式の弱点は、プッシュが却下されたときにユーザーが泣き寝入りせざるを得なくなるということです。手間暇かけて仕上げた作業が最後の最後で却下されるというのは、非常にストレスがたまるし不可解です。プッシュするためには歴史を修正しなければならないのですが、気弱な人にとってそれはかなりつらいことです。</p>
+<p>このジレンマに対する答えとして、サーバーが却下するであろう作業をするときにそれをユーザーに伝えるためのクライアントサイドフックを用意します。そうすれば、何か問題があるときにそれをコミットする前に知ることができるので、取り返しのつかなくなる前に問題を修正することができます。プロジェクトをクローンしてもフックはコピーされないので、別の何らかの方法で各ユーザーにスクリプトを配布しなければなりません。各ユーザーはそれを <code>.git/hooks</code> にコピーし、実行可能にします。フックスクリプト自体をプロジェクトに含めたり別のプロジェクトにしたりすることはできますが、各自の環境でそれをフックとして自動的に設定することはできないのです。</p>
+<p>はじめに、コミットを書き込む直前にコミットメッセージをチェックしなければなりません。そして、サーバーに却下されないようにコミットメッセージの書式を調べるのです。そのためには <code>commit-msg</code> フックを使います。最初の引数で渡されたファイルからコミットメッセージを読み込んでパターンと比較し、もしマッチしなければ Git の処理を中断させます。</p>
+<pre><code><span class="hljs-shebang">#!/usr/bin/env ruby</span>
+message_file = ARGV[<span class="hljs-number">0</span>]
+message = File.read(message_file)
+
+$regex = /\[<span class="hljs-keyword">ref</span>: (\d+)\]/
+
+<span class="hljs-keyword">if</span> !$regex.match(message)
+  puts <span class="hljs-string">"[POLICY] Your message is not formatted correctly"</span>
+  exit <span class="hljs-number">1</span>
+end
+</code></pre><p>このスクリプトを適切な場所 (<code>.git/hooks/commit-msg</code>) に置いて実行可能にしておくと、不適切なメッセージを書いてコミットしようとしたときに次のような結果となります。</p>
+<pre><code>$ git <span class="hljs-operator"><span class="hljs-keyword">commit</span> -am <span class="hljs-string">'test'</span>
+[POLICY] Your message <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> formatted correctly</span>
+</code></pre><p>このとき、実際にはコミットされません。もしメッセージが適切な書式になっていれば、Git はコミットを許可します。</p>
+<pre><code>$ git commit -am <span class="hljs-string">'test [ref: 132]'</span>
+[master e05c914] test [<span class="hljs-keyword">ref</span>: <span class="hljs-number">132</span>]
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>次に、ACL で決められた範囲以外のファイルを変更していないことを確認しましょう。先ほど使った ACL ファイルのコピーがプロジェクトの <code>.git</code> ディレクトリにあれば、次のような <code>pre-commit</code> スクリプトでチェックすることができます。</p>
+<pre><code>#!/usr/bin/env ruby
+
+$user    = ENV['USER']
+
+# [ <span class="hljs-operator"><span class="hljs-keyword">insert</span> acl_access_data method <span class="hljs-keyword">from</span> above ]
+
+# <span class="hljs-keyword">only</span> allows certain users <span class="hljs-keyword">to</span> modify certain subdirectories <span class="hljs-keyword">in</span> a project
+def check_directory_perms
+  access = get_acl_access_data(<span class="hljs-string">'.git/acl'</span>)
+
+  files_modified = <span class="hljs-string">`git diff-index --cached --name-only HEAD`</span>.split(<span class="hljs-string">"\n"</span>)
+  files_modified.<span class="hljs-keyword">each</span> <span class="hljs-keyword">do</span> |path|
+    <span class="hljs-keyword">next</span> <span class="hljs-keyword">if</span> path.<span class="hljs-keyword">size</span> == <span class="hljs-number">0</span>
+    has_file_access = <span class="hljs-keyword">false</span>
+    access[$<span class="hljs-keyword">user</span>].<span class="hljs-keyword">each</span> <span class="hljs-keyword">do</span> |access_path|
+    <span class="hljs-keyword">if</span> !access_path || (path.index(access_path) == <span class="hljs-number">0</span>)
+      has_file_access = <span class="hljs-keyword">true</span>
+    <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">if</span> !has_file_access
+      puts <span class="hljs-string">"[POLICY] You do not have access to push to #{path}"</span>
+      exit <span class="hljs-number">1</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+check_directory_perms</span>
+</code></pre><p>大まかにはサーバーサイドのスクリプトと同じですが、重要な違いがふたつあります。まず、ACL ファイルの場所が違います。このスクリプトは作業ディレクトリから実行するものであり、Git ディレクトリから実行するものではないからです。ACL ファイルの場所を、先ほどの</p>
+<pre><code><span class="hljs-keyword">access</span> = get_acl_access_data(<span class="hljs-attribute">'acl</span>')
+</code></pre><p>から次のように変更しなければなりません。</p>
+<pre><code>access = get_acl_access_data(<span class="hljs-string">'.git/acl'</span>)
+</code></pre><p>もうひとつの違いは、変更されたファイルの一覧を取得する方法です。サーバーサイドのメソッドではコミットログを調べていました。しかしこの時点ではまだコミットが記録されていないので、ファイルの一覧はステージング・エリアから取得しなければなりません。つまり、先ほどの</p>
+<pre><code>files_modified = `git <span class="hljs-built_in">log</span> -<span class="hljs-number">1</span> --name-only --pretty=<span class="hljs-built_in">format</span>:<span class="hljs-string">''</span> <span class="hljs-preprocessor">#{ref}`</span>
+</code></pre><p>は次のようになります。</p>
+<pre><code><span class="hljs-comment">files_modified</span> <span class="hljs-comment">=</span> <span class="hljs-comment">`git</span> <span class="hljs-comment">diff</span><span class="hljs-literal">-</span><span class="hljs-comment">index</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">cached</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">name</span><span class="hljs-literal">-</span><span class="hljs-comment">only</span> <span class="hljs-comment">HEAD`</span>
+</code></pre><p>しかし、違うのはこの二点だけ。それ以外はまったく同じように動作します。ただ、このスクリプトは、ローカルで実行しているユーザーとリモートマシンにプッシュするときのユーザーが同じであることを前提にしています。もし異なる場合は、変数 <code>$user</code> を手動で設定しなければなりません。</p>
+<p>最後に残ったのは fast-forward でないプッシュを止めることですが、これは多少特殊です。fast-forward でない参照を取得するには、すでにプッシュした過去のコミットにリベースするか、別のローカルブランチにリモートブランチと同じところまでプッシュしなければなりません。</p>
+<p>サーバーサイドでは fast-forward ではないプッシュをできないようにしているので、それ以外にあり得るのは、すでにプッシュ済みのコミットをリベースしようとするときくらいです。</p>
+<p>それをチェックする pre-rebase スクリプトの例を示します。これは書き換えようとしているコミットの一覧を取得し、それがリモート参照の中に存在するかどうかを調べます。リモート参照から到達可能なコミットがひとつでもあれば、リベースを中断します。</p>
+<pre><code><span class="hljs-comment">#!/usr/bin/env ruby</span>
+
+base_branch = ARGV[<span class="hljs-number">0</span>]
+<span class="hljs-keyword">if</span> ARGV[<span class="hljs-number">1</span>]
+  topic_branch = ARGV[<span class="hljs-number">1</span>]
+<span class="hljs-keyword">else</span>
+  topic_branch = <span class="hljs-string">"HEAD"</span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
+target_shas = `git rev-list <span class="hljs-comment">#{base_branch}..#{topic_branch}`.split("\n")</span>
+remote_refs = `git branch -r`.<span class="hljs-built_in">split</span>(<span class="hljs-string">"\n"</span>).map { |r| r.strip }
+
+target_shas.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |sha|
+  remote_refs.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |remote_ref|
+    shas_pushed = `git rev-list ^<span class="hljs-comment">#{sha}^@ refs/remotes/#{remote_ref}`</span>
+    <span class="hljs-keyword">if</span> shas_pushed.<span class="hljs-built_in">split</span>(<span class="hljs-string">"\n"</span>).<span class="hljs-built_in">include</span>?(sha)
+      puts <span class="hljs-string">"[POLICY] Commit #{sha} has already been pushed to #{remote_ref}"</span>
+      exit <span class="hljs-number">1</span>
+    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+</code></pre><p>このスクリプトでは、第 6 章の「リビジョンの選択」ではカバーしていない構文を使っています。既にプッシュ済みのコミットの一覧を得るために、次のコマンドを実行します。</p>
+<pre><code>git rev-list ^#{<span class="ruby">sha}</span>^@ refs/remotes/#{<span class="ruby">remote_ref}</span>
+</code></pre><p><code>SHA^@</code> 構文は、そのコミットのすべての親を解決します。リモートの最後のコミットから到達可能で、これからプッシュしようとするコミットの親のいずれかからアクセスできないコミットを探します。</p>
+<p>この方式の弱点は非常に時間がかかることで、多くの場合このチェックは不要です。<code>-f</code> つきで強制的にプッシュしようとしない限り、サーバーが警告を出してプッシュできないからです。しかし練習用の課題としてはおもしろいもので、あとでリベースを取り消してやりなおすはめになることを理屈上は防げるようになります。</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_/git_.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_/.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

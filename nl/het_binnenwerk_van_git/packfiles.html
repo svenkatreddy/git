@@ -1,0 +1,958 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Packfiles | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../het_binnenwerk_van_git/de_refspec.html" />
+        
+        
+        <link rel="prev" href="../het_binnenwerk_van_git/git_referenties.html" />
+        
+
+        <meta property="og:title" content="Packfiles | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="9.4" data-basepath=".." data-revision="1396895631610">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/het_binnenwerk_van_git/packfiles.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="aan_de_slag/README.html">
+                
+                <a href="../aan_de_slag/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Aan de slag
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="aan_de_slag/het_wat_en_waarom_van_versiebeheer.html">
+                            
+                            <a href="../aan_de_slag/het_wat_en_waarom_van_versiebeheer.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Het wat en waarom van versiebeheer
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="aan_de_slag/een_kort_historisch_overzicht_van_git.html">
+                            
+                            <a href="../aan_de_slag/een_kort_historisch_overzicht_van_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Een kort historisch overzicht van Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="aan_de_slag/de_basis_van_git.html">
+                            
+                            <a href="../aan_de_slag/de_basis_van_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> De basis van Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="aan_de_slag/git_installeren.html">
+                            
+                            <a href="../aan_de_slag/git_installeren.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Git installeren
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="aan_de_slag/git_klaarmaken_voor_eerste_gebruik.html">
+                            
+                            <a href="../aan_de_slag/git_klaarmaken_voor_eerste_gebruik.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Git klaarmaken voor eerste gebruik
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="aan_de_slag/hulp_krijgen.html">
+                            
+                            <a href="../aan_de_slag/hulp_krijgen.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Hulp krijgen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="aan_de_slag/samenvatting.html">
+                            
+                            <a href="../aan_de_slag/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="de_basis_van_git/README.html">
+                
+                <a href="../de_basis_van_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> De basis van Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="de_basis_van_git/een_git_repository_verkrijgen.html">
+                            
+                            <a href="../de_basis_van_git/een_git_repository_verkrijgen.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Een Git repository verkrijgen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="de_basis_van_git/wijzigingen_aan_het_repository_vastleggen.html">
+                            
+                            <a href="../de_basis_van_git/wijzigingen_aan_het_repository_vastleggen.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Wijzigingen aan het repository vastleggen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="de_basis_van_git/de_commit_geschiedenis_bekijken.html">
+                            
+                            <a href="../de_basis_van_git/de_commit_geschiedenis_bekijken.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> De commit geschiedenis bekijken
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="de_basis_van_git/dingen_ongedaan_maken.html">
+                            
+                            <a href="../de_basis_van_git/dingen_ongedaan_maken.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Dingen ongedaan maken
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="de_basis_van_git/werken_met_remotes.html">
+                            
+                            <a href="../de_basis_van_git/werken_met_remotes.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Werken met remotes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="de_basis_van_git/taggen_labelen.html">
+                            
+                            <a href="../de_basis_van_git/taggen_labelen.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Taggen (Labelen)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="de_basis_van_git/tips_en_trucs.html">
+                            
+                            <a href="../de_basis_van_git/tips_en_trucs.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips en trucs
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="de_basis_van_git/samenvatting.html">
+                            
+                            <a href="../de_basis_van_git/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="branchen_in_git/README.html">
+                
+                <a href="../branchen_in_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Branchen in Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="branchen_in_git/wat_is_een_branch.html">
+                            
+                            <a href="../branchen_in_git/wat_is_een_branch.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Wat is een branch
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="branchen_in_git/eenvoudig_branchen_en_mergen.html">
+                            
+                            <a href="../branchen_in_git/eenvoudig_branchen_en_mergen.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Eenvoudig branchen en mergen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="branchen_in_git/branch_beheer.html">
+                            
+                            <a href="../branchen_in_git/branch_beheer.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Branch beheer
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="branchen_in_git/branch_workflows.html">
+                            
+                            <a href="../branchen_in_git/branch_workflows.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Branch workflows
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="branchen_in_git/remote_branches.html">
+                            
+                            <a href="../branchen_in_git/remote_branches.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Remote branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="branchen_in_git/rebasen.html">
+                            
+                            <a href="../branchen_in_git/rebasen.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="branchen_in_git/samenvatting.html">
+                            
+                            <a href="../branchen_in_git/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_op_de_server/README.html">
+                
+                <a href="../git_op_de_server/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git op de server
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_op_de_server/de_protocollen.html">
+                            
+                            <a href="../git_op_de_server/de_protocollen.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> De protocollen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_op_de_server/git_op_een_server_krijgen.html">
+                            
+                            <a href="../git_op_de_server/git_op_een_server_krijgen.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Git op een server krijgen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_op_de_server/je_publieke_ssh_sleutel_genereren.html">
+                            
+                            <a href="../git_op_de_server/je_publieke_ssh_sleutel_genereren.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Je publieke SSH sleutel genereren
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_op_de_server/de_server_opzetten.html">
+                            
+                            <a href="../git_op_de_server/de_server_opzetten.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> De Server Opzetten
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_op_de_server/publieke_toegang.html">
+                            
+                            <a href="../git_op_de_server/publieke_toegang.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Publieke toegang
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_op_de_server/gitweb.html">
+                            
+                            <a href="../git_op_de_server/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_op_de_server/gitosis.html">
+                            
+                            <a href="../git_op_de_server/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_op_de_server/gitolite.html">
+                            
+                            <a href="../git_op_de_server/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_op_de_server/git_daemon.html">
+                            
+                            <a href="../git_op_de_server/git_daemon.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git daemon
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_op_de_server/gehoste_git.html">
+                            
+                            <a href="../git_op_de_server/gehoste_git.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Gehoste Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_op_de_server/samenvatting.html">
+                            
+                            <a href="../git_op_de_server/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="gedistribueerd_git/README.html">
+                
+                <a href="../gedistribueerd_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Gedistribueerd Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="gedistribueerd_git/gedistribueerde_workflows.html">
+                            
+                            <a href="../gedistribueerd_git/gedistribueerde_workflows.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Gedistribueerde workflows
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="gedistribueerd_git/bijdragen_aan_een_project.html">
+                            
+                            <a href="../gedistribueerd_git/bijdragen_aan_een_project.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Bijdragen aan een project
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="gedistribueerd_git/het_beheren_van_een_project.html">
+                            
+                            <a href="../gedistribueerd_git/het_beheren_van_een_project.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Het beheren van een project
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="gedistribueerd_git/samenvatting.html">
+                            
+                            <a href="../gedistribueerd_git/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_tools/README.html">
+                
+                <a href="../git_tools/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git tools
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_tools/revisie_selectie.html">
+                            
+                            <a href="../git_tools/revisie_selectie.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Revisie selectie
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_tools/interactief_stagen.html">
+                            
+                            <a href="../git_tools/interactief_stagen.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Interactief stagen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_tools/stashen.html">
+                            
+                            <a href="../git_tools/stashen.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Stashen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_tools/geschiedenis_herschrijven.html">
+                            
+                            <a href="../git_tools/geschiedenis_herschrijven.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Geschiedenis herschrijven
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_tools/debuggen_met_git.html">
+                            
+                            <a href="../git_tools/debuggen_met_git.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Debuggen met Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_tools/submodules.html">
+                            
+                            <a href="../git_tools/submodules.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Submodules
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_tools/subboom_mergen.html">
+                            
+                            <a href="../git_tools/subboom_mergen.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Subboom mergen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_tools/samenvatting.html">
+                            
+                            <a href="../git_tools/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="git_op_maat_maken/README.html">
+                
+                <a href="../git_op_maat_maken/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Git op maat maken
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="git_op_maat_maken/git_configuratie.html">
+                            
+                            <a href="../git_op_maat_maken/git_configuratie.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Git configuratie
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="git_op_maat_maken/git_attributen.html">
+                            
+                            <a href="../git_op_maat_maken/git_attributen.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git attributen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="git_op_maat_maken/git_haken_hooks.html">
+                            
+                            <a href="../git_op_maat_maken/git_haken_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git haken (hooks)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="git_op_maat_maken/een_voorbeeld_van_git_afgedwongen_beleid.html">
+                            
+                            <a href="../git_op_maat_maken/een_voorbeeld_van_git_afgedwongen_beleid.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Een voorbeeld van Git-afgedwongen beleid
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="git_op_maat_maken/samenvatting.html">
+                            
+                            <a href="../git_op_maat_maken/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_en_andere_systemen/README.html">
+                
+                <a href="../git_en_andere_systemen/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git en andere systemen
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_en_andere_systemen/git_en_subversion.html">
+                            
+                            <a href="../git_en_andere_systemen/git_en_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git en Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_en_andere_systemen/naar_git_migreren.html">
+                            
+                            <a href="../git_en_andere_systemen/naar_git_migreren.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Naar Git migreren
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_en_andere_systemen/samenvatting.html">
+                            
+                            <a href="../git_en_andere_systemen/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="het_binnenwerk_van_git/README.html">
+                
+                <a href="../het_binnenwerk_van_git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Het binnenwerk van Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="het_binnenwerk_van_git/sanitaire_voorzieningen_en_porselein.html">
+                            
+                            <a href="../het_binnenwerk_van_git/sanitaire_voorzieningen_en_porselein.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Sanitaire voorzieningen en porselein
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="het_binnenwerk_van_git/git_objecten.html">
+                            
+                            <a href="../het_binnenwerk_van_git/git_objecten.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Git objecten
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="het_binnenwerk_van_git/git_referenties.html">
+                            
+                            <a href="../het_binnenwerk_van_git/git_referenties.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Git referenties
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="het_binnenwerk_van_git/packfiles.html">
+                            
+                            <a href="../het_binnenwerk_van_git/packfiles.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Packfiles
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="het_binnenwerk_van_git/de_refspec.html">
+                            
+                            <a href="../het_binnenwerk_van_git/de_refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> De refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="het_binnenwerk_van_git/overdracht_protocollen.html">
+                            
+                            <a href="../het_binnenwerk_van_git/overdracht_protocollen.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Overdracht protocollen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="het_binnenwerk_van_git/onderhoud_en_het_herstellen_van_gegevens.html">
+                            
+                            <a href="../het_binnenwerk_van_git/onderhoud_en_het_herstellen_van_gegevens.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Onderhoud en het herstellen van gegevens
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="het_binnenwerk_van_git/samenvatting.html">
+                            
+                            <a href="../het_binnenwerk_van_git/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 94.28571428571429%;min-width: 92.85714285714286%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../aan_de_slag/README.html" title="Aan de slag" class="chapter done new-chapter" data-progress="1" style="left: 1.4285714285714286%;"></a>
+    
+        <a href="../aan_de_slag/het_wat_en_waarom_van_versiebeheer.html" title="Het wat en waarom van versiebeheer" class="chapter done " data-progress="1.1" style="left: 2.857142857142857%;"></a>
+    
+        <a href="../aan_de_slag/een_kort_historisch_overzicht_van_git.html" title="Een kort historisch overzicht van Git" class="chapter done " data-progress="1.2" style="left: 4.285714285714286%;"></a>
+    
+        <a href="../aan_de_slag/de_basis_van_git.html" title="De basis van Git" class="chapter done " data-progress="1.3" style="left: 5.714285714285714%;"></a>
+    
+        <a href="../aan_de_slag/git_installeren.html" title="Git installeren" class="chapter done " data-progress="1.4" style="left: 7.142857142857143%;"></a>
+    
+        <a href="../aan_de_slag/git_klaarmaken_voor_eerste_gebruik.html" title="Git klaarmaken voor eerste gebruik" class="chapter done " data-progress="1.5" style="left: 8.571428571428571%;"></a>
+    
+        <a href="../aan_de_slag/hulp_krijgen.html" title="Hulp krijgen" class="chapter done " data-progress="1.6" style="left: 10%;"></a>
+    
+        <a href="../aan_de_slag/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="1.7" style="left: 11.428571428571429%;"></a>
+    
+        <a href="../de_basis_van_git/README.html" title="De basis van Git" class="chapter done new-chapter" data-progress="2" style="left: 12.857142857142858%;"></a>
+    
+        <a href="../de_basis_van_git/een_git_repository_verkrijgen.html" title="Een Git repository verkrijgen" class="chapter done " data-progress="2.1" style="left: 14.285714285714286%;"></a>
+    
+        <a href="../de_basis_van_git/wijzigingen_aan_het_repository_vastleggen.html" title="Wijzigingen aan het repository vastleggen" class="chapter done " data-progress="2.2" style="left: 15.714285714285714%;"></a>
+    
+        <a href="../de_basis_van_git/de_commit_geschiedenis_bekijken.html" title="De commit geschiedenis bekijken" class="chapter done " data-progress="2.3" style="left: 17.142857142857142%;"></a>
+    
+        <a href="../de_basis_van_git/dingen_ongedaan_maken.html" title="Dingen ongedaan maken" class="chapter done " data-progress="2.4" style="left: 18.571428571428573%;"></a>
+    
+        <a href="../de_basis_van_git/werken_met_remotes.html" title="Werken met remotes" class="chapter done " data-progress="2.5" style="left: 20%;"></a>
+    
+        <a href="../de_basis_van_git/taggen_labelen.html" title="Taggen (Labelen)" class="chapter done " data-progress="2.6" style="left: 21.428571428571427%;"></a>
+    
+        <a href="../de_basis_van_git/tips_en_trucs.html" title="Tips en trucs" class="chapter done " data-progress="2.7" style="left: 22.857142857142858%;"></a>
+    
+        <a href="../de_basis_van_git/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="2.8" style="left: 24.285714285714285%;"></a>
+    
+        <a href="../branchen_in_git/README.html" title="Branchen in Git" class="chapter done new-chapter" data-progress="3" style="left: 25.714285714285715%;"></a>
+    
+        <a href="../branchen_in_git/wat_is_een_branch.html" title="Wat is een branch" class="chapter done " data-progress="3.1" style="left: 27.142857142857142%;"></a>
+    
+        <a href="../branchen_in_git/eenvoudig_branchen_en_mergen.html" title="Eenvoudig branchen en mergen" class="chapter done " data-progress="3.2" style="left: 28.571428571428573%;"></a>
+    
+        <a href="../branchen_in_git/branch_beheer.html" title="Branch beheer" class="chapter done " data-progress="3.3" style="left: 30%;"></a>
+    
+        <a href="../branchen_in_git/branch_workflows.html" title="Branch workflows" class="chapter done " data-progress="3.4" style="left: 31.428571428571427%;"></a>
+    
+        <a href="../branchen_in_git/remote_branches.html" title="Remote branches" class="chapter done " data-progress="3.5" style="left: 32.857142857142854%;"></a>
+    
+        <a href="../branchen_in_git/rebasen.html" title="Rebasen" class="chapter done " data-progress="3.6" style="left: 34.285714285714285%;"></a>
+    
+        <a href="../branchen_in_git/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="3.7" style="left: 35.714285714285715%;"></a>
+    
+        <a href="../git_op_de_server/README.html" title="Git op de server" class="chapter done new-chapter" data-progress="4" style="left: 37.142857142857146%;"></a>
+    
+        <a href="../git_op_de_server/de_protocollen.html" title="De protocollen" class="chapter done " data-progress="4.1" style="left: 38.57142857142857%;"></a>
+    
+        <a href="../git_op_de_server/gehoste_git.html" title="Gehoste Git" class="chapter done " data-progress="4.10" style="left: 40%;"></a>
+    
+        <a href="../git_op_de_server/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="4.11" style="left: 41.42857142857143%;"></a>
+    
+        <a href="../git_op_de_server/git_op_een_server_krijgen.html" title="Git op een server krijgen" class="chapter done " data-progress="4.2" style="left: 42.857142857142854%;"></a>
+    
+        <a href="../git_op_de_server/je_publieke_ssh_sleutel_genereren.html" title="Je publieke SSH sleutel genereren" class="chapter done " data-progress="4.3" style="left: 44.285714285714285%;"></a>
+    
+        <a href="../git_op_de_server/de_server_opzetten.html" title="De Server Opzetten" class="chapter done " data-progress="4.4" style="left: 45.714285714285715%;"></a>
+    
+        <a href="../git_op_de_server/publieke_toegang.html" title="Publieke toegang" class="chapter done " data-progress="4.5" style="left: 47.142857142857146%;"></a>
+    
+        <a href="../git_op_de_server/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 48.57142857142857%;"></a>
+    
+        <a href="../git_op_de_server/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 50%;"></a>
+    
+        <a href="../git_op_de_server/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 51.42857142857143%;"></a>
+    
+        <a href="../git_op_de_server/git_daemon.html" title="Git daemon" class="chapter done " data-progress="4.9" style="left: 52.857142857142854%;"></a>
+    
+        <a href="../gedistribueerd_git/README.html" title="Gedistribueerd Git" class="chapter done new-chapter" data-progress="5" style="left: 54.285714285714285%;"></a>
+    
+        <a href="../gedistribueerd_git/gedistribueerde_workflows.html" title="Gedistribueerde workflows" class="chapter done " data-progress="5.1" style="left: 55.714285714285715%;"></a>
+    
+        <a href="../gedistribueerd_git/bijdragen_aan_een_project.html" title="Bijdragen aan een project" class="chapter done " data-progress="5.2" style="left: 57.142857142857146%;"></a>
+    
+        <a href="../gedistribueerd_git/het_beheren_van_een_project.html" title="Het beheren van een project" class="chapter done " data-progress="5.3" style="left: 58.57142857142857%;"></a>
+    
+        <a href="../gedistribueerd_git/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="5.4" style="left: 60%;"></a>
+    
+        <a href="../git_tools/README.html" title="Git tools" class="chapter done new-chapter" data-progress="6" style="left: 61.42857142857143%;"></a>
+    
+        <a href="../git_tools/revisie_selectie.html" title="Revisie selectie" class="chapter done " data-progress="6.1" style="left: 62.857142857142854%;"></a>
+    
+        <a href="../git_tools/interactief_stagen.html" title="Interactief stagen" class="chapter done " data-progress="6.2" style="left: 64.28571428571429%;"></a>
+    
+        <a href="../git_tools/stashen.html" title="Stashen" class="chapter done " data-progress="6.3" style="left: 65.71428571428571%;"></a>
+    
+        <a href="../git_tools/geschiedenis_herschrijven.html" title="Geschiedenis herschrijven" class="chapter done " data-progress="6.4" style="left: 67.14285714285714%;"></a>
+    
+        <a href="../git_tools/debuggen_met_git.html" title="Debuggen met Git" class="chapter done " data-progress="6.5" style="left: 68.57142857142857%;"></a>
+    
+        <a href="../git_tools/submodules.html" title="Submodules" class="chapter done " data-progress="6.6" style="left: 70%;"></a>
+    
+        <a href="../git_tools/subboom_mergen.html" title="Subboom mergen" class="chapter done " data-progress="6.7" style="left: 71.42857142857143%;"></a>
+    
+        <a href="../git_tools/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="6.8" style="left: 72.85714285714286%;"></a>
+    
+        <a href="../git_op_maat_maken/README.html" title="Git op maat maken" class="chapter done new-chapter" data-progress="7" style="left: 74.28571428571429%;"></a>
+    
+        <a href="../git_op_maat_maken/git_configuratie.html" title="Git configuratie" class="chapter done " data-progress="7.1" style="left: 75.71428571428571%;"></a>
+    
+        <a href="../git_op_maat_maken/git_attributen.html" title="Git attributen" class="chapter done " data-progress="7.2" style="left: 77.14285714285714%;"></a>
+    
+        <a href="../git_op_maat_maken/git_haken_hooks.html" title="Git haken (hooks)" class="chapter done " data-progress="7.3" style="left: 78.57142857142857%;"></a>
+    
+        <a href="../git_op_maat_maken/een_voorbeeld_van_git_afgedwongen_beleid.html" title="Een voorbeeld van Git-afgedwongen beleid" class="chapter done " data-progress="7.4" style="left: 80%;"></a>
+    
+        <a href="../git_op_maat_maken/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="7.5" style="left: 81.42857142857143%;"></a>
+    
+        <a href="../git_en_andere_systemen/README.html" title="Git en andere systemen" class="chapter done new-chapter" data-progress="8" style="left: 82.85714285714286%;"></a>
+    
+        <a href="../git_en_andere_systemen/git_en_subversion.html" title="Git en Subversion" class="chapter done " data-progress="8.1" style="left: 84.28571428571429%;"></a>
+    
+        <a href="../git_en_andere_systemen/naar_git_migreren.html" title="Naar Git migreren" class="chapter done " data-progress="8.2" style="left: 85.71428571428571%;"></a>
+    
+        <a href="../git_en_andere_systemen/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="8.3" style="left: 87.14285714285714%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/README.html" title="Het binnenwerk van Git" class="chapter done new-chapter" data-progress="9" style="left: 88.57142857142857%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/sanitaire_voorzieningen_en_porselein.html" title="Sanitaire voorzieningen en porselein" class="chapter done " data-progress="9.1" style="left: 90%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/git_objecten.html" title="Git objecten" class="chapter done " data-progress="9.2" style="left: 91.42857142857143%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/git_referenties.html" title="Git referenties" class="chapter done " data-progress="9.3" style="left: 92.85714285714286%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/packfiles.html" title="Packfiles" class="chapter done " data-progress="9.4" style="left: 94.28571428571429%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/de_refspec.html" title="De refspec" class="chapter  " data-progress="9.5" style="left: 95.71428571428571%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/overdracht_protocollen.html" title="Overdracht protocollen" class="chapter  " data-progress="9.6" style="left: 97.14285714285714%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/onderhoud_en_het_herstellen_van_gegevens.html" title="Onderhoud en het herstellen van gegevens" class="chapter  " data-progress="9.7" style="left: 98.57142857142857%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/samenvatting.html" title="Samenvatting" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_669">
+                    
+                        <h1 id="packfiles">Packfiles</h1>
+<p>Laten we eens terug gaan naar de object-databank van je test Git repository. Op dit punt heb je 11 objecten – 4 blobs, 3 trees, 3 commits en 1 tag:</p>
+<pre><code>$ find <span class="hljs-preprocessor">.git</span>/objects -type f
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">01</span>/<span class="hljs-number">55</span>eb4229851634a0f03eb265b69f5a2d56f341 <span class="hljs-preprocessor"># tree 2</span>
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">1</span>a/<span class="hljs-number">410</span>efbd13591db07496601ebc7a059dd55cfe9 <span class="hljs-preprocessor"># commit 3</span>
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">1</span>f/<span class="hljs-number">7</span>a7a472abf3dd9643fd615f6da379c4acb3e3a <span class="hljs-preprocessor"># test.txt v2</span>
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">3</span>c/<span class="hljs-number">4e9</span>cd789d88d8d89c1073707c3585e41b0e614 <span class="hljs-preprocessor"># tree 3</span>
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">83</span>/baae61804e65cc73a7201a7252750c76066a30 <span class="hljs-preprocessor"># test.txt v1</span>
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">95</span>/<span class="hljs-number">85191</span>f37f7b0fb9444f35a9bf50de191beadc2 <span class="hljs-preprocessor"># tag</span>
+<span class="hljs-preprocessor">.git</span>/objects/ca/c0cab538b970a37ea1e769cbbde608743bc96d <span class="hljs-preprocessor"># commit 2</span>
+<span class="hljs-preprocessor">.git</span>/objects/d6/<span class="hljs-number">70460</span>b4b4aece5915caf5c68d12f560a9fe3e4 <span class="hljs-preprocessor"># 'test content'</span>
+<span class="hljs-preprocessor">.git</span>/objects/d8/<span class="hljs-number">329</span>fc1cc938780ffdd9f94e0d364e0ea74f579 <span class="hljs-preprocessor"># tree 1</span>
+<span class="hljs-preprocessor">.git</span>/objects/fa/<span class="hljs-number">49</span>b077972391ad58037050f2a75f74e3671e92 <span class="hljs-preprocessor"># new.txt</span>
+<span class="hljs-preprocessor">.git</span>/objects/fd/f4fc3344e67ab068f836878b6c4951e3b15f3d <span class="hljs-preprocessor"># commit 1</span>
+</code></pre><p>Git comprimeert de inhoud van deze bestanden met zlib en je slaat maar weinig op, dus nemen deze bestanden samen maar 925 bytes in beslag. Je zult nu wat grotere inhoud toevoegen aan het repository om een interessante eigenschap van Git te demonstreren. Voeg het repo.rb bestand toe van de Grit bibliotheek waaraan je eerder gewerkt hebt, dit is een broncode bestand van ongeveer 12K groot:</p>
+<pre><code><span class="hljs-variable">$ </span>curl <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/github.com/mojombo</span><span class="hljs-regexp">/grit/raw</span><span class="hljs-regexp">/master/lib</span><span class="hljs-regexp">/grit/repo</span>.rb &gt; repo.rb
+<span class="hljs-variable">$ </span>git add repo.rb
+<span class="hljs-variable">$ </span>git commit -m <span class="hljs-string">'added repo.rb'</span>
+[master <span class="hljs-number">484</span>a592] added repo.rb
+ <span class="hljs-number">3</span> files changed, <span class="hljs-number">459</span> insertions(+), <span class="hljs-number">2</span> deletions(-)
+ delete mode <span class="hljs-number">100644</span> bak/test.txt
+ create mode <span class="hljs-number">100644</span> repo.rb
+ rewrite test.txt (<span class="hljs-number">100</span>%)
+</code></pre><p>Als je naar de resulterende tree kijkt, kun je zien welke SHA-1 waarde repo.rb gekregen heeft voor het blob object:</p>
+<pre><code>$ git cat-file -p master^{tree}
+<span class="hljs-number">100644</span> blob fa49b077972391ad58037050f2a75f74e3671e92      new<span class="hljs-preprocessor">.txt</span>
+<span class="hljs-number">100644</span> blob <span class="hljs-number">9</span>bc1dc421dcd51b4ac296e3e5b6e2a99cf44391e      repo<span class="hljs-preprocessor">.rb</span>
+<span class="hljs-number">100644</span> blob e3f094f522629ae358806b17daf78246c27c007b      test<span class="hljs-preprocessor">.txt</span>
+</code></pre><p>Dan controleer je hoe groot het object is op jouw schijf:</p>
+<pre><code>$ du -b <span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">9</span>b/c1dc421dcd51b4ac296e3e5b6e2a99cf44391e
+<span class="hljs-number">4102</span>    <span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">9</span>b/c1dc421dcd51b4ac296e3e5b6e2a99cf44391e
+</code></pre><p>Pas dat bestand nu eens een beetje aan, en kijk wat er gebeurt:</p>
+<pre><code><span class="hljs-variable">$ </span>echo <span class="hljs-string">'# testing'</span> &gt;&gt; repo.rb
+<span class="hljs-variable">$ </span>git commit -am <span class="hljs-string">'modified repo a bit'</span>
+[master ab1afef] modified repo a bit
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>Bekijk de tree die door de commit gemaakt is, en je zult iets interessants zien:</p>
+<pre><code>$ git cat-file -p master^{tree}
+<span class="hljs-number">100644</span> blob fa49b077972391ad58037050f2a75f74e3671e92      new<span class="hljs-preprocessor">.txt</span>
+<span class="hljs-number">100644</span> blob <span class="hljs-number">05408</span>d195263d853f09dca71d55116663690c27c      repo<span class="hljs-preprocessor">.rb</span>
+<span class="hljs-number">100644</span> blob e3f094f522629ae358806b17daf78246c27c007b      test<span class="hljs-preprocessor">.txt</span>
+</code></pre><p>De blob is nu een andere blob, wat betekent dat, alhoewel je slechts een enkele regel aan het eind van een bestand van 400 regels toegevoegd hebt, Git die nieuwe inhoud als een compleet nieuw object opgeslagen heeft:</p>
+<pre><code>$ du -b <span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">05</span>/<span class="hljs-number">408</span>d195263d853f09dca71d55116663690c27c
+<span class="hljs-number">4109</span>    <span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">05</span>/<span class="hljs-number">408</span>d195263d853f09dca71d55116663690c27c
+</code></pre><p>Je hebt nu twee vrijwel identieke 12K grote objecten op je harde schijf. Zou het niet prettig zijn als Git één van de twee volledig op kon slaan, en het tweede object slechts als delta tussen die en de eerste?</p>
+<p>Dat kan dus. Het initiële formaat waarin Git objecten opslaat op de harde schijf wordt een loose (losse) object formaat genoemd. Maar, eens in de zoveel tijd pakt Git een aantal van die objecten samen in een enkel binair bestand wat een packfile genoemd wordt, om ruimte te besparen en efficiënter te zijn. Git doet dit als je teveel loose objecten rond hebt slingeren, als je het <code>git gc</code> commando handmatig uitvoert, of als je naar een remote server pusht. Om te zien wat er gebeurt, kun je Git handmatig vragen om de objecten in te pakken met het <code>git gc</code> commando:</p>
+<pre><code>$ git gc
+Counting objects: <span class="hljs-number">17</span>, <span class="hljs-keyword">done</span>.
+Delta compression using <span class="hljs-number">2</span> threads.
+Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">13</span>/<span class="hljs-number">13</span>), <span class="hljs-keyword">done</span>.
+Writing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">17</span>/<span class="hljs-number">17</span>), <span class="hljs-keyword">done</span>.
+Total <span class="hljs-number">17</span> (delta <span class="hljs-number">1</span>), reused <span class="hljs-number">10</span> (delta <span class="hljs-number">0</span>)
+</code></pre><p>Als je in je objecten directory kijkt, zul je zien dat de meeste objecten verdwenen zijn, en er een aantal nieuwe bestanden verschenen zijn:</p>
+<pre><code>$ find <span class="hljs-preprocessor">.git</span>/objects -type f
+<span class="hljs-preprocessor">.git</span>/objects/<span class="hljs-number">71</span>/<span class="hljs-number">08</span>f7ecb345ee9d0084193f147cdad4d2998293
+<span class="hljs-preprocessor">.git</span>/objects/d6/<span class="hljs-number">70460</span>b4b4aece5915caf5c68d12f560a9fe3e4
+<span class="hljs-preprocessor">.git</span>/objects/info/packs
+<span class="hljs-preprocessor">.git</span>/objects/pack/pack-<span class="hljs-number">7</span>a16e4488ae40c7d2bc56ea2bd43e25212a66c45<span class="hljs-preprocessor">.idx</span>
+<span class="hljs-preprocessor">.git</span>/objects/pack/pack-<span class="hljs-number">7</span>a16e4488ae40c7d2bc56ea2bd43e25212a66c45<span class="hljs-preprocessor">.pack</span>
+</code></pre><p>De objecten die overgebleven zijn, zijn de blobs waarnaar geen enkel commit wijst - in dit geval zijn het de &quot;what is up, doc?&quot; en de &quot;test content&quot; voorbeeld-blobs die je eerder aangemaakt hebt. Omdat je ze nooit aan een commit toegevoegd hebt, worden ze beschouwd als dangling (rondslingerend) en worden niet in je nieuwe packfile ingepakt.</p>
+<p>De andere bestanden zijn het nieuwe packbestand en een index. Het packbestand is een enkel bestand dat de inhoud bevat van alle objecten die van je bestandssysteem verwijderd zijn. De index is een bestand dat offsets binnen de packfile bevat, zodat je snel naar een specifiek object kunt zoeken. Wat stoer is, is dat waar de objecten op de harde schijf voordat je <code>gc</code> aanriep samen zo&#39;n 8K groot waren, de nieuwe packfile slechts 4K groot is. Je hebt je schijfgebruik gehalveerd door je bestanden in te pakken.</p>
+<p>Hoe doet Git dit? Als Git objecten inpakt, zoekt het naar bestanden die qua naam en grootte gelijk zijn, en slaat slechts de delta&#39;s van de ene versie van het bestand naar de volgende op. Je kunt in de packfile kijken en zien wat Git gedaan heeft om ruimte te besparen. Het <code>git verify-pack</code> plumbing commando stelt je in staat om te zien wat er ingepakt is:</p>
+<pre><code>$ git verify-<span class="hljs-keyword">pack</span> -v \
+  .git/objects/<span class="hljs-keyword">pack</span>/<span class="hljs-keyword">pack</span>-<span class="hljs-number">7</span>a16e4488ae40c7d2bc56ea2bd43e25212a66c45.idx
+<span class="hljs-number">0155</span>eb4229851634a0f03eb265b69f5a2d56f341 tree   <span class="hljs-number">71</span> <span class="hljs-number">76</span> <span class="hljs-number">5400</span>
+<span class="hljs-number">0540</span>8d195263d853f09dca71d55116663690c27c blob   <span class="hljs-number">12908</span> <span class="hljs-number">3478</span> <span class="hljs-number">874</span>
+09f01cea547666f58d6a8d809583841a7c6f013<span class="hljs-number">0</span> tree   <span class="hljs-number">106</span> <span class="hljs-number">107</span> <span class="hljs-number">5086</span>
+<span class="hljs-number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9 commit <span class="hljs-number">225</span> <span class="hljs-number">151</span> <span class="hljs-number">322</span>
+<span class="hljs-number">1</span>f7a7a472abf3dd9643fd615f6da379c4acb3e3a blob   <span class="hljs-number">10</span> <span class="hljs-number">19</span> <span class="hljs-number">5381</span>
+<span class="hljs-number">3</span>c4e9cd789d88d8d89c1073707c3585e41b0e614 tree   <span class="hljs-number">101</span> <span class="hljs-number">105</span> <span class="hljs-number">5211</span>
+<span class="hljs-number">484</span>a59275031909e19aadb7c92262719cfcdf19a commit <span class="hljs-number">226</span> <span class="hljs-number">153</span> <span class="hljs-number">169</span>
+<span class="hljs-number">83</span>baae61804e65cc73a7201a7252750c76066a3<span class="hljs-number">0</span> blob   <span class="hljs-number">10</span> <span class="hljs-number">19</span> <span class="hljs-number">5362</span>
+<span class="hljs-number">9585191</span>f37f7b0fb9444f35a9bf50de191beadc2 tag    <span class="hljs-number">136</span> <span class="hljs-number">127</span> <span class="hljs-number">5476</span>
+<span class="hljs-number">9</span>bc1dc421dcd51b4ac296e3e5b6e2a99cf44391e blob   <span class="hljs-number">7</span> <span class="hljs-number">18</span> <span class="hljs-number">5193</span> <span class="hljs-number">1</span> \
+  <span class="hljs-number">0540</span>8d195263d853f09dca71d55116663690c27c
+ab1afef80fac8e34258ff41fc1b867c702daa24b commit <span class="hljs-number">232</span> <span class="hljs-number">157</span> <span class="hljs-number">12</span>
+cac0cab538b970a37ea1e769cbbde608743bc96d commit <span class="hljs-number">226</span> <span class="hljs-number">154</span> <span class="hljs-number">473</span>
+d8329fc1cc938780ffdd9f94e0d364e0ea74f579 tree   <span class="hljs-number">36</span> <span class="hljs-number">46</span> <span class="hljs-number">5316</span>
+e3f094f522629ae358806b17daf78246c27c007b blob   <span class="hljs-number">1486</span> <span class="hljs-number">734</span> <span class="hljs-number">4352</span>
+f8f51d7d8a1760462eca26eebafde32087499533 tree   <span class="hljs-number">106</span> <span class="hljs-number">107</span> <span class="hljs-number">749</span>
+fa49b077972391ad58037050f2a75f74e3671e92 blob   <span class="hljs-number">9</span> <span class="hljs-number">18</span> <span class="hljs-number">856</span>
+fdf4fc3344e67ab068f836878b6c4951e3b15f3d commit <span class="hljs-number">177</span> <span class="hljs-number">122</span> <span class="hljs-number">627</span>
+chain <span class="hljs-keyword">length</span> = <span class="hljs-number">1</span>: <span class="hljs-number">1</span> object
+<span class="hljs-keyword">pack</span>-<span class="hljs-number">7</span>a16e4488ae40c7d2bc56ea2bd43e25212a66c45.<span class="hljs-keyword">pack</span>: ok
+</code></pre><p>Hier refereert de <code>9bc1d</code> blob wat, als je dat nog kunt herinneren, de eerste versie is van je repo.rb bestand, aan de <code>05408</code> blob, wat de tweede versie is van het bestand. De derde kolom in de uitvoer is de grootte van het object in het pakket, zodat je kunt zien dat <code>05408</code> 12K van het bestand in beslag neemt maar dat <code>9bc1d</code> slechts 7 bytes in beslag neemt. Wat ook interessant is, is dat de tweede versie van het bestand degene is die intact opgeslagen wordt, terwijl de originele versie als delta opgeslagen wordt - dit is zo gedaan omdat het aannemelijk is dat je snellere toegang nodig hebt tot de meest recente versie van het bestand.</p>
+<p>Het echt prettige van dit alles is, dat het op ieder gewenst moment opnieuw ingepakt kan worden. Git zal op gezette tijden je databank automatisch opnieuw inpakken, omdat het altijd meer ruimte wil besparen. Je kunt ook handmatig opnieuw inpakken op elk gewenst tijdstip, door <code>git gc</code> met de hand uit te voeren.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../het_binnenwerk_van_git/git_referenties.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../het_binnenwerk_van_git/de_refspec.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

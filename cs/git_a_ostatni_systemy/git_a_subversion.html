@@ -1,0 +1,1129 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Git a Subversion | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_a_ostatni_systemy/prechod_na_system_git.html" />
+        
+        
+        <link rel="prev" href="../git_a_ostatni_systemy/README.html" />
+        
+
+        <meta property="og:title" content="Git a Subversion | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="8.1" data-basepath=".." data-revision="1396895639019">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_a_ostatni_systemy/git_a_subversion.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="uvod/README.html">
+                
+                <a href="../uvod/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Úvod
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="uvod/sprava_verzi.html">
+                            
+                            <a href="../uvod/sprava_verzi.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Správa verzí
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="uvod/strucna_historie_systemu_git.html">
+                            
+                            <a href="../uvod/strucna_historie_systemu_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Stručná historie systému Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="uvod/zaklady_systemu_git.html">
+                            
+                            <a href="../uvod/zaklady_systemu_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Základy systému Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="uvod/instalace_systemu_git.html">
+                            
+                            <a href="../uvod/instalace_systemu_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Instalace systému Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="uvod/prvni_nastaveni_systemu_git.html">
+                            
+                            <a href="../uvod/prvni_nastaveni_systemu_git.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> První nastavení systému Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="uvod/kde_hledat_pomoc.html">
+                            
+                            <a href="../uvod/kde_hledat_pomoc.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Kde hledat pomoc
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="uvod/shrnuti.html">
+                            
+                            <a href="../uvod/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="zaklady_prace_se_systemem_git/README.html">
+                
+                <a href="../zaklady_prace_se_systemem_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Základy práce se systémem Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="zaklady_prace_se_systemem_git/ziskani_repozitare_git.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/ziskani_repozitare_git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Získání repozitáře Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="zaklady_prace_se_systemem_git/nahravani_zmen_do_repozitare.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/nahravani_zmen_do_repozitare.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Nahrávání změn do repozitáře
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="zaklady_prace_se_systemem_git/zobrazeni_historie_revizi.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/zobrazeni_historie_revizi.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Zobrazení historie revizí
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="zaklady_prace_se_systemem_git/ruseni_zmen.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/ruseni_zmen.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Rušení změn
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="zaklady_prace_se_systemem_git/prace_se_vzdalenymi_repozitari.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/prace_se_vzdalenymi_repozitari.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Práce se vzdálenými repozitáři
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="zaklady_prace_se_systemem_git/znacky.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/znacky.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Značky
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="zaklady_prace_se_systemem_git/tipy_a_triky.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/tipy_a_triky.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tipy a triky
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="zaklady_prace_se_systemem_git/shrnuti.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="vetve_v_systemu_git/README.html">
+                
+                <a href="../vetve_v_systemu_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Větve v systému Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="vetve_v_systemu_git/co_je_to_vetev.html">
+                            
+                            <a href="../vetve_v_systemu_git/co_je_to_vetev.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Co je to větev
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="vetve_v_systemu_git/zaklady_vetveni_a_slucovani.html">
+                            
+                            <a href="../vetve_v_systemu_git/zaklady_vetveni_a_slucovani.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Základy větvení a slučování
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="vetve_v_systemu_git/sprava_vetvi.html">
+                            
+                            <a href="../vetve_v_systemu_git/sprava_vetvi.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Správa větví
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="vetve_v_systemu_git/moznosti_pri_praci_s_vetvemi.html">
+                            
+                            <a href="../vetve_v_systemu_git/moznosti_pri_praci_s_vetvemi.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Možnosti při práci s větvemi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="vetve_v_systemu_git/vzdalene_vetve.html">
+                            
+                            <a href="../vetve_v_systemu_git/vzdalene_vetve.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Vzdálené větve
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="vetve_v_systemu_git/preskladani.html">
+                            
+                            <a href="../vetve_v_systemu_git/preskladani.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Přeskládání
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="vetve_v_systemu_git/shrnuti.html">
+                            
+                            <a href="../vetve_v_systemu_git/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_na_serveru/README.html">
+                
+                <a href="../git_na_serveru/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git na serveru
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_na_serveru/protokoly.html">
+                            
+                            <a href="../git_na_serveru/protokoly.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Protokoly
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_na_serveru/jak_umistit_git_na_server.html">
+                            
+                            <a href="../git_na_serveru/jak_umistit_git_na_server.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Jak umístit Git na server
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_na_serveru/vygenerovani_verejneho_ssh_klice.html">
+                            
+                            <a href="../git_na_serveru/vygenerovani_verejneho_ssh_klice.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Vygenerování veřejného SSH klíče
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_na_serveru/nastaveni_serveru.html">
+                            
+                            <a href="../git_na_serveru/nastaveni_serveru.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Nastavení serveru
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_na_serveru/verejny_pristup.html">
+                            
+                            <a href="../git_na_serveru/verejny_pristup.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Veřejný přístup
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_na_serveru/gitweb.html">
+                            
+                            <a href="../git_na_serveru/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_na_serveru/gitosis.html">
+                            
+                            <a href="../git_na_serveru/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_na_serveru/gitolite.html">
+                            
+                            <a href="../git_na_serveru/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_na_serveru/demon_git.html">
+                            
+                            <a href="../git_na_serveru/demon_git.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Démon Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_na_serveru/hostovani_projektu_git.html">
+                            
+                            <a href="../git_na_serveru/hostovani_projektu_git.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Hostování projektů Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_na_serveru/shrnuti.html">
+                            
+                            <a href="../git_na_serveru/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="distribuovany_charakter_systemu_git/README.html">
+                
+                <a href="../distribuovany_charakter_systemu_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Distribuovaný charakter systému Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="distribuovany_charakter_systemu_git/distribuovane_pracovni_postupy.html">
+                            
+                            <a href="../distribuovany_charakter_systemu_git/distribuovane_pracovni_postupy.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Distribuované pracovní postupy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="distribuovany_charakter_systemu_git/prispivani_do_projektu.html">
+                            
+                            <a href="../distribuovany_charakter_systemu_git/prispivani_do_projektu.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Přispívání do projektu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="distribuovany_charakter_systemu_git/sprava_projektu.html">
+                            
+                            <a href="../distribuovany_charakter_systemu_git/sprava_projektu.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Správa projektu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="distribuovany_charakter_systemu_git/shrnuti.html">
+                            
+                            <a href="../distribuovany_charakter_systemu_git/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="nastroje_systemu_git/README.html">
+                
+                <a href="../nastroje_systemu_git/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Nástroje systému Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="nastroje_systemu_git/vyber_revize.html">
+                            
+                            <a href="../nastroje_systemu_git/vyber_revize.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Výběr revize
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="nastroje_systemu_git/interaktivni_priprava_k_zapsani.html">
+                            
+                            <a href="../nastroje_systemu_git/interaktivni_priprava_k_zapsani.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Interaktivní příprava k zapsání
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="nastroje_systemu_git/odlozeni.html">
+                            
+                            <a href="../nastroje_systemu_git/odlozeni.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Odložení
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="nastroje_systemu_git/prepis_historie.html">
+                            
+                            <a href="../nastroje_systemu_git/prepis_historie.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Přepis historie
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="nastroje_systemu_git/ladeni_v_systemu_git.html">
+                            
+                            <a href="../nastroje_systemu_git/ladeni_v_systemu_git.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Ladění v systému Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="nastroje_systemu_git/submoduly.html">
+                            
+                            <a href="../nastroje_systemu_git/submoduly.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Submoduly
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="nastroje_systemu_git/zacleneni_podstromu.html">
+                            
+                            <a href="../nastroje_systemu_git/zacleneni_podstromu.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Začlenění podstromu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="nastroje_systemu_git/shrnuti.html">
+                            
+                            <a href="../nastroje_systemu_git/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="individualni_prizpusobeni_systemu_git/README.html">
+                
+                <a href="../individualni_prizpusobeni_systemu_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Individuální přizpůsobení systému Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="individualni_prizpusobeni_systemu_git/konfigurace_systemu_git.html">
+                            
+                            <a href="../individualni_prizpusobeni_systemu_git/konfigurace_systemu_git.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Konfigurace systému Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="individualni_prizpusobeni_systemu_git/atributy_git.html">
+                            
+                            <a href="../individualni_prizpusobeni_systemu_git/atributy_git.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Atributy Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="individualni_prizpusobeni_systemu_git/zasuvne_moduly_git.html">
+                            
+                            <a href="../individualni_prizpusobeni_systemu_git/zasuvne_moduly_git.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Zásuvné moduly Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="individualni_prizpusobeni_systemu_git/priklad_standardu_kontrolovanych_systemem_git.html">
+                            
+                            <a href="../individualni_prizpusobeni_systemu_git/priklad_standardu_kontrolovanych_systemem_git.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Příklad standardů kontrolovaných systémem Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="individualni_prizpusobeni_systemu_git/shrnuti.html">
+                            
+                            <a href="../individualni_prizpusobeni_systemu_git/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_a_ostatni_systemy/README.html">
+                
+                <a href="../git_a_ostatni_systemy/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git a ostatní systémy
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_a_ostatni_systemy/git_a_subversion.html">
+                            
+                            <a href="../git_a_ostatni_systemy/git_a_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git a Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_a_ostatni_systemy/prechod_na_system_git.html">
+                            
+                            <a href="../git_a_ostatni_systemy/prechod_na_system_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Přechod na systém Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_a_ostatni_systemy/shrnuti.html">
+                            
+                            <a href="../git_a_ostatni_systemy/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git_pod_poklickou/README.html">
+                
+                <a href="../git_pod_poklickou/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Git pod pokličkou
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git_pod_poklickou/nizkourovnove_a_vysokourovnove_prikazy.html">
+                            
+                            <a href="../git_pod_poklickou/nizkourovnove_a_vysokourovnove_prikazy.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Nízkoúrovňové a vysokoúrovňové příkazy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git_pod_poklickou/objekty_git.html">
+                            
+                            <a href="../git_pod_poklickou/objekty_git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Objekty Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git_pod_poklickou/reference_git.html">
+                            
+                            <a href="../git_pod_poklickou/reference_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Reference Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git_pod_poklickou/balickove_soubory.html">
+                            
+                            <a href="../git_pod_poklickou/balickove_soubory.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Balíčkové soubory
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git_pod_poklickou/refspec.html">
+                            
+                            <a href="../git_pod_poklickou/refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git_pod_poklickou/prenosove_protokoly.html">
+                            
+                            <a href="../git_pod_poklickou/prenosove_protokoly.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Přenosové protokoly
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git_pod_poklickou/sprava_a_obnova_dat.html">
+                            
+                            <a href="../git_pod_poklickou/sprava_a_obnova_dat.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Správa a obnova dat
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git_pod_poklickou/shrnuti.html">
+                            
+                            <a href="../git_pod_poklickou/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.9" data-path="git_pod_poklickou/poznamky_k_prekladu.html">
+                            
+                            <a href="../git_pod_poklickou/poznamky_k_prekladu.html">
+                                <i class="fa fa-check"></i> <b>9.9)</b> Poznámky k překladu
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 83.09859154929578%;min-width: 81.69014084507042%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../uvod/README.html" title="Úvod" class="chapter done new-chapter" data-progress="1" style="left: 1.408450704225352%;"></a>
+    
+        <a href="../uvod/sprava_verzi.html" title="Správa verzí" class="chapter done " data-progress="1.1" style="left: 2.816901408450704%;"></a>
+    
+        <a href="../uvod/strucna_historie_systemu_git.html" title="Stručná historie systému Git" class="chapter done " data-progress="1.2" style="left: 4.225352112676056%;"></a>
+    
+        <a href="../uvod/zaklady_systemu_git.html" title="Základy systému Git" class="chapter done " data-progress="1.3" style="left: 5.633802816901408%;"></a>
+    
+        <a href="../uvod/instalace_systemu_git.html" title="Instalace systému Git" class="chapter done " data-progress="1.4" style="left: 7.042253521126761%;"></a>
+    
+        <a href="../uvod/prvni_nastaveni_systemu_git.html" title="První nastavení systému Git" class="chapter done " data-progress="1.5" style="left: 8.450704225352112%;"></a>
+    
+        <a href="../uvod/kde_hledat_pomoc.html" title="Kde hledat pomoc" class="chapter done " data-progress="1.6" style="left: 9.859154929577464%;"></a>
+    
+        <a href="../uvod/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="1.7" style="left: 11.267605633802816%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/README.html" title="Základy práce se systémem Git" class="chapter done new-chapter" data-progress="2" style="left: 12.67605633802817%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/ziskani_repozitare_git.html" title="Získání repozitáře Git" class="chapter done " data-progress="2.1" style="left: 14.084507042253522%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/nahravani_zmen_do_repozitare.html" title="Nahrávání změn do repozitáře" class="chapter done " data-progress="2.2" style="left: 15.492957746478874%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/zobrazeni_historie_revizi.html" title="Zobrazení historie revizí" class="chapter done " data-progress="2.3" style="left: 16.901408450704224%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/ruseni_zmen.html" title="Rušení změn" class="chapter done " data-progress="2.4" style="left: 18.309859154929576%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/prace_se_vzdalenymi_repozitari.html" title="Práce se vzdálenými repozitáři" class="chapter done " data-progress="2.5" style="left: 19.718309859154928%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/znacky.html" title="Značky" class="chapter done " data-progress="2.6" style="left: 21.12676056338028%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/tipy_a_triky.html" title="Tipy a triky" class="chapter done " data-progress="2.7" style="left: 22.535211267605632%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="2.8" style="left: 23.943661971830984%;"></a>
+    
+        <a href="../vetve_v_systemu_git/README.html" title="Větve v systému Git" class="chapter done new-chapter" data-progress="3" style="left: 25.35211267605634%;"></a>
+    
+        <a href="../vetve_v_systemu_git/co_je_to_vetev.html" title="Co je to větev" class="chapter done " data-progress="3.1" style="left: 26.760563380281692%;"></a>
+    
+        <a href="../vetve_v_systemu_git/zaklady_vetveni_a_slucovani.html" title="Základy větvení a slučování" class="chapter done " data-progress="3.2" style="left: 28.169014084507044%;"></a>
+    
+        <a href="../vetve_v_systemu_git/sprava_vetvi.html" title="Správa větví" class="chapter done " data-progress="3.3" style="left: 29.577464788732396%;"></a>
+    
+        <a href="../vetve_v_systemu_git/moznosti_pri_praci_s_vetvemi.html" title="Možnosti při práci s větvemi" class="chapter done " data-progress="3.4" style="left: 30.985915492957748%;"></a>
+    
+        <a href="../vetve_v_systemu_git/vzdalene_vetve.html" title="Vzdálené větve" class="chapter done " data-progress="3.5" style="left: 32.394366197183096%;"></a>
+    
+        <a href="../vetve_v_systemu_git/preskladani.html" title="Přeskládání" class="chapter done " data-progress="3.6" style="left: 33.80281690140845%;"></a>
+    
+        <a href="../vetve_v_systemu_git/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="3.7" style="left: 35.2112676056338%;"></a>
+    
+        <a href="../git_na_serveru/README.html" title="Git na serveru" class="chapter done new-chapter" data-progress="4" style="left: 36.61971830985915%;"></a>
+    
+        <a href="../git_na_serveru/protokoly.html" title="Protokoly" class="chapter done " data-progress="4.1" style="left: 38.028169014084504%;"></a>
+    
+        <a href="../git_na_serveru/hostovani_projektu_git.html" title="Hostování projektů Git" class="chapter done " data-progress="4.10" style="left: 39.436619718309856%;"></a>
+    
+        <a href="../git_na_serveru/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="4.11" style="left: 40.84507042253521%;"></a>
+    
+        <a href="../git_na_serveru/jak_umistit_git_na_server.html" title="Jak umístit Git na server" class="chapter done " data-progress="4.2" style="left: 42.25352112676056%;"></a>
+    
+        <a href="../git_na_serveru/vygenerovani_verejneho_ssh_klice.html" title="Vygenerování veřejného SSH klíče" class="chapter done " data-progress="4.3" style="left: 43.66197183098591%;"></a>
+    
+        <a href="../git_na_serveru/nastaveni_serveru.html" title="Nastavení serveru" class="chapter done " data-progress="4.4" style="left: 45.070422535211264%;"></a>
+    
+        <a href="../git_na_serveru/verejny_pristup.html" title="Veřejný přístup" class="chapter done " data-progress="4.5" style="left: 46.478873239436616%;"></a>
+    
+        <a href="../git_na_serveru/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 47.88732394366197%;"></a>
+    
+        <a href="../git_na_serveru/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 49.29577464788732%;"></a>
+    
+        <a href="../git_na_serveru/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 50.70422535211268%;"></a>
+    
+        <a href="../git_na_serveru/demon_git.html" title="Démon Git" class="chapter done " data-progress="4.9" style="left: 52.11267605633803%;"></a>
+    
+        <a href="../distribuovany_charakter_systemu_git/README.html" title="Distribuovaný charakter systému Git" class="chapter done new-chapter" data-progress="5" style="left: 53.521126760563384%;"></a>
+    
+        <a href="../distribuovany_charakter_systemu_git/distribuovane_pracovni_postupy.html" title="Distribuované pracovní postupy" class="chapter done " data-progress="5.1" style="left: 54.929577464788736%;"></a>
+    
+        <a href="../distribuovany_charakter_systemu_git/prispivani_do_projektu.html" title="Přispívání do projektu" class="chapter done " data-progress="5.2" style="left: 56.33802816901409%;"></a>
+    
+        <a href="../distribuovany_charakter_systemu_git/sprava_projektu.html" title="Správa projektu" class="chapter done " data-progress="5.3" style="left: 57.74647887323944%;"></a>
+    
+        <a href="../distribuovany_charakter_systemu_git/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="5.4" style="left: 59.15492957746479%;"></a>
+    
+        <a href="../nastroje_systemu_git/README.html" title="Nástroje systému Git" class="chapter done new-chapter" data-progress="6" style="left: 60.563380281690144%;"></a>
+    
+        <a href="../nastroje_systemu_git/vyber_revize.html" title="Výběr revize" class="chapter done " data-progress="6.1" style="left: 61.971830985915496%;"></a>
+    
+        <a href="../nastroje_systemu_git/interaktivni_priprava_k_zapsani.html" title="Interaktivní příprava k zapsání" class="chapter done " data-progress="6.2" style="left: 63.38028169014085%;"></a>
+    
+        <a href="../nastroje_systemu_git/odlozeni.html" title="Odložení" class="chapter done " data-progress="6.3" style="left: 64.78873239436619%;"></a>
+    
+        <a href="../nastroje_systemu_git/prepis_historie.html" title="Přepis historie" class="chapter done " data-progress="6.4" style="left: 66.19718309859155%;"></a>
+    
+        <a href="../nastroje_systemu_git/ladeni_v_systemu_git.html" title="Ladění v systému Git" class="chapter done " data-progress="6.5" style="left: 67.6056338028169%;"></a>
+    
+        <a href="../nastroje_systemu_git/submoduly.html" title="Submoduly" class="chapter done " data-progress="6.6" style="left: 69.01408450704226%;"></a>
+    
+        <a href="../nastroje_systemu_git/zacleneni_podstromu.html" title="Začlenění podstromu" class="chapter done " data-progress="6.7" style="left: 70.4225352112676%;"></a>
+    
+        <a href="../nastroje_systemu_git/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="6.8" style="left: 71.83098591549296%;"></a>
+    
+        <a href="../individualni_prizpusobeni_systemu_git/README.html" title="Individuální přizpůsobení systému Git" class="chapter done new-chapter" data-progress="7" style="left: 73.2394366197183%;"></a>
+    
+        <a href="../individualni_prizpusobeni_systemu_git/konfigurace_systemu_git.html" title="Konfigurace systému Git" class="chapter done " data-progress="7.1" style="left: 74.64788732394366%;"></a>
+    
+        <a href="../individualni_prizpusobeni_systemu_git/atributy_git.html" title="Atributy Git" class="chapter done " data-progress="7.2" style="left: 76.05633802816901%;"></a>
+    
+        <a href="../individualni_prizpusobeni_systemu_git/zasuvne_moduly_git.html" title="Zásuvné moduly Git" class="chapter done " data-progress="7.3" style="left: 77.46478873239437%;"></a>
+    
+        <a href="../individualni_prizpusobeni_systemu_git/priklad_standardu_kontrolovanych_systemem_git.html" title="Příklad standardů kontrolovaných systémem Git" class="chapter done " data-progress="7.4" style="left: 78.87323943661971%;"></a>
+    
+        <a href="../individualni_prizpusobeni_systemu_git/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="7.5" style="left: 80.28169014084507%;"></a>
+    
+        <a href="../git_a_ostatni_systemy/README.html" title="Git a ostatní systémy" class="chapter done new-chapter" data-progress="8" style="left: 81.69014084507042%;"></a>
+    
+        <a href="../git_a_ostatni_systemy/git_a_subversion.html" title="Git a Subversion" class="chapter done " data-progress="8.1" style="left: 83.09859154929578%;"></a>
+    
+        <a href="../git_a_ostatni_systemy/prechod_na_system_git.html" title="Přechod na systém Git" class="chapter  " data-progress="8.2" style="left: 84.50704225352112%;"></a>
+    
+        <a href="../git_a_ostatni_systemy/shrnuti.html" title="Shrnutí" class="chapter  " data-progress="8.3" style="left: 85.91549295774648%;"></a>
+    
+        <a href="../git_pod_poklickou/README.html" title="Git pod pokličkou" class="chapter  new-chapter" data-progress="9" style="left: 87.32394366197182%;"></a>
+    
+        <a href="../git_pod_poklickou/nizkourovnove_a_vysokourovnove_prikazy.html" title="Nízkoúrovňové a vysokoúrovňové příkazy" class="chapter  " data-progress="9.1" style="left: 88.73239436619718%;"></a>
+    
+        <a href="../git_pod_poklickou/objekty_git.html" title="Objekty Git" class="chapter  " data-progress="9.2" style="left: 90.14084507042253%;"></a>
+    
+        <a href="../git_pod_poklickou/reference_git.html" title="Reference Git" class="chapter  " data-progress="9.3" style="left: 91.54929577464789%;"></a>
+    
+        <a href="../git_pod_poklickou/balickove_soubory.html" title="Balíčkové soubory" class="chapter  " data-progress="9.4" style="left: 92.95774647887323%;"></a>
+    
+        <a href="../git_pod_poklickou/refspec.html" title="Refspec" class="chapter  " data-progress="9.5" style="left: 94.36619718309859%;"></a>
+    
+        <a href="../git_pod_poklickou/prenosove_protokoly.html" title="Přenosové protokoly" class="chapter  " data-progress="9.6" style="left: 95.77464788732394%;"></a>
+    
+        <a href="../git_pod_poklickou/sprava_a_obnova_dat.html" title="Správa a obnova dat" class="chapter  " data-progress="9.7" style="left: 97.1830985915493%;"></a>
+    
+        <a href="../git_pod_poklickou/shrnuti.html" title="Shrnutí" class="chapter  " data-progress="9.8" style="left: 98.59154929577464%;"></a>
+    
+        <a href="../git_pod_poklickou/poznamky_k_prekladu.html" title="Poznámky k překladu" class="chapter  " data-progress="9.9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_974">
+                    
+                        <h1 id="git-a-subversion">Git a Subversion</h1>
+<p>V současné době používá většina projektů vývoje open source softwaru a velká část korporátních projektů ke správě zdrojového kódu systém Subversion. Subversion je nejpopulárnějším systémem VCS s otevřeným zdrojovým kódem a využívá se už téměř deset let. V mnoha ohledech je velmi podobný systému CVS, který platil ve světě správy verzí před příchodem systému Subversion za nepřekonatelný.</p>
+<p>Jednou ze skvělých funkcí systému Git je obousměrný most k systému Subversion: <code>git svn</code>. Tento nástroj umožňuje používat Git jako platného klienta serveru Subversion. Můžete tak využívat všech lokálních funkcí systému Git, ale revize odesílat na server Subversion, jako byste tento systém používali i lokálně. To znamená, že můžete vytvářet nové lokální větve a slučovat je, používat oblast připravených změn, přeskládávat, částečně přejímat atd., zatímco vaši spolupracovníci budou dále pracovat svými zašlými a prastarými způsoby. Jistě nebude od věci, jestliže se pokusíte propašovat Git do prostředí vaší společnosti a lobbováním za změnu infrastruktury směrem k plné podpoře systému Git pomůžete svým kolegům-vývojářům k vyšší efektivitě práce. Most k systému Subversion je branou do světa DVCS.</p>
+<h2 id="git-svn">git svn</h2>
+<p>Základním příkazem systému Git ke všem operacím směřujícím do systému Subversion je <code>git svn</code>. Takto začínají všechny příkazy. Ale není jich mnoho. Ty nejběžnější si představíme v několika malých modelových situacích.</p>
+<p>V tomto místě bych rád upozornil, že použijete-li příkaz <code>git svn</code>, zahajujete interakci se systémem Subversion, nástrojem zdaleka ne tak sofistikovaným jako Git. Přestože není problém lokálně pracovat s větvemi a slučovat je, obecně doporučujeme, abyste se snažili udržet historii co nejlineárnější (pomůže vám v tom přeskládání) a vyhýbali se úkonům, jako je současná interakce se vzdáleným repozitářem Git.</p>
+<p>Nepřepisujte svou historii a nepokoušejte se ji znovu odeslat a neodesílejte revize do paralelního repozitáře Git, přes nějž chcete současně spolupracovat s kolegy používajícími Git. Subversion může mít pouze jednu lineární historii a opravdu není těžké uvést ho do rozpaků. Pokud pracujete v týmu, v němž část vývojářů používá SVN a část Git, zajistěte, aby všichni spolupracovali na serveru SVN – váš život bude jednodušší.</p>
+<h2 id="vytvo-en-repozit-e">Vytvoření repozitáře</h2>
+<p>Abychom si mohli tuto funkci ukázat, budete potřebovat typický repozitář SVN, k němuž máte oprávnění pro zápis. Chcete-li si tyto příklady zkopírovat, budete si muset obstarat zapisovatelnou kopii mého testovacího repozitáře. Snadno ho zkopírujete pomocí nástroje <code>svnsync</code>, jenž je součástí novějších verzí systému Subversion – měl by být distribuován s verzí 1.4 a vyšší. Pro potřeby našich pokusů jsem na stránkách Google code vytvořil nový repozitář Subversion, který byl původně součástí kopie projektu <code>protobuf</code>, nástroje, který kóduje strukturovaná data pro síťový přenos.</p>
+<p>Chcete-li postupovat podle mě, budete si nejprve muset vytvořit nový lokální repozitář Subversion:</p>
+<pre><code><span class="hljs-variable">$ </span>mkdir /tmp/test-svn
+<span class="hljs-variable">$ </span>svnadmin create /tmp/test-svn
+</code></pre><p>Poté umožněte všem uživatelům měnit vlastnosti vlastnosti revprops – jednoduše to provedete přidáním skriptu pre-revprop-change, jehož návratovou hodnotou bude vždy 0:</p>
+<pre><code>$ cat /tmp/test-svn/hooks/pre-revprop-change
+<span class="hljs-shebang">#!/bin/sh</span>
+<span class="hljs-keyword">exit</span> <span class="hljs-number">0</span>;
+$ chmod +x /tmp/test-svn/hooks/pre-revprop-change
+</code></pre><p>Nyní můžete tento projekt synchronizovat na svůj lokální počítač zadáním příkazu <code>svnsync init</code> s uvedením repozitářů „do“ a „z“.</p>
+<pre><code><span class="hljs-variable">$ </span>svnsync init <span class="hljs-symbol">file:</span>/<span class="hljs-regexp">//tmp</span><span class="hljs-regexp">/test-svn http:/</span><span class="hljs-regexp">/progit-example.googlecode.com/svn</span><span class="hljs-regexp">/</span>
+</code></pre><p>Tím nastavíte vlastnosti synchronizace. Zdrojový kód pak naklonujete příkazem:</p>
+<pre><code>$ svnsync sync file:///tmp/test-svn
+Committed revision <span class="hljs-number">1.</span>
+Copied properties <span class="hljs-keyword">for</span> revision <span class="hljs-number">1.</span>
+Committed revision <span class="hljs-number">2.</span>
+Copied properties <span class="hljs-keyword">for</span> revision <span class="hljs-number">2.</span>
+Committed revision <span class="hljs-number">3.</span>
+<span class="hljs-keyword">...</span>
+</code></pre><p>Tato operace bude trvat jen několik minut. Pokud byste se však pokoušeli zkopírovat originální repozitář ne do lokálního, nýbrž do jiného vzdáleného repozitáře, protáhne se proces téměř na hodinu, přestože repozitář obsahuje necelých 100 revizí. Subversion musí klonovat každou revizi zvlášť a tu pak odesílá zpět do jiného repozitáře. Tento postup je sice velice neefektivní, ale jiná možnost neexistuje.</p>
+<h2 id="prvn-kroky">První kroky</h2>
+<p>Nyní máte repozitář Subversion s oprávněním pro zápis, a proto se můžeme podívat na typický postup práce. Začneme příkazem <code>git svn clone</code>, který importuje celý repozitář Subversion do lokálního repozitáře Git. Nezapomeňte, že pokud import provádíte z reálně hostovaného repozitáře Subversion, je třeba nahradit <code>file:///tmp/test-svn</code> adresou URL vašeho repozitáře Subversion:</p>
+<pre><code>$ git svn clone file:<span class="hljs-comment">///tmp/test-svn -T trunk -b branches -t tags</span>
+Initialized empty Git repository <span class="hljs-keyword">in</span> /Users/schacon/projects/testsvnsync/svn<span class="hljs-subst">/</span><span class="hljs-built_in">.</span>git<span class="hljs-subst">/</span>
+r1 <span class="hljs-subst">=</span> b4e387bc68740b5af56c2a5faf4003ae42bd135c (trunk)
+      A    m4/acx_pthread<span class="hljs-built_in">.</span>m4
+      A    m4/stl_hash<span class="hljs-built_in">.</span>m4
+<span class="hljs-attribute">...</span>
+r75 <span class="hljs-subst">=</span> d1957f3b307922124eec6314e15bcda59e3d9610 (trunk)
+Found possible branch point: file:<span class="hljs-comment">///tmp/test-svn/trunk =&gt; \</span>
+    file:<span class="hljs-comment">///tmp/test-svn /branches/my-calc-branch, 75</span>
+Found branch <span class="hljs-keyword">parent</span>: (my<span class="hljs-attribute">-calc</span><span class="hljs-attribute">-branch</span>) d1957f3b307922124eec6314e15bcda59e3d9610
+Following <span class="hljs-keyword">parent</span> <span class="hljs-keyword">with</span> do_switch
+Successfully followed <span class="hljs-keyword">parent</span>
+r76 <span class="hljs-subst">=</span> <span class="hljs-number">8624824</span>ecc0badd73f40ea2f01fce51894189b01 (my<span class="hljs-attribute">-calc</span><span class="hljs-attribute">-branch</span>)
+Checked out HEAD:
+ file:<span class="hljs-comment">///tmp/test-svn/branches/my-calc-branch r76</span>
+</code></pre><p>Na adrese URL, kterou jste zadali, tím v podstatě provedete dva příkazy: <code>git svn init</code> a <code>git svn fetch</code>. Proces může chvíli trvat. Testovací projekt má pouze kolem 75 revizí a základ kódu není příliš velký, takže bude stačit několik minut. Git však musí provést checkout každé verze jednotlivě a po jedné je také zapsat. U projektů se stovkami nebo tisíci revizí si můžete bez nadsázky počkat i celé hodiny nebo dny.</p>
+<p>Část <code>-T trunk -b branches -t tags</code> říká systému Git, že tento repozitář Subversion dodržuje základní zásady větvení a značkování. Pokud pojmenujete svůj kmenový adresář (trunk), větve nebo značky jinak, lze tyto parametry změnit. Protože se jedná o častou situaci, můžete celou tuto část nahradit parametrem <code>-s</code>, který označuje standardní layout a implikuje všechny uvedené parametry. Následující příkaz je ekvivalentní:</p>
+<pre><code>$ git svn clone file:<span class="hljs-comment"><span class="hljs-xmlDocTag">///</span>tmp/test-svn -s</span>
+</code></pre><p>V tomto okamžiku byste tedy měli mít platný repozitář Git s importovanými větvemi a značkami:</p>
+<pre><code>$ git branch -a
+* master
+  my-calc-branch
+  tags/<span class="hljs-number">2.0</span><span class="hljs-number">.2</span>
+  tags/<span class="hljs-keyword">release</span>-<span class="hljs-number">2.0</span><span class="hljs-number">.1</span>
+  tags/<span class="hljs-keyword">release</span>-<span class="hljs-number">2.0</span><span class="hljs-number">.2</span>
+  tags/<span class="hljs-keyword">release</span>-<span class="hljs-number">2.0</span><span class="hljs-number">.2</span>rc1
+  trunk
+</code></pre><p>Doplňme také, že tento nástroj odlišně přiřazuje jmenný prostor vzdálených referencí. Jestliže klonujete normální repozitář Git, získáte ze vzdáleného serveru všechny větve, lokálně dostupné pod označením <code>origin/[větev]</code> – jmenný prostor se přiřazuje na základě vzdáleného serveru. <code>git svn</code> však předpokládá, že nebudete mít více vzdálených repozitářů a všechny reference uloží na místa na vzdáleném serveru bez jmenného prostoru. Pokud si přejete zobrazit všechny své reference s úplným názvem, můžete použít nízkoúrovňový příkaz <code>show-ref</code>:</p>
+<pre><code>$ git show-ref
+<span class="hljs-number">1</span>cbd4904d9982f386d87f88fce1c24ad7c0f0471 refs/heads/master
+aee1ecc26318164f355a883f5d99cff0c852d3c4 refs/<span class="hljs-comment">remotes/my-calc-branch</span>
+<span class="hljs-number">03</span>d09b0e2aad427e34a6d50ff147128e76c0e0f5 refs/<span class="hljs-comment">remotes/tags/2.0.2</span>
+<span class="hljs-number">50</span>d02cc0adc9da4319eeba0900430ba219b9c376 refs/<span class="hljs-comment">remotes/tags/release-2.0.1</span>
+<span class="hljs-number">4</span>caaa711a50c77879a91b8b90380060f672745cb refs/<span class="hljs-comment">remotes/tags/release-2.0.2</span>
+<span class="hljs-number">1</span>c4cb508144c513ff1214c3488abe66dcb92916f refs/<span class="hljs-comment">remotes/tags/release-2.0.2rc1</span>
+<span class="hljs-number">1</span>cbd4904d9982f386d87f88fce1c24ad7c0f0471 refs/<span class="hljs-comment">remotes/trunk</span>
+</code></pre><p>Běžný repozitář Git vypadá naproti tomu spíš takto:</p>
+<pre><code>$ git show-ref
+<span class="hljs-number">83</span>e38c7a0af325a9722f2fdc56b10188806d83a1 refs/heads/master
+<span class="hljs-number">3</span>e15e38c198baac84223acfc6224bb8b99ff2281 refs/<span class="hljs-comment">remotes/gitserver/master</span>
+<span class="hljs-number">0</span>a30dd3b0c795b80212ae723640d4e5d48cabdff refs/<span class="hljs-comment">remotes/origin/master</span>
+<span class="hljs-number">25812380387</span>fdd55f916652be4881c6f11600d6f refs/<span class="hljs-comment">remotes/origin/testing</span>
+</code></pre><p>Máte dva vzdálené servery: první nese označení <code>gitserver</code> a obsahuje větev <code>master</code>; druhý server je <code>origin</code>, který obsahuje větve <code>master</code> a<code>testing</code>.</p>
+<p>Všimněte si, že v příkladu vzdálených referencí importovaných nástrojem <code>git svn</code> jsou značky přidány jako vzdálené větve, nikoli jako skutečné značky Git. Import ze systému Subversion vypadá, jako by měl vzdálený repozitář s názvem „tags“, v němž se nacházejí jednotlivé větve.</p>
+<h2 id="zapisov-n-zp-t-do-syst-mu-subversion">Zapisování zpět do systému Subversion</h2>
+<p>Máte vytvořen pracovní repozitář a můžete se pustit do práce na projektu. Časem ale budete chtít odeslat revize zpět do repozitáře a použít při tom Git jako klienta SVN. Upravíte-li některý ze souborů a provedené změny zapíšete, budete mít revizi, která existuje lokálně v systému Git, ale neexistuje na serveru Subversion:</p>
+<pre><code>$ git commit -am 'Adding git-svn instructions <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> README'
+[master <span class="hljs-number">97031e5</span>] Adding git-svn instructions <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> README
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>Jako další krok tak chcete odeslat provedené změny do vzdáleného repozitáře. Všimněte si, jak se tím mění váš způsob práce v systému Subversion. Můžete zapsat několik revizí offline a poté je na server Subversion odeslat všechny najednou. Pro odeslání revizí na server Subversion zadejte příkaz <code>git svn dcommit</code>:</p>
+<pre><code>$ git svn dcommit
+Committing to file:///tmp/test-svn/trunk <span class="hljs-keyword">...</span>
+       M      README.txt
+Committed r79
+       M      README.txt
+r79 = 938b1a547c2cc92033b74d32030e86468294a5c8 (trunk)
+No changes between current HEAD and refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+</code></pre><p>Příkaz vezme všechny revize, které jste provedli na vrcholu kódu ze serveru Subversion, každou jednotlivě zapíše do systému Subversion a přepíše vaši lokální revizi Git tak, aby obsahovala unikátní identifikátor. To je důležité, protože to znamená, že se změní všechny kontrolní součty SHA-1 vašich revizí. To je také jeden z důvodů, proč není vhodné pracovat zároveň se serverem Subversion a s verzemi vzdálených repozitářů Git k témuž projektu. Pokud se podíváte na poslední revizi, uvidíte nově přidané <code>git-svn-id</code>:</p>
+<pre><code>$ git <span class="hljs-keyword">log</span> <span class="hljs-subst">-</span><span class="hljs-number">1</span>
+commit <span class="hljs-number">938</span>b1a547c2cc92033b74d32030e86468294a5c8
+Author: schacon <span class="hljs-subst">&lt;</span>schacon@<span class="hljs-number">4</span>c93b258<span class="hljs-subst">-</span><span class="hljs-number">373</span>f<span class="hljs-subst">-</span><span class="hljs-number">11</span>de<span class="hljs-attribute">-be05</span><span class="hljs-subst">-</span><span class="hljs-number">5</span>f7a86268029<span class="hljs-subst">&gt;</span>
+<span class="hljs-built_in">Date</span>:   Sat May <span class="hljs-number">2</span> <span class="hljs-number">22</span>:<span class="hljs-number">06</span>:<span class="hljs-number">44</span> <span class="hljs-number">2009</span> <span class="hljs-subst">+</span><span class="hljs-number">0000</span>
+
+    Adding git<span class="hljs-attribute">-svn</span> instructions <span class="hljs-keyword">to</span> the README
+
+    git<span class="hljs-attribute">-svn</span><span class="hljs-attribute">-id</span>: file:<span class="hljs-comment">///tmp/test-svn/trunk@79 4c93b258-373f-11de-be05-5f7a86268029</span>
+</code></pre><p>Všimněte si, že kontrolní součet SHA, který před zapsáním revize původně začínal kombinací znaků <code>97031e5</code>, nyní začíná <code>938b1a5</code>. Chcete-li revize odeslat jak na server Git, tak na server Subversion, odešlete je nejprve na server Subversion (<code>dcommit</code>), protože tím změníte data revizí.</p>
+<h2 id="sta-en-nov-ch-zm-n">Stažení nových změn</h2>
+<p>Pokud na projektu spolupracujete s dalšími vývojáři, stane se vám, že někdo z vás odešle své revize, a až se o totéž pokusí ostatní, dojde ke konfliktu. Jejich změna bude odmítnuta, dokud nezačlení dříve odeslanou práci. V nástroji <code>git svn</code> to bude vypadat následovně:</p>
+<pre><code>$ git svn dcommit
+Committing <span class="hljs-built_in">to</span> <span class="hljs-built_in">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk ...</span>
+Merge conflict during commit: Your <span class="hljs-built_in">file</span> <span class="hljs-operator">or</span> <span class="hljs-built_in">directory</span> <span class="hljs-string">'README.txt'</span> is probably \
+out-<span class="hljs-operator">of</span>-<span class="hljs-built_in">date</span>: resource out <span class="hljs-operator">of</span> <span class="hljs-built_in">date</span>; <span class="hljs-keyword">try</span> updating <span class="hljs-keyword">at</span> /Users/schacon/libexec/git-\
+core/git-svn <span class="hljs-built_in">line</span> <span class="hljs-number">482</span>
+</code></pre><p>Chcete-li tuto situaci vyřešit, spusťte příkaz <code>git svn rebase</code>, jímž stáhnete veškeré změny na serveru, které ještě nemáte lokálně, a přeskládáte všechnu práci na vrchol toho, co se nachází na serveru:</p>
+<pre><code>$ git svn rebase
+       M      README.txt
+r80 = ff829ab914e8775c7c025d741beb3d523ee30bc4 (trunk)
+First, rewinding head <span class="hljs-keyword">to</span> replay your work <span class="hljs-function_start"><span class="hljs-keyword">on</span></span> top <span class="hljs-keyword">of</span> <span class="hljs-keyword">it</span>...
+Applying: <span class="hljs-keyword">first</span> user change
+</code></pre><p>Nyní je všechna vaše práce na vrcholu revizí, které jsou na serveru Subversion. Příkaz <code>dcommit</code> bude nyní úspěšně proveden:</p>
+<pre><code>$ git svn dcommit
+Committing to file:///tmp/test-svn/trunk <span class="hljs-keyword">...</span>
+       M      README.txt
+Committed r81
+       M      README.txt
+r81 = 456cbe6337abe49154db70106d1836bc1332deed (trunk)
+No changes between current HEAD and refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+</code></pre><p>Za zmínku stojí, že na rozdíl od systému Git, který před přijetím odesílaných dat vyžaduje, abyste začlenili práci na serveru, kterou ještě nemáte lokálně, nástroj <code>git svn</code> si toto vyžádá pouze v případě, že změny navzájem kolidují. Jestliže někdo odešle na server změnu v jednom souboru a vy poté odešlete změnu provedenou v jiném souboru, příkaz <code>dcommit</code> bude proveden úspěšně:</p>
+<pre><code>$ git svn dcommit
+Committing <span class="hljs-built_in">to</span> <span class="hljs-built_in">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk ...</span>
+       M      configure.ac
+Committed r84
+       M      autogen.sh
+r83 = <span class="hljs-number">8</span>aa54a74d452f82eee10076ab2584c1fc424853b (trunk)
+       M      configure.ac
+r84 = cdbac939211ccb18aa744e581e46563af5d962d0 (trunk)
+W: d2f23b80f67aaaa1f6f5aaef48fce3263ac71a92 <span class="hljs-operator">and</span> refs/remotes/trunk differ, \
+  <span class="hljs-keyword">using</span> rebase:
+:<span class="hljs-number">100755</span> <span class="hljs-number">100755</span> efa5a59965fbbb5b2b0a12890f1b351bb5493c18 \
+  <span class="hljs-number">015e4</span>c98c482f0fa71e4d5434338014530b37fa6 M   autogen.sh
+First, rewinding head <span class="hljs-built_in">to</span> replay your work <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">top</span> <span class="hljs-title">of</span> <span class="hljs-title">it</span>...</span>
+Nothing <span class="hljs-built_in">to</span> <span class="hljs-built_in">do</span>.
+</code></pre><p>Tuto skutečnost je dobré mít na paměti, neboť výsledkem takového postupu je stav projektu, který ve chvíli vašeho odeslání neexistoval na žádném z počítačů. Jsou-li změny nekompatibilní, přestože nekolidují, může dojít k těžko diagnostikovatelným problémům. V tom se tento postup liší od používání serveru Git. V systému Git můžete kompletně otestovat stav v systému klienta ještě před zveřejněním. V SVN si naproti tomu nemůžete být nikdy jisti, že je stav bezprostředně před revizí a po revizi identický.</p>
+<p>Tento příkaz byste proto měli používat ke stažení změn ze serveru Subversion i v případě, že ještě sami nehodláte zapsat vlastní revize. Nová data sice můžete vyzvednout i příkazem <code>git svn fetch</code>, avšak příkaz <code>git svn rebase</code> data nejen stáhne, ale navíc aktualizuje vaše lokální revize.</p>
+<pre><code>$ git svn rebase
+       M      generate_descriptor_proto.sh
+r82 = bd16df9173e424c6f52c337ab6efa7f7643282f1 (trunk)
+First, rewinding head <span class="hljs-keyword">to</span> replay your work <span class="hljs-function_start"><span class="hljs-keyword">on</span></span> top <span class="hljs-keyword">of</span> <span class="hljs-keyword">it</span>...
+Fast-forwarded master <span class="hljs-keyword">to</span> refs/remotes/trunk.
+</code></pre><p>Spustíte-li čas od času příkaz <code>git svn rebase</code>, budete mít jistotu, že pracujete s aktuálním kódem. Nezapomeňte však, že když příkaz spouštíte, je třeba, abyste měli čistý pracovní adresář. Máte-li lokální změny, musíte ještě před spuštěním příkazu <code>git svn rebase</code> práci buď odložit (stash), nebo ji dočasně zapsat. V opačném případě nebude příkaz proveden, protože systém zjistí, že by přeskládání vedlo ke konfliktu.</p>
+<h2 id="probl-my-s-v-tvemi-syst-mu-git">Problémy s větvemi systému Git</h2>
+<p>Pokud vám vyhovuje způsob práce v systému Git, začnete pravděpodobně vytvářet tematické větve, budete v nich vytvářet svou práci a začleňovat je. Odesíláte-li revize na server Subversion nástrojem git svn, budete možná chtít pokaždé raději přeskládat svou práci na jedinou větev, místo abyste je slučovali. Důvod, proč raději využít možnosti přeskládání, spočívá v tom, že Subversion má lineární historii a neprovádí začleňování stejně jako Git. Nástroj git svn tak při konverzi snímků na revize Subversion sleduje pouze prvního rodiče.</p>
+<p>Předpokládejme, že vaše historie vypadá následovně: vytvořili jste větev <code>experiment</code>, zapsali jste dvě revize a začlenili jste je zpět do větve <code>master</code>. Výstup příkazu <code>dcommit</code> bude nyní vypadat následovně:</p>
+<pre><code>$ git svn dcommit
+Committing to file:///tmp/test-svn/trunk ...
+       M      CHANGES<span class="hljs-preprocessor">.txt</span>
+Committed r85
+       M      CHANGES<span class="hljs-preprocessor">.txt</span>
+r85 = <span class="hljs-number">4</span>bfebeec434d156c36f2bcd18f4e3d97dc3269a2 (trunk)
+No changes between current HEAD <span class="hljs-keyword">and</span> refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+<span class="hljs-label">COPYING.txt:</span> locally modified
+<span class="hljs-label">INSTALL.txt:</span> locally modified
+       M      COPYING<span class="hljs-preprocessor">.txt</span>
+       M      INSTALL<span class="hljs-preprocessor">.txt</span>
+Committed r86
+       M      INSTALL<span class="hljs-preprocessor">.txt</span>
+       M      COPYING<span class="hljs-preprocessor">.txt</span>
+r86 = <span class="hljs-number">2647</span>f6b86ccfcaad4ec58c520e369ec81f7c283c (trunk)
+No changes between current HEAD <span class="hljs-keyword">and</span> refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+</code></pre><p>Příkaz <code>dcommit</code> na větvi se začleněnou historií bude fungovat bez problémů, pomineme-li, že při pohledu na historii projektu Git zjistíme, že nepřepsal žádnou z revizí, kterou jste provedli ve větvi <code>experiment</code>. Všechny změny se místo toho objeví v SVN verzi jedné revize vzniklé sloučením.</p>
+<p>Pokud tuto práci naklonuje jiný uživatel, uvidí jen jednu revizi vzniklou sloučením, obsahující všechnu práci skomprimovanou do ní. Neuvidí data revizí s informacemi, odkud revize pochází nebo kdy byla zapsána.</p>
+<h2 id="v-tve-v-syst-mu-subversion">Větve v systému Subversion</h2>
+<p>Princip větvení v systému Subversion se odlišuje od větvení v systému Git. Pokud se mu můžete úplně vyhnout, mohu vám to vřele doporučit. Pokud se mu vyhnout nelze, můžete i tady použít nástroj git svn, pomocí nějž lze vytvářet nové větve a zapisovat do nich revize.</p>
+<h3 id="vytvo-en-nov-v-tve-svn">Vytvoření nové větve SVN</h3>
+<p>Chcete-li vytvořit novou větev v systému Subversion, spusťte příkaz <code>git svn branch [název větve]</code>:</p>
+<pre><code>$ git svn branch opera
+Copying <span class="hljs-keyword">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk at r87 to file:///tmp/test-svn/branches/opera...</span>
+Found possible branch point: <span class="hljs-keyword">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk =&gt; \</span>
+  <span class="hljs-keyword">file</span>:<span class="hljs-comment">///tmp/test-svn/branches/opera, 87</span>
+Found branch <span class="hljs-keyword">parent</span>: (opera) <span class="hljs-number">1</span>f6bfe471083cbca06ac8d4176f7ad4de0d62e5f
+Following <span class="hljs-keyword">parent</span> with do_switch
+Successfully followed <span class="hljs-keyword">parent</span>
+r89 = <span class="hljs-number">9</span>b6fe0b90c5c9adf9165f700897518dbc54a7cbf (opera)
+</code></pre><p>Příkaz je ekvivalentní s příkazem <code>svn copy trunk branches/opera</code> v systému Subversion a pracuje na serveru Subversion. Měli bychom také dodat, že příkaz neprovede automaticky checkout dané větve. Pokud nyní zapíšete revizi, dostane se do větve <code>trunk</code> na serveru, ne do větve <code>opera</code>.</p>
+<h2 id="p-ep-n-n-aktivn-ch-v-tv-">Přepínání aktivních větví</h2>
+<p>Git zjistí, do jaké větve se vaše revize zapsané příkazem dcommit dostanou – podívá se na konec všech větví Subversion ve vaší historii. Měli byste mít pouze jednu a měla by to být poslední větev s <code>git-svn-id</code> ve vaší aktuální historii větve.</p>
+<p>Chcete-li současně pracovat ve více než jedné větvi, můžete nastavit lokální větve tak, abyste příkazem <code>dcommit</code> zapisovali revize do konkrétních větví Subversion. Za tímto účelem umístěte začátek větví na importované revizi Subversion pro tuto větev. Chcete-li používat větev <code>opera</code>, v níž můžete pracovat odděleně, spusťte příkaz:</p>
+<pre><code><span class="hljs-variable">$ </span>git branch opera remotes/opera
+</code></pre><p>Budete-li nyní chtít začlenit větev <code>opera</code> do větve <code>trunk</code> (vaše větev <code>master</code>), můžete tak učinit běžným příkazem <code>git merge</code>. Měli byste však uvést výstižnou zprávu revize (pomocí parametru <code>-m</code>). V opačném případě bude sloučení místo užitečných informací oznamovat jen „Merge branch opera“ („začleněna větev opera“).</p>
+<p>Nezapomeňte, že přestože k operaci používáte příkaz <code>git merge</code> a sloučení bude pravděpodobně o mnoho snazší, než by bylo v systému Subversion (Git automaticky vyhledá vhodnou základu pro sloučení), nejedná se o standardní příkaz merge systému Git. Tato data budete muset odeslat zpět na server Subversion, který nedokáže pracovat s revizí sledující více než jednoho rodiče. Proto až je odešlete, budou vypadat jako jediná revize, jež zkomprimovala veškerou práci jiné větve do jedné revize. Poté, co začleníte jednu větev do druhé, můžete se beze všeho vrátit zpět a pokračovat v práci na této větvi, stejně jako byste mohli v systému Git. Spustíte-li příkaz <code>dcommit</code>, smažete všechny informace, které sdělují, jaká větev byla začleněna, a všechny následné výpočty základny pro sloučení tak budou nesprávné. Příkaz dcommit způsobí, že bude výsledek příkazu <code>git merge</code> vypadat, jako byste spustili příkaz <code>git merge --squash</code>. Bohužel však neexistuje žádný dobrý způsob, jak této situaci předejít, Subversion nedokáže tyto informace uchovávat. Dokud tedy budete používat server Subversion, vždy se budete muset s tímto jeho nedostatkem vyrovnat. Chcete-li se vyhnout možným problémům, smažte lokální větev (v našem případě <code>opera</code>) hned poté, co jste ji začlenili do kmenového adresáře (trunk).</p>
+<h2 id="p-kazy-syst-mu-subversion">Příkazy systému Subversion</h2>
+<p>Sada nástrojů <code>git svn</code> dává uživateli do ruky celou řadu příkazů, jež jsou svou funkcí podobné příkazům v systému Subversion a uživateli tím usnadňují přechod do systému Git. Na tomto místě proto uvedu pár příkazů, které jsou podobné jako v systému Subversion.</p>
+<h3 id="historie-ve-stylu-svn">Historie ve stylu SVN</h3>
+<p>Jestliže jste zvyklí na systém Subversion a chcete historii procházet ve stylu výstupu SVN, můžete použít příkaz <code>git svn log</code>. Historie revizí se zobrazí ve formátování SVN:</p>
+<pre><code><span class="hljs-header">$ git svn log
+------------------------------------------------------------------------</span>
+r87 | schacon | 2009-05-02 16:07:37 -0700 (Sat, 02 May 2009) | 2 lines
+
+autogen change
+
+<span class="hljs-code">------------------------------------------------------------------------
+r86 | schacon | 2009-05-02 16:00:21 -0700 (Sat, 02 May 2009) | 2 lines
+
+Merge branch 'experiment'
+
+------------------------------------------------------------------------</span>
+r85 | schacon | 2009-05-02 16:00:09 -0700 (Sat, 02 May 2009) | 2 lines
+
+updated the changelog
+</code></pre><p>O příkazu <code>git svn log</code> byste měli vědět dvě důležité věci. Zaprvé to, že pracuje i off-line, na rozdíl od skutečného příkazu <code>svn log</code>, který si data vyžádá ze serveru Subversion. Zadruhé pak to, že zobrazuje pouze revize, jež byly zapsány na server Subversion. Nezobrazuje tedy lokální revize Git, které jste nezapsali příkazem dcommit. Stejně tak nezobrazuje revize, které ostatní zapsali na server Subversion od vašeho posledního připojení. Jedná se tak spíše o poslední známý stav revizí na serveru Subversion.</p>
+<h3 id="anotace-svn">Anotace SVN</h3>
+<p>Tak jako příkaz <code>git svn log</code> simuluje offline příkaz <code>svn log</code>, ekvivalentem příkazu <code>svn annotate</code> je <code>git svn blame [SOUBOR]</code>. Jeho výstup vypadá takto:</p>
+<pre><code>$ git svn blame README.txt
+ <span class="hljs-number">2</span>   temporal Protocol Buffers - Google<span class="hljs-attribute">'s</span> data interchange format
+ <span class="hljs-number">2</span>   temporal Copyright <span class="hljs-number">2008</span> Google Inc.
+ <span class="hljs-number">2</span>   temporal http://code.google.com/apis/protocolbuffers/
+ <span class="hljs-number">2</span>   temporal
+<span class="hljs-number">22</span>   temporal C++ Installation - Unix
+<span class="hljs-number">22</span>   temporal =======================
+ <span class="hljs-number">2</span>   temporal
+<span class="hljs-number">79</span>    schacon Committing <span class="hljs-keyword">in</span> git-svn.
+<span class="hljs-number">78</span>    schacon
+ <span class="hljs-number">2</span>   temporal <span class="hljs-keyword">To</span> build <span class="hljs-keyword">and</span> install the C++ Protocol <span class="hljs-keyword">Buffer</span> runtime <span class="hljs-keyword">and</span> the Protocol
+ <span class="hljs-number">2</span>   temporal <span class="hljs-keyword">Buffer</span> compiler (protoc) execute the following:
+ <span class="hljs-number">2</span>   temporal
+</code></pre><p>Ani tento příkaz nezobrazuje revize zapsané lokálně v systému Git a revize odeslané na server Subversion od posledního připojení.</p>
+<h3 id="informace-o-serveru-svn">Informace o serveru SVN</h3>
+<p>Stejné informace, jaké poskytuje příkaz <code>svn info</code>, získáte příkazem <code>git svn info</code>:</p>
+<pre><code>$ git svn info
+<span class="hljs-label">Path:</span> .
+<span class="hljs-label">URL:</span> https://schacon-test<span class="hljs-preprocessor">.googlecode</span><span class="hljs-preprocessor">.com</span>/svn/trunk
+Repository Root: https://schacon-test<span class="hljs-preprocessor">.googlecode</span><span class="hljs-preprocessor">.com</span>/svn
+Repository UUID: <span class="hljs-number">4</span>c93b258-<span class="hljs-number">373</span>f-<span class="hljs-number">11</span>de-be05-<span class="hljs-number">5</span>f7a86268029
+<span class="hljs-label">Revision:</span> <span class="hljs-number">87</span>
+Node Kind: directory
+<span class="hljs-label">Schedule:</span> normal
+Last Changed Author: schacon
+Last Changed Rev: <span class="hljs-number">87</span>
+Last Changed Date: <span class="hljs-number">2009</span>-<span class="hljs-number">05</span>-<span class="hljs-number">02</span> <span class="hljs-number">16</span>:<span class="hljs-number">07</span>:<span class="hljs-number">37</span> -<span class="hljs-number">0700</span> (Sat, <span class="hljs-number">02</span> May <span class="hljs-number">2009</span>)
+</code></pre><p>Stejně jako v případě příkazů <code>blame</code> a <code>log</code> pracuje i tento příkaz offline a zobrazuje stav v okamžiku, kdy jste naposledy komunikovali se serverem Subversion.</p>
+<h3 id="ignorov-n-soubor-kter-ignoruje-subversion">Ignorování souborů, které ignoruje Subversion</h3>
+<p>Jestliže naklonujete repozitář Subversion s nastavenými vlastnostmi <code>svn:ignore</code>, pravděpodobně budete chtít nastavit také odpovídající soubory <code>.gitignore</code>, abyste omylem nezapsali nežádoucí soubory. Nástroj <code>git svn</code> vám k řešení tohoto problému nabízí dva příkazy. Tím prvním je <code>git svn create-ignore</code>, jenž automaticky vytvoří odpovídající soubory <code>.gitignore</code>, podle nichž se bude řídit už vaše příští revize.</p>
+<p>Druhým z příkazů je <code>git svn show-ignore</code>, který zobrazí standardní výstup stdout s řádky, které budete muset vložit do souboru <code>.gitignore</code>. Výstup pak můžete přesměrovat do souboru exclude svého projektu:</p>
+<pre><code><span class="hljs-variable">$ </span>git svn show-ignore &gt; .git/info/exclude
+</code></pre><p>Díky tomu si nemusíte projekt znečišťovat soubory <code>.gitignore</code>. Tuto možnost oceníte, jste-li jediným uživatelem systému Git v týmu používajícím Subversion a vaši kolegové nestojí ve svém projektu o soubory <code>.gitignore</code>.</p>
+<h2 id="git-svn-shrnut-">Git-Svn: shrnutí</h2>
+<p>Nástroje <code>git svn</code> využijete, jestliže chcete pozvolna přejít ze systému Subversion na systém Git nebo pokud pracujete ve vývojovém prostředí, v němž je z nějakého důvodu nutné používat server Subversion. Mějte však stále na paměti, že v tomto případě nelze používat systém Git v celé jeho šíři. Mohlo by se stát, že způsobíte chyby v překladu, které znepříjemní život vám i vašim kolegům. Chcete-li se vyhnout problémům, dodržujte tato pravidla:</p>
+<ul>
+<li>Udržujte lineární historii Git, která neobsahuje revize sloučením, vytvořené příkazem <code>git merge</code>. Práci, kterou provedete mimo základní větev, na ni přeskládejte (rebase), nezačleňujte ji (merge).</li>
+<li>Nevytvářejte oddělený server Git ani na žádný takový nepřispívejte. Můžete ho sice využít k urychlení klonování pro nové vývojáře, ale neodesílejte na něj nic, co nemá záznam <code>git-svn-id</code>. Možná by nebylo od věci ani vytvořit zásuvný modul <code>pre-receive</code>, který by kontroloval všechny zprávy k revizím, zda obsahují <code>git-svn-id</code>, a odmítl by všechna odeslání, která obsahují revize bez něj.</li>
+</ul>
+<p>Budete-li dodržovat tato pravidla, bude práce se serverem Subversion snesitelnější. Stále však platí, že pokud máte možnost přejít na skutečný server Git, získáte vy i váš tým daleko více.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_a_ostatni_systemy/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_a_ostatni_systemy/prechod_na_system_git.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

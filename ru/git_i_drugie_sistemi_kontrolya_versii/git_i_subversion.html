@@ -1,0 +1,1119 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Git и Subversion | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_i_drugie_sistemi_kontrolya_versii/migratsiya_na_git.html" />
+        
+        
+        <link rel="prev" href="../git_i_drugie_sistemi_kontrolya_versii/README.html" />
+        
+
+        <meta property="og:title" content="Git и Subversion | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="8.1" data-basepath=".." data-revision="1396895631613">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_i_drugie_sistemi_kontrolya_versii/git_i_subversion.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="nastroika_git/README.html">
+                
+                <a href="../nastroika_git/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Настройка Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="nastroika_git/konfigurirovanie_git.html">
+                            
+                            <a href="../nastroika_git/konfigurirovanie_git.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Конфигурирование Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="nastroika_git/git_atributi.html">
+                            
+                            <a href="../nastroika_git/git_atributi.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Git-атрибуты
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="nastroika_git/perehvatchiki_v_git.html">
+                            
+                            <a href="../nastroika_git/perehvatchiki_v_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Перехватчики в Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="nastroika_git/primer_navyazivaniya_politiki_s_pomoschyu_git.html">
+                            
+                            <a href="../nastroika_git/primer_navyazivaniya_politiki_s_pomoschyu_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Пример навязывания политики с помощью Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="nastroika_git/itogi.html">
+                            
+                            <a href="../nastroika_git/itogi.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="vvedenie/README.html">
+                
+                <a href="../vvedenie/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Введение
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="vvedenie/o_kontrole_versii.html">
+                            
+                            <a href="../vvedenie/o_kontrole_versii.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> О контроле версий
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="vvedenie/kratkaya_istoriya_git.html">
+                            
+                            <a href="../vvedenie/kratkaya_istoriya_git.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Краткая история Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="vvedenie/osnovi_git.html">
+                            
+                            <a href="../vvedenie/osnovi_git.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Основы Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="vvedenie/ustanovka_git.html">
+                            
+                            <a href="../vvedenie/ustanovka_git.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Установка Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="vvedenie/pervonachalnaya_nastroika_git.html">
+                            
+                            <a href="../vvedenie/pervonachalnaya_nastroika_git.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Первоначальная настройка Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="vvedenie/kak_poluchit_pomosch.html">
+                            
+                            <a href="../vvedenie/kak_poluchit_pomosch.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Как получить помощь?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="vvedenie/itogi.html">
+                            
+                            <a href="../vvedenie/itogi.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="vetvlenie_v_git/README.html">
+                
+                <a href="../vetvlenie_v_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Ветвление в Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="vetvlenie_v_git/chto_takoe_vetka.html">
+                            
+                            <a href="../vetvlenie_v_git/chto_takoe_vetka.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Что такое ветка?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="vetvlenie_v_git/osnovi_vetvleniya_i_sliyaniya.html">
+                            
+                            <a href="../vetvlenie_v_git/osnovi_vetvleniya_i_sliyaniya.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Основы ветвления и слияния
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="vetvlenie_v_git/upravlenie_vetkami.html">
+                            
+                            <a href="../vetvlenie_v_git/upravlenie_vetkami.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Управление ветками
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="vetvlenie_v_git/priyomi_raboti_s_vetkami.html">
+                            
+                            <a href="../vetvlenie_v_git/priyomi_raboti_s_vetkami.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Приёмы работы с ветками
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="vetvlenie_v_git/udalyonnie_vetki.html">
+                            
+                            <a href="../vetvlenie_v_git/udalyonnie_vetki.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Удалённые ветки
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="vetvlenie_v_git/peremeschenie.html">
+                            
+                            <a href="../vetvlenie_v_git/peremeschenie.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Перемещение
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="vetvlenie_v_git/itogi.html">
+                            
+                            <a href="../vetvlenie_v_git/itogi.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_na_servere/README.html">
+                
+                <a href="../git_na_servere/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git на сервере
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_na_servere/protokoli.html">
+                            
+                            <a href="../git_na_servere/protokoli.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Протоколы
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_na_servere/nastroika_git_na_servere.html">
+                            
+                            <a href="../git_na_servere/nastroika_git_na_servere.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Настройка Git на сервере
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_na_servere/sozdanie_otkritogo_ssh_klyucha.html">
+                            
+                            <a href="../git_na_servere/sozdanie_otkritogo_ssh_klyucha.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Создание открытого SSH-ключа
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_na_servere/nastraivaem_server.html">
+                            
+                            <a href="../git_na_servere/nastraivaem_server.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Настраиваем сервер
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_na_servere/otkritii_dostup.html">
+                            
+                            <a href="../git_na_servere/otkritii_dostup.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Открытый доступ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_na_servere/gitweb.html">
+                            
+                            <a href="../git_na_servere/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_na_servere/gitosis.html">
+                            
+                            <a href="../git_na_servere/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_na_servere/gitolite.html">
+                            
+                            <a href="../git_na_servere/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_na_servere/git_demon.html">
+                            
+                            <a href="../git_na_servere/git_demon.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git-демон
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_na_servere/git_hosting.html">
+                            
+                            <a href="../git_na_servere/git_hosting.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git-хостинг
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_na_servere/itogi.html">
+                            
+                            <a href="../git_na_servere/itogi.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="raspredelyonnii_git/README.html">
+                
+                <a href="../raspredelyonnii_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Распределённый Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="raspredelyonnii_git/raspredelyonnie_rabochie_protsessi.html">
+                            
+                            <a href="../raspredelyonnii_git/raspredelyonnie_rabochie_protsessi.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Распределённые рабочие процессы
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="raspredelyonnii_git/sodeistvie_proektu.html">
+                            
+                            <a href="../raspredelyonnii_git/sodeistvie_proektu.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Содействие проекту
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="raspredelyonnii_git/soprovozhdenie_proekta.html">
+                            
+                            <a href="../raspredelyonnii_git/soprovozhdenie_proekta.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Сопровождение проекта
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="raspredelyonnii_git/itogi.html">
+                            
+                            <a href="../raspredelyonnii_git/itogi.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="instrumenti_git/README.html">
+                
+                <a href="../instrumenti_git/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Инструменты Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="instrumenti_git/vibor_revizii.html">
+                            
+                            <a href="../instrumenti_git/vibor_revizii.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Выбор ревизии
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="instrumenti_git/interaktivnoe_indeksirovanie.html">
+                            
+                            <a href="../instrumenti_git/interaktivnoe_indeksirovanie.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Интерактивное индексирование
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="instrumenti_git/pryatane.html">
+                            
+                            <a href="../instrumenti_git/pryatane.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Прятанье
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="instrumenti_git/perezapis_istorii.html">
+                            
+                            <a href="../instrumenti_git/perezapis_istorii.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Перезапись истории
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="instrumenti_git/otladka_s_pomoschyu_git.html">
+                            
+                            <a href="../instrumenti_git/otladka_s_pomoschyu_git.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Отладка с помощью Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="instrumenti_git/podmoduli.html">
+                            
+                            <a href="../instrumenti_git/podmoduli.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Подмодули
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="instrumenti_git/sliyanie_podderevev.html">
+                            
+                            <a href="../instrumenti_git/sliyanie_podderevev.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Слияние поддеревьев
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="instrumenti_git/itogi.html">
+                            
+                            <a href="../instrumenti_git/itogi.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="osnovi_git/README.html">
+                
+                <a href="../osnovi_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Основы Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="osnovi_git/sozdanie_git_repozitoriya.html">
+                            
+                            <a href="../osnovi_git/sozdanie_git_repozitoriya.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Создание Git-репозитория
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="osnovi_git/zapis_izmenenii_v_repozitorii.html">
+                            
+                            <a href="../osnovi_git/zapis_izmenenii_v_repozitorii.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Запись изменений в репозиторий
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="osnovi_git/prosmotr_istorii_kommitov.html">
+                            
+                            <a href="../osnovi_git/prosmotr_istorii_kommitov.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Просмотр истории коммитов
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="osnovi_git/otmena_izmenenii.html">
+                            
+                            <a href="../osnovi_git/otmena_izmenenii.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Отмена изменений
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="osnovi_git/rabota_s_udalyonnimi_repozitoriyami.html">
+                            
+                            <a href="../osnovi_git/rabota_s_udalyonnimi_repozitoriyami.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Работа с удалёнными репозиториями
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.6" data-path="osnovi_git/rabota_s_metkami.html">
+                            
+                            <a href="../osnovi_git/rabota_s_metkami.html">
+                                <i class="fa fa-check"></i> <b>7.6)</b> Работа с метками
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.7" data-path="osnovi_git/poleznie_soveti.html">
+                            
+                            <a href="../osnovi_git/poleznie_soveti.html">
+                                <i class="fa fa-check"></i> <b>7.7)</b> Полезные советы
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.8" data-path="osnovi_git/itogi.html">
+                            
+                            <a href="../osnovi_git/itogi.html">
+                                <i class="fa fa-check"></i> <b>7.8)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_i_drugie_sistemi_kontrolya_versii/README.html">
+                
+                <a href="../git_i_drugie_sistemi_kontrolya_versii/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git и другие системы контроля версий
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_i_drugie_sistemi_kontrolya_versii/git_i_subversion.html">
+                            
+                            <a href="../git_i_drugie_sistemi_kontrolya_versii/git_i_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git и Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_i_drugie_sistemi_kontrolya_versii/migratsiya_na_git.html">
+                            
+                            <a href="../git_i_drugie_sistemi_kontrolya_versii/migratsiya_na_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Миграция на Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_i_drugie_sistemi_kontrolya_versii/itogi.html">
+                            
+                            <a href="../git_i_drugie_sistemi_kontrolya_versii/itogi.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git_iznutri/README.html">
+                
+                <a href="../git_iznutri/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Git изнутри
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git_iznutri/santehnika_i_farfor.html">
+                            
+                            <a href="../git_iznutri/santehnika_i_farfor.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Сантехника и фарфор
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git_iznutri/obekti_v_git.html">
+                            
+                            <a href="../git_iznutri/obekti_v_git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Объекты в Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git_iznutri/ssilki_v_git.html">
+                            
+                            <a href="../git_iznutri/ssilki_v_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Ссылки в Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git_iznutri/pack_faili.html">
+                            
+                            <a href="../git_iznutri/pack_faili.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Pack-файлы
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git_iznutri/spetsifikatsii_ssilok.html">
+                            
+                            <a href="../git_iznutri/spetsifikatsii_ssilok.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Спецификации ссылок
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git_iznutri/protokoli_peredachi.html">
+                            
+                            <a href="../git_iznutri/protokoli_peredachi.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Протоколы передачи
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git_iznutri/obsluzhivanie_i_vosstanovlenie_dannih.html">
+                            
+                            <a href="../git_iznutri/obsluzhivanie_i_vosstanovlenie_dannih.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Обслуживание и восстановление данных
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git_iznutri/itogi.html">
+                            
+                            <a href="../git_iznutri/itogi.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 84.28571428571429%;min-width: 82.85714285714286%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../nastroika_git/README.html" title="Настройка Git" class="chapter done new-chapter" data-progress="1" style="left: 1.4285714285714286%;"></a>
+    
+        <a href="../nastroika_git/konfigurirovanie_git.html" title="Конфигурирование Git" class="chapter done " data-progress="1.1" style="left: 2.857142857142857%;"></a>
+    
+        <a href="../nastroika_git/git_atributi.html" title="Git-атрибуты" class="chapter done " data-progress="1.2" style="left: 4.285714285714286%;"></a>
+    
+        <a href="../nastroika_git/perehvatchiki_v_git.html" title="Перехватчики в Git" class="chapter done " data-progress="1.3" style="left: 5.714285714285714%;"></a>
+    
+        <a href="../nastroika_git/primer_navyazivaniya_politiki_s_pomoschyu_git.html" title="Пример навязывания политики с помощью Git" class="chapter done " data-progress="1.4" style="left: 7.142857142857143%;"></a>
+    
+        <a href="../nastroika_git/itogi.html" title="Итоги" class="chapter done " data-progress="1.5" style="left: 8.571428571428571%;"></a>
+    
+        <a href="../vvedenie/README.html" title="Введение" class="chapter done new-chapter" data-progress="2" style="left: 10%;"></a>
+    
+        <a href="../vvedenie/o_kontrole_versii.html" title="О контроле версий" class="chapter done " data-progress="2.1" style="left: 11.428571428571429%;"></a>
+    
+        <a href="../vvedenie/kratkaya_istoriya_git.html" title="Краткая история Git" class="chapter done " data-progress="2.2" style="left: 12.857142857142858%;"></a>
+    
+        <a href="../vvedenie/osnovi_git.html" title="Основы Git" class="chapter done " data-progress="2.3" style="left: 14.285714285714286%;"></a>
+    
+        <a href="../vvedenie/ustanovka_git.html" title="Установка Git" class="chapter done " data-progress="2.4" style="left: 15.714285714285714%;"></a>
+    
+        <a href="../vvedenie/pervonachalnaya_nastroika_git.html" title="Первоначальная настройка Git" class="chapter done " data-progress="2.5" style="left: 17.142857142857142%;"></a>
+    
+        <a href="../vvedenie/kak_poluchit_pomosch.html" title="Как получить помощь?" class="chapter done " data-progress="2.6" style="left: 18.571428571428573%;"></a>
+    
+        <a href="../vvedenie/itogi.html" title="Итоги" class="chapter done " data-progress="2.7" style="left: 20%;"></a>
+    
+        <a href="../vetvlenie_v_git/README.html" title="Ветвление в Git" class="chapter done new-chapter" data-progress="3" style="left: 21.428571428571427%;"></a>
+    
+        <a href="../vetvlenie_v_git/chto_takoe_vetka.html" title="Что такое ветка?" class="chapter done " data-progress="3.1" style="left: 22.857142857142858%;"></a>
+    
+        <a href="../vetvlenie_v_git/osnovi_vetvleniya_i_sliyaniya.html" title="Основы ветвления и слияния" class="chapter done " data-progress="3.2" style="left: 24.285714285714285%;"></a>
+    
+        <a href="../vetvlenie_v_git/upravlenie_vetkami.html" title="Управление ветками" class="chapter done " data-progress="3.3" style="left: 25.714285714285715%;"></a>
+    
+        <a href="../vetvlenie_v_git/priyomi_raboti_s_vetkami.html" title="Приёмы работы с ветками" class="chapter done " data-progress="3.4" style="left: 27.142857142857142%;"></a>
+    
+        <a href="../vetvlenie_v_git/udalyonnie_vetki.html" title="Удалённые ветки" class="chapter done " data-progress="3.5" style="left: 28.571428571428573%;"></a>
+    
+        <a href="../vetvlenie_v_git/peremeschenie.html" title="Перемещение" class="chapter done " data-progress="3.6" style="left: 30%;"></a>
+    
+        <a href="../vetvlenie_v_git/itogi.html" title="Итоги" class="chapter done " data-progress="3.7" style="left: 31.428571428571427%;"></a>
+    
+        <a href="../git_na_servere/README.html" title="Git на сервере" class="chapter done new-chapter" data-progress="4" style="left: 32.857142857142854%;"></a>
+    
+        <a href="../git_na_servere/protokoli.html" title="Протоколы" class="chapter done " data-progress="4.1" style="left: 34.285714285714285%;"></a>
+    
+        <a href="../git_na_servere/git_hosting.html" title="Git-хостинг" class="chapter done " data-progress="4.10" style="left: 35.714285714285715%;"></a>
+    
+        <a href="../git_na_servere/itogi.html" title="Итоги" class="chapter done " data-progress="4.11" style="left: 37.142857142857146%;"></a>
+    
+        <a href="../git_na_servere/nastroika_git_na_servere.html" title="Настройка Git на сервере" class="chapter done " data-progress="4.2" style="left: 38.57142857142857%;"></a>
+    
+        <a href="../git_na_servere/sozdanie_otkritogo_ssh_klyucha.html" title="Создание открытого SSH-ключа" class="chapter done " data-progress="4.3" style="left: 40%;"></a>
+    
+        <a href="../git_na_servere/nastraivaem_server.html" title="Настраиваем сервер" class="chapter done " data-progress="4.4" style="left: 41.42857142857143%;"></a>
+    
+        <a href="../git_na_servere/otkritii_dostup.html" title="Открытый доступ" class="chapter done " data-progress="4.5" style="left: 42.857142857142854%;"></a>
+    
+        <a href="../git_na_servere/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 44.285714285714285%;"></a>
+    
+        <a href="../git_na_servere/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 45.714285714285715%;"></a>
+    
+        <a href="../git_na_servere/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 47.142857142857146%;"></a>
+    
+        <a href="../git_na_servere/git_demon.html" title="Git-демон" class="chapter done " data-progress="4.9" style="left: 48.57142857142857%;"></a>
+    
+        <a href="../raspredelyonnii_git/README.html" title="Распределённый Git" class="chapter done new-chapter" data-progress="5" style="left: 50%;"></a>
+    
+        <a href="../raspredelyonnii_git/raspredelyonnie_rabochie_protsessi.html" title="Распределённые рабочие процессы" class="chapter done " data-progress="5.1" style="left: 51.42857142857143%;"></a>
+    
+        <a href="../raspredelyonnii_git/sodeistvie_proektu.html" title="Содействие проекту" class="chapter done " data-progress="5.2" style="left: 52.857142857142854%;"></a>
+    
+        <a href="../raspredelyonnii_git/soprovozhdenie_proekta.html" title="Сопровождение проекта" class="chapter done " data-progress="5.3" style="left: 54.285714285714285%;"></a>
+    
+        <a href="../raspredelyonnii_git/itogi.html" title="Итоги" class="chapter done " data-progress="5.4" style="left: 55.714285714285715%;"></a>
+    
+        <a href="../instrumenti_git/README.html" title="Инструменты Git" class="chapter done new-chapter" data-progress="6" style="left: 57.142857142857146%;"></a>
+    
+        <a href="../instrumenti_git/vibor_revizii.html" title="Выбор ревизии" class="chapter done " data-progress="6.1" style="left: 58.57142857142857%;"></a>
+    
+        <a href="../instrumenti_git/interaktivnoe_indeksirovanie.html" title="Интерактивное индексирование" class="chapter done " data-progress="6.2" style="left: 60%;"></a>
+    
+        <a href="../instrumenti_git/pryatane.html" title="Прятанье" class="chapter done " data-progress="6.3" style="left: 61.42857142857143%;"></a>
+    
+        <a href="../instrumenti_git/perezapis_istorii.html" title="Перезапись истории" class="chapter done " data-progress="6.4" style="left: 62.857142857142854%;"></a>
+    
+        <a href="../instrumenti_git/otladka_s_pomoschyu_git.html" title="Отладка с помощью Git" class="chapter done " data-progress="6.5" style="left: 64.28571428571429%;"></a>
+    
+        <a href="../instrumenti_git/podmoduli.html" title="Подмодули" class="chapter done " data-progress="6.6" style="left: 65.71428571428571%;"></a>
+    
+        <a href="../instrumenti_git/sliyanie_podderevev.html" title="Слияние поддеревьев" class="chapter done " data-progress="6.7" style="left: 67.14285714285714%;"></a>
+    
+        <a href="../instrumenti_git/itogi.html" title="Итоги" class="chapter done " data-progress="6.8" style="left: 68.57142857142857%;"></a>
+    
+        <a href="../osnovi_git/README.html" title="Основы Git" class="chapter done new-chapter" data-progress="7" style="left: 70%;"></a>
+    
+        <a href="../osnovi_git/sozdanie_git_repozitoriya.html" title="Создание Git-репозитория" class="chapter done " data-progress="7.1" style="left: 71.42857142857143%;"></a>
+    
+        <a href="../osnovi_git/zapis_izmenenii_v_repozitorii.html" title="Запись изменений в репозиторий" class="chapter done " data-progress="7.2" style="left: 72.85714285714286%;"></a>
+    
+        <a href="../osnovi_git/prosmotr_istorii_kommitov.html" title="Просмотр истории коммитов" class="chapter done " data-progress="7.3" style="left: 74.28571428571429%;"></a>
+    
+        <a href="../osnovi_git/otmena_izmenenii.html" title="Отмена изменений" class="chapter done " data-progress="7.4" style="left: 75.71428571428571%;"></a>
+    
+        <a href="../osnovi_git/rabota_s_udalyonnimi_repozitoriyami.html" title="Работа с удалёнными репозиториями" class="chapter done " data-progress="7.5" style="left: 77.14285714285714%;"></a>
+    
+        <a href="../osnovi_git/rabota_s_metkami.html" title="Работа с метками" class="chapter done " data-progress="7.6" style="left: 78.57142857142857%;"></a>
+    
+        <a href="../osnovi_git/poleznie_soveti.html" title="Полезные советы" class="chapter done " data-progress="7.7" style="left: 80%;"></a>
+    
+        <a href="../osnovi_git/itogi.html" title="Итоги" class="chapter done " data-progress="7.8" style="left: 81.42857142857143%;"></a>
+    
+        <a href="../git_i_drugie_sistemi_kontrolya_versii/README.html" title="Git и другие системы контроля версий" class="chapter done new-chapter" data-progress="8" style="left: 82.85714285714286%;"></a>
+    
+        <a href="../git_i_drugie_sistemi_kontrolya_versii/git_i_subversion.html" title="Git и Subversion" class="chapter done " data-progress="8.1" style="left: 84.28571428571429%;"></a>
+    
+        <a href="../git_i_drugie_sistemi_kontrolya_versii/migratsiya_na_git.html" title="Миграция на Git" class="chapter  " data-progress="8.2" style="left: 85.71428571428571%;"></a>
+    
+        <a href="../git_i_drugie_sistemi_kontrolya_versii/itogi.html" title="Итоги" class="chapter  " data-progress="8.3" style="left: 87.14285714285714%;"></a>
+    
+        <a href="../git_iznutri/README.html" title="Git изнутри" class="chapter  new-chapter" data-progress="9" style="left: 88.57142857142857%;"></a>
+    
+        <a href="../git_iznutri/santehnika_i_farfor.html" title="Сантехника и фарфор" class="chapter  " data-progress="9.1" style="left: 90%;"></a>
+    
+        <a href="../git_iznutri/obekti_v_git.html" title="Объекты в Git" class="chapter  " data-progress="9.2" style="left: 91.42857142857143%;"></a>
+    
+        <a href="../git_iznutri/ssilki_v_git.html" title="Ссылки в Git" class="chapter  " data-progress="9.3" style="left: 92.85714285714286%;"></a>
+    
+        <a href="../git_iznutri/pack_faili.html" title="Pack-файлы" class="chapter  " data-progress="9.4" style="left: 94.28571428571429%;"></a>
+    
+        <a href="../git_iznutri/spetsifikatsii_ssilok.html" title="Спецификации ссылок" class="chapter  " data-progress="9.5" style="left: 95.71428571428571%;"></a>
+    
+        <a href="../git_iznutri/protokoli_peredachi.html" title="Протоколы передачи" class="chapter  " data-progress="9.6" style="left: 97.14285714285714%;"></a>
+    
+        <a href="../git_iznutri/obsluzhivanie_i_vosstanovlenie_dannih.html" title="Обслуживание и восстановление данных" class="chapter  " data-progress="9.7" style="left: 98.57142857142857%;"></a>
+    
+        <a href="../git_iznutri/itogi.html" title="Итоги" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_754">
+                    
+                        <h1 id="git-subversion">Git и Subversion</h1>
+<p>В настоящее время большинство проектов с открытым исходным кодом, а также большое число корпоративных проектов, используют Subversion для управления своим исходным кодом. Это самая популярная на текущий момент система контроля версий с открытым исходным кодом, история её использования насчитывает около 10 лет. Кроме того, она очень похожа на CVS, систему, которая была самой популярной до Subversion.</p>
+<p>Одна из замечательных особенностей Git&#39;а — возможность двустороннего обмена с Subversion через интерфейс, называемый <code>git svn</code>. Этот инструмент позволяет использовать Git в качестве корректного клиента при работе с сервером Subversion. Так что вы можете пользоваться всеми локальными возможностями Git&#39;а, а затем сохранять изменения на сервере Subversion так, как если бы использовали Subversion локально. То есть вы можете делать локальное ветвление и слияние, использовать индекс, перемещение и отбор патчей для переноса из одной ветви в другую (cherry-picking) и т.д., в то время как ваши коллеги будут продолжать использовать в разработке подход времён каменного века. Это хороший способ протащить Git в рабочее окружение своей компании и помочь коллегам разработчикам стать более эффективными, в то время как вы будете лоббировать переход полностью на Git. Интерфейс обмена с Subversion — это ворота в мир распределённых систем контроля версий.</p>
+<h2 id="git-svn">git svn</h2>
+<p>Базовой командой в Git&#39;е для всех команд, работающих с мостом к Subversion, является <code>git svn</code>. Ей предваряется любая команда. Она принимает довольно порядочное число команд, поэтому мы изучим из них те, которые наиболее часто используются, рассмотрев несколько небольших вариантов работы.</p>
+<p>Важно отметить, что при использовании <code>git svn</code> вы взаимодействуете с Subversion — системой, которая намного менее «продвинута», чем Git. Хоть вы и умеете с лёгкостью делать локальное ветвление и слияние, как правило, лучше всего держать свою историю в как можно более линейном виде, используя перемещения (rebase) и избегая таких вещей, как одновременный обмен с удалённым Git-репозиторием.</p>
+<p>Не переписывайте свою историю, попробуйте отправить изменения ещё раз, а также не отправляйте изменения в параллельный Git-репозиторий, используемый для совместной работы, одновременно с другими разработчиками, использующими Git. Subversion может иметь только одну единственную линейную историю изменений, сбить с толку которую очень и очень просто. Если вы работаете в команде, в которой некоторые разработчики используют Git, а другие Subversion, убедитесь, что для совместной работы все используют только SVN-сервер — это сильно упростит вам жизнь.</p>
+<h2 id="-">Настройка</h2>
+<p>Для того чтобы попробовать этот функционал в действии, вам понадобится доступ с правами на запись к обычному SVN-репозиторию. Если вы хотите повторить рассматриваемые примеры, вам нужно сделать доступную на запись копию моего тестового репозитория. Это можно сделать без труда с помощью утилиты <code>svnsync</code>, входящей в состав последних версий Subversion (по крайней мере после версии 1.4). Для этих примеров я создал новый Subversion-репозиторий на Google Code, который был частичной копией проекта <code>protobuf</code> (утилита кодирования структурированных данных для их передачи по сети).</p>
+<p>Чтобы мы могли продолжить, прежде всего создайте новый локальный репозиторий Subversion:</p>
+<pre><code><span class="hljs-variable">$ </span>mkdir /tmp/test-svn
+<span class="hljs-variable">$ </span>svnadmin create /tmp/test-svn
+</code></pre><p>Затем разрешите всем пользователям изменять <code>revprops</code> — самым простым способом сделать это будет добавление сценария <code>pre-revprop-change</code>, который просто всегда завершается с кодом 0:</p>
+<pre><code>$ cat /tmp/test-svn/hooks/pre-revprop-change 
+<span class="hljs-shebang">#!/bin/sh</span>
+<span class="hljs-keyword">exit</span> <span class="hljs-number">0</span>;
+$ chmod +x /tmp/test-svn/hooks/pre-revprop-change
+</code></pre><p>Теперь вы можете синхронизировать проект со своей локальной машиной, вызвав <code>svnsync init</code> с параметрами, задающими исходный и целевой репозиторий:</p>
+<pre><code><span class="hljs-variable">$ </span>svnsync init <span class="hljs-symbol">file:</span>/<span class="hljs-regexp">//tmp</span><span class="hljs-regexp">/test-svn http:/</span><span class="hljs-regexp">/progit-example.googlecode.com/svn</span><span class="hljs-regexp">/</span>
+</code></pre><p>Эта команда подготовит процесс синхронизации. Затем склонируйте код, выполнив:</p>
+<pre><code>$ svnsync sync file:///tmp/test-svn
+Committed revision <span class="hljs-number">1.</span>
+Copied properties <span class="hljs-keyword">for</span> revision <span class="hljs-number">1.</span>
+Committed revision <span class="hljs-number">2.</span>
+Copied properties <span class="hljs-keyword">for</span> revision <span class="hljs-number">2.</span>
+Committed revision <span class="hljs-number">3.</span>
+<span class="hljs-keyword">...</span>
+</code></pre><p>Хотя выполнение этой операции и может занять всего несколько минут, однако, если вы попробуете скопировать исходный репозиторий в другой удалённый репозиторий, а не в локальный, то процесс займёт почти час, хотя в этом проекте менее ста коммитов. Subversion вынужден клонировать ревизии по одной, а затем отправлять их в другой репозиторий — это чудовищно неэффективно, однако это единственный простой способ выполнить это действие.</p>
+<h2 id="-">Приступим к работе</h2>
+<p>Теперь, когда в вашем распоряжении имеется SVN-репозиторий, для которого вы имеете право на запись, давайте выполним типичные действия по работе с СКВ. Начнём с команды <code>git svn clone</code>, которая импортирует весь SVN-репозиторий в локальный Git-репозиторий. Помните, что если вы производите импорт из настоящего удалённого SVN-репозитория, вам надо заменить <code>file:///tmp/test-svn</code> на реальный адрес вашего SVN-репозитория:</p>
+<pre><code>$ git svn clone file:<span class="hljs-comment">///tmp/test-svn -T trunk -b branches -t tags</span>
+Initialized empty Git repository <span class="hljs-keyword">in</span> /Users/schacon/projects/testsvnsync/svn<span class="hljs-subst">/</span><span class="hljs-built_in">.</span>git<span class="hljs-subst">/</span>
+r1 <span class="hljs-subst">=</span> b4e387bc68740b5af56c2a5faf4003ae42bd135c (trunk)
+      A    m4/acx_pthread<span class="hljs-built_in">.</span>m4
+      A    m4/stl_hash<span class="hljs-built_in">.</span>m4
+<span class="hljs-attribute">...</span>
+r75 <span class="hljs-subst">=</span> d1957f3b307922124eec6314e15bcda59e3d9610 (trunk)
+Found possible branch point: file:<span class="hljs-comment">///tmp/test-svn/trunk =&gt; \</span>
+    file:<span class="hljs-comment">///tmp/test-svn /branches/my-calc-branch, 75</span>
+Found branch <span class="hljs-keyword">parent</span>: (my<span class="hljs-attribute">-calc</span><span class="hljs-attribute">-branch</span>) d1957f3b307922124eec6314e15bcda59e3d9610
+Following <span class="hljs-keyword">parent</span> <span class="hljs-keyword">with</span> do_switch
+Successfully followed <span class="hljs-keyword">parent</span>
+r76 <span class="hljs-subst">=</span> <span class="hljs-number">8624824</span>ecc0badd73f40ea2f01fce51894189b01 (my<span class="hljs-attribute">-calc</span><span class="hljs-attribute">-branch</span>)
+Checked out HEAD:
+ file:<span class="hljs-comment">///tmp/test-svn/branches/my-calc-branch r76</span>
+</code></pre><p>Эта команда эквивалентна выполнению для указанного вами URL двух команд — <code>git svn init</code>, а затем <code>git svn fetch</code>. Процесс может занять некоторое время. Тестовый проект имеет всего лишь около 75 коммитов, и кода там не очень много, так что, скорее всего, вам придётся подождать всего несколько минут. Однако, Git должен по отдельности проверить и выполнить коммит для каждой версии. Для проектов, имеющих историю с сотнями и тысячами изменений, этот процесс может занять несколько часов или даже дней.</p>
+<p>Часть команды <code>-T trunk -b branches -t tags</code> сообщает Git&#39;у, что этот SVN-репозиторий следует стандартным соглашениям о ветвлении и метках. Если вместо trunk, branches и tags вы используете какие-то другие, нестандартные имена, то должны изменить эти параметры соответствующим образом. В связи с тем, что такие соглашения являются общепринятыми, вы можете использовать короткий формат, заменив всю эту часть на <code>-s</code>, заменяющую собой все эти параметры. Следующая команда эквивалента предыдущей:</p>
+<pre><code>$ git svn clone file:<span class="hljs-comment"><span class="hljs-xmlDocTag">///</span>tmp/test-svn -s</span>
+</code></pre><p>Таким образом, вы должны были получить корректный Git-репозиторий с импортированными ветками и метками:</p>
+<pre><code>$ git branch -a
+* master
+  my-calc-branch
+  tags/<span class="hljs-number">2.0</span><span class="hljs-number">.2</span>
+  tags/<span class="hljs-keyword">release</span>-<span class="hljs-number">2.0</span><span class="hljs-number">.1</span>
+  tags/<span class="hljs-keyword">release</span>-<span class="hljs-number">2.0</span><span class="hljs-number">.2</span>
+  tags/<span class="hljs-keyword">release</span>-<span class="hljs-number">2.0</span><span class="hljs-number">.2</span>rc1
+  trunk
+</code></pre><p>Важно отметить, что эта утилита именует ваши ссылки на удалённые ресурсы по-другому. Когда вы клонируете обычный Git-репозиторий, вы получаете все ветки с удалённого сервера на локальном компьютере в виде: <code>origin/[ветка]</code> — в пространстве имён с именем удалённого сервера. Однако, <code>git svn</code> полагает, что у вас не будет множества удалённых источников данных и сохраняет все ссылки на всякое, находящееся на удалённом сервере, без пространства имён. Для просмотра всех имён ссылок вы можете использовать служебную команду Git&#39;а <code>show-ref</code>:</p>
+<pre><code>$ git show-ref
+<span class="hljs-number">1</span>cbd4904d9982f386d87f88fce1c24ad7c0f0471 refs/heads/master
+aee1ecc26318164f355a883f5d99cff0c852d3c4 refs/<span class="hljs-comment">remotes/my-calc-branch</span>
+<span class="hljs-number">03</span>d09b0e2aad427e34a6d50ff147128e76c0e0f5 refs/<span class="hljs-comment">remotes/tags/2.0.2</span>
+<span class="hljs-number">50</span>d02cc0adc9da4319eeba0900430ba219b9c376 refs/<span class="hljs-comment">remotes/tags/release-2.0.1</span>
+<span class="hljs-number">4</span>caaa711a50c77879a91b8b90380060f672745cb refs/<span class="hljs-comment">remotes/tags/release-2.0.2</span>
+<span class="hljs-number">1</span>c4cb508144c513ff1214c3488abe66dcb92916f refs/<span class="hljs-comment">remotes/tags/release-2.0.2rc1</span>
+<span class="hljs-number">1</span>cbd4904d9982f386d87f88fce1c24ad7c0f0471 refs/<span class="hljs-comment">remotes/trunk</span>
+</code></pre><p>Обычный Git-репозиторий выглядит скорее так:</p>
+<pre><code>$ git show-ref
+<span class="hljs-number">83</span>e38c7a0af325a9722f2fdc56b10188806d83a1 refs/heads/master
+<span class="hljs-number">3</span>e15e38c198baac84223acfc6224bb8b99ff2281 refs/<span class="hljs-comment">remotes/gitserver/master</span>
+<span class="hljs-number">0</span>a30dd3b0c795b80212ae723640d4e5d48cabdff refs/<span class="hljs-comment">remotes/origin/master</span>
+<span class="hljs-number">25812380387</span>fdd55f916652be4881c6f11600d6f refs/<span class="hljs-comment">remotes/origin/testing</span>
+</code></pre><p>Здесь два удалённых сервера: один с именем <code>gitserver</code> и веткой <code>master</code>, и другой с именем <code>origin</code> с двумя ветками: <code>master</code> и <code>testing</code>.</p>
+<p>Обратите внимание, что в примере, где ссылки импортированы из <code>git svn</code>, метки были добавлены в Git как удалённые ветки, а не как настоящие метки. Импортированные из Subversion данные выглядят так, как будто под именами меток с удалённого ресурса скрываются ветки.</p>
+<h2 id="-subversion">Коммит в Subversion</h2>
+<p>Теперь, когда у вас есть рабочий репозиторий, вы можете выполнить какую-либо работу с кодом и выполнить коммит в апстрим, эффективно используя Git в качестве SVN-клиента. Если вы редактировали один из файлов и закоммитили его, то вы внесли изменение в локальный Git-репозиторий, которое пока не существует на Subversion-сервере:</p>
+<pre><code>$ git commit -am 'Adding git-svn instructions <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> README'
+[master <span class="hljs-number">97031e5</span>] Adding git-svn instructions <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> README
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>После этого вам надо отправить изменения в апстрим. Обратите внимание, как Git изменяет способ работы с Subversion — вы можете сделать несколько коммитов оффлайн, а затем отправить их разом на Subversion-сервер. Для передачи изменений на Subversion-сервер требуется выполнить команду <code>git svn dcommit</code>:</p>
+<pre><code>$ git svn dcommit
+Committing to file:///tmp/test-svn/trunk <span class="hljs-keyword">...</span>
+       M      README.txt
+Committed r79
+       M      README.txt
+r79 = 938b1a547c2cc92033b74d32030e86468294a5c8 (trunk)
+No changes between current HEAD and refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+</code></pre><p>Это действие возьмёт все коммиты, сделанные поверх того, что есть в SVN-репозитории, выполнит коммит в Subversion для каждого из них, а затем перепишет ваш локальный коммит в Git&#39;е, чтобы добавить к нему уникальный идентификатор. Это важно, поскольку это означает, что изменятся все SHA-1 контрольные суммы ваших коммитов. В частности и поэтому работать с одним и тем же проектом одновременно и через Git, и через Subversion — это плохая идея. Взглянув на последний коммит, вы увидите, что добавился новый <code>git-svn-id</code>:</p>
+<pre><code>$ git <span class="hljs-keyword">log</span> <span class="hljs-subst">-</span><span class="hljs-number">1</span>
+commit <span class="hljs-number">938</span>b1a547c2cc92033b74d32030e86468294a5c8
+Author: schacon <span class="hljs-subst">&lt;</span>schacon@<span class="hljs-number">4</span>c93b258<span class="hljs-subst">-</span><span class="hljs-number">373</span>f<span class="hljs-subst">-</span><span class="hljs-number">11</span>de<span class="hljs-attribute">-be05</span><span class="hljs-subst">-</span><span class="hljs-number">5</span>f7a86268029<span class="hljs-subst">&gt;</span>
+<span class="hljs-built_in">Date</span>:   Sat May <span class="hljs-number">2</span> <span class="hljs-number">22</span>:<span class="hljs-number">06</span>:<span class="hljs-number">44</span> <span class="hljs-number">2009</span> <span class="hljs-subst">+</span><span class="hljs-number">0000</span>
+
+    Adding git<span class="hljs-attribute">-svn</span> instructions <span class="hljs-keyword">to</span> the README
+
+    git<span class="hljs-attribute">-svn</span><span class="hljs-attribute">-id</span>: file:<span class="hljs-comment">///tmp/test-svn/trunk@79 4c93b258-373f-11de-be05-5f7a86268029</span>
+</code></pre><p>Обратите внимание — контрольная сумма SHA, которая начиналась с <code>97031e5</code> когда вы делали коммит, теперь начинается с <code>938b1a5</code>. Если вы хотите отправить изменения как на Git-сервер, так и на SVN-сервер, вы должны отправить их (<code>dcommit</code>) сначала на Subversion-сервер, поскольку это действие изменит отправляемые данные.</p>
+<h2 id="-">Получение новых изменений</h2>
+<p>Если вы работаете вместе с другими разработчиками, значит, когда-нибудь вам придётся столкнуться с ситуацией, когда кто-то из вас отправит изменения на сервер, а другой, в свою очередь, будет пытаться отправить свои изменения, конфликтующие с первыми. Это изменение не будет принято до тех пор, пока вы не сольёте себе чужую работу. В <code>git svn</code> эта ситуация выглядит следующим образом:</p>
+<pre><code>$ git svn dcommit
+Committing <span class="hljs-built_in">to</span> <span class="hljs-built_in">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk ...</span>
+Merge conflict during commit: Your <span class="hljs-built_in">file</span> <span class="hljs-operator">or</span> <span class="hljs-built_in">directory</span> <span class="hljs-string">'README.txt'</span> is probably \
+out-<span class="hljs-operator">of</span>-<span class="hljs-built_in">date</span>: resource out <span class="hljs-operator">of</span> <span class="hljs-built_in">date</span>; <span class="hljs-keyword">try</span> updating <span class="hljs-keyword">at</span> /Users/schacon/libexec/git-\
+core/git-svn <span class="hljs-built_in">line</span> <span class="hljs-number">482</span>
+</code></pre><p>Для разрешения этой проблемы вам нужно выполнить команду <code>git svn rebase</code>, которая получит все изменения, имеющиеся на сервере, которых ещё нет на вашей локальной машине, и переместит все ваши недавние изменения поверх того, что было на сервере:</p>
+<pre><code>$ git svn rebase
+       M      README.txt
+r80 = ff829ab914e8775c7c025d741beb3d523ee30bc4 (trunk)
+First, rewinding head <span class="hljs-keyword">to</span> replay your work <span class="hljs-function_start"><span class="hljs-keyword">on</span></span> top <span class="hljs-keyword">of</span> <span class="hljs-keyword">it</span>...
+Applying: <span class="hljs-keyword">first</span> user change
+</code></pre><p>Теперь все ваши изменения находятся сверху того, что есть на SVN-сервере, так что вы можете спокойно выполнить <code>dcommit</code>:</p>
+<pre><code>$ git svn dcommit
+Committing to file:///tmp/test-svn/trunk <span class="hljs-keyword">...</span>
+       M      README.txt
+Committed r81
+       M      README.txt
+r81 = 456cbe6337abe49154db70106d1836bc1332deed (trunk)
+No changes between current HEAD and refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+</code></pre><p>Следует помнить, что в отличие от Git&#39;а, который требует сливать себе изменения в апстриме, которых у вас ещё нет локально, перед тем как отправить свои изменения, <code>git svn</code> заставляет делать такое только в случае конфликта правок. Если кто-либо внесёт изменения в один файл, а вы внесёте изменения в другой, команда <code>dcommit</code> сработает без ошибок:</p>
+<pre><code>$ git svn dcommit
+Committing <span class="hljs-built_in">to</span> <span class="hljs-built_in">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk ...</span>
+       M      configure.ac
+Committed r84
+       M      autogen.sh
+r83 = <span class="hljs-number">8</span>aa54a74d452f82eee10076ab2584c1fc424853b (trunk)
+       M      configure.ac
+r84 = cdbac939211ccb18aa744e581e46563af5d962d0 (trunk)
+W: d2f23b80f67aaaa1f6f5aaef48fce3263ac71a92 <span class="hljs-operator">and</span> refs/remotes/trunk differ, \
+  <span class="hljs-keyword">using</span> rebase:
+:<span class="hljs-number">100755</span> <span class="hljs-number">100755</span> efa5a59965fbbb5b2b0a12890f1b351bb5493c18 \
+  <span class="hljs-number">015e4</span>c98c482f0fa71e4d5434338014530b37fa6 M   autogen.sh
+First, rewinding head <span class="hljs-built_in">to</span> replay your work <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">top</span> <span class="hljs-title">of</span> <span class="hljs-title">it</span>...</span>
+Nothing <span class="hljs-built_in">to</span> <span class="hljs-built_in">do</span>.
+</code></pre><p>Это важно помнить, поскольку последствием этих действий может стать такое состояние проекта, которого нет ни на одном из ваших компьютеров. Если изменения несовместимы, но не ведут к конфликту изменений, у вас могут возникнуть проблемы, которые трудно будет диагностировать. Это отличается от работы с Git-сервером — в Git&#39;е вы можете полностью проверить состояние проекта на клиентских машинах до публикации, в то время как в SVN вы не можете даже быть уверены в том, что состояние проекта непосредственно перед коммитом и после него идентично.</p>
+<p>Кроме того, вам нужно выполнить следующую команду для получения изменений с сервера Subversion, даже если вы не готовы сами сделать коммит. Вы можете выполнить <code>git svn fetch</code> для получения новых данных, но <code>git svn rebase</code> и извлечёт новые данные с сервера, и обновит ваши локальные коммиты.</p>
+<pre><code>$ git svn rebase
+       M      generate_descriptor_proto.sh
+r82 = bd16df9173e424c6f52c337ab6efa7f7643282f1 (trunk)
+First, rewinding head <span class="hljs-keyword">to</span> replay your work <span class="hljs-function_start"><span class="hljs-keyword">on</span></span> top <span class="hljs-keyword">of</span> <span class="hljs-keyword">it</span>...
+Fast-forwarded master <span class="hljs-keyword">to</span> refs/remotes/trunk.
+</code></pre><p>Выполняйте команду <code>git svn rebase</code> периодически, чтобы быть уверенным в том, что ваш код имеет самую свежую версию. Перед выполнением этой команды убедитесь, что ваш рабочий каталог чист. Если нет, вы должны либо «спрятать» свои изменения, либо временно закоммитить их перед выполнением <code>git svn rebase</code>, иначе выполнение этой команды прекратится, если она обнаружит возникновение конфликта слияния.</p>
+<h2 id="-git">Проблемы с ветвлением в Git</h2>
+<p>После того как вы привыкли к работе с Git&#39;ом, вы наверняка будете создавать ветки для работы над отдельными задачами, а затем сливать их. Если вы отправляете изменения на Subversion-сервер через <code>git svn</code>, вам, скорее всего, потребуется перемещать свою работу каждый раз в одну ветку, а не сливать ветки вместе. Причина, по которой предпочтение должно быть отдано именно такому подходу, заключается в том, что Subversion имеет линейную историю изменений и не может обрабатывать слияния так, как это делает Git. Поэтому <code>git svn</code> проходит только по первым родителям при конвертации снимков состояния в коммиты Subversion.</p>
+<p>Допустим, что история изменений выглядит следующим образом: вы создали ветку <code>experiment</code>, сделали два коммита, а затем слили их в ветку <code>master</code>. Если вы выполните <code>dcommit</code>, результат будет следующим:</p>
+<pre><code>$ git svn dcommit
+Committing to file:///tmp/test-svn/trunk ...
+       M      CHANGES<span class="hljs-preprocessor">.txt</span>
+Committed r85
+       M      CHANGES<span class="hljs-preprocessor">.txt</span>
+r85 = <span class="hljs-number">4</span>bfebeec434d156c36f2bcd18f4e3d97dc3269a2 (trunk)
+No changes between current HEAD <span class="hljs-keyword">and</span> refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+<span class="hljs-label">COPYING.txt:</span> locally modified
+<span class="hljs-label">INSTALL.txt:</span> locally modified
+       M      COPYING<span class="hljs-preprocessor">.txt</span>
+       M      INSTALL<span class="hljs-preprocessor">.txt</span>
+Committed r86
+       M      INSTALL<span class="hljs-preprocessor">.txt</span>
+       M      COPYING<span class="hljs-preprocessor">.txt</span>
+r86 = <span class="hljs-number">2647</span>f6b86ccfcaad4ec58c520e369ec81f7c283c (trunk)
+No changes between current HEAD <span class="hljs-keyword">and</span> refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+</code></pre><p>Выполнение <code>dcommit</code> для ветки с объединённой историей не вызовет никаких проблем. Однако, если вы посмотрите на историю проекта в Git&#39;е, то увидите, что ни один из коммитов, которые вы сделали в ветке <code>experiment</code> не были переписаны — вместо этого, все эти изменения появятся в SVN версии как один объединённый коммит.</p>
+<p>Когда кто-нибудь склонирует себе эту работу, всё, что он увидит — это коммит, в котором все изменения слиты воедино; он не увидит данных о том, откуда они взялись и когда они были внесены.</p>
+<h2 id="-subversion">Ветвление в Subversion</h2>
+<p>Работа с ветвями в Subversion отличается от таковой в Git&#39;е; если у вас есть возможность избегать её, то это, наверное, лучший вариант. Хотя, вы можете создавать и вносить изменения в ветки в Subversion, используя <code>git svn</code>.</p>
+<h3 id="-svn">Создание новой ветки в SVN</h3>
+<p>Для того чтобы создать новую ветку в Subversion, выполните <code>git svn branch [имя ветки]</code>:</p>
+<pre><code>$ git svn branch opera
+Copying <span class="hljs-keyword">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk at r87 to file:///tmp/test-svn/branches/opera...</span>
+Found possible branch point: <span class="hljs-keyword">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk =&gt; \</span>
+  <span class="hljs-keyword">file</span>:<span class="hljs-comment">///tmp/test-svn/branches/opera, 87</span>
+Found branch <span class="hljs-keyword">parent</span>: (opera) <span class="hljs-number">1</span>f6bfe471083cbca06ac8d4176f7ad4de0d62e5f
+Following <span class="hljs-keyword">parent</span> with do_switch
+Successfully followed <span class="hljs-keyword">parent</span>
+r89 = <span class="hljs-number">9</span>b6fe0b90c5c9adf9165f700897518dbc54a7cbf (opera)
+</code></pre><p>Эта команда эквивалентна команде Subversion <code>svn copy trunk branches/opera</code> и выполняется на Subversion-сервере. Важно отметить, что эта команда не переключает вас на указанную ветку. Так что, если вы сейчас сделаете коммит, он попадёт на сервере в <code>trunk</code>, а не в <code>opera</code>.</p>
+<h2 id="-">Переключение активных веток</h2>
+<p>Git определяет ветку, в которую он отправит ваши коммиты при выполнении <code>dcommit</code>, ища верхушку Subversion-ветки в вашей истории — она должна быть одна и она должна быть последней в текущей истории веток, имеющей метку <code>git-svn-id</code>.</p>
+<p>Если вы хотите работать одновременно с несколькими ветками, вы можете настроить локальные ветки на внесение изменений через <code>dcommit</code> в конкретные ветки Subversion, начиная их на основе импортированного SVN-коммита для нужной ветки. Если вам нужна ветка <code>opera</code>, в которой вы можете поработать отдельно, можете выполнить:</p>
+<pre><code><span class="hljs-variable">$ </span>git branch opera remotes/opera
+</code></pre><p>Теперь, если вы захотите слить ветку <code>opera</code> в <code>trunk</code> (вашу ветку <code>master</code>), вы сможете сделать это с помощью обычной команды <code>git merge</code>. Однако вам потребуется добавить подробное описание к коммиту (через параметр <code>-m</code>), иначе при слиянии комментарий будет иметь вид «Merge branch opera» вместо чего-нибудь полезного.</p>
+<p>Помните, что хотя вы и используете <code>git merge</code> для этой операции, и слияние, скорее всего, произойдёт намного проще, чем было бы в Subversion (потому что Git автоматически определяет подходящую основу для слияния), оно не является обычным коммитом-слиянием в Git&#39;е. Вы должны передать данные обратно на сервер в Subversion, который не способен справиться с коммитом, имеющим более одного родителя, так что после передачи этот коммит будет выглядеть как один коммит, в который затолканы все изменения с другой ветки. После того как вы сольёте одну ветку в другую, вы не сможете просто так вернуться к работе над ней, как могли бы в Git&#39;е. Команда <code>dcommit</code> удаляет всю информацию о том, какая ветка была влита, так что последующие вычисления базы слияния будут неверными — команда <code>dcommit</code> сделает результаты выполнения <code>git merge</code> такими же, какими они были бы после выполнения <code>git merge --squash</code>. К сожалению, избежать подобной ситуации вряд ли удастся — Subversion не способен сохранять подобную информацию, так что вы всегда будете связаны этими ограничениями. Во избежание проблем вы должны удалить локальную ветку (в нашем случае <code>opera</code>) после того, как вы вольёте её в <code>trunk</code>.</p>
+<h2 id="-subversion">Команды Subversion</h2>
+<p>Набор утилит <code>git svn</code> предоставляет в ваше распоряжение несколько команд для облегчения перехода на Git, путём предоставления функциональности, подобной той, которую вы имеете в Subversion. Ниже приведены несколько команд, которые дают вам то, что вы имели в Subversion.</p>
+<h3 id="-svn">Просмотр истории в стиле SVN</h3>
+<p>Если вы привыкли к Subversion и хотите просматривать историю в стиле SVN, выполните команду <code>git svn log</code>, чтобы увидеть историю коммитов в таком же формате, как в SVN:</p>
+<pre><code><span class="hljs-header">$ git svn log
+------------------------------------------------------------------------</span>
+r87 | schacon | 2009-05-02 16:07:37 -0700 (Sat, 02 May 2009) | 2 lines
+
+autogen change
+
+<span class="hljs-code">------------------------------------------------------------------------
+r86 | schacon | 2009-05-02 16:00:21 -0700 (Sat, 02 May 2009) | 2 lines
+
+Merge branch 'experiment'
+
+------------------------------------------------------------------------</span>
+r85 | schacon | 2009-05-02 16:00:09 -0700 (Sat, 02 May 2009) | 2 lines
+
+updated the changelog
+</code></pre><p>Вы должны знать две важные вещи о команде <code>git svn log</code>. Во-первых, она работает в оффлайне, в отличие от оригинальной команды <code>svn log</code>, которая запрашивает информацию с Subversion-сервера. Во-вторых, эта команда отображает только те коммиты, которые были переданы на Subversion-сервер. Локальные Git-коммиты, которые вы ещё не отправили с помощью <code>dcommit</code>, не будут отображаться, равно как и коммиты, отправленные на Subversion-сервер другими людьми с момента последнего выполнения <code>dcommit</code>. Результат действия этой команды скорее похож на последнее известное состояние изменений на Subversion-сервере.</p>
+<h3 id="svn-">SVN-Аннотации</h3>
+<p>Так же как команда <code>git svn log</code> симулирует в оффлайне команду <code>svn log</code>, эквивалентом команды <code>svn annotate</code> является команда <code>git svn blame [ФАЙЛ]</code>. Её вывод выглядит следующим образом:</p>
+<pre><code>$ git svn blame README.txt 
+ <span class="hljs-number">2</span>   temporal Protocol Buffers - Google<span class="hljs-attribute">'s</span> data interchange format
+ <span class="hljs-number">2</span>   temporal Copyright <span class="hljs-number">2008</span> Google Inc.
+ <span class="hljs-number">2</span>   temporal http://code.google.com/apis/protocolbuffers/
+ <span class="hljs-number">2</span>   temporal 
+<span class="hljs-number">22</span>   temporal C++ Installation - Unix
+<span class="hljs-number">22</span>   temporal =======================
+ <span class="hljs-number">2</span>   temporal 
+<span class="hljs-number">79</span>    schacon Committing <span class="hljs-keyword">in</span> git-svn.
+<span class="hljs-number">78</span>    schacon 
+ <span class="hljs-number">2</span>   temporal <span class="hljs-keyword">To</span> build <span class="hljs-keyword">and</span> install the C++ Protocol <span class="hljs-keyword">Buffer</span> runtime <span class="hljs-keyword">and</span> the Protocol
+ <span class="hljs-number">2</span>   temporal <span class="hljs-keyword">Buffer</span> compiler (protoc) execute the following:
+ <span class="hljs-number">2</span>   temporal 
+</code></pre><p>Опять же, эта команда не показывает коммиты, которые вы сделали локально в Git&#39;е или те, которые за то время были отправлены на Subversion-сервер.</p>
+<h3 id="-svn-">Информация о SVN-сервере</h3>
+<p>Вы можете получить ту же информацию, которую даёт выполнение команды <code>svn info</code>, выполнив команду <code>git svn info</code>:</p>
+<pre><code>$ git svn info
+<span class="hljs-label">Path:</span> .
+<span class="hljs-label">URL:</span> https://schacon-test<span class="hljs-preprocessor">.googlecode</span><span class="hljs-preprocessor">.com</span>/svn/trunk
+Repository Root: https://schacon-test<span class="hljs-preprocessor">.googlecode</span><span class="hljs-preprocessor">.com</span>/svn
+Repository UUID: <span class="hljs-number">4</span>c93b258-<span class="hljs-number">373</span>f-<span class="hljs-number">11</span>de-be05-<span class="hljs-number">5</span>f7a86268029
+<span class="hljs-label">Revision:</span> <span class="hljs-number">87</span>
+Node Kind: directory
+<span class="hljs-label">Schedule:</span> normal
+Last Changed Author: schacon
+Last Changed Rev: <span class="hljs-number">87</span>
+Last Changed Date: <span class="hljs-number">2009</span>-<span class="hljs-number">05</span>-<span class="hljs-number">02</span> <span class="hljs-number">16</span>:<span class="hljs-number">07</span>:<span class="hljs-number">37</span> -<span class="hljs-number">0700</span> (Sat, <span class="hljs-number">02</span> May <span class="hljs-number">2009</span>)
+</code></pre><p>Так же, как <code>blame</code> и <code>log</code>, эта команда выполняется оффлайн и выводит информацию, актуальную на момент последнего вашего обращения к серверу Subversion.</p>
+<h3 id="-subversion">Игнорирование того, что игнорирует Subversion</h3>
+<p>Если вы клонируете Subversion-репозиторий, в котором где-то установлены свойства <code>svn:ignore</code>, скорее всего, вы захотите создать соответствующие им файлы <code>.gitignore</code>, чтобы ненароком не добавить в коммит те файлы, которые не стоит добавлять. Для решения этой проблемы в <code>git svn</code> имеется две команды. Первая — <code>git svn create-ignore</code> — автоматически создаст соответствующие файлы <code>.gitignore</code>, которые вы затем можете добавить в свой следующий коммит.</p>
+<p>Вторая команда — <code>git svn show-ignore</code>, которая выводит на стандартный вывод строки, которые вы должны включить в файл <code>.gitignore</code>. Таким образом, вы можете перенаправить вывод этой команды в файл исключений вашего проекта:</p>
+<pre><code><span class="hljs-variable">$ </span>git svn show-ignore &gt; .git/info/exclude
+</code></pre><p>Поступая таким образом, вы не захламляете проект файлами <code>.gitignore</code>. Это правильный подход, если вы являетесь единственным пользователем Git&#39;а в команде, использующей Subversion, и ваши коллеги выступают против наличия файлов <code>.gitignore</code> в проекте.</p>
+<h2 id="-git-svn">Заключение по Git-Svn</h2>
+<p>Утилиты <code>git svn</code> полезны в том случае, если ваша разработка по каким-то причинам требует наличия рабочего Subversion-сервера. Однако, вам стоит смотреть на Git, использующий мост в Subversion, как на урезанную версию Git&#39;а. В противном случае вы столкнётесь с проблемами в преобразованиях, которые могут сбить с толку вас и ваших коллег. Чтобы избежать неприятностей, старайтесь следовать следующим рекомендациям:</p>
+<ul>
+<li>Держите историю в Git линейной, чтобы она не содержала коммитов-слияний, сделанных с помощью <code>git merge</code>. Перемещайте всю работу, которую вы выполняете вне основной ветки обратно в неё; не выполняйте слияний.</li>
+<li>Не устанавливайте отдельный Git-сервер для совместной работы. Можно иметь один такой сервер для того, чтобы ускорить клонирование для новых разработчиков, но не отправляйте на него ничего, не имеющего записи <code>git-svn-id</code>. Возможно, стоит даже добавить перехватчик <code>pre-receive</code>, который будет проверять каждый коммит на наличие <code>git-svn-id</code> и отклонять <code>git push</code>, если коммиты не имеют такой записи.</li>
+</ul>
+<p>При следовании этим правилам, работа с Subversion-сервером может быть более-менее сносной. Однако, если возможен перенос проекта на реальный Git-сервер, преимущества от этого перехода дадут вашему проекту намного больше.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_i_drugie_sistemi_kontrolya_versii/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_i_drugie_sistemi_kontrolya_versii/migratsiya_na_git.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Rebasing | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../phan_nhanh_trong_git/tong_ket.html" />
+        
+        
+        <link rel="prev" href="../phan_nhanh_trong_git/nhanh_remote.html" />
+        
+
+        <meta property="og:title" content="Rebasing | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="3.6" data-basepath=".." data-revision="1396895602594">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/phan_nhanh_trong_git/rebasing.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="bat_dau/README.html">
+                
+                <a href="../bat_dau/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Bắt Đầu
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="bat_dau/ve_quan_ly_phien_ban.html">
+                            
+                            <a href="../bat_dau/ve_quan_ly_phien_ban.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Về Quản Lý Phiên Bản
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="bat_dau/so_luoc_lich_su_cua_git.html">
+                            
+                            <a href="../bat_dau/so_luoc_lich_su_cua_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Sơ Lược Lịch Sử của Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="bat_dau/co_ban_ve_git.html">
+                            
+                            <a href="../bat_dau/co_ban_ve_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Cơ Bản về Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="bat_dau/cai_dat_git.html">
+                            
+                            <a href="../bat_dau/cai_dat_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Cài Đặt Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="bat_dau/cau_hinh_git_lan_dau.html">
+                            
+                            <a href="../bat_dau/cau_hinh_git_lan_dau.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Cấu Hình Git Lần Đầu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="bat_dau/tro_giup.html">
+                            
+                            <a href="../bat_dau/tro_giup.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Trợ Giúp
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="bat_dau/tom_tat.html">
+                            
+                            <a href="../bat_dau/tom_tat.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Tóm Tắt
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="co_ban_ve_git/README.html">
+                
+                <a href="../co_ban_ve_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Cơ Bản Về Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="co_ban_ve_git/tao_mot_kho_chua_git.html">
+                            
+                            <a href="../co_ban_ve_git/tao_mot_kho_chua_git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Tạo Một Kho Chứa Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="co_ban_ve_git/ghi_lai_thay_doi_vao_kho_chua.html">
+                            
+                            <a href="../co_ban_ve_git/ghi_lai_thay_doi_vao_kho_chua.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Ghi Lại Thay Đổi vào Kho Chứa
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="co_ban_ve_git/xem_lich_su_commit.html">
+                            
+                            <a href="../co_ban_ve_git/xem_lich_su_commit.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Xem Lịch Sử Commit
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="co_ban_ve_git/phuc_hoi.html">
+                            
+                            <a href="../co_ban_ve_git/phuc_hoi.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Phục Hồi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="co_ban_ve_git/lam_viec_tu_xa.html">
+                            
+                            <a href="../co_ban_ve_git/lam_viec_tu_xa.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Làm Việc Từ Xa
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="co_ban_ve_git/danh_dau.html">
+                            
+                            <a href="../co_ban_ve_git/danh_dau.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Đánh Dấu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="co_ban_ve_git/meo_nho.html">
+                            
+                            <a href="../co_ban_ve_git/meo_nho.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Mẹo Nhỏ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="co_ban_ve_git/tong_ket.html">
+                            
+                            <a href="../co_ban_ve_git/tong_ket.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Tổng Kết
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="phan_nhanh_trong_git/README.html">
+                
+                <a href="../phan_nhanh_trong_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Phân Nhánh Trong Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="phan_nhanh_trong_git/nhanh_la_gi.html">
+                            
+                            <a href="../phan_nhanh_trong_git/nhanh_la_gi.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Nhánh Là Gì?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="phan_nhanh_trong_git/co_ban_ve_phan_nhanh_va_tich_hop.html">
+                            
+                            <a href="../phan_nhanh_trong_git/co_ban_ve_phan_nhanh_va_tich_hop.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Cơ Bản Về Phân Nhánh và Tích Hợp
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="phan_nhanh_trong_git/quan_ly_cac_nhanh.html">
+                            
+                            <a href="../phan_nhanh_trong_git/quan_ly_cac_nhanh.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Quản Lý Các Nhánh
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="phan_nhanh_trong_git/quy_trinh_lam_viec_phan_nhanh.html">
+                            
+                            <a href="../phan_nhanh_trong_git/quy_trinh_lam_viec_phan_nhanh.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Quy Trình Làm Việc Phân Nhánh
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="phan_nhanh_trong_git/nhanh_remote.html">
+                            
+                            <a href="../phan_nhanh_trong_git/nhanh_remote.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Nhánh Remote
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="phan_nhanh_trong_git/rebasing.html">
+                            
+                            <a href="../phan_nhanh_trong_git/rebasing.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="phan_nhanh_trong_git/tong_ket.html">
+                            
+                            <a href="../phan_nhanh_trong_git/tong_ket.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Tổng Kết
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 96%;min-width: 92%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../bat_dau/README.html" title="Bắt Đầu" class="chapter done new-chapter" data-progress="1" style="left: 4%;"></a>
+    
+        <a href="../bat_dau/ve_quan_ly_phien_ban.html" title="Về Quản Lý Phiên Bản" class="chapter done " data-progress="1.1" style="left: 8%;"></a>
+    
+        <a href="../bat_dau/so_luoc_lich_su_cua_git.html" title="Sơ Lược Lịch Sử của Git" class="chapter done " data-progress="1.2" style="left: 12%;"></a>
+    
+        <a href="../bat_dau/co_ban_ve_git.html" title="Cơ Bản về Git" class="chapter done " data-progress="1.3" style="left: 16%;"></a>
+    
+        <a href="../bat_dau/cai_dat_git.html" title="Cài Đặt Git" class="chapter done " data-progress="1.4" style="left: 20%;"></a>
+    
+        <a href="../bat_dau/cau_hinh_git_lan_dau.html" title="Cấu Hình Git Lần Đầu" class="chapter done " data-progress="1.5" style="left: 24%;"></a>
+    
+        <a href="../bat_dau/tro_giup.html" title="Trợ Giúp" class="chapter done " data-progress="1.6" style="left: 28%;"></a>
+    
+        <a href="../bat_dau/tom_tat.html" title="Tóm Tắt" class="chapter done " data-progress="1.7" style="left: 32%;"></a>
+    
+        <a href="../co_ban_ve_git/README.html" title="Cơ Bản Về Git" class="chapter done new-chapter" data-progress="2" style="left: 36%;"></a>
+    
+        <a href="../co_ban_ve_git/tao_mot_kho_chua_git.html" title="Tạo Một Kho Chứa Git" class="chapter done " data-progress="2.1" style="left: 40%;"></a>
+    
+        <a href="../co_ban_ve_git/ghi_lai_thay_doi_vao_kho_chua.html" title="Ghi Lại Thay Đổi vào Kho Chứa" class="chapter done " data-progress="2.2" style="left: 44%;"></a>
+    
+        <a href="../co_ban_ve_git/xem_lich_su_commit.html" title="Xem Lịch Sử Commit" class="chapter done " data-progress="2.3" style="left: 48%;"></a>
+    
+        <a href="../co_ban_ve_git/phuc_hoi.html" title="Phục Hồi" class="chapter done " data-progress="2.4" style="left: 52%;"></a>
+    
+        <a href="../co_ban_ve_git/lam_viec_tu_xa.html" title="Làm Việc Từ Xa" class="chapter done " data-progress="2.5" style="left: 56%;"></a>
+    
+        <a href="../co_ban_ve_git/danh_dau.html" title="Đánh Dấu" class="chapter done " data-progress="2.6" style="left: 60%;"></a>
+    
+        <a href="../co_ban_ve_git/meo_nho.html" title="Mẹo Nhỏ" class="chapter done " data-progress="2.7" style="left: 64%;"></a>
+    
+        <a href="../co_ban_ve_git/tong_ket.html" title="Tổng Kết" class="chapter done " data-progress="2.8" style="left: 68%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/README.html" title="Phân Nhánh Trong Git" class="chapter done new-chapter" data-progress="3" style="left: 72%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/nhanh_la_gi.html" title="Nhánh Là Gì?" class="chapter done " data-progress="3.1" style="left: 76%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/co_ban_ve_phan_nhanh_va_tich_hop.html" title="Cơ Bản Về Phân Nhánh và Tích Hợp" class="chapter done " data-progress="3.2" style="left: 80%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/quan_ly_cac_nhanh.html" title="Quản Lý Các Nhánh" class="chapter done " data-progress="3.3" style="left: 84%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/quy_trinh_lam_viec_phan_nhanh.html" title="Quy Trình Làm Việc Phân Nhánh" class="chapter done " data-progress="3.4" style="left: 88%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/nhanh_remote.html" title="Nhánh Remote" class="chapter done " data-progress="3.5" style="left: 92%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/rebasing.html" title="Rebasing" class="chapter done " data-progress="3.6" style="left: 96%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/tong_ket.html" title="Tổng Kết" class="chapter  " data-progress="3.7" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_261">
+                    
+                        <h1 id="rebasing">Rebasing</h1>
+<p>Trong Git, có hai cách chính để tích hợp các thay đổi từ nhánh này vào nhánh khác: đó là <code>merge</code> và <code>rebase</code>. Trong phần này bạn sẽ được tìm hiểu rebase là gì, sử dụng nó như thế nào, tại sao nó được coi là một công cụ khá tuyệt vời, và trong trường hợp nào thì không nên sử dụng nó.</p>
+<h2 id="c-b-n-v-rebase">Cơ Bản về Rebase</h2>
+<p>Nếu bạn xem lại ví dụ trước trong phần Tích Hợp (xem Hình 3-27), bạn có thể thấy rằng bạn đã phân nhánh công việc của bạn và thực hiện commit trên hai nhánh khác nhau.</p>
+<p><img src="http://git-scm.com/figures/18333fig0327-tn.png" alt=""></p>
+<p>Hình 3-17. Lần phân nhánh đầu tiên.</p>
+<p>Cách đơn giản nhất để tích hợp các nhánh, như chúng ta đã đề cập từ trước, đó là lệnh <code>merge</code>. Nó thực hiện tích hợp 3-chiều giữa hai snapshot mới nhất của hai nhánh (C3 và C4) và cha chung gần nhất của cả hai (C2), tạo mới một snapshot khác (và commit), như trong Hình 3-28.</p>
+<p><img src="http://git-scm.com/figures/18333fig0328-tn.png" alt=""></p>
+<p>Hình 3-28. Gộp nhánh lại để hợp nhất công việc bị tách ra trước đây.</p>
+<p>Tuy nhiên, còn có một cách khác: bạn có thể sử dụng bản vá của thay đổi được đưa ra ở C3 và áp dụng nó lên trên C4. Trong Git, đây được gọi là <em>rebasing</em>. Bằng cách sử dụng lệnh <code>rebase</code>, bạn có thể sử dụng tất cả các thay đổi được commit ở một nhánh và &quot;chạy lại&quot; (replay) chúng trên một nhánh khác.</p>
+<p>Trong ví dụ này, bạn thực hiện như sau:</p>
+<pre><code>$ git checkout experiment
+$ git rebase master
+First, rewinding head <span class="hljs-built_in">to</span> replay your work <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">top</span> <span class="hljs-title">of</span> <span class="hljs-title">it</span>...</span>
+Applying: added staged <span class="hljs-command"><span class="hljs-keyword">command</span></span>
+</code></pre><p>Nó thực hiện bằng cách đi tới commit cha chung của hai nhánh (nhánh bạn đang làm việc và nhánh bạn đang muốn rebase), tìm sự khác biệt trong mỗi commit của nhánh mà bạn đang làm việc, lưu lại các thay đổi đó vào một tập tin tạm thời, khôi phục lại nhánh hiện tại về cùng một commit với nhánh bạn đang rebase, và cuối cùng áp dụng lần lượt các thay đổi. Hình 3-29 minh họa toàn bộ quá trình này.</p>
+<p><img src="http://git-scm.com/figures/18333fig0329-tn.png" alt=""></p>
+<p>Hình 3-29. Quá trình rebase thay đổi ở C3 vào C4.</p>
+<p>Đến lúc này, bạn có thể quay lại nhánh <code>master</code> và thực hiện fast-forward merge (xem Hình 3-30).</p>
+<p><img src="http://git-scm.com/figures/18333fig0330-tn.png" alt=""></p>
+<p>Hình 3-30. Di chuyển nhánh master lên phía trước.</p>
+<p>Bây giờ snapshot mà C3&#39; trỏ tới cũng giống như snapshot được trở tới bởi C5 trong ví dụ sử dụng merge. Không có sự khác biệt nào khi so sánh kết quả của hai phương pháp này, nhưng sử dụng rebase sẽ cho chúng ta lịch sử rõ ràng hơn. Nếu bạn xem xét lịch sử của nhánh mà chúng ta rebase vào, nó giống như một đường thẳng: mọi thứ dường như xảy ra theo trình tự, thậm chí ban đầu nó diễn ra song song.</p>
+<p>Bình thường, bạn sử dụng cách này để đảm bảo rằng các commit được áp dụng một cách rõ ràng, rành mạch trên nhánh remote - có lẽ là một dự án mà bạn đang đóng góp chứ không phải duy trì nó. Trong trường hợp này, bạn thực hiện công việc trên một nhánh và sau đó rebase trở lại nhánh <code>origin/master</code> khi đã sẵn sàng. Theo cách này thì người duy trì dự án đó không phải thực hiện việc tích hợp - mà chỉ chi chuyển tiến lên phía trước (fast-forwar) hoặc đơn giản là áp dụng chúng vào.</p>
+<p>Lưu ý rằng snapshot được trỏ tới bởi commit cuối cùng, cho dù nó là kết quả của việc rebase hay merge, thì nó vẫn giống nhau - chỉ khác nhau về các bước thực hiện mà thôi. Quá trình rebase được thực hiện bằng cách thực hiện lại các thay đổi từ nhánh này qua nhánh khác theo thứ tự chúng đã được thực hiện, trong khi đó merge lại lấy hai điểm kết thúc và gộp chúng lại với nhau.</p>
+<h2 id="rebase-n-ng-cao">Rebase Nâng Cao</h2>
+<p>Bạn cũng có thể thực hiện rebase trên một đối tượng khác mà không phải là nhánh rebase. Xem ví dụ Hình 3-31. Bạn tạo một nhánh chủ để (<code>server</code>) để thêm một số tính năng server-side vào dự án, và thực hiện một số commit. Sau đó bạn tạo một nhánh khác để thực hiện một số thay đổi cho phía client (<code>client</code>) và cũng commit vài lần. Cuối cùng, bạn quay trở lại nhánh server và thực hiện thêm một số commit nữa.</p>
+<p><img src="http://git-scm.com/figures/18333fig0331-tn.png" alt=""></p>
+<p>Hình 3-31. Nhánh chủ đề được tạo từ một nhánh chủ đề khác.</p>
+<p>Giả sử bạn quyết định tích hợp các thay đổi phía client vào nhánh chính cho bản phát hành sắp tới, nhưng bạn vẫn muốn giữ các thay đổi server-side cho đến khi nó được kiểm tra kỹ lưỡng. Bạn có thể lấy các thay đổi ở client mà không có mặt ở server (C8 và C9) sau đó chạy lại (replay) chúng trên nhánh master bằng cách sử dụng lựa chọn <code>--onto</code> cho lệnh <code>git rebase</code>:</p>
+<pre><code>$ git rebase --onto master <span class="hljs-keyword">server</span> <span class="hljs-keyword">client</span>
+</code></pre><p>Lệnh này cơ bản nói rằng, &quot;Hãy check out nhánh client, tìm ra các bản vá từ commit chung của nhánh <code>client</code> và <code>server</code>, sau đó thực thi lại vào nhánh <code>master</code>.&quot; Nó hơi phức tạp một chút nhưng kết quả như Hình 3-32 thì lại rất tuyệt.</p>
+<p><img src="http://git-scm.com/figures/18333fig0332-tn.png" alt=""></p>
+<p>Hình 3-32. Quá trình rebase nhánh chủ đề khỏi một nhánh chủ đề khác.</p>
+<p>Bây giờ bạn có thể di chuyển con trỏ của nhánh master tiến lên phía trước (xem Hình 3-33):</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout master
+<span class="hljs-variable">$ </span>git merge client
+</code></pre><p><img src="http://git-scm.com/figures/18333fig0333-tn.png" alt=""></p>
+<p>Hình 3-33. Di chuyển nhánh master lên phía trước để bao gồm các thay đổi của nhánh client.</p>
+<p>Giả sử rằng bạn quyết định kéo về cả nhánh trên máy chủ. Bạn có thể rebase nhánh trên máy chủ đó vào nhánh master mà không phải checkout trước bằng lệnh <code>git rebase [basebranch] [topicbranch]</code> - lệnh này sẽ checkout nhánh chủ để (trong trường hợp này là <code>server</code>) cho bạn và áp dụng lại các thay đổi vào nhánh cơ sở (base) <code>master</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git rebase master server
+</code></pre><p>Lệnh này sẽ thực hiện lại các thay đổi trên nhánh <code>server</code> chèn vào nhánh <code>master</code> như trong Hình 3-34.</p>
+<p><img src="http://git-scm.com/figures/18333fig0334-tn.png" alt=""></p>
+<p>Hình 3-34. Rebase nhánh server chèn lên nhánh master. </p>
+<p>Sau đó bạn có thể di chuyển con trỏ nhánh base (<code>master</code>):</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout master
+<span class="hljs-variable">$ </span>git merge server
+</code></pre><p>Bạn có thể xóa nhánh <code>client</code> và <code>server</code> vì tất cả công việc đã được tích hợp vào master và bạn không cần đến chúng nữa, lịch sử quả toàn bộ quá trình vừa rồi giống như Hình 3-35:</p>
+<pre><code>$ git branch <span class="hljs-operator">-d</span> client
+$ git branch <span class="hljs-operator">-d</span> server
+</code></pre><p><img src="http://git-scm.com/figures/18333fig0335-tn.png" alt=""></p>
+<p>Hình 3-35. Lịch sử commit cuối cùng.</p>
+<h2 id="r-i-ro-c-a-rebase">Rủi Ro của Rebase</h2>
+<p>Mặc dù rebase rất hữu ích nhưng nó cũng có không ít những mặt hạn chế, điều này có thể tổng kết bằng câu sau đây:</p>
+<p><strong>Không được rebase các commit mà bạn đã đẩy lên một kho chứa công khai.</strong></p>
+<p>Miễn là bạn làm theo hướng dẫn này, sẽ không có chuyện gì xảy ra. Nếu không, mọi người sẽ ghét bạn, và bạn sẽ bị bạn bè và gia đình coi thường.</p>
+<p>Khi bạn thực hiện rebase, bạn đang bỏ đi các commit đã tồn tại và tái tạo lại các commit mới tương tự nhưng thực ra khác biệt. Nếu bạn đẩy commit ở một nơi nào đó và mọi người kéo xuống máy của họ, sau đó bạn sửa lại các commit đó bằng lệnh <code>git rebase</code> và đẩy lên một lần nữa, đồng nghiệp của bạn sẽ phải tích hợp lại công việc của họ và mọi thứ sẽ rối tung lên khi bạn cố gắng kéo các thay đổi của họ ngược lại máy bạn.</p>
+<p>Hãy cùng xem một ví dụ làm sao việc rebase công khai có thể gây sự cố. Giả sử bạn tạo bản sao từ một máy chủ trung tâm và thực hiện một số thay đổi từ đó. Lịch sử commit của bạn sẽ giống như Hình 3-36.</p>
+<p><img src="http://git-scm.com/figures/18333fig0336-tn.png" alt=""></p>
+<p>Hình 3-36. Tạo bản sao một kho chứa, và base một số thay đổi vào đó.</p>
+<p>Bây giờ, một người khác thực hiện một số thay đổi khác có kèm theo một lần tích hợp (merge), và đẩy lên máy chủ trung tâm. Bạn truy xuất chúng và tích hợp nhánh trung tâm mới đó vào của bạn, lúc này lịch sử của bạn sẽ giống như Hình 3-37.</p>
+<p><img src="http://git-scm.com/figures/18333fig0337-tn.png" alt=""></p>
+<p>Hình 3-37. Truy xuất thêm các commit và tích hợp lại.</p>
+<p>Tiếp theo, người đã đẩy tích hợp đó quyết định lại và rebase lại những thay đổi của họ; họ thực hiện <code>git push --force</code> để ghi đè lịch sử trên máy chủ. Sau đó bạn truy xuất lại dữ liệu từ máy chủ, đưa về các commit mới.</p>
+<p><img src="http://git-scm.com/figures/18333fig0338-tn.png" alt=""></p>
+<p>Hình 3-38. Một người nào đó đẩy lên các commit rebase, bỏ đi các commit có chứa thay đổi của bạn.</p>
+<p>Lúc này, bạn phải tích hợp lại một lần nữa các thay đổi này, mặc dù trước đó bạn đã làm rồi. Quá trình rebase thay đổi mã băm SHA-1 của các commit này vì thế đối với Git chúng giống như các commit mới, mà thực tế thì bạn đã có C4 trong lịch sử của bạn (xem Hình 3-39).</p>
+<p><img src="http://git-scm.com/figures/18333fig0339-tn.png" alt=""></p>
+<p>Hình 3-39. Bạn tích hợp các thay đổi tương tự lại một lần nữa vào một commit tích hợp mới.</p>
+<p>Bạn phải tích hợp thay đổi đó để có thể theo kịp với các lập trình viên khác về sau này. Sau khi thực hiện việc này, lịch sử commit của bạn sẽ bao gồm cả hai commit C4 và C4&#39; có mã SHA-1 khác nhau nhưng lại có cùng chung nội dung thay đổi cũng như thông điệp commit. Nếu bạn chạy lệnh <code>git log</code> trong trường hợp này bạn sẽ thấy hai commit cùng chung ngày commit và thông điệp, điều này sẽ gây khó hiểu cho bạn. Hơn nữa, nếu bạn đẩy chúng ngược lên máy chủ, bạn sẽ đưa vào một lần nữa tất cả các commit đã rebase đó và sẽ gây khó hiểu cho nhiều người khác nữa.</p>
+<p>Nếu bạn sử dụng rebase như là cách để dọn dẹp các commit trước khi đẩy chúng lên, và nếu như bạn chỉ rebase commit chưa bao giờ được công khai, thì sẽ không có chuyện gì xảy ra. Nếu bạn rebase các commit đã được công khai và mọi người có thể đã tích hợp (base) nó vào công việc của họ thì bạn có thể gặp phải các vấn đề thực sự khó chị.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../phan_nhanh_trong_git/nhanh_remote.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../phan_nhanh_trong_git/tong_ket.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,966 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Configurazione di Git | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../customizing_git/attributi_di_git.html" />
+        
+        
+        <link rel="prev" href="../customizing_git/README.html" />
+        
+
+        <meta property="og:title" content="Configurazione di Git | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="7.1" data-basepath=".." data-revision="1396895615553">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/customizing_git/configurazione_di_git.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="per_iniziare/README.html">
+                
+                <a href="../per_iniziare/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Per Iniziare
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="per_iniziare/il_controllo_di_versione.html">
+                            
+                            <a href="../per_iniziare/il_controllo_di_versione.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Il Controllo di Versione
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="per_iniziare/una_breve_storia_di_git.html">
+                            
+                            <a href="../per_iniziare/una_breve_storia_di_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Una Breve Storia di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="per_iniziare/basi_di_git.html">
+                            
+                            <a href="../per_iniziare/basi_di_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Basi di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="per_iniziare/installare_git.html">
+                            
+                            <a href="../per_iniziare/installare_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Installare Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="per_iniziare/prima_configurazione_di_git.html">
+                            
+                            <a href="../per_iniziare/prima_configurazione_di_git.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Prima Configurazione di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="per_iniziare/ottieni_aiuto.html">
+                            
+                            <a href="../per_iniziare/ottieni_aiuto.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Ottieni aiuto
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="per_iniziare/sommario.html">
+                            
+                            <a href="../per_iniziare/sommario.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Sommario
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="basi_di_git/README.html">
+                
+                <a href="../basi_di_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Basi di Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="basi_di_git/repository_git.html">
+                            
+                            <a href="../basi_di_git/repository_git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Repository Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="basi_di_git/registrare_i_cambiamenti_nel_repository.html">
+                            
+                            <a href="../basi_di_git/registrare_i_cambiamenti_nel_repository.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Registrare i Cambiamenti nel Repository
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="basi_di_git/vedere_la_storia_dei_commit.html">
+                            
+                            <a href="../basi_di_git/vedere_la_storia_dei_commit.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Vedere la Storia dei Commit
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="basi_di_git/annullare_le_cose.html">
+                            
+                            <a href="../basi_di_git/annullare_le_cose.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Annullare le Cose
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="basi_di_git/lavorare_con_sorgenti_remote.html">
+                            
+                            <a href="../basi_di_git/lavorare_con_sorgenti_remote.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Lavorare con Sorgenti Remote
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="basi_di_git/suggerimenti_e_trucchi.html">
+                            
+                            <a href="../basi_di_git/suggerimenti_e_trucchi.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Suggerimenti e Trucchi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="basi_di_git/riassunto.html">
+                            
+                            <a href="../basi_di_git/riassunto.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Riassunto
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="diramazioni_in_git/README.html">
+                
+                <a href="../diramazioni_in_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Diramazioni in Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="diramazioni_in_git/cose_un_ramo.html">
+                            
+                            <a href="../diramazioni_in_git/cose_un_ramo.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Cos&#39;è un Ramo
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="diramazioni_in_git/basi_di_diramazione_e_fusione.html">
+                            
+                            <a href="../diramazioni_in_git/basi_di_diramazione_e_fusione.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Basi di Diramazione e Fusione
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="diramazioni_in_git/amministrazione_dei_rami.html">
+                            
+                            <a href="../diramazioni_in_git/amministrazione_dei_rami.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Amministrazione dei Rami
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="diramazioni_in_git/flusso_di_lavoro_con_le_ramificazioni.html">
+                            
+                            <a href="../diramazioni_in_git/flusso_di_lavoro_con_le_ramificazioni.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Flusso di Lavoro con le Ramificazioni
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="diramazioni_in_git/rami_remoti.html">
+                            
+                            <a href="../diramazioni_in_git/rami_remoti.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Rami Remoti
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="diramazioni_in_git/rifondazione.html">
+                            
+                            <a href="../diramazioni_in_git/rifondazione.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rifondazione
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="diramazioni_in_git/riassunto.html">
+                            
+                            <a href="../diramazioni_in_git/riassunto.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Riassunto
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_sul_server/README.html">
+                
+                <a href="../git_sul_server/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git sul Server
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_sul_server/i_protocolli.html">
+                            
+                            <a href="../git_sul_server/i_protocolli.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> I Protocolli
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_sul_server/ottenere_git_su_di_un_server.html">
+                            
+                            <a href="../git_sul_server/ottenere_git_su_di_un_server.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Ottenere Git su di un Server
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_sul_server/generare_la_propria_chiave_pubblica_ssh.html">
+                            
+                            <a href="../git_sul_server/generare_la_propria_chiave_pubblica_ssh.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Generare la Propria Chiave Pubblica SSH
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_sul_server/configurare_il_server.html">
+                            
+                            <a href="../git_sul_server/configurare_il_server.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Configurare il Server
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_sul_server/accesso_pubblico.html">
+                            
+                            <a href="../git_sul_server/accesso_pubblico.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Accesso Pubblico
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_sul_server/gitweb.html">
+                            
+                            <a href="../git_sul_server/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_sul_server/gitosis.html">
+                            
+                            <a href="../git_sul_server/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_sul_server/gitolite.html">
+                            
+                            <a href="../git_sul_server/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_sul_server/demone_git.html">
+                            
+                            <a href="../git_sul_server/demone_git.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Demone Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_sul_server/hosting_git.html">
+                            
+                            <a href="../git_sul_server/hosting_git.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Hosting Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_sul_server/riassunto.html">
+                            
+                            <a href="../git_sul_server/riassunto.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Riassunto
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="git_distribuito/README.html">
+                
+                <a href="../git_distribuito/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Git distribuito
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="git_distribuito/workflows_distribuiti.html">
+                            
+                            <a href="../git_distribuito/workflows_distribuiti.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Workflows distribuiti
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="git_distribuito/contribuire_a_un_progetto.html">
+                            
+                            <a href="../git_distribuito/contribuire_a_un_progetto.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Contribuire a un Progetto
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="git_distribuito/mantenere_un_progetto.html">
+                            
+                            <a href="../git_distribuito/mantenere_un_progetto.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Mantenere un Progetto
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="git_distribuito/sommario.html">
+                            
+                            <a href="../git_distribuito/sommario.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Sommario
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_tools/README.html">
+                
+                <a href="../git_tools/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git Tools
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_tools/selezione_della_revisione.html">
+                            
+                            <a href="../git_tools/selezione_della_revisione.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Selezione della revisione
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_tools/moduli.html">
+                            
+                            <a href="../git_tools/moduli.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Moduli
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_tools/subtree_merging.html">
+                            
+                            <a href="../git_tools/subtree_merging.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Subtree Merging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_tools/sommario.html">
+                            
+                            <a href="../git_tools/sommario.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Sommario
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="customizing_git/README.html">
+                
+                <a href="../customizing_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Customizing Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="customizing_git/configurazione_di_git.html">
+                            
+                            <a href="../customizing_git/configurazione_di_git.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Configurazione di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="customizing_git/attributi_di_git.html">
+                            
+                            <a href="../customizing_git/attributi_di_git.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Attributi di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="customizing_git/git_hooks.html">
+                            
+                            <a href="../customizing_git/git_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git Hooks
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_e_altri_sistemi/README.html">
+                
+                <a href="../git_e_altri_sistemi/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git e altri sistemi
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_e_altri_sistemi/git_e_subversion.html">
+                            
+                            <a href="../git_e_altri_sistemi/git_e_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git e Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_e_altri_sistemi/migrare_a_git.html">
+                            
+                            <a href="../git_e_altri_sistemi/migrare_a_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Migrare a Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_e_altri_sistemi/sommario.html">
+                            
+                            <a href="../git_e_altri_sistemi/sommario.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Sommario
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="i_comandi_interni_di_git/README.html">
+                
+                <a href="../i_comandi_interni_di_git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> I comandi interni di Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="i_comandi_interni_di_git/impianto_e_sanitari_plumbing_e_porcelain.html">
+                            
+                            <a href="../i_comandi_interni_di_git/impianto_e_sanitari_plumbing_e_porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Impianto e sanitari (*Plumbing* e *Porcelain*)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="i_comandi_interni_di_git/gli_oggetti_di_git.html">
+                            
+                            <a href="../i_comandi_interni_di_git/gli_oggetti_di_git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Gli oggetti di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="i_comandi_interni_di_git/i_riferimenti_di_git.html">
+                            
+                            <a href="../i_comandi_interni_di_git/i_riferimenti_di_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> I riferimenti di Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="i_comandi_interni_di_git/pacchetti_di_file.html">
+                            
+                            <a href="../i_comandi_interni_di_git/pacchetti_di_file.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Pacchetti di file
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="i_comandi_interni_di_git/le_specifiche_di_riferimento_refspec.html">
+                            
+                            <a href="../i_comandi_interni_di_git/le_specifiche_di_riferimento_refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Le specifiche di riferimento (*refspec*)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="i_comandi_interni_di_git/protocolli_di_trasferimento.html">
+                            
+                            <a href="../i_comandi_interni_di_git/protocolli_di_trasferimento.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Protocolli di trasferimento
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="i_comandi_interni_di_git/manutenzione_e_recupero_dei_dati.html">
+                            
+                            <a href="../i_comandi_interni_di_git/manutenzione_e_recupero_dei_dati.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Manutenzione e recupero dei dati
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="i_comandi_interni_di_git/sommario.html">
+                            
+                            <a href="../i_comandi_interni_di_git/sommario.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Sommario
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 76.19047619047619%;min-width: 74.60317460317461%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../per_iniziare/README.html" title="Per Iniziare" class="chapter done new-chapter" data-progress="1" style="left: 1.5873015873015872%;"></a>
+    
+        <a href="../per_iniziare/il_controllo_di_versione.html" title="Il Controllo di Versione" class="chapter done " data-progress="1.1" style="left: 3.1746031746031744%;"></a>
+    
+        <a href="../per_iniziare/una_breve_storia_di_git.html" title="Una Breve Storia di Git" class="chapter done " data-progress="1.2" style="left: 4.761904761904762%;"></a>
+    
+        <a href="../per_iniziare/basi_di_git.html" title="Basi di Git" class="chapter done " data-progress="1.3" style="left: 6.349206349206349%;"></a>
+    
+        <a href="../per_iniziare/installare_git.html" title="Installare Git" class="chapter done " data-progress="1.4" style="left: 7.936507936507937%;"></a>
+    
+        <a href="../per_iniziare/prima_configurazione_di_git.html" title="Prima Configurazione di Git" class="chapter done " data-progress="1.5" style="left: 9.523809523809524%;"></a>
+    
+        <a href="../per_iniziare/ottieni_aiuto.html" title="Ottieni aiuto" class="chapter done " data-progress="1.6" style="left: 11.11111111111111%;"></a>
+    
+        <a href="../per_iniziare/sommario.html" title="Sommario" class="chapter done " data-progress="1.7" style="left: 12.698412698412698%;"></a>
+    
+        <a href="../basi_di_git/README.html" title="Basi di Git" class="chapter done new-chapter" data-progress="2" style="left: 14.285714285714286%;"></a>
+    
+        <a href="../basi_di_git/repository_git.html" title="Repository Git" class="chapter done " data-progress="2.1" style="left: 15.873015873015873%;"></a>
+    
+        <a href="../basi_di_git/registrare_i_cambiamenti_nel_repository.html" title="Registrare i Cambiamenti nel Repository" class="chapter done " data-progress="2.2" style="left: 17.46031746031746%;"></a>
+    
+        <a href="../basi_di_git/vedere_la_storia_dei_commit.html" title="Vedere la Storia dei Commit" class="chapter done " data-progress="2.3" style="left: 19.047619047619047%;"></a>
+    
+        <a href="../basi_di_git/annullare_le_cose.html" title="Annullare le Cose" class="chapter done " data-progress="2.4" style="left: 20.634920634920636%;"></a>
+    
+        <a href="../basi_di_git/lavorare_con_sorgenti_remote.html" title="Lavorare con Sorgenti Remote" class="chapter done " data-progress="2.5" style="left: 22.22222222222222%;"></a>
+    
+        <a href="../basi_di_git/suggerimenti_e_trucchi.html" title="Suggerimenti e Trucchi" class="chapter done " data-progress="2.6" style="left: 23.80952380952381%;"></a>
+    
+        <a href="../basi_di_git/riassunto.html" title="Riassunto" class="chapter done " data-progress="2.7" style="left: 25.396825396825395%;"></a>
+    
+        <a href="../diramazioni_in_git/README.html" title="Diramazioni in Git" class="chapter done new-chapter" data-progress="3" style="left: 26.984126984126984%;"></a>
+    
+        <a href="../diramazioni_in_git/cose_un_ramo.html" title="Cos&#39;è un Ramo" class="chapter done " data-progress="3.1" style="left: 28.571428571428573%;"></a>
+    
+        <a href="../diramazioni_in_git/basi_di_diramazione_e_fusione.html" title="Basi di Diramazione e Fusione" class="chapter done " data-progress="3.2" style="left: 30.158730158730158%;"></a>
+    
+        <a href="../diramazioni_in_git/amministrazione_dei_rami.html" title="Amministrazione dei Rami" class="chapter done " data-progress="3.3" style="left: 31.746031746031747%;"></a>
+    
+        <a href="../diramazioni_in_git/flusso_di_lavoro_con_le_ramificazioni.html" title="Flusso di Lavoro con le Ramificazioni" class="chapter done " data-progress="3.4" style="left: 33.333333333333336%;"></a>
+    
+        <a href="../diramazioni_in_git/rami_remoti.html" title="Rami Remoti" class="chapter done " data-progress="3.5" style="left: 34.92063492063492%;"></a>
+    
+        <a href="../diramazioni_in_git/rifondazione.html" title="Rifondazione" class="chapter done " data-progress="3.6" style="left: 36.507936507936506%;"></a>
+    
+        <a href="../diramazioni_in_git/riassunto.html" title="Riassunto" class="chapter done " data-progress="3.7" style="left: 38.095238095238095%;"></a>
+    
+        <a href="../git_sul_server/README.html" title="Git sul Server" class="chapter done new-chapter" data-progress="4" style="left: 39.682539682539684%;"></a>
+    
+        <a href="../git_sul_server/i_protocolli.html" title="I Protocolli" class="chapter done " data-progress="4.1" style="left: 41.26984126984127%;"></a>
+    
+        <a href="../git_sul_server/hosting_git.html" title="Hosting Git" class="chapter done " data-progress="4.10" style="left: 42.857142857142854%;"></a>
+    
+        <a href="../git_sul_server/riassunto.html" title="Riassunto" class="chapter done " data-progress="4.11" style="left: 44.44444444444444%;"></a>
+    
+        <a href="../git_sul_server/ottenere_git_su_di_un_server.html" title="Ottenere Git su di un Server" class="chapter done " data-progress="4.2" style="left: 46.03174603174603%;"></a>
+    
+        <a href="../git_sul_server/generare_la_propria_chiave_pubblica_ssh.html" title="Generare la Propria Chiave Pubblica SSH" class="chapter done " data-progress="4.3" style="left: 47.61904761904762%;"></a>
+    
+        <a href="../git_sul_server/configurare_il_server.html" title="Configurare il Server" class="chapter done " data-progress="4.4" style="left: 49.20634920634921%;"></a>
+    
+        <a href="../git_sul_server/accesso_pubblico.html" title="Accesso Pubblico" class="chapter done " data-progress="4.5" style="left: 50.79365079365079%;"></a>
+    
+        <a href="../git_sul_server/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 52.38095238095238%;"></a>
+    
+        <a href="../git_sul_server/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 53.96825396825397%;"></a>
+    
+        <a href="../git_sul_server/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 55.55555555555556%;"></a>
+    
+        <a href="../git_sul_server/demone_git.html" title="Demone Git" class="chapter done " data-progress="4.9" style="left: 57.142857142857146%;"></a>
+    
+        <a href="../git_distribuito/README.html" title="Git distribuito" class="chapter done new-chapter" data-progress="5" style="left: 58.73015873015873%;"></a>
+    
+        <a href="../git_distribuito/workflows_distribuiti.html" title="Workflows distribuiti" class="chapter done " data-progress="5.1" style="left: 60.317460317460316%;"></a>
+    
+        <a href="../git_distribuito/contribuire_a_un_progetto.html" title="Contribuire a un Progetto" class="chapter done " data-progress="5.2" style="left: 61.904761904761905%;"></a>
+    
+        <a href="../git_distribuito/mantenere_un_progetto.html" title="Mantenere un Progetto" class="chapter done " data-progress="5.3" style="left: 63.492063492063494%;"></a>
+    
+        <a href="../git_distribuito/sommario.html" title="Sommario" class="chapter done " data-progress="5.4" style="left: 65.07936507936508%;"></a>
+    
+        <a href="../git_tools/README.html" title="Git Tools" class="chapter done new-chapter" data-progress="6" style="left: 66.66666666666667%;"></a>
+    
+        <a href="../git_tools/selezione_della_revisione.html" title="Selezione della revisione" class="chapter done " data-progress="6.1" style="left: 68.25396825396825%;"></a>
+    
+        <a href="../git_tools/moduli.html" title="Moduli" class="chapter done " data-progress="6.2" style="left: 69.84126984126983%;"></a>
+    
+        <a href="../git_tools/subtree_merging.html" title="Subtree Merging" class="chapter done " data-progress="6.3" style="left: 71.42857142857143%;"></a>
+    
+        <a href="../git_tools/sommario.html" title="Sommario" class="chapter done " data-progress="6.4" style="left: 73.01587301587301%;"></a>
+    
+        <a href="../customizing_git/README.html" title="Customizing Git" class="chapter done new-chapter" data-progress="7" style="left: 74.60317460317461%;"></a>
+    
+        <a href="../customizing_git/configurazione_di_git.html" title="Configurazione di Git" class="chapter done " data-progress="7.1" style="left: 76.19047619047619%;"></a>
+    
+        <a href="../customizing_git/attributi_di_git.html" title="Attributi di Git" class="chapter  " data-progress="7.2" style="left: 77.77777777777777%;"></a>
+    
+        <a href="../customizing_git/git_hooks.html" title="Git Hooks" class="chapter  " data-progress="7.3" style="left: 79.36507936507937%;"></a>
+    
+        <a href="../git_e_altri_sistemi/README.html" title="Git e altri sistemi" class="chapter  new-chapter" data-progress="8" style="left: 80.95238095238095%;"></a>
+    
+        <a href="../git_e_altri_sistemi/git_e_subversion.html" title="Git e Subversion" class="chapter  " data-progress="8.1" style="left: 82.53968253968254%;"></a>
+    
+        <a href="../git_e_altri_sistemi/migrare_a_git.html" title="Migrare a Git" class="chapter  " data-progress="8.2" style="left: 84.12698412698413%;"></a>
+    
+        <a href="../git_e_altri_sistemi/sommario.html" title="Sommario" class="chapter  " data-progress="8.3" style="left: 85.71428571428571%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/README.html" title="I comandi interni di Git" class="chapter  new-chapter" data-progress="9" style="left: 87.3015873015873%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/impianto_e_sanitari_plumbing_e_porcelain.html" title="Impianto e sanitari (*Plumbing* e *Porcelain*)" class="chapter  " data-progress="9.1" style="left: 88.88888888888889%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/gli_oggetti_di_git.html" title="Gli oggetti di Git" class="chapter  " data-progress="9.2" style="left: 90.47619047619048%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/i_riferimenti_di_git.html" title="I riferimenti di Git" class="chapter  " data-progress="9.3" style="left: 92.06349206349206%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/pacchetti_di_file.html" title="Pacchetti di file" class="chapter  " data-progress="9.4" style="left: 93.65079365079364%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/le_specifiche_di_riferimento_refspec.html" title="Le specifiche di riferimento (*refspec*)" class="chapter  " data-progress="9.5" style="left: 95.23809523809524%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/protocolli_di_trasferimento.html" title="Protocolli di trasferimento" class="chapter  " data-progress="9.6" style="left: 96.82539682539682%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/manutenzione_e_recupero_dei_dati.html" title="Manutenzione e recupero dei dati" class="chapter  " data-progress="9.7" style="left: 98.41269841269842%;"></a>
+    
+        <a href="../i_comandi_interni_di_git/sommario.html" title="Sommario" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_343">
+                    
+                        <h1 id="configurazione-di-git">Configurazione di Git</h1>
+<p>Come hai visto brevemente nel capitolo 1, si possono specificare delle impostazioni per Git tramite il comando <code>git config</code>. Una delle prime cose che hai fatto è stato impostare il tuo nome ed il tuo indirizzo e-mail:</p>
+<pre><code><span class="hljs-variable">$ </span>git config --global user.name <span class="hljs-string">"John Doe"</span>
+<span class="hljs-variable">$ </span>git config --global user.email johndoe<span class="hljs-variable">@example</span>.com
+</code></pre><p>Ora imparerai alcune delle opzioni più interessanti che si possono impostare in questa maniera per personalizzare l&#39;utilizzo di Git.</p>
+<p>Hai visto alcuni semplici dettagli di configurazione nel primo capitolo, ora li esamineremo ancora velocemente. Git utilizza una serie di files di configurazione per determinare comportamenti non standard che potresti desiderare. In primo luogo Git cercherà questi valori nel file <code>/etc/gitconfig</code>, il quale contiene valori per ogni utente e repository di sua proprietà presenti sul sitema. Se si passa l&#39;opzione <code>--system</code> a <code>git config</code>, il programma leggerà e scriverà in modo specifico su questo file.</p>
+<p>Successivamente Git controlla il file <code>~/.gitconfig</code>, che è specifico per ogni utente. Puoi fare in modo che Git legga e scriva su questo file utilizzando l&#39;opzione <code>--global</code>.</p>
+<p>Infine, Git controlla i valori di configurazione nel file di configurazione presente nella directory Git (<code>.git/config</code>) di qualsiasi repository che stai utilizzando. Questi valori sono specifici del singolo repository. Ongi livello sovrascrive i valori del livello precedente, per esempio i valori in <code>.git/config</code> battono quelli in <code>/etc/gitconfig</code>. Si può inoltre impostare questi valori modificando manualmente il file ed inserendo la corretta sintassi, tuttavia solitamente è più semplice eseguire il comando <code>git config</code>.</p>
+<h2 id="configurazione-base-del-client">Configurazione Base del Client</h2>
+<p>Le opzioni di configurazione riconosciute da Git si suddividono in due categorie: client-side e server-side. La maggioranza delle opzioni sono client-side—impostando le tue personali preferenze. Sono comunque disponibili molte opzioni, ne copriremo solo alcune che sono solitamente utilizzate o possono personalizzare il tuo ambiente di lavoro in modo significativo. Molte opzioni sono utili solo in casi limite che non esamineremo in questa sede. Nel caso tu voglia vedere una lista di tutte le opzioni che la tua versione di Git riconosce puoi eseguire il comando</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">config</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">help</span>
+</code></pre><p>La pagina del manuale per <code>git config</code> elenca tutte le opzioni disponibili aggiungendo qualche dettaglio.</p>
+<h3 id="core-editor">core.editor</h3>
+<p>Di default, Git utilizza qualsiasi programma che tu abbia impostato come text editor, in alternativa sceglie l&#39;editor Vi per creare e modificare commit tag e messaggi. Per cambiare l&#39;impostazione standard, puoi utilizzare l&#39;impostazione <code>core.editor</code>:</p>
+<pre><code>$ git config --<span class="hljs-keyword">global</span> core.<span class="hljs-keyword">editor</span> emacs
+</code></pre><p>Ora, non importa quale sia la variabile shell per l&#39;editor, Git utilizzerà Emacs per modificare i messaggi.</p>
+<h3 id="commit-template">commit.template</h3>
+<p>Se impostato verso il percorso di un file, Git utilizzerà questo file come messaggio di default per i tuoi commit. Ad esempio, supponiamo che tu abbia creato un file di template in <code>$HOME/.gitmessage.txt</code> in questo modo:</p>
+<pre><code>subject <span class="hljs-value">line</span>
+
+what happened
+
+<span class="hljs-attr_selector">[ticket: X]</span>
+</code></pre><p>Per comunicare a Git di utilizzare come messaggio di default il messaggio che compare nell&#39;editor quando viene eseguito <code>git commit</code>, imposta il valore <code>commit.template</code> in questo modo:</p>
+<pre><code><span class="hljs-variable">$ </span>git config --global commit.template <span class="hljs-variable">$HOME</span>/.gitmessage.txt
+<span class="hljs-variable">$ </span>git commit
+</code></pre><p>Il tuo editor si aprirà quindi in un modo simile a questo per la tua variabile metasintattica del messaggio di commit, ad ogni tuo commit:</p>
+<pre><code>subject line
+
+what happened
+
+[ticket: X]
+<span class="hljs-preprocessor"># Please enter the commit message for your changes. Lines starting</span>
+<span class="hljs-preprocessor"># with '#' will be ignored, and an empty message aborts the commit.</span>
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># modified:   lib/test.rb</span>
+<span class="hljs-preprocessor">#</span>
+~
+~
+<span class="hljs-string">".git/COMMIT_EDITMSG"</span> <span class="hljs-number">14</span>L, <span class="hljs-number">297</span>C
+</code></pre><p>Nel caso tu abbia una norma per il messaggio di commit, allora inserire un template per quella norma sul tuo sistema e configurare Git per utilizzarla di default può aiutare ad aumentare le possibilità che quella norma venga seguita regolarmente.</p>
+<h3 id="core-pager">core.pager</h3>
+<p>L&#39;impostazione core.pager determina quale pager venga utilizzato quando Git pagina l&#39;output come <code>log</code> e <code>diff</code>. Puoi impostarlo a <code>more</code> o al tuo pager preferito (di default è <code>less</code>), in alternativa puoi disattivarlo impostandolo ad una stringa vuota:</p>
+<pre><code><span class="hljs-variable">$ </span>git config --global core.pager <span class="hljs-string">''</span>
+</code></pre><p>Nel caso tu lo esegua, Git paginerà l&#39;output di ogni comando, non importa quanto esso sia lungo.</p>
+<h3 id="user-signingkey">user.signingkey</h3>
+<p>Nel caso tu voglia firmare i tags (come discusso nel Capitolo 2), impostare la tua chiave GPG nelle impostazioni rende le cose più semplici. Imposta l&#39;ID della tua chiave in questo modo:</p>
+<pre><code>$ git config <span class="hljs-subst">--</span><span class="hljs-built_in">global</span> user<span class="hljs-built_in">.</span>signingkey <span class="hljs-subst">&lt;</span>gpg<span class="hljs-attribute">-key</span><span class="hljs-attribute">-id</span><span class="hljs-subst">&gt;</span>
+</code></pre><p>Ora, puoi firmare i tags senza dover specificare la tua chiave ogni volta con il comando <code>git tag</code>:</p>
+<pre><code>$ git <span class="hljs-built_in">tag</span> <span class="hljs-attribute">-s</span> <span class="hljs-subst">&lt;</span><span class="hljs-built_in">tag</span><span class="hljs-attribute">-name</span><span class="hljs-subst">&gt;</span>
+</code></pre><h3 id="core-excludesfile">core.excludesfile</h3>
+<p>Puoi inserire patterns nel file <code>.gitignore</code> del tuo progetto per fare in modo che Git non li veda come untracked files o provi a farne uno stage all&#39;esecuzione del comando <code>git add</code> su di loro, come visto nel Capitolo 2. Comunque, se vuoi che un altro file all&#39;esterno del tuo progetto gestisca questi valori o abbia valori extra, puoi informare Git della posizione del file tramite il parametro <code>core.excludesfile</code>. Impostalo semplicemente sul percorso del file che ha un contenuto simile a quello che avrebbe un file <code>.gitignore</code>.</p>
+<h3 id="help-autocorrect">help.autocorrect</h3>
+<p>Questa opzione è disponibile solo in Git 1.6.1 e successivi. Se digiti in modo errato un comando in Git 1.6, ti mostrerà qualcosa del genere:</p>
+<pre><code>$ git com
+git: <span class="hljs-string">'com'</span> is <span class="hljs-operator">not</span> <span class="hljs-operator">a</span> git-<span class="hljs-command"><span class="hljs-keyword">command</span>. <span class="hljs-title">See</span> <span class="hljs-string">'git --help'</span>.</span>
+
+Did you mean this?
+     commit
+</code></pre><p>Se imposti <code>help.autocorrect</code> a 1, Git automaticamente eseguirà il comando nel caso in cui corrisponda ad un solo match.</p>
+<h2 id="colors-in-git">Colors in Git</h2>
+<p>Git può rendere i suoi messaggi colorati nel tuo terminale, in questo modo può aiutarti a capire velocemente e facilmente l&#39;output. Un numero di opzioni può aiutarti ad impostare le preferenze nei colori.</p>
+<h3 id="color-ui">color.ui</h3>
+<p>Git colora automaticamente la maggior parte dei suoi output se richiesto. Si possono fare richieste molto specifiche su cosa si vuole che sia colorato e come; per attivare tutti i colori di default nel terminale basta impostare <code>color.ui</code> a true:</p>
+<pre><code><span class="hljs-variable">$ </span>git config --global color.ui <span class="hljs-keyword">true</span>
+</code></pre><p>Una volta impostato il valore, Git colorerà il suo output se esso è indirizzato ad un terminale. Altre possibili impostazioni sono false, che non permette mai di colorare l&#39;output, ed always, che imposta i colori sempre, anche se l&#39;output è reindirizzato ad un file o ad un altro comando tramite pipe. Questa impostazione è stata aggiunta a Git nella versione 1.5.5; se possiedi una versione più vecchia dovrai impostare tutti i settaggi per i colori individualmente.</p>
+<p>Raramente è desiderabile impostare <code>color.ui = always</code>. Nella maggior parte dei casi, se vuoi codice colorato in un output reindirizzato puoi invocare il comando con il flag <code>--color</code> in modo da forzare l&#39;uso del colore. L&#39;opzione tipicamente usata è <code>color.ui = true</code>.</p>
+<h3 id="-color-"><code>color.*</code></h3>
+<p>Nel caso in cui si desideri una configurazione più specifica su quali comandi sono colorati e come, o si abbia una versione meno recente, Git fornisce impostazioni di colorazione verb-specific. Ognuna di esse può essere impostata a <code>true</code>, <code>false</code> oppure <code>always</code>:</p>
+<pre><code><span class="hljs-keyword">color</span>.branch
+<span class="hljs-keyword">color</span>.diff
+<span class="hljs-keyword">color</span>.interactive
+<span class="hljs-keyword">color</span>.status
+</code></pre><p>In aggiunta, ognuna di queste ha sottoimpostazioni che possono essere utilizzate per impostare colori specifici per le parti dell&#39;output, nel caso si voglia sovrascrivere ogni colore. Per esempio, per impostare la meta informazione nell&#39;output di diff che indichi di usare blu per il testo, nero per lo sfondo e testo in grassetto, puoi eseguire il comando:</p>
+<pre><code>$ git config --global color<span class="hljs-preprocessor">.diff</span><span class="hljs-preprocessor">.meta</span> <span class="hljs-string">"blue black bold"</span>
+</code></pre><p>Il colore può essere impostato di ognuno dei seguenti valori: normal, black, red, green, yellow, blue, magenta, cyan, oppure white. Per quanto riguarda gli attributi, come bold nell&#39;esempio precedente, puoi scegliere tra from bold, dim, ul, blink, e reverse.</p>
+<p>Per queste sotto-configurazioni puoi guardare la pagina di manuale di <code>git config</code>.</p>
+<h2 id="strumenti-esterni-per-merge-e-diff">Strumenti Esterni per Merge e Diff</h2>
+<p>Inoltre Git ha un&#39;implementazione interna di diff, che è quella che stai utilizzando, puoi impostare, in alternativa, uno strumento esterno. Puoi anche impostare uno strumento per la risoluzione dei conflitti di merge invece di doverli risolvere a mano. Dimostrerò come impostare il Perforce Visual Merge Tool (P4Merge) per gestire i diff ed i merge, perché è uno strumento grafico carino e gratuito.</p>
+<p>Se vuoi provarlo, P4Merge funziona su tutte le maggiori piattaforme, quindi dovresti riuscirci. Negli esempi utilizzerò nomi di percorso che funzionano su sistemi Mac e Linux; per quanto riguarda Windows, dovrai cambiare <code>/usr/local/bin</code> con il percorso dell&#39;eseguibile nel tuo ambiente.</p>
+<p>Puoi scarucare P4Merge qua:</p>
+<pre><code><span class="hljs-label">http:</span>//www<span class="hljs-preprocessor">.perforce</span><span class="hljs-preprocessor">.com</span>/perforce/downloads/component<span class="hljs-preprocessor">.html</span>
+</code></pre><p>Per iniziare dovrai impostare scripts esterni di wrapping per eseguire i tuoi comandi. Utilizzerò il percorso relativo a Mac per l&#39;eseguibile; in altri sistemi, sarà dove è posizionato il binario <code>p4merge</code>. Imposta uno script per il wrapping del merge chiamato <code>extMerge</code> che chiami il binario con tutti gli argomenti necessari:</p>
+<pre><code>$ cat /usr/local/bin/extMerge
+<span class="hljs-shebang">#!/bin/sh</span>
+/Applications/p4merge.app/Contents/MacOS/p4merge $*
+</code></pre><p>Il wrapper per il diff controlla di assicurarsi che siano provveduti e passati sette argomenti: due per lo script di merge. Di default, Git passa i seguenti argomenti al programma di diff:</p>
+<pre><code>path old<span class="hljs-attribute">-file</span> old<span class="hljs-attribute">-hex</span> old<span class="hljs-attribute">-mode</span> <span class="hljs-literal">new</span><span class="hljs-attribute">-file</span> <span class="hljs-literal">new</span><span class="hljs-attribute">-hex</span> <span class="hljs-literal">new</span><span class="hljs-attribute">-mode</span>
+</code></pre><p>Visto che vuoi solamente gli argomenti <code>old-file</code> e <code>new-file</code>, puoi notare che lo script di wrapping passa quelli di cui hai bisogno.</p>
+<pre><code>$ cat /usr/local/bin/extDiff
+<span class="hljs-shebang">#!/bin/sh</span>
+[ <span class="hljs-variable">$#</span> <span class="hljs-operator">-eq</span> <span class="hljs-number">7</span> ] &amp;&amp; /usr/local/bin/extMerge <span class="hljs-string">"<span class="hljs-variable">$2</span>"</span> <span class="hljs-string">"<span class="hljs-variable">$5</span>"</span>
+</code></pre><p>Hai anche bisogno di assicurarti che questi strumenti siano eseguibili:</p>
+<pre><code>$ sudo <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> /usr/<span class="hljs-keyword">local</span>/bin/extMerge
+$ sudo <span class="hljs-keyword">chmod</span> +<span class="hljs-keyword">x</span> /usr/<span class="hljs-keyword">local</span>/bin/extDiff
+</code></pre><p>Ora puoi impostare il tuo file di configurazione per utilizzare gli strumenti personalizzati per diff e merge resolution. Questo richiede un certo numero di impostazioni personalizzate: <code>merge.tool</code> per comunicare a Git che strategia utilizzare, <code>mergetool.*.cmd</code> per specificare come eseguire i comandi, <code>mergetool.trustExitCode</code> per comunicare a Git se il codice di uscita del programma indichi o meno una risoluzione del merge andata a buon fine, e <code>diff.external</code> per comunicare a Git quale comando eseguire per i diffs. Quindi, puoi eseguire quattro comandi di configurazione:</p>
+<pre><code>$ git config --<span class="hljs-keyword">global</span> merge.tool extMerge
+$ git config --<span class="hljs-keyword">global</span> mergetool.extMerge.cmd \
+    'extMerge <span class="hljs-string">"$BASE"</span> <span class="hljs-string">"$LOCAL"</span> <span class="hljs-string">"$REMOTE"</span> <span class="hljs-string">"$MERGED"</span>'
+$ git config --<span class="hljs-keyword">global</span> mergetool.trustExitCode <span class="hljs-keyword">false</span>
+$ git config --<span class="hljs-keyword">global</span> diff.external extDiff
+</code></pre><p>in alternativa puoi modificate il file <code>~/.gitconfig</code> aggiungendo queste linee:</p>
+<pre><code><span class="hljs-special">[</span>merge<span class="hljs-special">]</span>
+  tool = extMerge
+<span class="hljs-special">[</span>mergetool "extMerge"<span class="hljs-special">]</span>
+  cmd = extMerge <span class="hljs-command">\"</span><span class="hljs-formula">$BASE<span class="hljs-command">\"</span> <span class="hljs-command">\"</span>$</span>LOCAL<span class="hljs-command">\"</span> <span class="hljs-command">\"</span><span class="hljs-formula">$REMOTE<span class="hljs-command">\"</span> <span class="hljs-command">\"</span>$</span>MERGED<span class="hljs-command">\"</span>
+  trustExitCode = false
+<span class="hljs-special">[</span>diff<span class="hljs-special">]</span>
+  external = extDiff
+</code></pre><p>Dopo aver impostato tutto ciò, se vengono eseguiti comandi diff come questo:</p>
+<pre><code><span class="hljs-variable">$ </span>git diff <span class="hljs-number">32</span>d1776b1^ <span class="hljs-number">32</span>d1776b1
+</code></pre><p>Invece di visualizzare l&#39;output del diff sulla linea di comando, Git eseguirà P4Merge che assomiglia alla Figura 7-1.</p>
+<p><img src="http://git-scm.com/figures/18333fig0701-tn.png" alt=""></p>
+<p>Figura 7-1. P4Merge.</p>
+<p>Se provi ad unire due rami e ne derivano dei conflitti, puoi eseguire il comando <code>git mergetool</code>; esegue P4Merge permettendoti di risolvere i conflitti tramite uno strumento con interfaccia grafica.</p>
+<p>Una cosa simpatica riguardo questa configurazione con wrapper è che puoi cambiare gli strumenti di diff e merge in modo semplice. Ad esempio, per cambiare <code>extDiff</code> e <code>extMerge</code> in modo che eseguano lo strumento KDiff3, tutto ciò che devi fare è modificare il file <code>extMerge</code>:</p>
+<pre><code>$ cat /usr/local/bin/extMerge
+<span class="hljs-shebang">#!/bin/sh</span>
+/Applications/kdiff3.app/Contents/MacOS/kdiff3 $*
+</code></pre><p>Ora, Git utilizzerà lo strumento KDiff3 per mostrare i diff e per la risoluzione di conflitti di merge.</p>
+<p>Git è preconfigurato per utilizzare un numero di strumenti per la risoluzione di merge senza dover impostare una configurazione a linea di comando. Puoi impostare come mergetool: kdiff3, opendiff, tkdiff, meld, xxdiff, emerge, vimdiff, o gvimdiff. Nel caso tu non sia interessato ad utilizzare KDiff3 per i diff ma comunque tu voglia usarlo per la risoluzione del merge ed il comando kdiff3 è nel tuo path, puoi eseguire:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">config</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">global</span> <span class="hljs-comment">merge</span><span class="hljs-string">.</span><span class="hljs-comment">tool</span> <span class="hljs-comment">kdiff3</span>
+</code></pre><p>Se esegui questo invece di impostare i files <code>extMerge</code> ed <code>extDiff</code>, Git utilizzerà KDiff3 per la risoluzione dei merge e lo strumento standard per i diffs.</p>
+<h2 id="formattazione-e-whitespace">Formattazione e Whitespace</h2>
+<p>I problemdi di formattazione e di whitespaces sono tra i più frustranti ed insidiosi che molti sviluppatori incontrano quando collaborano, specialmente in cross-platform. È molto semplice per patches o altri lavori in collaborazione inserire astrusi cambiamenti whitespace perché gli editor li introducono impercettibilmente o programmatori Windows aggiungono carriage-return al termine delle righe che modificano in progetti cross-platform. Git ha alcune opzioni di configurazione per aiutare con questi problemi.</p>
+<h3 id="core-autocrlf">core.autocrlf</h3>
+<p>Nel caso tu stia programmando su Windows o utilizzando un altro sistema ma comunque qualcuno nel tuo gruppo utilizza Windows, probabilmente avrai problemi di line-editing ad un certo punto. Questo è dovuto al fatto che Windows utilizza sia caratteri carriage-return che linefeed per andare a capo nei suoi files, mentre i sistemi Mac e Linux utilizzano solo caratteri linefeed. Questo è un insidioso ed incredibilmente fastidioso problema del lavoro cross-platform.</p>
+<p>Git può gestire questo convertendo in modo automatico righe CRLF in LF al momento del commit, vice versa quando estrae codice nel filesystem. Puoi attivare questa funzionalità tramite l&#39;opzione <code>core.autocrlf</code>. Nel caso tu sia su una macchina windows impostalo a <code>true</code> — questo converte le terminazioni LF in CRLF nel momento in cui il codice viene estratto:</p>
+<pre><code><span class="hljs-variable">$ </span>git config --global core.autocrlf <span class="hljs-keyword">true</span>
+</code></pre><p>Nel caso tu sia su un sistema Linux o Mac che utilizza terminazioni LF, allora non vuoi che Git converta automaticamente all&#39;estrazione dei files; comunque, se un file con terminazioni CRLF viene accidentalmente introdotto, allora potresti desiderare che Git lo ripari. Puoi comunicare a Git di convertire CRLF in LF nei commit ma un&#39;altra via è impostare <code>core.autocrlf</code> in input:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">config</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">global</span> <span class="hljs-comment">core</span><span class="hljs-string">.</span><span class="hljs-comment">autocrlf</span> <span class="hljs-comment">input</span>
+</code></pre><p>Questa configurazione dovrebbe lasciare le terminazioni CRLF nei checkouts Windows e terminazioni LF nei sistemi Mac e Linux e nei repository.</p>
+<p>Nel caso tu sia un programmatore Windows che lavora solo con progetti Windows, allora puoi disattivare questa funzionalità, inviando carriage-returns sul repository impostando il valore di configurazione a <code>false</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git config --global core.autocrlf <span class="hljs-keyword">false</span>
+</code></pre><h3 id="core-whitespace">core.whitespace</h3>
+<p>Git è preimpostato per trovare e riparare i problemi di whitespace. Può cercare i quattro principali problemi di whitespace — due sono abilitati di default e possono essere disattivati, altri due non sono abilitati di default e possono essere attivati.</p>
+<p>I due che sono attivi di default sono <code>trailing-space</code>, che cerca spazi alla fine della riga, e <code>space-before-tab</code>, che cerca spazi prima di tablature all&#39;inizio della riga.</p>
+<p>I due che sono disattivi di default ma possono essere attivati sono <code>indent-with-non-tab</code>, che cerca righe che iniziano con otto o più spazi invece di tablature, e <code>cr-at-eol</code>, che comunica a Git che i carriage returns alla fine delle righe sono OK.</p>
+<p>Puoi comunicare a Git quale di questi vuoi abilitare impostando <code>core.whitespaces</code> al valore desiderato o off, separati da virgole. Puoi disabilitare le impostazioni sia lasciando l&#39;impostazione fuori, sia antecedento un <code>-</code> all&#39;inizio del valore. Ad esempio, se vuoi tutto attivato a parte <code>cr-at-eol</code>, puoi eseguire questo comando:</p>
+<pre><code>$ git config <span class="hljs-comment">--global core.whitespace \</span>
+    trailing-<span class="hljs-constant">space</span>,<span class="hljs-constant">space</span>-<span class="hljs-keyword">before</span>-<span class="hljs-constant">tab</span>,indent-<span class="hljs-operator">with</span>-non-<span class="hljs-constant">tab</span>
+</code></pre><p>Git controllerà questi problemi quando viene eseguito un comando <code>git diff</code> e provi a colorarli in modo che si possa ripararli prima del commit. Utilizzerà anche questi valori per aiutarti quando applichi pathces tramite <code>git apply</code>. Quando stai applicando patches, puoi chiedere a Git di informarti se stai applicando patches con i problemi di whitespace specificati:</p>
+<pre><code><span class="hljs-attribute">$ git apply --whitespace</span>=<span class="hljs-string">warn &lt;patch&gt;</span>
+</code></pre><p>Oppure puoi fare in modo che Git provi automaticamente a riparare i problemi prima di applicare la patch:</p>
+<pre><code><span class="hljs-attribute">$ git apply --whitespace</span>=<span class="hljs-string">fix &lt;patch&gt;</span>
+</code></pre><p>Queste opzioni vengono applicate anche al comando <code>git rebase</code>. Se hai fatto commit con problemi di whitespace ma non ne hai fatto push in upstream, puoi eseguire un <code>rebase</code> con l&#39;opzione <code>--whitespace=fix</code> per permettere a Git di riparare automaticamente i problemi di whitespace riscrivendo le patches.</p>
+<h2 id="server-configuration">Server Configuration</h2>
+<p>Non sono disponibili molte opzioni per quanto riguarda la parte server di Git, ma alcune sono interessanti se vuoi prenderne nota.</p>
+<h3 id="receive-fsckobjects">receive.fsckObjects</h3>
+<p>Di default, Git non fa check di consistenza per tutti gli oggetti che riceve durante un push. Tuttavia Git può fare il check per assicurarsi che ogni oggetto corrisponda al suo checksum SHA-1 e punti ad un oggetto valido, non viene fatto di default ad ogni push. È un&#39;operazione relativamente costosa e può aggiungere molto tempo ad ogni push, in dipendenza della dimensione del repository o del push. Se vuoi che Git esegua il check per la consistenza degli oggetti ad ogni push, puoi forzarlo impostando:</p>
+<pre><code>$ git config --system <span class="hljs-keyword">receive</span>.fsck<span class="hljs-variable">Objects</span> <span class="hljs-literal">true</span>
+</code></pre><p>Ora, Git eseguirà un check di integrità del tuo repository prima che ogni push venga accettato, per assicurarsi che client difettosi non introducano dati corrotti.</p>
+<h3 id="receive-denynonfastforwards">receive.denyNonFastForwards</h3>
+<p>Se esegui rebase commits di cui hai già fatto push e poi provi nuovamente a farne un push, o altrimenti provi a fare push di un commit ad un ramo remoto che non contiene il commit a cui il ramo remoto punta, ti verrà proibito. Questa è una norma generalmente buona; tuttavia nel caso del rebase, potrebbe succedere che sai quello che stai facendo e puoi eseguire un force-update al branch remoto con un flag <code>-f</code> al comando push.</p>
+<p>Per disabilitare la possibilità di eseguire force-update su rami remoti a riferimenti non-fast-forward, imposta <code>receive.denyNonFastForwards</code>:</p>
+<pre><code>$ git config --system <span class="hljs-keyword">receive</span>.deny<span class="hljs-variable">NonFastForwards</span> <span class="hljs-literal">true</span>
+</code></pre><p>Un altro modo in cui puoi fare la stessa cosa è ricevere hooks via server-side, che copriremo tra poco. Questo approccio ti permette di eseguire azioni più complesse come impedire non-fast-forwards ad un certo sottoinsieme di utenti.</p>
+<h3 id="receive-denydeletes">receive.denyDeletes</h3>
+<p>Uno dei workarounds che si possono fare alla norma <code>denyNonFastForwards</code> è che l&#39;utente di cancelli il ramo e lo reinserisca con un nuovo riferimento. Nella nuova versione di Git (a partire dalla versione 1.6.1), puoi impostare <code>receive.denyDeletes</code> a true:</p>
+<pre><code>$ git config --system <span class="hljs-keyword">receive</span>.deny<span class="hljs-variable">Deletes</span> <span class="hljs-literal">true</span>
+</code></pre><p>Questo nega branch e rimozione di tag su un push su tutta la linea — nessun utente può farlo. Per rimuovere rami remoti, devi rimuovere i files di riferimento dal server manualmente. Ci sono anche altri modi interessanti per farlo su una base per-user utilizzando le ACLs, come imparerai alla fine di questo capitolo.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../customizing_git/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../customizing_git/attributi_di_git.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

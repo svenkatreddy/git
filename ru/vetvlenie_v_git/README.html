@@ -1,0 +1,875 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Ветвление в Git | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../vetvlenie_v_git/chto_takoe_vetka.html" />
+        
+        
+        <link rel="prev" href="../vvedenie/itogi.html" />
+        
+
+        <meta property="og:title" content="Ветвление в Git | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="3" data-basepath=".." data-revision="1396895631613">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/vetvlenie_v_git/README.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="nastroika_git/README.html">
+                
+                <a href="../nastroika_git/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Настройка Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="nastroika_git/konfigurirovanie_git.html">
+                            
+                            <a href="../nastroika_git/konfigurirovanie_git.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Конфигурирование Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="nastroika_git/git_atributi.html">
+                            
+                            <a href="../nastroika_git/git_atributi.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Git-атрибуты
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="nastroika_git/perehvatchiki_v_git.html">
+                            
+                            <a href="../nastroika_git/perehvatchiki_v_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Перехватчики в Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="nastroika_git/primer_navyazivaniya_politiki_s_pomoschyu_git.html">
+                            
+                            <a href="../nastroika_git/primer_navyazivaniya_politiki_s_pomoschyu_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Пример навязывания политики с помощью Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="nastroika_git/itogi.html">
+                            
+                            <a href="../nastroika_git/itogi.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="vvedenie/README.html">
+                
+                <a href="../vvedenie/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Введение
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="vvedenie/o_kontrole_versii.html">
+                            
+                            <a href="../vvedenie/o_kontrole_versii.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> О контроле версий
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="vvedenie/kratkaya_istoriya_git.html">
+                            
+                            <a href="../vvedenie/kratkaya_istoriya_git.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Краткая история Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="vvedenie/osnovi_git.html">
+                            
+                            <a href="../vvedenie/osnovi_git.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Основы Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="vvedenie/ustanovka_git.html">
+                            
+                            <a href="../vvedenie/ustanovka_git.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Установка Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="vvedenie/pervonachalnaya_nastroika_git.html">
+                            
+                            <a href="../vvedenie/pervonachalnaya_nastroika_git.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Первоначальная настройка Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="vvedenie/kak_poluchit_pomosch.html">
+                            
+                            <a href="../vvedenie/kak_poluchit_pomosch.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Как получить помощь?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="vvedenie/itogi.html">
+                            
+                            <a href="../vvedenie/itogi.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="vetvlenie_v_git/README.html">
+                
+                <a href="../vetvlenie_v_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Ветвление в Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="vetvlenie_v_git/chto_takoe_vetka.html">
+                            
+                            <a href="../vetvlenie_v_git/chto_takoe_vetka.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Что такое ветка?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="vetvlenie_v_git/osnovi_vetvleniya_i_sliyaniya.html">
+                            
+                            <a href="../vetvlenie_v_git/osnovi_vetvleniya_i_sliyaniya.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Основы ветвления и слияния
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="vetvlenie_v_git/upravlenie_vetkami.html">
+                            
+                            <a href="../vetvlenie_v_git/upravlenie_vetkami.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Управление ветками
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="vetvlenie_v_git/priyomi_raboti_s_vetkami.html">
+                            
+                            <a href="../vetvlenie_v_git/priyomi_raboti_s_vetkami.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Приёмы работы с ветками
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="vetvlenie_v_git/udalyonnie_vetki.html">
+                            
+                            <a href="../vetvlenie_v_git/udalyonnie_vetki.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Удалённые ветки
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="vetvlenie_v_git/peremeschenie.html">
+                            
+                            <a href="../vetvlenie_v_git/peremeschenie.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Перемещение
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="vetvlenie_v_git/itogi.html">
+                            
+                            <a href="../vetvlenie_v_git/itogi.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_na_servere/README.html">
+                
+                <a href="../git_na_servere/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git на сервере
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_na_servere/protokoli.html">
+                            
+                            <a href="../git_na_servere/protokoli.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Протоколы
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_na_servere/nastroika_git_na_servere.html">
+                            
+                            <a href="../git_na_servere/nastroika_git_na_servere.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Настройка Git на сервере
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_na_servere/sozdanie_otkritogo_ssh_klyucha.html">
+                            
+                            <a href="../git_na_servere/sozdanie_otkritogo_ssh_klyucha.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Создание открытого SSH-ключа
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_na_servere/nastraivaem_server.html">
+                            
+                            <a href="../git_na_servere/nastraivaem_server.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Настраиваем сервер
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_na_servere/otkritii_dostup.html">
+                            
+                            <a href="../git_na_servere/otkritii_dostup.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Открытый доступ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_na_servere/gitweb.html">
+                            
+                            <a href="../git_na_servere/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_na_servere/gitosis.html">
+                            
+                            <a href="../git_na_servere/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_na_servere/gitolite.html">
+                            
+                            <a href="../git_na_servere/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_na_servere/git_demon.html">
+                            
+                            <a href="../git_na_servere/git_demon.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git-демон
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_na_servere/git_hosting.html">
+                            
+                            <a href="../git_na_servere/git_hosting.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git-хостинг
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_na_servere/itogi.html">
+                            
+                            <a href="../git_na_servere/itogi.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="raspredelyonnii_git/README.html">
+                
+                <a href="../raspredelyonnii_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Распределённый Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="raspredelyonnii_git/raspredelyonnie_rabochie_protsessi.html">
+                            
+                            <a href="../raspredelyonnii_git/raspredelyonnie_rabochie_protsessi.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Распределённые рабочие процессы
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="raspredelyonnii_git/sodeistvie_proektu.html">
+                            
+                            <a href="../raspredelyonnii_git/sodeistvie_proektu.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Содействие проекту
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="raspredelyonnii_git/soprovozhdenie_proekta.html">
+                            
+                            <a href="../raspredelyonnii_git/soprovozhdenie_proekta.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Сопровождение проекта
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="raspredelyonnii_git/itogi.html">
+                            
+                            <a href="../raspredelyonnii_git/itogi.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="instrumenti_git/README.html">
+                
+                <a href="../instrumenti_git/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Инструменты Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="instrumenti_git/vibor_revizii.html">
+                            
+                            <a href="../instrumenti_git/vibor_revizii.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Выбор ревизии
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="instrumenti_git/interaktivnoe_indeksirovanie.html">
+                            
+                            <a href="../instrumenti_git/interaktivnoe_indeksirovanie.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Интерактивное индексирование
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="instrumenti_git/pryatane.html">
+                            
+                            <a href="../instrumenti_git/pryatane.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Прятанье
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="instrumenti_git/perezapis_istorii.html">
+                            
+                            <a href="../instrumenti_git/perezapis_istorii.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Перезапись истории
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="instrumenti_git/otladka_s_pomoschyu_git.html">
+                            
+                            <a href="../instrumenti_git/otladka_s_pomoschyu_git.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Отладка с помощью Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="instrumenti_git/podmoduli.html">
+                            
+                            <a href="../instrumenti_git/podmoduli.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Подмодули
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="instrumenti_git/sliyanie_podderevev.html">
+                            
+                            <a href="../instrumenti_git/sliyanie_podderevev.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Слияние поддеревьев
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="instrumenti_git/itogi.html">
+                            
+                            <a href="../instrumenti_git/itogi.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="osnovi_git/README.html">
+                
+                <a href="../osnovi_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Основы Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="osnovi_git/sozdanie_git_repozitoriya.html">
+                            
+                            <a href="../osnovi_git/sozdanie_git_repozitoriya.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Создание Git-репозитория
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="osnovi_git/zapis_izmenenii_v_repozitorii.html">
+                            
+                            <a href="../osnovi_git/zapis_izmenenii_v_repozitorii.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Запись изменений в репозиторий
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="osnovi_git/prosmotr_istorii_kommitov.html">
+                            
+                            <a href="../osnovi_git/prosmotr_istorii_kommitov.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Просмотр истории коммитов
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="osnovi_git/otmena_izmenenii.html">
+                            
+                            <a href="../osnovi_git/otmena_izmenenii.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Отмена изменений
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="osnovi_git/rabota_s_udalyonnimi_repozitoriyami.html">
+                            
+                            <a href="../osnovi_git/rabota_s_udalyonnimi_repozitoriyami.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Работа с удалёнными репозиториями
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.6" data-path="osnovi_git/rabota_s_metkami.html">
+                            
+                            <a href="../osnovi_git/rabota_s_metkami.html">
+                                <i class="fa fa-check"></i> <b>7.6)</b> Работа с метками
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.7" data-path="osnovi_git/poleznie_soveti.html">
+                            
+                            <a href="../osnovi_git/poleznie_soveti.html">
+                                <i class="fa fa-check"></i> <b>7.7)</b> Полезные советы
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.8" data-path="osnovi_git/itogi.html">
+                            
+                            <a href="../osnovi_git/itogi.html">
+                                <i class="fa fa-check"></i> <b>7.8)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_i_drugie_sistemi_kontrolya_versii/README.html">
+                
+                <a href="../git_i_drugie_sistemi_kontrolya_versii/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git и другие системы контроля версий
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_i_drugie_sistemi_kontrolya_versii/git_i_subversion.html">
+                            
+                            <a href="../git_i_drugie_sistemi_kontrolya_versii/git_i_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git и Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_i_drugie_sistemi_kontrolya_versii/migratsiya_na_git.html">
+                            
+                            <a href="../git_i_drugie_sistemi_kontrolya_versii/migratsiya_na_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Миграция на Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_i_drugie_sistemi_kontrolya_versii/itogi.html">
+                            
+                            <a href="../git_i_drugie_sistemi_kontrolya_versii/itogi.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git_iznutri/README.html">
+                
+                <a href="../git_iznutri/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Git изнутри
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git_iznutri/santehnika_i_farfor.html">
+                            
+                            <a href="../git_iznutri/santehnika_i_farfor.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Сантехника и фарфор
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git_iznutri/obekti_v_git.html">
+                            
+                            <a href="../git_iznutri/obekti_v_git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Объекты в Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git_iznutri/ssilki_v_git.html">
+                            
+                            <a href="../git_iznutri/ssilki_v_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Ссылки в Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git_iznutri/pack_faili.html">
+                            
+                            <a href="../git_iznutri/pack_faili.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Pack-файлы
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git_iznutri/spetsifikatsii_ssilok.html">
+                            
+                            <a href="../git_iznutri/spetsifikatsii_ssilok.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Спецификации ссылок
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git_iznutri/protokoli_peredachi.html">
+                            
+                            <a href="../git_iznutri/protokoli_peredachi.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Протоколы передачи
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git_iznutri/obsluzhivanie_i_vosstanovlenie_dannih.html">
+                            
+                            <a href="../git_iznutri/obsluzhivanie_i_vosstanovlenie_dannih.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Обслуживание и восстановление данных
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git_iznutri/itogi.html">
+                            
+                            <a href="../git_iznutri/itogi.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Итоги
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 21.428571428571427%;min-width: 20%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../nastroika_git/README.html" title="Настройка Git" class="chapter done new-chapter" data-progress="1" style="left: 1.4285714285714286%;"></a>
+    
+        <a href="../nastroika_git/konfigurirovanie_git.html" title="Конфигурирование Git" class="chapter done " data-progress="1.1" style="left: 2.857142857142857%;"></a>
+    
+        <a href="../nastroika_git/git_atributi.html" title="Git-атрибуты" class="chapter done " data-progress="1.2" style="left: 4.285714285714286%;"></a>
+    
+        <a href="../nastroika_git/perehvatchiki_v_git.html" title="Перехватчики в Git" class="chapter done " data-progress="1.3" style="left: 5.714285714285714%;"></a>
+    
+        <a href="../nastroika_git/primer_navyazivaniya_politiki_s_pomoschyu_git.html" title="Пример навязывания политики с помощью Git" class="chapter done " data-progress="1.4" style="left: 7.142857142857143%;"></a>
+    
+        <a href="../nastroika_git/itogi.html" title="Итоги" class="chapter done " data-progress="1.5" style="left: 8.571428571428571%;"></a>
+    
+        <a href="../vvedenie/README.html" title="Введение" class="chapter done new-chapter" data-progress="2" style="left: 10%;"></a>
+    
+        <a href="../vvedenie/o_kontrole_versii.html" title="О контроле версий" class="chapter done " data-progress="2.1" style="left: 11.428571428571429%;"></a>
+    
+        <a href="../vvedenie/kratkaya_istoriya_git.html" title="Краткая история Git" class="chapter done " data-progress="2.2" style="left: 12.857142857142858%;"></a>
+    
+        <a href="../vvedenie/osnovi_git.html" title="Основы Git" class="chapter done " data-progress="2.3" style="left: 14.285714285714286%;"></a>
+    
+        <a href="../vvedenie/ustanovka_git.html" title="Установка Git" class="chapter done " data-progress="2.4" style="left: 15.714285714285714%;"></a>
+    
+        <a href="../vvedenie/pervonachalnaya_nastroika_git.html" title="Первоначальная настройка Git" class="chapter done " data-progress="2.5" style="left: 17.142857142857142%;"></a>
+    
+        <a href="../vvedenie/kak_poluchit_pomosch.html" title="Как получить помощь?" class="chapter done " data-progress="2.6" style="left: 18.571428571428573%;"></a>
+    
+        <a href="../vvedenie/itogi.html" title="Итоги" class="chapter done " data-progress="2.7" style="left: 20%;"></a>
+    
+        <a href="../vetvlenie_v_git/README.html" title="Ветвление в Git" class="chapter done new-chapter" data-progress="3" style="left: 21.428571428571427%;"></a>
+    
+        <a href="../vetvlenie_v_git/chto_takoe_vetka.html" title="Что такое ветка?" class="chapter  " data-progress="3.1" style="left: 22.857142857142858%;"></a>
+    
+        <a href="../vetvlenie_v_git/osnovi_vetvleniya_i_sliyaniya.html" title="Основы ветвления и слияния" class="chapter  " data-progress="3.2" style="left: 24.285714285714285%;"></a>
+    
+        <a href="../vetvlenie_v_git/upravlenie_vetkami.html" title="Управление ветками" class="chapter  " data-progress="3.3" style="left: 25.714285714285715%;"></a>
+    
+        <a href="../vetvlenie_v_git/priyomi_raboti_s_vetkami.html" title="Приёмы работы с ветками" class="chapter  " data-progress="3.4" style="left: 27.142857142857142%;"></a>
+    
+        <a href="../vetvlenie_v_git/udalyonnie_vetki.html" title="Удалённые ветки" class="chapter  " data-progress="3.5" style="left: 28.571428571428573%;"></a>
+    
+        <a href="../vetvlenie_v_git/peremeschenie.html" title="Перемещение" class="chapter  " data-progress="3.6" style="left: 30%;"></a>
+    
+        <a href="../vetvlenie_v_git/itogi.html" title="Итоги" class="chapter  " data-progress="3.7" style="left: 31.428571428571427%;"></a>
+    
+        <a href="../git_na_servere/README.html" title="Git на сервере" class="chapter  new-chapter" data-progress="4" style="left: 32.857142857142854%;"></a>
+    
+        <a href="../git_na_servere/protokoli.html" title="Протоколы" class="chapter  " data-progress="4.1" style="left: 34.285714285714285%;"></a>
+    
+        <a href="../git_na_servere/git_hosting.html" title="Git-хостинг" class="chapter  " data-progress="4.10" style="left: 35.714285714285715%;"></a>
+    
+        <a href="../git_na_servere/itogi.html" title="Итоги" class="chapter  " data-progress="4.11" style="left: 37.142857142857146%;"></a>
+    
+        <a href="../git_na_servere/nastroika_git_na_servere.html" title="Настройка Git на сервере" class="chapter  " data-progress="4.2" style="left: 38.57142857142857%;"></a>
+    
+        <a href="../git_na_servere/sozdanie_otkritogo_ssh_klyucha.html" title="Создание открытого SSH-ключа" class="chapter  " data-progress="4.3" style="left: 40%;"></a>
+    
+        <a href="../git_na_servere/nastraivaem_server.html" title="Настраиваем сервер" class="chapter  " data-progress="4.4" style="left: 41.42857142857143%;"></a>
+    
+        <a href="../git_na_servere/otkritii_dostup.html" title="Открытый доступ" class="chapter  " data-progress="4.5" style="left: 42.857142857142854%;"></a>
+    
+        <a href="../git_na_servere/gitweb.html" title="GitWeb" class="chapter  " data-progress="4.6" style="left: 44.285714285714285%;"></a>
+    
+        <a href="../git_na_servere/gitosis.html" title="Gitosis" class="chapter  " data-progress="4.7" style="left: 45.714285714285715%;"></a>
+    
+        <a href="../git_na_servere/gitolite.html" title="Gitolite" class="chapter  " data-progress="4.8" style="left: 47.142857142857146%;"></a>
+    
+        <a href="../git_na_servere/git_demon.html" title="Git-демон" class="chapter  " data-progress="4.9" style="left: 48.57142857142857%;"></a>
+    
+        <a href="../raspredelyonnii_git/README.html" title="Распределённый Git" class="chapter  new-chapter" data-progress="5" style="left: 50%;"></a>
+    
+        <a href="../raspredelyonnii_git/raspredelyonnie_rabochie_protsessi.html" title="Распределённые рабочие процессы" class="chapter  " data-progress="5.1" style="left: 51.42857142857143%;"></a>
+    
+        <a href="../raspredelyonnii_git/sodeistvie_proektu.html" title="Содействие проекту" class="chapter  " data-progress="5.2" style="left: 52.857142857142854%;"></a>
+    
+        <a href="../raspredelyonnii_git/soprovozhdenie_proekta.html" title="Сопровождение проекта" class="chapter  " data-progress="5.3" style="left: 54.285714285714285%;"></a>
+    
+        <a href="../raspredelyonnii_git/itogi.html" title="Итоги" class="chapter  " data-progress="5.4" style="left: 55.714285714285715%;"></a>
+    
+        <a href="../instrumenti_git/README.html" title="Инструменты Git" class="chapter  new-chapter" data-progress="6" style="left: 57.142857142857146%;"></a>
+    
+        <a href="../instrumenti_git/vibor_revizii.html" title="Выбор ревизии" class="chapter  " data-progress="6.1" style="left: 58.57142857142857%;"></a>
+    
+        <a href="../instrumenti_git/interaktivnoe_indeksirovanie.html" title="Интерактивное индексирование" class="chapter  " data-progress="6.2" style="left: 60%;"></a>
+    
+        <a href="../instrumenti_git/pryatane.html" title="Прятанье" class="chapter  " data-progress="6.3" style="left: 61.42857142857143%;"></a>
+    
+        <a href="../instrumenti_git/perezapis_istorii.html" title="Перезапись истории" class="chapter  " data-progress="6.4" style="left: 62.857142857142854%;"></a>
+    
+        <a href="../instrumenti_git/otladka_s_pomoschyu_git.html" title="Отладка с помощью Git" class="chapter  " data-progress="6.5" style="left: 64.28571428571429%;"></a>
+    
+        <a href="../instrumenti_git/podmoduli.html" title="Подмодули" class="chapter  " data-progress="6.6" style="left: 65.71428571428571%;"></a>
+    
+        <a href="../instrumenti_git/sliyanie_podderevev.html" title="Слияние поддеревьев" class="chapter  " data-progress="6.7" style="left: 67.14285714285714%;"></a>
+    
+        <a href="../instrumenti_git/itogi.html" title="Итоги" class="chapter  " data-progress="6.8" style="left: 68.57142857142857%;"></a>
+    
+        <a href="../osnovi_git/README.html" title="Основы Git" class="chapter  new-chapter" data-progress="7" style="left: 70%;"></a>
+    
+        <a href="../osnovi_git/sozdanie_git_repozitoriya.html" title="Создание Git-репозитория" class="chapter  " data-progress="7.1" style="left: 71.42857142857143%;"></a>
+    
+        <a href="../osnovi_git/zapis_izmenenii_v_repozitorii.html" title="Запись изменений в репозиторий" class="chapter  " data-progress="7.2" style="left: 72.85714285714286%;"></a>
+    
+        <a href="../osnovi_git/prosmotr_istorii_kommitov.html" title="Просмотр истории коммитов" class="chapter  " data-progress="7.3" style="left: 74.28571428571429%;"></a>
+    
+        <a href="../osnovi_git/otmena_izmenenii.html" title="Отмена изменений" class="chapter  " data-progress="7.4" style="left: 75.71428571428571%;"></a>
+    
+        <a href="../osnovi_git/rabota_s_udalyonnimi_repozitoriyami.html" title="Работа с удалёнными репозиториями" class="chapter  " data-progress="7.5" style="left: 77.14285714285714%;"></a>
+    
+        <a href="../osnovi_git/rabota_s_metkami.html" title="Работа с метками" class="chapter  " data-progress="7.6" style="left: 78.57142857142857%;"></a>
+    
+        <a href="../osnovi_git/poleznie_soveti.html" title="Полезные советы" class="chapter  " data-progress="7.7" style="left: 80%;"></a>
+    
+        <a href="../osnovi_git/itogi.html" title="Итоги" class="chapter  " data-progress="7.8" style="left: 81.42857142857143%;"></a>
+    
+        <a href="../git_i_drugie_sistemi_kontrolya_versii/README.html" title="Git и другие системы контроля версий" class="chapter  new-chapter" data-progress="8" style="left: 82.85714285714286%;"></a>
+    
+        <a href="../git_i_drugie_sistemi_kontrolya_versii/git_i_subversion.html" title="Git и Subversion" class="chapter  " data-progress="8.1" style="left: 84.28571428571429%;"></a>
+    
+        <a href="../git_i_drugie_sistemi_kontrolya_versii/migratsiya_na_git.html" title="Миграция на Git" class="chapter  " data-progress="8.2" style="left: 85.71428571428571%;"></a>
+    
+        <a href="../git_i_drugie_sistemi_kontrolya_versii/itogi.html" title="Итоги" class="chapter  " data-progress="8.3" style="left: 87.14285714285714%;"></a>
+    
+        <a href="../git_iznutri/README.html" title="Git изнутри" class="chapter  new-chapter" data-progress="9" style="left: 88.57142857142857%;"></a>
+    
+        <a href="../git_iznutri/santehnika_i_farfor.html" title="Сантехника и фарфор" class="chapter  " data-progress="9.1" style="left: 90%;"></a>
+    
+        <a href="../git_iznutri/obekti_v_git.html" title="Объекты в Git" class="chapter  " data-progress="9.2" style="left: 91.42857142857143%;"></a>
+    
+        <a href="../git_iznutri/ssilki_v_git.html" title="Ссылки в Git" class="chapter  " data-progress="9.3" style="left: 92.85714285714286%;"></a>
+    
+        <a href="../git_iznutri/pack_faili.html" title="Pack-файлы" class="chapter  " data-progress="9.4" style="left: 94.28571428571429%;"></a>
+    
+        <a href="../git_iznutri/spetsifikatsii_ssilok.html" title="Спецификации ссылок" class="chapter  " data-progress="9.5" style="left: 95.71428571428571%;"></a>
+    
+        <a href="../git_iznutri/protokoli_peredachi.html" title="Протоколы передачи" class="chapter  " data-progress="9.6" style="left: 97.14285714285714%;"></a>
+    
+        <a href="../git_iznutri/obsluzhivanie_i_vosstanovlenie_dannih.html" title="Обслуживание и восстановление данных" class="chapter  " data-progress="9.7" style="left: 98.57142857142857%;"></a>
+    
+        <a href="../git_iznutri/itogi.html" title="Итоги" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_798">
+                    
+                        <h1 id="-git">Ветвление в Git</h1>
+<p>Почти каждая СКВ имеет в какой-то форме поддержку ветвления. Ветвление означает, что вы отклоняетесь от основной линии разработки и продолжаете работу, не вмешиваясь в основную линию. Во многих СКВ это в некотором роде дорогостоящий процесс, зачастую требующий от вас создания новой копии каталога с исходным кодом, что может занять продолжительное время для больших проектов.</p>
+<p>Некоторые говорят, что модель ветвления Git&#39;а это его “killer feature“ и она безусловно выделяет Git в СКВ-сообществе. Что же в ней такого особенного? Способ ветвления в Git&#39;е чрезвычайно легковесен, что делает операции ветвления практически мгновенными и переключение туда-сюда между ветками обычно так же быстрым. В отличие от многих других СКВ, Git поощряет процесс работы, при котором ветвление и слияние осуществляется часто, даже по несколько раз в день. Понимание и владение этой функциональностью даёт вам уникальный мощный инструмент и может буквально изменить то, как вы ведёте разработку.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../vvedenie/itogi.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../vetvlenie_v_git/chto_takoe_vetka.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,680 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Değişiklikleri Yazılım Havuzuna Kaydetmek | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../gitin_temelleri/kayit_tarihcesini_goruntulemek.html" />
+        
+        
+        <link rel="prev" href="../gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html" />
+        
+
+        <meta property="og:title" content="Değişiklikleri Yazılım Havuzuna Kaydetmek | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.2" data-basepath=".." data-revision="1396895602594">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="baslangic/README.html">
+                
+                <a href="../baslangic/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Başlangıç
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="baslangic/surum_kontrolu_hakkinda.html">
+                            
+                            <a href="../baslangic/surum_kontrolu_hakkinda.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Sürüm Kontrolü Hakkında
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="baslangic/gitin_kisa_bir_tarihcesi.html">
+                            
+                            <a href="../baslangic/gitin_kisa_bir_tarihcesi.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Git&#39;in Kısa Bir Tarihçesi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="baslangic/gitin_temelleri.html">
+                            
+                            <a href="../baslangic/gitin_temelleri.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git&#39;in Temelleri
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="baslangic/gitin_kurulumu.html">
+                            
+                            <a href="../baslangic/gitin_kurulumu.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Git&#39;in Kurulumu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="baslangic/ilk_ayarlamalar.html">
+                            
+                            <a href="../baslangic/ilk_ayarlamalar.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> İlk Ayarlamalar
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="baslangic/yardim_almak.html">
+                            
+                            <a href="../baslangic/yardim_almak.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Yardım Almak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="baslangic/ozet.html">
+                            
+                            <a href="../baslangic/ozet.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Özet
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="gitin_temelleri/README.html">
+                
+                <a href="../gitin_temelleri/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git&#39;in Temelleri
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html">
+                            
+                            <a href="../gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Bir Git Yazılım Havuzu Edinmek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.html">
+                            
+                            <a href="../gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Değişiklikleri Yazılım Havuzuna Kaydetmek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="gitin_temelleri/kayit_tarihcesini_goruntulemek.html">
+                            
+                            <a href="../gitin_temelleri/kayit_tarihcesini_goruntulemek.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Kayıt Tarihçesini Görüntülemek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="gitin_temelleri/degisiklikleri_geri_almak.html">
+                            
+                            <a href="../gitin_temelleri/degisiklikleri_geri_almak.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Değişiklikleri Geri Almak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="gitin_temelleri/uzak_ucbirimlerle_calismak.html">
+                            
+                            <a href="../gitin_temelleri/uzak_ucbirimlerle_calismak.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Uzak Uçbirimlerle Çalışmak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="gitin_temelleri/etiketleme.html">
+                            
+                            <a href="../gitin_temelleri/etiketleme.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Etiketleme
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="gitin_temelleri/ipuclari.html">
+                            
+                            <a href="../gitin_temelleri/ipuclari.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> İpuçları
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="gitin_temelleri/ozet.html">
+                            
+                            <a href="../gitin_temelleri/ozet.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Özet
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="gitte_dallanma/README.html">
+                
+                <a href="../gitte_dallanma/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git&#39;te Dallanma
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="gitte_dallanma/dal_nedir.html">
+                            
+                            <a href="../gitte_dallanma/dal_nedir.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Dal Nedir?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.html">
+                            
+                            <a href="../gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Dallanma ve Birleştirmenin Temelleri
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="gitte_dallanma/dal_yonetimi.html">
+                            
+                            <a href="../gitte_dallanma/dal_yonetimi.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Dal Yönetimi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="gitte_dallanma/dallanma_is_akislari.html">
+                            
+                            <a href="../gitte_dallanma/dallanma_is_akislari.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Dallanma İş Akışları
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="gitte_dallanma/uzak_ucbirim_dallari.html">
+                            
+                            <a href="../gitte_dallanma/uzak_ucbirim_dallari.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Uzak Uçbirim Dalları
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="gitte_dallanma/rebasing__zemin_kok.html">
+                            
+                            <a href="../gitte_dallanma/rebasing__zemin_kok.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing ## Zemin, Kök,
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="gitte_dallanma/summary.html">
+                            
+                            <a href="../gitte_dallanma/summary.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 44%;min-width: 40%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../baslangic/README.html" title="Başlangıç" class="chapter done new-chapter" data-progress="1" style="left: 4%;"></a>
+    
+        <a href="../baslangic/surum_kontrolu_hakkinda.html" title="Sürüm Kontrolü Hakkında" class="chapter done " data-progress="1.1" style="left: 8%;"></a>
+    
+        <a href="../baslangic/gitin_kisa_bir_tarihcesi.html" title="Git&#39;in Kısa Bir Tarihçesi" class="chapter done " data-progress="1.2" style="left: 12%;"></a>
+    
+        <a href="../baslangic/gitin_temelleri.html" title="Git&#39;in Temelleri" class="chapter done " data-progress="1.3" style="left: 16%;"></a>
+    
+        <a href="../baslangic/gitin_kurulumu.html" title="Git&#39;in Kurulumu" class="chapter done " data-progress="1.4" style="left: 20%;"></a>
+    
+        <a href="../baslangic/ilk_ayarlamalar.html" title="İlk Ayarlamalar" class="chapter done " data-progress="1.5" style="left: 24%;"></a>
+    
+        <a href="../baslangic/yardim_almak.html" title="Yardım Almak" class="chapter done " data-progress="1.6" style="left: 28%;"></a>
+    
+        <a href="../baslangic/ozet.html" title="Özet" class="chapter done " data-progress="1.7" style="left: 32%;"></a>
+    
+        <a href="../gitin_temelleri/README.html" title="Git&#39;in Temelleri" class="chapter done new-chapter" data-progress="2" style="left: 36%;"></a>
+    
+        <a href="../gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html" title="Bir Git Yazılım Havuzu Edinmek" class="chapter done " data-progress="2.1" style="left: 40%;"></a>
+    
+        <a href="../gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.html" title="Değişiklikleri Yazılım Havuzuna Kaydetmek" class="chapter done " data-progress="2.2" style="left: 44%;"></a>
+    
+        <a href="../gitin_temelleri/kayit_tarihcesini_goruntulemek.html" title="Kayıt Tarihçesini Görüntülemek" class="chapter  " data-progress="2.3" style="left: 48%;"></a>
+    
+        <a href="../gitin_temelleri/degisiklikleri_geri_almak.html" title="Değişiklikleri Geri Almak" class="chapter  " data-progress="2.4" style="left: 52%;"></a>
+    
+        <a href="../gitin_temelleri/uzak_ucbirimlerle_calismak.html" title="Uzak Uçbirimlerle Çalışmak" class="chapter  " data-progress="2.5" style="left: 56%;"></a>
+    
+        <a href="../gitin_temelleri/etiketleme.html" title="Etiketleme" class="chapter  " data-progress="2.6" style="left: 60%;"></a>
+    
+        <a href="../gitin_temelleri/ipuclari.html" title="İpuçları" class="chapter  " data-progress="2.7" style="left: 64%;"></a>
+    
+        <a href="../gitin_temelleri/ozet.html" title="Özet" class="chapter  " data-progress="2.8" style="left: 68%;"></a>
+    
+        <a href="../gitte_dallanma/README.html" title="Git&#39;te Dallanma" class="chapter  new-chapter" data-progress="3" style="left: 72%;"></a>
+    
+        <a href="../gitte_dallanma/dal_nedir.html" title="Dal Nedir?" class="chapter  " data-progress="3.1" style="left: 76%;"></a>
+    
+        <a href="../gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.html" title="Dallanma ve Birleştirmenin Temelleri" class="chapter  " data-progress="3.2" style="left: 80%;"></a>
+    
+        <a href="../gitte_dallanma/dal_yonetimi.html" title="Dal Yönetimi" class="chapter  " data-progress="3.3" style="left: 84%;"></a>
+    
+        <a href="../gitte_dallanma/dallanma_is_akislari.html" title="Dallanma İş Akışları" class="chapter  " data-progress="3.4" style="left: 88%;"></a>
+    
+        <a href="../gitte_dallanma/uzak_ucbirim_dallari.html" title="Uzak Uçbirim Dalları" class="chapter  " data-progress="3.5" style="left: 92%;"></a>
+    
+        <a href="../gitte_dallanma/rebasing__zemin_kok.html" title="Rebasing ## Zemin, Kök," class="chapter  " data-progress="3.6" style="left: 96%;"></a>
+    
+        <a href="../gitte_dallanma/summary.html" title="Summary" class="chapter  " data-progress="3.7" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_223">
+                    
+                        <h1 id="de-i-iklikleri-yaz-l-m-havuzuna-kaydetmek">Değişiklikleri Yazılım Havuzuna Kaydetmek</h1>
+<p>Gerçek bir Git yazılım havuzuna ve söz konusu proje için gerekli olan bir dosya seçmesine sahipsiniz. Bu proje üzerinde değişiklikler yapmanız ve proje kaydetmek istediğiniz bir seviyeye geldiğinde bu değişikliklerin bir bellek kopyasını kaydetmeniz gerekecek.</p>
+<p>Unutmayın, çalışma klasörünüzdeki dosyalar iki halden birinde bulunurlar: <em>izlenenler</em> (<em>tracked</em>) ve <em>izlenmeyenler</em> (<em>untracked</em>). <em>İzlenen</em> dosyalar, bir önceki bellek kopyasında bulunan dosyalardır; bunlar <em>değişmemiş</em>, <em>değişmiş</em> ya da <em>hazırlanmış</em> olabilirler. Geri kalan her şey —çalışma klasörünüzde bulunan ve bir önceki bellek kopyasında ya da hazırlama alanında bulunmayan dosyalar— <em>izlenmeyen</em> dosyalardır. Bir yazılım havuzunu yeni kopyalamışsanız, bütün dosyalar, henüz yeni seçme yaptığınız ve hiçbir şeyi değiştirmediğiniz için, izlenen ve değişmemiş olacaktır.</p>
+<p>Dosyaları düzenlemeye başladığınızda, Git onları değişmiş olarak görecektir, çünkü son kaydınızdan beri üzerlerinde değişiklik yapmış olacaksınız. Değiştirdiğiniz bu dosyaları önce <em>hazırlayıp</em> sonra bütün <em>hazırlanmış</em> değişiklikleri kaydedeceksiniz ve bu döngü böyle sürüp gidecek. Bu döngü, Figür 2-1&#39;de gösteriliyor.</p>
+<p><img src="http://git-scm.com/figures/18333fig0201-tn.png" alt=""></p>
+<p>Figür 2-1. Dosyalarınızın değişik durumlarının döngüsü.</p>
+<h2 id="dosyalar-n-durumlar-n-kontrol-etmek">Dosyaların Durumlarını Kontrol Etmek</h2>
+<p>Hangi dosyanın hangi durumda olduğunu görmek için kullanılacak temel araç <code>git status</code> komutudur. Bu komutu bir klonlama işleminin hemen sonrasında çalıştıracak olursanız, şöyle bir şey görmelisiniz:</p>
+<pre><code>$ git status
+<span class="hljs-comment"># On branch master</span>
+nothing <span class="hljs-built_in">to</span> commit (working <span class="hljs-built_in">directory</span> clean)
+</code></pre><p>Bu çalışma klasörünüzün temiz olduğu anlamına gelir —başka bir deyişle, izlenmekte olup da değiştirilmiş herhangi bir dosya yoktur. Git&#39;in saptadığı herhangi bir izlenmeyen dosya da yok, olsaydı burada listelenmiş olurdu. Son olarak, bu komut size hangi dal (<em>branch</em>) üzerinde olduğunuzu söylüyor. Şimdilik bu, daima varsayılan dal olan <code>master</code> olacaktır; Şu anda buna kafa yormayın. Sonraki bölüm de dallar ve referanslar konusu derinlemesine ele alınacak.</p>
+<p>Diyelim ki projenize yeni bir dosya, basit bir README dosyası eklediniz. Eğer dosya önceden orada bulunmuyorsa, ve <code>git status</code> komutunu çalıştırırsanız, bu izlenmeyen dosyayı şu şekilde görürsünüz:</p>
+<pre><code>$ vim README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Untracked files:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    README</span>
+nothing added to commit but untracked files present (use <span class="hljs-string">"git add"</span> to track)
+</code></pre><p>Yeni README dosyanızın izlenmediğini görüyorsunuz, çünkü <code>status</code> çıktısında “Untracked files” başlığı altında listelenmiştir. Bir dosyanın izlenmemesi demek, Git&#39;in onu bir önceki bellek kopyasında (<em>commit</em>) görmemesi demektir; siz açıkça belirtmediğiniz sürece Git bu dosyayı izlemeye başlamayacaktır. Bunun nedeni, derleme çıktısı olan ikili dosyaların ya da projeye dahil etmek istemediğiniz dosyaların yanlışlıkla projeye dahil olmasını engellemektir. README dosyasını projeye eklemek istiyorsunuz, öyleyse dosyayı izlemeye alalım.</p>
+<h2 id="yeni-dosyalar-i-zlemeye-almak">Yeni Dosyaları İzlemeye Almak</h2>
+<p>Yeni bir dosyayı izlemeye almak için <code>git add</code> komutunu kullanmalısınız. README dosyasını izlemeye almak için komutu şu şekilde çalıştırabilirsiniz:</p>
+<pre><code><span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p><code>status</code> komutunu yeniden çalıştırırsanız, README dosyasının artık izlemeye alındığını ve hazırlık alanında olduğunu göreceksiniz:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Hazırlık alanında olduğunu “Changes to be committed” başlığının altında olmasına bakarak söyleyebilirsiniz. Eğer bu noktada bir kayıt (<em>commit</em>) yapacak olursanız, dosyanın <code>git add</code> komutunu çalıştırdığınız andaki hali bellek kopyasına kaydedilecektir. Daha önce <code>git init</code> komutunu çalıştırdıktan sonra projenize dosya eklemek için <code>git add (dosya)</code> komutunu çalıştırdığınızı hatırlayacaksınız —bunun amacı klasörünüzdeki dosyaları izlemeye almaktı. <code>git add</code> komutu bir dosya ya da klasörün konumuyla çalışır; eğer söz konusu olan bir klasörse, klasördeki bütün dosyaları tekrarlamalı olarak projeye ekler.</p>
+<h2 id="de-i-tirilen-dosyalar-haz-rlamak">Değiştirilen Dosyaları Hazırlamak</h2>
+<p>Gelin şimdi halihazırda izlenmekte olan bir dosyayı değiştirelim. İzlenmekte olan <code>benchmarks.rb</code> adındaki bir dosyayı değiştirip <code>status</code> komutunu çalıştırdığınızda şöyle bir ekran çıktısıyla karşılaşırsınız:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p><code>benchmarks.rb</code> dosyası “Changes not staged for commit” başlıklı bir bölümün altında görünüyor —bu başlık izlenmekte olan bir dosyada değişiklik yapılmış olduğu fakat dosyanın henüz hazırlık alanına alınmadığı durumlarda kullanılır. Dosyayı hazırlamak için, <code>git add</code> komutunu çalıştırın (<code>git add</code> çok amaçlı bir komuttur, bir dosyayı izlemeye almak için, kayda hazırlamak için, ya da birleştirme uyuşmazlıklarının çözüldüğünü işaretlemek gibi başka amaçlarla kullanılır). Gelin <code>benchmarks.rb</code> dosyasını kayda hazırlamak için <code>git add</code> komutunu çalıştırıp sonra da <code>git status</code> komutuyla duruma bakalım:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Her iki dosya da kayda hazırlanmış durumdadır ve bir sonraki kaydınıza dahil edilecektir. Tam da bu noktada, henüz kaydı gerçekleştirmeden, aklınıza <code>benchmarks.rb</code> dosyasında yapmak istediğiniz küçük bir değişikliğin geldiğini düşünelim. Dosyayı yeniden açıp değişikliği yaptıktan sonra artık kaydı yapmaya hazırsınız. Fakat, <code>git status</code> komutunu bir kez daha çalıştıralım:</p>
+<pre><code>$ vim benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Ne oldu? <code>benchmarks.rb</code> dosyası hem kayda hazırlanmış hem de kayda hazırlanmamış görünüyor. Bu nasıl olabiliyor? Git, bir dosyayı <code>git add</code> komutunun alıştırıldığı haliyle kayda hazırlar. Eğer şimdi kayıt yapacak olursanız, <code>benchmarks.rb</code> dosyası, çalışma klasöründe göründüğü haliyle değil, <code>git add</code> komutunu son çalıştırdığınız haliyle kayıt edilecektir. Bir dosyayı <code>git add</code> komutunu çalıştırdıktan sonra değiştirecek olursanız, dosyanın son halini kayda hazırlamak için <code>git add</code> komutunu bir kez daha çalıştırmanız gerekir:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><h2 id="dosyalar-g-rmezden-gelmek">Dosyaları Görmezden Gelmek</h2>
+<p>Çoğu zaman, projenizde Git&#39;in takip etmesini, hatta size izlenmeyenler arasında göstermesini bile istemediğiniz bir küme dosya olacaktır. Bunlar, genellikle otomatik olarak oluşturulan seyir (<em>log</em>) dosyaları ya da yazılım inşa sisteminin çıktılarıdır. Bu durumlarda, bu dosyaların konumlarıyla eşleşen örüntüleri listeleyen <code>.gitignore</code> adında bir dosya oluşturabilirsiniz:</p>
+<pre><code><span class="hljs-variable">$ </span>cat .gitignore
+*.[oa]
+*~
+</code></pre><p>İlk satır, Git&#39;e <code>.o</code> ya da <code>.a</code> ile biten dosyaları —yazılım derlemesinin sonucunda ortaya çıkmış olabilecek <em>nesne</em> ve <em>arşiv</em> dosyalarını— görmezden gelmesini söylüyor. İkinci satır, Git&#39;e Emacs gibi pek çok metin editörü tarafından geçici dosyaları işaretlemek için kullanılan tilda işaretiyle (<code>~</code>) biten bütün dosyaları görmezden gelmesini söylüyor. Bu listeye <code>log</code>, <code>tmp</code> ya da <code>pid</code> klasörlerini, otomatik olarak oluşturulan dokümantasyon dosyalarını ve sair dosyayı ekleyebilirsiniz. Daha projenin başlangıcında bir <code>.gitignore</code> dosyası oluşturmak yazılım havuzunuzda istemeyeceğiniz dosyaları yanlışlıkla kaydetmenize engel olacağından oldukça iyi bir fikirdir.</p>
+<p><code>.gitignore</code> dosyanızda bulundurabileceğiniz örüntüler şu kurallara bağlıdır:</p>
+<ul>
+<li>Boş satırlar ve <code>#</code> ile başlayan satırlar görmezden gelinir.</li>
+<li>Stadart <em>glob</em> örüntüleri ayırt edilir (Ç.N.: <em>glob</em> *nix tarafından kullanılan sınırlı bir kurallı ifade (<em>regular expression</em>) biçimidir).</li>
+<li>Bir klasörü belirtmek üzere örüntüleri bir eğik çizgi (<code>/</code>) ile sonlandırabilirsiniz.</li>
+<li>Bir örüntüyü ünlem işaretiyle (<code>!</code>) başlattığınızda, örüntünün tersi gereçli olur.</li>
+</ul>
+<p><em>Glob</em> örüntüleri <em>shell</em>&#39;ler tarafından kullanılan basitleştirilmiş kurallı ifadelerdir (<em>regular expression</em>). Bir yıldız işareti (<code>*</code>) sıfır ya da daha fazla karakterle eşleşir; <code>[abc]</code> köşeli parantezin içindeki herhangi bir karakterle eşleşir (buradaki örnekte <code>a</code>, <code>b</code>, ya da <code>c</code> ile); soru işareti (<code>?</code>) bir karakterle eşleşir; tireyle ayrılmış karakterleri içine alan bir köşeli parantez (<code>[0-9]</code>) bu aralıktaki bütün karakterlerle eşleşir (bu örnekte 0&#39;dan 9&#39;a kadar olan karakterler).</p>
+<p>Bir <code>.gitignore</code> dosyası örneği daha:</p>
+<pre><code><span class="hljs-preprocessor"># bir yorum - bu görmezden gelinir</span>
+<span class="hljs-preprocessor"># .a dosyalarını görmezden gel</span>
+*.a
+<span class="hljs-preprocessor"># ama yukarıda .a dosyalarını görmezden geliyor olsan bile lib.a dosyasını izlemeye al</span>
+!lib.a
+<span class="hljs-preprocessor"># kök dizindeki /TODO dosyasını (TODO adındaki alt klasörü değil) görmezden gel</span>
+/TODO
+<span class="hljs-preprocessor"># build/ klasöründeki bütün dosyaları görmezden gel</span>
+build/
+<span class="hljs-preprocessor"># doc/notes.txt dosyasını görmezden gel ama doc/server/arch.txt dosyasını görmezden gelme</span>
+doc<span class="hljs-comment">/*.txt</span>
+</code></pre><h2 id="kayda-haz-rlanm-ve-haz-rlanmam-de-i-iklikleri-g-r-nt-lemek">Kayda Hazırlanmış ve Hazırlanmamış Değişiklikleri Görüntülemek</h2>
+<p><code>git status</code> komutunu fazla anlaşılmaz buluyorsanız —yalnızca hangi dosyaların değiştiğini değil, bu dosyalarda tam olarak nelerin değiştiğini görmek istiyorsanız— <code>git diff</code> komutunu kullanabilirsiniz. <code>git diff</code> komutunu ileride ayrıntılı olarak inceleyeceğiz; ama bu komutu muhtemelen en çok şu iki soruya cevap bulmak için kullanacaksınız: Değiştirip de henüz kayda hazırlamadığınız neler var? Ve kayda olmak üzere hangi değişikliklerin hazırlığını yaptınız? <code>git status</code> bu soruları genel biçimde cevaplıyor olsa da <code>git diff</code> eklenen ve çıkarılan bütün dosyaları —olduğu gibi yamayı— gösterir.</p>
+<p>Diyelim <code>README</code> dosyasını düzenleyip kayda hazırladınız, sonra da <code>benchmarks.rb</code> dosyasını düzenlediniz ama kayda hazırlamadınız. <code>status</code> komutunu çalıştırdığınızda şöyle bir şey görürsünüz:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Henüz kayda hazırlamadığınız değişiklikleri görmek için <code>git diff</code> komutunu (başka hiçbir argüman kullanmadan) çalıştırın:</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..da65585 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+           @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+         <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+         run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+           <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+           <span class="hljs-built_in">log</span>.size
+</code></pre><p>Komut, çalışma klasörünüzün içeriğiyle kayda hazırlık alanının içeriğini karşılaştırır. Sonuç size henüz kayda hazırlamadığınız değişiklikleri gösterir.</p>
+<p>Kayda hazırlamış olduğunuz değişiklikleri görmek için <code>git diff --cache</code> komutunu kullanabilirsiniz. (1.6.1&#39;den sonraki Git sürümlerinde hatırlaması daha kolay olabilecek <code>git diff --staged</code> komutunu da kullanabilirsiniz.) Bu komut kayda hazırlanmış değişikliklerle son kaydı karşılaştırır.</p>
+<pre><code>$ git diff --cached
+diff --git a/README b/README
+new file mode 100644
+index 0000000..03902a1
+<span class="hljs-header">--- /dev/null</span>
+<span class="hljs-header">+++ b/README2</span>
+<span class="hljs-chunk">@@ -0,0 +1,5 @@</span>
+<span class="hljs-addition">+grit</span>
+<span class="hljs-addition">+ by Tom Preston-Werner, Chris Wanstrath</span>
+<span class="hljs-addition">+ http://github.com/mojombo/grit</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+Grit is a Ruby library for extracting information from a Git repository</span>
+</code></pre><p>Dikkat edilmesi gereken nokta, <code>git diff</code>&#39;in son kayıttan beri yapılan bütün değişiklikleri değil yalnızca kayda hazırlanmamış değişiklikleri gösteriyor oluşudur. Bu zaman zaman kafa karıştırıcı olabilir, zira, bütün değişikliklerinizi kayda hazırladıysanız, <code>git diff</code>&#39;in çıktısı boş olacaktır.</p>
+<p>Yine, örnek olarak, <code>benchmarks.rb</code> dosyasını kayda hazırlayıp daha sonra üzerinde değişiklik yaparsanız, <code>git diff</code> komutunu kullanarak hangi değişikliklerin kayda hazırlandığını, hangilerinin hazırlanmadığını görüntüleyebilirsiniz:</p>
+<pre><code>$ git add benchmarks.rb
+$ echo <span class="hljs-string">'# test line'</span> &gt;&gt; benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Şimdi <code>git diff</code> komutuyla hangi değişikliklerin henüz kayda hazırlanmamış olduğunu</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index e445e28.<span class="hljs-number">.86</span>b2f7c <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">127</span>,<span class="hljs-number">3</span> +<span class="hljs-number">127</span>,<span class="hljs-number">4</span> @@ <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+ main()
+
+ <span class="hljs-comment">##pp Grit::GitRuby.cache_client.stats</span>
++<span class="hljs-comment"># test line</span>
+</code></pre><p>ve <code>git diff --cached</code> komutuyla neleri kayda hazırlamış olduğunuzu görebilirsiniz:</p>
+<pre><code>$ git diff <span class="hljs-comment">--cached</span>
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..e445e28 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+          @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+        run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+          <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+          <span class="hljs-built_in">log</span>.size
+</code></pre><h2 id="de-i-iklikleri-kaydetmek">Değişiklikleri Kaydetmek</h2>
+<p>Yaptığınız değişiklikleri dilediğiniz gibi hazırlık alanına aldığınıza göre artık onları kaydedebilirsiniz (<em>commit</em>). Unutmayın, kayda hazırlanmamış —oluşturduğunuz ya da değiştirdiğiniz fakat <code>git add</code> komutunu kullanarak kayda hazırlamadığınız— değişiklikler kaydedilmeyecektir. Onlar sabit diskinizde değiştirilmiş dosyalar olarak kalacaklar.</p>
+<p>Bu örnekte, <code>git status</code> komutunu son çalıştırdığınızda her şeyin kayda hazırlanmış olduğunu gördünüz, dolayısıyla değişikliklerinizi kaydetmeye hazırsınız. Kayıt yapmanın en kolay yolu <code>git commit</code> komutunu kullanmaktır:</p>
+<pre><code><span class="hljs-variable">$ </span>git commit
+</code></pre><p>Bu komutu çalıştırdığınızda sisteminizde seçili bulunan metin editörü açılacaktır. (Editörünüz <em>shell</em>&#39;inizin <code>$EDITOR</code> çevresel değişkeni tarafından tanımlanır —genellikle vim ya da emacs&#39;tır, fakat <code>git config --global core.editor</code> komutunu <em>1. Bölüm</em>&#39;de gördüğünüz gibi çalıştırarak bu ayarı değiştirebilirsiniz.)</p>
+<p>Metin editörü aşağıdaki metni görüntüler (bu örnek Vim ekranından):</p>
+<pre><code><span class="hljs-preprocessor"># Please enter the commit message for your changes. Lines starting</span>
+<span class="hljs-preprocessor"># with '#' will be ignored, and an empty message aborts the commit.</span>
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       new file:   README</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb</span>
+~
+~
+~
+<span class="hljs-string">".git/COMMIT_EDITMSG"</span> <span class="hljs-number">10</span>L, <span class="hljs-number">283</span>C
+</code></pre><p>Gördüğünüz gibi hazır kayıt mesajı <code>git status</code> çıktısının <code>#</code> kullanılarak devre dışı bırakılmış haliyle en üstte bir boş satırdan oluşur. Bu devre dışı bırakılmış kayıt mesajını silip yerine kendi kayıt mesajınızı yazabilir, ya da neyi kaydettiğinizi size hatırlatması için orada bırakabilirsiniz. (Neyi değiştirdiğinizin daha ayrıntılı olarak hatırlatılmasını isterseniz, <code>git commit</code> mesajını <code>-v</code> seçeneğiyle kullanabilirsiniz. Bu seçenek kaydetmekte olduğunuz değişikliğin içeriğini de (<em>diff</em>) editörde gösterecektir.) Editörü kapattığınızda Git, yazdığınız mesajı kullanarak değişikliği kaydeder (devre dışı bırakılmış bölümü ve değişikliğin içeriğini mesajın dışında bırakır).</p>
+<p>Bir başka seçenek de, kayıt mesajınızı <code>commit</code> komutunu <code>-m</code> seçeneğiyle aşağıdaki gibi kullanmaktır:</p>
+<pre><code>$ git commit -m "Story 182: Fix benchmarks for speed"
+[<span class="hljs-link_reference">master</span>]:<span class="hljs-link_url"> created 463dc4f: "Fix benchmarks for speed"</span><span class="hljs-link_url">
+ 2 files changed, 3 insertions(+), 0 deletions(-)</span><span class="hljs-link_url">
+ create mode 100644 README</span>
+</code></pre><p>İlk kaydınızı oluşturmuş oldunuz! Görüldüğü gibi kayıt kendisiyle ilgili bilgiler veriyor: hangi dala kayıt yapmış olduğunuzu (<code>master</code>), kaydın SHA-1 sınama toplamının ne olduğunu (<code>463dc4f</code>), kaç dosyada değişiklik yaptığınızı ve kayıtta kaç satır ekleyip çıkardığınıza dair istatistiklerin çıktısını veriyor.</p>
+<p>Unutmayın, kayıt, hazırlık alanında kayda hazırladığınız bellek kopyasının kaydıdır. Kayda hazırlamadığınız değişiklikler, değişiklik olarak duruyor; onları da proje tarihçesine eklemek isterseniz yeni bir kayıt yapabilirsiniz. Her kayıt işleminde projenizin bir bellek kopyasını kaydediyorsunuz; bu bellek kopyalarını daha sonra geriye sarabilir ya da birbiriyle karşılaştırabilirsiniz.</p>
+<h2 id="haz-rl-k-alan-n-atlamak">Hazırlık Alanını Atlamak</h2>
+<p>Her ne kadar kayıtları tam istediğiniz gibi düzenlemek inanılmaz derecede yararlı bir şey olsa da, hazırlık alanı kimi zaman iş akışınıza fazladan bir yük getirebilir. Git, hazırlık alanını kullanmadan geçmek isteyenler için basit bir kısayol sunuyor. <code>git commit</code> komutunu <code>-a</code> seçeneğiyle kullanırsanız, Git, halihazırda izlenmekte olan bütün dosyaları otomatik olarak kayda hazırlayıp, <code>git add</code> aşamasını atlamanızı sağlar:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+$ git commit -a -m <span class="hljs-string">'added new benchmarks'</span>
+[master <span class="hljs-number">83e38</span>c7] added <span class="hljs-keyword">new</span> benchmarks
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">5</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>Gördüğünüz gibi, kayıt işlemi yapmadan önce <code>benchmarks.rb</code> dosyasını <code>git add</code> komutundan geçirmek zorunda kalmadınız.</p>
+<h2 id="dosyalar-ortadan-kald-rmak">Dosyaları Ortadan Kaldırmak</h2>
+<p>Bir dosyayı Git&#39;ten silmek için, önce izlenen dosyaları listesinden çıkarmalı (daha doğrusu, kayda hazırlık alanından kaldırmalı) sonra da kaydetmelisiniz. <code>git rm</code> hem bunu yapar hem de dosyayı çalışma klasörünüzden siler, böylece dosyayı izlenmeyen dosyalar arasında görmezsiniz.</p>
+<p>Eğer dosyayı çalışma klasörünüzden silerseniz, <code>git status</code> çıktısının “Changes not staged for commit” (yani <em>kayda hazırlanmamış olanlar</em>) başlığı altında boy gösterecektir:</p>
+<pre><code>$ rm grit.gemspec
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add/rm &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Sonrasında <code>git rm</code> komutunu çalıştırırsanız, dosyanın ortadan kaldırılması için kayda hazırlanmasını sağlamış olursunuz:</p>
+<pre><code>$ git rm grit.gemspec
+rm <span class="hljs-string">'grit.gemspec'</span>
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Bir sonraki kaydınızda, dosya silinmiş olacak ve artık izlenmeyecektir. Eğer dosyayı değiştirmiş ve halihazırda indekse eklemişseniz, ortadan kaldırma işlemini <code>-f</code> seçeneğini kullanarak zorlamanız gerekecektir. Bu, herhangi bir bellek kopyasına kaydedilmemiş ve Git kullanılarak kurtarılamayacak verilerin kaybolmasını önlemek amacıyla geliştirilmiş bir önlemdir.</p>
+<p>Yapmak isteyebileceğiniz bir başka şey de dosyayı çalışma klasörünüzde tutup, kayda hazırlık alanından silmek olabilir. Bir başka deyişle, dosyayı sabit diskinizde bulundurmak ama Git&#39;in izlenecek dosyalar listesinden çıkarmak isteyebilirsiniz. Bu, özellikle belirli bir dosyayı (büyük bir seyir dosyasını ya da bir küme derlenmiş <code>.a</code> dosyasını) <code>.gitignore</code> dosyanıza eklemeyi unutup yanlışlıkla Git indeksine eklediğinizde kullanışlı olan bir özelliktir. Bunu yapmak için <code>--cached</code> seçeneğini kullanmalısınız:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">rm</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">cached</span> <span class="hljs-comment">readme</span><span class="hljs-string">.</span><span class="hljs-comment">txt</span>
+</code></pre><p><code>git rm</code> komutunu dosyalar, klasörler ya da <em>glob</em> örüntüleri üzerinde kullanabilirsiniz. Yani şöyle şeyler yapabilirsiniz:</p>
+<pre><code>$ git rm <span class="hljs-keyword">log</span>/\*.<span class="hljs-keyword">log</span>
+</code></pre><p><code>*</code>&#39;in önündeki ters eğik çizgi işaretini gözden kaçırmayın. Bu işaret gereklidir, çünkü <em>shell</em>&#39;inizin dosya adı açımlamasına ek olarak, Git de kendi dosya adı açımlamasını yapar. Yukarıdaki komut, <code>log/</code> klasöründeki <code>.log</code> eklentili bütün dosyaları ortadan kaldıracaktır. Ya da, şöyle bir şey yapabilirsiniz:</p>
+<pre><code><span class="hljs-variable">$ </span>git rm \*~
+</code></pre><p>Bu komut <code>~</code> ile biten bütün dosyaları ortadan kaldıracaktır.</p>
+<h2 id="dosyalar-ta-mak">Dosyaları Taşımak</h2>
+<p>Çoğu SKS&#39;nin aksine Git taşınan dosyaları takip etmez. Bir dosyanın adını değiştirirseniz, Git, dosyanın yeniden adlandırıldığına dair herhangi bir üstveri oluşturmaz. Fakat Git, olay olup bittikten sonra neyin ne olduğunu anlamakta oldukça beceriklidir —dosya hareketlerini keşfetme meselesini birazdan ele alacağız.</p>
+<p>Bu nedenle Git&#39;in bir <code>mv</code> komutu olması biraz kafa karıştırıcı olabilir. Git&#39;te bir dosyanın adını değiştirmek istiyorsanız, şöyle bir komut çalıştırabilirsiniz:</p>
+<pre><code><span class="hljs-variable">$ </span>git mv eski_dosya yeni_dosya
+</code></pre><p>ve istediğinizi elde edersiniz. Hatta, buna benzer bir komut çalıştırdıktan sonra <code>status</code> çıktısına bakarsanız Git&#39;in bir dosya adlandırma işlemini (<em>rename</em>) listelediğini görürsünüz:</p>
+<pre><code>$ git mv README.txt README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Your branch is ahead of 'origin/master' by 1 commit.</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       renamed:    README.txt -&gt; README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Öte yandan bu komut, şu komutları arka arkaya çalıştırmaya eşdeğerdir:</p>
+<pre><code><span class="hljs-variable">$ </span>mv <span class="hljs-constant">README</span>.txt <span class="hljs-constant">README</span>
+<span class="hljs-variable">$ </span>git rm <span class="hljs-constant">README</span>.txt
+<span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Git dosya taşıma işlemini dolaylı yollardan anlar, dolayısıyla dosyayı yeniden adlandırmayı bu komutlarla mı yaptığınız yoksa <code>mv</code> komutunu mu kullandığınız Git açısından önemli değildir. Tek gerçek fark arka arkaya üç komut kullanmak yerine tek bir komut kullanıyor olmanızdır —<code>mv</code> bir kullanıcıya kolalık sağlayan bir komuttur. Daha önemlisi, bir dosyanın adını değiştirmek için istediğiniz her aracı kullanabilir, <code>add/rm</code> işlemlerini sonraya kayıttan hemen öncesine bırakabilirsiniz.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../gitin_temelleri/kayit_tarihcesini_goruntulemek.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

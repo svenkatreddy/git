@@ -1,0 +1,1119 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Git en Subversion | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_en_andere_systemen/naar_git_migreren.html" />
+        
+        
+        <link rel="prev" href="../git_en_andere_systemen/README.html" />
+        
+
+        <meta property="og:title" content="Git en Subversion | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="8.1" data-basepath=".." data-revision="1396895631610">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_en_andere_systemen/git_en_subversion.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="aan_de_slag/README.html">
+                
+                <a href="../aan_de_slag/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Aan de slag
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="aan_de_slag/het_wat_en_waarom_van_versiebeheer.html">
+                            
+                            <a href="../aan_de_slag/het_wat_en_waarom_van_versiebeheer.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Het wat en waarom van versiebeheer
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="aan_de_slag/een_kort_historisch_overzicht_van_git.html">
+                            
+                            <a href="../aan_de_slag/een_kort_historisch_overzicht_van_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Een kort historisch overzicht van Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="aan_de_slag/de_basis_van_git.html">
+                            
+                            <a href="../aan_de_slag/de_basis_van_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> De basis van Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="aan_de_slag/git_installeren.html">
+                            
+                            <a href="../aan_de_slag/git_installeren.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Git installeren
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="aan_de_slag/git_klaarmaken_voor_eerste_gebruik.html">
+                            
+                            <a href="../aan_de_slag/git_klaarmaken_voor_eerste_gebruik.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Git klaarmaken voor eerste gebruik
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="aan_de_slag/hulp_krijgen.html">
+                            
+                            <a href="../aan_de_slag/hulp_krijgen.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Hulp krijgen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="aan_de_slag/samenvatting.html">
+                            
+                            <a href="../aan_de_slag/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="de_basis_van_git/README.html">
+                
+                <a href="../de_basis_van_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> De basis van Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="de_basis_van_git/een_git_repository_verkrijgen.html">
+                            
+                            <a href="../de_basis_van_git/een_git_repository_verkrijgen.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Een Git repository verkrijgen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="de_basis_van_git/wijzigingen_aan_het_repository_vastleggen.html">
+                            
+                            <a href="../de_basis_van_git/wijzigingen_aan_het_repository_vastleggen.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Wijzigingen aan het repository vastleggen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="de_basis_van_git/de_commit_geschiedenis_bekijken.html">
+                            
+                            <a href="../de_basis_van_git/de_commit_geschiedenis_bekijken.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> De commit geschiedenis bekijken
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="de_basis_van_git/dingen_ongedaan_maken.html">
+                            
+                            <a href="../de_basis_van_git/dingen_ongedaan_maken.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Dingen ongedaan maken
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="de_basis_van_git/werken_met_remotes.html">
+                            
+                            <a href="../de_basis_van_git/werken_met_remotes.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Werken met remotes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="de_basis_van_git/taggen_labelen.html">
+                            
+                            <a href="../de_basis_van_git/taggen_labelen.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Taggen (Labelen)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="de_basis_van_git/tips_en_trucs.html">
+                            
+                            <a href="../de_basis_van_git/tips_en_trucs.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips en trucs
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="de_basis_van_git/samenvatting.html">
+                            
+                            <a href="../de_basis_van_git/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="branchen_in_git/README.html">
+                
+                <a href="../branchen_in_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Branchen in Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="branchen_in_git/wat_is_een_branch.html">
+                            
+                            <a href="../branchen_in_git/wat_is_een_branch.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Wat is een branch
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="branchen_in_git/eenvoudig_branchen_en_mergen.html">
+                            
+                            <a href="../branchen_in_git/eenvoudig_branchen_en_mergen.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Eenvoudig branchen en mergen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="branchen_in_git/branch_beheer.html">
+                            
+                            <a href="../branchen_in_git/branch_beheer.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Branch beheer
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="branchen_in_git/branch_workflows.html">
+                            
+                            <a href="../branchen_in_git/branch_workflows.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Branch workflows
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="branchen_in_git/remote_branches.html">
+                            
+                            <a href="../branchen_in_git/remote_branches.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Remote branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="branchen_in_git/rebasen.html">
+                            
+                            <a href="../branchen_in_git/rebasen.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="branchen_in_git/samenvatting.html">
+                            
+                            <a href="../branchen_in_git/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_op_de_server/README.html">
+                
+                <a href="../git_op_de_server/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git op de server
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_op_de_server/de_protocollen.html">
+                            
+                            <a href="../git_op_de_server/de_protocollen.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> De protocollen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_op_de_server/git_op_een_server_krijgen.html">
+                            
+                            <a href="../git_op_de_server/git_op_een_server_krijgen.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Git op een server krijgen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_op_de_server/je_publieke_ssh_sleutel_genereren.html">
+                            
+                            <a href="../git_op_de_server/je_publieke_ssh_sleutel_genereren.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Je publieke SSH sleutel genereren
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_op_de_server/de_server_opzetten.html">
+                            
+                            <a href="../git_op_de_server/de_server_opzetten.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> De Server Opzetten
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_op_de_server/publieke_toegang.html">
+                            
+                            <a href="../git_op_de_server/publieke_toegang.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Publieke toegang
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_op_de_server/gitweb.html">
+                            
+                            <a href="../git_op_de_server/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_op_de_server/gitosis.html">
+                            
+                            <a href="../git_op_de_server/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_op_de_server/gitolite.html">
+                            
+                            <a href="../git_op_de_server/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_op_de_server/git_daemon.html">
+                            
+                            <a href="../git_op_de_server/git_daemon.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git daemon
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_op_de_server/gehoste_git.html">
+                            
+                            <a href="../git_op_de_server/gehoste_git.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Gehoste Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_op_de_server/samenvatting.html">
+                            
+                            <a href="../git_op_de_server/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="gedistribueerd_git/README.html">
+                
+                <a href="../gedistribueerd_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Gedistribueerd Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="gedistribueerd_git/gedistribueerde_workflows.html">
+                            
+                            <a href="../gedistribueerd_git/gedistribueerde_workflows.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Gedistribueerde workflows
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="gedistribueerd_git/bijdragen_aan_een_project.html">
+                            
+                            <a href="../gedistribueerd_git/bijdragen_aan_een_project.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Bijdragen aan een project
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="gedistribueerd_git/het_beheren_van_een_project.html">
+                            
+                            <a href="../gedistribueerd_git/het_beheren_van_een_project.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Het beheren van een project
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="gedistribueerd_git/samenvatting.html">
+                            
+                            <a href="../gedistribueerd_git/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_tools/README.html">
+                
+                <a href="../git_tools/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git tools
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_tools/revisie_selectie.html">
+                            
+                            <a href="../git_tools/revisie_selectie.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Revisie selectie
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_tools/interactief_stagen.html">
+                            
+                            <a href="../git_tools/interactief_stagen.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Interactief stagen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_tools/stashen.html">
+                            
+                            <a href="../git_tools/stashen.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Stashen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_tools/geschiedenis_herschrijven.html">
+                            
+                            <a href="../git_tools/geschiedenis_herschrijven.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Geschiedenis herschrijven
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_tools/debuggen_met_git.html">
+                            
+                            <a href="../git_tools/debuggen_met_git.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Debuggen met Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_tools/submodules.html">
+                            
+                            <a href="../git_tools/submodules.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Submodules
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_tools/subboom_mergen.html">
+                            
+                            <a href="../git_tools/subboom_mergen.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Subboom mergen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_tools/samenvatting.html">
+                            
+                            <a href="../git_tools/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="git_op_maat_maken/README.html">
+                
+                <a href="../git_op_maat_maken/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Git op maat maken
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="git_op_maat_maken/git_configuratie.html">
+                            
+                            <a href="../git_op_maat_maken/git_configuratie.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Git configuratie
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="git_op_maat_maken/git_attributen.html">
+                            
+                            <a href="../git_op_maat_maken/git_attributen.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git attributen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="git_op_maat_maken/git_haken_hooks.html">
+                            
+                            <a href="../git_op_maat_maken/git_haken_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git haken (hooks)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="git_op_maat_maken/een_voorbeeld_van_git_afgedwongen_beleid.html">
+                            
+                            <a href="../git_op_maat_maken/een_voorbeeld_van_git_afgedwongen_beleid.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Een voorbeeld van Git-afgedwongen beleid
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="git_op_maat_maken/samenvatting.html">
+                            
+                            <a href="../git_op_maat_maken/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_en_andere_systemen/README.html">
+                
+                <a href="../git_en_andere_systemen/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git en andere systemen
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_en_andere_systemen/git_en_subversion.html">
+                            
+                            <a href="../git_en_andere_systemen/git_en_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git en Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_en_andere_systemen/naar_git_migreren.html">
+                            
+                            <a href="../git_en_andere_systemen/naar_git_migreren.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Naar Git migreren
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_en_andere_systemen/samenvatting.html">
+                            
+                            <a href="../git_en_andere_systemen/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="het_binnenwerk_van_git/README.html">
+                
+                <a href="../het_binnenwerk_van_git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Het binnenwerk van Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="het_binnenwerk_van_git/sanitaire_voorzieningen_en_porselein.html">
+                            
+                            <a href="../het_binnenwerk_van_git/sanitaire_voorzieningen_en_porselein.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Sanitaire voorzieningen en porselein
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="het_binnenwerk_van_git/git_objecten.html">
+                            
+                            <a href="../het_binnenwerk_van_git/git_objecten.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Git objecten
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="het_binnenwerk_van_git/git_referenties.html">
+                            
+                            <a href="../het_binnenwerk_van_git/git_referenties.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Git referenties
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="het_binnenwerk_van_git/packfiles.html">
+                            
+                            <a href="../het_binnenwerk_van_git/packfiles.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Packfiles
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="het_binnenwerk_van_git/de_refspec.html">
+                            
+                            <a href="../het_binnenwerk_van_git/de_refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> De refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="het_binnenwerk_van_git/overdracht_protocollen.html">
+                            
+                            <a href="../het_binnenwerk_van_git/overdracht_protocollen.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Overdracht protocollen
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="het_binnenwerk_van_git/onderhoud_en_het_herstellen_van_gegevens.html">
+                            
+                            <a href="../het_binnenwerk_van_git/onderhoud_en_het_herstellen_van_gegevens.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Onderhoud en het herstellen van gegevens
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="het_binnenwerk_van_git/samenvatting.html">
+                            
+                            <a href="../het_binnenwerk_van_git/samenvatting.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Samenvatting
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 84.28571428571429%;min-width: 82.85714285714286%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../aan_de_slag/README.html" title="Aan de slag" class="chapter done new-chapter" data-progress="1" style="left: 1.4285714285714286%;"></a>
+    
+        <a href="../aan_de_slag/het_wat_en_waarom_van_versiebeheer.html" title="Het wat en waarom van versiebeheer" class="chapter done " data-progress="1.1" style="left: 2.857142857142857%;"></a>
+    
+        <a href="../aan_de_slag/een_kort_historisch_overzicht_van_git.html" title="Een kort historisch overzicht van Git" class="chapter done " data-progress="1.2" style="left: 4.285714285714286%;"></a>
+    
+        <a href="../aan_de_slag/de_basis_van_git.html" title="De basis van Git" class="chapter done " data-progress="1.3" style="left: 5.714285714285714%;"></a>
+    
+        <a href="../aan_de_slag/git_installeren.html" title="Git installeren" class="chapter done " data-progress="1.4" style="left: 7.142857142857143%;"></a>
+    
+        <a href="../aan_de_slag/git_klaarmaken_voor_eerste_gebruik.html" title="Git klaarmaken voor eerste gebruik" class="chapter done " data-progress="1.5" style="left: 8.571428571428571%;"></a>
+    
+        <a href="../aan_de_slag/hulp_krijgen.html" title="Hulp krijgen" class="chapter done " data-progress="1.6" style="left: 10%;"></a>
+    
+        <a href="../aan_de_slag/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="1.7" style="left: 11.428571428571429%;"></a>
+    
+        <a href="../de_basis_van_git/README.html" title="De basis van Git" class="chapter done new-chapter" data-progress="2" style="left: 12.857142857142858%;"></a>
+    
+        <a href="../de_basis_van_git/een_git_repository_verkrijgen.html" title="Een Git repository verkrijgen" class="chapter done " data-progress="2.1" style="left: 14.285714285714286%;"></a>
+    
+        <a href="../de_basis_van_git/wijzigingen_aan_het_repository_vastleggen.html" title="Wijzigingen aan het repository vastleggen" class="chapter done " data-progress="2.2" style="left: 15.714285714285714%;"></a>
+    
+        <a href="../de_basis_van_git/de_commit_geschiedenis_bekijken.html" title="De commit geschiedenis bekijken" class="chapter done " data-progress="2.3" style="left: 17.142857142857142%;"></a>
+    
+        <a href="../de_basis_van_git/dingen_ongedaan_maken.html" title="Dingen ongedaan maken" class="chapter done " data-progress="2.4" style="left: 18.571428571428573%;"></a>
+    
+        <a href="../de_basis_van_git/werken_met_remotes.html" title="Werken met remotes" class="chapter done " data-progress="2.5" style="left: 20%;"></a>
+    
+        <a href="../de_basis_van_git/taggen_labelen.html" title="Taggen (Labelen)" class="chapter done " data-progress="2.6" style="left: 21.428571428571427%;"></a>
+    
+        <a href="../de_basis_van_git/tips_en_trucs.html" title="Tips en trucs" class="chapter done " data-progress="2.7" style="left: 22.857142857142858%;"></a>
+    
+        <a href="../de_basis_van_git/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="2.8" style="left: 24.285714285714285%;"></a>
+    
+        <a href="../branchen_in_git/README.html" title="Branchen in Git" class="chapter done new-chapter" data-progress="3" style="left: 25.714285714285715%;"></a>
+    
+        <a href="../branchen_in_git/wat_is_een_branch.html" title="Wat is een branch" class="chapter done " data-progress="3.1" style="left: 27.142857142857142%;"></a>
+    
+        <a href="../branchen_in_git/eenvoudig_branchen_en_mergen.html" title="Eenvoudig branchen en mergen" class="chapter done " data-progress="3.2" style="left: 28.571428571428573%;"></a>
+    
+        <a href="../branchen_in_git/branch_beheer.html" title="Branch beheer" class="chapter done " data-progress="3.3" style="left: 30%;"></a>
+    
+        <a href="../branchen_in_git/branch_workflows.html" title="Branch workflows" class="chapter done " data-progress="3.4" style="left: 31.428571428571427%;"></a>
+    
+        <a href="../branchen_in_git/remote_branches.html" title="Remote branches" class="chapter done " data-progress="3.5" style="left: 32.857142857142854%;"></a>
+    
+        <a href="../branchen_in_git/rebasen.html" title="Rebasen" class="chapter done " data-progress="3.6" style="left: 34.285714285714285%;"></a>
+    
+        <a href="../branchen_in_git/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="3.7" style="left: 35.714285714285715%;"></a>
+    
+        <a href="../git_op_de_server/README.html" title="Git op de server" class="chapter done new-chapter" data-progress="4" style="left: 37.142857142857146%;"></a>
+    
+        <a href="../git_op_de_server/de_protocollen.html" title="De protocollen" class="chapter done " data-progress="4.1" style="left: 38.57142857142857%;"></a>
+    
+        <a href="../git_op_de_server/gehoste_git.html" title="Gehoste Git" class="chapter done " data-progress="4.10" style="left: 40%;"></a>
+    
+        <a href="../git_op_de_server/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="4.11" style="left: 41.42857142857143%;"></a>
+    
+        <a href="../git_op_de_server/git_op_een_server_krijgen.html" title="Git op een server krijgen" class="chapter done " data-progress="4.2" style="left: 42.857142857142854%;"></a>
+    
+        <a href="../git_op_de_server/je_publieke_ssh_sleutel_genereren.html" title="Je publieke SSH sleutel genereren" class="chapter done " data-progress="4.3" style="left: 44.285714285714285%;"></a>
+    
+        <a href="../git_op_de_server/de_server_opzetten.html" title="De Server Opzetten" class="chapter done " data-progress="4.4" style="left: 45.714285714285715%;"></a>
+    
+        <a href="../git_op_de_server/publieke_toegang.html" title="Publieke toegang" class="chapter done " data-progress="4.5" style="left: 47.142857142857146%;"></a>
+    
+        <a href="../git_op_de_server/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 48.57142857142857%;"></a>
+    
+        <a href="../git_op_de_server/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 50%;"></a>
+    
+        <a href="../git_op_de_server/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 51.42857142857143%;"></a>
+    
+        <a href="../git_op_de_server/git_daemon.html" title="Git daemon" class="chapter done " data-progress="4.9" style="left: 52.857142857142854%;"></a>
+    
+        <a href="../gedistribueerd_git/README.html" title="Gedistribueerd Git" class="chapter done new-chapter" data-progress="5" style="left: 54.285714285714285%;"></a>
+    
+        <a href="../gedistribueerd_git/gedistribueerde_workflows.html" title="Gedistribueerde workflows" class="chapter done " data-progress="5.1" style="left: 55.714285714285715%;"></a>
+    
+        <a href="../gedistribueerd_git/bijdragen_aan_een_project.html" title="Bijdragen aan een project" class="chapter done " data-progress="5.2" style="left: 57.142857142857146%;"></a>
+    
+        <a href="../gedistribueerd_git/het_beheren_van_een_project.html" title="Het beheren van een project" class="chapter done " data-progress="5.3" style="left: 58.57142857142857%;"></a>
+    
+        <a href="../gedistribueerd_git/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="5.4" style="left: 60%;"></a>
+    
+        <a href="../git_tools/README.html" title="Git tools" class="chapter done new-chapter" data-progress="6" style="left: 61.42857142857143%;"></a>
+    
+        <a href="../git_tools/revisie_selectie.html" title="Revisie selectie" class="chapter done " data-progress="6.1" style="left: 62.857142857142854%;"></a>
+    
+        <a href="../git_tools/interactief_stagen.html" title="Interactief stagen" class="chapter done " data-progress="6.2" style="left: 64.28571428571429%;"></a>
+    
+        <a href="../git_tools/stashen.html" title="Stashen" class="chapter done " data-progress="6.3" style="left: 65.71428571428571%;"></a>
+    
+        <a href="../git_tools/geschiedenis_herschrijven.html" title="Geschiedenis herschrijven" class="chapter done " data-progress="6.4" style="left: 67.14285714285714%;"></a>
+    
+        <a href="../git_tools/debuggen_met_git.html" title="Debuggen met Git" class="chapter done " data-progress="6.5" style="left: 68.57142857142857%;"></a>
+    
+        <a href="../git_tools/submodules.html" title="Submodules" class="chapter done " data-progress="6.6" style="left: 70%;"></a>
+    
+        <a href="../git_tools/subboom_mergen.html" title="Subboom mergen" class="chapter done " data-progress="6.7" style="left: 71.42857142857143%;"></a>
+    
+        <a href="../git_tools/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="6.8" style="left: 72.85714285714286%;"></a>
+    
+        <a href="../git_op_maat_maken/README.html" title="Git op maat maken" class="chapter done new-chapter" data-progress="7" style="left: 74.28571428571429%;"></a>
+    
+        <a href="../git_op_maat_maken/git_configuratie.html" title="Git configuratie" class="chapter done " data-progress="7.1" style="left: 75.71428571428571%;"></a>
+    
+        <a href="../git_op_maat_maken/git_attributen.html" title="Git attributen" class="chapter done " data-progress="7.2" style="left: 77.14285714285714%;"></a>
+    
+        <a href="../git_op_maat_maken/git_haken_hooks.html" title="Git haken (hooks)" class="chapter done " data-progress="7.3" style="left: 78.57142857142857%;"></a>
+    
+        <a href="../git_op_maat_maken/een_voorbeeld_van_git_afgedwongen_beleid.html" title="Een voorbeeld van Git-afgedwongen beleid" class="chapter done " data-progress="7.4" style="left: 80%;"></a>
+    
+        <a href="../git_op_maat_maken/samenvatting.html" title="Samenvatting" class="chapter done " data-progress="7.5" style="left: 81.42857142857143%;"></a>
+    
+        <a href="../git_en_andere_systemen/README.html" title="Git en andere systemen" class="chapter done new-chapter" data-progress="8" style="left: 82.85714285714286%;"></a>
+    
+        <a href="../git_en_andere_systemen/git_en_subversion.html" title="Git en Subversion" class="chapter done " data-progress="8.1" style="left: 84.28571428571429%;"></a>
+    
+        <a href="../git_en_andere_systemen/naar_git_migreren.html" title="Naar Git migreren" class="chapter  " data-progress="8.2" style="left: 85.71428571428571%;"></a>
+    
+        <a href="../git_en_andere_systemen/samenvatting.html" title="Samenvatting" class="chapter  " data-progress="8.3" style="left: 87.14285714285714%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/README.html" title="Het binnenwerk van Git" class="chapter  new-chapter" data-progress="9" style="left: 88.57142857142857%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/sanitaire_voorzieningen_en_porselein.html" title="Sanitaire voorzieningen en porselein" class="chapter  " data-progress="9.1" style="left: 90%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/git_objecten.html" title="Git objecten" class="chapter  " data-progress="9.2" style="left: 91.42857142857143%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/git_referenties.html" title="Git referenties" class="chapter  " data-progress="9.3" style="left: 92.85714285714286%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/packfiles.html" title="Packfiles" class="chapter  " data-progress="9.4" style="left: 94.28571428571429%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/de_refspec.html" title="De refspec" class="chapter  " data-progress="9.5" style="left: 95.71428571428571%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/overdracht_protocollen.html" title="Overdracht protocollen" class="chapter  " data-progress="9.6" style="left: 97.14285714285714%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/onderhoud_en_het_herstellen_van_gegevens.html" title="Onderhoud en het herstellen van gegevens" class="chapter  " data-progress="9.7" style="left: 98.57142857142857%;"></a>
+    
+        <a href="../het_binnenwerk_van_git/samenvatting.html" title="Samenvatting" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_633">
+                    
+                        <h1 id="git-en-subversion">Git en Subversion</h1>
+<p>Op dit moment maakt het merendeel van open source ontwikkelprojecten en een groot aantal bedrijfsprojecten gebruik van Subversion om hun broncode te beheren. Het is het populairste open source VCS en bestaat al bijna tien jaar. Het lijkt ook in veel aspecten op CVS, wat daarvoor de grootste speler was in de code-beheer wereld.</p>
+<p>Een van de beste features van Git is een bidirectionele brug naar Subversion genaamd <code>git svn</code>. Dit tool staat je toe om Git als een volwaardige client van een Subversion server te gebruiken, zodat je alle lokale eigenschappen van Git kunt gebruiken en daarna naar een Subversion server kunt pushen alsof je Subversion lokaal gebruikt. Dit houdt in dat je lokaal kunt branchen en mergen, het staging gebied gebruiken, kunt rebasen en cherry-picken enzovoorts, terwijl je medewerkers verder werken met de spreekwoordelijke griffel en leisteen. Het is een goede manier om Git in de bedrijfsomgeving binnen te smokkelen en je mede-ontwikkelaars te helpen efficiënter te worden terwijl jij lobbiet om de infrastructuur dusdanig te veranderen dat Git volledig gesupport kan worden. De Subversion brug is het uitwisselings-medicijn naar de DCVS wereld.</p>
+<h2 id="git-svn">git svn</h2>
+<p>Het basiscommando in Git voor alle Subversion brugcommando&#39;s is <code>git svn</code>. Je laat dit aan alles vooraf gaan. Je hebt best een aantal commando&#39;s nodig, dus je zult de meest gebruikte leren terwijl we een aantal kleine workflows behandelen.</p>
+<p>Het is belangrijk om op te merken dat, terwijl je <code>git svn</code> gebruikt, je aan het communiceren bent met Subversion, wat een systeem is dat veel minder geavanceerd is dan Git. Alhoewel jij eenvoudig lokaal kunt branchen en mergen, is het over het algemeen het beste om je geschiedenis zo lineair als mogelijk te houden door je werk te rebasen en zaken te vermijden zoals tegelijkertijd communiceren met een Git remote repository.</p>
+<p>Herschrijf je geschiedenis niet om daarna nogmaals te pushen, en ga niet Git repository ernaast gebruiken om tegelijkertijd met mede Git ontwikkelaars samen te werken. Subversion kan slechts één enkele lineaire geschiedenis aan, en het is heel eenvoudig om het in de war brengen. Als je met een team aan het werk bent en sommigen maken gebruik van Subversion en anderen van Git, zorg dan dat iedereen de SVN server gebruikt om samen te werken - het maakt je leven een stuk eenvoudiger.</p>
+<h2 id="instellen">Instellen</h2>
+<p>Om deze functionaliteit te demonstreren heb je een normale SVN repository nodig waarop je schrijftoegang hebt. Als je deze voorbeelden wilt kopiëren, zal je een schrijfbare kopie moeten maken van mijn test repository. Om dat eenvoudig te kunnen doen, kun je een tool genaamd <code>svnsync</code> gebruiken dat bij de meer recente versies van Subversion geleverd wordt - het zou vanaf versie 1.4 meegeleverd moeten zijn. Voor deze tests heb ik een nieuwe Subversion repository op Google code gemaakt wat een gedeeltelijke kopie is van het <code>protobuf</code> project, wat een tool is dat gestructureerde data voor netwerk transmissie encodeert.</p>
+<p>Om het te volgen zal je eerst een nieuw lokaal Subversion repository moeten maken:</p>
+<pre><code><span class="hljs-variable">$ </span>mkdir /tmp/test-svn
+<span class="hljs-variable">$ </span>svnadmin create /tmp/test-svn
+</code></pre><p>Daarna sta je alle gebruikers toe om revprops te wijzigen - de makkelijke manier is om een pre-revprop-change script toe te voegen dat altijd met 0 afsluit:</p>
+<pre><code>$ cat /tmp/test-svn/hooks/pre-revprop-change
+<span class="hljs-shebang">#!/bin/sh</span>
+<span class="hljs-keyword">exit</span> <span class="hljs-number">0</span>;
+$ chmod +x /tmp/test-svn/hooks/pre-revprop-change
+</code></pre><p>Je kunt dit project nu syncen naar je lokale machine door <code>svnsync init</code> aan te roepen met de doel- en bronrepository.</p>
+<pre><code><span class="hljs-variable">$ </span>svnsync init <span class="hljs-symbol">file:</span>/<span class="hljs-regexp">//tmp</span><span class="hljs-regexp">/test-svn http:/</span><span class="hljs-regexp">/progit-example.googlecode.com/svn</span><span class="hljs-regexp">/</span>
+</code></pre><p>Dit stelt de eigenschappen in om de sync uit te voeren. Je kunt de code daarna clonen door dit uit te voeren</p>
+<pre><code>$ svnsync sync file:///tmp/test-svn
+Committed revision <span class="hljs-number">1.</span>
+Copied properties <span class="hljs-keyword">for</span> revision <span class="hljs-number">1.</span>
+Committed revision <span class="hljs-number">2.</span>
+Copied properties <span class="hljs-keyword">for</span> revision <span class="hljs-number">2.</span>
+Committed revision <span class="hljs-number">3.</span>
+<span class="hljs-keyword">...</span>
+</code></pre><p>Alhoewel deze operatie maar een paar minuten in beslag neemt, zal het kopiëren van de originele repository naar een andere remote repository in plaats van een lokale meer dan een uur duren, zelfs al zitten er maar minder dan 100 commits in. Subversion moet één revisie per keer clonen en dan terug pushen in een ander repository. Het is belachelijk inefficiënt - maar het is de enige makkelijke manier om dit te doen.</p>
+<h2 id="om-te-beginnen">Om te beginnen</h2>
+<p>Nu je een Subversion repository hebt met schrijftoegang, kun je door een typische workflow gaan. Je begint met het <code>git svn clone</code> commando, wat een volledig Subversion repository in een lokaal Git repository cloned. Onthoud dat als je van een echt beheerd Subversion repository importeert, je de <code>file:///tmp/test-svn</code> hier moet vervangen door de URL van jouw Subversion repository:</p>
+<pre><code>$ git svn clone file:<span class="hljs-comment">///tmp/test-svn -T trunk -b branches -t tags</span>
+Initialized empty Git repository <span class="hljs-keyword">in</span> /Users/schacon/projects/testsvnsync/svn<span class="hljs-subst">/</span><span class="hljs-built_in">.</span>git<span class="hljs-subst">/</span>
+r1 <span class="hljs-subst">=</span> b4e387bc68740b5af56c2a5faf4003ae42bd135c (trunk)
+      A    m4/acx_pthread<span class="hljs-built_in">.</span>m4
+      A    m4/stl_hash<span class="hljs-built_in">.</span>m4
+<span class="hljs-attribute">...</span>
+r75 <span class="hljs-subst">=</span> d1957f3b307922124eec6314e15bcda59e3d9610 (trunk)
+Found possible branch point: file:<span class="hljs-comment">///tmp/test-svn/trunk =&gt; \</span>
+    file:<span class="hljs-comment">///tmp/test-svn /branches/my-calc-branch, 75</span>
+Found branch <span class="hljs-keyword">parent</span>: (my<span class="hljs-attribute">-calc</span><span class="hljs-attribute">-branch</span>) d1957f3b307922124eec6314e15bcda59e3d9610
+Following <span class="hljs-keyword">parent</span> <span class="hljs-keyword">with</span> do_switch
+Successfully followed <span class="hljs-keyword">parent</span>
+r76 <span class="hljs-subst">=</span> <span class="hljs-number">8624824</span>ecc0badd73f40ea2f01fce51894189b01 (my<span class="hljs-attribute">-calc</span><span class="hljs-attribute">-branch</span>)
+Checked out HEAD:
+ file:<span class="hljs-comment">///tmp/test-svn/branches/my-calc-branch r76</span>
+</code></pre><p>Dit voert het equivalent uit van twee commando&#39;s: <code>git svn init</code> gevolgd door <code>git svn fetch</code>, op de URL die je aan hebt gegeven. Het kan een tijdje duren. Het testproject heeft slechts 75 commits en de hoeveelheid code is niet zo groot, dus het neemt maar een paar minuten in beslag. Maar Git moet iedere versie uitchecken, één voor één, en ze individueel committen. Voor een project met honderdduizenden commits kan dit letterlijk uren of zelfs dagen duren voor het klaar is.</p>
+<p>Het <code>-T trunk -b branches -t tags</code> gedeelte vertelt Git dat binnen deze Subversion repository de basale branch en tag conventie gevolgd wordt. Als je trunk, branches of tags anders noemt, kan je deze opties aanpassen. Omdat dit zo normaal is, kun je dit hele gedeelte vervangen door <code>-s</code>, wat standaard indeling betekent en al die opties impliceert. Het volgende commando is gelijkwaardig:</p>
+<pre><code>$ git svn clone file:<span class="hljs-comment"><span class="hljs-xmlDocTag">///</span>tmp/test-svn -s</span>
+</code></pre><p>Nu zou je een geldig Git repository moeten hebben, waar de branches en tags in geïmporteerd zijn:</p>
+<pre><code>$ git branch -a
+* master
+  my-calc-branch
+  tags/<span class="hljs-number">2.0</span><span class="hljs-number">.2</span>
+  tags/<span class="hljs-keyword">release</span>-<span class="hljs-number">2.0</span><span class="hljs-number">.1</span>
+  tags/<span class="hljs-keyword">release</span>-<span class="hljs-number">2.0</span><span class="hljs-number">.2</span>
+  tags/<span class="hljs-keyword">release</span>-<span class="hljs-number">2.0</span><span class="hljs-number">.2</span>rc1
+  trunk
+</code></pre><p>Het is belangrijk om op te merken dat dit tool je remote references een andere namespace heeft toebedeeld. Als je normaal een Git repository cloned, krijg je alle branches op die remote server lokaal beschikbaar in de vorm van <code>origin/[branch]</code> - waarbij in de namespace de naam van de remote wordt gebruikt. Echter, <code>git svn</code> gaat er vanuit dat je niet meerdere remotes hebt en bewaart alle referentie naar punten op de remote server zonder gebruik te maken van namespaces. Je kunt het Git plumbing commando <code>show-ref</code> gebruiken om al je volledige referentie namen te zien:</p>
+<pre><code>$ git show-ref
+<span class="hljs-number">1</span>cbd4904d9982f386d87f88fce1c24ad7c0f0471 refs/heads/master
+aee1ecc26318164f355a883f5d99cff0c852d3c4 refs/<span class="hljs-comment">remotes/my-calc-branch</span>
+<span class="hljs-number">03</span>d09b0e2aad427e34a6d50ff147128e76c0e0f5 refs/<span class="hljs-comment">remotes/tags/2.0.2</span>
+<span class="hljs-number">50</span>d02cc0adc9da4319eeba0900430ba219b9c376 refs/<span class="hljs-comment">remotes/tags/release-2.0.1</span>
+<span class="hljs-number">4</span>caaa711a50c77879a91b8b90380060f672745cb refs/<span class="hljs-comment">remotes/tags/release-2.0.2</span>
+<span class="hljs-number">1</span>c4cb508144c513ff1214c3488abe66dcb92916f refs/<span class="hljs-comment">remotes/tags/release-2.0.2rc1</span>
+<span class="hljs-number">1</span>cbd4904d9982f386d87f88fce1c24ad7c0f0471 refs/<span class="hljs-comment">remotes/trunk</span>
+</code></pre><p>Een normale Git repository ziet er meer zo uit:</p>
+<pre><code>$ git show-ref
+<span class="hljs-number">83</span>e38c7a0af325a9722f2fdc56b10188806d83a1 refs/heads/master
+<span class="hljs-number">3</span>e15e38c198baac84223acfc6224bb8b99ff2281 refs/<span class="hljs-comment">remotes/gitserver/master</span>
+<span class="hljs-number">0</span>a30dd3b0c795b80212ae723640d4e5d48cabdff refs/<span class="hljs-comment">remotes/origin/master</span>
+<span class="hljs-number">25812380387</span>fdd55f916652be4881c6f11600d6f refs/<span class="hljs-comment">remotes/origin/testing</span>
+</code></pre><p>Hier zijn er twee remote servers: een genaamd <code>gitserver</code> met een <code>master</code> branch, en een andere genaamd <code>origin</code> met twee branches, <code>master</code> en <code>testing</code>.</p>
+<p>Zie hoe in het voorbeeld van met <code>git svn</code> geïmporteerde remote referenties, de tags toegevoegd zijn als remote branches, niet als echte Git tags. De Subversion import ziet eruit alsof het een remote heeft dat tags heet waaronder branches zitten.</p>
+<h2 id="terug-naar-subversion-committen">Terug naar Subversion committen</h2>
+<p>Nu je een werkende repository hebt, kun je wat werken aan het project en je commits stroomopwaarts pushen, waarbij je Git effectief als een SVN client gebruikt. Als je een van de bestanden aanpast en deze commit, heb je een lokale commit in Git die nog niet bestaat op de Subversion server:</p>
+<pre><code>$ git commit -am 'Adding git-svn instructions <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> README'
+[master <span class="hljs-number">97031e5</span>] Adding git-svn instructions <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> README
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>Vervolgens moet je de verandering stroomopwaarts pushen. Merk op hoe dit de manier verandert waarop je met Subversion werkt: je kunt een paar commits offline doen en ze dan als één blok naar de Subversion server pushen. Om naar een Subversion server te pushen, voer je het <code>git svn dcommit</code> commando uit:</p>
+<pre><code>$ git svn dcommit
+Committing to file:///tmp/test-svn/trunk <span class="hljs-keyword">...</span>
+       M      README.txt
+Committed r79
+       M      README.txt
+r79 = 938b1a547c2cc92033b74d32030e86468294a5c8 (trunk)
+No changes between current HEAD and refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+</code></pre><p>Dit neemt alle commits die je gedaan hebt op de Subversion server code, doet voor elk een Subversion commit, en herschrijft je lokale Git commit zodat het een unieke identificatie heeft. Dit is belangrijk omdat het betekent dat alle SHA-1 checksums voor je commits gaan veranderen. Dit is een van de redenen dat het werken met Git-gebaseerde remote versies van je projecten in parallel met een Subversion server geen goed idee is. Als je kijkt naar de laatste commit, kun je het nieuwe <code>git-svn-id</code> zien dat is toegevoegd:</p>
+<pre><code>$ git <span class="hljs-keyword">log</span> <span class="hljs-subst">-</span><span class="hljs-number">1</span>
+commit <span class="hljs-number">938</span>b1a547c2cc92033b74d32030e86468294a5c8
+Author: schacon <span class="hljs-subst">&lt;</span>schacon@<span class="hljs-number">4</span>c93b258<span class="hljs-subst">-</span><span class="hljs-number">373</span>f<span class="hljs-subst">-</span><span class="hljs-number">11</span>de<span class="hljs-attribute">-be05</span><span class="hljs-subst">-</span><span class="hljs-number">5</span>f7a86268029<span class="hljs-subst">&gt;</span>
+<span class="hljs-built_in">Date</span>:   Sat May <span class="hljs-number">2</span> <span class="hljs-number">22</span>:<span class="hljs-number">06</span>:<span class="hljs-number">44</span> <span class="hljs-number">2009</span> <span class="hljs-subst">+</span><span class="hljs-number">0000</span>
+
+    Adding git<span class="hljs-attribute">-svn</span> instructions <span class="hljs-keyword">to</span> the README
+
+    git<span class="hljs-attribute">-svn</span><span class="hljs-attribute">-id</span>: file:<span class="hljs-comment">///tmp/test-svn/trunk@79 4c93b258-373f-11de-be05-5f7a86268029</span>
+</code></pre><p>Merk op dat de SHA checksum die origineel begon met <code>97031e5</code> toen je committe, nu begint met <code>938b1a5</code>. Als je wilt pushen naar zowel een Git server als een Subversion server, moet je eerst naar de Subversion server pushen (<code>dcommit</code>) omdat die actie je commit data verandert.</p>
+<h2 id="nieuwe-wijzigingen-pullen">Nieuwe wijzigingen pullen</h2>
+<p>Als je met andere developers samenwerkt, dan zal op een bepaald moment één van jullie willen pushen en een ander zal wijziging willen pushen die conflicteert. Die wijziging zal worden geweigerd totdat je hun werk gemerged hebt. In <code>git svn</code> ziet het er zo uit:</p>
+<pre><code>$ git svn dcommit
+Committing <span class="hljs-built_in">to</span> <span class="hljs-built_in">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk ...</span>
+Merge conflict during commit: Your <span class="hljs-built_in">file</span> <span class="hljs-operator">or</span> <span class="hljs-built_in">directory</span> <span class="hljs-string">'README.txt'</span> is probably \
+out-<span class="hljs-operator">of</span>-<span class="hljs-built_in">date</span>: resource out <span class="hljs-operator">of</span> <span class="hljs-built_in">date</span>; <span class="hljs-keyword">try</span> updating <span class="hljs-keyword">at</span> /Users/schacon/libexec/git-\
+core/git-svn <span class="hljs-built_in">line</span> <span class="hljs-number">482</span>
+</code></pre><p>Om deze situatie op te lossen moet je <code>git svn rebase</code> uitvoeren waardoor alle wijzigingen op de server die je nog niet hebt worden gepullt, en daarna al het werk dat je hebt bovenop wat op de server staat rebased:</p>
+<pre><code>$ git svn rebase
+       M      README.txt
+r80 = ff829ab914e8775c7c025d741beb3d523ee30bc4 (trunk)
+First, rewinding head <span class="hljs-keyword">to</span> replay your work <span class="hljs-function_start"><span class="hljs-keyword">on</span></span> top <span class="hljs-keyword">of</span> <span class="hljs-keyword">it</span>...
+Applying: <span class="hljs-keyword">first</span> user change
+</code></pre><p>Nu is al jouw werk bovenop hetgeen wat op de Subversion server staat gebaseerd, en kan je een succesvolle <code>dcommit</code> doen:</p>
+<pre><code>$ git svn dcommit
+Committing to file:///tmp/test-svn/trunk <span class="hljs-keyword">...</span>
+       M      README.txt
+Committed r81
+       M      README.txt
+r81 = 456cbe6337abe49154db70106d1836bc1332deed (trunk)
+No changes between current HEAD and refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+</code></pre><p>Het is belangrijk te onthouden dat in tegenstelling tot Git, die van je verlangt dat je werk van stroomopwaarts wat je nog niet lokaal hebt staan eerst merged voordat je mag pushen, <code>git svn</code> je dit alleen laat doen als de wijzigingen conflicteren. Als iemand anders een verandering naar een bestand pusht en daarna push jij een verandering op een ander bestand, dan zal het <code>commit</code> commando prima werken:</p>
+<pre><code>$ git svn dcommit
+Committing <span class="hljs-built_in">to</span> <span class="hljs-built_in">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk ...</span>
+       M      configure.ac
+Committed r84
+       M      autogen.sh
+r83 = <span class="hljs-number">8</span>aa54a74d452f82eee10076ab2584c1fc424853b (trunk)
+       M      configure.ac
+r84 = cdbac939211ccb18aa744e581e46563af5d962d0 (trunk)
+W: d2f23b80f67aaaa1f6f5aaef48fce3263ac71a92 <span class="hljs-operator">and</span> refs/remotes/trunk differ, \
+  <span class="hljs-keyword">using</span> rebase:
+:<span class="hljs-number">100755</span> <span class="hljs-number">100755</span> efa5a59965fbbb5b2b0a12890f1b351bb5493c18 \
+  <span class="hljs-number">015e4</span>c98c482f0fa71e4d5434338014530b37fa6 M   autogen.sh
+First, rewinding head <span class="hljs-built_in">to</span> replay your work <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">top</span> <span class="hljs-title">of</span> <span class="hljs-title">it</span>...</span>
+Nothing <span class="hljs-built_in">to</span> <span class="hljs-built_in">do</span>.
+</code></pre><p>Dit is belangrijk om te onthouden, omdat de uitkomst een project status is die niet bestond op één van jullie beider computers toen je pushte. Als de veranderingen incompatibel zijn maar niet conflicteren, dan kun je problemen krijgen die lastig te diagnosticeren zijn. Het verschilt van het gebruik van een Git server; in Git kan je de status volledig op je gebruikerssysteem testen voordat je het publiceert, terwijl je met SVN je nooit zeker kunt zijn dat de statussen vlak voor je commit en na je commit gelijk zijn.</p>
+<p>Je moet dit commando ook moeten uitvoeren om wijzigingen te pullen van de Subversion server, zelfs als je zelf nog niet klaar bent om te committen. Je kunt <code>git svn fetch</code> uitvoeren om de nieuwe data binnen te halen, maar <code>git svn rebase</code> doet de fetch en vernieuwt je lokale commits.</p>
+<pre><code>$ git svn rebase
+       M      generate_descriptor_proto.sh
+r82 = bd16df9173e424c6f52c337ab6efa7f7643282f1 (trunk)
+First, rewinding head <span class="hljs-keyword">to</span> replay your work <span class="hljs-function_start"><span class="hljs-keyword">on</span></span> top <span class="hljs-keyword">of</span> <span class="hljs-keyword">it</span>...
+Fast-forwarded master <span class="hljs-keyword">to</span> refs/remotes/trunk.
+</code></pre><p>Regelmatig <code>git svn rebase</code> uitvoeren zorgt er voor dat je code altijd up to date is. Je moet er echter wel zeker van zijn dat je werkdirectory schoon is voor je dit uitvoert. Als je lokale wijzigingen hebt, moet je of eerst je werk stashen, of tijdelijk committen voordat je <code>git svn rebase</code> uitvoert - anders zal het commando stoppen zodra het ziet dat de rebase zal resulteren in een mergeconflict.</p>
+<h2 id="git-branch-problemen">Git branch problemen</h2>
+<p>Als je gewend geraakt bent aan een Git workflow, zal je waarschijnlijk topic branches gaan maken, er werk op doen en ze dan terug mergen. Als je naar een Subversion server pusht via git svn, zou je kunnen overwegen je werk iedere keer op een enkele branch rebasen in plaats van de branches samen te mergen. De reden om rebasen te prefereren is dat Subversion een lineaire geschiedenis heeft, en niet met merges omgaat op de manier zoals Git dat doet, dus git svn volgt alleen de eerste ouder op het moment dat de snapshots naar Subversion commits omgezet worden.</p>
+<p>Stel dat je geschiedenis er zoals volgt uitziet: je hebt een <code>experiment</code> branch gemaakt, twee commits gedaan en ze dan terug in <code>master</code> gemerged. Als je dan <code>dcommit</code> zie je output zoals dit:</p>
+<pre><code>$ git svn dcommit
+Committing to file:///tmp/test-svn/trunk ...
+       M      CHANGES<span class="hljs-preprocessor">.txt</span>
+Committed r85
+       M      CHANGES<span class="hljs-preprocessor">.txt</span>
+r85 = <span class="hljs-number">4</span>bfebeec434d156c36f2bcd18f4e3d97dc3269a2 (trunk)
+No changes between current HEAD <span class="hljs-keyword">and</span> refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+<span class="hljs-label">COPYING.txt:</span> locally modified
+<span class="hljs-label">INSTALL.txt:</span> locally modified
+       M      COPYING<span class="hljs-preprocessor">.txt</span>
+       M      INSTALL<span class="hljs-preprocessor">.txt</span>
+Committed r86
+       M      INSTALL<span class="hljs-preprocessor">.txt</span>
+       M      COPYING<span class="hljs-preprocessor">.txt</span>
+r86 = <span class="hljs-number">2647</span>f6b86ccfcaad4ec58c520e369ec81f7c283c (trunk)
+No changes between current HEAD <span class="hljs-keyword">and</span> refs/remotes/trunk
+Resetting to the latest refs/remotes/trunk
+</code></pre><p>Het uitvoeren van <code>dcommit</code> op een branch met gemergede historie werkt prima, maar wanneer je naar je Git project historie kijkt zie je dat geen van beide commits die je op de <code>experiment</code> branch gedaan hebt herschreven is. In plaats daarvan verschijnen al die wijzigingen in de SVN versie van de enkele merge commit.</p>
+<p>Als iemand anders dat werk cloned, is alles wat ze zien de merge commit met al het werk erin gesquashed; ze zien niet de commit gegevens met waar het vandaan kwam of wanneer het was gecommit.</p>
+<h2 id="subversion-branchen">Subversion branchen</h2>
+<p>Branchen in Subversion is niet hetzelfde als branchen in Git; het is waarschijnlijk het beste om het zoveel mogelijk te vermijden. Maar, je kunt Subversion branches maken en daarnaar committen met git svn.</p>
+<h3 id="een-nieuwe-svn-branch-maken">Een nieuwe SVN branch maken</h3>
+<p>Om een nieuwe branch te maken in Subversion, voer je <code>git svn branch [branchnaam]</code> uit:</p>
+<pre><code>$ git svn branch opera
+Copying <span class="hljs-keyword">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk at r87 to file:///tmp/test-svn/branches/opera...</span>
+Found possible branch point: <span class="hljs-keyword">file</span>:<span class="hljs-comment">///tmp/test-svn/trunk =&gt; \</span>
+  <span class="hljs-keyword">file</span>:<span class="hljs-comment">///tmp/test-svn/branches/opera, 87</span>
+Found branch <span class="hljs-keyword">parent</span>: (opera) <span class="hljs-number">1</span>f6bfe471083cbca06ac8d4176f7ad4de0d62e5f
+Following <span class="hljs-keyword">parent</span> with do_switch
+Successfully followed <span class="hljs-keyword">parent</span>
+r89 = <span class="hljs-number">9</span>b6fe0b90c5c9adf9165f700897518dbc54a7cbf (opera)
+</code></pre><p>Dit doet hetzelfde als het <code>svn copy trunk branches/opera</code> commando in Subversion en wordt op de Subversion server uitegevoerd. Het is belangrijk om op te merken dat het je niet uitchecked in die branch; als je op dit punt commit, dan zal die commit naar de <code>trunk</code> op de server gaan en niet in <code>opera</code>.</p>
+<h2 id="actieve-branches-wisselen">Actieve branches wisselen</h2>
+<p>Git zoekt uit naar welke branch de dcommits horen te gaan door te kijken naar de punt van elk van je Subversion branches in je geschiedenis; je zou er slechts één moeten hebben, en het zou de laatste moeten zijn met een <code>git-svn-id</code> in je huidige branch historie.</p>
+<p>Als je wilt werken op meer dan één branch, dan moet je lokale branches aanmaken om te <code>dcommit</code>-en naar specifieke Subversion branches door ze te beginnen bij de geïmporteerde Subversion commit voor die branch. Als je een <code>opera</code> branch wilt hebben waar je apart op kunt werken, kun je dit uitvoeren</p>
+<pre><code><span class="hljs-variable">$ </span>git branch opera remotes/opera
+</code></pre><p>Als je de <code>opera</code> branch nu in <code>trunk</code> (jouw <code>master</code> branch) wilt mergen, kan je dit doen met een normale <code>git merge</code>. Maar je moet een beschrijvend commit bericht meegeven (via <code>-m</code>), omdat de merge anders &quot;Merge branch opera&quot; zal bevatten in plaats van iets bruikbaars.</p>
+<p>Onthoud dat alhoewel je <code>git merge</code> gebruikt voor deze operatie, en de merge waarschijnlijk veel makkelijker gaat dan het in Subversion zou gaan (omdat Git automatisch de merge basis voor je zal detecteren), dit geen normale Git merge commit is. Je moet deze data terug pushen naar een Subversion server die geen commit aan kan die meer dan één ouder trackt; dus nadat je het gepusht hebt, zal het eruit zien als een enkele commit waarbij al het werk van een andere branch erin gesquashed zit onder één enkele commit. Nadat je een branch in een andere gemerged hebt, kan je niet eenvoudig terug gaan en op die branch verder werken zoals je dat normaal in Git zou doen. Het <code>dcommit</code> commando dat je uitvoert wist alle informatie die kan vertellen welke branch erin gemerged was, dus daarop volgende merge-basis berekeningen zullen fout gaan. De <code>dcommit</code> zal je <code>git merge</code> resultaat eruit laten zien alsof je <code>git merge --squash</code> uitgevoerd hebt. Helaas is er geen manier om deze situatie te vermijden: Subversion kan deze informatie niet opslaan, dus je zult altijd beperkt zijn door zijn tekortkomingen zolang als je het als server gebruikt. Om problemen te vermijden zou je de lokale branch moeten verwijderen (in dit geval <code>opera</code>), nadat je hem in trunk gemerged hebt.</p>
+<h2 id="subversion-commando-s">Subversion commando&#39;s</h2>
+<p>De <code>git svn</code> toolset levert een aantal commando&#39;s om de overgang naar Git te vergemakkelijken, door functionaliteit te leveren die vergelijkbaar is met wat je in Subversion had. Hier zijn een paar commando&#39;s die je geven wat Subversion voorheen deed.</p>
+<h3 id="svn-achtige-historie">SVN achtige historie</h3>
+<p>Als je gewend bent aan Subversion en je wil de historie in SVN achtige output zien, kun je <code>git svn log</code> uitvoeren om je commit historie in SVN formattering te zien:</p>
+<pre><code><span class="hljs-header">$ git svn log
+------------------------------------------------------------------------</span>
+r87 | schacon | 2009-05-02 16:07:37 -0700 (Sat, 02 May 2009) | 2 lines
+
+autogen change
+
+<span class="hljs-code">------------------------------------------------------------------------
+r86 | schacon | 2009-05-02 16:00:21 -0700 (Sat, 02 May 2009) | 2 lines
+
+Merge branch 'experiment'
+
+------------------------------------------------------------------------</span>
+r85 | schacon | 2009-05-02 16:00:09 -0700 (Sat, 02 May 2009) | 2 lines
+
+updated the changelog
+</code></pre><p>Je moet twee belangrijke zaken onthouden over <code>git svn log</code>. Ten eerste: het werkt offline en niet zoals het echte <code>svn log</code> commando waarbij de Subversion server vraagt om de data. Ten tweede: het toont je alleen commits die zijn gecommit naar de Subversion server. Lokale Git commits, die je nog niet ge-dcommit hebt worden niet getoond; een ook commits die mensen in de tussentijd gedaan hebben naar de Subversion server. Het is meer de laatst bekende status van de commits op de Subversion server.</p>
+<h3 id="svn-annotatie">SVN annotatie</h3>
+<p>Zoals het <code>git svn log</code> commando het <code>svn log</code> commando offline simuleert, kan je het equivalent van <code>svn annotate</code> krijgen door <code>git svn blame [BESTAND]</code> uit te voeren. De output ziet er zo uit:</p>
+<pre><code>$ git svn blame README.txt
+ <span class="hljs-number">2</span>   temporal Protocol Buffers - Google<span class="hljs-attribute">'s</span> data interchange format
+ <span class="hljs-number">2</span>   temporal Copyright <span class="hljs-number">2008</span> Google Inc.
+ <span class="hljs-number">2</span>   temporal http://code.google.com/apis/protocolbuffers/
+ <span class="hljs-number">2</span>   temporal
+<span class="hljs-number">22</span>   temporal C++ Installation - Unix
+<span class="hljs-number">22</span>   temporal =======================
+ <span class="hljs-number">2</span>   temporal
+<span class="hljs-number">79</span>    schacon Committing <span class="hljs-keyword">in</span> git-svn.
+<span class="hljs-number">78</span>    schacon
+ <span class="hljs-number">2</span>   temporal <span class="hljs-keyword">To</span> build <span class="hljs-keyword">and</span> install the C++ Protocol <span class="hljs-keyword">Buffer</span> runtime <span class="hljs-keyword">and</span> the Protocol
+ <span class="hljs-number">2</span>   temporal <span class="hljs-keyword">Buffer</span> compiler (protoc) execute the following:
+ <span class="hljs-number">2</span>   temporal
+</code></pre><p>Nogmaals, het toont geen commits die je lokaal in Git gedaan hebt of die in de tussentijd naar Subversion gepusht zijn.</p>
+<h3 id="svn-server-informatie">SVN server informatie</h3>
+<p>Je kunt ook het soort informatie krijgen dat <code>svn info</code> je geeft door <code>git svn info</code> uit te voeren:</p>
+<pre><code>$ git svn info
+<span class="hljs-label">Path:</span> .
+<span class="hljs-label">URL:</span> https://schacon-test<span class="hljs-preprocessor">.googlecode</span><span class="hljs-preprocessor">.com</span>/svn/trunk
+Repository Root: https://schacon-test<span class="hljs-preprocessor">.googlecode</span><span class="hljs-preprocessor">.com</span>/svn
+Repository UUID: <span class="hljs-number">4</span>c93b258-<span class="hljs-number">373</span>f-<span class="hljs-number">11</span>de-be05-<span class="hljs-number">5</span>f7a86268029
+<span class="hljs-label">Revision:</span> <span class="hljs-number">87</span>
+Node Kind: directory
+<span class="hljs-label">Schedule:</span> normal
+Last Changed Author: schacon
+Last Changed Rev: <span class="hljs-number">87</span>
+Last Changed Date: <span class="hljs-number">2009</span>-<span class="hljs-number">05</span>-<span class="hljs-number">02</span> <span class="hljs-number">16</span>:<span class="hljs-number">07</span>:<span class="hljs-number">37</span> -<span class="hljs-number">0700</span> (Sat, <span class="hljs-number">02</span> May <span class="hljs-number">2009</span>)
+</code></pre><p>Dit is vergelijkbaar met <code>blame</code> en <code>log</code> in dat het offline draait en alleen up to date is vanaf de laatste keer dat je met de Subversion server gecommuniceerd hebt.</p>
+<h3 id="negeren-wat-subversion-negeert">Negeren wat Subversion negeert</h3>
+<p>Als je een Subversion repository cloned die ergens <code>svn:ignore</code> eigenschappen bevat, dan zul je waarschijnlijk overeenkomstige <code>.gitignore</code> bestanden in willen richten zodat je niet per ongeluk bestanden commit die niet hadden gemogen. <code>git svn</code> heeft twee commando&#39;s die met dit probleem helpen. De eerste is <code>git svn create-ignore</code> wat automatisch <code>.gitignore</code> bestanden voor je genereert zodat je het bij je volgende commit kan gebruiken.</p>
+<p>Het tweede commando is <code>git svn show-ignore</code> wat op stdout de regels afdrukt die je in een <code>.gitignore</code> bestand moet stoppen zodat je de output in het exclude bestand van je project kunt stoppen:</p>
+<pre><code><span class="hljs-variable">$ </span>git svn show-ignore &gt; .git/info/exclude
+</code></pre><p>Op die manier vervuil je het project niet met <code>.gitignore</code> bestanden. Dit is een goeie optie als je de enige Git gebruiker in een Subversion team bent, en je teamgenoten geen <code>.gitignore</code> bestanden in het project willen hebben.</p>
+<h2 id="git-svn-samenvatting">Git-Svn samenvatting</h2>
+<p>De <code>git svn</code> tools zijn nuttig als je voorlopig vast zit aan een Subversion server, of op een andere manier in een ontwikkelomgeving zit waar het draaien van een Subversion server noodzakelijk is. Je moet het echter beschouwen als een gemankteerde Git, anders loop je tegen problemen in de vertaling aan, die jou en je medewerkers in verwarring kunnen brengen. Om uit de problemen te blijven moet je deze regels volgen:</p>
+<ul>
+<li>Houdt een lineaire Git historie aan die geen merge commits bevat die gedaan zijn door <code>git merge</code>. Rebase al het werk dat je buiten je hoofd branch doet daarop; niet erin mergen.</li>
+<li>Geen aparte Git server inrichten en daar op samenwerken. Je kunt er een hebben om het maken van clones voor nieuwe developers te versnellen, maar push er niets terug in dat geen <code>git-svn-id</code> vermelding heeft. Je zou zelfs een <code>pre-receive</code> hook kunnen toevoegen, die elk commit bericht controleert op een <code>git-svn-id</code> en pushes weigert die commits zonder bevatten.</li>
+</ul>
+<p>Als je deze regels volgt dan kan werken met een Subversion server dragelijker zijn. Maar als het mogelijk is om over te gaan naar een echte Git server, dan kan dat je team een hoop meer profijt geven.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_en_andere_systemen/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_en_andere_systemen/naar_git_migreren.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

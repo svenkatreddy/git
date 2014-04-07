@@ -1,0 +1,1035 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Správa a obnova dat | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_pod_poklickou/shrnuti.html" />
+        
+        
+        <link rel="prev" href="../git_pod_poklickou/prenosove_protokoly.html" />
+        
+
+        <meta property="og:title" content="Správa a obnova dat | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="9.7" data-basepath=".." data-revision="1396895639019">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_pod_poklickou/sprava_a_obnova_dat.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="uvod/README.html">
+                
+                <a href="../uvod/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Úvod
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="uvod/sprava_verzi.html">
+                            
+                            <a href="../uvod/sprava_verzi.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Správa verzí
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="uvod/strucna_historie_systemu_git.html">
+                            
+                            <a href="../uvod/strucna_historie_systemu_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Stručná historie systému Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="uvod/zaklady_systemu_git.html">
+                            
+                            <a href="../uvod/zaklady_systemu_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Základy systému Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="uvod/instalace_systemu_git.html">
+                            
+                            <a href="../uvod/instalace_systemu_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Instalace systému Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="uvod/prvni_nastaveni_systemu_git.html">
+                            
+                            <a href="../uvod/prvni_nastaveni_systemu_git.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> První nastavení systému Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="uvod/kde_hledat_pomoc.html">
+                            
+                            <a href="../uvod/kde_hledat_pomoc.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Kde hledat pomoc
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="uvod/shrnuti.html">
+                            
+                            <a href="../uvod/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="zaklady_prace_se_systemem_git/README.html">
+                
+                <a href="../zaklady_prace_se_systemem_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Základy práce se systémem Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="zaklady_prace_se_systemem_git/ziskani_repozitare_git.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/ziskani_repozitare_git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Získání repozitáře Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="zaklady_prace_se_systemem_git/nahravani_zmen_do_repozitare.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/nahravani_zmen_do_repozitare.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Nahrávání změn do repozitáře
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="zaklady_prace_se_systemem_git/zobrazeni_historie_revizi.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/zobrazeni_historie_revizi.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Zobrazení historie revizí
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="zaklady_prace_se_systemem_git/ruseni_zmen.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/ruseni_zmen.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Rušení změn
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="zaklady_prace_se_systemem_git/prace_se_vzdalenymi_repozitari.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/prace_se_vzdalenymi_repozitari.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Práce se vzdálenými repozitáři
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="zaklady_prace_se_systemem_git/znacky.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/znacky.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Značky
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="zaklady_prace_se_systemem_git/tipy_a_triky.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/tipy_a_triky.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tipy a triky
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="zaklady_prace_se_systemem_git/shrnuti.html">
+                            
+                            <a href="../zaklady_prace_se_systemem_git/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="vetve_v_systemu_git/README.html">
+                
+                <a href="../vetve_v_systemu_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Větve v systému Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="vetve_v_systemu_git/co_je_to_vetev.html">
+                            
+                            <a href="../vetve_v_systemu_git/co_je_to_vetev.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Co je to větev
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="vetve_v_systemu_git/zaklady_vetveni_a_slucovani.html">
+                            
+                            <a href="../vetve_v_systemu_git/zaklady_vetveni_a_slucovani.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Základy větvení a slučování
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="vetve_v_systemu_git/sprava_vetvi.html">
+                            
+                            <a href="../vetve_v_systemu_git/sprava_vetvi.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Správa větví
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="vetve_v_systemu_git/moznosti_pri_praci_s_vetvemi.html">
+                            
+                            <a href="../vetve_v_systemu_git/moznosti_pri_praci_s_vetvemi.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Možnosti při práci s větvemi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="vetve_v_systemu_git/vzdalene_vetve.html">
+                            
+                            <a href="../vetve_v_systemu_git/vzdalene_vetve.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Vzdálené větve
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="vetve_v_systemu_git/preskladani.html">
+                            
+                            <a href="../vetve_v_systemu_git/preskladani.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Přeskládání
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="vetve_v_systemu_git/shrnuti.html">
+                            
+                            <a href="../vetve_v_systemu_git/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_na_serveru/README.html">
+                
+                <a href="../git_na_serveru/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git na serveru
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_na_serveru/protokoly.html">
+                            
+                            <a href="../git_na_serveru/protokoly.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Protokoly
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_na_serveru/jak_umistit_git_na_server.html">
+                            
+                            <a href="../git_na_serveru/jak_umistit_git_na_server.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Jak umístit Git na server
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_na_serveru/vygenerovani_verejneho_ssh_klice.html">
+                            
+                            <a href="../git_na_serveru/vygenerovani_verejneho_ssh_klice.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Vygenerování veřejného SSH klíče
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_na_serveru/nastaveni_serveru.html">
+                            
+                            <a href="../git_na_serveru/nastaveni_serveru.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Nastavení serveru
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_na_serveru/verejny_pristup.html">
+                            
+                            <a href="../git_na_serveru/verejny_pristup.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Veřejný přístup
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_na_serveru/gitweb.html">
+                            
+                            <a href="../git_na_serveru/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_na_serveru/gitosis.html">
+                            
+                            <a href="../git_na_serveru/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_na_serveru/gitolite.html">
+                            
+                            <a href="../git_na_serveru/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_na_serveru/demon_git.html">
+                            
+                            <a href="../git_na_serveru/demon_git.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Démon Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_na_serveru/hostovani_projektu_git.html">
+                            
+                            <a href="../git_na_serveru/hostovani_projektu_git.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Hostování projektů Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_na_serveru/shrnuti.html">
+                            
+                            <a href="../git_na_serveru/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="distribuovany_charakter_systemu_git/README.html">
+                
+                <a href="../distribuovany_charakter_systemu_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Distribuovaný charakter systému Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="distribuovany_charakter_systemu_git/distribuovane_pracovni_postupy.html">
+                            
+                            <a href="../distribuovany_charakter_systemu_git/distribuovane_pracovni_postupy.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Distribuované pracovní postupy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="distribuovany_charakter_systemu_git/prispivani_do_projektu.html">
+                            
+                            <a href="../distribuovany_charakter_systemu_git/prispivani_do_projektu.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Přispívání do projektu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="distribuovany_charakter_systemu_git/sprava_projektu.html">
+                            
+                            <a href="../distribuovany_charakter_systemu_git/sprava_projektu.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Správa projektu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="distribuovany_charakter_systemu_git/shrnuti.html">
+                            
+                            <a href="../distribuovany_charakter_systemu_git/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="nastroje_systemu_git/README.html">
+                
+                <a href="../nastroje_systemu_git/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Nástroje systému Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="nastroje_systemu_git/vyber_revize.html">
+                            
+                            <a href="../nastroje_systemu_git/vyber_revize.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Výběr revize
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="nastroje_systemu_git/interaktivni_priprava_k_zapsani.html">
+                            
+                            <a href="../nastroje_systemu_git/interaktivni_priprava_k_zapsani.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Interaktivní příprava k zapsání
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="nastroje_systemu_git/odlozeni.html">
+                            
+                            <a href="../nastroje_systemu_git/odlozeni.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Odložení
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="nastroje_systemu_git/prepis_historie.html">
+                            
+                            <a href="../nastroje_systemu_git/prepis_historie.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Přepis historie
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="nastroje_systemu_git/ladeni_v_systemu_git.html">
+                            
+                            <a href="../nastroje_systemu_git/ladeni_v_systemu_git.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Ladění v systému Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="nastroje_systemu_git/submoduly.html">
+                            
+                            <a href="../nastroje_systemu_git/submoduly.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Submoduly
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="nastroje_systemu_git/zacleneni_podstromu.html">
+                            
+                            <a href="../nastroje_systemu_git/zacleneni_podstromu.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Začlenění podstromu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="nastroje_systemu_git/shrnuti.html">
+                            
+                            <a href="../nastroje_systemu_git/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="individualni_prizpusobeni_systemu_git/README.html">
+                
+                <a href="../individualni_prizpusobeni_systemu_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Individuální přizpůsobení systému Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="individualni_prizpusobeni_systemu_git/konfigurace_systemu_git.html">
+                            
+                            <a href="../individualni_prizpusobeni_systemu_git/konfigurace_systemu_git.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Konfigurace systému Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="individualni_prizpusobeni_systemu_git/atributy_git.html">
+                            
+                            <a href="../individualni_prizpusobeni_systemu_git/atributy_git.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Atributy Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="individualni_prizpusobeni_systemu_git/zasuvne_moduly_git.html">
+                            
+                            <a href="../individualni_prizpusobeni_systemu_git/zasuvne_moduly_git.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Zásuvné moduly Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="individualni_prizpusobeni_systemu_git/priklad_standardu_kontrolovanych_systemem_git.html">
+                            
+                            <a href="../individualni_prizpusobeni_systemu_git/priklad_standardu_kontrolovanych_systemem_git.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Příklad standardů kontrolovaných systémem Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="individualni_prizpusobeni_systemu_git/shrnuti.html">
+                            
+                            <a href="../individualni_prizpusobeni_systemu_git/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_a_ostatni_systemy/README.html">
+                
+                <a href="../git_a_ostatni_systemy/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git a ostatní systémy
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_a_ostatni_systemy/git_a_subversion.html">
+                            
+                            <a href="../git_a_ostatni_systemy/git_a_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git a Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_a_ostatni_systemy/prechod_na_system_git.html">
+                            
+                            <a href="../git_a_ostatni_systemy/prechod_na_system_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Přechod na systém Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_a_ostatni_systemy/shrnuti.html">
+                            
+                            <a href="../git_a_ostatni_systemy/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git_pod_poklickou/README.html">
+                
+                <a href="../git_pod_poklickou/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Git pod pokličkou
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git_pod_poklickou/nizkourovnove_a_vysokourovnove_prikazy.html">
+                            
+                            <a href="../git_pod_poklickou/nizkourovnove_a_vysokourovnove_prikazy.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Nízkoúrovňové a vysokoúrovňové příkazy
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git_pod_poklickou/objekty_git.html">
+                            
+                            <a href="../git_pod_poklickou/objekty_git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Objekty Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git_pod_poklickou/reference_git.html">
+                            
+                            <a href="../git_pod_poklickou/reference_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Reference Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git_pod_poklickou/balickove_soubory.html">
+                            
+                            <a href="../git_pod_poklickou/balickove_soubory.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Balíčkové soubory
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git_pod_poklickou/refspec.html">
+                            
+                            <a href="../git_pod_poklickou/refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git_pod_poklickou/prenosove_protokoly.html">
+                            
+                            <a href="../git_pod_poklickou/prenosove_protokoly.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Přenosové protokoly
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git_pod_poklickou/sprava_a_obnova_dat.html">
+                            
+                            <a href="../git_pod_poklickou/sprava_a_obnova_dat.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Správa a obnova dat
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git_pod_poklickou/shrnuti.html">
+                            
+                            <a href="../git_pod_poklickou/shrnuti.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Shrnutí
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.9" data-path="git_pod_poklickou/poznamky_k_prekladu.html">
+                            
+                            <a href="../git_pod_poklickou/poznamky_k_prekladu.html">
+                                <i class="fa fa-check"></i> <b>9.9)</b> Poznámky k překladu
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 97.1830985915493%;min-width: 95.77464788732394%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../uvod/README.html" title="Úvod" class="chapter done new-chapter" data-progress="1" style="left: 1.408450704225352%;"></a>
+    
+        <a href="../uvod/sprava_verzi.html" title="Správa verzí" class="chapter done " data-progress="1.1" style="left: 2.816901408450704%;"></a>
+    
+        <a href="../uvod/strucna_historie_systemu_git.html" title="Stručná historie systému Git" class="chapter done " data-progress="1.2" style="left: 4.225352112676056%;"></a>
+    
+        <a href="../uvod/zaklady_systemu_git.html" title="Základy systému Git" class="chapter done " data-progress="1.3" style="left: 5.633802816901408%;"></a>
+    
+        <a href="../uvod/instalace_systemu_git.html" title="Instalace systému Git" class="chapter done " data-progress="1.4" style="left: 7.042253521126761%;"></a>
+    
+        <a href="../uvod/prvni_nastaveni_systemu_git.html" title="První nastavení systému Git" class="chapter done " data-progress="1.5" style="left: 8.450704225352112%;"></a>
+    
+        <a href="../uvod/kde_hledat_pomoc.html" title="Kde hledat pomoc" class="chapter done " data-progress="1.6" style="left: 9.859154929577464%;"></a>
+    
+        <a href="../uvod/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="1.7" style="left: 11.267605633802816%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/README.html" title="Základy práce se systémem Git" class="chapter done new-chapter" data-progress="2" style="left: 12.67605633802817%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/ziskani_repozitare_git.html" title="Získání repozitáře Git" class="chapter done " data-progress="2.1" style="left: 14.084507042253522%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/nahravani_zmen_do_repozitare.html" title="Nahrávání změn do repozitáře" class="chapter done " data-progress="2.2" style="left: 15.492957746478874%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/zobrazeni_historie_revizi.html" title="Zobrazení historie revizí" class="chapter done " data-progress="2.3" style="left: 16.901408450704224%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/ruseni_zmen.html" title="Rušení změn" class="chapter done " data-progress="2.4" style="left: 18.309859154929576%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/prace_se_vzdalenymi_repozitari.html" title="Práce se vzdálenými repozitáři" class="chapter done " data-progress="2.5" style="left: 19.718309859154928%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/znacky.html" title="Značky" class="chapter done " data-progress="2.6" style="left: 21.12676056338028%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/tipy_a_triky.html" title="Tipy a triky" class="chapter done " data-progress="2.7" style="left: 22.535211267605632%;"></a>
+    
+        <a href="../zaklady_prace_se_systemem_git/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="2.8" style="left: 23.943661971830984%;"></a>
+    
+        <a href="../vetve_v_systemu_git/README.html" title="Větve v systému Git" class="chapter done new-chapter" data-progress="3" style="left: 25.35211267605634%;"></a>
+    
+        <a href="../vetve_v_systemu_git/co_je_to_vetev.html" title="Co je to větev" class="chapter done " data-progress="3.1" style="left: 26.760563380281692%;"></a>
+    
+        <a href="../vetve_v_systemu_git/zaklady_vetveni_a_slucovani.html" title="Základy větvení a slučování" class="chapter done " data-progress="3.2" style="left: 28.169014084507044%;"></a>
+    
+        <a href="../vetve_v_systemu_git/sprava_vetvi.html" title="Správa větví" class="chapter done " data-progress="3.3" style="left: 29.577464788732396%;"></a>
+    
+        <a href="../vetve_v_systemu_git/moznosti_pri_praci_s_vetvemi.html" title="Možnosti při práci s větvemi" class="chapter done " data-progress="3.4" style="left: 30.985915492957748%;"></a>
+    
+        <a href="../vetve_v_systemu_git/vzdalene_vetve.html" title="Vzdálené větve" class="chapter done " data-progress="3.5" style="left: 32.394366197183096%;"></a>
+    
+        <a href="../vetve_v_systemu_git/preskladani.html" title="Přeskládání" class="chapter done " data-progress="3.6" style="left: 33.80281690140845%;"></a>
+    
+        <a href="../vetve_v_systemu_git/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="3.7" style="left: 35.2112676056338%;"></a>
+    
+        <a href="../git_na_serveru/README.html" title="Git na serveru" class="chapter done new-chapter" data-progress="4" style="left: 36.61971830985915%;"></a>
+    
+        <a href="../git_na_serveru/protokoly.html" title="Protokoly" class="chapter done " data-progress="4.1" style="left: 38.028169014084504%;"></a>
+    
+        <a href="../git_na_serveru/hostovani_projektu_git.html" title="Hostování projektů Git" class="chapter done " data-progress="4.10" style="left: 39.436619718309856%;"></a>
+    
+        <a href="../git_na_serveru/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="4.11" style="left: 40.84507042253521%;"></a>
+    
+        <a href="../git_na_serveru/jak_umistit_git_na_server.html" title="Jak umístit Git na server" class="chapter done " data-progress="4.2" style="left: 42.25352112676056%;"></a>
+    
+        <a href="../git_na_serveru/vygenerovani_verejneho_ssh_klice.html" title="Vygenerování veřejného SSH klíče" class="chapter done " data-progress="4.3" style="left: 43.66197183098591%;"></a>
+    
+        <a href="../git_na_serveru/nastaveni_serveru.html" title="Nastavení serveru" class="chapter done " data-progress="4.4" style="left: 45.070422535211264%;"></a>
+    
+        <a href="../git_na_serveru/verejny_pristup.html" title="Veřejný přístup" class="chapter done " data-progress="4.5" style="left: 46.478873239436616%;"></a>
+    
+        <a href="../git_na_serveru/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 47.88732394366197%;"></a>
+    
+        <a href="../git_na_serveru/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 49.29577464788732%;"></a>
+    
+        <a href="../git_na_serveru/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 50.70422535211268%;"></a>
+    
+        <a href="../git_na_serveru/demon_git.html" title="Démon Git" class="chapter done " data-progress="4.9" style="left: 52.11267605633803%;"></a>
+    
+        <a href="../distribuovany_charakter_systemu_git/README.html" title="Distribuovaný charakter systému Git" class="chapter done new-chapter" data-progress="5" style="left: 53.521126760563384%;"></a>
+    
+        <a href="../distribuovany_charakter_systemu_git/distribuovane_pracovni_postupy.html" title="Distribuované pracovní postupy" class="chapter done " data-progress="5.1" style="left: 54.929577464788736%;"></a>
+    
+        <a href="../distribuovany_charakter_systemu_git/prispivani_do_projektu.html" title="Přispívání do projektu" class="chapter done " data-progress="5.2" style="left: 56.33802816901409%;"></a>
+    
+        <a href="../distribuovany_charakter_systemu_git/sprava_projektu.html" title="Správa projektu" class="chapter done " data-progress="5.3" style="left: 57.74647887323944%;"></a>
+    
+        <a href="../distribuovany_charakter_systemu_git/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="5.4" style="left: 59.15492957746479%;"></a>
+    
+        <a href="../nastroje_systemu_git/README.html" title="Nástroje systému Git" class="chapter done new-chapter" data-progress="6" style="left: 60.563380281690144%;"></a>
+    
+        <a href="../nastroje_systemu_git/vyber_revize.html" title="Výběr revize" class="chapter done " data-progress="6.1" style="left: 61.971830985915496%;"></a>
+    
+        <a href="../nastroje_systemu_git/interaktivni_priprava_k_zapsani.html" title="Interaktivní příprava k zapsání" class="chapter done " data-progress="6.2" style="left: 63.38028169014085%;"></a>
+    
+        <a href="../nastroje_systemu_git/odlozeni.html" title="Odložení" class="chapter done " data-progress="6.3" style="left: 64.78873239436619%;"></a>
+    
+        <a href="../nastroje_systemu_git/prepis_historie.html" title="Přepis historie" class="chapter done " data-progress="6.4" style="left: 66.19718309859155%;"></a>
+    
+        <a href="../nastroje_systemu_git/ladeni_v_systemu_git.html" title="Ladění v systému Git" class="chapter done " data-progress="6.5" style="left: 67.6056338028169%;"></a>
+    
+        <a href="../nastroje_systemu_git/submoduly.html" title="Submoduly" class="chapter done " data-progress="6.6" style="left: 69.01408450704226%;"></a>
+    
+        <a href="../nastroje_systemu_git/zacleneni_podstromu.html" title="Začlenění podstromu" class="chapter done " data-progress="6.7" style="left: 70.4225352112676%;"></a>
+    
+        <a href="../nastroje_systemu_git/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="6.8" style="left: 71.83098591549296%;"></a>
+    
+        <a href="../individualni_prizpusobeni_systemu_git/README.html" title="Individuální přizpůsobení systému Git" class="chapter done new-chapter" data-progress="7" style="left: 73.2394366197183%;"></a>
+    
+        <a href="../individualni_prizpusobeni_systemu_git/konfigurace_systemu_git.html" title="Konfigurace systému Git" class="chapter done " data-progress="7.1" style="left: 74.64788732394366%;"></a>
+    
+        <a href="../individualni_prizpusobeni_systemu_git/atributy_git.html" title="Atributy Git" class="chapter done " data-progress="7.2" style="left: 76.05633802816901%;"></a>
+    
+        <a href="../individualni_prizpusobeni_systemu_git/zasuvne_moduly_git.html" title="Zásuvné moduly Git" class="chapter done " data-progress="7.3" style="left: 77.46478873239437%;"></a>
+    
+        <a href="../individualni_prizpusobeni_systemu_git/priklad_standardu_kontrolovanych_systemem_git.html" title="Příklad standardů kontrolovaných systémem Git" class="chapter done " data-progress="7.4" style="left: 78.87323943661971%;"></a>
+    
+        <a href="../individualni_prizpusobeni_systemu_git/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="7.5" style="left: 80.28169014084507%;"></a>
+    
+        <a href="../git_a_ostatni_systemy/README.html" title="Git a ostatní systémy" class="chapter done new-chapter" data-progress="8" style="left: 81.69014084507042%;"></a>
+    
+        <a href="../git_a_ostatni_systemy/git_a_subversion.html" title="Git a Subversion" class="chapter done " data-progress="8.1" style="left: 83.09859154929578%;"></a>
+    
+        <a href="../git_a_ostatni_systemy/prechod_na_system_git.html" title="Přechod na systém Git" class="chapter done " data-progress="8.2" style="left: 84.50704225352112%;"></a>
+    
+        <a href="../git_a_ostatni_systemy/shrnuti.html" title="Shrnutí" class="chapter done " data-progress="8.3" style="left: 85.91549295774648%;"></a>
+    
+        <a href="../git_pod_poklickou/README.html" title="Git pod pokličkou" class="chapter done new-chapter" data-progress="9" style="left: 87.32394366197182%;"></a>
+    
+        <a href="../git_pod_poklickou/nizkourovnove_a_vysokourovnove_prikazy.html" title="Nízkoúrovňové a vysokoúrovňové příkazy" class="chapter done " data-progress="9.1" style="left: 88.73239436619718%;"></a>
+    
+        <a href="../git_pod_poklickou/objekty_git.html" title="Objekty Git" class="chapter done " data-progress="9.2" style="left: 90.14084507042253%;"></a>
+    
+        <a href="../git_pod_poklickou/reference_git.html" title="Reference Git" class="chapter done " data-progress="9.3" style="left: 91.54929577464789%;"></a>
+    
+        <a href="../git_pod_poklickou/balickove_soubory.html" title="Balíčkové soubory" class="chapter done " data-progress="9.4" style="left: 92.95774647887323%;"></a>
+    
+        <a href="../git_pod_poklickou/refspec.html" title="Refspec" class="chapter done " data-progress="9.5" style="left: 94.36619718309859%;"></a>
+    
+        <a href="../git_pod_poklickou/prenosove_protokoly.html" title="Přenosové protokoly" class="chapter done " data-progress="9.6" style="left: 95.77464788732394%;"></a>
+    
+        <a href="../git_pod_poklickou/sprava_a_obnova_dat.html" title="Správa a obnova dat" class="chapter done " data-progress="9.7" style="left: 97.1830985915493%;"></a>
+    
+        <a href="../git_pod_poklickou/shrnuti.html" title="Shrnutí" class="chapter  " data-progress="9.8" style="left: 98.59154929577464%;"></a>
+    
+        <a href="../git_pod_poklickou/poznamky_k_prekladu.html" title="Poznámky k překladu" class="chapter  " data-progress="9.9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_966">
+                    
+                        <h1 id="spr-va-a-obnova-dat">Správa a obnova dat</h1>
+<p>Občas budete patrně nuceni přistoupit k menšímu úklidu – uvést repozitář do kompaktnější podoby, vyčistit importovaný repozitář nebo obnovit ztracenou práci. Tato část se na některé z těchto scénářů zaměří.</p>
+<h2 id="spr-va">Správa</h2>
+<p>Git čas od času automaticky spustí příkaz „auto gc“. Ve většině případů neprovede tento příkaz vůbec nic. Pokud však identifikuje příliš mnoho volných objektů (objektů nezabalených do balíčkového souboru) nebo balíčkových souborů, spustí Git plnou verzi příkazu <code>git gc</code>. Písmena <code>gc</code> jsou zkratkou anglického výrazu „garbage collect“ (sběr odpadků). Příkaz provádí hned několik věcí: sbírá všechny volné objekty a umisťuje je do balíčkových souborů, spojuje balíčkové soubory do jednoho velkého a odstraňuje objekty, jež nejsou dostupné z žádné revize a jsou starší několika měsíců.</p>
+<p>Příkaz auto gc můžete spustit také ručně:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">gc</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">auto</span>
+</code></pre><p>I tentokrát platí, že příkaz většinou neprovede nic. Aby Git spustil skutečný příkaz gc, musíte mít kolem 7000 volných objektů nebo více než 50 balíčkových souborů. Tyto hodnoty můžete změnit podle svých potřeb v konfiguračním nastavení <code>gc.auto</code> a <code>gc.autopacklimit</code>.</p>
+<p>Další operací, kterou <code>gc</code> provede, je zabalení referencí do jediného souboru. Řekněme, že váš repozitář obsahuje tyto větve a značky:</p>
+<pre><code>$ find <span class="hljs-preprocessor">.git</span>/refs -type f
+<span class="hljs-preprocessor">.git</span>/refs/heads/experiment
+<span class="hljs-preprocessor">.git</span>/refs/heads/master
+<span class="hljs-preprocessor">.git</span>/refs/tags/v1<span class="hljs-number">.0</span>
+<span class="hljs-preprocessor">.git</span>/refs/tags/v1<span class="hljs-number">.1</span>
+</code></pre><p>Spustíte-li příkaz <code>git gc</code>, tyto soubory z adresáře <code>refs</code> zmizí. Git je pro zvýšení účinnosti přesune do souboru <code>.git/packed-refs</code>, jenž má následující podobu:</p>
+<pre><code><span class="hljs-variable">$ </span>cat .git/packed-refs
+<span class="hljs-comment"># pack-refs with: peeled</span>
+cac0cab538b970a37ea1e769cbbde608743bc96d refs/heads/experiment
+ab1afef80fac8e34258ff41fc1b867c702daa24b refs/heads/master
+cac0cab538b970a37ea1e769cbbde608743bc96d refs/tags/v1.<span class="hljs-number">0</span>
+<span class="hljs-number">9585191</span>f37f7b0fb9444f35a9bf50de191beadc2 refs/tags/v1.<span class="hljs-number">1</span>
+^<span class="hljs-number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9
+</code></pre><p>Pokud některou referenci aktualizujete, Git nebude tento soubor upravovat, ale zapíše nový soubor do adresáře <code>refs/heads</code>. Je-li třeba získat hodnotu SHA pro konkrétní referenci, Git se tuto referenci pokusí vyhledat nejprve v adresáři <code>refs</code> a poté, jako záložní možnost, v souboru <code>packed-refs</code>. Pokud však nemůžete najít některou z referencí v adresáři <code>refs</code>, bude patrně v souboru <code>packed-refs</code>.</p>
+<p>Všimněte si také posledního řádku souboru, který začíná znakem <code>^</code>. Tento řádek znamená, že značka bezprostředně nad ním je anotovaná a tento řádek je revize, na niž tato anotovaná značka ukazuje.</p>
+<h2 id="obnova-dat">Obnova dat</h2>
+<p>Někdy se může stát, že nedopatřením přijdete o revizi Git. Většinou k tomu dochází tak, že násilím smažete větev, která uchovávala část vaší práce, a vy po čase zjistíte, že byste tuto větev přece jen potřebovali. Stejně tak jste mohli provést tvrdý reset větve a tím zavrhnout revize, z nichž nyní něco potřebujete. Pokud se už něco takového stane, jak dostanete své revize zpět?</p>
+<p>Uvedeme příklad, při němž resetujeme hlavní větev v testovacím repozitáři na jednu ze starších revizí a poté ztracené revize obnovíme. Nejprve se podíváme, kde se váš repozitář v současnosti nachází:</p>
+<pre><code>$ git log <span class="hljs-comment">--pretty=oneline</span>
+ab1afef80fac8e34258ff41fc1b867c702daa24b modified repo a bit
+484a59275031909e19aadb7c92262719cfcdf19a added repo.rb
+1a410efbd13591db07496601ebc7a059dd55cfe9 third <span class="hljs-operator"><span class="hljs-keyword">commit</span>
+cac0cab538b970a37ea1e769cbbde608743bc96d <span class="hljs-keyword">second</span> <span class="hljs-keyword">commit</span>
+fdf4fc3344e67ab068f836878b6c4951e3b15f3d <span class="hljs-keyword">first</span> <span class="hljs-keyword">commit</span></span>
+</code></pre><p>Nyní vrátíme větev <code>master</code> zpět na prostřední revizi:</p>
+<pre><code>$ git reset <span class="hljs-comment">--hard 1a410efbd13591db07496601ebc7a059dd55cfe9</span>
+HEAD <span class="hljs-keyword">is</span> now <span class="hljs-keyword">at</span> <span class="hljs-number">1</span>a410ef <span class="hljs-keyword">third</span> commit
+$ git <span class="hljs-command">log</span> <span class="hljs-comment">--pretty=oneline</span>
+<span class="hljs-number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9 <span class="hljs-keyword">third</span> commit
+cac0cab538b970a37ea1e769cbbde608743bc96d <span class="hljs-keyword">second</span> commit
+fdf4fc3344e67ab068f836878b6c4951e3b15f3d <span class="hljs-keyword">first</span> commit
+</code></pre><p>Účinně jsme se zbavili horních dvou revizí. Neexistuje žádná větev, z níž by byly tyto revize dostupné. Budete muset najít hodnotu SHA nejnovější revize a přidat větev, která na ni bude ukazovat. Problém tedy spočívá v určení hodnoty SHA nejnovější revize, protože nepředpokládáme, že si ji pamatujete.</p>
+<p>Nejrychlejší cestou často bývá použít nástroj <code>git reflog</code>. Git během vaší práce v tichosti zaznamenává, kde se nachází ukazatel HEAD (pokaždé, když se změní jeho pozice). Vždy když zapíšete revizi nebo změníte větve, je reflog aktualizován. Reflog se také aktualizuje s každým spuštěním příkazu <code>git update-ref</code> – o důvod víc používat tento příkaz a nezapisovat hodnotu SHA přímo do souborů referencí, jak už jsme uváděli v části „Reference Git“ v této kapitole. Spuštěním příkazu <code>git reflog</code> zjistíte, kde jste se nacházeli v libovolném okamžiku:</p>
+<pre><code>$ <span class="hljs-tag">git</span> <span class="hljs-tag">reflog</span>
+1<span class="hljs-tag">a410ef</span> <span class="hljs-tag">HEAD</span><span class="hljs-at_rule">@<span class="hljs-keyword">{0}:</span> <span class="hljs-number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9: updating HEAD
+ab1afef HEAD@</span>{1}: <span class="hljs-tag">ab1afef80fac8e34258ff41fc1b867c702daa24b</span>: <span class="hljs-tag">updating</span> <span class="hljs-tag">HEAD</span>
+</code></pre><p>Vidíme tu obě revize, jichž jsme se zbavili, ale není tu k nim mnoho informací. Chcete-li zobrazit stejné informace v užitečnějším formátu, můžete spustit příkaz <code>git log -g</code>, jímž získáte normální výstup příkazu log pro reflog.</p>
+<pre><code>$ git log -g
+commit <span class="hljs-number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9
+<span class="hljs-label">Reflog:</span> HEAD@{<span class="hljs-number">0</span>} (Scott Chacon &lt;schacon@gmail<span class="hljs-preprocessor">.com</span>&gt;)
+Reflog message: updating HEAD
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gmail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Fri May <span class="hljs-number">22</span> <span class="hljs-number">18</span>:<span class="hljs-number">22</span>:<span class="hljs-number">37</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    third commit
+
+commit ab1afef80fac8e34258ff41fc1b867c702daa24b
+<span class="hljs-label">Reflog:</span> HEAD@{<span class="hljs-number">1</span>} (Scott Chacon &lt;schacon@gmail<span class="hljs-preprocessor">.com</span>&gt;)
+Reflog message: updating HEAD
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gmail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Fri May <span class="hljs-number">22</span> <span class="hljs-number">18</span>:<span class="hljs-number">15</span>:<span class="hljs-number">24</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+     modified repo a bit
+</code></pre><p>Zdá se, že revize úplně dole je hledanou ztracenou revizí. Můžete ji obnovit tak, že na ní vytvoříte novou větev. Na revizi můžete vytvořit například větev <code>recover-branch</code> (ab1afef):</p>
+<pre><code>$ git branch recover-branch ab1afef
+$ git log <span class="hljs-comment">--pretty=oneline recover-branch</span>
+ab1afef80fac8e34258ff41fc1b867c702daa24b modified repo a bit
+484a59275031909e19aadb7c92262719cfcdf19a added repo.rb
+1a410efbd13591db07496601ebc7a059dd55cfe9 third <span class="hljs-operator"><span class="hljs-keyword">commit</span>
+cac0cab538b970a37ea1e769cbbde608743bc96d <span class="hljs-keyword">second</span> <span class="hljs-keyword">commit</span>
+fdf4fc3344e67ab068f836878b6c4951e3b15f3d <span class="hljs-keyword">first</span> <span class="hljs-keyword">commit</span></span>
+</code></pre><p>Výborně, nyní máte větev s názvem <code>recover-branch</code>, která se nachází na bývalé pozici větve <code>master</code>. První dvě revize jsou opět dostupné.
+Můžeme ale také uvažovat situaci, že ztracené revize nebyly ve výpisu reflog k nalezení. Tento stav můžeme simulovat tak, že odstraníme větev <code>recover-branch</code> a smažeme reflog. První dvě revize tak nejsou odnikud dostupné:</p>
+<pre><code>$ git branch <span class="hljs-attribute">-D</span> recover<span class="hljs-attribute">-branch</span>
+$ rm <span class="hljs-attribute">-Rf</span> <span class="hljs-built_in">.</span>git/logs<span class="hljs-subst">/</span>
+</code></pre><p>Protože se data pro reflog uchovávají v adresáři <code>.git/logs/</code>, nemáte evidentně žádný reflog. Jak lze tedy v tuto chvíli ztracenou revizi obnovit? Jednou z možností je použít nástroj <code>git fsck</code>, který zkontroluje integritu vaší databáze. Pokud příkaz spustíte s parametrem <code>--full</code>, zobrazí vám všechny objekty, na něž neukazuje žádný jiný objekt:</p>
+<pre><code>$ git fsck <span class="hljs-comment">--full</span>
+dangling blob d670460b4b4aece5915caf5c68d12f560a9fe3e4
+dangling <span class="hljs-operator"><span class="hljs-keyword">commit</span> ab1afef80fac8e34258ff41fc1b867c702daa24b
+dangling tree aea790b9a58f6cf6f2804eeac9f0abbe9631e4c9
+dangling blob <span class="hljs-number">7108</span>f7ecb345ee9d0084193f147cdad4d2998293</span>
+</code></pre><p>V tomto případě je vaše ztracená revize uvedena výrazem „dangling commit“. Nyní ji můžete obnovit stejným způsobem: přidejte novou větev, která bude ukazovat na její SHA.</p>
+<h2 id="odstra-ov-n-objekt-">Odstraňování objektů</h2>
+<p>Systém Git nabízí velké množství úžasných funkcí a možností. Je však jedna věc, která vám může způsobovat problém. Je jí fakt, že příkaz <code>git clone</code> stáhne vždy celou historii projektu, všechny verze všech souborů.</p>
+<p>To je v pořádku, je-li projektem zdrojový kód, neboť Git je vysoce optimalizován ke kompresi těchto dat. Pokud však někdo v kterémkoli místě historie projektu přidal jeden obrovský soubor, bude se stahovat při každém dalším klonování repozitáře. Nic na tom nezmění, ani pokud tento velký soubor hned v příští revizi z projektu odstraníte. Protože se nachází v historii, stále bude součástí všech klonů. To může způsobovat velké problémy, pokud konvertujete repozitáře Subversion nebo Perforce do systému Git. Protože v těchto systémech nestahujete celou historii, nebývá s vkládáním velkých souborů problém. Pokud provedete import do systému Git z jiného systému nebo jiným způsobem, zjistíte, že je váš repozitář výrazně větší, než by měl být. Nabízím návod, jak vyhledat a odstranit velké objekty.</p>
+<p>Dejte však pozor, tento postup může být pro vaši historii revizí katastrofický. Přepíše všechny objekty revizí směrem dolů od nejstaršího stromu, který musíte pro odstranění reference na velký soubor upravit. Pokud po této metodě sáhnete hned po importu, než mohl kdokoli založit na revizi svou práci, nemusíte se ničeho obávat. V opačném případě budete muset upozornit všechny přispěvatele, že musí přeskládat svou práci na vaše nové revize.</p>
+<p>Vyzkoušíme to na situaci, kdy do svého testovacího repozitáře vložíte velký soubor, v následující revizi ho odstraníte, vyhledáte ho a trvale ho z repozitáře odstraníte. Nejprve do historie přidejte velký objekt:</p>
+<pre><code><span class="hljs-variable">$ </span>curl <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/kernel.org/pub</span><span class="hljs-regexp">/software/scm</span><span class="hljs-regexp">/git/git</span>-<span class="hljs-number">1.6</span>.<span class="hljs-number">3.1</span>.tar.bz2 &gt; git.tbz2
+<span class="hljs-variable">$ </span>git add git.tbz2
+<span class="hljs-variable">$ </span>git commit -am <span class="hljs-string">'added git tarball'</span>
+[master <span class="hljs-number">6</span>df764<span class="hljs-number">0</span>] added git tarball
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">0</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+ create mode <span class="hljs-number">100644</span> git.tbz2
+</code></pre><p>Ale ne! Vlastně jste nechtěli do projektu vložit tak velký tarball. Raději se ho zbavme:</p>
+<pre><code><span class="hljs-variable">$ </span>git rm git.tbz2
+rm <span class="hljs-string">'git.tbz2'</span>
+<span class="hljs-variable">$ </span>git commit -m <span class="hljs-string">'oops - removed large tarball'</span>
+[master da3f30d] oops - removed large tarball
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">0</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+ delete mode <span class="hljs-number">100644</span> git.tbz2
+</code></pre><p>Teď provedete <code>gc</code> své databáze, protože chcete zjistit, kolik místa je obsazeno:</p>
+<pre><code>$ git gc
+Counting objects: <span class="hljs-number">21</span>, <span class="hljs-keyword">done</span>.
+Delta compression using <span class="hljs-number">2</span> threads.
+Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">16</span>/<span class="hljs-number">16</span>), <span class="hljs-keyword">done</span>.
+Writing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">21</span>/<span class="hljs-number">21</span>), <span class="hljs-keyword">done</span>.
+Total <span class="hljs-number">21</span> (delta <span class="hljs-number">3</span>), reused <span class="hljs-number">15</span> (delta <span class="hljs-number">1</span>)
+</code></pre><p>Chcete-li rychle zjistit, kolik místa je obsazeno, můžete použít příkaz <code>count-objects</code>:</p>
+<pre><code>$ git count<span class="hljs-attribute">-objects</span> <span class="hljs-attribute">-v</span>
+count: <span class="hljs-number">4</span>
+size: <span class="hljs-number">16</span>
+<span class="hljs-keyword">in</span><span class="hljs-attribute">-pack</span>: <span class="hljs-number">21</span>
+packs: <span class="hljs-number">1</span>
+size<span class="hljs-attribute">-pack</span>: <span class="hljs-number">2016</span>
+prune<span class="hljs-attribute">-packable</span>: <span class="hljs-number">0</span>
+garbage: <span class="hljs-number">0</span>
+</code></pre><p>Řádek <code>size-pack</code> uvádí velikost vašich balíčkových souborů v kilobytech, využity jsou tedy 2 MB. Před zapsáním poslední revize jste využívali přibližně 2 kB. Je tedy jasné, že odstranění souboru z předchozí revize ho neodstranilo z historie. Pokaždé, když bude někdo tento repozitář klonovat, bude muset pro získání malinkého projektu naklonovat celé 2 MB jen proto, že jste jednou omylem přidali velký soubor. Proto ho raději odstraníme.</p>
+<p>Nejprve ho budete muset najít. V tomto případě víte, o jaký soubor se jedná. Můžeme ale předpokládat, že to nevíte. Jak se dá zjistit, který soubor nebo soubory zabírají tolik místa? Spustíte-li příkaz <code>git gc</code>, všechny objekty jsou v balíčkovém souboru. Velké objekty lze identifikovat spuštěním jiného nízkoúrovňového příkazu, <code>git verify-pack</code>, a seřazením podle třetího pole ve výpisu, v němž je uvedena velikost souboru. Na výpis můžete rovněž použít příkaz <code>tail</code>, neboť vás beztak zajímá pouze několik posledních (největších) souborů:</p>
+<pre><code>$ git verify<span class="hljs-attribute">-pack</span> <span class="hljs-attribute">-v</span> <span class="hljs-built_in">.</span>git/objects/pack/pack<span class="hljs-subst">-</span><span class="hljs-number">3</span>f8c0<span class="hljs-attribute">...</span>bb<span class="hljs-built_in">.</span>idx <span class="hljs-subst">|</span> sort <span class="hljs-attribute">-k</span> <span class="hljs-number">3</span> <span class="hljs-attribute">-n</span> <span class="hljs-subst">|</span> tail <span class="hljs-subst">-</span><span class="hljs-number">3</span>
+e3f094f522629ae358806b17daf78246c27c007b blob   <span class="hljs-number">1486</span> <span class="hljs-number">734</span> <span class="hljs-number">4667</span>
+<span class="hljs-number">05408</span>d195263d853f09dca71d55116663690c27c blob   <span class="hljs-number">12908</span> <span class="hljs-number">3478</span> <span class="hljs-number">1189</span>
+<span class="hljs-number">7</span>a9eb2fba2b1811321254ac360970fc169ba2330 blob   <span class="hljs-number">2056716</span> <span class="hljs-number">2056872</span> <span class="hljs-number">5401</span>
+</code></pre><p>Hledaný velký objekt se nachází úplně dole: 2 MB. Chcete-li zjistit, o jaký soubor se jedná, můžete použít příkaz <code>rev-list</code>, který jsme používali už v kapitole 7. Zadáte-li k příkazu <code>rev-list</code> parametr <code>--objects</code>, výpis bude obsahovat všechny hodnoty SHA revizí a blobů s cestami k souborům, které jsou s nimi asociovány. Tuto kombinaci můžete použít k nalezení názvu hledaného blobu:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">rev</span><span class="hljs-literal">-</span><span class="hljs-comment">list</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">objects</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">all</span> <span class="hljs-comment">|</span> <span class="hljs-comment">grep</span> <span class="hljs-comment">7a9eb2fb</span>
+<span class="hljs-comment">7a9eb2fba2b1811321254ac360970fc169ba2330</span> <span class="hljs-comment">git</span><span class="hljs-string">.</span><span class="hljs-comment">tbz2</span>
+</code></pre><p>Nyní potřebujete odstranit tento soubor ze všech minulých stromů. Pomocí snadného příkazu lze zjistit, jaké revize tento soubor změnil:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">log</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">pretty=oneline</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">branches</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span> <span class="hljs-comment">git</span><span class="hljs-string">.</span><span class="hljs-comment">tbz2</span>
+<span class="hljs-comment">da3f30d019005479c99eb4c3406225613985a1db</span> <span class="hljs-comment">oops</span> <span class="hljs-literal">-</span> <span class="hljs-comment">removed</span> <span class="hljs-comment">large</span> <span class="hljs-comment">tarball</span>
+<span class="hljs-comment">6df764092f3e7c8f5f94cbe08ee5cf42e92a0289</span> <span class="hljs-comment">added</span> <span class="hljs-comment">git</span> <span class="hljs-comment">tarball</span>
+</code></pre><p>Chcete-li tento soubor kompletně odstranit z historie Git, budete muset přepsat všechny revize od <code>6df76</code> směrem dolů. Použijte k tomu příkaz <code>filter-branch</code>, s nímž jsme se seznámili v kapitole 6:</p>
+<pre><code>$ git <span class="hljs-built_in">filter</span>-branch <span class="hljs-comment">--index-filter \</span>
+   <span class="hljs-string">'git rm --cached --ignore-unmatch git.tbz2'</span> <span class="hljs-comment">-- 6df7640^..</span>
+Rewrite <span class="hljs-number">6</span>df764092f3e7c8f5f94cbe08ee5cf42e92a0289 (<span class="hljs-number">1</span>/<span class="hljs-number">2</span>)rm <span class="hljs-string">'git.tbz2'</span>
+Rewrite da3f30d019005479c99eb4c3406225613985a1db (<span class="hljs-number">2</span>/<span class="hljs-number">2</span>)
+Ref <span class="hljs-string">'refs/heads/master'</span> was rewritten
+</code></pre><p>Parametr <code>--index-filter</code> je podobný parametru <code>--tree-filter</code>, který jsme používali v kapitole 6, jen s tím rozdílem, že příkazem nezměníte soubory načtené na disku, ale oblast připravených změn nebo-li index. Nepomůže odstranit konkrétní soubor příkazem <code>rm file</code> nebo podobným. Odstraňte ho raději příkazem <code>git rm --cached</code> – soubor musíte odstranit z indexu, ne z disku. Důvodem je rychlost. Git nemusí před spuštěním filtru provádět checkout každé jednotlivé revize na disk a celý proces je tak mnohem, mnohem rychlejší. Pokud chcete, můžete provést stejný úkon i pomocí parametru <code>--tree-filter</code>. Zadáte-li k příkazu <code>git rm</code> parametr <code>--ignore-unmatch</code>, nařídíte systému Git, aby nepovažoval za chybu, jestliže nenajde vzor, který se snažíte odstranit. A konečně požádáte příkaz <code>filter-branch</code>, aby přepsal historii až od revize <code>6df7640</code> dále, neboť víte, že tady problém začíná. Bez této konkretizace začne proces od začátku a bude trvat zbytečně dlouho.</p>
+<p>Vaše historie už neobsahuje referenci na problémový soubor. Obsahuje ho však stále ještě reflog a v adresáři <code>.git/refs/original</code> také nová sada referencí, které Git přidal při spuštění příkazu <code>filter-branch</code>. Budete je proto muset odstranit a databázi znovu zabalit. Před novým zabalením je třeba odstranit vše, co na tyto staré revize ukazuje:</p>
+<pre><code><span class="hljs-variable">$ </span>rm -<span class="hljs-constant">Rf</span> .git/refs/original
+<span class="hljs-variable">$ </span>rm -<span class="hljs-constant">Rf</span> .git/logs/
+<span class="hljs-variable">$ </span>git gc
+<span class="hljs-constant">Counting</span> <span class="hljs-symbol">objects:</span> <span class="hljs-number">19</span>, done.
+<span class="hljs-constant">Delta</span> compression using <span class="hljs-number">2</span> threads.
+<span class="hljs-constant">Compressing</span> <span class="hljs-symbol">objects:</span> <span class="hljs-number">100</span>% (<span class="hljs-number">14</span>/<span class="hljs-number">14</span>), done.
+<span class="hljs-constant">Writing</span> <span class="hljs-symbol">objects:</span> <span class="hljs-number">100</span>% (<span class="hljs-number">19</span>/<span class="hljs-number">19</span>), done.
+<span class="hljs-constant">Total</span> <span class="hljs-number">19</span> (delta <span class="hljs-number">3</span>), reused <span class="hljs-number">16</span> (delta <span class="hljs-number">1</span>)
+</code></pre><p>Podívejme se, kolik místa jste ušetřili.</p>
+<pre><code>$ git count<span class="hljs-attribute">-objects</span> <span class="hljs-attribute">-v</span>
+count: <span class="hljs-number">8</span>
+size: <span class="hljs-number">2040</span>
+<span class="hljs-keyword">in</span><span class="hljs-attribute">-pack</span>: <span class="hljs-number">19</span>
+packs: <span class="hljs-number">1</span>
+size<span class="hljs-attribute">-pack</span>: <span class="hljs-number">7</span>
+prune<span class="hljs-attribute">-packable</span>: <span class="hljs-number">0</span>
+garbage: <span class="hljs-number">0</span>
+</code></pre><p>Velikost zabaleného repozitáře byla zredukována na 7 kB, což je jistě lepší než 2 MB. Podle hodnoty velikosti je vidět, že se velký objekt stále ještě nachází mezi volnými objekty, a nebyl tedy odstraněn. Nebude ale součástí přenášených dat při odesílání nebo následném klonování, což je pro nás rozhodující. Pokud jste chtěli, mohli jste objekt zcela odstranit příkazem <code>git prune --expire</code>.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_pod_poklickou/prenosove_protokoly.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_pod_poklickou/shrnuti.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

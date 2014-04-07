@@ -1,0 +1,1006 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Gitosis | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_sur_le_serveur/gitolite.html" />
+        
+        
+        <link rel="prev" href="../git_sur_le_serveur/gitweb.html" />
+        
+
+        <meta property="og:title" content="Gitosis | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="4.7" data-basepath=".." data-revision="1396895631612">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_sur_le_serveur/gitosis.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="personnalisation_de_git/README.html">
+                
+                <a href="../personnalisation_de_git/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Personnalisation de Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="personnalisation_de_git/configuration_de_git.html">
+                            
+                            <a href="../personnalisation_de_git/configuration_de_git.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Configuration de Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="personnalisation_de_git/attributs_git.html">
+                            
+                            <a href="../personnalisation_de_git/attributs_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Attributs Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="personnalisation_de_git/crochets_git.html">
+                            
+                            <a href="../personnalisation_de_git/crochets_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Crochets Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="personnalisation_de_git/exemple_de_politique_geree_par_git.html">
+                            
+                            <a href="../personnalisation_de_git/exemple_de_politique_geree_par_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Exemple de politique gérée par Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="personnalisation_de_git/resume.html">
+                            
+                            <a href="../personnalisation_de_git/resume.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Résumé
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="demarrage_rapide/README.html">
+                
+                <a href="../demarrage_rapide/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Démarrage rapide
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="demarrage_rapide/a_propos_de_la_gestion_de_version.html">
+                            
+                            <a href="../demarrage_rapide/a_propos_de_la_gestion_de_version.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> À propos de la gestion de version
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="demarrage_rapide/une_rapide_histoire_de_git.html">
+                            
+                            <a href="../demarrage_rapide/une_rapide_histoire_de_git.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Une rapide histoire de Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="demarrage_rapide/rudiments_de_git.html">
+                            
+                            <a href="../demarrage_rapide/rudiments_de_git.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Rudiments de Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="demarrage_rapide/installation_de_git.html">
+                            
+                            <a href="../demarrage_rapide/installation_de_git.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Installation de Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="demarrage_rapide/parametrage_a_la_premiere_utilisation_de_git.html">
+                            
+                            <a href="../demarrage_rapide/parametrage_a_la_premiere_utilisation_de_git.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Paramétrage à la première utilisation de Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="demarrage_rapide/obtenir_de_laide.html">
+                            
+                            <a href="../demarrage_rapide/obtenir_de_laide.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Obtenir de l&#39;aide
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="demarrage_rapide/resume.html">
+                            
+                            <a href="../demarrage_rapide/resume.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Résumé
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="les_branches_avec_git/README.html">
+                
+                <a href="../les_branches_avec_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Les branches avec Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="les_branches_avec_git/ce_quest_une_branche.html">
+                            
+                            <a href="../les_branches_avec_git/ce_quest_une_branche.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Ce qu&#39;est une branche
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="les_branches_avec_git/brancher_et_fusionner_les_bases.html">
+                            
+                            <a href="../les_branches_avec_git/brancher_et_fusionner_les_bases.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Brancher et fusionner : les bases
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="les_branches_avec_git/gestion_de_branches.html">
+                            
+                            <a href="../les_branches_avec_git/gestion_de_branches.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Gestion de branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="les_branches_avec_git/travailler_avec_les_branches.html">
+                            
+                            <a href="../les_branches_avec_git/travailler_avec_les_branches.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Travailler avec les branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="les_branches_avec_git/les_branches_distantes.html">
+                            
+                            <a href="../les_branches_avec_git/les_branches_distantes.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Les branches distantes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="les_branches_avec_git/rebaser.html">
+                            
+                            <a href="../les_branches_avec_git/rebaser.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebaser
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="les_branches_avec_git/resume.html">
+                            
+                            <a href="../les_branches_avec_git/resume.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Résumé
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_sur_le_serveur/README.html">
+                
+                <a href="../git_sur_le_serveur/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git sur le serveur
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_sur_le_serveur/protocoles.html">
+                            
+                            <a href="../git_sur_le_serveur/protocoles.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Protocoles
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_sur_le_serveur/installation_de_git_sur_un_serveur.html">
+                            
+                            <a href="../git_sur_le_serveur/installation_de_git_sur_un_serveur.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Installation de Git sur un serveur
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_sur_le_serveur/generation_des_cles_publiques_ssh.html">
+                            
+                            <a href="../git_sur_le_serveur/generation_des_cles_publiques_ssh.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Génération des clés publiques SSH
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_sur_le_serveur/mise_en_place_du_serveur.html">
+                            
+                            <a href="../git_sur_le_serveur/mise_en_place_du_serveur.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Mise en place du serveur
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_sur_le_serveur/acces_public.html">
+                            
+                            <a href="../git_sur_le_serveur/acces_public.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Accès public
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_sur_le_serveur/gitweb.html">
+                            
+                            <a href="../git_sur_le_serveur/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_sur_le_serveur/gitosis.html">
+                            
+                            <a href="../git_sur_le_serveur/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_sur_le_serveur/gitolite.html">
+                            
+                            <a href="../git_sur_le_serveur/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_sur_le_serveur/le_daemon_git.html">
+                            
+                            <a href="../git_sur_le_serveur/le_daemon_git.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Le *daemon* Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_sur_le_serveur/git_heberge.html">
+                            
+                            <a href="../git_sur_le_serveur/git_heberge.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git hébergé
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_sur_le_serveur/resume.html">
+                            
+                            <a href="../git_sur_le_serveur/resume.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Résumé
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="git_distribue/README.html">
+                
+                <a href="../git_distribue/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Git distribué
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="git_distribue/developpements_distribues.html">
+                            
+                            <a href="../git_distribue/developpements_distribues.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Développements distribués
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="git_distribue/contribution_a_un_projet.html">
+                            
+                            <a href="../git_distribue/contribution_a_un_projet.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Contribution à un projet
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="git_distribue/maintenance_dun_projet.html">
+                            
+                            <a href="../git_distribue/maintenance_dun_projet.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Maintenance d&#39;un projet
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="git_distribue/resume.html">
+                            
+                            <a href="../git_distribue/resume.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Résumé
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="utilitaires_git/README.html">
+                
+                <a href="../utilitaires_git/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Utilitaires Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="utilitaires_git/selection_des_versions.html">
+                            
+                            <a href="../utilitaires_git/selection_des_versions.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Sélection des versions
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="utilitaires_git/indexation_interactive.html">
+                            
+                            <a href="../utilitaires_git/indexation_interactive.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Indexation interactive
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="utilitaires_git/le_remisage.html">
+                            
+                            <a href="../utilitaires_git/le_remisage.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Le remisage
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="utilitaires_git/reecrire_lhistorique.html">
+                            
+                            <a href="../utilitaires_git/reecrire_lhistorique.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Réécrire l&#39;historique
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="utilitaires_git/deboguer_avec_git.html">
+                            
+                            <a href="../utilitaires_git/deboguer_avec_git.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Deboguer avec Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="utilitaires_git/sous_modules.html">
+                            
+                            <a href="../utilitaires_git/sous_modules.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Sous-modules
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="utilitaires_git/fusion_de_sous_arborescences.html">
+                            
+                            <a href="../utilitaires_git/fusion_de_sous_arborescences.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Fusion de sous-arborescences
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="utilitaires_git/resume.html">
+                            
+                            <a href="../utilitaires_git/resume.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Résumé
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="les_bases_de_git/README.html">
+                
+                <a href="../les_bases_de_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Les bases de Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="les_bases_de_git/demarrer_un_depot_git.html">
+                            
+                            <a href="../les_bases_de_git/demarrer_un_depot_git.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Démarrer un dépôt Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="les_bases_de_git/enregistrer_des_modifications_dans_le_depot.html">
+                            
+                            <a href="../les_bases_de_git/enregistrer_des_modifications_dans_le_depot.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Enregistrer des modifications dans le dépôt
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="les_bases_de_git/visualiser_lhistorique_des_validations.html">
+                            
+                            <a href="../les_bases_de_git/visualiser_lhistorique_des_validations.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Visualiser l&#39;historique des validations
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="les_bases_de_git/annuler_des_actions.html">
+                            
+                            <a href="../les_bases_de_git/annuler_des_actions.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Annuler des actions
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="les_bases_de_git/travailler_avec_des_depots_distants.html">
+                            
+                            <a href="../les_bases_de_git/travailler_avec_des_depots_distants.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Travailler avec des dépôts distants
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.6" data-path="les_bases_de_git/etiquetage.html">
+                            
+                            <a href="../les_bases_de_git/etiquetage.html">
+                                <i class="fa fa-check"></i> <b>7.6)</b> Étiquetage
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.7" data-path="les_bases_de_git/trucs_et_astuces.html">
+                            
+                            <a href="../les_bases_de_git/trucs_et_astuces.html">
+                                <i class="fa fa-check"></i> <b>7.7)</b> Trucs et astuces
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.8" data-path="les_bases_de_git/resume.html">
+                            
+                            <a href="../les_bases_de_git/resume.html">
+                                <i class="fa fa-check"></i> <b>7.8)</b> Résumé
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_et_les_autres_systemes/README.html">
+                
+                <a href="../git_et_les_autres_systemes/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git et les autres systèmes
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_et_les_autres_systemes/git_et_subversion.html">
+                            
+                            <a href="../git_et_les_autres_systemes/git_et_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git et Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_et_les_autres_systemes/migrer_sur_git.html">
+                            
+                            <a href="../git_et_les_autres_systemes/migrer_sur_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Migrer sur Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_et_les_autres_systemes/resume.html">
+                            
+                            <a href="../git_et_les_autres_systemes/resume.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Résumé
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="les_tripes_de_git/README.html">
+                
+                <a href="../les_tripes_de_git/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Les tripes de Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="les_tripes_de_git/plomberie_et_porcelaine.html">
+                            
+                            <a href="../les_tripes_de_git/plomberie_et_porcelaine.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Plomberie et porcelaine
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="les_tripes_de_git/les_objets_git.html">
+                            
+                            <a href="../les_tripes_de_git/les_objets_git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Les objets Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="les_tripes_de_git/references_git.html">
+                            
+                            <a href="../les_tripes_de_git/references_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Références Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="les_tripes_de_git/fichiers_groupes.html">
+                            
+                            <a href="../les_tripes_de_git/fichiers_groupes.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Fichiers groupés
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="les_tripes_de_git/les_references_specifiques.html">
+                            
+                            <a href="../les_tripes_de_git/les_references_specifiques.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> Les références spécifiques
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="les_tripes_de_git/protocoles_de_transfert.html">
+                            
+                            <a href="../les_tripes_de_git/protocoles_de_transfert.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Protocoles de transfert
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="les_tripes_de_git/maintenance_et_recuperation_de_donnees.html">
+                            
+                            <a href="../les_tripes_de_git/maintenance_et_recuperation_de_donnees.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Maintenance et récupération de données
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="les_tripes_de_git/resume.html">
+                            
+                            <a href="../les_tripes_de_git/resume.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Résumé
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 45.714285714285715%;min-width: 44.285714285714285%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../personnalisation_de_git/README.html" title="Personnalisation de Git" class="chapter done new-chapter" data-progress="1" style="left: 1.4285714285714286%;"></a>
+    
+        <a href="../personnalisation_de_git/configuration_de_git.html" title="Configuration de Git" class="chapter done " data-progress="1.1" style="left: 2.857142857142857%;"></a>
+    
+        <a href="../personnalisation_de_git/attributs_git.html" title="Attributs Git" class="chapter done " data-progress="1.2" style="left: 4.285714285714286%;"></a>
+    
+        <a href="../personnalisation_de_git/crochets_git.html" title="Crochets Git" class="chapter done " data-progress="1.3" style="left: 5.714285714285714%;"></a>
+    
+        <a href="../personnalisation_de_git/exemple_de_politique_geree_par_git.html" title="Exemple de politique gérée par Git" class="chapter done " data-progress="1.4" style="left: 7.142857142857143%;"></a>
+    
+        <a href="../personnalisation_de_git/resume.html" title="Résumé" class="chapter done " data-progress="1.5" style="left: 8.571428571428571%;"></a>
+    
+        <a href="../demarrage_rapide/README.html" title="Démarrage rapide" class="chapter done new-chapter" data-progress="2" style="left: 10%;"></a>
+    
+        <a href="../demarrage_rapide/a_propos_de_la_gestion_de_version.html" title="À propos de la gestion de version" class="chapter done " data-progress="2.1" style="left: 11.428571428571429%;"></a>
+    
+        <a href="../demarrage_rapide/une_rapide_histoire_de_git.html" title="Une rapide histoire de Git" class="chapter done " data-progress="2.2" style="left: 12.857142857142858%;"></a>
+    
+        <a href="../demarrage_rapide/rudiments_de_git.html" title="Rudiments de Git" class="chapter done " data-progress="2.3" style="left: 14.285714285714286%;"></a>
+    
+        <a href="../demarrage_rapide/installation_de_git.html" title="Installation de Git" class="chapter done " data-progress="2.4" style="left: 15.714285714285714%;"></a>
+    
+        <a href="../demarrage_rapide/parametrage_a_la_premiere_utilisation_de_git.html" title="Paramétrage à la première utilisation de Git" class="chapter done " data-progress="2.5" style="left: 17.142857142857142%;"></a>
+    
+        <a href="../demarrage_rapide/obtenir_de_laide.html" title="Obtenir de l&#39;aide" class="chapter done " data-progress="2.6" style="left: 18.571428571428573%;"></a>
+    
+        <a href="../demarrage_rapide/resume.html" title="Résumé" class="chapter done " data-progress="2.7" style="left: 20%;"></a>
+    
+        <a href="../les_branches_avec_git/README.html" title="Les branches avec Git" class="chapter done new-chapter" data-progress="3" style="left: 21.428571428571427%;"></a>
+    
+        <a href="../les_branches_avec_git/ce_quest_une_branche.html" title="Ce qu&#39;est une branche" class="chapter done " data-progress="3.1" style="left: 22.857142857142858%;"></a>
+    
+        <a href="../les_branches_avec_git/brancher_et_fusionner_les_bases.html" title="Brancher et fusionner : les bases" class="chapter done " data-progress="3.2" style="left: 24.285714285714285%;"></a>
+    
+        <a href="../les_branches_avec_git/gestion_de_branches.html" title="Gestion de branches" class="chapter done " data-progress="3.3" style="left: 25.714285714285715%;"></a>
+    
+        <a href="../les_branches_avec_git/travailler_avec_les_branches.html" title="Travailler avec les branches" class="chapter done " data-progress="3.4" style="left: 27.142857142857142%;"></a>
+    
+        <a href="../les_branches_avec_git/les_branches_distantes.html" title="Les branches distantes" class="chapter done " data-progress="3.5" style="left: 28.571428571428573%;"></a>
+    
+        <a href="../les_branches_avec_git/rebaser.html" title="Rebaser" class="chapter done " data-progress="3.6" style="left: 30%;"></a>
+    
+        <a href="../les_branches_avec_git/resume.html" title="Résumé" class="chapter done " data-progress="3.7" style="left: 31.428571428571427%;"></a>
+    
+        <a href="../git_sur_le_serveur/README.html" title="Git sur le serveur" class="chapter done new-chapter" data-progress="4" style="left: 32.857142857142854%;"></a>
+    
+        <a href="../git_sur_le_serveur/protocoles.html" title="Protocoles" class="chapter done " data-progress="4.1" style="left: 34.285714285714285%;"></a>
+    
+        <a href="../git_sur_le_serveur/git_heberge.html" title="Git hébergé" class="chapter done " data-progress="4.10" style="left: 35.714285714285715%;"></a>
+    
+        <a href="../git_sur_le_serveur/resume.html" title="Résumé" class="chapter done " data-progress="4.11" style="left: 37.142857142857146%;"></a>
+    
+        <a href="../git_sur_le_serveur/installation_de_git_sur_un_serveur.html" title="Installation de Git sur un serveur" class="chapter done " data-progress="4.2" style="left: 38.57142857142857%;"></a>
+    
+        <a href="../git_sur_le_serveur/generation_des_cles_publiques_ssh.html" title="Génération des clés publiques SSH" class="chapter done " data-progress="4.3" style="left: 40%;"></a>
+    
+        <a href="../git_sur_le_serveur/mise_en_place_du_serveur.html" title="Mise en place du serveur" class="chapter done " data-progress="4.4" style="left: 41.42857142857143%;"></a>
+    
+        <a href="../git_sur_le_serveur/acces_public.html" title="Accès public" class="chapter done " data-progress="4.5" style="left: 42.857142857142854%;"></a>
+    
+        <a href="../git_sur_le_serveur/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 44.285714285714285%;"></a>
+    
+        <a href="../git_sur_le_serveur/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 45.714285714285715%;"></a>
+    
+        <a href="../git_sur_le_serveur/gitolite.html" title="Gitolite" class="chapter  " data-progress="4.8" style="left: 47.142857142857146%;"></a>
+    
+        <a href="../git_sur_le_serveur/le_daemon_git.html" title="Le *daemon* Git" class="chapter  " data-progress="4.9" style="left: 48.57142857142857%;"></a>
+    
+        <a href="../git_distribue/README.html" title="Git distribué" class="chapter  new-chapter" data-progress="5" style="left: 50%;"></a>
+    
+        <a href="../git_distribue/developpements_distribues.html" title="Développements distribués" class="chapter  " data-progress="5.1" style="left: 51.42857142857143%;"></a>
+    
+        <a href="../git_distribue/contribution_a_un_projet.html" title="Contribution à un projet" class="chapter  " data-progress="5.2" style="left: 52.857142857142854%;"></a>
+    
+        <a href="../git_distribue/maintenance_dun_projet.html" title="Maintenance d&#39;un projet" class="chapter  " data-progress="5.3" style="left: 54.285714285714285%;"></a>
+    
+        <a href="../git_distribue/resume.html" title="Résumé" class="chapter  " data-progress="5.4" style="left: 55.714285714285715%;"></a>
+    
+        <a href="../utilitaires_git/README.html" title="Utilitaires Git" class="chapter  new-chapter" data-progress="6" style="left: 57.142857142857146%;"></a>
+    
+        <a href="../utilitaires_git/selection_des_versions.html" title="Sélection des versions" class="chapter  " data-progress="6.1" style="left: 58.57142857142857%;"></a>
+    
+        <a href="../utilitaires_git/indexation_interactive.html" title="Indexation interactive" class="chapter  " data-progress="6.2" style="left: 60%;"></a>
+    
+        <a href="../utilitaires_git/le_remisage.html" title="Le remisage" class="chapter  " data-progress="6.3" style="left: 61.42857142857143%;"></a>
+    
+        <a href="../utilitaires_git/reecrire_lhistorique.html" title="Réécrire l&#39;historique" class="chapter  " data-progress="6.4" style="left: 62.857142857142854%;"></a>
+    
+        <a href="../utilitaires_git/deboguer_avec_git.html" title="Deboguer avec Git" class="chapter  " data-progress="6.5" style="left: 64.28571428571429%;"></a>
+    
+        <a href="../utilitaires_git/sous_modules.html" title="Sous-modules" class="chapter  " data-progress="6.6" style="left: 65.71428571428571%;"></a>
+    
+        <a href="../utilitaires_git/fusion_de_sous_arborescences.html" title="Fusion de sous-arborescences" class="chapter  " data-progress="6.7" style="left: 67.14285714285714%;"></a>
+    
+        <a href="../utilitaires_git/resume.html" title="Résumé" class="chapter  " data-progress="6.8" style="left: 68.57142857142857%;"></a>
+    
+        <a href="../les_bases_de_git/README.html" title="Les bases de Git" class="chapter  new-chapter" data-progress="7" style="left: 70%;"></a>
+    
+        <a href="../les_bases_de_git/demarrer_un_depot_git.html" title="Démarrer un dépôt Git" class="chapter  " data-progress="7.1" style="left: 71.42857142857143%;"></a>
+    
+        <a href="../les_bases_de_git/enregistrer_des_modifications_dans_le_depot.html" title="Enregistrer des modifications dans le dépôt" class="chapter  " data-progress="7.2" style="left: 72.85714285714286%;"></a>
+    
+        <a href="../les_bases_de_git/visualiser_lhistorique_des_validations.html" title="Visualiser l&#39;historique des validations" class="chapter  " data-progress="7.3" style="left: 74.28571428571429%;"></a>
+    
+        <a href="../les_bases_de_git/annuler_des_actions.html" title="Annuler des actions" class="chapter  " data-progress="7.4" style="left: 75.71428571428571%;"></a>
+    
+        <a href="../les_bases_de_git/travailler_avec_des_depots_distants.html" title="Travailler avec des dépôts distants" class="chapter  " data-progress="7.5" style="left: 77.14285714285714%;"></a>
+    
+        <a href="../les_bases_de_git/etiquetage.html" title="Étiquetage" class="chapter  " data-progress="7.6" style="left: 78.57142857142857%;"></a>
+    
+        <a href="../les_bases_de_git/trucs_et_astuces.html" title="Trucs et astuces" class="chapter  " data-progress="7.7" style="left: 80%;"></a>
+    
+        <a href="../les_bases_de_git/resume.html" title="Résumé" class="chapter  " data-progress="7.8" style="left: 81.42857142857143%;"></a>
+    
+        <a href="../git_et_les_autres_systemes/README.html" title="Git et les autres systèmes" class="chapter  new-chapter" data-progress="8" style="left: 82.85714285714286%;"></a>
+    
+        <a href="../git_et_les_autres_systemes/git_et_subversion.html" title="Git et Subversion" class="chapter  " data-progress="8.1" style="left: 84.28571428571429%;"></a>
+    
+        <a href="../git_et_les_autres_systemes/migrer_sur_git.html" title="Migrer sur Git" class="chapter  " data-progress="8.2" style="left: 85.71428571428571%;"></a>
+    
+        <a href="../git_et_les_autres_systemes/resume.html" title="Résumé" class="chapter  " data-progress="8.3" style="left: 87.14285714285714%;"></a>
+    
+        <a href="../les_tripes_de_git/README.html" title="Les tripes de Git" class="chapter  new-chapter" data-progress="9" style="left: 88.57142857142857%;"></a>
+    
+        <a href="../les_tripes_de_git/plomberie_et_porcelaine.html" title="Plomberie et porcelaine" class="chapter  " data-progress="9.1" style="left: 90%;"></a>
+    
+        <a href="../les_tripes_de_git/les_objets_git.html" title="Les objets Git" class="chapter  " data-progress="9.2" style="left: 91.42857142857143%;"></a>
+    
+        <a href="../les_tripes_de_git/references_git.html" title="Références Git" class="chapter  " data-progress="9.3" style="left: 92.85714285714286%;"></a>
+    
+        <a href="../les_tripes_de_git/fichiers_groupes.html" title="Fichiers groupés" class="chapter  " data-progress="9.4" style="left: 94.28571428571429%;"></a>
+    
+        <a href="../les_tripes_de_git/les_references_specifiques.html" title="Les références spécifiques" class="chapter  " data-progress="9.5" style="left: 95.71428571428571%;"></a>
+    
+        <a href="../les_tripes_de_git/protocoles_de_transfert.html" title="Protocoles de transfert" class="chapter  " data-progress="9.6" style="left: 97.14285714285714%;"></a>
+    
+        <a href="../les_tripes_de_git/maintenance_et_recuperation_de_donnees.html" title="Maintenance et récupération de données" class="chapter  " data-progress="9.7" style="left: 98.57142857142857%;"></a>
+    
+        <a href="../les_tripes_de_git/resume.html" title="Résumé" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_677">
+                    
+                        <h1 id="gitosis">Gitosis</h1>
+<p>Conserver les clés publiques de tous les utilisateurs dans le fichier <code>authorized_keys</code> n&#39;est satisfaisant qu&#39;un temps.
+Avec des centaines d&#39;utilisateurs, la gestion devient compliquée.
+À chaque fois, il faut se connecter au serveur et il n&#39;y a aucun contrôle d&#39;accès — toute personne avec une clé dans le fichier a accès en lecture et écriture à tous les projets.</p>
+<p>Il est temps de se tourner vers un logiciel largement utilisé appelé Gitosis.
+Gitosis est une collection de scripts qui aident à gérer le fichier <code>authorized_keys</code> ainsi qu&#39;à implémenter des contrôles d&#39;accès simples.
+La partie la plus intéressante de l&#39;outil est que l&#39;interface d&#39;administration permettant d&#39;ajouter des utilisateurs et de déterminer leurs droits n&#39;est pas une interface web mais un dépôt Git spécial.
+Vous paramétrez les informations dans ce projet et lorsque vous le poussez, Gitosis reconfigure les serveurs en fonction des données, ce qui est cool.</p>
+<p>L&#39;installation de Gitosis n&#39;est pas des plus aisées.
+Elle est plus simple sur un serveur Linux — les exemples qui suivent utilisent une distribution Ubuntu Server 8.10 de base.</p>
+<p>Gitosis nécessite des outils Python.
+Il faut donc installer le paquet Python setuptools qu&#39;Ubuntu fournit en tant que python-setuptools :</p>
+<pre><code>$ apt<span class="hljs-attribute">-get</span> install python<span class="hljs-attribute">-setuptools</span>
+</code></pre><p>Ensuite, il faut cloner et installer Gitosis à partir du site principal du projet :</p>
+<pre><code><span class="hljs-variable">$ </span>git clone <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/tv</span>42/gitosis.git
+<span class="hljs-variable">$ </span>cd gitosis
+<span class="hljs-variable">$ </span>sudo python setup.py install
+</code></pre><p>La dernière commande installe deux exécutables que Gitosis utilisera.
+Ensuite, Gitosis veut gérer ses dépôts sous <code>/home/git</code>, ce qui est parfait.
+Mais vous avez déjà installé vos dépôts sous <code>/opt/git</code>, donc au lieu de tout reconfigurer, créez un lien symbolique :</p>
+<pre><code>$ ln <span class="hljs-operator">-s</span> /opt/git /home/git/repositories
+</code></pre><p>Comme Gitosis gèrera vos clés pour vous, il faut effacer le fichier <code>authorized_keys</code>, réintroduire les clés plus tard, et laisser Gitosis contrôler le fichier automatiquement.
+Pour l&#39;instant, déplacez le fichier <code>authorized_keys</code> ailleurs :</p>
+<pre><code>$ mv /home/git/<span class="hljs-preprocessor">.ssh</span>/authorized_keys /home/git/<span class="hljs-preprocessor">.ssh</span>/ak<span class="hljs-preprocessor">.bak</span>
+</code></pre><p>Ensuite, il faut réactiver le shell pour l&#39;utilisateur « git » si vous l&#39;avez désactivé au moyen de <code>git-shell</code>.
+Les utilisateurs ne pourront toujours pas se connecter car Gitosis contrôlera cet accès.
+Modifions la ligne dans le fichier <code>/etc/passwd</code> :</p>
+<pre><code><span class="hljs-symbol">git:</span><span class="hljs-symbol">x:</span><span class="hljs-number">1000</span><span class="hljs-symbol">:</span><span class="hljs-number">1000</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:/home/git</span><span class="hljs-symbol">:/usr/bin/git-shell</span>
+</code></pre><p>pour la version d&#39;origine :</p>
+<pre><code><span class="hljs-symbol">git:</span><span class="hljs-symbol">x:</span><span class="hljs-number">1000</span><span class="hljs-symbol">:</span><span class="hljs-number">1000</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:/home/git</span><span class="hljs-symbol">:/bin/sh</span>
+</code></pre><p>Vous pouvez maintenant initialiser Gitosis en lançant la commande <code>gitosis-init</code> avec votre clé publique.
+Si votre clé publique n&#39;est pas présente sur le serveur, il faut l&#39;y télécharger :</p>
+<pre><code>$ sudo <span class="hljs-attribute">-H</span> <span class="hljs-attribute">-u</span> git gitosis<span class="hljs-attribute">-init</span> <span class="hljs-subst">&lt;</span> /tmp/id_dsa<span class="hljs-built_in">.</span>pub
+Initialized empty Git repository <span class="hljs-keyword">in</span> /opt/git/gitosis<span class="hljs-attribute">-admin</span><span class="hljs-built_in">.</span>git<span class="hljs-subst">/</span>
+Reinitialized existing Git repository <span class="hljs-keyword">in</span> /opt/git/gitosis<span class="hljs-attribute">-admin</span><span class="hljs-built_in">.</span>git<span class="hljs-subst">/</span>
+</code></pre><p>Cela permet à l&#39;utilisateur disposant de cette clé de modifier le dépôt Git qui contrôle le paramétrage de Gitosis.
+Ensuite, il faudra positionner manuellement le bit « execute » du script <code>post-update</code> du dépôt de contrôle nouvellement créé.</p>
+<pre><code>$ sudo chmod <span class="hljs-number">755</span> /opt/git/gitosis<span class="hljs-attribute">-admin</span><span class="hljs-built_in">.</span>git/hooks/post<span class="hljs-attribute">-update</span>
+</code></pre><p>Vous voilà prêt.
+Si tout est réglé correctement, vous pouvez essayer de vous connecter par SSH au serveur en tant que l&#39;utilisateur pour lequel vous avez ajouté la clé publique lors de l&#39;initialisation de Gitosis.
+Vous devriez voir quelque chose comme :</p>
+<pre><code>$ ssh git@gitserveur
+PTY allocation request failed <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">channel</span> <span class="hljs-title">0</span></span>
+fatal: unrecognized <span class="hljs-command"><span class="hljs-keyword">command</span> <span class="hljs-string">'gitosis-serve schacon@quaternion'</span></span>
+  Connection <span class="hljs-built_in">to</span> gitserveur closed.
+</code></pre><p>Cela signifie que Gitosis vous a bien reconnu mais vous a rejeté car vous ne lancez pas de commandes Git.
+Lançons donc une vraie commande Git en clonant le dépôt de contrôle Gitosis :</p>
+<pre><code><span class="hljs-comment"># sur votre ordinateur local</span>
+<span class="hljs-variable">$ </span>git clone git<span class="hljs-variable">@gitserveur</span><span class="hljs-symbol">:gitosis-admin</span>.git
+</code></pre><p>Vous avez à présent un répertoire <code>gitosis-admin</code> qui contient deux entrées :</p>
+<pre><code><span class="hljs-variable">$ </span>cd gitosis-admin
+<span class="hljs-variable">$ </span>find .
+./gitosis.conf
+./keydir
+./keydir/scott.pub
+</code></pre><p>Le fichier <code>gitosis.conf</code> est le fichier de configuration qui permet de spécifier les utilisateurs, les dépôts et les permissions.
+Le répertoire <code>keydir</code> stocke les clés publiques de tous les utilisateurs qui peuvent avoir un accès à vos dépôts — un fichier par utilisateur.
+Le nom du fichier dans <code>keydir</code> (dans l&#39;exemple précédent, <code>scott.pub</code>) sera différent pour vous — Gitosis utilise le nom issu de la description à la fin de la clé publique qui a été importée par le script <code>gitosis-init</code>.</p>
+<p>Le fichier <code>gitosis.conf</code> contient la configuration du projet <code>gitosis-admin</code> cloné à l&#39;instant :</p>
+<pre><code>$ cat gitosis<span class="hljs-built_in">.</span>conf
+<span class="hljs-preprocessor">[</span>gitosis<span class="hljs-preprocessor">]</span><span class="hljs-markup">
+
+</span><span class="hljs-preprocessor">[</span><span class="hljs-keyword">group</span> gitosis<span class="hljs-attribute">-admin</span><span class="hljs-preprocessor">]</span><span class="hljs-markup">
+writable = gitosis-admin
+members = scott</span>
+</code></pre><p>Il indique que l&#39;utilisateur « scott » — l&#39;utilisateur dont la clé publique a servi à initialiser Gitosis — est le seul à avoir accès au projet <code>gitosis-admin</code>.</p>
+<p>À présent, ajoutons un nouveau projet.
+Ajoutons une nouvelle section appelée <code>mobile</code> où vous listez les développeurs de votre équipe mobile et les projets auxquels ces développeurs ont accès.
+Comme « scott » est le seul utilisateur déclaré pour l&#39;instant, vous devrez l&#39;ajouter comme membre unique et vous créerez un nouveau projet appelé <code>iphone_projet</code> pour commencer :</p>
+<pre><code><span class="hljs-title">[group mobile]</span>
+<span class="hljs-setting">writable = <span class="hljs-value">iphone_projet</span></span>
+<span class="hljs-setting">members = <span class="hljs-value">scott</span></span>
+</code></pre><p>À chaque modification du projet <code>gitosis-admin</code>, il est nécessaire de valider les changements et de les pousser sur le serveur pour qu&#39;ils prennent effet :</p>
+<pre><code><span class="hljs-variable">$ </span>git commit -am <span class="hljs-string">'ajout iphone_projet et groupe mobile'</span>
+[master]<span class="hljs-symbol">:</span> created <span class="hljs-number">8962</span><span class="hljs-symbol">da8:</span> <span class="hljs-string">"changed name"</span>
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">4</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+<span class="hljs-variable">$ </span>git push
+<span class="hljs-constant">Counting</span> <span class="hljs-symbol">objects:</span> <span class="hljs-number">5</span>, done.
+<span class="hljs-constant">Compressing</span> <span class="hljs-symbol">objects:</span> <span class="hljs-number">100</span>% (<span class="hljs-number">2</span>/<span class="hljs-number">2</span>), done.
+<span class="hljs-constant">Writing</span> <span class="hljs-symbol">objects:</span> <span class="hljs-number">100</span>% (<span class="hljs-number">3</span>/<span class="hljs-number">3</span>), <span class="hljs-number">272</span> bytes, done.
+<span class="hljs-constant">Total</span> <span class="hljs-number">3</span> (delta <span class="hljs-number">1</span>), reused <span class="hljs-number">0</span> (delta <span class="hljs-number">0</span>)
+<span class="hljs-constant">To</span> git<span class="hljs-variable">@gitserver</span><span class="hljs-symbol">:/opt/git/gitosis-admin</span>.git
+   fb27aec..<span class="hljs-number">8962</span>da8  master -&gt; master
+</code></pre><p>Vous pouvez pousser vers le nouveau <code>iphone_projet</code> en ajoutant votre serveur comme dépôt distant dans votre dépôt local de projet et en poussant.
+Vous n&#39;avez plus besoin de créer manuellement un dépôt nu sur le serveur pour les nouveaux projets.
+Gitosis les crée automatiquement dès qu&#39;il voit la première poussée :</p>
+<pre><code><span class="hljs-variable">$ </span>git remote add origin git<span class="hljs-variable">@gitserveur</span><span class="hljs-symbol">:iphone_projet</span>.git
+<span class="hljs-variable">$ </span>git push origin master
+<span class="hljs-constant">Initialized</span> empty <span class="hljs-constant">Git</span> repository <span class="hljs-keyword">in</span> /opt/git/iphone_projet.git/
+<span class="hljs-constant">Counting</span> <span class="hljs-symbol">objects:</span> <span class="hljs-number">3</span>, done.
+<span class="hljs-constant">Writing</span> <span class="hljs-symbol">objects:</span> <span class="hljs-number">100</span>% (<span class="hljs-number">3</span>/<span class="hljs-number">3</span>), <span class="hljs-number">230</span> bytes, done.
+<span class="hljs-constant">Total</span> <span class="hljs-number">3</span> (delta <span class="hljs-number">0</span>), reused <span class="hljs-number">0</span> (delta <span class="hljs-number">0</span>)
+<span class="hljs-constant">To</span> git<span class="hljs-variable">@gitserver</span><span class="hljs-symbol">:iphone_project</span>.git
+ * [new branch]      master -&gt; master
+</code></pre><p>Notez qu&#39;il est inutile de spécifier le chemin distant (en fait, c&#39;est interdit), juste deux points et le nom du projet.
+Gitosis gère les chemins.</p>
+<p>Souhaitant travailler sur ce projet avec vos amis, vous devrez rajouter leurs clés publiques.
+Plutôt que de les accoler manuellement au fichier <code>~/.ssh/authorized_keys</code> de votre serveur, il faut les ajouter, une clé par fichier, dans le répertoire <code>keydir</code>.
+Le nom de fichier détermine le nom de l&#39;utilisateur dans le fichier <code>gitosis.conf</code>.
+Rajoutons les clés publiques de John, Josie et Jessica :</p>
+<pre><code>$ <span class="hljs-keyword">cp</span> /tmp/id_rsa<span class="hljs-preprocessor">.john</span><span class="hljs-preprocessor">.pub</span> keydir/john<span class="hljs-preprocessor">.pub</span>
+$ <span class="hljs-keyword">cp</span> /tmp/id_rsa<span class="hljs-preprocessor">.josie</span><span class="hljs-preprocessor">.pub</span> keydir/josie<span class="hljs-preprocessor">.pub</span>
+$ <span class="hljs-keyword">cp</span> /tmp/id_rsa<span class="hljs-preprocessor">.jessica</span><span class="hljs-preprocessor">.pub</span> keydir/jessica<span class="hljs-preprocessor">.pub</span>
+</code></pre><p>Vous pouvez maintenant les ajouter tous à votre équipe <code>mobile</code> pour qu&#39;ils aient accès en lecture/écriture à <code>iphone_projet</code> :</p>
+<pre><code><span class="hljs-title">[group mobile]</span>
+<span class="hljs-setting">writable = <span class="hljs-value">iphone_project</span></span>
+<span class="hljs-setting">members = <span class="hljs-value">scott john josie jessica</span></span>
+</code></pre><p>Après validation et poussée vers le serveur, les quatre utilisateurs sont admis à lire et écrire sur ce projet.</p>
+<p>Gitosis fournit aussi des permissions simples.
+Si vous souhaitez que John n&#39;ait qu&#39;un accès en lecture à ce projet, vous pouvez configurer ceci plutôt :</p>
+<pre><code><span class="hljs-title">[group mobile]</span>
+<span class="hljs-setting">writable = <span class="hljs-value">iphone_projet</span></span>
+<span class="hljs-setting">members = <span class="hljs-value">scott josie jessica</span></span>
+
+<span class="hljs-title">[group mobile_ro]</span>
+<span class="hljs-setting">readonly = <span class="hljs-value">iphone_projet</span></span>
+<span class="hljs-setting">members = <span class="hljs-value">john</span></span>
+</code></pre><p>À présent, John peut cloner le projet et récupérer les mises à jour, mais Gitosis lui refusera de pousser sur ce projet.
+Vous pouvez créer autant que groupes que vous désirez contenant des utilisateurs et projets différents.
+Vous pouvez aussi spécifier un autre groupe comme membre du groupe (avec le préfixe <code>@</code>) pour faire hériter ses membres automatiquement :</p>
+<pre><code><span class="hljs-title">[group mobile_committers]</span>
+<span class="hljs-setting">members = <span class="hljs-value">scott josie jessica</span></span>
+
+<span class="hljs-title">[group mobile]</span>
+<span class="hljs-setting">writable  = <span class="hljs-value">iphone_projet</span></span>
+<span class="hljs-setting">members   = <span class="hljs-value">@mobile_committers</span></span>
+
+<span class="hljs-title">[group mobile_2]</span>
+<span class="hljs-setting">writable  = <span class="hljs-value">autre_iphone_projet</span></span>
+<span class="hljs-setting">members   = <span class="hljs-value">@mobile_committers john</span></span>
+</code></pre><p>Si vous rencontrez des problèmes, il peut être utile d&#39;ajouter <code>loglevel=DEBUG</code> sous la section <code>[gitosis]</code>.
+Si vous avez perdu le droit de pousser en envoyant une configuration vérolée, vous pouvez toujours réparer le fichier <code>/home/git/.gitosis.conf</code> sur le serveur — le fichier dans lequel Gitosis lit sa configuration.
+Pousser sur le projet <code>gitosis-admin</code> provoque la recopie du fichier <code>gitosis.conf</code> à cet endroit.
+Si vous éditez ce fichier à la main, il restera dans cet état jusqu&#39;à la prochaine poussée.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_sur_le_serveur/gitweb.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_sur_le_serveur/gitolite.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

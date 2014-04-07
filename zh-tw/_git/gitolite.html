@@ -1,0 +1,875 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Gitolite | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../_git/git_.html" />
+        
+        
+        <link rel="prev" href="../_git/gitosis.html" />
+        
+
+        <meta property="og:title" content="Gitolite | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="4.8" data-basepath=".." data-revision="1396895602546">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/_git/gitolite.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="index.html">
+                
+                <a href="../index.html">
+                    <i class="fa fa-check"></i> <b>1)</b> 開始
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> 關於版本控制
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="git_.html">
+                            
+                            <a href="../git_.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Git 的簡史
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="git_.html">
+                            
+                            <a href="../git_.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git 基礎要點
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> 安裝Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> 初次設定Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> 取得說明文件
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> 總結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git 基礎
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="git_/git.html">
+                            
+                            <a href="../git_/git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> 取得Git儲存庫
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> 提交更新到儲存庫
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> 檢視提交的歷史記錄
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> 復原
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> 與遠端協同工作
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> 標籤
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> 提示和技巧
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> 總結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git 分支
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> 何謂分支
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> 分支的新建與合併
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> 分支的管理
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> 利用分支進行開發的工作流程
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> 遠端分支
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> 分支的衍合
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> 小結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="_git/README.html">
+                
+                <a href="../_git/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> 伺服器上的 Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> 協議
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="_git/_git.html">
+                            
+                            <a href="../_git/_git.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> 在伺服器上部署 Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="_git/_ssh_.html">
+                            
+                            <a href="../_git/_ssh_.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> 生成 SSH 公開金鑰
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> 架設伺服器
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> 公共訪問
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="_git/gitweb.html">
+                            
+                            <a href="../_git/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="_git/gitosis.html">
+                            
+                            <a href="../_git/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="_git/gitolite.html">
+                            
+                            <a href="../_git/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="_git/git_.html">
+                            
+                            <a href="../_git/git_.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git 守護進程
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="_git/git_.html">
+                            
+                            <a href="../_git/git_.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git 託管服務
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> 小結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="_git/README.html">
+                
+                <a href="../_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> 分散式 Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> 分散式工作流程
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> 為專案作貢獻
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> 專案的管理
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> 小結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git 工具
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> 選擇修訂版本
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> 互動式暫存
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_/_stashing.html">
+                            
+                            <a href="../git_/_stashing.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> 儲藏 (Stashing)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> 重寫歷史
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_/_git__debug.html">
+                            
+                            <a href="../git_/_git__debug.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> 使用 Git 做 Debug
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_/_submodules.html">
+                            
+                            <a href="../git_/_submodules.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> 子模組 (Submodules)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> 子樹合併
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> 總結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Git 客製化
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Git 配置
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git 屬性
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="git_/git_hooks.html">
+                            
+                            <a href="../git_/git_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git Hooks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Git 強制策略實例
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> 總結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git 與其他系統
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_/git__subversion.html">
+                            
+                            <a href="../git_/git__subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git 與 Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_/_git.html">
+                            
+                            <a href="../git_/_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> 遷移到 Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> 總結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Git 內部原理
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git_/_plumbing__porcelain.html">
+                            
+                            <a href="../git_/_plumbing__porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> 底層命令 (Plumbing) 和高層命令 (Porcelain)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Git 物件
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git_/git_references.html">
+                            
+                            <a href="../git_/git_references.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Git References
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git_/packfiles.html">
+                            
+                            <a href="../git_/packfiles.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Packfiles
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git_/the_refspec.html">
+                            
+                            <a href="../git_/the_refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> The Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> 傳輸協議
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> 維護及資料復原
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> 總結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 40%;min-width: 36%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../git_.html" title="Git 基礎要點" class="chapter done " data-progress="1.3" style="left: 4%;"></a>
+    
+        <a href="../git.html" title="初次設定Git" class="chapter done " data-progress="1.5" style="left: 8%;"></a>
+    
+        <a href="../.html" title="總結" class="chapter done " data-progress="1.7" style="left: 12%;"></a>
+    
+        <a href="../git_/git.html" title="取得Git儲存庫" class="chapter done " data-progress="2.1" style="left: 16%;"></a>
+    
+        <a href="../_git/git_.html" title="Git 託管服務" class="chapter done " data-progress="4.10" style="left: 20%;"></a>
+    
+        <a href="../_git/_git.html" title="在伺服器上部署 Git" class="chapter done " data-progress="4.2" style="left: 24%;"></a>
+    
+        <a href="../_git/_ssh_.html" title="生成 SSH 公開金鑰" class="chapter done " data-progress="4.3" style="left: 28%;"></a>
+    
+        <a href="../_git/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 32%;"></a>
+    
+        <a href="../_git/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 36%;"></a>
+    
+        <a href="../_git/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 40%;"></a>
+    
+        <a href="../_git/README.html" title="分散式 Git" class="chapter  new-chapter" data-progress="5" style="left: 44%;"></a>
+    
+        <a href="../_git/.html" title="小結" class="chapter  " data-progress="5.4" style="left: 48%;"></a>
+    
+        <a href="../git_/_stashing.html" title="儲藏 (Stashing)" class="chapter  " data-progress="6.3" style="left: 52%;"></a>
+    
+        <a href="../git_/_git__debug.html" title="使用 Git 做 Debug" class="chapter  " data-progress="6.5" style="left: 56%;"></a>
+    
+        <a href="../git_/_submodules.html" title="子模組 (Submodules)" class="chapter  " data-progress="6.6" style="left: 60%;"></a>
+    
+        <a href="../git_/git_hooks.html" title="Git Hooks" class="chapter  " data-progress="7.3" style="left: 64%;"></a>
+    
+        <a href="../git_/git__subversion.html" title="Git 與 Subversion" class="chapter  " data-progress="8.1" style="left: 68%;"></a>
+    
+        <a href="../git_/_git.html" title="遷移到 Git" class="chapter  " data-progress="8.2" style="left: 72%;"></a>
+    
+        <a href="../git_/README.html" title="Git 內部原理" class="chapter  new-chapter" data-progress="9" style="left: 76%;"></a>
+    
+        <a href="../git_/_plumbing__porcelain.html" title="底層命令 (Plumbing) 和高層命令 (Porcelain)" class="chapter  " data-progress="9.1" style="left: 80%;"></a>
+    
+        <a href="../git_/git_.html" title="Git 物件" class="chapter  " data-progress="9.2" style="left: 84%;"></a>
+    
+        <a href="../git_/git_references.html" title="Git References" class="chapter  " data-progress="9.3" style="left: 88%;"></a>
+    
+        <a href="../git_/packfiles.html" title="Packfiles" class="chapter  " data-progress="9.4" style="left: 92%;"></a>
+    
+        <a href="../git_/the_refspec.html" title="The Refspec" class="chapter  " data-progress="9.5" style="left: 96%;"></a>
+    
+        <a href="../git_/.html" title="總結" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_144">
+                    
+                        <h1 id="gitolite">Gitolite</h1>
+<p>This section serves as a quick introduction to Gitolite, and provides basic installation and setup instructions.  不能完全替代隨 gitolite 自帶的大量文檔。 There may also be occasional changes to this section itself, so you may also want to look at the latest version [here][gldpg].</p>
+<p>Gitolite is an authorization layer on top of Git, relying on <code>sshd</code> or <code>httpd</code> for authentication.  (Recap: authentication is identifying who the user is, authorization is deciding if he is allowed to do what he is attempting to).</p>
+<p>Gitolite 允許你定義訪問許可而不只作用於倉庫，而同樣於倉庫中的每個branch和tag name。你可以定義確切的人 (或一組人) 只能push特定的 &quot;refs&quot; (或者branches或者tags)而不是其他人。</p>
+<h2 id="-">安裝</h2>
+<p>安裝 Gitolite非常簡單, 你甚至不用讀自帶的那一大堆文檔。你需要一個unix伺服器上的帳戶；許多linux變種和solaris 10都已經試過了。你不需要root訪問，假設git，perl，和一個openssh相容的ssh伺服器已經裝好了。在下面的例子裡，我們會用 <code>git</code> 帳戶在 <code>gitserver</code>上.</p>
+<p>Gitolite 是不同於 &quot;server&quot; 的軟體 -- 通過ssh訪問, 而且每個在伺服器上的userid都是一個潛在的 &quot;gitolite host&quot;. We will describe the simplest install method in this article; for the other methods please see the documentation.</p>
+<p>To begin, create a user called <code>git</code> on your server and login to this user.  Copy your SSH public key (a file called <code>~/.ssh/id_rsa.pub</code> if you did a plain <code>ssh-keygen</code> with all the defaults) from your workstation, renaming it to <code>&lt;yourname&gt;.pub</code> (we&#39;ll use <code>scott.pub</code> in our examples).  Then run these commands:</p>
+<pre><code><span class="hljs-char">$ </span>git clone <span class="hljs-method">git:</span>//github.com/sitaramc/gitolite
+<span class="hljs-char">$ </span>gitolite/install -ln
+    # assumes <span class="hljs-char">$H</span>OME/bin exists and is in your <span class="hljs-char">$P</span>ATH
+<span class="hljs-char">$ </span>gitolite setup -pk <span class="hljs-char">$H</span>OME/scott.pub
+</code></pre><p>That last command creates new Git repository called <code>gitolite-admin</code> on the server.</p>
+<p>Finally, back on your workstation, run <code>git clone git@gitserver:gitolite-admin</code>. And you’re done!  Gitolite has now been installed on the server, and you now have a brand new repository called <code>gitolite-admin</code> in your workstation.  You administer your Gitolite setup by making changes to this repository and pushing.</p>
+<h2 id="-">定制安裝</h2>
+<p>默認快速安裝對大多數人都管用，還有一些定制安裝方法如果你用的上的話。Some changes can be made simply by editing the rc file, but if that is not sufficient, there’s documentation on customising Gitolite.</p>
+<h2 id="-">設定檔和訪問規則</h2>
+<p>安裝結束後，你切換到 <code>gitolite-admin</code> 倉庫 (放在你的 HOME 目錄) 然後看看都有啥：</p>
+<pre><code><span class="hljs-variable">$ </span>cd ~<span class="hljs-regexp">/gitolite-admin/</span>
+<span class="hljs-variable">$ </span>ls
+conf/  keydir/
+<span class="hljs-variable">$ </span>find conf keydir -type f
+conf/gitolite.conf
+keydir/scott.pub
+<span class="hljs-variable">$ </span>cat conf/gitolite.conf
+
+repo gitolite-admin
+    <span class="hljs-constant">RW</span>+                 = scott
+
+repo testing
+    <span class="hljs-constant">RW</span>+                 = <span class="hljs-variable">@all</span>
+</code></pre><p>注意 &quot;scott&quot; ( 之前用<code>gl-setup</code> 命令時候的 pubkey 名稱) 有讀寫許可權而且在 <code>gitolite-admin</code> 倉庫裡有一個同名的公開金鑰檔。</p>
+<p>Adding users is easy.  To add a user called &quot;alice&quot;, obtain her public key, name it <code>alice.pub</code>, and put it in the <code>keydir</code> directory of the clone of the <code>gitolite-admin</code> repo you just made on your workstation.  Add, commit, and push the change, and the user has been added.</p>
+<p>gitolite設定檔的語法在 <code>conf/example.conf</code>裡，我們只會提到一些主要的。</p>
+<p>你可以給用戶或者倉庫分組。分組名就像一些宏；定義的時候，無所謂他們是工程還是使用者；區別在於你’使用‘“宏”的時候</p>
+<pre><code><span class="hljs-variable">@oss_repos</span>      = linux perl rakudo git gitolite
+<span class="hljs-variable">@secret_repos</span>   = fenestra pear
+
+<span class="hljs-variable">@admins</span>         = scott
+<span class="hljs-variable">@interns</span>        = ashok
+<span class="hljs-variable">@engineers</span>      = sitaram dilbert wally alice
+<span class="hljs-variable">@staff</span>          = <span class="hljs-variable">@admins</span> <span class="hljs-variable">@engineers</span> <span class="hljs-variable">@interns</span>
+</code></pre><p>你可以控制許可在 &quot;ref&quot; 級別。在下面的例子裡，實習生可以 push &quot;int&quot; branch.  工程師可以 push任何有 &quot;eng-&quot;開頭的branch，還有refs/tags下面用 &quot;rc&quot;開頭的後面跟數字的。而且管理員可以隨便改 (包括rewind) 對任何參考名.</p>
+<pre><code>repo <span class="hljs-variable">@oss_repos</span>
+    <span class="hljs-constant">RW</span>  int<span class="hljs-variable">$ </span>               = <span class="hljs-variable">@interns</span>
+    <span class="hljs-constant">RW</span>  eng-                = <span class="hljs-variable">@engineers</span>
+    <span class="hljs-constant">RW</span>  refs/tags/rc[<span class="hljs-number">0</span>-<span class="hljs-number">9</span>]   = <span class="hljs-variable">@engineers</span>
+    <span class="hljs-constant">RW</span>+                     = <span class="hljs-variable">@admins</span>
+</code></pre><p>在 <code>RW</code> or <code>RW+</code>之後的運算式是規則運算式 (regex) 對應著後面的push用的參考名字 (ref) 。所以我們叫它 &quot;參考正則&quot;（refex）！當然，一個 refex 可以比這裡表現的更強大，所以如果你對perl的規則運算式不熟的話就不要改過頭。</p>
+<p>同樣，你可能猜到了，Gitolite 字頭 <code>refs/heads/</code> 是一個便捷句法如果參考正則沒有用 <code>refs/</code>開頭。</p>
+<p>一個這個設定檔語法的重要功能是，所有的倉庫的規則不需要在同一個位置。你能報所有普通的東西放在一起，就像上面的對所有 <code>oss_repos</code> 的規則那樣，然後建一個特殊的規則對後面的特殊案例，就像：</p>
+<pre><code><span class="hljs-attribute">repo gitolite
+    RW+                     </span>=<span class="hljs-string"> sitaram</span>
+</code></pre><p>那條規則剛剛加入規則集的 <code>gitolite</code> 倉庫.</p>
+<p>這次你可能會想要知道存取控制規則是如何應用的，我們簡要介紹一下。</p>
+<p>在gitolite裡有兩級存取控制。第一是在倉庫級別；如果你已經讀或者寫訪問過了任何在倉庫裡的參考，那麼你已經讀或者寫訪問倉庫了。</p>
+<p>第二級，應用只能寫訪問，通過在倉庫裡的 branch或者 tag。用戶名如果嘗試過訪問 (<code>W</code> 或 <code>+</code>)，參考名被更新為已知。訪問規則檢查是否出現在設定檔裡，為這個聯合尋找匹配 (但是記得參考名是正則匹配的，不是字串匹配的)。如果匹配被找到了，push就成功了。不匹配的訪問會被拒絕。</p>
+<h2 id="-">帶&#39;拒絕&#39;的高級存取控制</h2>
+<p>目前，我們只看過了許可是 <code>R</code>, <code>RW</code>, 或者 <code>RW+</code>這樣子的。但是gitolite還允許另外一種許可：<code>-</code>，代表 &quot;拒絕&quot;。這個給了你更多的能力，當然也有一點複雜，因為不匹配並不是唯一的拒絕訪問的方法，因此規則的順序變得無關了！</p>
+<p>這麼說好了，在前面的情況中，我們想要工程師可以 rewind 任意 branch 除了master和 integ。 這裡是如何做到的</p>
+<pre><code>    <span class="hljs-constant">RW</span>  master integ    = <span class="hljs-variable">@engineers</span>
+    -   master integ    = <span class="hljs-variable">@engineers</span>
+    <span class="hljs-constant">RW</span>+                 = <span class="hljs-variable">@engineers</span>
+</code></pre><p>你再一次簡單跟隨規則從上至下知道你找到一個匹配你的訪問模式的，或者拒絕。非rewind push到 master或者 integ 被第一條規則允許。一個 rewind push到那些 refs不匹配第一條規則，掉到第二條，因此被拒絕。任何 push (rewind 或非rewind) 到參考或者其他 master 或者 integ不會被前兩條規則匹配，即被第三條規則允許。</p>
+<h2 id="-push">通過改變檔限制 push</h2>
+<p>此外限制用戶 push改變到哪條branch的，你也可以限制哪個檔他們可以碰的到。比如, 可能 Makefile (或者其他哪些程式) 真的不能被任何人做任何改動，因為好多東西都靠著它呢，或者如果某些改變剛好不對就會崩潰。你可以告訴 gitolite:</p>
+<pre><code>repo foo
+    <span class="hljs-constant">RW</span>                      =   <span class="hljs-variable">@junior_devs</span> <span class="hljs-variable">@senior_devs</span>
+
+    -   <span class="hljs-constant">VREF</span>/<span class="hljs-constant">NAME</span>/<span class="hljs-constant">Makefile</span>  =   <span class="hljs-variable">@junior_devs</span>
+</code></pre><p>這是一個強力的公能寫在 <code>conf/example.conf</code>裡。</p>
+<h2 id="-">個人分支</h2>
+<p>Gitolite 也支援一個叫 &quot;個人分支&quot;的功能 (或者叫, &quot;個人分支命名空間&quot;) 在合作環境裡非常有用。</p>
+<p>在 git世界裡許多代碼交換通過 &quot;pull&quot; 請求發生。然而在合作環境裡，委任制的訪問是‘絕不’，一個開發者工作站不能認證，你必須push到中心伺服器並且叫其他人從那裡pull。</p>
+<p>這個通常會引起一些 branch 名稱簇變成像 VCS裡一樣集中化，加上設置許可變成管理員的苦差事。</p>
+<p>Gitolite讓你定義一個 &quot;個人的&quot; 或者 &quot;亂七八糟的&quot; 命名空間字首給每個開發人員 (比如，<code>refs/personal/&lt;devname&gt;/*</code>)；看在 <code>doc/3-faq-tips-etc.mkd</code>裡的 &quot;personal branches&quot; 一段獲取細節。</p>
+<h2 id="-">&quot;萬用字元&quot; 倉庫</h2>
+<p>Gitolite 允許你定義帶萬用字元的倉庫 (其實還是 perl正則式), 比如隨便整個例子的話 <code>assignments/s[0-9][0-9]/a[0-9][0-9]</code>。 這是一個非常有用的功能，需要通過設置 <code>$GL_WILDREPOS = 1;</code> 在 rc文件中啟用。允許你安排一個新許可模式 (&quot;C&quot;) 允許用戶創建倉庫基於萬用字元，自動分配擁有權對特定用戶 - 創建者，允許他交出 R和 RW許可給其他合作用戶等等。這個功能在<code>doc/4-wildcard-repositories.mkd</code>文檔裡</p>
+<h2 id="-">其他功能</h2>
+<p>我們用一些其他功能的例子結束這段討論，這些以及其他功能都在 &quot;faqs, tips, etc&quot; 和其他文檔裡。</p>
+<p><strong>記錄</strong>: Gitolite 記錄所有成功的訪問。如果你太放鬆給了別人 rewind許可 (<code>RW+</code>) 和其他孩子弄沒了 &quot;master&quot;， 記錄檔會救你的命，如果其他簡單快速的找到SHA都不管用。</p>
+<p><strong>訪問權報告</strong>: 另一個方便的功能是你嘗試用ssh連接到伺服器的時候發生了什麼。Gitolite告訴你哪個 repos你訪問過，那個訪問可能是什麼。這裡是例子：</p>
+<pre><code>    hello scott, this is git@git running gitolite3 v3<span class="hljs-number">.01</span><span class="hljs-subst">-</span><span class="hljs-number">18</span><span class="hljs-attribute">-g9609868</span> <span class="hljs-keyword">on</span> git <span class="hljs-number">1.7</span><span class="hljs-number">.4</span><span class="hljs-number">.4</span>
+
+         R     anu<span class="hljs-attribute">-wsd</span>
+         R     entrans
+         R  W  git<span class="hljs-attribute">-notes</span>
+         R  W  gitolite
+         R  W  gitolite<span class="hljs-attribute">-admin</span>
+         R     indic_web_input
+         R     shreelipi_converter
+</code></pre><p><strong>委託</strong>：真正的大安裝，你可以把責任委託給一組倉庫給不同的人然後讓他們獨立管理那些部分。這個減少了主管理者的負擔，讓他瓶頸更小。這個功能在他自己的文檔目錄裡的 <code>doc/</code>下面。</p>
+<p><strong>鏡像</strong>: Gitolite可以幫助你維護多個鏡像，如果主要伺服器掛掉的話在他們之間很容易切換。</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../_git/gitosis.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../_git/git_.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

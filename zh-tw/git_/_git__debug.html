@@ -1,0 +1,848 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>使用 Git 做 Debug | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_/_submodules.html" />
+        
+        
+        <link rel="prev" href="../git_/.html" />
+        
+
+        <meta property="og:title" content="使用 Git 做 Debug | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="6.5" data-basepath=".." data-revision="1396895602546">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_/_git__debug.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="index.html">
+                
+                <a href="../index.html">
+                    <i class="fa fa-check"></i> <b>1)</b> 開始
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> 關於版本控制
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="git_.html">
+                            
+                            <a href="../git_.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Git 的簡史
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="git_.html">
+                            
+                            <a href="../git_.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git 基礎要點
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> 安裝Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="git.html">
+                            
+                            <a href="../git.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> 初次設定Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> 取得說明文件
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path=".html">
+                            
+                            <a href="../.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> 總結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git 基礎
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="git_/git.html">
+                            
+                            <a href="../git_/git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> 取得Git儲存庫
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> 提交更新到儲存庫
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> 檢視提交的歷史記錄
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> 復原
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> 與遠端協同工作
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> 標籤
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> 提示和技巧
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> 總結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git 分支
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> 何謂分支
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> 分支的新建與合併
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> 分支的管理
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> 利用分支進行開發的工作流程
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> 遠端分支
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> 分支的衍合
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> 小結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="_git/README.html">
+                
+                <a href="../_git/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> 伺服器上的 Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> 協議
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="_git/_git.html">
+                            
+                            <a href="../_git/_git.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> 在伺服器上部署 Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="_git/_ssh_.html">
+                            
+                            <a href="../_git/_ssh_.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> 生成 SSH 公開金鑰
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> 架設伺服器
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> 公共訪問
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="_git/gitweb.html">
+                            
+                            <a href="../_git/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="_git/gitosis.html">
+                            
+                            <a href="../_git/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="_git/gitolite.html">
+                            
+                            <a href="../_git/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="_git/git_.html">
+                            
+                            <a href="../_git/git_.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Git 守護進程
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="_git/git_.html">
+                            
+                            <a href="../_git/git_.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git 託管服務
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> 小結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="_git/README.html">
+                
+                <a href="../_git/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> 分散式 Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> 分散式工作流程
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> 為專案作貢獻
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> 專案的管理
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="_git/.html">
+                            
+                            <a href="../_git/.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> 小結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Git 工具
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> 選擇修訂版本
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> 互動式暫存
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="git_/_stashing.html">
+                            
+                            <a href="../git_/_stashing.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> 儲藏 (Stashing)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> 重寫歷史
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="git_/_git__debug.html">
+                            
+                            <a href="../git_/_git__debug.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> 使用 Git 做 Debug
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="git_/_submodules.html">
+                            
+                            <a href="../git_/_submodules.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> 子模組 (Submodules)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> 子樹合併
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> 總結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Git 客製化
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Git 配置
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Git 屬性
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="git_/git_hooks.html">
+                            
+                            <a href="../git_/git_hooks.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Git Hooks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Git 強制策略實例
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> 總結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git 與其他系統
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_/git__subversion.html">
+                            
+                            <a href="../git_/git__subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git 與 Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_/_git.html">
+                            
+                            <a href="../git_/_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> 遷移到 Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> 總結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git_/README.html">
+                
+                <a href="../git_/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Git 內部原理
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git_/_plumbing__porcelain.html">
+                            
+                            <a href="../git_/_plumbing__porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> 底層命令 (Plumbing) 和高層命令 (Porcelain)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git_/git_.html">
+                            
+                            <a href="../git_/git_.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Git 物件
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git_/git_references.html">
+                            
+                            <a href="../git_/git_references.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Git References
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git_/packfiles.html">
+                            
+                            <a href="../git_/packfiles.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Packfiles
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git_/the_refspec.html">
+                            
+                            <a href="../git_/the_refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> The Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> 傳輸協議
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> 維護及資料復原
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git_/.html">
+                            
+                            <a href="../git_/.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> 總結
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 56%;min-width: 52%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../git_.html" title="Git 基礎要點" class="chapter done " data-progress="1.3" style="left: 4%;"></a>
+    
+        <a href="../git.html" title="初次設定Git" class="chapter done " data-progress="1.5" style="left: 8%;"></a>
+    
+        <a href="../.html" title="總結" class="chapter done " data-progress="1.7" style="left: 12%;"></a>
+    
+        <a href="../git_/git.html" title="取得Git儲存庫" class="chapter done " data-progress="2.1" style="left: 16%;"></a>
+    
+        <a href="../_git/git_.html" title="Git 託管服務" class="chapter done " data-progress="4.10" style="left: 20%;"></a>
+    
+        <a href="../_git/_git.html" title="在伺服器上部署 Git" class="chapter done " data-progress="4.2" style="left: 24%;"></a>
+    
+        <a href="../_git/_ssh_.html" title="生成 SSH 公開金鑰" class="chapter done " data-progress="4.3" style="left: 28%;"></a>
+    
+        <a href="../_git/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 32%;"></a>
+    
+        <a href="../_git/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 36%;"></a>
+    
+        <a href="../_git/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 40%;"></a>
+    
+        <a href="../_git/README.html" title="分散式 Git" class="chapter done new-chapter" data-progress="5" style="left: 44%;"></a>
+    
+        <a href="../_git/.html" title="小結" class="chapter done " data-progress="5.4" style="left: 48%;"></a>
+    
+        <a href="../git_/_stashing.html" title="儲藏 (Stashing)" class="chapter done " data-progress="6.3" style="left: 52%;"></a>
+    
+        <a href="../git_/_git__debug.html" title="使用 Git 做 Debug" class="chapter done " data-progress="6.5" style="left: 56%;"></a>
+    
+        <a href="../git_/_submodules.html" title="子模組 (Submodules)" class="chapter  " data-progress="6.6" style="left: 60%;"></a>
+    
+        <a href="../git_/git_hooks.html" title="Git Hooks" class="chapter  " data-progress="7.3" style="left: 64%;"></a>
+    
+        <a href="../git_/git__subversion.html" title="Git 與 Subversion" class="chapter  " data-progress="8.1" style="left: 68%;"></a>
+    
+        <a href="../git_/_git.html" title="遷移到 Git" class="chapter  " data-progress="8.2" style="left: 72%;"></a>
+    
+        <a href="../git_/README.html" title="Git 內部原理" class="chapter  new-chapter" data-progress="9" style="left: 76%;"></a>
+    
+        <a href="../git_/_plumbing__porcelain.html" title="底層命令 (Plumbing) 和高層命令 (Porcelain)" class="chapter  " data-progress="9.1" style="left: 80%;"></a>
+    
+        <a href="../git_/git_.html" title="Git 物件" class="chapter  " data-progress="9.2" style="left: 84%;"></a>
+    
+        <a href="../git_/git_references.html" title="Git References" class="chapter  " data-progress="9.3" style="left: 88%;"></a>
+    
+        <a href="../git_/packfiles.html" title="Packfiles" class="chapter  " data-progress="9.4" style="left: 92%;"></a>
+    
+        <a href="../git_/the_refspec.html" title="The Refspec" class="chapter  " data-progress="9.5" style="left: 96%;"></a>
+    
+        <a href="../git_/.html" title="總結" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_150">
+                    
+                        <h1 id="-git-debug">使用 Git 做 Debug</h1>
+<p>Git 也提供了一些工具來幫助你 debug 專案中遇到的問題。由於 Git 被設計為可應用於幾乎任何類型的專案，這些工具是通用型的，但是在遇到問題時經常可以幫助你找到 bug 在哪裏。 </p>
+<h2 id="-file-annotation-">檔案標注 (File Annotation)</h2>
+<p>如果你在追查程式碼中的 bug，想要知道這是什麼時候、為什麼被引進來的，檔案標注會是你的最佳工具。它會顯示檔案中對每一行進行修改的最近一次提交。因此，如果你發現自己程式碼中的一個 method 有 bug，你可以用 <code>git blame</code> 來標注該檔案，查看那個 method 的每一行分別是由誰在哪一天修改的。下面這個例子使用了 <code>-L</code> 選項來限制輸出範圍在第12至22行：</p>
+<pre><code>$ git blame -L <span class="hljs-number">12</span>,<span class="hljs-number">22</span> simplegit.rb
+^<span class="hljs-number">4832</span>fe2 (Scott Chacon  <span class="hljs-number">2008</span>-<span class="hljs-number">03</span>-<span class="hljs-number">15</span> <span class="hljs-number">10</span>:<span class="hljs-number">31</span>:<span class="hljs-number">28</span> -<span class="hljs-number">0700</span> <span class="hljs-number">12</span>)  def show(tree = <span class="hljs-string">'master'</span>)
+^<span class="hljs-number">4832</span>fe2 (Scott Chacon  <span class="hljs-number">2008</span>-<span class="hljs-number">03</span>-<span class="hljs-number">15</span> <span class="hljs-number">10</span>:<span class="hljs-number">31</span>:<span class="hljs-number">28</span> -<span class="hljs-number">0700</span> <span class="hljs-number">13</span>)   <span class="hljs-command"><span class="hljs-keyword">command</span>(<span class="hljs-string">"git show #{tree}"</span>)</span>
+^<span class="hljs-number">4832</span>fe2 (Scott Chacon  <span class="hljs-number">2008</span>-<span class="hljs-number">03</span>-<span class="hljs-number">15</span> <span class="hljs-number">10</span>:<span class="hljs-number">31</span>:<span class="hljs-number">28</span> -<span class="hljs-number">0700</span> <span class="hljs-number">14</span>)  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+^<span class="hljs-number">4832</span>fe2 (Scott Chacon  <span class="hljs-number">2008</span>-<span class="hljs-number">03</span>-<span class="hljs-number">15</span> <span class="hljs-number">10</span>:<span class="hljs-number">31</span>:<span class="hljs-number">28</span> -<span class="hljs-number">0700</span> <span class="hljs-number">15</span>)
+<span class="hljs-number">9</span>f6560e4 (Scott Chacon  <span class="hljs-number">2008</span>-<span class="hljs-number">03</span>-<span class="hljs-number">17</span> <span class="hljs-number">21</span>:<span class="hljs-number">52</span>:<span class="hljs-number">20</span> -<span class="hljs-number">0700</span> <span class="hljs-number">16</span>)  def <span class="hljs-built_in">log</span>(tree = <span class="hljs-string">'master'</span>)
+<span class="hljs-number">79</span>eaf55d (Scott Chacon  <span class="hljs-number">2008</span>-<span class="hljs-number">04</span>-<span class="hljs-number">06</span> <span class="hljs-number">10</span>:<span class="hljs-number">15</span>:<span class="hljs-number">08</span> -<span class="hljs-number">0700</span> <span class="hljs-number">17</span>)   <span class="hljs-command"><span class="hljs-keyword">command</span>(<span class="hljs-string">"git log #{tree}"</span>)</span>
+<span class="hljs-number">9</span>f6560e4 (Scott Chacon  <span class="hljs-number">2008</span>-<span class="hljs-number">03</span>-<span class="hljs-number">17</span> <span class="hljs-number">21</span>:<span class="hljs-number">52</span>:<span class="hljs-number">20</span> -<span class="hljs-number">0700</span> <span class="hljs-number">18</span>)  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-number">9</span>f6560e4 (Scott Chacon  <span class="hljs-number">2008</span>-<span class="hljs-number">03</span>-<span class="hljs-number">17</span> <span class="hljs-number">21</span>:<span class="hljs-number">52</span>:<span class="hljs-number">20</span> -<span class="hljs-number">0700</span> <span class="hljs-number">19</span>)
+<span class="hljs-number">42</span>cf2861 (Magnus Chacon <span class="hljs-number">2008</span>-<span class="hljs-number">04</span>-<span class="hljs-number">13</span> <span class="hljs-number">10</span>:<span class="hljs-number">45</span>:<span class="hljs-number">01</span> -<span class="hljs-number">0700</span> <span class="hljs-number">20</span>)  def blame(path)
+<span class="hljs-number">42</span>cf2861 (Magnus Chacon <span class="hljs-number">2008</span>-<span class="hljs-number">04</span>-<span class="hljs-number">13</span> <span class="hljs-number">10</span>:<span class="hljs-number">45</span>:<span class="hljs-number">01</span> -<span class="hljs-number">0700</span> <span class="hljs-number">21</span>)   <span class="hljs-command"><span class="hljs-keyword">command</span>(<span class="hljs-string">"git blame #{path}"</span>)</span>
+<span class="hljs-number">42</span>cf2861 (Magnus Chacon <span class="hljs-number">2008</span>-<span class="hljs-number">04</span>-<span class="hljs-number">13</span> <span class="hljs-number">10</span>:<span class="hljs-number">45</span>:<span class="hljs-number">01</span> -<span class="hljs-number">0700</span> <span class="hljs-number">22</span>)  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+</code></pre><p>請注意第一欄是最後一次修改該行的那次提交的 SHA-1 部份值。接下去的兩欄是從那次提交中取出的值——作者姓名和日期——所以你可以方便地獲知誰在什麼時候修改了這一行。在這後面是行號和檔案內容。請注意 <code>^4832fe2</code> 提交的那些行，這些指的是檔案最初提交(original commit)的那些行。那個提交是檔案第一次被加入這個專案時存在的，自那以後未被修改過。這會帶來小小的困惑，因為你已經至少看到了 Git 使用 <code>^</code> 來修飾一個提交的 SHA值 的三種不同的意義，但這裡確實就是這個意思。 </p>
+<p>另一件很酷的事情是，Git 並不會明確地記錄對檔案所做的重命名(rename)動作。它會記錄快照，然後根據實際狀況嘗試找出隱藏在背後的重命名動作。這其中有一個很有意思的特性，就是你可以讓它找出所有的程式碼移動。如果你在 <code>git blame</code> 後加上 <code>-C</code>，Git 會分析你所標注的檔案，然後嘗試找出其中代碼片段的原始出處，如果它是從其他地方拷貝過來的話。最近，我在對 <code>GITServerHandler.m</code> 這個檔案做程式碼重構(code refactoring)，將它分解為多個檔案，其中一個是 <code>GITPackUpload.m</code>。通過對 <code>GITPackUpload.m</code> 執行帶 <code>-C</code> 參數的 blame 命令，我可以看到程式碼片段的原始出處： </p>
+<pre><code>$ git blame <span class="hljs-attribute">-C</span> <span class="hljs-attribute">-L</span> <span class="hljs-number">141</span>,<span class="hljs-number">153</span> GITPackUpload<span class="hljs-built_in">.</span>m
+f344f58d GITServerHandler<span class="hljs-built_in">.</span>m (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">01</span><span class="hljs-subst">-</span><span class="hljs-number">04</span> <span class="hljs-number">141</span>)
+f344f58d GITServerHandler<span class="hljs-built_in">.</span>m (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">01</span><span class="hljs-subst">-</span><span class="hljs-number">04</span> <span class="hljs-number">142</span>) <span class="hljs-subst">-</span> (<span class="hljs-literal">void</span>) gatherObjectShasFromC
+f344f58d GITServerHandler<span class="hljs-built_in">.</span>m (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">01</span><span class="hljs-subst">-</span><span class="hljs-number">04</span> <span class="hljs-number">143</span>) {
+<span class="hljs-number">70</span>befddd GITServerHandler<span class="hljs-built_in">.</span>m (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">03</span><span class="hljs-subst">-</span><span class="hljs-number">22</span> <span class="hljs-number">144</span>)         <span class="hljs-comment">//NSLog(@"GATHER COMMI</span>
+ad11ac80 GITPackUpload<span class="hljs-built_in">.</span>m    (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">03</span><span class="hljs-subst">-</span><span class="hljs-number">24</span> <span class="hljs-number">145</span>)
+ad11ac80 GITPackUpload<span class="hljs-built_in">.</span>m    (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">03</span><span class="hljs-subst">-</span><span class="hljs-number">24</span> <span class="hljs-number">146</span>)         NSString <span class="hljs-subst">*</span>parentSha;
+ad11ac80 GITPackUpload<span class="hljs-built_in">.</span>m    (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">03</span><span class="hljs-subst">-</span><span class="hljs-number">24</span> <span class="hljs-number">147</span>)         GITCommit <span class="hljs-subst">*</span>commit <span class="hljs-subst">=</span> <span class="hljs-preprocessor">[</span>g
+ad11ac80 GITPackUpload<span class="hljs-built_in">.</span>m    (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">03</span><span class="hljs-subst">-</span><span class="hljs-number">24</span> <span class="hljs-number">148</span>)
+ad11ac80 GITPackUpload<span class="hljs-built_in">.</span>m    (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">03</span><span class="hljs-subst">-</span><span class="hljs-number">24</span> <span class="hljs-number">149</span>)         <span class="hljs-comment">//NSLog(@"GATHER COMMI</span>
+ad11ac80 GITPackUpload<span class="hljs-built_in">.</span>m    (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">03</span><span class="hljs-subst">-</span><span class="hljs-number">24</span> <span class="hljs-number">150</span>)
+<span class="hljs-number">56</span>ef2caf GITServerHandler<span class="hljs-built_in">.</span>m (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">01</span><span class="hljs-subst">-</span><span class="hljs-number">05</span> <span class="hljs-number">151</span>)         <span class="hljs-keyword">if</span>(commit) {
+<span class="hljs-number">56</span>ef2caf GITServerHandler<span class="hljs-built_in">.</span>m (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">01</span><span class="hljs-subst">-</span><span class="hljs-number">05</span> <span class="hljs-number">152</span>)                 <span class="hljs-preprocessor">[</span>refDict setOb
+<span class="hljs-number">56</span>ef2caf GITServerHandler<span class="hljs-built_in">.</span>m (Scott <span class="hljs-number">2009</span><span class="hljs-subst">-</span><span class="hljs-number">01</span><span class="hljs-subst">-</span><span class="hljs-number">05</span> <span class="hljs-number">153</span>)
+</code></pre><p>這真的非常有用。通常，你會把你拷貝代碼的那次提交作為原始提交，因為這是你在這個檔中第一次接觸到那幾行。Git可以告訴你編寫那些行的原始提交，即便是在另一個檔裡。</p>
+<h2 id="-binary-search-">二分法查找 (Binary Search)</h2>
+<p>當你知道問題在哪裡的時候，標注檔案會有幫助。如果你不知道，並且自從上次程式碼可用的狀態之後已經經歷了上百次的提交，你可能就要求助於 <code>git bisect</code> 命令了。<code>bisect</code> 會在你的提交歷史中進行二分查找，來儘快地確定哪一次提交引入了錯誤。 </p>
+<p>例如你剛剛推送了一個代碼發佈版本到產品環境中，得到一些在你開發環境中沒有發生的錯誤報告，而你對代碼為什麼會表現成那樣百思不得其解。你回到你的代碼中，還好你可以重現那個錯誤，但是找不到問題在哪裡。你可以對代碼執行 <code>bisect</code> 來尋找。首先你執行 <code>git bisect start</code> 啟動，然後你用 <code>git bisect bad</code> 來告訴系統當前的提交已經有問題了。然後你必須告訴 bisect 已知的最後一次正常狀態是哪次提交，使用 <code>git bisect good [good_commit]</code>： </p>
+<pre><code>$ git bisect <span class="hljs-operator"><span class="hljs-keyword">start</span>
+$ git bisect bad
+$ git bisect good v1<span class="hljs-number">.0</span>
+Bisecting: <span class="hljs-number">6</span> revisions <span class="hljs-keyword">left</span> <span class="hljs-keyword">to</span> test <span class="hljs-keyword">after</span> this
+[ecb6e1bc347ccecc5f9350d878ce677feb13d3b2] error handling <span class="hljs-keyword">on</span> repo</span>
+</code></pre><p>Git 發現在你標記為正常的提交(v1.0)和當前的錯誤版本之間有大約12次提交，於是它 check out 中間的一個。在這裡，你可以進行測試，檢查問題是否存在於這次提交。如果是，那麼它是在這個中間提交之前的某一次引入的；如果否，那麼問題是在中間提交之後引入的。假設這裡是沒有錯誤的，那麼你就通過 <code>git bisect good</code> 來告訴 Git 然後繼續你的旅程：</p>
+<pre><code>$ git bisect good
+Bisecting: <span class="hljs-number">3</span> revisions left to test after this
+[b047b02ea83310a70fd603dc8<span class="hljs-built_in">cd</span>7a6<span class="hljs-built_in">cd</span>13d15c04] secure this thing
+</code></pre><p>現在你在另外一個提交上了，在你剛剛測試通過的和一個錯誤提交的中點處。你再次執行測試然後發現這次提交是錯誤的，因此你通過 <code>git bisect bad</code> 來告訴 Git： </p>
+<pre><code>$ git bisect bad
+Bisecting: 1 revisions left to test after this
+[f71ce38690acf49c1f3c9bea38e09d82a5ce6014] <span class="hljs-operator"><span class="hljs-keyword">drop</span> exceptions <span class="hljs-keyword">table</span></span>
+</code></pre><p>這次提交是好的，那麼 Git 就獲得了確定問題引入位置所需的所有資訊。它告訴你第一個錯誤提交的 SHA-1 值，並且顯示一些提交說明，以及哪些檔在那次提交裡被修改過，這樣你可以找出 bug 被引入的根源： </p>
+<pre><code>$ git bisect good
+b047b02ea83310a70fd603dc8<span class="hljs-built_in">cd</span>7a6<span class="hljs-built_in">cd</span>13d15c04 is first bad commit
+commit b047b02ea83310a70fd603dc8<span class="hljs-built_in">cd</span>7a6<span class="hljs-built_in">cd</span>13d15c04
+Author: PJ Hyett &lt;pjhyett@example.com&gt;
+Date:   Tue Jan <span class="hljs-number">27</span> <span class="hljs-number">14</span>:<span class="hljs-number">48</span>:<span class="hljs-number">32</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0800</span>
+
+    secure this thing
+
+:<span class="hljs-number">040000</span> <span class="hljs-number">040000</span> <span class="hljs-number">40</span>ee3e7821b895e52c1695092db9bdc4c61d1730
+f24d3c6ebcfc639b1a3814550e62d60b8e68a8e4 M  config
+</code></pre><p>當你完成之後，你應該執行 <code>git bisect reset</code> 來重設你的 HEAD 到你開始前的地方，否則你會處於一個詭異的狀態： </p>
+<pre><code><span class="hljs-variable">$ </span>git bisect reset
+</code></pre><p>這是個強大的工具，可以幫助你檢查上百的提交，在幾分鐘內找出 bug 引入的位置。事實上，如果你有一個腳本程式會在專案工作正常時返回0，錯誤時返回非0的話，你可以完全自動地執行 <code>git bisect</code>。首先你需要提供已知的錯誤和正確提交來告訴它二分查找的範圍。你可以通過 <code>bisect start</code> 命令來列出它們，先列出已知的錯誤提交再列出已知的正確提交：</p>
+<pre><code><span class="hljs-variable">$ </span>git bisect start <span class="hljs-constant">HEAD</span> v1.<span class="hljs-number">0</span>
+<span class="hljs-variable">$ </span>git bisect run test-error.sh
+</code></pre><p>這樣會自動地在每一個 checked-out 提交裡執行 test-error.sh 直到 Git 找出第一個破損的提交。你也可以執行像 <code>make</code> 或者 <code>make tests</code>，或者任何你所能執行的自動化測試。 </p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_/.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_/_submodules.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

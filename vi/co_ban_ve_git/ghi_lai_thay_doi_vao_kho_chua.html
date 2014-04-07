@@ -1,0 +1,684 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Ghi Lại Thay Đổi vào Kho Chứa | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../co_ban_ve_git/xem_lich_su_commit.html" />
+        
+        
+        <link rel="prev" href="../co_ban_ve_git/tao_mot_kho_chua_git.html" />
+        
+
+        <meta property="og:title" content="Ghi Lại Thay Đổi vào Kho Chứa | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.2" data-basepath=".." data-revision="1396895602594">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/co_ban_ve_git/ghi_lai_thay_doi_vao_kho_chua.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="bat_dau/README.html">
+                
+                <a href="../bat_dau/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Bắt Đầu
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="bat_dau/ve_quan_ly_phien_ban.html">
+                            
+                            <a href="../bat_dau/ve_quan_ly_phien_ban.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Về Quản Lý Phiên Bản
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="bat_dau/so_luoc_lich_su_cua_git.html">
+                            
+                            <a href="../bat_dau/so_luoc_lich_su_cua_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Sơ Lược Lịch Sử của Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="bat_dau/co_ban_ve_git.html">
+                            
+                            <a href="../bat_dau/co_ban_ve_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Cơ Bản về Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="bat_dau/cai_dat_git.html">
+                            
+                            <a href="../bat_dau/cai_dat_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Cài Đặt Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="bat_dau/cau_hinh_git_lan_dau.html">
+                            
+                            <a href="../bat_dau/cau_hinh_git_lan_dau.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Cấu Hình Git Lần Đầu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="bat_dau/tro_giup.html">
+                            
+                            <a href="../bat_dau/tro_giup.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Trợ Giúp
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="bat_dau/tom_tat.html">
+                            
+                            <a href="../bat_dau/tom_tat.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Tóm Tắt
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="co_ban_ve_git/README.html">
+                
+                <a href="../co_ban_ve_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Cơ Bản Về Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="co_ban_ve_git/tao_mot_kho_chua_git.html">
+                            
+                            <a href="../co_ban_ve_git/tao_mot_kho_chua_git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Tạo Một Kho Chứa Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="co_ban_ve_git/ghi_lai_thay_doi_vao_kho_chua.html">
+                            
+                            <a href="../co_ban_ve_git/ghi_lai_thay_doi_vao_kho_chua.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Ghi Lại Thay Đổi vào Kho Chứa
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="co_ban_ve_git/xem_lich_su_commit.html">
+                            
+                            <a href="../co_ban_ve_git/xem_lich_su_commit.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Xem Lịch Sử Commit
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="co_ban_ve_git/phuc_hoi.html">
+                            
+                            <a href="../co_ban_ve_git/phuc_hoi.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Phục Hồi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="co_ban_ve_git/lam_viec_tu_xa.html">
+                            
+                            <a href="../co_ban_ve_git/lam_viec_tu_xa.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Làm Việc Từ Xa
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="co_ban_ve_git/danh_dau.html">
+                            
+                            <a href="../co_ban_ve_git/danh_dau.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Đánh Dấu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="co_ban_ve_git/meo_nho.html">
+                            
+                            <a href="../co_ban_ve_git/meo_nho.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Mẹo Nhỏ
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="co_ban_ve_git/tong_ket.html">
+                            
+                            <a href="../co_ban_ve_git/tong_ket.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Tổng Kết
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="phan_nhanh_trong_git/README.html">
+                
+                <a href="../phan_nhanh_trong_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Phân Nhánh Trong Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="phan_nhanh_trong_git/nhanh_la_gi.html">
+                            
+                            <a href="../phan_nhanh_trong_git/nhanh_la_gi.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Nhánh Là Gì?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="phan_nhanh_trong_git/co_ban_ve_phan_nhanh_va_tich_hop.html">
+                            
+                            <a href="../phan_nhanh_trong_git/co_ban_ve_phan_nhanh_va_tich_hop.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Cơ Bản Về Phân Nhánh và Tích Hợp
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="phan_nhanh_trong_git/quan_ly_cac_nhanh.html">
+                            
+                            <a href="../phan_nhanh_trong_git/quan_ly_cac_nhanh.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Quản Lý Các Nhánh
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="phan_nhanh_trong_git/quy_trinh_lam_viec_phan_nhanh.html">
+                            
+                            <a href="../phan_nhanh_trong_git/quy_trinh_lam_viec_phan_nhanh.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Quy Trình Làm Việc Phân Nhánh
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="phan_nhanh_trong_git/nhanh_remote.html">
+                            
+                            <a href="../phan_nhanh_trong_git/nhanh_remote.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Nhánh Remote
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="phan_nhanh_trong_git/rebasing.html">
+                            
+                            <a href="../phan_nhanh_trong_git/rebasing.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="phan_nhanh_trong_git/tong_ket.html">
+                            
+                            <a href="../phan_nhanh_trong_git/tong_ket.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Tổng Kết
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 44%;min-width: 40%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../bat_dau/README.html" title="Bắt Đầu" class="chapter done new-chapter" data-progress="1" style="left: 4%;"></a>
+    
+        <a href="../bat_dau/ve_quan_ly_phien_ban.html" title="Về Quản Lý Phiên Bản" class="chapter done " data-progress="1.1" style="left: 8%;"></a>
+    
+        <a href="../bat_dau/so_luoc_lich_su_cua_git.html" title="Sơ Lược Lịch Sử của Git" class="chapter done " data-progress="1.2" style="left: 12%;"></a>
+    
+        <a href="../bat_dau/co_ban_ve_git.html" title="Cơ Bản về Git" class="chapter done " data-progress="1.3" style="left: 16%;"></a>
+    
+        <a href="../bat_dau/cai_dat_git.html" title="Cài Đặt Git" class="chapter done " data-progress="1.4" style="left: 20%;"></a>
+    
+        <a href="../bat_dau/cau_hinh_git_lan_dau.html" title="Cấu Hình Git Lần Đầu" class="chapter done " data-progress="1.5" style="left: 24%;"></a>
+    
+        <a href="../bat_dau/tro_giup.html" title="Trợ Giúp" class="chapter done " data-progress="1.6" style="left: 28%;"></a>
+    
+        <a href="../bat_dau/tom_tat.html" title="Tóm Tắt" class="chapter done " data-progress="1.7" style="left: 32%;"></a>
+    
+        <a href="../co_ban_ve_git/README.html" title="Cơ Bản Về Git" class="chapter done new-chapter" data-progress="2" style="left: 36%;"></a>
+    
+        <a href="../co_ban_ve_git/tao_mot_kho_chua_git.html" title="Tạo Một Kho Chứa Git" class="chapter done " data-progress="2.1" style="left: 40%;"></a>
+    
+        <a href="../co_ban_ve_git/ghi_lai_thay_doi_vao_kho_chua.html" title="Ghi Lại Thay Đổi vào Kho Chứa" class="chapter done " data-progress="2.2" style="left: 44%;"></a>
+    
+        <a href="../co_ban_ve_git/xem_lich_su_commit.html" title="Xem Lịch Sử Commit" class="chapter  " data-progress="2.3" style="left: 48%;"></a>
+    
+        <a href="../co_ban_ve_git/phuc_hoi.html" title="Phục Hồi" class="chapter  " data-progress="2.4" style="left: 52%;"></a>
+    
+        <a href="../co_ban_ve_git/lam_viec_tu_xa.html" title="Làm Việc Từ Xa" class="chapter  " data-progress="2.5" style="left: 56%;"></a>
+    
+        <a href="../co_ban_ve_git/danh_dau.html" title="Đánh Dấu" class="chapter  " data-progress="2.6" style="left: 60%;"></a>
+    
+        <a href="../co_ban_ve_git/meo_nho.html" title="Mẹo Nhỏ" class="chapter  " data-progress="2.7" style="left: 64%;"></a>
+    
+        <a href="../co_ban_ve_git/tong_ket.html" title="Tổng Kết" class="chapter  " data-progress="2.8" style="left: 68%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/README.html" title="Phân Nhánh Trong Git" class="chapter  new-chapter" data-progress="3" style="left: 72%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/nhanh_la_gi.html" title="Nhánh Là Gì?" class="chapter  " data-progress="3.1" style="left: 76%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/co_ban_ve_phan_nhanh_va_tich_hop.html" title="Cơ Bản Về Phân Nhánh và Tích Hợp" class="chapter  " data-progress="3.2" style="left: 80%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/quan_ly_cac_nhanh.html" title="Quản Lý Các Nhánh" class="chapter  " data-progress="3.3" style="left: 84%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/quy_trinh_lam_viec_phan_nhanh.html" title="Quy Trình Làm Việc Phân Nhánh" class="chapter  " data-progress="3.4" style="left: 88%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/nhanh_remote.html" title="Nhánh Remote" class="chapter  " data-progress="3.5" style="left: 92%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/rebasing.html" title="Rebasing" class="chapter  " data-progress="3.6" style="left: 96%;"></a>
+    
+        <a href="../phan_nhanh_trong_git/tong_ket.html" title="Tổng Kết" class="chapter  " data-progress="3.7" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_248">
+                    
+                        <h1 id="ghi-l-i-thay-i-v-o-kho-ch-a">Ghi Lại Thay Đổi vào Kho Chứa</h1>
+<p>Bây giờ bạn đã có một kho chứa Git thật sự và một bản sao dữ liệu của dự án để làm việc. Bạn cần thực hiện một số thay đổi và commit ảnh của chúng vào kho chứa mỗi lần dự án đạt tới một trạng thái nào đó mà bạn muốn ghi lại.</p>
+<p>Hãy nhớ là mỗi tập tin trong thư mục làm việc của bạn có thể ở một trong hai trạng thái : <em>tracked</em> hoặc <em>untrachked</em>. Tập tin <em>tracked</em> là các tập tin đã có mặt trong ảnh (snapshot) trước; chúng có thể là <em>unmodified</em>, <em>modified</em>, hoặc <em>staged</em>. Tập tin <em>untracked</em> là các tập tin còn lại - bất kỳ tập tin nào trong thư mục làm việc của bạn mà không có ở ảnh (lần commit) trước hoặc không ở trong khu vực tổ chức (staging area). Ban đầu, khi bạn tạo bản sao của một kho chứa, tất cả tập tin ở trạng thái &quot;đã được theo dõi&quot; (tracked) và &quot;chưa thay đổi&quot; (unmodified) vì bạn vừa mới tải chúng về và chưa thực hiện bất kỳ thay đổi nào.</p>
+<p>Khi bạn chỉnh sửa các tập tin, Git coi là chúng đã bị thay đổi so với lần commit trước đó. Bạn <em>stage</em> các tập tin bị thay đổi này và sau đó commit tất cả các thay đổi đã được staged (tổ chức) đó, và quá trình này cứ thế lặp đi lặp lại như được miêu tả trong Hình 2-1.</p>
+<p><img src="http://git-scm.com/figures/18333fig0201-tn.png" alt=""></p>
+<p>Hình 2-1. Vòng đời các trạng thái của tập tin.</p>
+<h2 id="ki-m-tra-tr-ng-th-i-c-a-t-p-tin">Kiểm Tra Trạng Thái Của Tập Tin</h2>
+<p>Công cụ chính để phát hiện trạng thái của tập tin là lệnh <code>git status</code>. Nếu bạn chạy lệnh này trực tiếp sau khi vừa tạo xong một bản sao, bạn sẽ thấy tương tự như sau:</p>
+<pre><code>$ git status
+<span class="hljs-comment"># On branch master</span>
+nothing <span class="hljs-built_in">to</span> commit (working <span class="hljs-built_in">directory</span> clean)
+</code></pre><p>Điều này có nghĩa là bạn có một thư mục làm việc &quot;sạch&quot; - hay nói cách khác, không có tập tin đang theo dõi nào bị thay đổi. Git cũng không phát hiện ra tập tin chưa được theo dõi nào, nếu không thì chúng đã được liệt kê ra đây. Cuối cùng, lệnh này cho bạn biết bạn đang thao tác trên &quot;nhánh&quot; (branch) nào. Hiện tại thì nó sẽ luôn là <code>master</code>, đó là nhánh mặc định; bạn chưa nên quan tâm đến vấn đề này bây giờ. Chương tiếp theo chúng ta sẽ bàn về các Nhánh chi tiết hơn.</p>
+<p>Giả sử bạn thêm một tập tin mới vào dự án, một tập tin <code>README</code> đơn giản. Nếu như tập tin này chưa từng tồn tại trước đó, kho bạn chạy <code>git status</code>, bạn sẽ thấy thông báo tập tin chưa được theo dõi như sau:</p>
+<pre><code>$ vim README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Untracked files:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    README</span>
+nothing added to commit but untracked files present (use <span class="hljs-string">"git add"</span> to track)
+</code></pre><p>Bạn có thể thấy là tập tin <code>README</code> mới chưa được theo dõi, bởi vì nó nằm trong danh sách &quot;Các tập tin chưa được theo dõi:&quot; (Untracked files) trong thông báo trạng thái được hiển thị. Chưa được theo dõi về cơ bản có nghĩa là Git thấy một tập tin chưa tồn tại trong ảnh (lần commit) trước; Git sẽ không tự động thêm nó vào các commit tiếp theo trừ khi bạn chỉ định rõ ràng cho nó làm như vậy. Theo cách này, bạn sẽ không vô tình thêm vào các tập tin nhị phân hoặc các tập tin khác mà bạn không thực sự muốn. Trường hợp này bạn thực sự muốn thêm README, vậy hãy bắt đầu theo dõi nó.</p>
+<h2 id="theo-d-i-c-c-t-p-tin-m-i">Theo Dõi Các Tập Tin Mới</h2>
+<p>Để có thể theo dõi các tập tin mới tạo, bạn sử dụng lệnh <code>git add</code>. Và để bắt đầu theo dõi tập tin <code>README</code> bạn có thể chạy lệnh sau:</p>
+<pre><code><span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Nếu bạn chạy lệnh kiểm tra trạng thái lại một lần nữa, bạn sẽ thấy tập tin <code>README</code> bây giờ đã được theo dõi và tổ chức (staged):</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Bạn có thể thấy nó đã được staged vì nó đã nằm trong danh sách &quot;Các thay đổi chuẩn bị commit&quot;. Nếu bạn commit tại thời điểm này, phiên bản của tập tin ở thời điểm bạn chạy <code>git add</code> sẽ được thêm vào lịch sử commit. Nhớ lại khi bạn chạy <code>git init</code> lúc trước, sau đó là lệnh <code>git add (files)</code> - đó chính là bắt đầu theo dõi các tập tin trong thư mục của bạn. Lệnh <code>git add</code> có thể dùng cho một tập tin hoặc một thư mục; nếu là thư mục, nó sẽ thêm tất cả tập tin trong thư mục đó cũng như các thư mục con.</p>
+<h2 id="qu-n-l-c-c-t-p-tin-thay-i">Quản Lý Các Tập Tin Đã Thay Đổi</h2>
+<p>Hãy sửa một tập tin đang được theo dõi. Nếu bạn sửa một tập tin đang được theo dõi như <code>benchmarks.rb</code> sau đó chạy lệnh <code>status</code>, bạn sẽ thấy tương tự như sau:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Tập tin <code>benchmarks.rb</code> nằm trong danh sách &quot;Các thay đổi chưa được tổ chức/đánh dấu để commit&quot; - có nghĩa là một tập tin đang được theo dõi đã bị thay đổi trong thư mục làm việc nhưng chưa được &quot;staged&quot;. Để làm việc này, bạn chạy lệnh <code>git add</code> (đó là một câu lệnh đa chức năng - bạn có thể dùng nó để bắt đầu theo dõi tập tin, tổ chức tập tin, hoặc các việc khác như đánh dấu đã giải quyết xong các tập tin có nội dung mâu thuẫn nhau khi tích hợp). Chạy <code>git add</code> để &quot;stage&quot; tập tin <code>benchmarks.rb</code> và sau đó chạy lại lệnh <code>git status</code>: </p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Cả hai tập tin đã được tổ chức và sẽ có mặt trong lần commit tới. Bây giờ, giả sử bạn nhớ ra một chi tiết nhỏ nào đó cần thay đổi trong tập tin <code>benchmarks.rb</code> trước khi commit. Bạn lại mở nó ra và sửa, bây giờ thì sẵn sàng để commit rồi. Tuy nhiên, hãy chạy <code>git status</code> lại một lần nữa:</p>
+<pre><code>$ vim benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Chuyện gì xảy ra thế này? Bây giờ <code>benchmarks.rb</code> lại nằm trong cả hai danh sách staged và unstaged. Làm sao có thể thế được? Hoá ra là Git tổ chức một tập tin chính lúc bạn chạy lệnh <code>git add</code>. Nếu bạn commit bây giờ, phiên bản của tập tin <code>benchmarks.rb</code> khi bạn chạy <code>git add</code> sẽ được commit chứ không phải như bạn nhìn thấy hiện tại trong thư mục làm việc khi chạy <code>git commit</code>. Nếu như bạn chỉnh sửa một tập tin sau khi chạy <code>git add</code>, bạn phải chạy <code>git add</code> lại một lần nữa để đưa nó vào phiên bản mới nhất:</p>
+<pre><code>$ git add benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><h2 id="b-qua-c-c-t-p-tin">Bỏ Qua Các Tập Tin</h2>
+<p>Thường thì hay có một số loại tập tin mà bạn không muốn Git tự động thêm nó vào hoặc thậm chí hiển thị là không được theo dõi. Những tập tin này thường được tạo ta tự động ví dụ như các tập tin nhật ký (log files) hay các tập được sinh ra khi biên dịch chương trình. Trong những trường hợp như thế, bạn có thể tạo một tập tin liệt kê các &quot;mẫu&quot; (patterns) để tìm những tập tin này có tên <code>.gitignore</code>. Đây là một ví dụ của <code>.gitignore</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>cat .gitignore
+*.[oa]
+*~
+</code></pre><p>Dòng đầu tiên yêu cầu Git bỏ qua tất cả các tập tin có đuôi là <code>.o</code> hoặc <code>.a</code> - các tập tin <em>object</em> và <em>archiev</em> có thể được tạo ra khi bạn dịch mã nguồn. Dòng thứ hai yêu cầu Git bỏ qua tất cả tập tin có đuôi là dẫu ngã (<code>~</code>), chúng được sử dụng để lưu các giá trị tạm thời bởi rất nhiều chương trình soạn thảo như Emacs. Bạn có thể thêm vào các thư mục như <code>log</code>, <code>tmp</code>, hay <code>pid</code>; hay các tài liệu được tạo ra tự động,... Tạo một tập tin <code>.gitignore</code> trước khi bắt đầu làm việc là một ý tưởng tốt, như vậy bạn sẽ không vô tình commit các tập tin mà bạn không muốn.</p>
+<p>Quy tắc cho các mẫu có thể sử dụng trong <code>.gitignore</code> như sau:</p>
+<ul>
+<li>Dòng trống hoặc bắt đầu với <code>#</code> sẽ được bỏ qua.</li>
+<li>Các mẫu chuẩn toàn cầu hoạt động tốt.</li>
+<li>Mẫu có thể kết thúc bằng dấu gạch chéo (<code>/</code>) để chỉ định một thư mục.</li>
+<li>Bạn có thể có &quot;mẫu phủ định&quot; bằng cách thêm dấu cảm thám vào phía trước (<code>!</code>).</li>
+</ul>
+<p>Các mẫu toàn cầu giống như các biểu thức chính quy (regular expression) rút gọn được sử dụng trong shell. Dấu sao (<code>*</code>) khớp với 0 hoặc nhiều ký tự; <code>[abc]</code> khớp với bất kỳ ký tự nào trong dấu ngoặc (trong trường hợp này là <code>a</code>, <code>b</code>, hoặc <code>c</code>); dấu hỏi (<code>?</code>) khớp với một ký tự đơn; và dấu ngoặc có ký tự được ngăn cách bởi dấu gạch ngang (<code>[0-9]</code>) khớp bất kỳ ký tự nào trong khoảng đó (ở đây là từ 0 đến 9).</p>
+<p>Đây là một ví dụ của <code>.gitignore</code>:</p>
+<pre><code><span class="hljs-preprocessor"># a comment - dòng này được bỏ qua</span>
+<span class="hljs-preprocessor"># không theo dõi tập tin có đuôi .a </span>
+*.a
+<span class="hljs-preprocessor"># nhưng theo dõi tập lib.a, mặc dù bạn đang bỏ qua tất cả tập tin .a ở trên</span>
+!lib.a
+<span class="hljs-preprocessor"># chỉ bỏ qua tập TODO ở thư mục gốc, chứ không phải ở các thư mục con subdir/TODO</span>
+/TODO
+<span class="hljs-preprocessor"># bỏ qua tất cả tập tin trong thư mục build/</span>
+build/
+<span class="hljs-preprocessor"># bỏ qua doc/notes.txt, không phải doc/server/arch.txt</span>
+doc<span class="hljs-comment">/*.txt
+# bỏ qua tất cả tập .txt trong thư mục doc/
+doc/**/</span>*.txt
+</code></pre><p>Mẫu <code>**/</code> có mặt từ Git phiên bản 1.8.2 trở lên.</p>
+<h2 id="xem-c-c-thay-i-staged-v-unstaged">Xem Các Thay Đổi Staged và Unstaged</h2>
+<p>Nếu câu lệnh <code>git status</code> quá mơ hồ với bạn - bạn muốn biết chính xác cái đã thay đổi là gì, chứ không chỉ là tập tin nào bị thay đổi - bạn có thể sử dụng lệnh <code>git diff</code>. Chúng ta sẽ nói về <code>git diff</code> chi tiết hơn trong phần sau; nhưng chắc chắn bạn sẽ thường xuyên sử dụng nó để trả lời cho hai câu hỏi sau: Cái bạn đã thay đổi nhưng chưa được staged là gì? Và Những thứ đã được staged để chuẩn bị commit là gì?. Lệnh <code>git status</code> chỉ trả lời những câu hỏi trên một cách chung chung, nhưng <code>git diff</code> chỉ cho bạn chính xác từng dòng đã được thêm hoặc xoá - hay còn được biết đến như là bản vá (patch).</p>
+<p>Giả sử bạn sửa và stage tập tin <code>README</code> lại một lần nữa, sau đó là sửa tập <code>benchmarks.rb</code> mà không stage nó. Nếu bạn chạy lệnh <code>status</code>, bạn sẽ lại nhìn thấy tương tự như sau:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    new file:   README</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Để xem chính xác bạn đã thay đổi nhưng chưa stage những gì, hãy dùng <code>git diff</code> không sử dụng tham số nào khác:</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..da65585 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+           @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+         <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+         run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+           <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+           <span class="hljs-built_in">log</span>.size
+</code></pre><p>Câu lệnh này so sánh cái ở trong thư mục làm việc của bạn với cái ở trong khu vực tổ chức (staging). Kết quả cho bạn biết những thứ đã bị thay đổi mà chưa được stage.</p>
+<p>Nếu bạn muốn xem những gì bạn đã staged mà chuẩn bị được commit, bạn có thể sử dụng <code>git diff --cached</code>. (Từ Git 1.6.1 trở đi, bạn có thể sử dụng <code>git diff --staged</code>, có thể sẽ dễ nhớ hơn.) Lệnh này so sánh những thay đổi đã được tổ chức với lần commit trước đó:</p>
+<pre><code>$ git diff --cached
+diff --git a/README b/README
+new file mode 100644
+index 0000000..03902a1
+<span class="hljs-header">--- /dev/null</span>
+<span class="hljs-header">+++ b/README2</span>
+<span class="hljs-chunk">@@ -0,0 +1,5 @@</span>
+<span class="hljs-addition">+grit</span>
+<span class="hljs-addition">+ by Tom Preston-Werner, Chris Wanstrath</span>
+<span class="hljs-addition">+ http://github.com/mojombo/grit</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+Grit is a Ruby library for extracting information from a Git repository</span>
+</code></pre><p>Một điều quan trọng cần ghi nhớ là chỉ chạy <code>git diff</code> không thôi thì nó sẽ không hiển thị cho bạn tất cả thay đổi từ lần comiit trước - mà chỉ có các thay đổi chưa được tổ chức. Điều này có thể gây khó hiểu một chút, bởi vì nếu như bạn đã tổ chức tất cả các thay đổi, <code>git diff</code> sẽ không hiện gì cả.</p>
+<p>Thêm một ví dụ nữa, nếu như bạn tổ chức tập tin <code>benchmarks.rb</code> rồi sau đó mới sửa nó, bạn có thể sử dụng <code>git diff</code> để xem các thay đổi đã tổ chức cũng như chưa tổ chức:</p>
+<pre><code>$ git add benchmarks.rb
+$ echo <span class="hljs-string">'# test line'</span> &gt;&gt; benchmarks.rb
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Bây giờ bạn có thể sử dụng <code>git diff</code> để xem những gì vẫn chưa được tổ chức</p>
+<pre><code>$ git diff
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index e445e28.<span class="hljs-number">.86</span>b2f7c <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">127</span>,<span class="hljs-number">3</span> +<span class="hljs-number">127</span>,<span class="hljs-number">4</span> @@ <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+ main()
+
+ <span class="hljs-comment">##pp Grit::GitRuby.cache_client.stats</span>
++<span class="hljs-comment"># test line</span>
+</code></pre><p>và <code>git diff --cached</code> để xem những gì đã được tổ chức tới thời điểm hiện tại:</p>
+<pre><code>$ git diff <span class="hljs-comment">--cached</span>
+diff <span class="hljs-comment">--git a/benchmarks.rb b/benchmarks.rb</span>
+index <span class="hljs-number">3</span>cb747f..e445e28 <span class="hljs-number">100644</span>
+<span class="hljs-comment">--- a/benchmarks.rb</span>
++++ b/benchmarks.rb
+@@ -<span class="hljs-number">36</span>,<span class="hljs-number">6</span> +<span class="hljs-number">36</span>,<span class="hljs-number">10</span> @@ def main
+          @commit.parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>].parents[<span class="hljs-number">0</span>]
+        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+
++        run_code(x, <span class="hljs-string">'commits 1'</span>) <span class="hljs-built_in">do</span>
++          git.commits.size
++        <span class="hljs-function"><span class="hljs-keyword">end</span></span>
++
+        run_code(x, <span class="hljs-string">'commits 2'</span>) <span class="hljs-built_in">do</span>
+          <span class="hljs-built_in">log</span> = git.commits(<span class="hljs-string">'master'</span>, <span class="hljs-number">15</span>)
+          <span class="hljs-built_in">log</span>.size
+</code></pre><h2 id="commit-thay-i">Commit Thay Đổi</h2>
+<p>Bây giờ, sau khi đã tổ chức các tập tin theo ý muốn, bạn có thể commit chúng. Hãy nhỡ là những gì chưa được tổ chức - bất kỳ tập tin nào được tạo ra hoặc sửa đổi sau khi chạy lệnh <code>git add</code> - sẽ không được commit. Chúng sẽ vẫn ở trạng thái đã thay đổi trên ổ cứng của bạn.
+Trong trường hợp này, bạn thấy là từ lần cuối cùng chạy <code>git status</code>, tất cả mọi thứ đã được tổ chức thế nên bạn đã sẵn sàng để commit. Cách đơn giản nhất để commit là gõ vào <code>git commit</code>:</p>
+<pre><code><span class="hljs-variable">$ </span>git commit
+</code></pre><p>Sau khi chạy lệnh này, chương trình soạn thảo do bạn lựa chọn sẽ được mở lên. (Chương trình được chỉ định bằng biến <code>$EDITOR</code> - thường là vim hoặc emacs, tuy nhiên bạn có thể chọn bất kỳ chương trình nào khác bằng cách sử dụng lệnh <code>git config --global core.editor</code> như bạn đã thấy ở <em>Chương 1</em>).</p>
+<p>Nó sẽ hiển thị đoạn thông báo sau (trong ví dụ này là màn hình của Vim):</p>
+<pre><code><span class="hljs-preprocessor"># Please enter the commit message for your changes. Lines starting</span>
+<span class="hljs-preprocessor"># with '#' will be ignored, and an empty message aborts the commit.</span>
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       new file:   README</span>
+<span class="hljs-preprocessor">#       modified:   benchmarks.rb</span>
+~
+~
+~
+<span class="hljs-string">".git/COMMIT_EDITMSG"</span> <span class="hljs-number">10</span>L, <span class="hljs-number">283</span>C
+</code></pre><p>Bạn có thể thấy thông báo mặc định có chứa nội dung của lần chạy <code>git status</code> cuối cùng được dùng làm chú thích và một dòng trống ở trên cùng. Bạn có thể xoá những chú thích này đi và nhập vào nội dung riêng của bạn cho commit đó, hoặc bạn có thể giữ nguyên như vậy để giúp bạn nhớ được những gì đang commit. (Một cách nữa để nhắc nhở bạn rõ ràng hơn những gì bạn đã sửa là truyền vào tham số -v cho <code>git commit</code>. Làm như vậy sẽ đưa tất cả thay đổi như khi thực hiện lệnh diff vào chương trình soạn thảo, như vậy bạn có thể biết chính xác những gì bạn đã làm.) Khi bạn thoát ra khỏi chương trình soạn thảo, Git tạo commit của bạn với thông báo/điệp đó (các chú thích và diff sẽ bị bỏ đi).</p>
+<p>Nói cách khác, bạn có thể gõ trực tiếp thông điệp cùng với lệnh <code>commit</code> bằng cách thêm vào sau cờ <code>-m</code>, như sau:</p>
+<pre><code>$ git commit -m "Story 182: Fix benchmarks for speed"
+[<span class="hljs-link_reference">master</span>]:<span class="hljs-link_url"> created 463dc4f: "Fix benchmarks for speed"</span><span class="hljs-link_url">
+ 2 files changed, 3 insertions(+), 0 deletions(-)</span><span class="hljs-link_url">
+ create mode 100644 README</span>
+</code></pre><p>Bây giờ thì bạn đã thực hiện xong commit đầu tiên. Bạn có thể thấy là commit đó hiển thị một số thông tin về chính nó như: nhánh mà bạn commit tới (<code>master</code>), mã băm SHA-1 của commit đó, bao nhiêu tập tin đã thay đổi, và thống kê về số dòng đã thêm cũng như xoá trong commit.</p>
+<p>Hãy nhớ là commit lưu lại ảnh các tập tin mà bạn chỉ định trong khu vực tổ chức. Bất kỳ tập tin nào không ở trong đó sẽ vẫn giữ nguyên trạng thái là đã sửa (modified); bạn có thể thực hiện một commit khác để thêm chúng vào lịch sử. Mỗi lần thực hiện commit là bạn đang ghi lại ảnh của dự án mà bạn có thể dựa vào đó để so sánh hoặc khôi phục về sau này.</p>
+<h2 id="b-qua-khu-v-c-t-ch-c">Bỏ Qua Khu Vực Tổ Chức</h2>
+<p>Mặc dù tự tổ chức commit theo cách bạn muốn là một cách hay, tuy nhiên đôi khi khu vực tổ chức khiến quy trình làm việc của bạn trở nên phức tạp. Nếu bạn muốn bỏ qua bước này, Git đã cung cấp sẵn cho bạn một &quot;lối tắt&quot;. Chỉ cần thêm vào lựa chọn <code>-a</code> khi thực hiện <code>git commit</code>, Git sẽ tự động thêm tất cả các tập tin đã được theo dõi trước khi thực hiện lệnh commit, cho phép bạn bỏ qua bước <code>git add</code>:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   benchmarks.rb</span>
+<span class="hljs-preprocessor">#</span>
+$ git commit -a -m <span class="hljs-string">'added new benchmarks'</span>
+[master <span class="hljs-number">83e38</span>c7] added <span class="hljs-keyword">new</span> benchmarks
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">5</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p>Hãy chú ý tại sao bạn không phải chạy <code>git add</code> với tập tin <code>benchmarks.rb</code> trước khi commit trong trường hợp này.</p>
+<h2 id="xo-t-p-tin">Xoá Tập Tin</h2>
+<p>Để xoá một tập tin khỏi Git, bạn phải xoá nó khỏi danh sách được theo dõi (chính xác hơn, xoá nó khỏi khu vực tổ chức) và sau đó commit. Lệnh <code>git rm</code> thực hiện điều đó và cũng xoá tập tin khỏi thư mục làm việc vì thế bạn sẽ không thấy nó như là tập tin không được theo dõi trong những lần tiếp theo.</p>
+<p>Nếu bạn chỉ đơn giản xoá tập tin khỏi thư mục làm việc, nó sẽ được hiện thị trong phần &quot;Thay đổi không được tổ chức để commit&quot; (hay <em>unstaged</em>) khi bạn chạy <code>git status</code>:</p>
+<pre><code>$ rm grit.gemspec
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add/rm &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Khi đó, nếu bạn chạy <code>git rm</code>, Git sẽ xoá tập tin đó khỏi khu vực tổ chức:</p>
+<pre><code>$ git rm grit.gemspec
+rm <span class="hljs-string">'grit.gemspec'</span>
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       deleted:    grit.gemspec</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Lần commit tới, tập tin đó sẽ bị xoá và không còn được theo dõi nữa. Nếu như bạn đã sửa và thêm tập tin đó vào danh sách, bạn phải ép Git xoá đi bằng cách thêm lựa chọn <code>-f</code>. Đây là một chức năng an toàn nhằm ngăn chặn việc xoá nhầm dữ liệu chưa được lưu vào ảnh và nó sẽ không thể được khôi phục từ Git.</p>
+<p>Một chức năng hữu ích khác có thể bạn muốn sử dụng đó là giữ tập tin trong thư mục làm việc nhưng không thêm chúng vào khu vực tổ chức. Hay nói cách khác bạn muốn lưu tập tin trên ổ cứng nhưng không muốn Git theo dõi chúng nữa. Điều này đặc biệt hữu ích nếu như bạn quên thêm nó vào tập <code>.gitignore</code> và vô tình tổ chức (stage) chúng, ví dụ như một tập tin nhật ký lớn hoặc rất nhiều tập tin <code>.a</code>. Để làm được điều này, hãy sử dụng lựa chọn <code>--cached</code>:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">rm</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">cached</span> <span class="hljs-comment">readme</span><span class="hljs-string">.</span><span class="hljs-comment">txt</span>
+</code></pre><p>Bạn có thể truyền vào tập tin, thư mục hay mẫu (patterns) vào lệnh <code>git rm</code>. Nghĩa là bạn có thể thực hiện tương tự như:</p>
+<pre><code>$ git rm <span class="hljs-keyword">log</span>/\*.<span class="hljs-keyword">log</span>
+</code></pre><p>Chú ý dấu chéo ngược (<code>\</code>) đằng trước <code>*</code>. Việc này là cần thiết vì ngoài phần mở rộng mặc định Git còn sử dụng thêm phần mở rộng riêng - &quot;This is necessary because Git does its own filename expansion in addition to your shell’s filename expansion&quot;. Trên Windows, dấu gạch ngược (<code>\</code>) phải bỏ đi. Lệnh này xoá toàn bộ tập tin có đuôi <code>.log</code> trong thư mục <code>log/</code>. Hoặc bạn có thể thực hiện tương tự như sau:</p>
+<pre><code><span class="hljs-variable">$ </span>git rm \*~
+</code></pre><p>Lệnh này xoá toàn bộ tập tin kết thúc bằng <code>~</code>.</p>
+<h2 id="di-chuy-n-t-p-tin">Di Chuyển Tập Tin</h2>
+<p>Không giống như các hệ thống quản lý phiên bản khác, Git không theo dõi việc di chuyển tập tin một cách rõ ràng. Nếu bạn đổi tên một tập tin trong Git, không có thông tin nào được lưu trữ trong Git có thể cho bạn biết là bạn đã đổi tên một tập tin. 
+Tuy nhiên, Git rất thông minh trong việc tìm ra điều đó - chúng ta sẽ nói về phát hiện việc di chuyển các tập tin sau.</p>
+<p>Vì thế nên nó hơi khó hiểu khi Git cung cấp lệnh <code>mv</code>. Nếu bạn muốn đổi tên một tập tin trong Git, bạn có thể dùng </p>
+<pre><code><span class="hljs-variable">$ </span>git mv file_from file_to
+</code></pre><p>và nó chạy tốt. Thực tế, nếu bạn chạy lệnh tương tự và sau đó kiểm tra trạng thái, bạn sẽ thấy Git coi là nó đã đổi tên một tập tin:</p>
+<pre><code>$ git mv README.txt README
+$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Your branch is ahead of 'origin/master' by 1 commit.</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#       renamed:    README.txt -&gt; README</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Tuy nhiên, việc này lại tương tự việc thực hiện như sau:</p>
+<pre><code><span class="hljs-variable">$ </span>mv <span class="hljs-constant">README</span>.txt <span class="hljs-constant">README</span>
+<span class="hljs-variable">$ </span>git rm <span class="hljs-constant">README</span>.txt
+<span class="hljs-variable">$ </span>git add <span class="hljs-constant">README</span>
+</code></pre><p>Git ngầm hiểu đó là đổi tên, vì thế dù bạn đổi tên bằng cách này hoặc dùng lệnh <code>mv</code> cũng không quan trọng. Sự khác biệt duy nhất ở đây là <code>mv</code> là một lệnh duy nhất thay vì ba - sử dụng nó thuận tiện hơn rất nhiều. Quan trọng hơn, bạn có thể dùng bất kỳ cách nào để đổi tên một tập tin, và chạy add/rm sau đó, trước khi commit.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../co_ban_ve_git/tao_mot_kho_chua_git.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../co_ban_ve_git/xem_lich_su_commit.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

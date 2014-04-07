@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>إدارة الإصدارات (Version Control) | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../_/___git.html" />
+        
+        
+        <link rel="prev" href="../_/README.html" />
+        
+
+        <meta property="og:title" content="إدارة الإصدارات (Version Control) | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="1.1" data-basepath=".." data-revision="1396895597415">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/_/__version_control.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="_/README.html">
+                
+                <a href="../_/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> الإستعداد للبدء!
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="_/__version_control.html">
+                            
+                            <a href="../_/__version_control.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> إدارة الإصدارات (Version Control)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="_/___git.html">
+                            
+                            <a href="../_/___git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> لمحة تاريخية عن Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="_/_git.html">
+                            
+                            <a href="../_/_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> أوليات Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="_/_git.html">
+                            
+                            <a href="../_/_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> تصيب Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="_/_git__.html">
+                            
+                            <a href="../_/_git__.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> إعداد Git لأول مرة
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="_/__.html">
+                            
+                            <a href="../_/__.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> الحصول على المساعدة
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="_/.html">
+                            
+                            <a href="../_/.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> الملخص
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="_git/README.html">
+                
+                <a href="../_git/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> مبادئ Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="_git/__repository___git.html">
+                            
+                            <a href="../_git/__repository___git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> الحصول على repository لمشروعك بـ Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="_git/____repository.html">
+                            
+                            <a href="../_git/____repository.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> تسجيل التعديلات في الـ repository
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="_git/viewing_the_commit_history.html">
+                            
+                            <a href="../_git/viewing_the_commit_history.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Viewing the Commit History
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="_git/undoing_things.html">
+                            
+                            <a href="../_git/undoing_things.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Undoing Things
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="_git/working_with_remotes.html">
+                            
+                            <a href="../_git/working_with_remotes.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Working with Remotes
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="_git/tagging.html">
+                            
+                            <a href="../_git/tagging.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="_git/tips_and_tricks.html">
+                            
+                            <a href="../_git/tips_and_tricks.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Tips and Tricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="_git/summary.html">
+                            
+                            <a href="../_git/summary.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 12.5%;min-width: 6.25%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../_/README.html" title="الإستعداد للبدء!" class="chapter done new-chapter" data-progress="1" style="left: 6.25%;"></a>
+    
+        <a href="../_/__version_control.html" title="إدارة الإصدارات (Version Control)" class="chapter done " data-progress="1.1" style="left: 12.5%;"></a>
+    
+        <a href="../_/___git.html" title="لمحة تاريخية عن Git" class="chapter  " data-progress="1.2" style="left: 18.75%;"></a>
+    
+        <a href="../_/_git.html" title="تصيب Git" class="chapter  " data-progress="1.4" style="left: 25%;"></a>
+    
+        <a href="../_/_git__.html" title="إعداد Git لأول مرة" class="chapter  " data-progress="1.5" style="left: 31.25%;"></a>
+    
+        <a href="../_/__.html" title="الحصول على المساعدة" class="chapter  " data-progress="1.6" style="left: 37.5%;"></a>
+    
+        <a href="../_/.html" title="الملخص" class="chapter  " data-progress="1.7" style="left: 43.75%;"></a>
+    
+        <a href="../_git/README.html" title="مبادئ Git" class="chapter  new-chapter" data-progress="2" style="left: 50%;"></a>
+    
+        <a href="../_git/__repository___git.html" title="الحصول على repository لمشروعك بـ Git" class="chapter  " data-progress="2.1" style="left: 56.25%;"></a>
+    
+        <a href="../_git/____repository.html" title="تسجيل التعديلات في الـ repository" class="chapter  " data-progress="2.2" style="left: 62.5%;"></a>
+    
+        <a href="../_git/viewing_the_commit_history.html" title="Viewing the Commit History" class="chapter  " data-progress="2.3" style="left: 68.75%;"></a>
+    
+        <a href="../_git/undoing_things.html" title="Undoing Things" class="chapter  " data-progress="2.4" style="left: 75%;"></a>
+    
+        <a href="../_git/working_with_remotes.html" title="Working with Remotes" class="chapter  " data-progress="2.5" style="left: 81.25%;"></a>
+    
+        <a href="../_git/tagging.html" title="Tagging" class="chapter  " data-progress="2.6" style="left: 87.5%;"></a>
+    
+        <a href="../_git/tips_and_tricks.html" title="Tips and Tricks" class="chapter  " data-progress="2.7" style="left: 93.75%;"></a>
+    
+        <a href="../_git/summary.html" title="Summary" class="chapter  " data-progress="2.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_58">
+                    
+                        <h1 id="-version-control-">إدارة الإصدارات (Version Control)</h1>
+<p>ما هو نظام إدارة الإصدارات، ولماذا عليك أن تهتم به؟ تمكنك هذه الأنظمة من تسحيل التغيرات التي تحدث على ملف أو مجموعة ملفات خلال الزمن بحيث يمكنك الرجوع الى مرحلة معينة (إصدار) لاحقاً. فعلى سبيل المثال، ستستخدم في هذا الكتاب الكود المصدري للملفات في حين أنه تتم إدارتها من قبل نظام إدارة الإصدارات، ولكن في الحقيقة يمكنك استخدام هذه الأنظمة مع أي نوع من الملفات على حاسوبك.</p>
+<p>إذا كنت تعمل كمصمم غرافيك أو ويب وتريد طريقة لمتابعة جميع الإصدارت والتعديلات التي تجريها على صورة أو قالب ما (الأمر الذي سيعجبك بالتأكيد)، فإن نظام إدارة الإصدارات (VCS) هو الحل الأمثل. حيث يمكنك من إرجاع الملفات الى حالة كانت عليها سابقاً، أو ارجاع المشروع بأكمله لحالة سابقة، يمكنك أيضاً مقارنة التغيرات الحاصلة مع مرور الزمن، أو معرفة من قام بتعديل معين أدى الى خطأ ما، من قام بتقديم إقتراح ومتى قام بذلك، والمزيد. إستخدامك لنظام إدارة الإصدارات يعني أيضاً أنه اذا قمت بخطأ ما في مرحلة من المراحل أو خسرت ملفات المشروع لسبب ما، يمكنك استرجاعها الى حالها بسهولة. كل هذه الميزات مقابل تعب خفيف منك.</p>
+<h2 id="-">أنظمة إدارة الإصدارات المحلية</h2>
+<p>تقوم الطريقة التي يقوم بها معظم المستخدمين لإدارة إصداراة مشاريعهم على &quot;نسخ الملفات&quot; الى مكان آخر. يقوم المعظم بهذه الطريقة لأنها تبدوا وكأنها الحل الأسهل، ولكنها تجلب المشاكل والأخطاء بشكل لا يحتمل أيضاً. من السهل جداً أن تنسى بأي مجلد وضعت نسخة معينة أو أن تقوم بالتغيير أو الحذف عن طريق الخطا لملف ما.</p>
+<p>لعلاج هذه المشكلة، قام المبرمجون بتطوير أنظمة إدارة إصدارات المحلية، حيث تستخدم قاعدة بيانات بسيطة تحفظ فيها التغيرات على الملفات في نظام إصدارات معين (إنظر الشكل 1-1).</p>
+<p><img src="http://git-scm.com/figures/18333fig0101-tn.png" alt=""></p>
+<p>الشكل 1-1. مخطط أنظمة إدارة الإصدارات المحلية.</p>
+<p>أحد أشهر أنظمة إدارة الإصدارات هو نظام يدعى rcs، والذي مازال يتم توزيعه مع العديد من الحواسيب في يومنا هذا. حتى أن أنظمة Mac OS X الشهيرة تحوي نظام rcs مضمنة في حزمة برامج التطوير Developer Tools. يقوم عمل هذه الأداة ببساطة على حفظ مجموعات من الإصلاحات (Patch sets) (أي فروقات بين الملفات بمعنى آخر) من تغيير الى آخر بطريقة خاصة; يمكنها بعد ذلك اعادة تشكيل أي ملف بالطريقة التي كان عليها في أي مرحلة خلال حياة الملف عن طريق اضافة جميع هذه التغيرات.</p>
+<h2 id="-">أنظمة إدارة الإصدارات المركزية</h2>
+<p>المشكلة التالية التي ظهرت هي الرغبة في التعاون والتشارك بين المطورين الذين يعملون على أنظمة أخرى. لحل هذه المشكلة تم إنشاء أنظمة إدارة الإصدارات المركزية Centralized Version Control Systems. تقوم هذه الأنظمة، مثل CVS, Subversion و Perforce على مخدم Server واحد يحتوي على جميع الملفات، وعدد من المستخدمين Clients تقوم بطلب هذه الملفات من مكان وجودها المركزي. للعديد من السنوات، كانت هذه الأنظمة هي المسيطرة على عالم إدارة الإصدارات (انظر الشكل 1-2).</p>
+<p><img src="http://git-scm.com/figures/18333fig0102-tn.png" alt=""></p>
+<p>الشكل 1-2. مخطط أنظمة إدارة الإصدارات المركزية.</p>
+<p>تقدم هذه الطريقة العديد من الأفضليات على أنظمة ادارة الإصدارات المحلية. فعلى سبيل المثال، جميع المشاركين في المشروع يعرف مالذي يقوم به المشارك الآخر الى حد معين. مدراء المشروع يستطيعون التحكم بمن يستطيع فعل ماذا في النظام العام; وبالطبع فإنه من الأسهل التعامل مع أنظمة إدارة الإصدارات المركزية على التعامل مع الأنظمة المحلية وقاعدات بياناتها من قبل كل مستخدم.</p>
+<p>ولكن، ومن جهة ثانية، فإن لهذه الطريقة جانباً سيئاً أيضاً. أهم هذه النقاط السيئة هي أنه هذه الأنظمة المركزية تقوم على مركز واحد للكود، أي إنه اذا حصل وتوقف المخدم لساعة، فلن يتمكن أحد من خفظ التغييرات أو القيام بأي تعديل على أي شيء يعمل عليه. إذا حصل وأن تعطل القرص الأساسي والذي يحوي على قاعدة البيانات المركزية، ولم تعمل النسخ الإحتياطية المخبأة، فإنك ستخسر كل شي عن تاريخ عملك في المشروع. تعاني أنظمة إدارة الإصدارات المحلية من هذه المشكلة أيضاً، وهي أنه عندما تكون جميع ملفات المشروع في مكان واحد فإنك على خطر من خساراة كل شيء!</p>
+<h2 id="-">أنظمة إدارة الإصدارات الموزعة</h2>
+<p>وهنا تأتي أنظمة إدارة الإصدارات الموزعة لحل المشكلة. في هذه الأنظمة (مثل Git, Mercurial, Bazaar أو Darcs) يحصل المستخدمون ليس فقط على آخر نسخة من الملفات الموجود على المخدم، بل على كامل تاريخ النظام. في هذه الحال، إن تعطل النظام، فإنه يمكن الحصول على نسخة من المشروع من أي مستخدم الى المخدم مرة أخرى. أي أن كل عملية طلب للكود هي في الحقيقة عملية حفظ كاملة وشاملة لتاريخ المشروع (إنظ الشكل 1-3).</p>
+<p><img src="http://git-scm.com/figures/18333fig0103-tn.png" alt=""></p>
+<p>الشكل 1-3. مخطط أنظمة إدارة الإصدارات الموزعة.</p>
+<p>وفوق هذا فإن معظم هذه الأنظمة يتعامل بشكل جيد جداً مع أكثر من نسخة خارجية للمشروع، أي يمكنك التعاون مع أكثر من مجموعة مختلفة من الأشخاص في طرق مختلفة وفي وقت واحد وعلى مشروع واحد. يمكنك هذا من تطوير أكثر من طريقة عمل واحدة مناسبة لك، الأمر الذي لم يكن متاحاً مع أنظمة إدارة الإصدارات المركزية.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../_/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../_/___git.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

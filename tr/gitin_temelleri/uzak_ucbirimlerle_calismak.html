@@ -1,0 +1,492 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Uzak Uçbirimlerle Çalışmak | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../gitin_temelleri/etiketleme.html" />
+        
+        
+        <link rel="prev" href="../gitin_temelleri/degisiklikleri_geri_almak.html" />
+        
+
+        <meta property="og:title" content="Uzak Uçbirimlerle Çalışmak | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="2.5" data-basepath=".." data-revision="1396895602594">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/gitin_temelleri/uzak_ucbirimlerle_calismak.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="baslangic/README.html">
+                
+                <a href="../baslangic/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Başlangıç
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="baslangic/surum_kontrolu_hakkinda.html">
+                            
+                            <a href="../baslangic/surum_kontrolu_hakkinda.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Sürüm Kontrolü Hakkında
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="baslangic/gitin_kisa_bir_tarihcesi.html">
+                            
+                            <a href="../baslangic/gitin_kisa_bir_tarihcesi.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Git&#39;in Kısa Bir Tarihçesi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="baslangic/gitin_temelleri.html">
+                            
+                            <a href="../baslangic/gitin_temelleri.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git&#39;in Temelleri
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="baslangic/gitin_kurulumu.html">
+                            
+                            <a href="../baslangic/gitin_kurulumu.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Git&#39;in Kurulumu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="baslangic/ilk_ayarlamalar.html">
+                            
+                            <a href="../baslangic/ilk_ayarlamalar.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> İlk Ayarlamalar
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="baslangic/yardim_almak.html">
+                            
+                            <a href="../baslangic/yardim_almak.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Yardım Almak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="baslangic/ozet.html">
+                            
+                            <a href="../baslangic/ozet.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Özet
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="gitin_temelleri/README.html">
+                
+                <a href="../gitin_temelleri/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git&#39;in Temelleri
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html">
+                            
+                            <a href="../gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Bir Git Yazılım Havuzu Edinmek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.html">
+                            
+                            <a href="../gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Değişiklikleri Yazılım Havuzuna Kaydetmek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="gitin_temelleri/kayit_tarihcesini_goruntulemek.html">
+                            
+                            <a href="../gitin_temelleri/kayit_tarihcesini_goruntulemek.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Kayıt Tarihçesini Görüntülemek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="gitin_temelleri/degisiklikleri_geri_almak.html">
+                            
+                            <a href="../gitin_temelleri/degisiklikleri_geri_almak.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Değişiklikleri Geri Almak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="gitin_temelleri/uzak_ucbirimlerle_calismak.html">
+                            
+                            <a href="../gitin_temelleri/uzak_ucbirimlerle_calismak.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Uzak Uçbirimlerle Çalışmak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="gitin_temelleri/etiketleme.html">
+                            
+                            <a href="../gitin_temelleri/etiketleme.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Etiketleme
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="gitin_temelleri/ipuclari.html">
+                            
+                            <a href="../gitin_temelleri/ipuclari.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> İpuçları
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="gitin_temelleri/ozet.html">
+                            
+                            <a href="../gitin_temelleri/ozet.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Özet
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="gitte_dallanma/README.html">
+                
+                <a href="../gitte_dallanma/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git&#39;te Dallanma
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="gitte_dallanma/dal_nedir.html">
+                            
+                            <a href="../gitte_dallanma/dal_nedir.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Dal Nedir?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.html">
+                            
+                            <a href="../gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Dallanma ve Birleştirmenin Temelleri
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="gitte_dallanma/dal_yonetimi.html">
+                            
+                            <a href="../gitte_dallanma/dal_yonetimi.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Dal Yönetimi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="gitte_dallanma/dallanma_is_akislari.html">
+                            
+                            <a href="../gitte_dallanma/dallanma_is_akislari.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Dallanma İş Akışları
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="gitte_dallanma/uzak_ucbirim_dallari.html">
+                            
+                            <a href="../gitte_dallanma/uzak_ucbirim_dallari.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Uzak Uçbirim Dalları
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="gitte_dallanma/rebasing__zemin_kok.html">
+                            
+                            <a href="../gitte_dallanma/rebasing__zemin_kok.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing ## Zemin, Kök,
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="gitte_dallanma/summary.html">
+                            
+                            <a href="../gitte_dallanma/summary.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 56%;min-width: 52%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../baslangic/README.html" title="Başlangıç" class="chapter done new-chapter" data-progress="1" style="left: 4%;"></a>
+    
+        <a href="../baslangic/surum_kontrolu_hakkinda.html" title="Sürüm Kontrolü Hakkında" class="chapter done " data-progress="1.1" style="left: 8%;"></a>
+    
+        <a href="../baslangic/gitin_kisa_bir_tarihcesi.html" title="Git&#39;in Kısa Bir Tarihçesi" class="chapter done " data-progress="1.2" style="left: 12%;"></a>
+    
+        <a href="../baslangic/gitin_temelleri.html" title="Git&#39;in Temelleri" class="chapter done " data-progress="1.3" style="left: 16%;"></a>
+    
+        <a href="../baslangic/gitin_kurulumu.html" title="Git&#39;in Kurulumu" class="chapter done " data-progress="1.4" style="left: 20%;"></a>
+    
+        <a href="../baslangic/ilk_ayarlamalar.html" title="İlk Ayarlamalar" class="chapter done " data-progress="1.5" style="left: 24%;"></a>
+    
+        <a href="../baslangic/yardim_almak.html" title="Yardım Almak" class="chapter done " data-progress="1.6" style="left: 28%;"></a>
+    
+        <a href="../baslangic/ozet.html" title="Özet" class="chapter done " data-progress="1.7" style="left: 32%;"></a>
+    
+        <a href="../gitin_temelleri/README.html" title="Git&#39;in Temelleri" class="chapter done new-chapter" data-progress="2" style="left: 36%;"></a>
+    
+        <a href="../gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html" title="Bir Git Yazılım Havuzu Edinmek" class="chapter done " data-progress="2.1" style="left: 40%;"></a>
+    
+        <a href="../gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.html" title="Değişiklikleri Yazılım Havuzuna Kaydetmek" class="chapter done " data-progress="2.2" style="left: 44%;"></a>
+    
+        <a href="../gitin_temelleri/kayit_tarihcesini_goruntulemek.html" title="Kayıt Tarihçesini Görüntülemek" class="chapter done " data-progress="2.3" style="left: 48%;"></a>
+    
+        <a href="../gitin_temelleri/degisiklikleri_geri_almak.html" title="Değişiklikleri Geri Almak" class="chapter done " data-progress="2.4" style="left: 52%;"></a>
+    
+        <a href="../gitin_temelleri/uzak_ucbirimlerle_calismak.html" title="Uzak Uçbirimlerle Çalışmak" class="chapter done " data-progress="2.5" style="left: 56%;"></a>
+    
+        <a href="../gitin_temelleri/etiketleme.html" title="Etiketleme" class="chapter  " data-progress="2.6" style="left: 60%;"></a>
+    
+        <a href="../gitin_temelleri/ipuclari.html" title="İpuçları" class="chapter  " data-progress="2.7" style="left: 64%;"></a>
+    
+        <a href="../gitin_temelleri/ozet.html" title="Özet" class="chapter  " data-progress="2.8" style="left: 68%;"></a>
+    
+        <a href="../gitte_dallanma/README.html" title="Git&#39;te Dallanma" class="chapter  new-chapter" data-progress="3" style="left: 72%;"></a>
+    
+        <a href="../gitte_dallanma/dal_nedir.html" title="Dal Nedir?" class="chapter  " data-progress="3.1" style="left: 76%;"></a>
+    
+        <a href="../gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.html" title="Dallanma ve Birleştirmenin Temelleri" class="chapter  " data-progress="3.2" style="left: 80%;"></a>
+    
+        <a href="../gitte_dallanma/dal_yonetimi.html" title="Dal Yönetimi" class="chapter  " data-progress="3.3" style="left: 84%;"></a>
+    
+        <a href="../gitte_dallanma/dallanma_is_akislari.html" title="Dallanma İş Akışları" class="chapter  " data-progress="3.4" style="left: 88%;"></a>
+    
+        <a href="../gitte_dallanma/uzak_ucbirim_dallari.html" title="Uzak Uçbirim Dalları" class="chapter  " data-progress="3.5" style="left: 92%;"></a>
+    
+        <a href="../gitte_dallanma/rebasing__zemin_kok.html" title="Rebasing ## Zemin, Kök," class="chapter  " data-progress="3.6" style="left: 96%;"></a>
+    
+        <a href="../gitte_dallanma/summary.html" title="Summary" class="chapter  " data-progress="3.7" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_228">
+                    
+                        <h1 id="uzak-u-birimlerle-al-mak">Uzak Uçbirimlerle Çalışmak</h1>
+<p>Bir Git projesine katkıda bulunabilmek için uzaktaki yazılım havuzlarını nasıl düzenleyeceğinizi bilmeniz gerekir. Uzaktaki yazılım havuzları, projenizin İnternet&#39;te ya da başka bir ağda barındırılan sürümleridir. Birden fazla uzak yazılım havuzunuz olabilir, bunlardan her biri sizin için ya salt okunur ya da okunur/yazılır durumdadır. Başkalarıyla ortak çalışmak, bu yazılım havuzlarını düzenlemeyi, onlardan veri çekip (<em>pull</em>) onlara veri iterek (<em>push</em>) çalışmalarınızı paylaşmayı gerektirir.</p>
+<p>Uzaktaki yazılım havuzlarınızı düzenleyebilmek için, projenize uzak yazılım havuzlarının nasıl ekleneceğini, kullanılmayan havuzların nasıl çıkarılacağını, çeşitli uzak dalları düzenlemeyi ve onların izlenen dallar olarak belirleyip belirlememeyi ve daha başka şeyleri gerektirir. Bu alt bölümde bu uzağı yönetme yeteneklerini inceleyeceğiz.</p>
+<h2 id="uzak-u-birimleri-g-r-nt-leme">Uzak Uçbirimleri Görüntüleme</h2>
+<p>Projenizde hangi uzak sunucuları ayarladığınızı görme için <code>git remote</code> komutunu kullanabilirsiniz. Bu komut, her bir uzak uçbirimin belirlenmiş kısa adını görüntüler. Eğer yazılım havuzunuzu bir yerden klonlamışsanız, en azından <em>origin</em> uzak uçbirimini görmelisiniz —bu Git&#39;in klonlamanın yapıldığı sunucuya verdiği öntanımlı addır.</p>
+<pre><code>$ git clone git:<span class="hljs-comment">//github.com/schacon/ticgit.git</span>
+Initialized empty Git repository <span class="hljs-keyword">in</span> /<span class="hljs-keyword">private</span>/tmp/ticgit/.git/
+remote: Counting objects: <span class="hljs-number">595</span>, <span class="hljs-keyword">done</span>.
+remote: Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">269</span>/<span class="hljs-number">269</span>), <span class="hljs-keyword">done</span>.
+remote: Total <span class="hljs-number">595</span> (delta <span class="hljs-number">255</span>), reused <span class="hljs-number">589</span> (delta <span class="hljs-number">253</span>)
+Receiving objects: <span class="hljs-number">100</span>% (<span class="hljs-number">595</span>/<span class="hljs-number">595</span>), <span class="hljs-number">73.31</span> KiB | <span class="hljs-number">1</span> KiB/s, <span class="hljs-keyword">done</span>.
+Resolving deltas: <span class="hljs-number">100</span>% (<span class="hljs-number">255</span>/<span class="hljs-number">255</span>), <span class="hljs-keyword">done</span>.
+$ cd ticgit
+$ git remote
+origin
+</code></pre><p><code>-v</code> seçeneğini kullanarak Git&#39;in bu kısa ad için depoladığı URL&#39;yi de görebilirsiniz:</p>
+<pre><code><span class="hljs-variable">$ </span>git remote -v
+origin    <span class="hljs-symbol">git:</span>/<span class="hljs-regexp">/github.com/schacon</span><span class="hljs-regexp">/ticgit.git</span>
+</code></pre><p>Projenizde birden çok uzak uçbirim varsa, bu komut hepsini listeleyecektir. Örneğin, benim Git yazılım havuzum şöyle görünüyor:</p>
+<pre><code>$ cd grit
+$ git remote -v
+bakkdoor  git://github<span class="hljs-preprocessor">.com</span>/bakkdoor/grit<span class="hljs-preprocessor">.git</span>
+cho45     git://github<span class="hljs-preprocessor">.com</span>/cho45/grit<span class="hljs-preprocessor">.git</span>
+defunkt   git://github<span class="hljs-preprocessor">.com</span>/defunkt/grit<span class="hljs-preprocessor">.git</span>
+koke      git://github<span class="hljs-preprocessor">.com</span>/koke/grit<span class="hljs-preprocessor">.git</span>
+origin    git@github<span class="hljs-preprocessor">.com</span>:mojombo/grit<span class="hljs-preprocessor">.git</span>
+</code></pre><p>Bu demek oluyor ki bu kullanıcıların herhangi birinden kolaylıkla çekme işlemi (<em>pull</em>) yapabiliriz. Fakat dikkat ederseniz, yalnızca <em>origin</em> uçbiriminin SSH URL&#39;si var, yani yalnızca o havuza kod itebiliriz (<em>push</em>) (niye böyle olduğunu <em>4. Bölüm</em>&#39;de inceleyeceğiz)</p>
+<h2 id="uzak-u-birimler-eklemek">Uzak Uçbirimler Eklemek</h2>
+<p>Önceki alt bölümlerde uzak uçbirim eklemekten söz ettim ve bazı örnekler verdim, ama bir kez daha konuyu açıkça incelemekte yarar var. Uzaktaki bir yazılım havuzunu kısa bir ad vererek eklemek için <code>git remote add [kisa_ad] [url]</code> komutunu çalıştırın:</p>
+<pre><code>$ git remote
+origin
+$ git remote <span class="hljs-keyword">add</span> pb git://github<span class="hljs-preprocessor">.com</span>/paulboone/ticgit<span class="hljs-preprocessor">.git</span>
+$ git remote -v
+origin    git://github<span class="hljs-preprocessor">.com</span>/schacon/ticgit<span class="hljs-preprocessor">.git</span>
+pb    git://github<span class="hljs-preprocessor">.com</span>/paulboone/ticgit<span class="hljs-preprocessor">.git</span>
+</code></pre><p>Artık bütün bir URL yerine <code>pb</code>&#39;yi kullanabilirsiniz. Örneğin, Paul&#39;ün yazılım havuzunda bulunan ama sizde bulunmayan bütün bilgileri getirmek için <code>git fetch pb</code> komutunu kullanabilirsiniz:</p>
+<pre><code>$ git fetch pb
+remote: Counting objects: <span class="hljs-number">58</span>, <span class="hljs-keyword">done</span>.
+remote: Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">41</span>/<span class="hljs-number">41</span>), <span class="hljs-keyword">done</span>.
+remote: Total <span class="hljs-number">44</span> (delta <span class="hljs-number">24</span>), reused <span class="hljs-number">1</span> (delta <span class="hljs-number">0</span>)
+Unpacking objects: <span class="hljs-number">100</span>% (<span class="hljs-number">44</span>/<span class="hljs-number">44</span>), <span class="hljs-keyword">done</span>.
+From git:<span class="hljs-comment">//github.com/paulboone/ticgit</span>
+ * [<span class="hljs-keyword">new</span> branch]      master     -&gt; pb/master
+ * [<span class="hljs-keyword">new</span> branch]      ticgit     -&gt; pb/ticgit
+</code></pre><p>Paul&#39;ün <code>mastertr</code> dalı sizin yazılım havuzunuzda da <code>pb/master</code> olarak erişilebilir durumdadır —kendi dallarınızdan biriyle birleştirebilir (<em>merge</em>) ya da bir yerel dal olarak seçip içeriğini inceleyebilirsiniz.</p>
+<h2 id="uzak-u-birimlerden-getirme-ve-ekme-i-lemi-yapmak">Uzak Uçbirimlerden Getirme ve Çekme İşlemi Yapmak</h2>
+<p>Biraz önce gördüğünüz gibi, uzaktaki yazılım havuzlarından veri almak için şu komutu kullanabilirsiniz:</p>
+<pre><code>$ git fetch <span class="hljs-preprocessor">[</span>uzak<span class="hljs-attribute">-sunucu</span><span class="hljs-attribute">-ad</span>ı<span class="hljs-preprocessor">]</span><span class="hljs-markup"></span>
+</code></pre><p>Bu komut, söz konusu uzaktaki yazılım havuzuna gidip orada bulunup da sizin projenizde bulunmayan bütün veriyi getirir. Bunu yaptıktan sonra sizin projenizde o uzak yazılım havuzundaki bütün dallara referanslar oluşur —ki bunları birleştirme yapmak ya da içeriği incelemek için kullanabilirsiniz. (Dalların ne olduğunu ve onları nasıl kullanabileceğinizi <em>3. Bölüm</em>&#39;de ayrıntılı biçimde inceleyeceğiz.)</p>
+<p>Bir yazılım havuzunu klonladığınızda, klonlama komutu söz konusu kaynak yazılım havuzunu <em>origin</em> adıyla uzak uçbirimler arasına ekler. Dolayısıyla, <code>git fetch origin</code> komutu, klonlamayı yaptığınızdan (ya da en son getirme işlemini (<em>fetch</em>) yatığınızdan) beri sunucuya itilmiş yeni değişiklikleri getirir. Unutmayın, <code>fetch</code> komutu veriyi yeler yazılım havuzunuza indirir —otomatik olarak sizin yaptıklarınızla birleştirmeye, ya da çalıştığınız şeyler üzerinde değişiklik yapmaya kalkışmaz. Hazır olduğunuzda birleştirme işlemini sizin yapmanız gerekir.</p>
+<p>Uzaktaki bir dalı izlemek üzere ayarlanmış bir dalınız varsa (daha fazla bilgi için sonraki alt bölüme ve <em>3. Bölüm</em>&#39;e bakınız) bu dal üzerinde <code>git pull</code> komutunu kullanarak uzaktaki yazılım havuzundaki veriyi hem getirip hem de mevcut dalınızla birleştirebilirsiniz. Bu çalışması daha kolay bir düzen olabilir; bu arada, <code>git clone</code> komutu, otomatik olarak, yerel yazılım havuzunuzda, uzaktaki yazılım havuzunun <code>master</code> dalını takip eden bir <code>master</code> dalı oluşturur (uzaktaki yazılım havuzunun <code>master</code> adında bir dalı olması koşuluyla). <code>git pull</code> komutu genellikle yereldeki yazılım havuzunuza kaynaklık eden sunucudan veriyi getirip otomatik olarak üzerinde çalışmakta olduğunuz dalla birleştirir.</p>
+<h2 id="uzaktaki-yaz-l-m-havuzuna-veri-i-tmek">Uzaktaki Yazılım Havuzuna Veri İtmek</h2>
+<p>Projeniz paylaşmak istediğiniz bir hale geldiğinde, yaptıklarınızı kaynağa itmeniz gerekir. Bunun için kullanılan komut basittir: <code>git push [uzak-sunucu-adi] [dal-adi]</code>. Projenizdeki <code>master</code> dalını <code>origin</code> sunucunuzdaki <code>master</code> dalına itmek isterseniz (yineleyelim; kolanlama işlemi genellikle bu isimleri otomatik olarak oluşturur), şu komutu kullanabilirsiniz:</p>
+<pre><code><span class="hljs-variable">$ </span>git push origin master
+</code></pre><p>Bu komut, yalnızca yazma yetkisine sahip olduğunuz bir sunucudan klonlama yapmışsanız ve son getirme işleminizden beri hiç kimse itme işlemi yapmamışsa istediğiniz sonucu verir. Eğer sizinle birlikte bir başkası daha klonlama yapmışsa ve o kişi sizden önce itme yapmışsa, sizin itme işleminiz reddedilir. İtmeden önce sizden önce itilmiş değişiklikleri çekip kendi çalışmanızla birleştirmeniz gerekir. Uzaktaki yazılım havuzlarına itme yapmak konusunda daha ayrıntılı bilgi için bkz. <em>3. Bölüm</em>.</p>
+<h2 id="uzak-u-birim-hakk-nda-bilgi-almak">Uzak Uçbirim Hakkında Bilgi Almak</h2>
+<p>Belirli bir uzak uçbirim hakkında daha fazla bilgi almak isterseniz <code>git remote show [ucbirim-adi]</code> komutunu kullanabilirsiniz. Bu komutu <code>origin</code> gibi belirli bir uçbirim kısa adıyla kullanırsanız şöyle bir sonuç alırsınız:</p>
+<pre><code>$ git remote show origin
+* remote origin
+  <span class="hljs-built_in">URL</span>: git://github.com/schacon/ticgit.git
+  Remote branch merged <span class="hljs-operator">with</span> <span class="hljs-string">'git pull'</span> <span class="hljs-keyword">while</span> <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">branch</span> <span class="hljs-title">master</span></span>
+    master
+  Tracked remote branches
+    master
+    ticgit
+</code></pre><p>Bu, uçbirimin URL&#39;sini ve dalların izlenme durumunu gösterir. Komut, size, eğer <code>master</code> dalda iseniz ve <code>git pull</code> komutunu çalıştırırsanız, bütün referansları uzak uçbirimden indirip uzaktaki <code>master</code> dalından yerel <code>master</code> dalına birleştirme yapacağını da söylüyor. Ayrıca, ekmiş olduğu bütün uzak dalları da bir liste halinde veriyor.</p>
+<p>Yukarıdaki verdiğimiz, basit bir örnekti. Git&#39;i daha yoğun biçimde kullandığınızda, <code>git remote show</code> komutu çok daha fazla bilgi içerecektir:</p>
+<pre><code>$ git remote show origin
+* remote origin
+  <span class="hljs-built_in">URL</span>: git@github.com:defunkt/github.git
+  Remote branch merged <span class="hljs-operator">with</span> <span class="hljs-string">'git pull'</span> <span class="hljs-keyword">while</span> <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">branch</span> <span class="hljs-title">issues</span></span>
+    issues
+  Remote branch merged <span class="hljs-operator">with</span> <span class="hljs-string">'git pull'</span> <span class="hljs-keyword">while</span> <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">branch</span> <span class="hljs-title">master</span></span>
+    master
+  New remote branches (next fetch will store <span class="hljs-operator">in</span> remotes/origin)
+    caching
+  Stale tracking branches (use <span class="hljs-string">'git remote prune'</span>)
+    libwalker
+    walker2
+  Tracked remote branches
+    acl
+    apiv2
+    dashboard2
+    issues
+    master
+    postgres
+  Local branch pushed <span class="hljs-operator">with</span> <span class="hljs-string">'git push'</span>
+    master:master
+</code></pre><p>Bu çıktı, belirli dallarda <code>git push</code> komutunu çalıştırdığınızda hangi dalların otomatik olarak itileceğini gösteriyor. Buna ek olarak uzak uçbirimde bulunup da sizin projenizde henüz bulunmayan uzak dalları, uzak uçbirimden silinmiş olduğu halde sizin projenizde bulunan dalları ve <code>git pull</code> komutunu çalıştırdığınızda otomatik olarak birleştirme işlemine uğrayacak birden çok dalı gösteriyor.</p>
+<h2 id="uzan-u-birimleri-kald-rmak-ve-yeniden-adland-rmak">Uzan Uçbirimleri Kaldırmak ve Yeniden Adlandırmak</h2>
+<p>Bir uçbirimin kısa adını değiştirmek isterseniz, Git&#39;in yeni sürümlerinde bunu <code>git remote rename</code> komutuyla yapabilirsiniz. Örneğin, <code>pb</code> uçbirimini <code>paul</code> diye yeniden adlandırmak isterseniz, bunu <code>git remote rename</code>&#39;i kullanarak yapabilirsiniz:</p>
+<pre><code><span class="hljs-variable">$ </span>git remote rename pb paul
+<span class="hljs-variable">$ </span>git remote
+origin
+paul
+</code></pre><p>Bu işlemin uçbirim dal adlarını da değiştirdiğini hatırlatmakta yarar var. Bu işlemden önce <code>pb/master</code> olan dalın adı artık <code>paul/master</code> olacaktır.</p>
+<p>Bir uçbirim referansını herhangi bir nedenle —sunucuyu taşımış ya da belirli bir yansıyı artık kullanmıyor olabilirsiniz; ya da belki katılımcılardan birisi artık katkıda bulunmuyordur— kaldırmak isterseniz <code>git remote rm</code> komutunu kullanabilirsiniz:</p>
+<pre><code><span class="hljs-variable">$ </span>git remote rm paul
+<span class="hljs-variable">$ </span>git remote
+origin
+</code></pre>
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../gitin_temelleri/degisiklikleri_geri_almak.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../gitin_temelleri/etiketleme.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

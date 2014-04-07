@@ -1,0 +1,1025 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Manutenção e Recuperação de Dados | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../git_internamente/resumo.html" />
+        
+        
+        <link rel="prev" href="../git_internamente/protocolos_de_transferencia.html" />
+        
+
+        <meta property="og:title" content="Manutenção e Recuperação de Dados | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="9.7" data-basepath=".." data-revision="1396895631613">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/git_internamente/manutencao_e_recuperacao_de_dados.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="primeiros_passos/README.html">
+                
+                <a href="../primeiros_passos/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Primeiros passos
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="primeiros_passos/sobre_controle_de_versao.html">
+                            
+                            <a href="../primeiros_passos/sobre_controle_de_versao.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Sobre Controle de Versão
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="primeiros_passos/uma_breve_historia_do_git.html">
+                            
+                            <a href="../primeiros_passos/uma_breve_historia_do_git.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Uma Breve História do Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="primeiros_passos/nocoes_basicas_de_git.html">
+                            
+                            <a href="../primeiros_passos/nocoes_basicas_de_git.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Noções Básicas de Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="primeiros_passos/instalando_git.html">
+                            
+                            <a href="../primeiros_passos/instalando_git.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Instalando Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="primeiros_passos/configuracao_inicial_do_git.html">
+                            
+                            <a href="../primeiros_passos/configuracao_inicial_do_git.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> Configuração Inicial do Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="primeiros_passos/obtendo_ajuda.html">
+                            
+                            <a href="../primeiros_passos/obtendo_ajuda.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Obtendo Ajuda
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="primeiros_passos/resumo.html">
+                            
+                            <a href="../primeiros_passos/resumo.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Resumo
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="git_essencial/README.html">
+                
+                <a href="../git_essencial/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git Essencial
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="git_essencial/obtendo_um_repositorio_git.html">
+                            
+                            <a href="../git_essencial/obtendo_um_repositorio_git.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Obtendo um Repositório Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="git_essencial/gravando_alteracoes_no_repositorio.html">
+                            
+                            <a href="../git_essencial/gravando_alteracoes_no_repositorio.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Gravando Alterações no Repositório
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="git_essencial/visualizando_o_historico_de_commits.html">
+                            
+                            <a href="../git_essencial/visualizando_o_historico_de_commits.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Visualizando o Histórico de Commits
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="git_essencial/desfazendo_coisas.html">
+                            
+                            <a href="../git_essencial/desfazendo_coisas.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Desfazendo Coisas
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="git_essencial/trabalhando_com_remotos.html">
+                            
+                            <a href="../git_essencial/trabalhando_com_remotos.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Trabalhando com Remotos
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="git_essencial/tagging.html">
+                            
+                            <a href="../git_essencial/tagging.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Tagging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="git_essencial/dicas_e_truques.html">
+                            
+                            <a href="../git_essencial/dicas_e_truques.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> Dicas e Truques
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="git_essencial/sumario.html">
+                            
+                            <a href="../git_essencial/sumario.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Sumário
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="ramificacao_branching_no_git/README.html">
+                
+                <a href="../ramificacao_branching_no_git/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Ramificação (Branching) no Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="ramificacao_branching_no_git/o_que_e_um_branch.html">
+                            
+                            <a href="../ramificacao_branching_no_git/o_que_e_um_branch.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> O que é um Branch
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="ramificacao_branching_no_git/basico_de_branch_e_merge.html">
+                            
+                            <a href="../ramificacao_branching_no_git/basico_de_branch_e_merge.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Básico de Branch e Merge
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="ramificacao_branching_no_git/gerenciamento_de_branches.html">
+                            
+                            <a href="../ramificacao_branching_no_git/gerenciamento_de_branches.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Gerenciamento de Branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="ramificacao_branching_no_git/fluxos_de_trabalho_com_branches.html">
+                            
+                            <a href="../ramificacao_branching_no_git/fluxos_de_trabalho_com_branches.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Fluxos de Trabalho com Branches
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="ramificacao_branching_no_git/branches_remotos.html">
+                            
+                            <a href="../ramificacao_branching_no_git/branches_remotos.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Branches Remotos
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="ramificacao_branching_no_git/rebasing.html">
+                            
+                            <a href="../ramificacao_branching_no_git/rebasing.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="ramificacao_branching_no_git/sumario.html">
+                            
+                            <a href="../ramificacao_branching_no_git/sumario.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Sumário
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="git_no_servidor/README.html">
+                
+                <a href="../git_no_servidor/README.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Git no Servidor
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="git_no_servidor/os_protocolos.html">
+                            
+                            <a href="../git_no_servidor/os_protocolos.html">
+                                <i class="fa fa-check"></i> <b>4.1)</b> Os Protocolos
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="git_no_servidor/configurando_git_no_servidor.html">
+                            
+                            <a href="../git_no_servidor/configurando_git_no_servidor.html">
+                                <i class="fa fa-check"></i> <b>4.2)</b> Configurando Git no Servidor
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="git_no_servidor/gerando_sua_chave_publica_ssh.html">
+                            
+                            <a href="../git_no_servidor/gerando_sua_chave_publica_ssh.html">
+                                <i class="fa fa-check"></i> <b>4.3)</b> Gerando Sua Chave Pública SSH
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" data-path="git_no_servidor/configurando_o_servidor.html">
+                            
+                            <a href="../git_no_servidor/configurando_o_servidor.html">
+                                <i class="fa fa-check"></i> <b>4.4)</b> Configurando o Servidor
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" data-path="git_no_servidor/acesso_publico.html">
+                            
+                            <a href="../git_no_servidor/acesso_publico.html">
+                                <i class="fa fa-check"></i> <b>4.5)</b> Acesso Público
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" data-path="git_no_servidor/gitweb.html">
+                            
+                            <a href="../git_no_servidor/gitweb.html">
+                                <i class="fa fa-check"></i> <b>4.6)</b> GitWeb
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.7" data-path="git_no_servidor/gitosis.html">
+                            
+                            <a href="../git_no_servidor/gitosis.html">
+                                <i class="fa fa-check"></i> <b>4.7)</b> Gitosis
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.8" data-path="git_no_servidor/gitolite.html">
+                            
+                            <a href="../git_no_servidor/gitolite.html">
+                                <i class="fa fa-check"></i> <b>4.8)</b> Gitolite
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.9" data-path="git_no_servidor/servico_git.html">
+                            
+                            <a href="../git_no_servidor/servico_git.html">
+                                <i class="fa fa-check"></i> <b>4.9)</b> Serviço Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.10" data-path="git_no_servidor/git_hospedado.html">
+                            
+                            <a href="../git_no_servidor/git_hospedado.html">
+                                <i class="fa fa-check"></i> <b>4.10)</b> Git Hospedado
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.11" data-path="git_no_servidor/sumario.html">
+                            
+                            <a href="../git_no_servidor/sumario.html">
+                                <i class="fa fa-check"></i> <b>4.11)</b> Sumário
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="git_distribuido/README.html">
+                
+                <a href="../git_distribuido/README.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Git Distribuído
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="git_distribuido/fluxos_de_trabalho_distribuidos.html">
+                            
+                            <a href="../git_distribuido/fluxos_de_trabalho_distribuidos.html">
+                                <i class="fa fa-check"></i> <b>5.1)</b> Fluxos de Trabalho Distribuídos
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="git_distribuido/contribuindo_para_um_projeto.html">
+                            
+                            <a href="../git_distribuido/contribuindo_para_um_projeto.html">
+                                <i class="fa fa-check"></i> <b>5.2)</b> Contribuindo Para Um Projeto
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="git_distribuido/mantendo_um_projeto.html">
+                            
+                            <a href="../git_distribuido/mantendo_um_projeto.html">
+                                <i class="fa fa-check"></i> <b>5.3)</b> Mantendo Um Projeto
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" data-path="git_distribuido/resumo.html">
+                            
+                            <a href="../git_distribuido/resumo.html">
+                                <i class="fa fa-check"></i> <b>5.4)</b> Resumo
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="ferramentas_do_git/README.html">
+                
+                <a href="../ferramentas_do_git/README.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Ferramentas do Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="ferramentas_do_git/selecao_de_revisao.html">
+                            
+                            <a href="../ferramentas_do_git/selecao_de_revisao.html">
+                                <i class="fa fa-check"></i> <b>6.1)</b> Seleção de Revisão
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="ferramentas_do_git/area_de_selecao_interativa.html">
+                            
+                            <a href="../ferramentas_do_git/area_de_selecao_interativa.html">
+                                <i class="fa fa-check"></i> <b>6.2)</b> Área de Seleção Interativa
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="ferramentas_do_git/fazendo_stash.html">
+                            
+                            <a href="../ferramentas_do_git/fazendo_stash.html">
+                                <i class="fa fa-check"></i> <b>6.3)</b> Fazendo Stash
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.4" data-path="ferramentas_do_git/reescrevendo_o_historico.html">
+                            
+                            <a href="../ferramentas_do_git/reescrevendo_o_historico.html">
+                                <i class="fa fa-check"></i> <b>6.4)</b> Reescrevendo o Histórico
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.5" data-path="ferramentas_do_git/depurando_com_git.html">
+                            
+                            <a href="../ferramentas_do_git/depurando_com_git.html">
+                                <i class="fa fa-check"></i> <b>6.5)</b> Depurando com Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.6" data-path="ferramentas_do_git/submodulos.html">
+                            
+                            <a href="../ferramentas_do_git/submodulos.html">
+                                <i class="fa fa-check"></i> <b>6.6)</b> Submódulos
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.7" data-path="ferramentas_do_git/merge_de_sub_arvore_subtree_merging.html">
+                            
+                            <a href="../ferramentas_do_git/merge_de_sub_arvore_subtree_merging.html">
+                                <i class="fa fa-check"></i> <b>6.7)</b> Merge de Sub-árvore (Subtree Merging)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.8" data-path="ferramentas_do_git/sumario.html">
+                            
+                            <a href="../ferramentas_do_git/sumario.html">
+                                <i class="fa fa-check"></i> <b>6.8)</b> Sumário
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="customizando_o_git/README.html">
+                
+                <a href="../customizando_o_git/README.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Customizando o Git
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="customizando_o_git/configuracao_do_git.html">
+                            
+                            <a href="../customizando_o_git/configuracao_do_git.html">
+                                <i class="fa fa-check"></i> <b>7.1)</b> Configuração do Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="customizando_o_git/atributos_git.html">
+                            
+                            <a href="../customizando_o_git/atributos_git.html">
+                                <i class="fa fa-check"></i> <b>7.2)</b> Atributos Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.3" data-path="customizando_o_git/hooks_do_git.html">
+                            
+                            <a href="../customizando_o_git/hooks_do_git.html">
+                                <i class="fa fa-check"></i> <b>7.3)</b> Hooks do Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.4" data-path="customizando_o_git/um_exemplo_de_politica_git_forcada.html">
+                            
+                            <a href="../customizando_o_git/um_exemplo_de_politica_git_forcada.html">
+                                <i class="fa fa-check"></i> <b>7.4)</b> Um exemplo de Política Git Forçada
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.5" data-path="customizando_o_git/sumario.html">
+                            
+                            <a href="../customizando_o_git/sumario.html">
+                                <i class="fa fa-check"></i> <b>7.5)</b> Sumário
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="8" data-path="git_e_outros_sistemas/README.html">
+                
+                <a href="../git_e_outros_sistemas/README.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Git e Outros Sistemas
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="8.1" data-path="git_e_outros_sistemas/git_e_subversion.html">
+                            
+                            <a href="../git_e_outros_sistemas/git_e_subversion.html">
+                                <i class="fa fa-check"></i> <b>8.1)</b> Git e Subversion
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.2" data-path="git_e_outros_sistemas/migrando_para_o_git.html">
+                            
+                            <a href="../git_e_outros_sistemas/migrando_para_o_git.html">
+                                <i class="fa fa-check"></i> <b>8.2)</b> Migrando para o Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="8.3" data-path="git_e_outros_sistemas/resumo.html">
+                            
+                            <a href="../git_e_outros_sistemas/resumo.html">
+                                <i class="fa fa-check"></i> <b>8.3)</b> Resumo
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="9" data-path="git_internamente/README.html">
+                
+                <a href="../git_internamente/README.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Git Internamente
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="9.1" data-path="git_internamente/encanamento_plumbing_e_porcelana_porcelain.html">
+                            
+                            <a href="../git_internamente/encanamento_plumbing_e_porcelana_porcelain.html">
+                                <i class="fa fa-check"></i> <b>9.1)</b> Encanamento (Plumbing) e Porcelana (Porcelain)
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.2" data-path="git_internamente/objetos_do_git.html">
+                            
+                            <a href="../git_internamente/objetos_do_git.html">
+                                <i class="fa fa-check"></i> <b>9.2)</b> Objetos do Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.3" data-path="git_internamente/referencias_git.html">
+                            
+                            <a href="../git_internamente/referencias_git.html">
+                                <i class="fa fa-check"></i> <b>9.3)</b> Referencias Git
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.4" data-path="git_internamente/packfiles.html">
+                            
+                            <a href="../git_internamente/packfiles.html">
+                                <i class="fa fa-check"></i> <b>9.4)</b> Packfiles
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.5" data-path="git_internamente/o_refspec.html">
+                            
+                            <a href="../git_internamente/o_refspec.html">
+                                <i class="fa fa-check"></i> <b>9.5)</b> O Refspec
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.6" data-path="git_internamente/protocolos_de_transferencia.html">
+                            
+                            <a href="../git_internamente/protocolos_de_transferencia.html">
+                                <i class="fa fa-check"></i> <b>9.6)</b> Protocolos de Transferência
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.7" data-path="git_internamente/manutencao_e_recuperacao_de_dados.html">
+                            
+                            <a href="../git_internamente/manutencao_e_recuperacao_de_dados.html">
+                                <i class="fa fa-check"></i> <b>9.7)</b> Manutenção e Recuperação de Dados
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="9.8" data-path="git_internamente/resumo.html">
+                            
+                            <a href="../git_internamente/resumo.html">
+                                <i class="fa fa-check"></i> <b>9.8)</b> Resumo
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 98.57142857142857%;min-width: 97.14285714285714%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../primeiros_passos/README.html" title="Primeiros passos" class="chapter done new-chapter" data-progress="1" style="left: 1.4285714285714286%;"></a>
+    
+        <a href="../primeiros_passos/sobre_controle_de_versao.html" title="Sobre Controle de Versão" class="chapter done " data-progress="1.1" style="left: 2.857142857142857%;"></a>
+    
+        <a href="../primeiros_passos/uma_breve_historia_do_git.html" title="Uma Breve História do Git" class="chapter done " data-progress="1.2" style="left: 4.285714285714286%;"></a>
+    
+        <a href="../primeiros_passos/nocoes_basicas_de_git.html" title="Noções Básicas de Git" class="chapter done " data-progress="1.3" style="left: 5.714285714285714%;"></a>
+    
+        <a href="../primeiros_passos/instalando_git.html" title="Instalando Git" class="chapter done " data-progress="1.4" style="left: 7.142857142857143%;"></a>
+    
+        <a href="../primeiros_passos/configuracao_inicial_do_git.html" title="Configuração Inicial do Git" class="chapter done " data-progress="1.5" style="left: 8.571428571428571%;"></a>
+    
+        <a href="../primeiros_passos/obtendo_ajuda.html" title="Obtendo Ajuda" class="chapter done " data-progress="1.6" style="left: 10%;"></a>
+    
+        <a href="../primeiros_passos/resumo.html" title="Resumo" class="chapter done " data-progress="1.7" style="left: 11.428571428571429%;"></a>
+    
+        <a href="../git_essencial/README.html" title="Git Essencial" class="chapter done new-chapter" data-progress="2" style="left: 12.857142857142858%;"></a>
+    
+        <a href="../git_essencial/obtendo_um_repositorio_git.html" title="Obtendo um Repositório Git" class="chapter done " data-progress="2.1" style="left: 14.285714285714286%;"></a>
+    
+        <a href="../git_essencial/gravando_alteracoes_no_repositorio.html" title="Gravando Alterações no Repositório" class="chapter done " data-progress="2.2" style="left: 15.714285714285714%;"></a>
+    
+        <a href="../git_essencial/visualizando_o_historico_de_commits.html" title="Visualizando o Histórico de Commits" class="chapter done " data-progress="2.3" style="left: 17.142857142857142%;"></a>
+    
+        <a href="../git_essencial/desfazendo_coisas.html" title="Desfazendo Coisas" class="chapter done " data-progress="2.4" style="left: 18.571428571428573%;"></a>
+    
+        <a href="../git_essencial/trabalhando_com_remotos.html" title="Trabalhando com Remotos" class="chapter done " data-progress="2.5" style="left: 20%;"></a>
+    
+        <a href="../git_essencial/tagging.html" title="Tagging" class="chapter done " data-progress="2.6" style="left: 21.428571428571427%;"></a>
+    
+        <a href="../git_essencial/dicas_e_truques.html" title="Dicas e Truques" class="chapter done " data-progress="2.7" style="left: 22.857142857142858%;"></a>
+    
+        <a href="../git_essencial/sumario.html" title="Sumário" class="chapter done " data-progress="2.8" style="left: 24.285714285714285%;"></a>
+    
+        <a href="../ramificacao_branching_no_git/README.html" title="Ramificação (Branching) no Git" class="chapter done new-chapter" data-progress="3" style="left: 25.714285714285715%;"></a>
+    
+        <a href="../ramificacao_branching_no_git/o_que_e_um_branch.html" title="O que é um Branch" class="chapter done " data-progress="3.1" style="left: 27.142857142857142%;"></a>
+    
+        <a href="../ramificacao_branching_no_git/basico_de_branch_e_merge.html" title="Básico de Branch e Merge" class="chapter done " data-progress="3.2" style="left: 28.571428571428573%;"></a>
+    
+        <a href="../ramificacao_branching_no_git/gerenciamento_de_branches.html" title="Gerenciamento de Branches" class="chapter done " data-progress="3.3" style="left: 30%;"></a>
+    
+        <a href="../ramificacao_branching_no_git/fluxos_de_trabalho_com_branches.html" title="Fluxos de Trabalho com Branches" class="chapter done " data-progress="3.4" style="left: 31.428571428571427%;"></a>
+    
+        <a href="../ramificacao_branching_no_git/branches_remotos.html" title="Branches Remotos" class="chapter done " data-progress="3.5" style="left: 32.857142857142854%;"></a>
+    
+        <a href="../ramificacao_branching_no_git/rebasing.html" title="Rebasing" class="chapter done " data-progress="3.6" style="left: 34.285714285714285%;"></a>
+    
+        <a href="../ramificacao_branching_no_git/sumario.html" title="Sumário" class="chapter done " data-progress="3.7" style="left: 35.714285714285715%;"></a>
+    
+        <a href="../git_no_servidor/README.html" title="Git no Servidor" class="chapter done new-chapter" data-progress="4" style="left: 37.142857142857146%;"></a>
+    
+        <a href="../git_no_servidor/os_protocolos.html" title="Os Protocolos" class="chapter done " data-progress="4.1" style="left: 38.57142857142857%;"></a>
+    
+        <a href="../git_no_servidor/git_hospedado.html" title="Git Hospedado" class="chapter done " data-progress="4.10" style="left: 40%;"></a>
+    
+        <a href="../git_no_servidor/sumario.html" title="Sumário" class="chapter done " data-progress="4.11" style="left: 41.42857142857143%;"></a>
+    
+        <a href="../git_no_servidor/configurando_git_no_servidor.html" title="Configurando Git no Servidor" class="chapter done " data-progress="4.2" style="left: 42.857142857142854%;"></a>
+    
+        <a href="../git_no_servidor/gerando_sua_chave_publica_ssh.html" title="Gerando Sua Chave Pública SSH" class="chapter done " data-progress="4.3" style="left: 44.285714285714285%;"></a>
+    
+        <a href="../git_no_servidor/configurando_o_servidor.html" title="Configurando o Servidor" class="chapter done " data-progress="4.4" style="left: 45.714285714285715%;"></a>
+    
+        <a href="../git_no_servidor/acesso_publico.html" title="Acesso Público" class="chapter done " data-progress="4.5" style="left: 47.142857142857146%;"></a>
+    
+        <a href="../git_no_servidor/gitweb.html" title="GitWeb" class="chapter done " data-progress="4.6" style="left: 48.57142857142857%;"></a>
+    
+        <a href="../git_no_servidor/gitosis.html" title="Gitosis" class="chapter done " data-progress="4.7" style="left: 50%;"></a>
+    
+        <a href="../git_no_servidor/gitolite.html" title="Gitolite" class="chapter done " data-progress="4.8" style="left: 51.42857142857143%;"></a>
+    
+        <a href="../git_no_servidor/servico_git.html" title="Serviço Git" class="chapter done " data-progress="4.9" style="left: 52.857142857142854%;"></a>
+    
+        <a href="../git_distribuido/README.html" title="Git Distribuído" class="chapter done new-chapter" data-progress="5" style="left: 54.285714285714285%;"></a>
+    
+        <a href="../git_distribuido/fluxos_de_trabalho_distribuidos.html" title="Fluxos de Trabalho Distribuídos" class="chapter done " data-progress="5.1" style="left: 55.714285714285715%;"></a>
+    
+        <a href="../git_distribuido/contribuindo_para_um_projeto.html" title="Contribuindo Para Um Projeto" class="chapter done " data-progress="5.2" style="left: 57.142857142857146%;"></a>
+    
+        <a href="../git_distribuido/mantendo_um_projeto.html" title="Mantendo Um Projeto" class="chapter done " data-progress="5.3" style="left: 58.57142857142857%;"></a>
+    
+        <a href="../git_distribuido/resumo.html" title="Resumo" class="chapter done " data-progress="5.4" style="left: 60%;"></a>
+    
+        <a href="../ferramentas_do_git/README.html" title="Ferramentas do Git" class="chapter done new-chapter" data-progress="6" style="left: 61.42857142857143%;"></a>
+    
+        <a href="../ferramentas_do_git/selecao_de_revisao.html" title="Seleção de Revisão" class="chapter done " data-progress="6.1" style="left: 62.857142857142854%;"></a>
+    
+        <a href="../ferramentas_do_git/area_de_selecao_interativa.html" title="Área de Seleção Interativa" class="chapter done " data-progress="6.2" style="left: 64.28571428571429%;"></a>
+    
+        <a href="../ferramentas_do_git/fazendo_stash.html" title="Fazendo Stash" class="chapter done " data-progress="6.3" style="left: 65.71428571428571%;"></a>
+    
+        <a href="../ferramentas_do_git/reescrevendo_o_historico.html" title="Reescrevendo o Histórico" class="chapter done " data-progress="6.4" style="left: 67.14285714285714%;"></a>
+    
+        <a href="../ferramentas_do_git/depurando_com_git.html" title="Depurando com Git" class="chapter done " data-progress="6.5" style="left: 68.57142857142857%;"></a>
+    
+        <a href="../ferramentas_do_git/submodulos.html" title="Submódulos" class="chapter done " data-progress="6.6" style="left: 70%;"></a>
+    
+        <a href="../ferramentas_do_git/merge_de_sub_arvore_subtree_merging.html" title="Merge de Sub-árvore (Subtree Merging)" class="chapter done " data-progress="6.7" style="left: 71.42857142857143%;"></a>
+    
+        <a href="../ferramentas_do_git/sumario.html" title="Sumário" class="chapter done " data-progress="6.8" style="left: 72.85714285714286%;"></a>
+    
+        <a href="../customizando_o_git/README.html" title="Customizando o Git" class="chapter done new-chapter" data-progress="7" style="left: 74.28571428571429%;"></a>
+    
+        <a href="../customizando_o_git/configuracao_do_git.html" title="Configuração do Git" class="chapter done " data-progress="7.1" style="left: 75.71428571428571%;"></a>
+    
+        <a href="../customizando_o_git/atributos_git.html" title="Atributos Git" class="chapter done " data-progress="7.2" style="left: 77.14285714285714%;"></a>
+    
+        <a href="../customizando_o_git/hooks_do_git.html" title="Hooks do Git" class="chapter done " data-progress="7.3" style="left: 78.57142857142857%;"></a>
+    
+        <a href="../customizando_o_git/um_exemplo_de_politica_git_forcada.html" title="Um exemplo de Política Git Forçada" class="chapter done " data-progress="7.4" style="left: 80%;"></a>
+    
+        <a href="../customizando_o_git/sumario.html" title="Sumário" class="chapter done " data-progress="7.5" style="left: 81.42857142857143%;"></a>
+    
+        <a href="../git_e_outros_sistemas/README.html" title="Git e Outros Sistemas" class="chapter done new-chapter" data-progress="8" style="left: 82.85714285714286%;"></a>
+    
+        <a href="../git_e_outros_sistemas/git_e_subversion.html" title="Git e Subversion" class="chapter done " data-progress="8.1" style="left: 84.28571428571429%;"></a>
+    
+        <a href="../git_e_outros_sistemas/migrando_para_o_git.html" title="Migrando para o Git" class="chapter done " data-progress="8.2" style="left: 85.71428571428571%;"></a>
+    
+        <a href="../git_e_outros_sistemas/resumo.html" title="Resumo" class="chapter done " data-progress="8.3" style="left: 87.14285714285714%;"></a>
+    
+        <a href="../git_internamente/README.html" title="Git Internamente" class="chapter done new-chapter" data-progress="9" style="left: 88.57142857142857%;"></a>
+    
+        <a href="../git_internamente/encanamento_plumbing_e_porcelana_porcelain.html" title="Encanamento (Plumbing) e Porcelana (Porcelain)" class="chapter done " data-progress="9.1" style="left: 90%;"></a>
+    
+        <a href="../git_internamente/objetos_do_git.html" title="Objetos do Git" class="chapter done " data-progress="9.2" style="left: 91.42857142857143%;"></a>
+    
+        <a href="../git_internamente/referencias_git.html" title="Referencias Git" class="chapter done " data-progress="9.3" style="left: 92.85714285714286%;"></a>
+    
+        <a href="../git_internamente/packfiles.html" title="Packfiles" class="chapter done " data-progress="9.4" style="left: 94.28571428571429%;"></a>
+    
+        <a href="../git_internamente/o_refspec.html" title="O Refspec" class="chapter done " data-progress="9.5" style="left: 95.71428571428571%;"></a>
+    
+        <a href="../git_internamente/protocolos_de_transferencia.html" title="Protocolos de Transferência" class="chapter done " data-progress="9.6" style="left: 97.14285714285714%;"></a>
+    
+        <a href="../git_internamente/manutencao_e_recuperacao_de_dados.html" title="Manutenção e Recuperação de Dados" class="chapter done " data-progress="9.7" style="left: 98.57142857142857%;"></a>
+    
+        <a href="../git_internamente/resumo.html" title="Resumo" class="chapter  " data-progress="9.8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_850">
+                    
+                        <h1 id="manuten-o-e-recupera-o-de-dados">Manutenção e Recuperação de Dados</h1>
+<p>Ocasionalmente, você pode ter que fazer alguma limpeza — compactar um repositório, limpar um repositório importado, ou recuperar trabalhos perdidos. Esta seção irá mostrar alguns desses cenários.</p>
+<h2 id="manuten-o">Manutenção</h2>
+<p>Ocasionalmente, Git automaticamente executa um comando chamado &quot;auto gc&quot;. Na maioria das vezes, este comando não faz nada. No entanto, se houverem muitos objetos soltos (loose objects) (objetos que não estejam em um packfile) ou muitos packfiles, Git executa um verdadeiro comando <code>git gc</code>. O <code>gc</code> significa garbage collect (coleta de lixo), e o comando faz uma série de coisas: ele reúne todos os objetos soltos e os coloca em packfiles, consolida packfiles em um packfile maior, e remove objetos que não estejam ao alcance de qualquer commit e tem poucos meses de idade.</p>
+<p>Você pode executar auto gc manualmente da seguinte forma:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">gc</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">auto</span>
+</code></pre><p>Mais uma vez, isso geralmente não faz nada. Você deve ter cerca de 7.000 objetos soltos ou mais de 50 packfiles para que o Git execute um comando gc real. Você pode modificar esses limites com as opções de configuração <code>gc.auto</code> e <code>gc.autopacklimit</code>, respectivamente.</p>
+<p>A outra coisa que <code>gc</code> irá fazer é arrumar suas referências em um único arquivo. Suponha que seu repositório contém os seguintes branches e tags:</p>
+<pre><code>$ find <span class="hljs-preprocessor">.git</span>/refs -type f
+<span class="hljs-preprocessor">.git</span>/refs/heads/experiment
+<span class="hljs-preprocessor">.git</span>/refs/heads/master
+<span class="hljs-preprocessor">.git</span>/refs/tags/v1<span class="hljs-number">.0</span>
+<span class="hljs-preprocessor">.git</span>/refs/tags/v1<span class="hljs-number">.1</span>
+</code></pre><p>Se você executar <code>git gc</code>, você não terá mais esses arquivos no diretório <code>refs</code>. Git irá movê-los para um arquivo chamado <code>.git/packed-refs</code> que se parece com isto:</p>
+<pre><code><span class="hljs-variable">$ </span>cat .git/packed-refs
+<span class="hljs-comment"># pack-refs with: peeled</span>
+cac0cab538b970a37ea1e769cbbde608743bc96d refs/heads/experiment
+ab1afef80fac8e34258ff41fc1b867c702daa24b refs/heads/master
+cac0cab538b970a37ea1e769cbbde608743bc96d refs/tags/v1.<span class="hljs-number">0</span>
+<span class="hljs-number">9585191</span>f37f7b0fb9444f35a9bf50de191beadc2 refs/tags/v1.<span class="hljs-number">1</span>
+^<span class="hljs-number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9
+</code></pre><p>Se você atualizar uma referência, Git não edita esse arquivo, mas em vez disso, escreve um novo arquivo em <code>refs/heads</code>. Para obter o SHA apropriado para uma dada referência, Git checa a referência no diretório <code>refs</code> e então verifica o arquivo <code>packed-refs</code> como um último recurso. No entanto, se você não conseguir encontrar uma referência no diretório <code>refs</code>, ela está provavelmente em seu arquivo <code>packed-refs</code>.</p>
+<p>Observe a última linha do arquivo, que começa com um <code>^</code>. Isto significa que a tag diretamente acima é uma tag anotada (annotated tag) e que a linha é o commit que a tag anotada aponta.</p>
+<h2 id="recupera-o-de-dados">Recuperação de Dados</h2>
+<p>Em algum ponto de sua jornada Git, você pode acidentalmente perder um commit. Geralmente, isso acontece porque você forçou a remoção (force-delete) de um branch que tinha informações nele, e depois se deu conta de que precisava do branch; ou você resetou (hard-reset) um branch, abandonando commits com informações importantes. Assumindo que isso aconteceu, como você pode obter o seu commit de volta?</p>
+<p>Aqui está um exemplo que reseta (hard-resets) o branch master no seu repositório de teste para um commit antigo e depois recupera os commits perdidos. Primeiro, vamos rever onde seu repositório está neste momento:</p>
+<pre><code>$ git log <span class="hljs-comment">--pretty=oneline</span>
+ab1afef80fac8e34258ff41fc1b867c702daa24b modified repo a bit
+484a59275031909e19aadb7c92262719cfcdf19a added repo.rb
+1a410efbd13591db07496601ebc7a059dd55cfe9 third <span class="hljs-operator"><span class="hljs-keyword">commit</span>
+cac0cab538b970a37ea1e769cbbde608743bc96d <span class="hljs-keyword">second</span> <span class="hljs-keyword">commit</span>
+fdf4fc3344e67ab068f836878b6c4951e3b15f3d <span class="hljs-keyword">first</span> <span class="hljs-keyword">commit</span></span>
+</code></pre><p>Agora, mova o branch <code>master</code> de volta para o commit do meio:</p>
+<pre><code>$ git reset <span class="hljs-comment">--hard 1a410efbd13591db07496601ebc7a059dd55cfe9</span>
+HEAD <span class="hljs-keyword">is</span> now <span class="hljs-keyword">at</span> <span class="hljs-number">1</span>a410ef <span class="hljs-keyword">third</span> commit
+$ git <span class="hljs-command">log</span> <span class="hljs-comment">--pretty=oneline</span>
+<span class="hljs-number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9 <span class="hljs-keyword">third</span> commit
+cac0cab538b970a37ea1e769cbbde608743bc96d <span class="hljs-keyword">second</span> commit
+fdf4fc3344e67ab068f836878b6c4951e3b15f3d <span class="hljs-keyword">first</span> commit
+</code></pre><p>Você efetivamente perdeu os dois primeiros commits — você não tem um branch de onde os commits são alcançáveis. Você precisa encontrar o SHA do último commit e em seguida, adicionar um branch que aponta para ele. O truque é encontrar o SHA do commit mais recente — você não o memorizou, certo?</p>
+<p>Muitas vezes, a maneira mais rápida é usar uma ferramenta chamada <code>git reflog</code>. Quando você está trabalhando, Git silenciosamente registra onde está o HEAD cada vez que você mudá-lo. Cada vez que você fizer um commit ou alterar branches, o reflog é atualizado. O reflog também é atualizado pelo comando <code>git update-ref</code>, o que é mais um motivo para usá-lo em vez de apenas escrever o valor SHA em seus arquivos ref, como abordado anteriormente na seção &quot;Referências Git&quot; deste capítulo. Você pode ver onde você está, a qualquer momento, executando <code>git reflog</code>:</p>
+<pre><code>$ <span class="hljs-tag">git</span> <span class="hljs-tag">reflog</span>
+1<span class="hljs-tag">a410ef</span> <span class="hljs-tag">HEAD</span><span class="hljs-at_rule">@<span class="hljs-keyword">{0}:</span> <span class="hljs-number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9: updating HEAD
+ab1afef HEAD@</span>{1}: <span class="hljs-tag">ab1afef80fac8e34258ff41fc1b867c702daa24b</span>: <span class="hljs-tag">updating</span> <span class="hljs-tag">HEAD</span>
+</code></pre><p>Aqui podemos ver os dois commits que obtemos com check out, no entanto, não há muita informação aqui. Para ver a mesma informação de uma forma muito mais útil, podemos executar <code>git log -g</code>, que vai lhe dar uma saída de log normal do seu reflog.</p>
+<pre><code>$ git log -g
+commit <span class="hljs-number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9
+<span class="hljs-label">Reflog:</span> HEAD@{<span class="hljs-number">0</span>} (Scott Chacon &lt;schacon@gmail<span class="hljs-preprocessor">.com</span>&gt;)
+Reflog message: updating HEAD
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gmail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Fri May <span class="hljs-number">22</span> <span class="hljs-number">18</span>:<span class="hljs-number">22</span>:<span class="hljs-number">37</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+    third commit
+
+commit ab1afef80fac8e34258ff41fc1b867c702daa24b
+<span class="hljs-label">Reflog:</span> HEAD@{<span class="hljs-number">1</span>} (Scott Chacon &lt;schacon@gmail<span class="hljs-preprocessor">.com</span>&gt;)
+Reflog message: updating HEAD
+<span class="hljs-label">Author:</span> Scott Chacon &lt;schacon@gmail<span class="hljs-preprocessor">.com</span>&gt;
+<span class="hljs-label">Date:</span>   Fri May <span class="hljs-number">22</span> <span class="hljs-number">18</span>:<span class="hljs-number">15</span>:<span class="hljs-number">24</span> <span class="hljs-number">2009</span> -<span class="hljs-number">0700</span>
+
+     modified repo a bit
+</code></pre><p>Parece que o commit de baixo é o que você perdeu, então você pode recuperá-lo através da criação de um novo branch neste commit. Por exemplo, você pode criar um branch chamado <code>recover-branch</code> naquele commit (ab1afef):</p>
+<pre><code>$ git branch recover-branch ab1afef
+$ git log <span class="hljs-comment">--pretty=oneline recover-branch</span>
+ab1afef80fac8e34258ff41fc1b867c702daa24b modified repo a bit
+484a59275031909e19aadb7c92262719cfcdf19a added repo.rb
+1a410efbd13591db07496601ebc7a059dd55cfe9 third <span class="hljs-operator"><span class="hljs-keyword">commit</span>
+cac0cab538b970a37ea1e769cbbde608743bc96d <span class="hljs-keyword">second</span> <span class="hljs-keyword">commit</span>
+fdf4fc3344e67ab068f836878b6c4951e3b15f3d <span class="hljs-keyword">first</span> <span class="hljs-keyword">commit</span></span>
+</code></pre><p>Agora você tem um branch chamado <code>recover-branch</code> que é onde o seu branch <code>master</code> costumava estar, fazendo os dois primeiros commits acessíveis novamente.
+Em seguida, suponha que a sua perda por algum motivo não está no reflog — você pode simular isso ao remover <code>recover-branch</code> e apagar o reflog. Agora os dois primeiros commits  não são acessíveis por qualquer coisa:</p>
+<pre><code>$ git branch <span class="hljs-attribute">-D</span> recover<span class="hljs-attribute">-branch</span>
+$ rm <span class="hljs-attribute">-Rf</span> <span class="hljs-built_in">.</span>git/logs<span class="hljs-subst">/</span>
+</code></pre><p>Como os dados do reflog são mantidos no diretório <code>.git/logs/</code>, você efetivamente não têm reflog. Como você pode recuperar aquele commit agora? Uma maneira é usar o utilitário <code>git fsck</code>, que verifica a integridade de seu banco de dados. Se você executá-lo com a opção <code>--full</code>, ele mostra todos os objetos que não são apontadas por outro objeto:</p>
+<pre><code>$ git fsck <span class="hljs-comment">--full</span>
+dangling blob d670460b4b4aece5915caf5c68d12f560a9fe3e4
+dangling <span class="hljs-operator"><span class="hljs-keyword">commit</span> ab1afef80fac8e34258ff41fc1b867c702daa24b
+dangling tree aea790b9a58f6cf6f2804eeac9f0abbe9631e4c9
+dangling blob <span class="hljs-number">7108</span>f7ecb345ee9d0084193f147cdad4d2998293</span>
+</code></pre><p>Neste caso, você pode ver o seu commit desaparecido após o commit pendente (dangling). Você pode recuperá-lo da mesma forma, adicionando um branch que aponta para seu SHA.</p>
+<h2 id="removendo-objetos">Removendo Objetos</h2>
+<p>Há um monte de coisas boas em relação ao Git, mas um recurso que pode causar problemas é o fato de que o <code>git clone</code> baixa todo o histórico do projeto, incluindo todas as versões de cada arquivo. Isso é bom se a coisa toda for código fonte, porque Git é altamente otimizado para comprimir os dados de forma eficiente. No entanto, se alguém, em algum momento adicionou um arquivo enorme, todo clone será forçado a baixar o arquivo grande, mesmo que ele tenha sido retirado do projeto no commit seguinte. Como ele é acessível a partir do histórico, ele sempre estará lá.</p>
+<p>Isso pode ser um grande problema quando você está convertendo repositórios do Subversion ou Perforce para Git. Como você não baixa todo o histórico nesses sistemas, este tipo de adição traz poucas consequências. Se você fez uma importação de outro sistema ou descobriu que seu repositório é muito maior do que deveria ser, eis aqui como você pode encontrar e remover objetos grandes.</p>
+<p>Esteja avisado: esta técnica é destrutiva para o seu histórico de commits. Ele reescreve a cada objeto commit da primeira árvore que você tem que modificar para remover uma referência de arquivo grande. Se você fizer isso, imediatamente após uma importação, antes que alguém tenha começado usar o commit, você ficará bem — caso contrário, você tem que notificar todos os contribuidores para que eles façam um rebase do trabalho deles em seus novos commits.</p>
+<p>Para demonstrar, você vai adicionar um arquivo grande em seu repositório, removê-lo no próximo commit, encontrá-lo e removê-lo permanentemente a partir do repositório. Primeiro, adicione um objeto grande no seu histórico:</p>
+<pre><code><span class="hljs-variable">$ </span>curl <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/kernel.org/pub</span><span class="hljs-regexp">/software/scm</span><span class="hljs-regexp">/git/git</span>-<span class="hljs-number">1.6</span>.<span class="hljs-number">3.1</span>.tar.bz2 &gt; git.tbz2
+<span class="hljs-variable">$ </span>git add git.tbz2
+<span class="hljs-variable">$ </span>git commit -am <span class="hljs-string">'added git tarball'</span>
+[master <span class="hljs-number">6</span>df764<span class="hljs-number">0</span>] added git tarball
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">0</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+ create mode <span class="hljs-number">100644</span> git.tbz2
+</code></pre><p>Oops - você não queria adicionar um tarball enorme no seu projeto. Melhor se livrar dele:</p>
+<pre><code><span class="hljs-variable">$ </span>git rm git.tbz2
+rm <span class="hljs-string">'git.tbz2'</span>
+<span class="hljs-variable">$ </span>git commit -m <span class="hljs-string">'oops - removed large tarball'</span>
+[master da3f30d] oops - removed large tarball
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">0</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+ delete mode <span class="hljs-number">100644</span> git.tbz2
+</code></pre><p>Agora, use <code>gc</code> no seu banco de dados e veja quanto espaço você está usando:</p>
+<pre><code>$ git gc
+Counting objects: <span class="hljs-number">21</span>, <span class="hljs-keyword">done</span>.
+Delta compression using <span class="hljs-number">2</span> threads.
+Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">16</span>/<span class="hljs-number">16</span>), <span class="hljs-keyword">done</span>.
+Writing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">21</span>/<span class="hljs-number">21</span>), <span class="hljs-keyword">done</span>.
+Total <span class="hljs-number">21</span> (delta <span class="hljs-number">3</span>), reused <span class="hljs-number">15</span> (delta <span class="hljs-number">1</span>)
+</code></pre><p>Você pode executar o comando <code>count-objects</code> para ver rapidamente quanto espaço você está usando:</p>
+<pre><code>$ git count<span class="hljs-attribute">-objects</span> <span class="hljs-attribute">-v</span>
+count: <span class="hljs-number">4</span>
+size: <span class="hljs-number">16</span>
+<span class="hljs-keyword">in</span><span class="hljs-attribute">-pack</span>: <span class="hljs-number">21</span>
+packs: <span class="hljs-number">1</span>
+size<span class="hljs-attribute">-pack</span>: <span class="hljs-number">2016</span>
+prune<span class="hljs-attribute">-packable</span>: <span class="hljs-number">0</span>
+garbage: <span class="hljs-number">0</span>
+</code></pre><p>A entrada <code>size-pack</code> é do tamanho de seus packfiles em kilobytes, então você está usando 2MB. Antes do último commit, você estava usando quase 2K — claramente, removendo o arquivo do commit anterior não remove-o de seu histórico. Toda vez que alguém clonar este repositório, eles vão ter que clonar os 2MB para obter este projeto, porque você acidentalmente acrescentou um arquivo grande. Vamos nos livrar dele.</p>
+<p>Primeiro você tem que encontrá-lo. Neste caso, você já sabe qual é o arquivo. Mas suponha que você não saiba; como você identifica o arquivo ou arquivos que estão ocupando tanto espaço? Se você executar <code>git gc</code>, todos os objetos estarão em um packfile; você pode identificar os objetos grandes, executando outro comando encanamento (plumbing) chamado <code>git verify-pack</code> e classificar pelo terceiro campo da saída, que é o tamanho do arquivo. Você também pode direcionar a saída (pipe) através do comando <code>tail</code> porque você está interessado apenas nos últimos poucos arquivos maiores:</p>
+<pre><code>$ git verify<span class="hljs-attribute">-pack</span> <span class="hljs-attribute">-v</span> <span class="hljs-built_in">.</span>git/objects/pack/pack<span class="hljs-subst">-</span><span class="hljs-number">3</span>f8c0<span class="hljs-attribute">...</span>bb<span class="hljs-built_in">.</span>idx <span class="hljs-subst">|</span> sort <span class="hljs-attribute">-k</span> <span class="hljs-number">3</span> <span class="hljs-attribute">-n</span> <span class="hljs-subst">|</span> tail <span class="hljs-subst">-</span><span class="hljs-number">3</span>
+e3f094f522629ae358806b17daf78246c27c007b blob   <span class="hljs-number">1486</span> <span class="hljs-number">734</span> <span class="hljs-number">4667</span>
+<span class="hljs-number">05408</span>d195263d853f09dca71d55116663690c27c blob   <span class="hljs-number">12908</span> <span class="hljs-number">3478</span> <span class="hljs-number">1189</span>
+<span class="hljs-number">7</span>a9eb2fba2b1811321254ac360970fc169ba2330 blob   <span class="hljs-number">2056716</span> <span class="hljs-number">2056872</span> <span class="hljs-number">5401</span>
+</code></pre><p>O objeto grande está na parte inferior: 2MB. Para saber qual é o arquivo, você vai usar o comando <code>rev-list</code>, que você usou brevemente no <em>Capítulo 7</em>. Se você passar <code>--objects</code> para <code>rev-list</code>, ele lista todos os SHAs dos commits e também os SHAs dos blob com os caminhos de arquivos (paths) associados a eles. Você pode usar isso para encontrar o nome do blob:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">rev</span><span class="hljs-literal">-</span><span class="hljs-comment">list</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">objects</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">all</span> <span class="hljs-comment">|</span> <span class="hljs-comment">grep</span> <span class="hljs-comment">7a9eb2fb</span>
+<span class="hljs-comment">7a9eb2fba2b1811321254ac360970fc169ba2330</span> <span class="hljs-comment">git</span><span class="hljs-string">.</span><span class="hljs-comment">tbz2</span>
+</code></pre><p>Agora, você precisa remover o arquivo de todas as árvores em que ele estiver. Você pode facilmente ver quais commits modificaram este arquivo:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">log</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">pretty=oneline</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">branches</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span> <span class="hljs-comment">git</span><span class="hljs-string">.</span><span class="hljs-comment">tbz2</span>
+<span class="hljs-comment">da3f30d019005479c99eb4c3406225613985a1db</span> <span class="hljs-comment">oops</span> <span class="hljs-literal">-</span> <span class="hljs-comment">removed</span> <span class="hljs-comment">large</span> <span class="hljs-comment">tarball</span>
+<span class="hljs-comment">6df764092f3e7c8f5f94cbe08ee5cf42e92a0289</span> <span class="hljs-comment">added</span> <span class="hljs-comment">git</span> <span class="hljs-comment">tarball</span>
+</code></pre><p>Você deve reescrever todos os commits desde <code>6df76</code> para remover completamente este arquivo do seu histórico Git. Para fazer isso, você usa <code>filter-branch</code>, que você já usou no <em>capítulo 6</em>:</p>
+<pre><code>$ git <span class="hljs-built_in">filter</span>-branch <span class="hljs-comment">--index-filter \</span>
+   <span class="hljs-string">'git rm --cached --ignore-unmatch git.tbz2'</span> <span class="hljs-comment">-- 6df7640^..</span>
+Rewrite <span class="hljs-number">6</span>df764092f3e7c8f5f94cbe08ee5cf42e92a0289 (<span class="hljs-number">1</span>/<span class="hljs-number">2</span>)rm <span class="hljs-string">'git.tbz2'</span>
+Rewrite da3f30d019005479c99eb4c3406225613985a1db (<span class="hljs-number">2</span>/<span class="hljs-number">2</span>)
+Ref <span class="hljs-string">'refs/heads/master'</span> was rewritten
+</code></pre><p>A opção<code>--index-filter</code> é semelhante a opção <code>--tree-filter</code> utilizada no <em>Capítulo 6</em>, exceto que em vez de passar um comando que modifica os arquivos que você fez check-out no disco, você está modificando sua área de seleção (staging area) ou índice. Em vez de remover um arquivo específico com algo como <code>rm file</code>, você tem que removê-lo com <code>git rm --cached</code> — você deve removê-lo do índice, não do disco. A razão para fazê-lo desta maneira é a velocidade — porque o Git não precisa fazer o check out de cada revisão no disco antes de executar o seu filtro, o processo pode ser muito mais rápido. Você pode realizar a mesma tarefa com <code>--tree-filter</code> se você quiser. A opção <code>--ignore-unmatch</code> do <code>git rm</code> diz a ele para não mostrar erros se o padrão que você está tentando remover não estiver lá. Finalmente, você pede a <code>filter-branch</code> para reescrever seu histórico apenas a partir do commit <code>6df7640</code>, porque você sabe que é onde o problema começou. Caso contrário, ele vai começar desde o início e vai demorar mais tempo desnecessariamente.</p>
+<p>Seu histórico já não contém uma referência para o arquivo. No entanto, seu reflog e um novo conjunto de refs que o git adicionou quando você fez o <code>filter-branch</code> em <code>.git/refs/original</code> ainda não, então você tem que removê-los e, em seguida, fazer um repack do banco de dados. Você precisa se ​​livrar de qualquer coisa que tenha um ponteiro para aqueles commits antigos antes de fazer o repack:</p>
+<pre><code><span class="hljs-variable">$ </span>rm -<span class="hljs-constant">Rf</span> .git/refs/original
+<span class="hljs-variable">$ </span>rm -<span class="hljs-constant">Rf</span> .git/logs/
+<span class="hljs-variable">$ </span>git gc
+<span class="hljs-constant">Counting</span> <span class="hljs-symbol">objects:</span> <span class="hljs-number">19</span>, done.
+<span class="hljs-constant">Delta</span> compression using <span class="hljs-number">2</span> threads.
+<span class="hljs-constant">Compressing</span> <span class="hljs-symbol">objects:</span> <span class="hljs-number">100</span>% (<span class="hljs-number">14</span>/<span class="hljs-number">14</span>), done.
+<span class="hljs-constant">Writing</span> <span class="hljs-symbol">objects:</span> <span class="hljs-number">100</span>% (<span class="hljs-number">19</span>/<span class="hljs-number">19</span>), done.
+<span class="hljs-constant">Total</span> <span class="hljs-number">19</span> (delta <span class="hljs-number">3</span>), reused <span class="hljs-number">16</span> (delta <span class="hljs-number">1</span>)
+</code></pre><p>Vamos ver quanto espaço você economizou.</p>
+<pre><code>$ git count<span class="hljs-attribute">-objects</span> <span class="hljs-attribute">-v</span>
+count: <span class="hljs-number">8</span>
+size: <span class="hljs-number">2040</span>
+<span class="hljs-keyword">in</span><span class="hljs-attribute">-pack</span>: <span class="hljs-number">19</span>
+packs: <span class="hljs-number">1</span>
+size<span class="hljs-attribute">-pack</span>: <span class="hljs-number">7</span>
+prune<span class="hljs-attribute">-packable</span>: <span class="hljs-number">0</span>
+garbage: <span class="hljs-number">0</span>
+</code></pre><p>O tamanho do repositório compactado reduziu para 7K, que é muito melhor do que 2MB. Pelo tamanho você pode ver que o grande objeto ainda está em seus objetos soltos, portanto não foi eliminado; mas ele não será transferido em um clone ou push posterior, e isso é o que importa. Se você realmente quiser, você pode remover o objeto completamente executando <code>git prune --expire</code>.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../git_internamente/protocolos_de_transferencia.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git_internamente/resumo.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

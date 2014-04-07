@@ -1,0 +1,538 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Dallanma ve Birleştirmenin Temelleri | Learn Git</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="GitbookIO">
+        <meta name="description" content="The entire Pro Git book.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../gitte_dallanma/dal_yonetimi.html" />
+        
+        
+        <link rel="prev" href="../gitte_dallanma/dal_nedir.html" />
+        
+
+        <meta property="og:title" content="Dallanma ve Birleştirmenin Temelleri | Learn Git">
+        <meta property="og:site_name" content="Learn Git">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/GitbookIO">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="GitbookIO/git" data-level="3.2" data-basepath=".." data-revision="1396895602594">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/GitbookIO/git" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/GitbookIO/git/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/GitbookIO/git/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="../" >Learn Git</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/GitbookIO" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/GitbookIO/git/edit/master/gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="baslangic/README.html">
+                
+                <a href="../baslangic/README.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Başlangıç
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="baslangic/surum_kontrolu_hakkinda.html">
+                            
+                            <a href="../baslangic/surum_kontrolu_hakkinda.html">
+                                <i class="fa fa-check"></i> <b>1.1)</b> Sürüm Kontrolü Hakkında
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="baslangic/gitin_kisa_bir_tarihcesi.html">
+                            
+                            <a href="../baslangic/gitin_kisa_bir_tarihcesi.html">
+                                <i class="fa fa-check"></i> <b>1.2)</b> Git&#39;in Kısa Bir Tarihçesi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="baslangic/gitin_temelleri.html">
+                            
+                            <a href="../baslangic/gitin_temelleri.html">
+                                <i class="fa fa-check"></i> <b>1.3)</b> Git&#39;in Temelleri
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="baslangic/gitin_kurulumu.html">
+                            
+                            <a href="../baslangic/gitin_kurulumu.html">
+                                <i class="fa fa-check"></i> <b>1.4)</b> Git&#39;in Kurulumu
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="baslangic/ilk_ayarlamalar.html">
+                            
+                            <a href="../baslangic/ilk_ayarlamalar.html">
+                                <i class="fa fa-check"></i> <b>1.5)</b> İlk Ayarlamalar
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="baslangic/yardim_almak.html">
+                            
+                            <a href="../baslangic/yardim_almak.html">
+                                <i class="fa fa-check"></i> <b>1.6)</b> Yardım Almak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="baslangic/ozet.html">
+                            
+                            <a href="../baslangic/ozet.html">
+                                <i class="fa fa-check"></i> <b>1.7)</b> Özet
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="gitin_temelleri/README.html">
+                
+                <a href="../gitin_temelleri/README.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Git&#39;in Temelleri
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html">
+                            
+                            <a href="../gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html">
+                                <i class="fa fa-check"></i> <b>2.1)</b> Bir Git Yazılım Havuzu Edinmek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.html">
+                            
+                            <a href="../gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.html">
+                                <i class="fa fa-check"></i> <b>2.2)</b> Değişiklikleri Yazılım Havuzuna Kaydetmek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="gitin_temelleri/kayit_tarihcesini_goruntulemek.html">
+                            
+                            <a href="../gitin_temelleri/kayit_tarihcesini_goruntulemek.html">
+                                <i class="fa fa-check"></i> <b>2.3)</b> Kayıt Tarihçesini Görüntülemek
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="gitin_temelleri/degisiklikleri_geri_almak.html">
+                            
+                            <a href="../gitin_temelleri/degisiklikleri_geri_almak.html">
+                                <i class="fa fa-check"></i> <b>2.4)</b> Değişiklikleri Geri Almak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="gitin_temelleri/uzak_ucbirimlerle_calismak.html">
+                            
+                            <a href="../gitin_temelleri/uzak_ucbirimlerle_calismak.html">
+                                <i class="fa fa-check"></i> <b>2.5)</b> Uzak Uçbirimlerle Çalışmak
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.6" data-path="gitin_temelleri/etiketleme.html">
+                            
+                            <a href="../gitin_temelleri/etiketleme.html">
+                                <i class="fa fa-check"></i> <b>2.6)</b> Etiketleme
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.7" data-path="gitin_temelleri/ipuclari.html">
+                            
+                            <a href="../gitin_temelleri/ipuclari.html">
+                                <i class="fa fa-check"></i> <b>2.7)</b> İpuçları
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.8" data-path="gitin_temelleri/ozet.html">
+                            
+                            <a href="../gitin_temelleri/ozet.html">
+                                <i class="fa fa-check"></i> <b>2.8)</b> Özet
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="gitte_dallanma/README.html">
+                
+                <a href="../gitte_dallanma/README.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Git&#39;te Dallanma
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="gitte_dallanma/dal_nedir.html">
+                            
+                            <a href="../gitte_dallanma/dal_nedir.html">
+                                <i class="fa fa-check"></i> <b>3.1)</b> Dal Nedir?
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.html">
+                            
+                            <a href="../gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.html">
+                                <i class="fa fa-check"></i> <b>3.2)</b> Dallanma ve Birleştirmenin Temelleri
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="gitte_dallanma/dal_yonetimi.html">
+                            
+                            <a href="../gitte_dallanma/dal_yonetimi.html">
+                                <i class="fa fa-check"></i> <b>3.3)</b> Dal Yönetimi
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="gitte_dallanma/dallanma_is_akislari.html">
+                            
+                            <a href="../gitte_dallanma/dallanma_is_akislari.html">
+                                <i class="fa fa-check"></i> <b>3.4)</b> Dallanma İş Akışları
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="gitte_dallanma/uzak_ucbirim_dallari.html">
+                            
+                            <a href="../gitte_dallanma/uzak_ucbirim_dallari.html">
+                                <i class="fa fa-check"></i> <b>3.5)</b> Uzak Uçbirim Dalları
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="gitte_dallanma/rebasing__zemin_kok.html">
+                            
+                            <a href="../gitte_dallanma/rebasing__zemin_kok.html">
+                                <i class="fa fa-check"></i> <b>3.6)</b> Rebasing ## Zemin, Kök,
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="gitte_dallanma/summary.html">
+                            
+                            <a href="../gitte_dallanma/summary.html">
+                                <i class="fa fa-check"></i> <b>3.7)</b> Summary
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 80%;min-width: 76%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../baslangic/README.html" title="Başlangıç" class="chapter done new-chapter" data-progress="1" style="left: 4%;"></a>
+    
+        <a href="../baslangic/surum_kontrolu_hakkinda.html" title="Sürüm Kontrolü Hakkında" class="chapter done " data-progress="1.1" style="left: 8%;"></a>
+    
+        <a href="../baslangic/gitin_kisa_bir_tarihcesi.html" title="Git&#39;in Kısa Bir Tarihçesi" class="chapter done " data-progress="1.2" style="left: 12%;"></a>
+    
+        <a href="../baslangic/gitin_temelleri.html" title="Git&#39;in Temelleri" class="chapter done " data-progress="1.3" style="left: 16%;"></a>
+    
+        <a href="../baslangic/gitin_kurulumu.html" title="Git&#39;in Kurulumu" class="chapter done " data-progress="1.4" style="left: 20%;"></a>
+    
+        <a href="../baslangic/ilk_ayarlamalar.html" title="İlk Ayarlamalar" class="chapter done " data-progress="1.5" style="left: 24%;"></a>
+    
+        <a href="../baslangic/yardim_almak.html" title="Yardım Almak" class="chapter done " data-progress="1.6" style="left: 28%;"></a>
+    
+        <a href="../baslangic/ozet.html" title="Özet" class="chapter done " data-progress="1.7" style="left: 32%;"></a>
+    
+        <a href="../gitin_temelleri/README.html" title="Git&#39;in Temelleri" class="chapter done new-chapter" data-progress="2" style="left: 36%;"></a>
+    
+        <a href="../gitin_temelleri/bir_git_yazilim_havuzu_edinmek.html" title="Bir Git Yazılım Havuzu Edinmek" class="chapter done " data-progress="2.1" style="left: 40%;"></a>
+    
+        <a href="../gitin_temelleri/degisiklikleri_yazilim_havuzuna_kaydetmek.html" title="Değişiklikleri Yazılım Havuzuna Kaydetmek" class="chapter done " data-progress="2.2" style="left: 44%;"></a>
+    
+        <a href="../gitin_temelleri/kayit_tarihcesini_goruntulemek.html" title="Kayıt Tarihçesini Görüntülemek" class="chapter done " data-progress="2.3" style="left: 48%;"></a>
+    
+        <a href="../gitin_temelleri/degisiklikleri_geri_almak.html" title="Değişiklikleri Geri Almak" class="chapter done " data-progress="2.4" style="left: 52%;"></a>
+    
+        <a href="../gitin_temelleri/uzak_ucbirimlerle_calismak.html" title="Uzak Uçbirimlerle Çalışmak" class="chapter done " data-progress="2.5" style="left: 56%;"></a>
+    
+        <a href="../gitin_temelleri/etiketleme.html" title="Etiketleme" class="chapter done " data-progress="2.6" style="left: 60%;"></a>
+    
+        <a href="../gitin_temelleri/ipuclari.html" title="İpuçları" class="chapter done " data-progress="2.7" style="left: 64%;"></a>
+    
+        <a href="../gitin_temelleri/ozet.html" title="Özet" class="chapter done " data-progress="2.8" style="left: 68%;"></a>
+    
+        <a href="../gitte_dallanma/README.html" title="Git&#39;te Dallanma" class="chapter done new-chapter" data-progress="3" style="left: 72%;"></a>
+    
+        <a href="../gitte_dallanma/dal_nedir.html" title="Dal Nedir?" class="chapter done " data-progress="3.1" style="left: 76%;"></a>
+    
+        <a href="../gitte_dallanma/dallanma_ve_birlestirmenin_temelleri.html" title="Dallanma ve Birleştirmenin Temelleri" class="chapter done " data-progress="3.2" style="left: 80%;"></a>
+    
+        <a href="../gitte_dallanma/dal_yonetimi.html" title="Dal Yönetimi" class="chapter  " data-progress="3.3" style="left: 84%;"></a>
+    
+        <a href="../gitte_dallanma/dallanma_is_akislari.html" title="Dallanma İş Akışları" class="chapter  " data-progress="3.4" style="left: 88%;"></a>
+    
+        <a href="../gitte_dallanma/uzak_ucbirim_dallari.html" title="Uzak Uçbirim Dalları" class="chapter  " data-progress="3.5" style="left: 92%;"></a>
+    
+        <a href="../gitte_dallanma/rebasing__zemin_kok.html" title="Rebasing ## Zemin, Kök," class="chapter  " data-progress="3.6" style="left: 96%;"></a>
+    
+        <a href="../gitte_dallanma/summary.html" title="Summary" class="chapter  " data-progress="3.7" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_233">
+                    
+                        <h1 id="dallanma-ve-birle-tirmenin-temelleri">Dallanma ve Birleştirmenin Temelleri</h1>
+<p>Gelin, basit bir örnekle, gerçek hayatta kullanacağınız bir dallanma ve birleştirme işleyişinin üstünden geçelim. Şu adımları izleyeceksiniz:</p>
+<ol>
+<li>Bir web sitesi üzerine çalışıyor olun.</li>
+<li>Üzerinde çalıştığınız yeni bir iş parçası için bir dal yaratın.</li>
+<li>Çalışmalarınızı bu dalda gerçekleştirin.</li>
+</ol>
+<p>Bu noktada, sizden kritik önemde başka sorun üzerinde çalışıp hızlıca bir yama hazırlamanız istensin. Bu durumda şunları yapacaksınız:</p>
+<ol>
+<li>Ana dalınıza geri dönün.</li>
+<li>Yamayı eklemek için yeni bir dal oluşturun.</li>
+<li>Testleri tamamlandıktan sonra yama dalını ana dalla birleştirip yayına verin.</li>
+<li>Çalışmakta olduğunuz iş parçası dalına geri dönüp çalışmaya devam edin.</li>
+</ol>
+<h2 id="dallanman-n-temelleri">Dallanmanın Temelleri</h2>
+<p>Önce, diyelim ki bir projede çalışıyorsunuz ve halihazırda birkaç tane kaydınız var (bkz. Figür 3-10).</p>
+<p><img src="http://git-scm.com/figures/18333fig0310-tn.png" alt=""></p>
+<p>Figür 3-10. Kısa ve basit bir kayıt tarihçesi.</p>
+<p>Şirketinizin kullandığı sorun izleme programındaki #53 numaralı sorun üzerinde çalışmaya karar verdiniz. Açıklığa kavuşturmak için söyleyelim: Git herhangi bir sorun izleme programına bağlı değildir; ama #53 numaralı sorun üzerinde çalışmak istediğiniz başı sonu belli bir konu olduğu için, çalışmanızı bir dal üzerinde yapacaksınız. Bir dalı yaratır yaratmaz hemen ona geçiş yapmak için <code>git checout</code> komutunu <code>-b</code> seçeneğiyle birlikte kullanabilirsiniz:</p>
+<pre><code>$ git checkout -b iss53
+Switched <span class="hljs-built_in">to</span> <span class="hljs-operator">a</span> <span class="hljs-built_in">new</span> branch <span class="hljs-string">"iss53"</span>
+</code></pre><p>Bu, aşağıdaki iki komutun yerine kullanabileceğiniz bir kısayoldur:</p>
+<pre><code><span class="hljs-variable">$ </span>git branch iss53
+<span class="hljs-variable">$ </span>git checkout iss53
+</code></pre><p>Figür 3-11 sonucu resmediyor.</p>
+<p><img src="http://git-scm.com/figures/18333fig0311-tn.png" alt=""></p>
+<p>Figür 3-11. Yeni bir dal imleci yaratmak.</p>
+<p>Web sitesi üzerinde çalışıp bazı kayıtlar yapıyorsunuz. Bunu yaptığınızda <code>iss53</code> dalı ilerliyor, çünkü seçtiğiniz dal o (yani <code>HEAD</code> onu gösteriyor; bkz. Figür 3-12).</p>
+<pre><code><span class="hljs-variable">$ </span>vim index.html
+<span class="hljs-variable">$ </span>git commit -a -m <span class="hljs-string">'added a new footer [issue 53]'</span>
+</code></pre><p><img src="http://git-scm.com/figures/18333fig0312-tn.png" alt=""></p>
+<p>Figür 3-12. Çalışamız sonucunda iss53 dalı ilerledi.</p>
+<p>Şimdi, sizden web sitesindeki bir sorun için acilen bir yama hazırlamanız istensin. Git kullanıyorsanız, yamayı daha önce <code>iss53</code> dalında yaptığınız yaptığınız değişikliklerle birlikte yayına sokmanız gerekmez; yama üzerinde çalışmaya başlamadan önce söz konusu değişiklikleri geri alıp yayındaki web sitesini kaynak koduna ulaşabilmek için fazla çabalamanıza da gerek yok. Tek yapmanız gereken <code>master</code> dalına geri dönmek.</p>
+<p>Ama, bunu yapmadan önce şunu belirtmekte yarar var: eğer çalışma klasörünüzde ya da kayda hazırlık alanında seçmek (<em>checkout</em>) istediğiniz dalla uyuşmazlık gösteren kaydedilmemiş değişiklikler varsa, Git dal değiştirmenize izin vermeyecektir. Dal değiştirirken çalışma alanınızı temiz olması en iyisidir. Bunun üstesinden gelmek için başvurulabilecek yolları (zulalama ve kayıt değiştirme gibi) daha sonra inceleyeceğiz. Şimdilik, bütün değişikliklerinizi kaydettiniz, dolayısıyla <code>master</code> dalına geçiş yapabilirsiniz.</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout master
+<span class="hljs-constant">Switched</span> to branch <span class="hljs-string">"master"</span>
+</code></pre><p>Bu noktada, çalışma klasörünüz #53 numaralı sorun üzerinde çalışmaya başlamadan hemen önceki halindedir ve yamayı hazırlamaya odaklanabilirsiniz. Burası önemli: Git, çalışma klasörünüzü seçtiğiniz dalın gösterdiği kaydın bellek kopyasıyla aynı olacak şekilde ayarlar. Dal, son kaydınızda nasıl görünüyorsa çalışma klasörünü o hale getirebilmek için otomatik olarak dosyaları ekler, siler ve değiştirir.</p>
+<p>Sırada, hazırlanacak yama var. Şimdi yama üzerinde çalışmak için bir <code>hotfix</code> dalı oluşturalım (bkz. Figür 3-13):</p>
+<pre><code>$ git checkout <span class="hljs-attribute">-b</span> <span class="hljs-string">'hotfix'</span>
+Switched <span class="hljs-keyword">to</span> a <span class="hljs-literal">new</span> branch <span class="hljs-string">"hotfix"</span>
+$ vim index<span class="hljs-built_in">.</span>html
+$ git commit <span class="hljs-attribute">-a</span> <span class="hljs-attribute">-m</span> <span class="hljs-string">'fixed the broken email address'</span>
+<span class="hljs-preprocessor">[</span>hotfix<span class="hljs-preprocessor">]</span><span class="hljs-markup">: created 3a0874c: "fixed the broken email address"
+ 1 files changed, 0 insertions(+), 1 deletions(-)</span>
+</code></pre><p><img src="http://git-scm.com/figures/18333fig0313-tn.png" alt=""></p>
+<p>Figür 3-13. hotfix dalı master dalını baz alıyor.</p>
+<p>Testlerinizi uygulayabilir, yamanızın istediğiniz gibi olduğundan emin olduktan sonra yayına sokabilmek için <code>master</code> dalıyla birleştirebilirsiniz. Bunun için <code>git merge</code> komutu kullanılır:</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout master
+<span class="hljs-variable">$ </span>git merge hotfix
+<span class="hljs-constant">Updating</span> f42c576..<span class="hljs-number">3</span>a0874c
+<span class="hljs-constant">Fast</span> forward
+ <span class="hljs-constant">README</span> |    <span class="hljs-number">1</span> -
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">0</span> insertions(+), <span class="hljs-number">1</span> deletions(-)
+</code></pre><p>Birleştirme çıktısındaki &quot;Fast forward&quot; ifadesine dikkat. Birleştirdiğiniz dalın gösterdiği kayıt, üstünde bulunduğunuz dalın doğrudan devamı olduğundan, Git yalnızca imleci ileri alır. Başka bir deyişle, bir kaydı, kendi tarihçesinde geri giderek ulaşılabilecek bir başka kayıtla birleştiriyorsanız, Git ıraksayan ve birleştirilmesi gereken herhangi bir şey olmadığı için işleri kolaylaştırıp imleci ileri alır —buna &quot;fast forward&quot; (hızlı ileri alma) denir.</p>
+<p>Yaptığınız değişiklik artık <code>master</code> dalı tarafından işaret edilen kaydın bellek kopyasındadır ve yayımlanabilir (bkz. Figür 3-14).</p>
+<p><img src="http://git-scm.com/figures/18333fig0314-tn.png" alt=""></p>
+<p>Figür 3-14. Birleştirmeden sonra master dalınız hotfix dalınızla aynı yeri gösterir.</p>
+<p>Bu çok önemli yama yayımlandıktan sonra, kaldığınız yere geri dönebilirsiniz. Fakat önce <code>hotfix</code> dalını sileceksiniz, çünkü artık ona ihtiyacınız kalmadı —<code>master</code> dalı aynı yeri gösteriyor. <code>git branch</code> komutunu <code>-d</code> seçeneğiyle birlikte kullanarak silme işlemini yapabilirsiniz:</p>
+<pre><code>$ git branch <span class="hljs-operator">-d</span> hotfix
+Deleted branch hotfix (<span class="hljs-number">3</span>a0874c).
+</code></pre><p>Şimdi kaldığınız yere geri dönebilir ve #53 numaralı sorun üzerinde çalışmaya devam edebilirsiniz (bkz. 3-15).</p>
+<pre><code><span class="hljs-variable">$ </span>git checkout iss53
+<span class="hljs-constant">Switched</span> to branch <span class="hljs-string">"iss53"</span>
+<span class="hljs-variable">$ </span>vim index.html
+<span class="hljs-variable">$ </span>git commit -a -m <span class="hljs-string">'finished the new footer [issue 53]'</span>
+[iss53]<span class="hljs-symbol">:</span> created <span class="hljs-symbol">ad82d7a:</span> <span class="hljs-string">"finished the new footer [issue 53]"</span>
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)
+</code></pre><p><img src="http://git-scm.com/figures/18333fig0315-tn.png" alt=""></p>
+<p>Figür 3-15. iss53 dalınız bağımsız olarak ilerleyebilir.</p>
+<p>Şunu belirtmekte yarar var: <code>hotfix</code> dalında yaptığınız düzeltme <code>iss53</code> dalındaki dosyalarda bulunmuyor. Eğer bu değişikliği çekmek isterseniz, <code>git merge master</code> komutunu çalıştırarak <code>master</code> dalınızı <code>iss53</code> dalınızla birleştirebilirsiniz; alternatif olarak <code>iss53</code> dalındaki değişiklikleri <code>master</code>dalıyla birleştirmeye hazır hale getirene kadar bekleyebilirsiniz.</p>
+<h2 id="birle-tirmenin-temelleri">Birleştirmenin Temelleri</h2>
+<p>Diyelim ki #53 numaralı sorunla ilgili çalışmanızı tamamladınız ve <code>master</code> dalıyla birleştirmeye hazırsınız. Bunu yapabilmek için <code>iss53</code> dalınızı, aynı <code>hotfix</code> dalını yaptığınız gibi birleştireceksiniz. Bütün yapmanız gereken birleştirmeyi gerçekleştirmek istediğiniz dalı seçmek (<em>checkout</em>) ve <code>git merge</code> komutunu çalıştırmak:</p>
+<pre><code>$ git checkout master
+$ git <span class="hljs-operator"><span class="hljs-keyword">merge</span> iss53
+<span class="hljs-keyword">Merge</span> made <span class="hljs-keyword">by</span> recursive.
+ README |    <span class="hljs-number">1</span> +
+ <span class="hljs-number">1</span> files changed, <span class="hljs-number">1</span> insertions(+), <span class="hljs-number">0</span> deletions(-)</span>
+</code></pre><p>Bu daha önce yaptığınız <code>hotfix</code> birleştirmesinden biraz farklı görünüyor. Burada, kayıt tarihçeniz daha eski bir noktadan ıraksamıştı. Üzerinde bulunduğunuz dalın gösterdiği kayıt birleştirmekte olduğunuz dalın doğrudan atası olmadığından Git&#39;in biraz iş yapması gerekiyor. Bu örnekte Git, iki dalın en uç noktası ve ikisinin ortak atasının kullanıldığı üç taraflı basit bir birleştirme yapıyor. Figür 3-16, bu birleştirmede kullanılan üç farklı bellek kopyasını vurguluyor.</p>
+<p><img src="http://git-scm.com/figures/18333fig0316-tn.png" alt=""></p>
+<p>Figür 3-16. Git, dalları birleştirmek için en uygun ortak atayı buluyor.</p>
+<p>Git, yalnızca dal imlecini ileri kaydırmak yerine üç taraflı birleştirmenin sonucunda ortaya çıkan bellek kopyası için otomatik bir kayıt oluşturuyor (bkz. Figür 3-17). Buna birleştirme kaydı denir ve özelliği birden çok atasının olmasıdır.</p>
+<p>Git&#39;in en uygun ortak atayı otomatik olarak bulduğunu vurgulamakta yarar var; bu kullanıcının en uygun ortak paydayı bulmak zorunda olduğu CVS ve Subversion&#39;daki durumdan (1.5 sürümünden önceki haliyle) farklıdır. Bu Git kullanarak birleştirme yapmayı söz konusu diğer sistemlere göre çok daha kolay bir hale getirir.</p>
+<p><img src="http://git-scm.com/figures/18333fig0317-tn.png" alt=""></p>
+<p>Figür 3-17. Git, otomatik olarak, birleştirilmiş çalışmayı içeren yeni bir kayıt nesnesi yaratır.</p>
+<p>Çalışmanız birleştirildiğine göre, artık <code>iss53</code> dalına ihtiyacınız kalmadı. Dalı silip, sorun izleme sisteminizdeki sorunu da kapatabilirsiniz:</p>
+<pre><code>$ git branch <span class="hljs-operator">-d</span> iss53
+</code></pre><h2 id="temel-birle-tirme-uyu-mazl-klar-">Temel Birleştirme Uyuşmazlıkları</h2>
+<p>Zaman zaman bu süreç o kadar da pürüzsüz ilerlemez. Eğer aynı dosyanın aynı bölümünü her iki dalda da değiştirmişseniz, Git temiz bir birleştirme yapamaz. #53 numaraları sorun için hazırladığınız düzeltme <code>hotfix</code>le aynı yazılım parçasını değiştiriyorsa, şuna benzer bir birleştirme uyuşmazlığıyla karşılaşırsınız:</p>
+<pre><code>$ git <span class="hljs-built_in">merge</span> iss53
+Auto-merging index.html
+CONFLICT (content): Merge conflict <span class="hljs-operator">in</span> index.html
+Automatic <span class="hljs-built_in">merge</span> failed; fix conflicts <span class="hljs-operator">and</span> <span class="hljs-keyword">then</span> commit <span class="hljs-operator">the</span> <span class="hljs-built_in">result</span>.
+</code></pre><p>Burada Git otomatik olarak yeni bir birleştirme kaydı oluşturmadı. Sizin uyuşmazlığı çözmenizi beklemek için sürece ara verdi. Bir birleştirme uyuşmazlığından sonra hangi dosyaların birleştirilmemiş olduğunu görmek için <code>git status</code> komutunu çalıştırabilirsiniz.</p>
+<pre><code>[master*]$ git status
+index.html: needs merge
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="hljs-preprocessor">#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    unmerged:   index.html</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Birleştirme uyuşmazlığı henüz çözümlenmemiş her şey <em>unmerged</em> (birleştirilmemiş) olarak gösterilecektir. Git, dosyaları açıp uyuşmazlıkları çözümleyebilmeniz için standart uyuşmazlık çözümleme işaretçileri koyar. Dosyanızda şuna benzer bir bölümle karşılaşırsınız:</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:index.html
+<span class="hljs-header">&lt;div id="footer"&gt;contact : email.support@github.com&lt;/div&gt;
+=======</span>
+&lt;div id="footer"&gt;
+<span class="hljs-code">  please contact us at support@github.com</span>
+&lt;/div&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; iss53:index.html
+</code></pre><p>Burada , <code>HEAD</code>deki sürüm (ki bu <code>master</code> dalındaki sürümdür çünkü birleştirme komutunu bu daldan çalıştırdınız) üstte, (<code>=======</code> işaretinin üstündeki her şey), <code>iss53</code> dalındaki sürüm ise altta gösterilmektedir. Uyuşmazlığı çözümleyebilmek için bu ikisinden birini seçmeli, ya da birleştirmeyi istediğiniz gibi kendiniz düzenlemelisiniz. Söz gelimi, uyuşmazlığı çözmek için bütün bu kod bloğunun yerine şunu yerleştirebilirsiniz:</p>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-property">id</span>=<span class="hljs-string">"footer"</span>&gt;
+please contact us <span class="hljs-keyword">at</span> email.support@github.com
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre><p>Çözümlemede iki taraftan da bir şeyler var ve <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, ve <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> işaretlerini içeren satırlar tamamen silinmiş durumda. Uyuşmazlık olan her bir dosyadaki her bir uyuşmazlık bloğunu çözümledikten sonra her dosyanın üzerinde <code>git add</code> komutunu çalıştırarak, uyuşmazlığın o dosya için çözülmüş olduğunu belirtebilirsiniz. Bir dosyayı ayda hazırlamak o dosyayı uyuşmazlığı çözümlenmiş olarak işaretler.
+Uyuşmazlıkları çözümlemek için görsel bir araç kullanmak isterseniz <code>git mergetool</code> komutunu çalıştırabilirsiniz; bu komut size tek tek herbir uyuşmazlığı gösterecek uygun bir birleştirme aracını çalıştırır:</p>
+<pre><code>$ git mergetool
+<span class="hljs-built_in">merge</span> tool candidates: kdiff3 tkdiff xxdiff meld gvimdiff opendiff emerge vimdiff
+Merging <span class="hljs-operator">the</span> <span class="hljs-built_in">files</span>: index.html
+
+Normal <span class="hljs-built_in">merge</span> conflict <span class="hljs-keyword">for</span> <span class="hljs-string">'index.html'</span>:
+  {<span class="hljs-built_in">local</span>}: modified
+  {remote}: modified
+Hit <span class="hljs-constant">return</span> <span class="hljs-built_in">to</span> start <span class="hljs-built_in">merge</span> resolution tool (opendiff):
+</code></pre><p>Varsayılan aracın dışında bir araç kullanmak isterseniz (Git, Mac&#39;te çalıştığım için bu örnekte <code>opendiff</code>&#39;i seçti), Git&#39;in desteklediği bütün birleştirme araçlarının listesini en üstte “merge tool candidates” yazısından hemen sonra görebilirsiniz. Kullanmak istediğiniz aracın adını yazın. 7. Bölüm&#39;de kendi çalışma ortamınız için varsayılan değeri nasıl değiştirebileceğinizi inceleyeceğiz.</p>
+<p>Birleştirme aracını kapattıktan sonra, Git size birleştirmenin başarılı olup olmadığını soracaktır. Eğer başarılı olduğunu söylerseniz, sizin yerinize dosyayı kayda hazırlayıp çözümlenmiş olarak işaretler.</p>
+<p>Bütün uyuşmazlıkların çözümlendiğinden emin olmak için tekrar <code>git status</code> komutunu çalıştırabilirsiniz:</p>
+<pre><code>$ git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#    modified:   index.html</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>Durumdan memnunsanız ve uyuşmazlığı olan bütün dosyaların kayda hazırlandığından eminseniz, <code>git commit</code>&#39;i kullanarak birleştirme kaydını tamamlayabilirsiniz. Öntanımlı kayıt mesajı şöyle görünür:</p>
+<pre><code>Merge branch <span class="hljs-string">'iss53'</span>
+
+Conflicts:
+  index.html
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># It looks like you may be committing a MERGE.</span>
+<span class="hljs-preprocessor"># If this is not correct, please remove the file</span>
+<span class="hljs-preprocessor"># .git/MERGE_HEAD</span>
+<span class="hljs-preprocessor"># and try again.</span>
+<span class="hljs-preprocessor">#</span>
+</code></pre><p>İleride bu birleştirme işlemini inceleyecek olanlar için yararlı olacağını düşünüyorsanız bu kayıt mesajını ayrıntılandırabilirsiniz —eğer aşikâr değilse, birleştirmeyi neden yaptığınızı, ve birleştirmede neler yaptığınızı açıklayabilirsiniz.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../gitte_dallanma/dal_nedir.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../gitte_dallanma/dal_yonetimi.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>
